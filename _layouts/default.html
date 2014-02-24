@@ -16,31 +16,51 @@
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     </head>
     <body>
-
+        <div class="ui large vertical inverted labeled incon sidebar menu" id="menu">
+          <a class="hide item">
+            <i class="close icon"></i> Close Menu
+          </a>
+          <div class="item">
+            <b>Pages</b>
+            <div class="menu pages">
+              <a class="item" href="index.html">home</a>
+              <a class="item" href="about.html">About</a>
+              <a class="item" href="/">Resume</a>
+            </div>
+          </div>
+          <div class="item">
+            <b>Posts</b>
+            <div class="menu posts">
+              {% for post in site.posts %}
+                <a class="item" href="{{ post.url }}">{{ post.title }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+         
         <div class="site">
           <div class="header">
             <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
+            <a class="ui black large labeled launch icon button">
+              <i class="icon list layout"></i> menu
+            </a>
           </div>
 
           {{ content }}
-          <ul class="posts">
-            {% for post in site.posts %}
-              <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          </ul>
+
           <div class="footer">
             <div class="contact">
               <p>
-                Jeffry Wainwright<br />
-                Web Developer<br />
-                jjwainwrigh2@gmail.com
+                Jeffry Wainwright | Web Developer | <a href="mailto:jjwainwrigh2@gmail.com" class="">jjwainwrigh2@gmail.com</a>
               </p>
             </div>
             <div class="contact">
               <p>
-                <a href="https://github.com/yourusername">github.com/yowainwright</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/jjwainwright</a><br />
+                <a href="https://github.com/yowainwright"><i class="github icon"></i></a>
+                <a href="https://twitter.com/jjwainwright"><i class="twitter icon"></i></a>
+                <a href="https://dribbble.com/jjwainwright"><i class="dribbble icon"></i></a>
+                <a href="https://dribbble.com/jjwainwright"><i class="instagram icon"></i></a>
+                <a href="https://dribbble.com/jjwainwright"><i class="facebook icon"></i></a>
               </p>
             </div>
           </div>
@@ -48,5 +68,6 @@
         <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/javascript/semantic.min.js"></script>
+        <script src="/scripts/scripts.js"></script>
     </body>
 </html>
