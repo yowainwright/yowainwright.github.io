@@ -6,10 +6,25 @@ $( document ).ready(function() {
 	$('.sidebar .hide').on('click', function (){
 		$('.sidebar').sidebar('hide');
 	});
-	/*$("#leftButton").on("hover", fuction(){
-		$(".text").show().fadein(500);
+	$("#leftButton").on("mouseenter", function() {
+		$(".text").show(500);
 	});
-	$("#leftButton").on("mouseout", fuction(){
-		$(".text").hide().fadeOut(500);
-	});*/
+	$("#leftButton").on("mouseleave", function() {
+		$(".text").hide(500);
+	});
+	//footer social share
+	$(".showSocial").on("click", function(){
+		$("#showSocial").toggleClass('blackBg');
+		$(".socialWrap").slideToggle("fast");
+	});
+	$("#footerWrap").on('mouseleave', function () {
+		$("#showSocial").removeClass('blackBg');
+		$(".socialWrap").css('display','none');
+	});
+	//current year
+	var currentYear = (new Date).getFullYear();
+  	$("#year").text( (new Date).getFullYear());
+  	//popup
+  	$('.popup').popup();
+  	//reveal
 });

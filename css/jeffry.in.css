@@ -10,7 +10,26 @@
 * BODY ELEMENTS
 ***************************************************************************************/
 
-body {}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body { height: 100%; }
+html {
+	margin:0;
+	padding:0;
+}
+body {
+	background:#fcfcfc;
+	font-family:"Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif/*rtl:prepend:"Droid Arabic Kufi","Droid Sans", */;
+	margin:0;
+	margin-top:0;
+	padding:0;
+	color:#555;
+	min-width:320px;
+}
+
 div {}
 hr {}
 img {}
@@ -129,7 +148,65 @@ pre {}
 
 kbd {}
 var {}
+.transparent {
+	background:transparent !important;
+}
+.centered {
+	text-align:center;
+}
+.right {
+	text-align:right;
+}
+.masthead {
+	margin-top:38px;
+	padding:50px 0;
+}
+body #leftButton {
+	top:35px;
+	position:fixed;
+}
+#footerWrap {
+	background:#5C6166;
+	padding: 3em 0;
+	-o-transition:1s;
+	-ms-transition:1s;
+	-moz-transition:1s;
+	-webkit-transition:1s;
+	transition:1s;
+}
+#footerWrap:hover, #footerWrap:active  {
+	background:#4C4C4C;
+	-o-transition:1s;
+	-ms-transition:1s;
+	-moz-transition:1s;
+	-webkit-transition:1s;
+	transition:1s;
+}
+#footerWrap, #footerWrap a, #footerWrap p, #footerWrap span, #footerWrap i  {
+	color:#fff;
+}
+#footerWrap a {
+	text-decoration:none;
+}
+#showSocial {
+	border-radius:15px;
+	-webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:    inset 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+	box-shadow:         inset 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+	display:inline-block;
+}
+.blackBg {
+	background:#333;
+}
+#showSocial.blackBg .transparent {
+	background:#4C4C4C !important;
+}
+.social.visible {
+	background:#4C4C4C;
+	text-align: left;
+	width:160px;
 
+}
 
 
 

@@ -3,66 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Jeffry in {{ page.title }}</title>
+  <title>{{ page.title }} - Jeffry.in</title>
   <meta name="viewport" content="width=device-width">
-
-  <!-- syntax highlighting CSS -->
-  <!--<link rel="stylesheet" href="/css/syntax.css">-->
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css">
-  <!-- Custom CSS -->
-  <!--<link rel="stylesheet" href="/css/main.css">-->
-  <script type="text/javascript" src="//use.typekit.net/rng4brr.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  <style>
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  html, body { height: 100%; }
-  html {
-    margin:0;
-    padding:0;
-  }
-  body {
-    background:#fcfcfc;
-    font-family:"Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif/*rtl:prepend:"Droid Arabic Kufi","Droid Sans", */;
-    margin:0;
-    margin-top:0;
-    padding:0;
-    color:#555;
-    min-width:320px;
-  }
-  .masthead {
-    margin-top:38px;
-    padding:50px 0;
-  }
-  body #leftButton {
-    top:35px;
-    position:fixed;
-  }
-  .social a {
-    text-decoration:none;
-  }
-  </style>
+  <link href='http://fonts.googleapis.com/css?family=Lobster|Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/jeffry.in.css">
 </head>
 <body class="Grid">
   <div class="ui large vertical inverted labeled incon sidebar menu" id="menu">
-    <a class="hide item">
+    <a class="hide centered item">
       <i class="close icon"></i> Close Menu
     </a>
-    <div class="item">
+    <div class="item centered">
       <b>Pages</b>
-      <div class="menu pages">
-        <a class="item" href="index.html">home</a>
-        <a class="item" href="about.html">About</a>
-        <a class="item" href="/">Resume</a>
+      <div class="menu pages centered">
+        <a class="item" href="..">Home</a>
+        <a class="item" href="../about/">About</a>
+        <a class="item" href="../resume/">Resume</a>
       </div>
     </div>
-    <div class="item">
+    <div class="item centered">
       <b>Posts</b>
-      <div class="menu posts">
+      <div class="menu posts centered">
         {% for post in site.posts %}
         <a class="item" href="{{ post.url }}">{{ post.title }}</a>
         {% endfor %}
@@ -88,22 +51,34 @@
 
   {{ content }}
 
-  <div class="ui divider"></div>
-  <div class="ui page stackable grid footer link list">
-    <div class="two column center aligned row">
-      <div class="contact column">
-        <p>
-          Jeffry Wainwright | Web Developer | <a href="mailto:jjwainwrigh2@gmail.com" class="">jjwainwrigh2@gmail.com</a>
-        </p>
+  <div id="footerWrap">
+    <div class="ui page stackable grid footer">
+      <div class="one column center aligned row">
+        <div class="contact column">
+          <p class="centered">
+          My goal is to step in the footsteps of great men long enough to make the path more clear for those to come.
+          <br>
+          <div id="showSocial">
+            <div class="mini ui icon button circular transparent">
+              <i class="heart icon layout showSocial" data-content="Click, connnect, share some love"></i>
+            </div>
+            <span class="socialWrap slide" style="display:none">
+               <a href="https://github.com/yowainwright"><i class="github icon"></i></a>
+               <a href="https://twitter.com/jjwainwright"><i class="twitter icon"></i></a>
+               <a href="https://dribbble.com/jjwainwright"><i class="dribbble icon"></i></a>
+               <a href="https://dribbble.com/jjwainwright"><i class="instagram icon"></i></a>
+               <a href="https://dribbble.com/jjwainwright"><i class="facebook icon"></i></a>
+            </span>   
+            </div>     
+          </p>
+        </div>
       </div>
-      <div class="contact column social">
-        <p>
-          <a href="https://github.com/yowainwright"><i class="github icon"></i></a>
-          <a href="https://twitter.com/jjwainwright"><i class="twitter icon"></i></a>
-          <a href="https://dribbble.com/jjwainwright"><i class="dribbble icon"></i></a>
-          <a href="https://dribbble.com/jjwainwright"><i class="instagram icon"></i></a>
-          <a href="https://dribbble.com/jjwainwright"><i class="facebook icon"></i></a>
-        </p>
+      <div class="one column aligned row">
+        <div class="contact column">
+          <p class="centered">
+          Jeffry Wainwright in <span id="year"></span>
+          </p>
+        </div>
       </div>
     </div>
   </div>
