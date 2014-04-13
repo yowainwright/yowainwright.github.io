@@ -32,6 +32,6 @@ $( document ).ready(function() {
   	});
   	
   	//specify
-  	$('.carousel').slick();
+  	$('.slider').glide();
 
 });
