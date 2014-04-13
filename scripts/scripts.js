@@ -25,6 +25,13 @@ $( document ).ready(function() {
 	var currentYear = (new Date).getFullYear();
   	$("#year").text( (new Date).getFullYear());
   	//popup
+
   	$('.popup').popup();
-  	//reveal
+  	$('.noMore').on('click', function() {
+  		$(this).popup('destroy');
+  	});
+  	
+  	//specify
+  	$('.carousel').slick();
+
 });
