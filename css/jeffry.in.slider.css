@@ -16,7 +16,7 @@
   -webkit-transform-style: preserve-3d;
 }
 
-.slide-item {
+.slide-item{
   height: 100%;
   float: left;
   clear: none;
