@@ -13,7 +13,7 @@
   <!-- this is a semantic framework -->
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css" />
   <!-- some plugins to get going -->
-  <link href="http://cdn.jsdelivr.net/jquery.slick/1.3.2/slick.css" rel='stylesheet' type='text/css' />
+  <link href="/css/jeffry.in.slider.css" rel='stylesheet' type='text/css' />
   <!-- some fonts -->
   <link href='http://fonts.googleapis.com/css?family=Lobster|Raleway' rel='stylesheet' type='text/css' />
   <!-- custom -->
@@ -42,8 +42,8 @@
     </div>
   </div>
   <div id="leftButton" class="ui black large launch right attached button">
-    <i class="icon list layout"></i>
-    <span class="text" style="display:none;">Menu</span>
+    <i class="icon list layout no-more popup" data-content="Menu"></i>
+    <!--<span class="text" style="display:none;">Menu</span>-->
   </div>
   <div class="masthead segment">
     <div class="site ui page grid">
@@ -69,7 +69,7 @@
           <br>
           <div id="showSocial">
             <div class="mini ui icon button circular transparent">
-              <i class="heart icon layout showSocial popup noMore" data-position="center left" data-content="Click, connect, share some love"></i>
+              <i class="heart icon layout showSocial no-more popup" data-content="Click, connect, share some love"></i>
             </div>
             <span class="socialWrap slide" style="display:none">
                <a href="https://github.com/yowainwright"><i class="github icon"></i></a>
@@ -91,11 +91,12 @@
       </div>
     </div>
   </div>
-  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/javascript/semantic.min.js"></script>
   <!-- some plugins -->
-  <script src="http://cdn.jsdelivr.net/jquery.slick/1.3.2/slick.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/jquery.glide/1.0.6/jquery.glide.min.js"></script>
   <!-- custom -->
   <script src="/scripts/scripts.js"></script>
 </body>
