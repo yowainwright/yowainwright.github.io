@@ -18,14 +18,19 @@ $( document ).ready(function() {
 	//current year
 	var currentYear = (new Date).getFullYear();
   	$("#year").text( (new Date).getFullYear());
-  	//popup
+  	//popupß
   	$('.popup').popup();
   	//don't annoy me popup!
   	$('.no-more').on('click', function() {
   		$(this).popup('destroy');
   	});
   	// glide slide
-  	$('.slider').glide();
+  	$('.slider').glide({
+  		autoplay:false,
+  		arrowsWrapperClass: 'slider-arrows',
+  		arrowRightText:'',
+  		arrowLeftText:''
+  	});
   	// waypoints
   	// make it sticky
   	$('.peek').waypoint('sticky', {
@@ -45,4 +50,6 @@ $( document ).ready(function() {
     if ($('#about').hasClass('main')) {$('body').addClass('about');}
     if ($('#resume').hasClass('main')) {$('body').addClass('resume');}
     if ($('#home').hasClass('main')) {$('body').addClass('home');}
+
+    $('.home .masthead').remove();
 });
