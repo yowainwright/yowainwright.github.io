@@ -6,12 +6,6 @@ $( document ).ready(function() {
 	$('.sidebar .hide').on('click', function (){
 		$('.sidebar').sidebar('hide');
 	});
-	$("#leftButton").on("mouseenter", function() {
-		$(".text").show(500);
-	});
-	$("#leftButton").on("mouseleave", function() {
-		$(".text").hide(500);
-	});
 	//footer social share
 	$(".showSocial").on("click", function(){
 		$("#showSocial").toggleClass('blackBg');
@@ -25,13 +19,30 @@ $( document ).ready(function() {
 	var currentYear = (new Date).getFullYear();
   	$("#year").text( (new Date).getFullYear());
   	//popup
-
   	$('.popup').popup();
-  	$('.noMore').on('click', function() {
+  	//don't annoy me popup!
+  	$('.no-more').on('click', function() {
   		$(this).popup('destroy');
   	});
-  	
-  	//specify
+  	// glide slide
   	$('.slider').glide();
-
+  	// waypoints
+  	// make it sticky
+  	$('.peek').waypoint('sticky', {
+  		offset: 210 //ofsets the height of the header
+  	});
+  	$('section').waypoint(function(direction) {
+        $('a[href="#' + this.id + '"]').toggleClass('active', direction === 'down');
+        }, {
+            offset: '10%'
+        }).waypoint(function(direction) {
+       		$('a[href="#' + this.id + '"]').toggleClass('active', direction === 'up');
+        }, {
+            offset: function() {
+            return -$(this).height();
+         }
+    });
+    if ($('#about').hasClass('main')) {$('body').addClass('about');}
+    if ($('#resume').hasClass('main')) {$('body').addClass('resume');}
+    if ($('#home').hasClass('main')) {$('body').addClass('home');}
 });

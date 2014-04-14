@@ -2,10 +2,6 @@
 
 /* It starts with a little Vanilla */
 
-/**
-* Vanilla CSS
-*/
-
 /***************************************************************************************
 * BODY ELEMENTS
 ***************************************************************************************/
@@ -13,6 +9,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family:'raleway', sans-serif;
 }
 
 html, body { height: 100%; }
@@ -40,10 +37,14 @@ a {}
 ***************************************************************************************/
 
 /* All Headings */
-h1, h2, h3, h4, h5, h6 {}
+h1, h2, h3, h4, h5, h6 {
+		font-family:'raleway', sans-serif;
+}
 
 /* Individual Headings */
-h1 {}
+h1 {
+	text-transform:uppercase;
+}
 h2 {}
 h3 {}
 h4 {}
@@ -55,7 +56,10 @@ h6 {}
 ***************************************************************************************/
 
 /* First Paragraph */
-p {}
+p {
+	margin:.8em 0;
+	line-height:1.5em;
+}
 
 /* Seccond Paragraph */
 abbr {}
@@ -148,55 +152,114 @@ pre {}
 
 kbd {}
 var {}
+section {
+	padding:3em 0;
+}
+section:first-of-type {
+	padding-top:0;
+}
+section:last-of-type {
+	margin-bottom:1em;
+}
+h1.ui.header {
+	font-size:2.8rem;
+	font-weight:700;
+}
 .transparent {
 	background:transparent !important;
 }
 .centered {
 	text-align:center;
 }
+.contact .centered {
+	font-size: 1.8em;
+	font-weight:700;
+	text-transform: uppercase;
+}
+
 .right {
 	text-align:right;
 }
 .masthead {
-	margin-top:38px;
-	padding:50px 0;
+	padding:90px 0 50px 0;
+	margin-bottom:30px;
 }
 body #leftButton {
+
 	top:35px;
 	position:fixed;
 }
-#footerWrap {
-	background:#5C6166;
-	padding: 3em 0;
-	-o-transition:1s;
-	-ms-transition:1s;
-	-moz-transition:1s;
-	-webkit-transition:1s;
-	transition:1s;
+body #leftButton, #footerWrap{
+	background:#222;
 }
-#footerWrap:hover, #footerWrap:active  {
-	background:#4C4C4C;
-	-o-transition:1s;
-	-ms-transition:1s;
-	-moz-transition:1s;
-	-webkit-transition:1s;
-	transition:1s;
+body #leftButton:hover{
+	background:#333;
 }
-#footerWrap, #footerWrap a, #footerWrap p, #footerWrap span, #footerWrap i  {
+.footer .circular {
+
+}
+.footer-mail a{
+	text-decoration:none; 
+}
+.footer-mail i{
+	color:#fff !important;
+	font-size:1.5em !important;
+	text-shadow:1px 1px 3px #555;
+}
+.email-me {
 	color:#fff;
+	font-size:2em !important;
+	text-shadow:1px 1px 3px #555;
+	padding-bottom:.5em;
+	margin-left:-.1em;
+}
+
+#footerWrap {
+	padding: 3em 0;
+}
+
+#footerWrap, #footerWrap a, #footerWrap span {
+	text-shadow:2px 1px 2px #000;
+}
+#footerWrap i  {
+	color:#666;
+	font-size:1.6em;
 }
 #footerWrap a {
 	text-decoration:none;
 }
 #showSocial {
-	border-radius:15px;
-	-webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow:    inset 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-	box-shadow:         inset 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+	border-radius:8em;
+	-webkit-box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:    inset 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+	box-shadow:         inset 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
 	display:inline-block;
+}
+.socialWrap {
+	position:relative;
+	top:5px;
 }
 .blackBg {
 	background:#333;
+}
+#footerWrap .blackBg i.heart {
+	color:#999;
+}
+#footerWrap .transparent:hover {
+	-o-transition:1s;
+	-ms-transition:1s;
+	-moz-transition:1s;
+	-webkit-transition:1s;
+	transition:1s;
+	background:#333 !important;
+}
+#footerWrap .transparent:hover i {
+	-o-transition:1s;
+	-ms-transition:1s;
+	-moz-transition:1s;
+	-webkit-transition:1s;
+	transition:1s;
+	color:#999;
 }
 #showSocial.blackBg .transparent {
 	background:#4C4C4C !important;
@@ -207,7 +270,76 @@ body #leftButton {
 	width:160px;
 
 }
+#footerWrap .socialWrap i:hover {
+	-o-transition:1s;
+	-ms-transition:1s;
+	-moz-transition:1s;
+	-webkit-transition:1s;
+	transition:1s;
+	color:#999;
+}
+.footer-top {
+	border-bottom:1px solid #151515;
+}
+.footer-bottom {
+	border-top:1px solid #333;
+}
+.peek {
 
+}
+.stuck {
+	position:fixed;
+	top:35px;
+}
+.introduction {
+	font-size:1.5em;
+	font-weight:200;
+	margin:1em 0;
+	text-transform:uppercase;
+}
+.introduction:first-letter {
+	font-size:3.2em;
+	letter-spacing:-.1em;
+}
+.offsetted {
+	display:inline;
+	margin:0 auto;
+}
+.offsetted .column {
+	text-align:left !important;
+}
+.about .masthead {
+	background-color:#F7E779;
+	border-bottom:1px solid #E0DD1B;
+}
+
+.about h1 {
+	color:#fff;
+	text-shadow:2px 1px 2px #BDA400;
+
+}
+.resume .masthead {
+	background-color:#57CBF2;
+	border-bottom:1px solid #36C7F7;
+}
+
+.resume h1 {
+	color:#fff;
+	text-shadow:2px 1px 2px #0489B5;
+
+}
+.eductation h3 {
+	font-weight:200;
+	font-size:1em;
+	text-transform:uppercase;
+}
+.eductation h4.ui.dividing.header {
+	 margin:.2em 0;
+}
+.eductation p {
+	font-size:1em;
+	font-weight:200;
+}
 
 
 
