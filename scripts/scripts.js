@@ -31,7 +31,8 @@ $( document ).ready(function() {
   		arrowRightText:'',
   		arrowLeftText:''
   	});
-  	// waypoints
+
+  	// waypoints | todo: fix scroll to top bug and offset
   	// make it sticky
   	$('.peek').waypoint('sticky', {
   		offset: 210 //ofsets the height of the header
@@ -50,6 +51,7 @@ $( document ).ready(function() {
     if ($('#about').hasClass('main')) {$('body').addClass('about');}
     if ($('#resume').hasClass('main')) {$('body').addClass('resume');}
     if ($('#home').hasClass('main')) {$('body').addClass('home');}
+
 
     $('.home .masthead').remove();
 });

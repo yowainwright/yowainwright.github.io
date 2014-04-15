@@ -392,8 +392,8 @@ body #leftButton:hover{
 	color:#fff;
 }
 .slider1 .content {
-	margin-top:50%;
-	margin-bottom:14%;
+	margin-top:37%;
+	margin-bottom:20%;
 }
 .slider1 h2 {
 	font-family:'lobster', sans-serif;
@@ -417,14 +417,19 @@ body #leftButton {
 	z-index:9;
 }
 .logo {
-	background:url('/assets/logo.png') no-repeat center center;
 	z-index:9;
 	position:absolute;
 	left:50%;
-	width:87px;
-	height:110px;
+	padding:.5em;
 	margin-left:-43px;
-	top:-3px;
+	text-decoration: none;
+	top:35px;
+}
+
+.logo .boxed-up span {
+	font-size:1.8em;
+	font-weight:900;
+	text-shadow: 0px 2px 2px #777;
 }
 .pushed .logo {
 	margin-left:232px;
@@ -446,6 +451,26 @@ background-position: -17px 0;
 .slider-arrow--left {
 
 }
+.content.block {
+	padding:3em 0;
+}
+img.centered {display:inline-block !important;}
+.date {
+	font-family:'lobster', sans-serif;
+}
+.like-this img {
+	height:100px;
+	width:100px;
+}
+.like-this .center.aligned p {text-align:left !important;}
+.special {
+	font-family:'lobster', sans-serif;
+	font-size:3em;
+	margin:.3em 0;
+}
+body .space .segment{margin-top:3em !important;margin-bottom:3em !important;}
+.biege {background-color:#FCF9F0;border-bottom:1px solid #FCF2D4;}
+.lighter-biege {background-color:#FCE3C2;border-top: 1px solid #fff;border-bottom:1px solid #FCF2D4;}
 
 
 
