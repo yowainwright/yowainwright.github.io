@@ -1,17 +1,9 @@
 /* jeffry.in.css */
-
-/* It starts with a little Vanilla */
-
-/***************************************************************************************
-* BODY ELEMENTS
-***************************************************************************************/
-
 * {
 	margin: 0;
 	padding: 0;
 	font-family:'raleway', sans-serif;
 }
-
 html, body { height: 100%; }
 html {
 	margin:0;
@@ -26,22 +18,13 @@ body {
 	color:#555;
 	min-width:320px;
 }
-
 div {}
 hr {}
 img {}
-a {}
-
-/***************************************************************************************
-* HEADINGS
-***************************************************************************************/
-
-/* All Headings */
+a, a:hover, a:active {color:#555;}
 h1, h2, h3, h4, h5, h6 {
 		font-family:'raleway', sans-serif;
 }
-
-/* Individual Headings */
 h1 {
 	text-transform:uppercase;
 }
@@ -50,26 +33,14 @@ h3 {}
 h4 {}
 h5 {}
 h6 {}
-
-/***************************************************************************************
-* PARAGRAPHS
-***************************************************************************************/
-
-/* First Paragraph */
 p {
 	margin:.8em 0;
 	line-height:1.5em;
 }
-
-/* Seccond Paragraph */
 abbr {}
 b {}
-
-/* Blockquote */
 blockquote {}
 cite {}
-
-/* Third Paragraph */
 dfn {}
 del {}
 em {}
@@ -77,79 +48,37 @@ i {}
 strong {}
 ins {}
 small {}
-
-/* Quote */
 q {}
-
-/* Fourth Paragraph */
 sub {}
 sup {}
-
-/***************************************************************************************
-* LISTS
-***************************************************************************************/
-
-/* All Lists */
 dl, ol, ul {}
-
-/* Definition Lists */
 dl {}
 dt {}
 dd {}
-
-/* Ordered Lists */
 ol {}
 ol li {}
-
-/* Unordered Lists */
 ul {}
 ul li {}
-
-/***************************************************************************************
-* FORMS
-***************************************************************************************/
-
 form {}
 fieldset {}
 legend {}
 label {}
-
-/* Inputs */
 input {}
 textarea {}
-
-/* Other */
 select {}
 optgroup {}
-
-/***************************************************************************************
-* TABLES
-***************************************************************************************/
-
 table {}
 caption {}
 tr {}
-
-/* Head */
 thead {}
 th {}
-
-/* Body */
 tbody {}
 td {}
-
-/* Foot */
 tfoot {}
-
-/***************************************************************************************
-* OTHER
-***************************************************************************************/
-
 address {}
 code {}
 samp {}
 pre {}
-
 kbd {}
 var {}
 
@@ -469,8 +398,22 @@ img.centered {display:inline-block !important;}
 	margin:.3em 0;
 }
 body .space .segment{margin-top:3em !important;margin-bottom:3em !important;}
-.biege {background-color:#FCF9F0;border-bottom:1px solid #FCF2D4;}
-.lighter-biege {background-color:#FCE3C2;border-top: 1px solid #fff;border-bottom:1px solid #FCF2D4;}
+.biege {
+	background-color:#FCF9F0;
+	border-bottom:1px solid #FCF2D4;
+	padding-bottom:3em;
+}
+.lighter-biege {
+	background-color:#FCE3C2;
+	border-top: 1px solid #fff;
+	border-bottom:1px solid #FCF2D4;
+	padding-bottom:3em;
+	padding-top:3em;
+}
+.last-section {
+	padding-top:5em;
+	padding-bottom:3em;
+}
 
 
 
