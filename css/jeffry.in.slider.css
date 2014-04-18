@@ -61,3 +61,64 @@
 .slider-nav__item--current {
   background: #ccc;
 }
+
+/* unique slider css */
+.slider-nav__item {
+  border-radius:50%;
+}
+.slider-arrow--right, .slider-arrow--left {
+  background-image: url('/assets/glide-arrows.png');
+  background-repeat:no-repeat;
+  width: 17px;
+height: 28px;
+display: block;
+padding: 0;
+}
+.slider-arrow--right {
+background-position: -17px 0;
+}
+.slider-arrow--left {
+
+}
+
+/* home page slider - start */
+.slider1 .slide-item {
+  height:100%;
+  width:100%;
+  background-position: center;
+  background-size: cover;
+}
+.slider1 .item1 {
+  background:url("/assets/dream1.jpg") no-repeat center;
+}
+.slider1 .item2 {
+  background:url("/assets/dream2.jpg") no-repeat center;
+}
+.slider1 .item3 {
+  background:url("/assets/dream3.jpg") no-repeat center;
+}
+.slider1 .item4 {
+  background:url("/assets/dream4.jpg") no-repeat center;
+}
+.slider1 {
+  color:#fff;
+}
+.slider1 .content {
+  margin-top:37%;
+  margin-bottom:20%;
+}
+.slider1 h2 {
+  font-family:'lobster', sans-serif;
+  font-size:5em;
+  font-weight:200;
+  margin-bottom: 1.2em;
+  text-shadow: 0 .05em .05em #c25b1d !important;
+}
+.slider1 .note {
+  max-height:5em;
+  min-height:5em;
+  max-width:5em;
+  min-width:5em;
+  display:inline !important;
+}
+/* home page slider - start */
