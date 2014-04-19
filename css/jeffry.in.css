@@ -231,6 +231,10 @@ body #leftButton, #footerWrap{
 body #leftButton:hover{
 	background:#333;
 }
+body #menu a  {
+	color:#fff;
+	text-decoration: none;
+}
 
 /* logo */
 .logo {
@@ -283,7 +287,16 @@ img.centered {
 	height:100px;
 	width:100px;
 }
-.like-this .center.aligned p {
+.summary {
+	text-transform: uppercase;
+	font-size:1.2em;
+	font-weight:200;
+}
+.like-this .summary {
+	border-bottom:1px solid rgba(0,0,0,.1);
+	padding-bottom:.6em;
+}
+.like-this .center.aligned p + p {
 	text-align:left !important;
 }
 .special {
@@ -321,7 +334,7 @@ body .space .segment{
 .biege {
 	background-color:#FCF9F0;
 	border-bottom:1px solid #FCF2D4;
-	padding-bottom:3em;
+	padding-bottom:2em;
 }
 .lighter-biege {
 	background-color:#FCE3C2;
@@ -340,12 +353,14 @@ body .space .segment{
 	background-color:#CEE4ED;
 	border-bottom:1px solid #B8E3F5;
 }
-
 .resume h1 {
 	color:#fff;
 	text-shadow:2px 1px 2px #0489B5;
 }
-.resume .footer-mail i, .resume .email-me, .resume .resume-download, .resume .ui.list a.resume-download i {
+.resume .footer-mail i, 
+.resume .email-me, /* <-- global style mixin' */
+.resume .resume-download, 
+.resume .ui.list a.resume-download i {
 	color:#F2F8FA;
 }
 .resume .resume-download {
@@ -390,6 +405,75 @@ body .space .segment{
 .about h1 {
 	color:#fff;
 	text-shadow:2px 1px 2px #BDA400;
+}
+
+/* let's make this mobile experience dance */
+@media only screen and (max-width : 1200px) {
+
+}
+@media only screen and (max-width : 992px) {
+	.ui.vertical.menu {
+		width:100%;
+	}
+	.stuck {position:relative;}
+}
+@media only screen and (max-width : 768px) {
+	.slider1 h2 {
+		font-size:2.5em;
+	}
+	.slider1 .note {
+		max-height: 4em;
+		min-height: 4em;
+		max-width: 4em;
+		min-width: 4em;
+	}
+	/* because the line-width was too long */
+	.ui.stackable.page.grid>.row>.column {
+		padding-left:5em !important;
+		padding-right:5em !important;
+	}
+	.ui.vertical.menu {
+		width:100%;
+	}
+	.stuck {position:relative;}
+}
+@media only screen and (max-width : 480px) {
+	.slider1 h2 {
+		font-size:2.5em;
+	}
+	.slider1 .note {
+		max-height: 4em;
+		min-height: 4em;
+		max-width: 4em;
+		min-width: 4em;
+	}
+	.slider1 .content {
+		margin-top:25%;
+		margin-bottom:25%;
+	}
+	.ui.vertical.menu {
+		width:100%;
+	}
+	.stuck {position:relative;}
+}
+@media only screen and (max-width : 320px) {
+	.slider1 h2 {
+		font-size:2.5em;
+	}
+	.slider1 .note {
+		max-height: 4em;
+		min-height: 4em;
+		max-width: 4em;
+		min-width: 4em;
+	}
+	.slider1 .content {
+		margin-top:25%;
+		margin-bottom:25%;
+	}
+	.ui.vertical.menu {
+		width:100%;
+	}
+	.stuck {position:relative;}
 }
 
 

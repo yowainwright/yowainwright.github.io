@@ -34,10 +34,10 @@
 
     </div>
   </a>-->
-  <div class="ui large vertical inverted labeled incon sidebar menu" id="menu">
-    <a class="hide centered item">
-      <i class="close icon"></i> Close Menu
-    </a>
+  <div class="ui large vertical inverted labeled icon sidebar menu" id="menu">
+
+    <a class="menu item centered hide"><b><i class="close icon"></i> Close Menu</b></a>
+  
     <div class="item centered">
       <b><i class="book icon"></i> Pages</b>
       <div class="menu pages centered">
@@ -52,6 +52,16 @@
         {% for post in site.posts %}
         <a class="item" href="{{ post.url }}">{{ post.title }}</a>
         {% endfor %}
+      </div>
+    </div>
+     <div class="item centered">
+      <div class="menu centered">
+        <a href="mailto:jjwainwright2@gmail.com?Subject=From%20your%20webpage" target="_top"><i class="mail icon"></i></a>
+        <a href="https://github.com/yowainwright"><i class="github icon"></i></a>
+        <a href="https://twitter.com/jjwainwright"><i class="twitter icon"></i></a>
+        <a href="https://dribbble.com/jjwainwright"><i class="dribbble icon"></i></a>
+        <a href="https://instagram.com/jjwainwright"><i class="instagram icon"></i></a>
+        <a href="https://dribbble.com/jjwainwright"><i class="facebook icon"></i></a>
       </div>
     </div>
   </div>
@@ -77,7 +87,7 @@
       <div class="one column center aligned row">
         <div class="column">
           <p class="centered">
-              <a href="mailto:jjwainwright2@gmail.com?Subject=From%20your%20webpage" target="_top"><i class="mail outline icon layout" data-content="Click, to email me"></i><span class="email-me">emial me.</span></a>
+              <a href="mailto:jjwainwright2@gmail.com?Subject=From%20your%20webpage" target="_top"><i class="mail outline icon layout"></i><span class="email-me">emial me.</span></a>
           </p>
         </div>
       </div>
@@ -88,7 +98,7 @@
       <div class="one column center aligned row">
         <div class="contact column">
           <p class="centered">
-          My goal is to step in the footsteps of great men long enough to make the path more clear for those to come.
+          My goal is to step in the footsteps of great people long enough to make the path more clear for those to come.
           <br>
           <div id="showSocial">
             <div class="mini ui icon button circular transparent">
