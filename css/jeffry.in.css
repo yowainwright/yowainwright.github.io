@@ -327,7 +327,8 @@ body .space .segment{
 .biege {
 	background-color:#FCF9F0;
 	border-bottom:1px solid #FCF2D4;
-	padding-bottom:2em;
+	padding-bottom:3em;
+	padding-top:3em;
 }
 .lighter-biege {
 	background-color:#FCE3C2;
@@ -397,11 +398,26 @@ body .space .segment{
 }
 .about h1 {
 	color:#fff;
+	border-bottom:1px solid #E0DD1B;
 	text-shadow:2px 1px 2px #BDA400;
 }
 
 /* post */
-.
+.normal.post.layout .masthead {
+	background:#D66D58;
+	border-bottom:1px solid #D16049;
+}
+
+.normal.post.layout h1 {
+	color:#fff;
+	text-shadow:2px 1px 2px #D16049;
+}
+.post.layout.content {
+	padding-top:3em;
+}
+.meta {
+	font-family: 'lobster', sans-serif;
+}
 
 /* let's make this mobile experience dance */
 @media only screen and (max-width : 1200px) {
