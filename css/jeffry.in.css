@@ -228,6 +228,12 @@ body #menu a  {
 	color:#fff;
 	text-decoration: none;
 }
+#topNav {
+	z-index:99;
+}
+#topNav i {
+	color:#fff;
+}
 
 /* logo */
 .logo {
@@ -340,6 +346,10 @@ body .space .segment{
 .last-section {
 	padding-top:5em;
 	padding-bottom:3em;
+}
+img[src="/assets/swingset.png"] {
+	position:relative;
+	margin-left:30px;
 }
 
 /* resume */
