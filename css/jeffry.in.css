@@ -91,19 +91,26 @@ section:first-of-type {
 section:last-of-type {
 	margin-bottom:1em;
 }
+
+/* effects css */
 .transparent {
 	background:transparent !important;
 }
 .dimmed {
 	opacity:.2;
 }
-.dimmed:hover, .dimmed:active {
-	opacity:.5;
+.transition1, .dimmed:hover, .dimmed:active, 
+#footerWrap .transparent:hover, 
+#footerWrap .transparent:hover i, 
+#footerWrap .socialWrap i:hover {
 	-o-transition:1s;
 	-ms-transition:1s;
 	-moz-transition:1s;
 	-webkit-transition:1s;
 	transition:1s;
+}
+.dimmed:hover, .dimmed:active {
+	opacity:.5;
 }
 .centered {
 	text-align:center;
@@ -138,6 +145,7 @@ section:last-of-type {
 	text-shadow:1px 1px 3px #555;
 	padding-bottom:.5em;
 	margin-left:-.1em;
+	color:#fff;
 }
 
 #footerWrap {
@@ -172,19 +180,9 @@ section:last-of-type {
 	color:#999;
 }
 #footerWrap .transparent:hover {
-	-o-transition:1s;
-	-ms-transition:1s;
-	-moz-transition:1s;
-	-webkit-transition:1s;
-	transition:1s;
 	background:#333 !important;
 }
 #footerWrap .transparent:hover i {
-	-o-transition:1s;
-	-ms-transition:1s;
-	-moz-transition:1s;
-	-webkit-transition:1s;
-	transition:1s;
 	color:#999;
 }
 #showSocial.blackBg .transparent {
@@ -199,11 +197,6 @@ section:last-of-type {
 	color:#fff;
 }
 #footerWrap .socialWrap i:hover {
-	-o-transition:1s;
-	-ms-transition:1s;
-	-moz-transition:1s;
-	-webkit-transition:1s;
-	transition:1s;
 	color:#999;
 }
 .footer-top {
@@ -407,6 +400,9 @@ body .space .segment{
 	text-shadow:2px 1px 2px #BDA400;
 }
 
+/* post */
+.
+
 /* let's make this mobile experience dance */
 @media only screen and (max-width : 1200px) {
 
@@ -428,7 +424,7 @@ body .space .segment{
 		min-width: 4em;
 	}
 	/* because the line-width was too long */
-	.ui.stackable.page.grid>.row>.column {
+	.ui.stackable.page.grid.like-this>.row>.column {
 		padding-left:5em !important;
 		padding-right:5em !important;
 	}
@@ -439,18 +435,19 @@ body .space .segment{
 }
 @media only screen and (max-width : 480px) {
 	.slider1 h2 {
-		font-size:2.5em;
+		font-size:1.8em;
 	}
 	.slider1 .note {
-		max-height: 4em;
-		min-height: 4em;
-		max-width: 4em;
-		min-width: 4em;
+		max-height: 2.8em;
+		min-height: 2.8em;
+		max-width: 2.8em;
+		min-width: 2.8em;
 	}
 	.slider1 .content {
-		margin-top:25%;
-		margin-bottom:25%;
+		margin-top:30%;
+		margin-bottom:30%;
 	}
+	.slider-nav {display:none;visibility:hidden;}
 	.ui.vertical.menu {
 		width:100%;
 	}
@@ -458,17 +455,18 @@ body .space .segment{
 }
 @media only screen and (max-width : 320px) {
 	.slider1 h2 {
-		font-size:2.5em;
+		font-size:1.8em;
 	}
 	.slider1 .note {
-		max-height: 4em;
-		min-height: 4em;
-		max-width: 4em;
-		min-width: 4em;
+		max-height: 2.8em;
+		min-height: 2.8em;
+		max-width: 2.8em;
+		min-width: 2.8em;
 	}
+	.slider-nav {display:none;visibility:hidden;}
 	.slider1 .content {
-		margin-top:25%;
-		margin-bottom:25%;
+		margin-top:30%;
+		margin-bottom:30%;
 	}
 	.ui.vertical.menu {
 		width:100%;

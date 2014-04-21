@@ -3,6 +3,7 @@ layout: post
 title:  "First Jekyll Post"
 categories: code
 permalink: first-jekyll-post
+unique: first-jekyll-post
 ---
 
 
