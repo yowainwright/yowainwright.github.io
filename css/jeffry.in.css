@@ -239,6 +239,7 @@ body #menu a  {
 	font-weight:200;
 	text-decoration: none;
 	text-transform:uppercase;
+	letter-spacing: .12em;
 
 }
 #topNav {
