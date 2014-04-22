@@ -39,7 +39,14 @@ p {
 }
 abbr {}
 b {}
-blockquote {}
+blockquote {
+	text-transform: uppercase;
+	border-left:4px solid #ccc;
+	font-size:1.5em;
+	font-weight: 200;
+	line-height:1.5em;
+	padding-left:2em;
+}
 cite {}
 dfn {}
 del {}
@@ -121,6 +128,12 @@ section:last-of-type {
 .masthead {
 	padding:40px 0 50px 0;
 }
+.no.underline {
+	text-decoration: none;
+}
+.addthis_toolbox {
+	display:inline-block;
+}
 
 /* stick pointer nav */
 .peek {}
@@ -149,7 +162,7 @@ section:last-of-type {
 }
 
 #footerWrap {
-	padding: 3em 0;
+	padding: 1em 0 0;
 }
 
 #footerWrap, #footerWrap a, #footerWrap span {
@@ -224,7 +237,7 @@ body #leftButton, #footerWrap{
 body #leftButton:hover{
 	background:#333;
 }
-body #menu b {
+body #menu h4 {
 	font-family:'lobster', sans-serif;
 	font-weight:normal;
 	tex-shadow:0 0 0 #000;
@@ -325,7 +338,7 @@ img.centered {
 }
 .with-cap:first-letter {
 	font-size:3.2em;
-	letter-spacing:-.1em;
+	letter-spacing:-.02em;
 }
 .offsetted {
 	display:inline;
@@ -513,6 +526,9 @@ img[src="/assets/swingset.png"] {
 	}
 }
 @media only screen and (max-width : 480px) {
+	body section {
+		padding:1em 0;
+	}
 	.slider1 {
 		padding-top:55px;
 	}
@@ -556,6 +572,9 @@ img[src="/assets/swingset.png"] {
 	
 }
 @media only screen and (max-width : 320px) {
+	body section {
+		padding:1em 0;
+	}
 	.slider1 {
 		padding-top:55px;
 	}

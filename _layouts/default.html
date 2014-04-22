@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{{ page.title }} - Jeffry.in</title>
+  <title>Jeffry.in {{ page.title }}</title>
   <!-- todo
   canonical, meta description section, og stuff, itemprop, publisher, site verification
   end todo -->
@@ -34,10 +34,10 @@
 <body class="Grid {{ page.unique }}">
   <div class="ui large vertical inverted labeled icon sidebar menu" id="menu">
 
-    <a class="menu item centered hide"><b><i class="close icon"></i> Close Menu</b></a>
+    <a class="menu item centered hide"><b><i class="close circular icon"></i> Close Menu</b></a>
   
     <div class="item centered">
-      <b><i class="book icon"></i> Pages</b>
+      <h4 class="ui header dividing"><i class="book circular icon"></i> Pages</h4>
       <div class="menu pages centered">
         <a class="item" href="..">Home</a>
         <a class="item" href="../about/">About</a>
@@ -45,7 +45,7 @@
       </div>
     </div>
     <div class="item centered">
-      <b><i class="pin icon"></i> Posts</b>
+      <h4 class="ui dividing header"><i class="pin circular icon"></i> Posts</h4>
       <div class="menu posts centered">
         {% for post in site.posts %}
         <a class="item" href="{{ post.url }}">{{ post.title }}</a>
@@ -91,15 +91,7 @@
 
   {{ content }}
 
-   <div class="ui page stackable grid main footer-mail">
-      <div class="one column center aligned row">
-        <div class="column">
-          <p class="centered">
-              <a href="mailto:jjwainwright2@gmail.com?Subject=From%20your%20webpage" target="_top"><i class="mail outline icon layout"></i><span class="email-me">emial me.</span></a>
-          </p>
-        </div>
-      </div>
-  </div>
+   
   <div id="footerWrap">
     <div class="ui page stackable grid footer footer-top">
 
@@ -113,6 +105,7 @@
               <i class="heart icon layout showSocial"></i>
             </div>
             <span class="socialWrap slide" style="display:none">
+               <a href="mailto:jjwainwright2@gmail.com?Subject=From%20your%20webpage" target="_top"><i class="mail icon"></i></a>
                <a href="https://github.com/yowainwright"><i class="github icon"></i></a>
                <a href="https://twitter.com/jjwainwright"><i class="twitter icon"></i></a>
                <a href="https://dribbble.com/jjwainwright"><i class="dribbble icon"></i></a>
