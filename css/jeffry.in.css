@@ -224,9 +224,22 @@ body #leftButton, #footerWrap{
 body #leftButton:hover{
 	background:#333;
 }
+body #menu b {
+	font-family:'lobster', sans-serif;
+	font-weight:normal;
+	tex-shadow:0 0 0 #000;
+	font-size:1em;
+}
+body #menu a.hide b {
+	font-family:'raleway', sans-serif;
+}
+
 body #menu a  {
 	color:#fff;
+	font-weight:200;
 	text-decoration: none;
+	text-transform:uppercase;
+
 }
 #topNav {
 	z-index:99;
@@ -237,22 +250,21 @@ body #menu a  {
 }
 
 /* logo */
-.logo {
-	z-index:9;
-	position:absolute;
-	left:50%;
-	padding:.5em;
-	margin-left:-43px;
-	text-decoration: none;
-	top:35px;
+img.ui.image.logo {
+	display:inline;
+	position:relative;
+	border-radius:50%;
+	border:1px dashed #fff;
+	padding:4px;
+
 }
-.logo .boxed-up span {
-	font-size:1.8em;
-	font-weight:900;
-	text-shadow: 0px 2px 2px #777;
+img.ui.image.logo.one {
+	top:-2px;
+	left:8px;
 }
-.pushed .logo {
-	margin-left:232px;
+img.ui.image.logo.two {
+	float:right;
+	top:-5px;
 }
 
 /* content - section specific css */
