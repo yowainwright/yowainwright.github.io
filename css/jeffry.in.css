@@ -119,7 +119,7 @@ section:last-of-type {
 	text-align:right;
 }
 .masthead {
-	padding:160px 0 50px 0;
+	padding:40px 0 50px 0;
 }
 
 /* stick pointer nav */
@@ -230,6 +230,7 @@ body #menu a  {
 }
 #topNav {
 	z-index:99;
+	padding-top:20px;
 }
 #topNav i {
 	color:#fff;
@@ -309,7 +310,7 @@ img.centered {
 	margin:1em 0;
 	text-transform:uppercase;
 }
-.introduction:first-letter {
+.with-cap:first-letter {
 	font-size:3.2em;
 	letter-spacing:-.1em;
 }
@@ -319,6 +320,17 @@ img.centered {
 }
 .offsetted .column {
 	text-align:left !important;
+}
+.centered.top.banner {
+	width:120px;
+	height:120px;
+	background:none;
+	background-repeat:no-repeat;
+	border-radius:50%;
+	border:8px solid #fff;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:    0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	box-shadow:         0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* home page css */
@@ -340,8 +352,8 @@ body .space .segment{
 	background-color:#FCE3C2;
 	border-top: 1px solid #fff;
 	border-bottom:1px solid #FCF2D4;
-	padding-bottom:3em;
-	padding-top:3em;
+	padding-bottom:6em;
+	padding-top:6em;
 }
 .last-section {
 	padding-top:5em;
@@ -356,6 +368,9 @@ img[src="/assets/swingset.png"] {
 .resume .masthead {
 	background-color:#CEE4ED;
 	border-bottom:1px solid #B8E3F5;
+}
+.resume .centered.top.banner {
+	background-image:url('../assets/resume.png');
 }
 .resume h1 {
 	color:#fff;
@@ -400,6 +415,9 @@ img[src="/assets/swingset.png"] {
 	background-color:#F7E779;
 	border-bottom:1px solid #E0DD1B;
 }
+.about .centered.top.banner {
+	background-image:url('../assets/beanie.png');
+}
 .about .footer-mail i, .about .email-me {
 	color:#FAFAED;
 }
@@ -428,10 +446,22 @@ img[src="/assets/swingset.png"] {
 .meta {
 	font-family: 'lobster', sans-serif;
 }
+.mobile.only {
+	display:none;
+}
+.max-width {
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center
+}
+.max-width p{
+	max-width:700px;
+	display:inline-block;
+}
+
 
 /* let's make this mobile experience dance */
 @media only screen and (max-width : 1200px) {
-
 }
 @media only screen and (max-width : 992px) {
 	.ui.vertical.menu {
@@ -470,6 +500,9 @@ img[src="/assets/swingset.png"] {
 	}
 }
 @media only screen and (max-width : 480px) {
+	.slider1 {
+		padding-top:55px;
+	}
 	.slider1 h2 {
 		font-size:1.8em;
 	}
@@ -492,14 +525,27 @@ img[src="/assets/swingset.png"] {
 	.resume .resume-download {
 		font-size:1em;
 	}
+	.masthead {
+		padding-top:120px;
+	}
 	body .ui.grid.footer-mail .row:first-child>.column:first-child{
 		padding-top:3em !important;
 	}
 	.footer .contact p.centered {
 		font-size:1.2em;
 	}
+	#leftButton.computer.only {
+		display:none;
+	}
+	.mobile.only {
+		display:block;
+	}
+	
 }
 @media only screen and (max-width : 320px) {
+	.slider1 {
+		padding-top:55px;
+	}
 	.slider1 h2 {
 		font-size:1.8em;
 	}
@@ -521,12 +567,22 @@ img[src="/assets/swingset.png"] {
 	.resume .resume-download {
 		font-size:1em;
 	}
+	.masthead {
+		padding-top:120px;
+	}
 	body .ui.grid.footer-mail .row:first-child>.column:first-child{
 		padding-top:3em !important;
 	}
 	.footer .contact p.centered {
 		font-size:1.2em;
 	}
+	#leftButton.computer.only {
+		display:none;
+	}
+	.mobile.only {
+		display:block;
+	}
+	
 }
 
 
