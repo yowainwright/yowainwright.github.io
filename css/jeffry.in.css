@@ -101,6 +101,7 @@ section:last-of-type {
 }
 body h1.ui.header {
 	font-size:5em;
+	font-weight:200;
 }
 .masthead.segment h1.ui.header {
 	margin-top:.2em;
