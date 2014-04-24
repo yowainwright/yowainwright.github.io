@@ -26,7 +26,8 @@ h1, h2, h3, h4, h5, h6 {
 		font-family:'raleway', sans-serif;
 }
 h1 {
-	text-transform:uppercase;
+	font-family:'lobster', sans-serif;
+	font-size:5em;
 }
 h2 {}
 h3 {}
@@ -97,6 +98,9 @@ section:first-of-type {
 }
 section:last-of-type {
 	margin-bottom:1em;
+}
+.masthead.segment h1.ui.header {
+	margin-top:.2em;
 }
 
 /* effects css */
