@@ -227,7 +227,7 @@ section:last-of-type {
 }
 #footerWrap .ui.page.grid.footer-top {
 	border-bottom:1px solid #151515;
-	margin-top: -45px;
+	padding-top:10px;
 	padding-bottom:10px;
 }
 .footer-bottom {
@@ -590,6 +590,10 @@ img[src="/assets/swingset.png"] {
 	}
 	.bit.layout.content {
 	padding-top:90px;
+	}
+	#footerWrap .ui.page.grid.footer-top {
+		padding-bottom:20px;
+	}
 }
 	
 }
@@ -639,6 +643,9 @@ img[src="/assets/swingset.png"] {
 	.bit.layout.content {
 	padding-top:90px;
 }
+#footerWrap .ui.page.grid.footer-top {
+		padding-bottom:20px;
+	}
 	
 }
 
