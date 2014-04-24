@@ -1,0 +1,48 @@
+---
+layout: default
+title:  "From the City"
+categories: Trips
+permalink: from-the-city
+unique: from-the-city home
+metadescription: This is a carousel of pictures taken around Los Angeles. It uses Glide JS along with Semenatic UI.
+styles: <link href="/css/jeffry.in.slider.css" rel='stylesheet' type='text/css' />
+scripts: <script src="http://cdn.jsdelivr.net/jquery.glide/1.0.6/jquery.glide.min.js"></script> <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+ <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ee43114077ff9ad"></script>
+---
+
+<div id="{{ page.unique }}" class="home post">
+	{% include from.the.city.html %}	
+	<div class="biege">
+		<br>
+		<div class="ui page stackable grid space">
+			<div class="one column center aligned row">
+				<div class="column">
+					<img class="ui image centered" src="/assets/city-country.png" width="120" />
+					<br><br>
+					<p class="introduction">The pictures in the carousel above are from recent trips around Los Angeles.</p>
+					<div class="ui horizontal section divider">
+						<i class="circular photo icon"></i>
+					</div>
+					<br><br>
+				</div>
+			</div>
+		</div>	
+		<div class="ui page stackable grid center aligned">
+			<div class="one column row offsetted">
+				<div class="ten wide column">
+					<p class="meta">{{ page.date | date_to_string }}</p>
+					<p>
+						This carousel was originally done for a bootstrap project. I quickly implemented it using <a href="http://jedrzejchalubek.com/glide/">Glide JS</a> which fits in nicely with <a href="http://semantic-ui.com/">Semantic UI</a> (the framework I use on this site). 
+					</p>
+					<br>
+					<div class="centered">
+						<div class=" addthis_toolbox addthis_default_style addthis_32x32_style">
+							<a class="addthis_button_compact"></a>
+							<a class="addthis_counter addthis_bubble_style"></a>
+						</div>
+					</div>           
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

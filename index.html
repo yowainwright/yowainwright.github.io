@@ -3,68 +3,13 @@ layout: default
 title: Welcome to my internet home
 unique: home
 metadescription: This is the home page of Jeffry Wainwright. He's a User Interface Developer and Designer living in the Los Angeles Area. He writes about adventures, code, fitness and maybe more.
+styles: <link href="/css/jeffry.in.slider.css" rel='stylesheet' type='text/css' />
+scripts: <script src="http://cdn.jsdelivr.net/jquery.glide/1.0.6/jquery.glide.min.js"></script>
 ---
 
 <div id="home" class="main">
-	<!-- slider -->
-	<div class="slider slider1">
-		<div class="slides">
-			<!--slide 1 -->
-			<div class="slide-item item1">
-				<div class="ui page stackable grid">
-					<div class="one column center aligned row">
-						<div class="column">
-							<div class="content">
-
-								<h2>From the city</h2>
-								<img class="ui image note" src="{{ site.url }}/assets/dream1.png" alt="Slide 1 - from the city" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- slide 2 -->
-			<div class="slide-item item2">
-				<div class="ui page stackable grid">
-					<div class="one column center aligned row">
-						<div class="column">
-							<div class="content">
-								<h2>To the country</h2>
-								<img class="ui image note" src="{{ site.url }}/assets/dream2.png" alt="Slide 2 - to the country" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- slide 3 -->
-			<div class="slide-item item3">
-				<div class="ui page stackable grid">
-					<div class="one column center aligned row">
-						<div class="column">
-							<div class="content">
-								<h2>In search of</h2>
-								<img class="ui image note" src="{{ site.url }}/assets/dream3.png" alt="Slide 3 - in search of" />
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- slide 4 -->
-			<div class="slide-item item4">
-				<div class="ui page stackable grid">
-					<div class="one column center aligned row">
-						<div class="column">
-							<div class="content">
-								<h2>Beauty everywhere</h2>
-								<img class="ui image note" src="../assets/dream4.png" alt="Slide 4 - beauty everywhere" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
+{% include from.the.city.html %}	
 <div class="biege">
 	<br>
 	<div class="ui page stackable grid space">

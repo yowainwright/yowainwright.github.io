@@ -1,34 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Jeffry.in {{ page.title }}</title>
-  <!-- todo
-  canonical, meta description section, og stuff, itemprop, publisher, site verification
-  end todo -->
-  <meta name="description" content="{{ page.metadescription }}" />
-  <meta name="google-site-verification" content="8eHITXF6-kLwRSGadGPduRcZYBmX-R_L85vU_DCB9gU" />
-  <meta name="robots" content="index,follow" />
-  <meta name="viewport" content="width=device-width">
-
-  <meta property="og:title" content="{{ page.title }}" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="{{ site.url }}{{page.permalink }}" />
-<meta property="og:image" content="{{ site.url }}/assets/w.jpg" />
-<meta property="og:description" content="{{ page.metadescription }}" />
-
-  <link rel="canonical" href="{{ site.url }}{{page.permalink }}" />
-  <link href="{{ site.url }}/assets/favicon.ico" rel="icon" />
-  <link href="{{ site.url }}/assets/w.png" rel="apple-touch-icon" />
-
-  <!-- this is a semantic framework -->
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css" />
-  <!-- some plugins to get going -->
-  <link href="/css/jeffry.in.slider.css" rel='stylesheet' type='text/css' />
-  <!-- some fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Lobster|Raleway:300,500,700' rel='stylesheet' type='text/css'>
-  <!-- custom -->
+  {% include head.html %}
+  {{ page.styles }}
   <link rel="stylesheet" href="/css/jeffry.in.css">
 </head>
 <body class="Grid {{ page.unique }}">
@@ -75,66 +49,16 @@
   <div id="leftButton" class="ui black computer only large launch right attached button">
     <i class="icon list layout"></i><img class="ui image logo one" src="/assets/w-logo.png" width="20" height="20" />
   </div>
-  <div class="masthead segment">
-    <div class="site ui page grid">
-      <div class="one column center aligned row">
-        <div class="column">
-          <div class="header" id="top">
-            <div class="ui featured image centered top banner"></div>
-            <h1 class="ui header">{{ page.title }}</h1>
-
-          </div>
-        </div>
-      </div> 
-    </div>
-  </div>
 
   {{ content }}
 
    
-  <div id="footerWrap">
-    <div class="ui page stackable grid footer footer-top">
-
-      <div class="one column center aligned row">
-        <div class="contact column">
-          <p class="centered">
-          Thanks for browsing. Click the '<small>&#9829;</small>' below to connect.
-          <br>
-          <div id="showSocial">
-            <div class="mini ui icon button circular transparent">
-              <i class="heart icon layout showSocial"></i>
-            </div>
-            <span class="socialWrap slide" style="display:none">
-               <a href="mailto:jjwainwright2@gmail.com?Subject=From%20your%20webpage" target="_top"><i class="mail icon"></i></a>
-               <a href="https://github.com/yowainwright"><i class="github icon"></i></a>
-               <a href="https://twitter.com/jjwainwright"><i class="twitter icon"></i></a>
-               <a href="https://dribbble.com/jjwainwright"><i class="dribbble icon"></i></a>
-               <a href="https://instagram.com/jjwainwright"><i class="instagram icon"></i></a>
-               <a href="https://dribbble.com/jjwainwright"><i class="facebook icon"></i></a>
-            </span>   
-            </div>     
-          </p>
-        </div>
-      </div>
-</div>
-<div class="ui page stackable grid footer footer-bottom">
-
-      <div class="one column aligned row">
-        <div class="column">
-          <p class="centered">
-          Jeffry Wainwright in <span id="year"></span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include footer.html %}
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/javascript/semantic.min.js"></script>
   <!-- some plugins -->
-  <script src="http://cdn.jsdelivr.net/jquery.glide/1.0.6/jquery.glide.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints-sticky.min.js"></script>
+  {{ page.scripts }}
   <!-- custom -->
-  <script src="/scripts/scripts.js"></script>
+  <script src="/scripts/jeffry.in.scripts.js"></script>
 </body>
 </html>

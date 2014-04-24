@@ -29,36 +29,38 @@ $( document ).ready(function() {
 
   //popup
   $('.popup').popup();
-  //don't annoy me popup!
-  $('.no-more').on('click', function() {
-    $(this).popup('destroy');
-  });
 
-  // glide slide
-  $('.slider').glide({
-    autoplay:false,
-    arrowsWrapperClass: 'slider-arrows',
-    arrowRightText:'',
-    arrowLeftText:''
-  });
+  function sliderRun() {
+    $('.slider').glide({
+      autoplay:false,
+      arrowsWrapperClass: 'slider-arrows',
+      arrowRightText:'',
+      arrowLeftText:''
+    });
+  }
+  if ($('div').hasClass('slider')) {
+    sliderRun();
+  }
 
-  // waypoints | todo: fix scroll to top bug and offset
-  // make it sticky
-  $('.peek').waypoint('sticky', {
+  function waypointsRun() {
+    //todo fix sticky on scroll back to top
+    $('.peek').waypoint('sticky', {
     offset: 210 //ofsets the height of the header
-  });
-  $('section').waypoint(function(direction) {
-    $('a[href="#' + this.id + '"]').toggleClass('active', direction === 'down');
-    }, {
-      offset: '10%'
-    }).waypoint(function(direction) {
-       $('a[href="#' + this.id + '"]').toggleClass('active', direction === 'up');
-    }, {
-      offset: function() {
-      return -$(this).height();
-    }
-  });
-
-  // make it special
-  $('.home .masthead').remove();
+    });
+    //todo fix pointing after scroll back to top
+    $('section').waypoint(function(direction) {
+      $('a[href="#' + this.id + '"]').toggleClass('active', direction === 'down');
+      }, {
+        offset: '10%'
+      }).waypoint(function(direction) {
+         $('a[href="#' + this.id + '"]').toggleClass('active', direction === 'up');
+      }, {
+        offset: function() {
+        return -$(this).height();
+      }
+    });
+  }
+  if ($('div').hasClass('peek')) {
+    waypointsRun();
+  }
 });

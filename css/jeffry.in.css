@@ -160,7 +160,17 @@ section:last-of-type {
 	margin-left:-.1em;
 	color:#fff;
 }
-
+#footerWrap .foot.note, #footerWrap .foot.note span {
+	color:transparent;
+	cursor: default;
+	display:inline-block;
+	height:1em;
+	position:relative;
+	text-align:center;
+	text-shadow:0 0 0;
+	top:30px;
+	width:20%;
+}
 #footerWrap {
 	padding: 1em 0 0;
 }
@@ -171,6 +181,9 @@ section:last-of-type {
 #footerWrap i  {
 	color:#666;
 	font-size:1.6em;
+}
+#footerWrap a i {
+	font-size: .8em;
 }
 #footerWrap a {
 	text-decoration:none;
@@ -184,7 +197,7 @@ section:last-of-type {
 }
 .socialWrap {
 	position:relative;
-	top:5px;
+	top:2px;
 }
 .blackBg {
 	background:#333;
@@ -212,8 +225,10 @@ section:last-of-type {
 #footerWrap .socialWrap i:hover {
 	color:#999;
 }
-.footer-top {
+#footerWrap .ui.page.grid.footer-top {
 	border-bottom:1px solid #151515;
+	margin-top: -45px;
+	padding-bottom:10px;
 }
 .footer-bottom {
 	border-top:1px solid #333;
@@ -360,7 +375,7 @@ img.centered {
 }
 
 /* home page css */
-#home {
+#home , #from-the-city{
 	margin-top:-6px;
 	padding-top:0;
 }
@@ -468,6 +483,7 @@ img[src="/assets/swingset.png"] {
 }
 .post.layout.content {
 	padding-top:3em;
+	min-height:410px;
 }
 .meta {
 	font-family: 'lobster', sans-serif;
@@ -484,7 +500,10 @@ img[src="/assets/swingset.png"] {
 	max-width:700px;
 	display:inline-block;
 }
-
+.bit.layout.content {
+	padding-top:60px;
+	min-height: 750px;
+}
 
 /* let's make this mobile experience dance */
 @media only screen and (max-width : 1200px) {
@@ -569,6 +588,9 @@ img[src="/assets/swingset.png"] {
 	.mobile.only {
 		display:block;
 	}
+	.bit.layout.content {
+	padding-top:90px;
+}
 	
 }
 @media only screen and (max-width : 320px) {
@@ -614,6 +636,9 @@ img[src="/assets/swingset.png"] {
 	.mobile.only {
 		display:block;
 	}
+	.bit.layout.content {
+	padding-top:90px;
+}
 	
 }
 
