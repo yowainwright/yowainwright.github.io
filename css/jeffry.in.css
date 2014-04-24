@@ -99,6 +99,9 @@ section:first-of-type {
 section:last-of-type {
 	margin-bottom:1em;
 }
+body h1.ui.header {
+	font-size:5em;
+}
 .masthead.segment h1.ui.header {
 	margin-top:.2em;
 }
