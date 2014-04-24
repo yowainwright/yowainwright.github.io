@@ -602,8 +602,13 @@ img[src="/assets/swingset.png"] {
 	#footerWrap .ui.page.grid.footer-top {
 		padding-bottom:20px;
 	}
+	body h1.ui.header {
+	font-size:3em;
+	font-weight:200;
 }
-	
+.masthead.segment h1.ui.header {
+	margin-top:.5em;
+}
 }
 @media only screen and (max-width : 320px) {
 	body section {
@@ -654,6 +659,13 @@ img[src="/assets/swingset.png"] {
 #footerWrap .ui.page.grid.footer-top {
 		padding-bottom:20px;
 	}
+		body h1.ui.header {
+	font-size:3em;
+	font-weight:200;
+}
+.masthead.segment h1.ui.header {
+	margin-top:.5em;
+}
 	
 }
 
