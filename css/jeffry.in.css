@@ -107,6 +107,10 @@ body h1.ui.header {
 	margin-top:.2em;
 }
 
+.ui.header.centered.lobster {
+	font-family:'lobster', sans-serif;
+}
+
 /* effects css */
 .transparent {
 	background:transparent !important;
@@ -512,6 +516,15 @@ img[src="/assets/swingset.png"] {
 	padding-top:60px;
 	min-height: 750px;
 }
+.contact-jeff .centered.top.banner {
+	background-image:url('../assets/mail.png');
+}
+
+.negative.top {
+	position:relative;
+	top:-20px;
+	margin-bottom:30px;
+}
 
 /* let's make this mobile experience dance */
 @media only screen and (max-width : 1200px) {
@@ -521,6 +534,9 @@ img[src="/assets/swingset.png"] {
 		width:100%;
 	}
 	.stuck {position:relative;}
+	.slider2 .content, .slider3 .content {padding-left:12% !important;
+		padding-right:12% !important;
+	}
 }
 @media only screen and (max-width : 768px) {
 	.slider1 h2 {
@@ -531,6 +547,9 @@ img[src="/assets/swingset.png"] {
 		min-height: 4em;
 		max-width: 4em;
 		min-width: 4em;
+	}
+	.slider2 .content, .slider3 .content {padding-left:12% !important;
+		padding-right:12% !important;
 	}
 	/* because the line-width was too long */
 	.ui.stackable.page.grid.like-this>.row>.column {
@@ -573,6 +592,9 @@ img[src="/assets/swingset.png"] {
 		margin-bottom:30%;
 	}
 	.slider-nav {display:none;visibility:hidden;}
+	.slider2 .content, .slider3 .content {padding-left:12% !important;
+		padding-right:12% !important;
+	}
 	.ui.vertical.menu {
 		width:100%;
 	}
@@ -630,6 +652,9 @@ img[src="/assets/swingset.png"] {
 	.slider1 .content {
 		margin-top:30%;
 		margin-bottom:30%;
+	}
+	.slider2 .content, .slider3 .content {padding-left:12% !important;
+		padding-right:12% !important;
 	}
 	.ui.vertical.menu {
 		width:100%;

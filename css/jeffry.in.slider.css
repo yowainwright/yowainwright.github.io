@@ -122,3 +122,25 @@ background-position: -17px 0;
   display:inline !important;
 }
 /* home page slider - start */
+
+/* resume page slider - highlights - start */
+.slider2, .slider3 {
+  background-color:#CEE4ED;
+  border: 1px solid #B8E3F5;
+  border-radius:5px;
+  margin-bottom:2em;
+}
+.slider2 .content, .slider3 .content {
+  margin-bottom:0%;
+  margin-top:5%;
+  max-height:280px;
+}
+.slider2 .slider-arrow--right, .slider2 .slider-arrow--left,
+.slider3 .slider-arrow--right, .slider3 .slider-arrow--left{
+  background-image: url('/assets/glide-arrows-inverted.png');
+}
+.slider2 .slider-nav, .slider3 .slider-nav {
+  display:none;
+}
+/* resume page slider - highlights - end */
+
