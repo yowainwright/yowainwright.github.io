@@ -30,6 +30,11 @@ $( document ).ready(function() {
   //popup
   $('.popup').popup();
 
+  //message 
+  $('.close').on('click', function () {
+    $(this).parent('.message').hide();
+  });
+
   function sliderRun() {
     $('.slider').glide({
       autoplay:false,

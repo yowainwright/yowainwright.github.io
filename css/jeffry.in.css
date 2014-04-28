@@ -480,16 +480,16 @@ img[src="/assets/swingset.png"] {
 }
 
 /* post */
-.normal.post.layout .masthead {
+.basic.layout .masthead {
 	background:#D66D58;
 	border-bottom:1px solid #D16049;
 }
 
-.normal.post.layout h1 {
+.basic.layout h1 {
 	color:#fff;
 	text-shadow:2px 1px 2px #D16049;
 }
-.post.layout.content {
+.basic.layout.content {
 	padding-top:3em;
 	min-height:410px;
 }
