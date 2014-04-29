@@ -18,9 +18,6 @@ body {
 	color:#555;
 	min-width:320px;
 }
-div {}
-hr {}
-img {}
 a, a:hover, a:active {color:#555;}
 h1, h2, h3, h4, h5, h6 {
 		font-family:'raleway', sans-serif;
@@ -29,14 +26,9 @@ h1 {
 	font-family:'lobster', sans-serif;
 	font-size:5em;
 }
-h2 {}
-h3 {}
-h4 {}
-h5 {}
-h6 {}
 p {
 	margin:.8em 0;
-	line-height:1.5em;
+	line-height:1.8em;
 }
 abbr {}
 b {}
@@ -48,48 +40,6 @@ blockquote {
 	line-height:1.5em;
 	padding-left:2em;
 }
-cite {}
-dfn {}
-del {}
-em {}
-i {}
-strong {}
-ins {}
-small {}
-q {}
-sub {}
-sup {}
-dl, ol, ul {}
-dl {}
-dt {}
-dd {}
-ol {}
-ol li {}
-ul {}
-ul li {}
-form {}
-fieldset {}
-legend {}
-label {}
-input {}
-textarea {}
-select {}
-optgroup {}
-table {}
-caption {}
-tr {}
-thead {}
-th {}
-tbody {}
-td {}
-tfoot {}
-address {}
-code {}
-samp {}
-pre {}
-kbd {}
-var {}
-
 section {
 	padding:3em 0;
 }
@@ -130,6 +80,9 @@ body h1.ui.header {
 }
 .dimmed:hover, .dimmed:active {
 	opacity:.5;
+}
+.content {
+	line-height:1.8em !important;
 }
 .centered {
 	text-align:center;
@@ -289,6 +242,9 @@ body #menu a  {
 #topNav i {
 	color:#fff;
 }
+.sidebar.menu.active {
+	padding-bottom:2em;
+}
 
 /* logo */
 img.ui.image.logo {
@@ -333,7 +289,7 @@ img.centered {
 	-moz-box-shadow:    0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 	box-shadow:         0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
-.date {
+.date, .date a {
 	font-family:'lobster', sans-serif;
 }
 .like-this img {
