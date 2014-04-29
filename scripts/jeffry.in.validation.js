@@ -15,7 +15,7 @@ $(document).ready(function(){
         rules: [
           {
             type   : 'empty',
-            prompt : 'Well, what are your writing me about?'
+            prompt : "Well, what's up?"
           }
         ]
       },
