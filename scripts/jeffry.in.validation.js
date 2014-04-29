@@ -6,7 +6,7 @@ $(document).ready(function(){
         rules: [
           {
             type   : 'empty',
-            prompt : 'Please enter your first name'
+            prompt : 'Enter your name'
           }
         ]
       },
@@ -24,7 +24,7 @@ $(document).ready(function(){
         rules: [
           {
             type   : 'email',
-            prompt : 'Please enter your email address'
+            prompt : 'Enter your email'
           }
         ]
       }
