@@ -64,9 +64,6 @@ $( document ).ready(function() {
         return -$(this).height();
       }
     });
-    if( $(window).scrollTop() < 200 ) {
-      alert('heyo');
-    }
   }
   //mobile issue in android fix ?
   if ($(window).width() < 768) {
