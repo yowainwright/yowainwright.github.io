@@ -30,8 +30,7 @@ p {
 	margin:.8em 0;
 	line-height:1.8em;
 }
-abbr {}
-b {}
+
 blockquote {
 	text-transform: uppercase;
 	border-left:4px solid #ccc;
@@ -39,6 +38,11 @@ blockquote {
 	font-weight: 200;
 	line-height:1.5em;
 	padding-left:2em;
+}
+cite {
+	font-size:.8em;
+	font-weight:200;
+
 }
 section {
 	padding:3em 0;
@@ -549,7 +553,7 @@ img[src="/assets/swingset.png"] {
 	}
 	.slider-nav {display:none;visibility:hidden;}
 	.slider2 .content, .slider3 .content {padding-left:12% !important;
-		padding-right:12% !important;
+		padding-right:18% !important;
 	}
 	.ui.vertical.menu {
 		width:100%;

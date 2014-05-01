@@ -46,11 +46,11 @@ $( document ).ready(function() {
   if ($('div').hasClass('slider')) {
     sliderRun();
   }
-
+  
   function waypointsRun() {
     //todo fix sticky on scroll back to top
     $('.peek').waypoint('sticky', {
-    offset: 210 //ofsets the height of the header
+    offset: 300 //ofsets the height of the header
     });
     //todo fix pointing after scroll back to top
     $('section').waypoint(function(direction) {
@@ -64,7 +64,14 @@ $( document ).ready(function() {
         return -$(this).height();
       }
     });
+    if( $(window).scrollTop() < 200 ) {
+      alert('heyo');
+    }
   }
+  //mobile issue in android fix ?
+  if ($(window).width() < 768) {
+  $('.item').removeClass('peek');
+} 
   if ($('div').hasClass('peek')) {
     waypointsRun();
   }

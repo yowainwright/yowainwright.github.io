@@ -133,7 +133,6 @@ background-position: -17px 0;
 .slider2 .content, .slider3 .content {
   margin-bottom:0%;
   margin-top:5%;
-  max-height:280px;
 }
 .slider2 .slider-arrow--right, .slider2 .slider-arrow--left,
 .slider3 .slider-arrow--right, .slider3 .slider-arrow--left{
