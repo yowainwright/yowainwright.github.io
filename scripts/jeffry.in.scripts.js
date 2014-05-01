@@ -35,6 +35,7 @@ $( document ).ready(function() {
     $(this).parent('.message').hide();
   });
 
+  //slider
   function sliderRun() {
     $('.slider').glide({
       autoplay:false,
@@ -47,12 +48,9 @@ $( document ).ready(function() {
     sliderRun();
   }
   
+  //scroll
   function waypointsRun() {
-    //todo fix sticky on scroll back to top
-    $('.peek').waypoint('sticky', {
-    offset: 300 //ofsets the height of the header
-    });
-    //todo fix pointing after scroll back to top
+    $('.peek').waypoint('sticky');
     $('section').waypoint(function(direction) {
       $('a[href="#' + this.id + '"]').toggleClass('active', direction === 'down');
       }, {
@@ -64,12 +62,19 @@ $( document ).ready(function() {
         return -$(this).height();
       }
     });
+    $(window).scroll(function() {    
+      var scroll = $(window).scrollTop();
+      if (scroll <= 410) {
+        $('a[href="#section1"]').addClass("active");
+        $('.peek').removeClass('stuck');
+      } 
+    });
   }
-  //mobile issue in android fix ?
   if ($(window).width() < 768) {
   $('.item').removeClass('peek');
-} 
+  } 
   if ($('div').hasClass('peek')) {
     waypointsRun();
   }
+  
 });
