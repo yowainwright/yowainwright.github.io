@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family:'raleway', sans-serif;
+}
+html, body { height: 100%; }
+html {
+	margin:0;
+	padding:0;
+}
+body {
+	color:#555;
+	font-family:"Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif/*rtl:prepend:"Droid Arabic Kufi","Droid Sans", */;
+	margin: 5% auto;
+	text-align:center;
+}
+a, a:hover, a:active {color:#555;}
+h2, h3, h4, h5, h6 {
+		font-family:'raleway', sans-serif;
+}
+h1 {
+	font-family:'lobster', sans-serif;
+	margin-bottom:1em;
+	text-align:center;
+}
+h2 {
+
+}
+h4 {
+	font-weight:200;
+	margin-bottom:.2em;
+}
+p {
+	margin:.8em 0;
+	line-height:1.8em;
+}
+ul {
+list-style-position:inside;
+}
+ul li {
+	line-height:1.8em;
+}
+hr {
+	margin:2% 0;
+}
+blockquote {
+	text-transform: uppercase;
+	border-left:4px solid #ccc;
+	font-size:1em;
+	font-weight: 200;
+	line-height:1.5em;
+	padding-left:2em;
+}
+.wrap {
+	text-align:left;
+	margin:0 auto 5%;
+	width:85%;
+	max-width:600px;
+}
+.center {
+	text-align:center;
+}
+.center:last-of-type {
+	font-family:'lobster', sans-serif;
+}

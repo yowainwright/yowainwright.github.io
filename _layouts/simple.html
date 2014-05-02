@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Jeffry.in {{ page.title }}</title>
+  <meta name="description" content="{{ page.metadescription }}" />
+  <meta name="google-site-verification" content="8eHITXF6-kLwRSGadGPduRcZYBmX-R_L85vU_DCB9gU" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ site.url }}{{page.permalink }}" />
+  <meta property="og:image" content="{{ site.url }}/assets/w.jpg" />
+  <meta property="og:description" content="{{ page.metadescription }}" />
+  <link rel="canonical" href="{{ site.url }}{{page.permalink }}" />
+  <link href="{{ site.url }}/assets/favicon.ico" rel="icon" />
+  <link href="{{ site.url }}/assets/w.png" rel="apple-touch-icon" />
+<link href='http://fonts.googleapis.com/css?family=Lobster|Raleway:300,500,700' rel='stylesheet' type='text/css'>
+<link href='{{ site.url }}/css/jeffry.in.simple.css' rel='stylesheet' type='text/css'>
+</head>
+<body class="set {{ page.unique }}">
+<div class="wrap">
+{{ content }}
+</div>
+</body>
+</html>

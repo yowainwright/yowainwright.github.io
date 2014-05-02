@@ -4,6 +4,24 @@
   {% include head.html %}
   {{ page.styles }}
   <link rel="stylesheet" href="/css/jeffry.in.css">
+
+  <!--[if IE 7 ]>
+   <script>
+  var redirect = confirm("It seems you're using an old version of Internet Explorer. Click 'OK' to be re-directed to page you can use.");
+   if (redirect == true) {
+     window.location.href = '{{ site.url }}/simple-resume/'; 
+   }
+ </script>
+ <![endif]-->
+  <!--[if IE 8 ]>
+   <script>
+  var redirect = confirm("It seems you're using an old version of Internet Explorer. Click 'OK' to be re-directed to page you can use.");
+   if (redirect == true) {
+     window.location.href = '{{ site.url }}/simple-resume/'; 
+   }
+ </script>
+ <![endif]-->
+ 
 </head>
 <body class="Grid {{ page.unique }}">
   <div class="ui large vertical inverted labeled icon sidebar menu" id="menu">
@@ -33,6 +51,12 @@
         {% for post in site.posts %}
         <a class="item" href="{{ post.url }}">{{ post.title }}</a>
         {% endfor %}
+      </div>
+    </div>
+     <div class="item centered">
+      <h4 class="ui dividing header">&#032;</h4>
+      <div class="menu posts centered">
+       
       </div>
     </div>
   </div>
