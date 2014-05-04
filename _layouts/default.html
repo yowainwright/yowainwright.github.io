@@ -48,7 +48,19 @@
     <div class="item centered">
       <h4 class="ui dividing header"><i class="pin circular icon"></i> Posts</h4>
       <div class="menu posts centered">
-        {% for post in site.posts %}
+        <h4 class="ui dividing header">Code</h4>
+        {% for post in site.categories.code %}
+        <a class="item" href="{{ post.url }}">{{ post.title }}</a>
+        {% endfor %}
+        <h4 class="ui dividing header">Illustration</h4>
+        {% for post in site.categories.illustration %}
+        <a class="item" href="{{ post.url }}">{{ post.title }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="item centered">
+      <div class="menu posts centered">
+        {% for post in site.categories.resume %}
         <a class="item" href="{{ post.url }}">{{ post.title }}</a>
         {% endfor %}
       </div>

@@ -145,7 +145,7 @@ metadescription: This is Jeffry Wainwright's Simplified Resume Page on Jeffry.in
 
 &#032;
 
-> This page was created so that people using old versions of Internet Explorer or would like to view a simplified version of my resume could. I, as well as others, might actually prefer all of my pages and posts to look and preform like this page but because I'm a front end developer and designer; I've coded to suite using semantic ui. Enjoy!
+<sub>This page was created so that people using old versions of Internet Explorer or would like to view a simplified version of my resume could. I, as well as others, might actually prefer all of my pages and posts to look and preform like this page but because I'm a front end developer and designer; I've coded to suite using semantic ui. Enjoy!</sub>
 
 ---
 

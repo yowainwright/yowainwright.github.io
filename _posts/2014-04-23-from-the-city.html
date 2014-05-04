@@ -1,10 +1,10 @@
 ---
 layout: default
-title:  "From the City"
-categories: Trips
-permalink: from-the-city
-unique: from-the-city home
-metadescription: This is a carousel of pictures taken around Los Angeles. It uses Glide JS along with Semenatic UI.
+title:  "Glide Carousel"
+categories: code
+permalink: glide-carousel-semantic-ui
+unique: from-the-city glide-carousel home
+metadescription: This is a carousel of pictures taken around Los Angeles. This carousel uses Glide JS along with Semenatic UI. Glide JS simply intagrates into Semantic UI and adds a great swipe like option if you're site is mobile first.
 styles: <link href="/css/jeffry.in.slider.css" rel='stylesheet' type='text/css' />
 scripts: <script src="http://cdn.jsdelivr.net/jquery.glide/1.0.6/jquery.glide.min.js"></script> <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ee43114077ff9ad"></script>
@@ -30,17 +30,49 @@ scripts: <script src="http://cdn.jsdelivr.net/jquery.glide/1.0.6/jquery.glide.mi
 		<div class="ui page stackable grid center aligned">
 			<div class="one column row offsetted">
 				<div class="ten wide column">
+					<h2 class="ui dividing header"><i class="circular code icon"></i> Glide Carousel | Semantic UI Mash-up</h2>
 					<p class="meta">{{ page.date | date_to_string }}</p>
-					<p>
-						This carousel was originally done for a bootstrap project. I quickly implemented it using <a href="http://jedrzejchalubek.com/glide/">Glide JS</a> which fits in nicely with <a href="http://semantic-ui.com/">Semantic UI</a> (the framework I use on this site). 
+					<p class="introduction">
+						This carousel was originally done for a bootstrap project. I quickly implemented it using <a href="http://jedrzejchalubek.com/glide/">Glide JS</a> which fits in nicely with <a href="http://semantic-ui.com/">Semantic UI</a> (the framework I use on this site). This post describes my implementation.
 					</p>
-					<!--<p>
-						The html<br>
-						<code>
-							
-						</code>
-					</p>-->
+					<p>
+						Many people don't like carousels and I <em>somewhat</em> agree. Image carousels like the on above can be somewhat intruding to the content and are very often un-touched or swiped through by users. However, with a mobile first User Interface a carousel can be designed to act more as a swipe and can introduce an interesting way to present content. 
+					</p>
+					<p>Good imagery with clean verbage can get a user to go through a carousel or can used to create a <em>side swipe</em> as demonstrated <a href="http://localhost:4000/resume/#section4">here</a>. Notice how im my <em>Reference Rolex</em> a user can swipe or click from the side to view new content rather than to continue to scroll down. This, from my perspective, becomes most effective and relavant for users on a mobile view where swiping is more standard.
+					<div class="ui horizontal section divider">
+						<i class="circular code icon"></i>
+					</div>
+					<p><h5>The CSS used</h5>	
+					<pre class="lightOrangeCode"><code>
+						
+					&#60;rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css"/&#62;
+					</code></pre>
+					<br><br>
+					<p><h5>The JS used</h5>	</p>
+					<pre class="lightOrangeCode"><code>
+					&#60;script src="//code.jquery.com/jquery-1.11.0.min.js"&#62;&#60;/script&#62;
+					&#60;script src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/javascript/semantic.min.js"&#62;&#60;/script&#62;
+					&#60;script src="http://cdn.jsdelivr.net/jquery.glide/1.0.6/jquery.glide.min.js"&#62;&#60;/script&#62;
+					</code></pre>
 					<br>
+					<h5>The html</h5>	
+					<p>HTML for the first 2 slides</p>
+					<pre class="lightOrangeCode"><code>
+						{% include from.the.city.htmlcode.html %}		
+					</code></pre>
+					<br>
+					<h5>The JS added locally</h5>	
+					<p>Just call glide to run in your local JS</p>
+					<pre class="lightOrangeCode"><code>
+
+					$('.slider').glide();		
+					</code></pre>
+					<sub>Note: my JS for glide is slightly different but this is all you need.</sub>
+					<br><br>
+					<div class="ui divider"></div>
+
+					<p><a href="http://jeffry.in/contact/">Contact me</a> if you have any questions or see anything that I can improve with this post.<br><h5>- Thanks</h5>
+					</p>
 					<div class="centered">
 						<div class=" addthis_toolbox addthis_default_style addthis_32x32_style">
 							<a class="addthis_button_compact"></a>

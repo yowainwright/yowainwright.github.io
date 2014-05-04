@@ -19,18 +19,44 @@ body {
 	min-width:320px;
 }
 a, a:hover, a:active {color:#555;}
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h6 {
 		font-family:'raleway', sans-serif;
 }
 h1 {
 	font-family:'lobster', sans-serif;
 	font-size:5em;
 }
+h5{
+	font-family:'lobster', sans-serif;
+	font-size:1.5em;
+}
 p {
 	margin:.8em 0;
 	line-height:1.8em;
 }
+pre {
 
+}
+pre > code {
+    white-space: pre;
+    display: block;
+}
+code {
+	border:1px solid #eee;
+	border-radius:8px;
+	-webkit-box-shadow: inset 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    inset 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         inset 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	display:inherit;
+	font-family:courier;
+	height:100%;
+	padding:0 10px 10px 10px;
+	overflow-y: hidden;
+	overflow-x:scroll;
+	max-width: 100%;
+
+
+}
 blockquote {
 	text-transform: uppercase;
 	border-left:4px solid #ccc;
@@ -99,6 +125,11 @@ body h1.ui.header {
 }
 .no.underline {
 	text-decoration: none;
+}
+.lightOrangeCode code {
+	background:#FAE8C3;
+	color:#5E440C;
+	text-shadow: 0 2px 1px #fff;
 }
 .addthis_toolbox {
 	display:inline-block;
