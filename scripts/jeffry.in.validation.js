@@ -30,10 +30,9 @@ $(document).ready(function(){
       }
     }, {
       inline: true,
-      on: 'blur',
-      onSuccess: function(event) {
-        event.preventDefault();
-        $('.message').show();
-    }
+      on: 'blur'
+      //onSuccess: function() {
+      //  $('.message').show('slow').delay(5000).fadeOut();
+      //}
   });
 });
