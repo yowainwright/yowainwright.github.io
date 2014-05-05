@@ -520,6 +520,10 @@ img[src="/assets/swingset.png"] {
 	font-size:1.8em;
 	font-weight:200;
 }
+h2.bd {
+	font-size:5em;
+	text-transform:uppercase;
+}
 
 /* let's make this mobile experience dance */
 @media only screen and (max-width : 1200px) {
