@@ -30,9 +30,9 @@ $(document).ready(function(){
       }
     }, {
       inline: true,
-      on: 'blur'
-      //onSuccess: function() {
-      //  $('.message').show('slow').delay(5000).fadeOut();
-      //}
+      on: 'blur',
+      onSuccess: function() {
+        alert('Your message has been submitted.');
+      }
   });
 });
