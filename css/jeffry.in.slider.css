@@ -135,10 +135,11 @@ background-position: -17px 0;
   margin-top:5%;
 }
 .slider2 .slider-arrow--right, .slider2 .slider-arrow--left,
-.slider3 .slider-arrow--right, .slider3 .slider-arrow--left{
+.slider3 .slider-arrow--right, .slider3 .slider-arrow--left, 
+.slider5 .slider-arrow--right, .slider5 .slider-arrow--left{
   background-image: url('/assets/glide-arrows-inverted.png');
 }
-.slider2 .slider-nav, .slider3 .slider-nav {
+.slider2 .slider-nav, .slider3 .slider-nav, .slider5 .slider-nav {
   display:none;
 }
 /* resume page slider - highlights - end */

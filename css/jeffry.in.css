@@ -516,6 +516,10 @@ img[src="/assets/swingset.png"] {
 	top:-20px;
 	margin-bottom:30px;
 }
+.bd {
+	font-size:1.8em;
+	font-weight:200;
+}
 
 /* let's make this mobile experience dance */
 @media only screen and (max-width : 1200px) {
