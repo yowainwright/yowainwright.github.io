@@ -13,7 +13,7 @@ categories:
 - code
 - third
 type: code
-featured_image: /assets/OS.svg
+featured_image: /assets/os.svg
 ---
 
 Recently, I upgraded to El Capitan. Suddenly my local websites using vagrant weren't working & I had to reinstall some of my ruby gems like jekyll, what I use for this blog.
