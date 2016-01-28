@@ -1,0 +1,31 @@
+// media queries
+@mixin media-query($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+// vender prefixing
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+// micro-clearfix
+@mixin micro-clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display:table;
+	}
+	&:after {
+		clear:both;
+	}
+}
+
+@mixin button {
+	border: none;
+	outline: none;
+	padding: 0;
+}

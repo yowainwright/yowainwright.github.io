@@ -1,0 +1,25 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		},
+		{
+			"path": "/Users/wainje01/thrfe"
+		},
+		{
+			"path": "/Users/wainje01/bbfe"
+		},
+		{
+			"path": "/Users/wainje01/pgmfevagrant"
+		},
+		{
+			"path": "/Users/wainje01/Dropbox/me/git-docs/yowainwright.github.io"
+		}
+	],
+	"settings":
+	{
+		"default_post_syntax": "Markdown",
+		"tab_size": 2
+	}
+}

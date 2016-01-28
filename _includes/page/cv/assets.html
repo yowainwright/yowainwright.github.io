@@ -1,0 +1,7 @@
+<section class="cv__section cv__section--assets">
+<div class="cv__section-content">
+	<h2 class="cv__section-title">Assets</h2>
+
+	{% capture assets %}{% include md/cv/assets.md %}{% endcapture %}{{ assets | markdownify }}
+</div>
+</section>

@@ -1,0 +1,42 @@
+{% if site.email %}
+  <a class="social-item-inline social-item-inline--email" href="mailto:{{ site.email }}">
+    <svg name="mail-svg" viewBox="0 0 512 512">
+      <use class="social-svg" xlink:href="#mail-svg" x="0" y="0" />
+    </svg>
+  </a>
+{% endif %}
+{% if site.twitter_username %}
+  <a class="social-item-inline social-item-inline--twitter" href="//twitter.com/@{{ site.twitter_username }}">
+  	<svg name="twitter-svg" viewBox="0 0 512 512">
+      <use class="social-svg" xlink:href="#twitter-svg" x="0" y="0" />
+    </svg>
+  </a>
+{% endif %}
+{% if site.instagram_username %}
+  <a class="social-item-inline social-item-inline--instagram" href="//instagram.com/{{ site.instagram_username }}">
+  	<svg name="instagram-svg" viewBox="0 0 512 512">
+      <use class="social-svg" xlink:href="#instagram-svg" x="0" y="0" />
+    </svg>
+  </a>
+{% endif %}
+{% if site.codepen_username %}
+  <a class="social-item-inline social-item-inline--codepen" href="//codepen.io/{{ site.codepen_username }}">
+		<svg name="codepen-svg" viewBox="0 0 512 512">
+      <use class="social-svg" xlink:href="#codepen-svg" x="0" y="0" />
+    </svg>
+  </a>
+{% endif %}
+{% if site.github_username %}
+  <a class="social-item-inline social-item-inline--github" href="//github.com/{{ site.github_username }}">
+  	<svg name="github-svg" viewBox="0 0 512 512">
+       <use class="social-svg" xlink:href="#github-svg" x="0" y="0" />
+    </svg>
+  </a>
+{% endif %}
+{% if site.tumblr_username %}
+  <a class="social-item-inline social-item-inline--tumbler" href="{{ site.tumblr_account }}">
+  	<svg name="tumblr-svg" viewBox="0 0 512 512">
+       <use class="social-svg" xlink:href="#tumblr-svg" x="0" y="0" />
+    </svg>
+  </a>
+{% endif %}

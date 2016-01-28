@@ -1,0 +1,9 @@
+<section class="cv__section">
+
+<div class="cv__section-content">
+	<h2 class="cv__section-title">Awards</h2>
+
+	{% capture awards %}{% include md/cv/awards.md %}{% endcapture %}{{ awards | markdownify }}
+</div>
+
+</section>

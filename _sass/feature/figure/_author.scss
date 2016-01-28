@@ -1,0 +1,50 @@
+// This file must be updated to match standard naming conventions
+.figure-author {
+  border-top: 1px dashed $color-grey-light;
+  clear: left;
+  @include media-query($width-default) {
+    display: table;
+    width: 100%;
+  }
+  &__picture {
+    @include media-query($width-default) {
+      position: relative;
+      width: 50%;
+    }
+    @include media-query($width-default) {
+      display: table-cell;
+      float: none;
+      margin-bottom: none;
+      padding: ($spacing-unit * 2) ($spacing-unit * 10);
+      width: auto;
+    }
+    .picture {
+      @include prefix(border-radius, 100%, webkit ms moz);
+    }
+  }
+  &__caption {
+    color: black;
+    position: relative;
+    @include media-query($width-default) {
+      display: table-cell;
+      width: 50%;
+    }
+  }
+  .text--centered {
+    padding: $spacing-unit;
+    @include media-query($width-1300) {
+      border-left: 1px solid $color-grey-light;
+      padding: $spacing-unit * 2;
+      position: absolute;
+      top: 50%;
+      @include prefix(transform, translate(0, -50%), webkit ms moz);
+    }
+  }
+  hr {
+    margin: $spacing-unit 0;
+  }
+  p:first-of-type {
+    font-family: $font-family-serif;
+    font-size: $spacing-unit * 1.4;
+  }
+}
