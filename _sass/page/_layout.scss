@@ -1,0 +1,40 @@
+hr,
+h1, h2, h3, h4, h5, h6,
+cite,
+def,
+details,
+.post-header,
+.post-content p,
+.post-content ul,
+.post-content ol {
+    margin: $spacing-unit;
+    @include micro-clearfix;
+    @include media-query($width-default) {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+cite,
+details {
+    max-width: $width-650;
+}
+.post-content ul,
+.post-content ol {
+    max-width: calc(#{$width-default} - (#{$spacing-unit}));
+}
+.post-content blockquote {
+    margin: ($spacing-unit * 2) 0;
+    p {
+        max-width: none;
+        @include media-query($width-default) {
+            padding: ($spacing-unit / 4) $spacing-unit;
+        }
+    }
+}

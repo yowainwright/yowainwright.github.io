@@ -1,0 +1,34 @@
+<nav class="social-share social-share--{{ include.contactListLocation }}">
+  {% if site.email %}
+    <a class="social-share__link" href="mailto:{{ site.email }}">
+       <svg name="mail-svg" viewbox="0 0 512 512">
+        <use class="social-svg" xlink:href="#mail-svg" x="0" y="0" />
+      </svg>
+      <span class="social-share__text">{{ site.email }}</span>
+    </a>
+  {% endif %}
+  {% if site.instagram_username %}
+    <a class="social-share__link" href="https://instagram.com/{{ site.instagram_username }}">
+      <svg name="instagram-svg" viewBox="0 0 512 512">
+        <use class="social-svg" xlink:href="#instagram-svg" x="0" y="0" />
+      </svg>
+      <span class="social-share__text">{{ site.instagram_username }}</span>
+    </a>
+  {% endif %}
+  {% if site.github_username %}
+    <a class="social-share__link" href="https://github.com/{{ site.github_username }}">
+      <svg name="github-svg" viewBox="0 0 512 512">
+        <use class="social-svg" xlink:href="#github-svg" x="0" y="0" />
+      </svg>
+      <span class="social-share__text">{{ site.github_username }}</span>
+    </a>
+  {% endif %}
+  {% if site.codepen_username %}
+    <a class="social-share__link" href="https://codepen.io/{{ site.codepen_username }}">
+      <svg name="codepen-svg" viewBox="0 0 512 512">
+        <use class="social-svg" xlink:href="#codepen-svg" x="0" y="0" />
+      </svg>
+      <span class="social-share__text">{{ site.codepen_username }}</span>
+    </a>
+  {% endif %}
+</nav>

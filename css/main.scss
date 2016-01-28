@@ -1,0 +1,47 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "variables",
+        "mixins",
+        "base",
+        "page/layout",
+        "page/content",
+
+        "site/header",
+        "site/footer",
+
+        "feature/first_paragraph",
+        "feature/svgs",
+        "feature/syntax_highlighting",
+        "feature/social/share",
+        "feature/social/inline",
+        "feature/block_positioning", //TODO: better name
+        "feature/columns",
+        "feature/site_note",
+        "feature/disqus",
+        "feature/code_sample",
+
+        "feature/post/default",
+        "feature/post/first",
+        "feature/post/second",
+
+        "feature/post_list/default",
+        "feature/post_list/3column",
+        "feature/post_list/3_2right",
+        "feature/post_list/1column",
+        "feature/post_list/single_post",
+
+        "feature/figure/default",
+        "feature/figure/author",
+
+        "feature/media/picture",
+        "feature/media/image",
+
+        "page/home/featured_post",
+        "page/post/special",
+        "page/cv/page"
+;

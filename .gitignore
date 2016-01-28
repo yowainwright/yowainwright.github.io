@@ -1,4 +1,8 @@
-_site/
-_config.yml
+.sass-cache
+.codekit-cache
+bower_components
+bower_components/*
+_site
+_site/*
 config.codekit
 

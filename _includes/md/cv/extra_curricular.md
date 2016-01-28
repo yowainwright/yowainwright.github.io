@@ -1,0 +1,1 @@
+When I’m not working, I try to be an active member of the design & developer community, especially JavaScript. I enjoy teaching what I know & learning as much as possible. I ride road bikes a lot & am a member of [The Rapha Cycling Club](//www.rapha.cc/us/en_US/rcc-public-landing) & [Ritte Cycling Club](//ritte.cc/) in Los Angeles.

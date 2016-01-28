@@ -1,0 +1,8 @@
+<div class="site-note {{ include.siteNoteClass }}">
+	{% capture site_note %}{% include md/site_note{{ include.siteNote }}.md %}{% endcapture %}{{ site_note | markdownify }}
+	{% if include.siteNoteSocial %}
+		<div class="site-note__social">
+			{% include social/site_share.html email=site.email twitter=site.twitter_username github=site.github_username instagram=site.instagram_username codepen=site.codepen_username tumblr=site.tumblr_account %}
+		</div>
+	{% endif %}
+</div>

@@ -1,0 +1,11 @@
+{% for post in site.categories.first limit: 1 %}
+<article class="featured-post featured-post--first">
+	<header class="featured-post__header">
+	  <h2 class="featured-post__title">
+	    <a class="featured-post__post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	  </h2>
+	  <span class="featured-post__post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  </header>
+  {{ post.content }}
+</article>
+{% endfor %}

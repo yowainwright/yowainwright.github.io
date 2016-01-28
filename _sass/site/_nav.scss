@@ -1,0 +1,82 @@
+// This sass partial is not used anywhere
+
+.site-nav {
+	background-color: $color-grey-dark;
+	visibility: hidden;
+	left: 0;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	opacity: 0;
+	overflow: auto;
+	text-align: center;
+	z-index: 111;
+	.is-displaying-nav & {
+		opacity: 1;
+		visibility: visible;
+		@include prefix(transition, opacity .3s linear, webkit ms moz);
+	}
+	&__logo {
+		border: 3px dotted white;
+		display: inline-block;
+		height: $brand-unit-circle;
+		padding: $spacing-unit / 2;
+		overflow: hidden;
+		margin-top: $spacing-unit;
+		width: $brand-unit-circle;
+		@include prefix(border-radius, 100%, webkit ms moz);
+		@include media-query($width-default) {
+			height: $brand-unit-circle-large;
+	    	width: $brand-unit-circle-large;
+    	}
+	}
+	[name=site-logo] {
+		fill: white;
+	}
+	.site-nav__link {
+		color: white;
+		display: block;
+		font-size: $font-size-default;
+		font-weight: normal;
+        margin-left: auto;
+        margin-right: auto;
+        padding: ($spacing-unit / 4) ($spacing-unit / 2);
+        text-decoration: none;
+        @include media-query($width-default) {
+			font-size: $font-size-large;
+			padding: ($spacing-unit / 4) 0;
+        }
+        &--page {
+        	text-align: center;
+        }
+	}
+	&__close {
+		background-color: transparent;
+		border: none;
+		color: white;
+		font-size: ($font-size-default * 3);
+		outline: none;
+		padding: ($spacing-unit / 4) ($spacing-unit / 2);
+		position: fixed;
+		right: 0;
+		top: 0;
+	}
+	&__pages {
+		border-bottom: 1px solid white;
+		border-top: 1px dashed white;
+		display: flex;
+		margin-left: auto;
+        margin-right: auto;
+		max-width: $calc-max-width;
+	}
+	&__page {
+		width: 50%;
+	}
+	.social-svg {
+		fill: white;
+	}
+}
+.is-displaying-nav {
+	overflow: hidden;
+}

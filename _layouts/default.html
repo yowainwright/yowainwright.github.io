@@ -1,105 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
   {% include head.html %}
-  {{ page.styles }}
-  <link rel="stylesheet" href="/css/jeffry.in.css">
-
-  <!--[if IE 7 ]>
-   <script>
-  var redirect = confirm("It seems you're using an old version of Internet Explorer. Click 'OK' to be re-directed to page you can use.");
-   if (redirect == true) {
-     window.location.href = '{{ site.url }}/simple-resume/';
-   }
- </script>
- <![endif]-->
-  <!--[if IE 8 ]>
-   <script>
-  var redirect = confirm("It seems you're using an old version of Internet Explorer. Click 'OK' to be re-directed to page you can use.");
-   if (redirect == true) {
-     window.location.href = '{{ site.url }}/simple-resume/';
-   }
- </script>
- <![endif]-->
-
-</head>
-<body class="Grid {{ page.unique }}">
-  <div class="ui large vertical inverted labeled icon sidebar menu" id="menu">
-
-    <a class="menu item centered hide"><b><i class="close circular icon"></i> Close Menu</b></a>
-
-    <div class="item centered">
-      <h4 class="ui header dividing"><i class="book circular icon"></i> Pages</h4>
-      <div class="menu pages centered">
-        <a class="item" href="..">Home</a>
-        <a class="item" href="../about/">About</a>
-        <a class="item" href="../resume/">Resume</a>
-         <a class="item" href="../contact/">Contact</a>
-      </div>
-    </div>
-    <div class="item centered">
-      <h4 class="ui dividing header"><i class="pin circular icon"></i> Posts</h4>
-      <div class="menu posts centered">
-        <!--<h4 class="ui dividing header">Code</h4>-->
-        {% for post in site.categories.code %}
-        <a class="item" href="{{ post.url }}">{{ post.title }}</a>
-        {% endfor %}
-        <!--<h4 class="ui dividing header">Illustration</h4>-->
-        {% for post in site.categories.illustration %}
-        <a class="item" href="{{ post.url }}">{{ post.title }}</a>
-        {% endfor %}
-        <!-- <h4 class="ui dividing header">Projects</h4>-->
-        {% for post in site.categories.projects %}
-        <a class="item" href="{{ post.url }}">{{ post.title }}</a>
-        {% endfor %}
-      </div>
-    </div>
-    <!--<div class="item centered">
-      <div class="menu posts centered">
-        {% for post in site.categories.resume %}
-        <a class="item" href="{{ post.url }}">{{ post.title }}</a>
-        {% endfor %}
-      </div>
-    </div>-->
-    <div class="item centered">
-      <div class="menu centered">
-        <a href="mailto:jjwainwright2@gmail.com?Subject=From%20your%20webpage" target="_top"><i class="mail outline icon"></i></a>
-        <a href="https://github.com/yowainwright"><i class="github icon"></i></a>
-        <a href="https://twitter.com/yowainwright"><i class="twitter icon"></i></a>
-        <a href="https://dribbble.com/yowainwright"><i class="dribbble icon"></i></a>
-        <a href="https://instagram.com/yowainwright"><i class="instagram icon"></i></a>
-      </div>
-    </div>
-     <div class="item centered">
-      <h4 class="ui dividing header">&#032;</h4>
-      <div class="menu posts centered">
-
-      </div>
-
-    </div>
-  </div>
-   <div id="topNav" class="ui fixed mobile only launch inverted menu">
-     <div class="site ui page grid">
-      <div class="one column row">
-        <div class="column">
-          <i class="icon list layout"></i><img class="ui image logo two" src="/assets/w-logo.png" width="20" height="20" />
-        </div>
-      </div>
-    </div>
-   </div>
-  <div id="leftButton" class="ui black computer only large launch right attached button">
-    <i class="icon list layout"></i><img class="ui image logo one" src="/assets/w-logo.png" width="20" height="20" />
-  </div>
-
-  {{ content }}
-
-
-  {% include footer.html %}
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/javascript/semantic.min.js"></script>
-  <!-- some plugins -->
-  {{ page.scripts }}
-  <!-- custom -->
-  <script src="/scripts/jeffry.in.scripts.js"></script>
-</body>
+  <body>
+    {% include google/tag_manager.html %}
+    {% include use.html %}
+    {% include header.html %}
+    <main id="page-content" class="page-content">
+        {{ content }}
+    </main>
+    {% include footer.html %}
+    {% include google/fonts.html %}
+  </body>
 </html>
