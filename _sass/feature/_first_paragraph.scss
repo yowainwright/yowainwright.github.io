@@ -1,0 +1,12 @@
+.content .first-paragraph {
+	font-family: $font-family-serif;
+	font-size: $font-size-default * 1.25;
+	max-width: $width-650;
+	text-align: left;
+	@include media-query($width-default) {
+		font-size: $font-size-default * 1.75;
+	}
+	.post & {
+		margin-bottom: $spacing-unit * 2;
+	}
+}

@@ -1,0 +1,72 @@
+// fonts
+	// defaults
+	$font-family-default: systrem, -apple-systrem, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+	$font-family-light: 'Lato', $font-family-default;
+	$font-family-serif: 'Playfair Display', Times, sans-serif;
+
+	// line heights
+	$line-height-default: 1.5;
+
+	// weights
+	$font-weight-normal: 500;
+	$font-weight-semi-bold: 600;
+	$font-weight-bold: 800;
+
+	// size
+	$font-size-default: 1rem !default;
+	$font-size-small: $font-size-default * 0.875;
+	$font-size-large: $font-size-default * 2;
+	$font-size-largest: $font-size-default * 2.5;
+	$font-size-featured: 3rem !default;
+	$font-size-featured-large: 6rem !default;
+
+// color vars
+
+	// greys
+	$color-grey-dark: #292929;
+	$color-grey-lightest: #fdfdfd;
+	$color-grey: #828282;
+	$color-grey-light: lighten($color-grey, 40%);
+	$color-grey-middle: #ccc;
+	$color-grey-lighter: lighten(#ccc, 15%);
+
+	// site related (special)
+	$color-blue-default: #2a7ae2;
+	$color-biege: #fcf2d4;
+	$color-orange-rust: #c25b1d;
+	$color-red-light: #c94244;
+	$color-blue-light: #deedfc;
+	$color-pink-light: #f5d0e4;
+	$color-yellow: #ffff80;
+	$color-yellow-light: #ffffcc;
+	$color-green-light: #ccffcc;
+
+	// ui
+	$text-color: black;
+	$background-color-default: $color-grey-lightest;
+	$background-color-light: $color-pink-light;
+	$border-color-default: $color-grey-light;
+	$border-color-dark: $color-grey-dark;
+
+// spacing
+// TODO: change these naming conventions
+$spacing-unit: 1rem !default;
+$spacing-unit-large: 4rem !default;
+
+// Media Queries (px, maybe this sux but px is way faster for me with media queries)
+$width-default: 800px !default;
+$width-500: 500px !default;
+$width-650: 650px !default;
+$width-900: 900px !default;
+$width-1000: 1000px !default;
+$width-1300: 1300px !default;
+$calc-max-width: calc(#{$width-default} - #{$spacing-unit} * 2);
+
+// Branding
+$brand-unit: 20px;
+$brand-unit-large: $brand-unit + 10;
+$brand-unit-circle: calc(20px + 1.2rem);
+$brand-unit-circle-large: calc(30px + 1.2rem);
+$site-header-height: calc(58px + 3rem);
+$site-header-height-large: calc(68px + 3rem);
+$svg-unit: 42px;

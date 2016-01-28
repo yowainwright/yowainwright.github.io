@@ -1,0 +1,1 @@
+I'm Jeff Wainwright. I build things using design & code. You can read more about that [here](/cv/). I live in Los Angeles & I ride bikes a lot.

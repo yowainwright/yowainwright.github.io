@@ -1,0 +1,36 @@
+<section class="post-list post-list--3-2column">{% for post in site.categories.general limit: 3 %}
+  {% if forloop.first %}
+  <article class="post-list__post post-list__post--{{ forloop.index }}">
+    <h2 class="post-list__post-title">
+      <a class="post-list__post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2>
+    <span class="post-list__post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <p class="fist-paragraph">{{ post.excerpt | strip_html }}</p>
+    <a class="post-list__post-link post-list__post-link--read-more" href="{{ post.url | prepend: site.baseurl }}">Read More</a>
+  </article>
+  <div class="post-list__column-2">
+  {% else %}
+  <article class="post-list__post post-list__post--{{ forloop.index }}">
+    {% if post.featured_image %}
+    <figure class="featured__image featured__image{{ post.featured_image_type ? '--' + post.featured_image_type : '' }}">
+      <div class="picture">
+       <a class="post-list__post-link" href="{{ post.url | prepend: site.baseurl }}">
+        <picture>
+          <img src="{{ post.featured_image }}" alt="{{ post.title }}">
+        </picture>
+      </a>
+    </div>
+  </figure>
+  {% endif %}
+  <div class="post-list__content">
+    <h2 class="post-list__post-title">
+      <a class="post-list__post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2>
+    <span class="post-list__post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <p><a class="post-list__post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.excerpt | | strip_html }}</a></p>
+  </div>
+</article>
+{% endif %}
+{% endfor %}
+</div>
+</section>

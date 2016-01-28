@@ -1,0 +1,35 @@
+.post-list {
+  &__post {
+    max-width: $width-default;
+    overflow: hidden;
+    padding: $spacing-unit;
+  }
+  &__post-title {
+    color: $color-grey-dark;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+    margin: ($spacing-unit) 0 ($spacing-unit / 2);
+    .post-list__post-link {
+      color: $color-grey-dark;
+    }
+  }
+  &__post-meta {
+    color: $color-grey-dark;
+    font-size: $font-size-small;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: -.05em;
+  }
+  &__post-link {
+    color: black;
+    &:hover {
+      p & {
+        text-decoration: none;
+      }
+    }
+  }
+  p {
+    font-family: $font-family-serif;
+    max-width: none;
+  }
+}

@@ -1,0 +1,48 @@
+<header id="site-header" class="site-header">
+    <a id="site-title" class="site-title" href="{{ '/' | prepend: site.baseurl }}">
+      <svg name="site-logo" viewBox="0 0 1000 1000">
+        <use class="site-logo" xlink:href="#logo-w" x="0" y="0" />
+      </svg>
+      <h1 class="site-title__text">{{ site.title }}</h1>
+    </a>
+    <h1 class="site-header__page-title">{{page.title}}</h1>
+    <nav class="site-header__navigation">
+	    <ul class="site-header__list site-header__list--pages">
+	    	<li class="site-header__list-item">
+	    		<a href="{{ '/cv/' | prepend: site.baseurl }}">CV</a>
+	    	</li>
+	    	<li class="site-header__list-item">
+	    		<a href="{{ '/archive/' | prepend: site.baseurl }}">Archive</a>
+	    	</li>
+	    </ul>
+	    <ul class="site-header__list site-header__list--social">
+	    	<li class="site-header__list-item">
+	    		<a href="mailto:jjwainwright2@gmail.com" targe="_blank">Email</a>
+	    	</li>
+	    	<li class="site-header__list-item">
+	    		<a href="//github.com/yowainwright" target="_blank">Github</a>
+	    	</li>
+	    	<li class="site-header__list-item">
+	    		<a href="//instagram.com/yowainwright" target="_blank">Instagram</a>
+	    	</li>
+	    </ul>
+	    <div class="site-header__recent-posts">
+	    	{% for post in site.posts limit: 2 %}
+					<article class="site-header__recent-post">
+						<a class="site-header__recent-post-link" href="{{ post.url | prepend: site.baseurl }}">
+							{% if post.featured_image %}
+								<div class="site-header__picture picture">
+									<picture>
+		            		<img class="site-header__image" src="{{ post.featured_image }}" alt="{{ post.title }}">
+		          		</picture>
+								</div>
+							{% endif %}
+							<h3 class="site-header__recent-post-title">
+							{{ post.title | truncate: 50, '&hellip;' }}
+							</h3>
+						</a>
+					</article>
+	    	{% endfor %}
+	    </div>
+    </nav>
+</header>

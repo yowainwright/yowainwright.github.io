@@ -1,0 +1,22 @@
+<section class="post-list post-list--3column">
+  {% for post in site.categories.general limit: 3 %}
+    <article class="post-list__post post-list__post--{{ forloop.index }}">
+      {% if post.featured_image %}
+        <figure class="featured__image{% if post.categories contains 'os' %} featured__image--os{% endif %}{% if post.categories contains 'javascript' %} featured__image--javascript{% endif %}{% if post.categories contains 'sass' %} featured__image--sass{% endif %}{% if post.categories contains 'markdown' %} featured__image--markdown{% endif %}">
+          <a class="post-list__post-link" href="{{ post.url | prepend: site.baseurl }}">
+            {% include media/picture.html pictureClass="picture--square" imageSM=post.featured_image %}
+          </a>
+        </figure>
+      {% endif %}
+      <div class="post-list__content">
+        <h2 class="post-list__post-title">
+          <a class="post-list__post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        }
+        </h2>
+        <p>
+          <a class="post-list__post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.excerpt | | strip_html | truncatewords: 10, '&hellip;'}}</a>
+        </p>
+      </div>
+    </article>
+  {% endfor %}
+</section>

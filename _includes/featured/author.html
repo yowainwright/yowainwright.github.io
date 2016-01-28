@@ -1,0 +1,23 @@
+{% for author in site.data.authors %}
+  {% if author.author_name == include.author_name %}
+    <figure class="figure figure-author figure-author{{ include.figuredFeaturedType  or '' }}">
+      <div class="figure-author__picture">
+      {% if author.author_photo %}
+        {% include media/picture.html pictureClass="picture--square" imageSM=author.author_photo %}
+      {% endif %}
+      </div>
+      <figcaption class="figure-author__caption">
+        <div class="text--centered">
+          <p>{{ author.author_humor_quote }}</p>
+          <hr>
+          <p><em>That's [me] {{ author.author_name }}</em></p>
+          <small>
+            {{ author.author_summary }}
+            {% include social/inline_author_share.html %}
+          </small>
+        </div>
+      </figcaption>
+    </figure>
+  {% else %}
+  {% endif %}
+{% endfor %}

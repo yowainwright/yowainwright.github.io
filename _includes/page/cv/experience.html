@@ -1,0 +1,16 @@
+<section class="cv__section">
+	<h2 class="cv__section-title">Experience</h2>
+
+	<div class="cv__sub-section">
+		{% capture pgm %}{% include md/cv/jobs/pgm.md %}{% endcapture %}{{ pgm | markdownify }}
+	</div>
+
+	<div class="cv__sub-section">
+
+		{% capture oa %}{% include md/cv/jobs/oa.md %}{% endcapture %}{{ oa | markdownify }}
+	</div>
+
+	<div class="cv__sub-section">
+		{% capture nasdaq %}{% include md/cv/jobs/nasdaq.md %}{% endcapture %}{{ nasdaq | markdownify }}
+	</div>
+</section>

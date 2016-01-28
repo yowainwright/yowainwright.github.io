@@ -1,0 +1,37 @@
+[name=site-logo],
+[src='/assets/js.svg'],
+[src='/assets/os.svg'],
+[src='/assets/md.svg'] {
+	fill: black;
+	opacity: 1;
+}
+[src='/assets/js.svg'],
+[src='/assets/os.svg'],
+[src='/assets/md.svg'] {
+	opacity: .75;
+}
+[src='/assets/js.svg']  {
+	.site-header & {
+		background-color: $color-yellow;
+	}
+}
+
+[src='/assets/md.svg'] {
+	.site-header & {
+		background-color: 	$color-green-light;
+	}
+}
+
+[src='/assets/sass.svg'] {
+	.site-header & {
+		background-color: 	$color-green-light;
+	}
+}
+.featured__image {
+	&--os {
+		img {
+			background-color: $color-yellow;
+			opacity: .75;
+		}
+	}
+}

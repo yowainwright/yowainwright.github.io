@@ -1,17 +1,26 @@
+<head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Jeffry.in {{ page.title }}</title>
-  <meta name="description" content="{{ page.metadescription }}" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} - Jeffry.in</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %} - Jeffry.in">
   <meta name="google-site-verification" content="8eHITXF6-kLwRSGadGPduRcZYBmX-R_L85vU_DCB9gU" />
   <meta name="robots" content="index,follow" />
   <meta name="viewport" content="width=device-width">
-  <meta property="og:title" content="{{ page.title }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ site.url }}{{page.permalink }}" />
-  <meta property="og:image" content="{{ site.url }}/assets/w.jpg" />
-  <meta property="og:description" content="{{ page.metadescription }}" />
-  <link rel="canonical" href="{{ site.url }}{{page.permalink }}" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@yowainwright">
+  <meta name="twitter:url" property="og:url" content="{{ site.url }}{{page.permalink }}">
+  <meta name="twitter:title" property="og:title" content="{{ page.title }}">
+  <meta name="twitter:description" property="og:description" content="{{ page.metadescription }}">
+  <meta name="twitter:image" property="og:image" content="{{ site.url }}/assets/{% if page.mainImage %}{{ page.mainImage }}{% else %}w.jpg{% endif %}">
+  <!-- the above meta data tags (with open graph & twitter mixed together) came from Jeremy Keith post https://adactio.com/journal/9881 -->
+
+  {% include google/analytics.html %}
+
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link href="{{ site.url }}/assets/favicon.ico" rel="icon" />
   <link href="{{ site.url }}/assets/w.png" rel="apple-touch-icon" />
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css" />
-  <link href='http://fonts.googleapis.com/css?family=Lobster|Raleway:300,500,700' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+</head>
