@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  Lesser used & known CSS selectors
+title:  Less used & known CSS selectors, aka attribute selectors
 date: 2016-01-24
 author: Jeff Wainwright
-meta: Lesser used & known CSS selectors
+meta: Less known CSS selectors, aka attribute selectors
 categories:
 - code
 - sass
 - css
-permalink: css-lesser-known-selectors/
+permalink: css-less-known-selectors/
 featured_image: /assets/sass.svg
+redirect_from:
+ - css-lesser-known-selectors/
 ---
 
 
@@ -29,7 +31,7 @@ Having written CSS & SASS for years & using [BEM](//csswizardry.com/2013/01/mind
 | Ends with | `[attr$="val"]` |
 | Contains (string) | `[attr*="val"]` |
 | Contains (text) | `[title~="text"]` |
-{: .centered-item }
+{: .centered-item .content__table }
 
 ### Begins with
 
