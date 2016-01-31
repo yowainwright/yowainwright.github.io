@@ -4,7 +4,7 @@ Front End Engineer \| PGM - Billboard & The Hollywood Reporter
 Los Angeles, CA \| May 2014 - current
 {: .cv__sub-meta }
 
-- Design/discuss products for an online world (Illustrator, Photoshop, [Basecamp](//basecamp.com/), [Jira](//www.atlassian.com/software/jira))
+- Design/discuss products for Billboard, THR & Pret-a-reporter re-designs (Illustrator, Photoshop, [Basecamp](//basecamp.com/), [Jira](//www.atlassian.com/software/jira))
 - Build quality modular frontend templates using [Twig](//twig.sensiolabs.org/)
 - Develop exciting user experiences with Sass & JS
 - Code robust frontend systems HTML (Twig), CSS ([Sass](//sass-lang.com/), [Compass](//compass-style.org/), JS (JQuery, [Backbone](//backbonejs.org/))

@@ -11,7 +11,7 @@ hide_header: true
 	<h1 class="page__title">Curriculum vitae</h1>
 </div>
 
-As a User Interface Specialist, I’m passionate about turning ideas into high performing interfaces for the online world. With a design background, I approach products from conception to quality usable code with an engineering team.
+As a User Interface Specialist, I’m passionate about turning ideas into high performing interfaces for the websites & apps. With a design background, I approach products from conception to quality usable code with an engineering team.
 {: .first-paragraph }
 
 {% include page/cv/awards.html %}
