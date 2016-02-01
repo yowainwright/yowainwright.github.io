@@ -17,9 +17,6 @@
   .post-list__post {
     max-width: none;
     padding: $spacing-unit #{$spacing-unit * 2} ;
-    &:nth-child(n+4) {
-      display: none;
-    }
     @include media-query($width-default) {
       border-bottom: 1px dashed $color-grey-light;
       border-right: 1px solid $color-grey-light;
@@ -27,18 +24,8 @@
       margin-left: auto;
       margin-right: auto;
       padding: ($spacing-unit * 2) 0;
-      &:nth-child(n+4) {
-        display: block;
-      }
     }
     &:first-of-type {
-      .page--home & {
-        border-bottom: 1px dashed $color-grey-light;
-        @include media-query($width-default) {
-          border-top: #{$spacing-unit / 2} solid black;
-          margin-top: #{$spacing-unit * 4};
-        }
-      }
       .post-list__post-title {
         margin-top: 0;
         padding-top: $spacing-unit;
