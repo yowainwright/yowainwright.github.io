@@ -1,10 +1,10 @@
 <div class="disqus">
 	<div class="disqus__wrapper">
 		<div id="disqus_thread"></div>
-		<script async>
+		<script>
     	var disqus_config = function () {
-        this.page.url = {{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }};
-        this.page.identifier = {{ page.url }};
+        this.page.url = '{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}';
+        this.page.identifier = '{{ page.url }}';
     	};
     	(function() {  // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');

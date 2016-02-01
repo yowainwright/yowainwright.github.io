@@ -104,3 +104,10 @@ ul {
   margin: $spacing-unit auto;
   max-width: calc(#{$width-650} - #{$spacing-unit * 2});
 }
+iframe {
+    display: block;
+    height: auto;
+    margin: #{$spacing-unit * 2} auto;
+    max-width: $width-650;
+    width: 100%;
+}
