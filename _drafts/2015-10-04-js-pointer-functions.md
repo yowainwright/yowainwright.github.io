@@ -1,12 +1,14 @@
 ---
 layout: post
-title:  "Javascript Pointer Functions"
+title:  Javascript Pointer Functions
 date: 2012-10-21
 author: Jeff Wainwright
 meta: Javascript Point Functions
-permalink: javascript-pointer-functions/
-categories: story featured
-featured_category: <h2 class="featured-text featured-text--file">.js</h2>
+permalink: /javascript-pointer-functions/
+meta: Designer & programmer workflows on OSX to increase productivity
+categories: javascript code
+type: code
+featured_image: /assets/js.svg
 ---
 
 # JavaScript Pointer Functions
