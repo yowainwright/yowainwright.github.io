@@ -8,7 +8,7 @@ categories:
 - javascript
 - code
 type: code
-permalink: js-scope/
+permalink: /js-scope/
 featured_image: /assets/js.svg
 redirect_from:
   - js-scope/

@@ -7,7 +7,7 @@ meta: Understanding Javascript Closure & what it does
 categories:
 - code
 - javascript
-permalink: js-closure/
+permalink: /js-closure/
 featured_image: /assets/js.svg
 redirect_from:
   - personal-site/js-keyword-this/

@@ -5,7 +5,7 @@ date: 2012-10-21
 author: Jeff Wainwright
 meta: This is a demo on how to use the Glide Carousel with Semantic UI
 categories: code
-permalink: glide-carousel/
+permalink: /glide-carousel/
 featured_image: /assets/city-country.png
 ---
 

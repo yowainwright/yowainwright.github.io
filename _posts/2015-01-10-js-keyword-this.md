@@ -6,7 +6,7 @@ author: Jeff Wainwright
 meta: This post goes into Javascript's keyword this, how it is defined & why it is misunderstood
 categories: javascript code
 type: code
-permalink: js-keyword-this/
+permalink: /js-keyword-this/
 featured_image: /assets/js.svg
 redirect_from:
   - personal-site/js-keyword-this/

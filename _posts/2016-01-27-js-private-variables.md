@@ -8,7 +8,7 @@ categories:
 - code
 - javascript
 - objects
-permalink: js-private-information/
+permalink: /js-private-information/
 featured_image: /assets/js.svg
 redirect_from:
   - personal-site/js-private-information/

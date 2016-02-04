@@ -4,7 +4,7 @@ title:  "Jekyll Kramdown Syntax Cheatsheet"
 date: 2015-09-11 16:33:51
 author: Jeff Wainwright
 meta: Kramdown Syntax Cheatsheet
-permalink: kramdown-syntax-cheatsheet/
+permalink: /kramdown-syntax-cheatsheet/
 categories: jekyll kramdown markdown code
 type: code
 special_class: has-width-container

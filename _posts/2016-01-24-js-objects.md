@@ -8,7 +8,7 @@ categories:
 - code
 - javascript
 - objects
-permalink: js-objects/
+permalink: /js-objects/
 featured_image: /assets/js.svg
 redirect_from:
   - personal-site/js-scope/

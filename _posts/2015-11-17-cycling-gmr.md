@@ -9,7 +9,7 @@ categories:
 - travel
 - first
 - cycling
-permalink: glendora-mountain-road/
+permalink: /glendora-mountain-road/
 post_type: post--featured
 featured_image: //c2.staticflickr.com/6/5804/23722600469_f8a9a34ba0.jpg
 redirect_from:

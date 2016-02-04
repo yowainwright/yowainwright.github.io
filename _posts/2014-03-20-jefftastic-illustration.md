@@ -5,7 +5,7 @@ date: 2012-10-21
 author: Jeff Wainwright
 meta: JeffTastic Illustration, A Branding Logo Concept done in Adobe Illustrator
 categories: illustration
-permalink: jefftastic-illustration/
+permalink: /jefftastic-illustration/
 post_type: post--featured
 featured_image: //c1.staticflickr.com/1/591/22108059003_3552d09ede.jpg
 ---

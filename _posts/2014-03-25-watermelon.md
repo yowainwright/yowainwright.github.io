@@ -5,7 +5,7 @@ date: 2012-10-21
 author: Jeff Wainwright
 meta: A quick watermelon illustration in Adobe Illustrator
 categories: illustration
-permalink: watermelon-illustration/
+permalink: /watermelon-illustration/
 post_type: post--featured
 featured_image: //c2.staticflickr.com/6/5724/22108056643_0ede6b33dd_o.png
 ---
