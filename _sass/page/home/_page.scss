@@ -2,18 +2,20 @@
 	iframe {
 		display: none !important;
 	}
-	.post-list__post {
-		&:first-of-type {
-      border-bottom: 1px dashed $color-grey-light;
-      @include media-query($width-default) {
-        border-top: #{$spacing-unit / 2} solid black;
-        margin-top: #{$spacing-unit * 4};
+  .post-list--1column {
+  	.post-list__post {
+  		&:first-of-type {
+        border-bottom: 1px dashed $color-grey-light;
+        @include media-query($width-default) {
+          border-top: #{$spacing-unit / 2} solid black;
+          margin-top: #{$spacing-unit * 4};
+        }
       }
-    }
-		&:nth-child(n+4) {
-      display: none;
-      @include media-query($width-default) {
-				display: block;
+  		&:nth-child(n+4) {
+        display: none;
+        @include media-query($width-default) {
+  				display: block;
+        }
       }
     }
   }
