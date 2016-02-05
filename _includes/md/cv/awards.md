@@ -1,3 +1,2 @@
-- Billboard, Real Time Social Charts, [2015](//webbyawards.com/winners/2015/social/general-excellence-categories/experimental-innovation/billboard-real-time-social-charts/)
 - The Hollywood Reporter, Online Magazine, [2015](//webbyawards.com/winners/2015/websites/general-website/magazine/the-hollywood-reporter/), [2014](//webbyawards.com/winners/2015/websites/general-website/magazine/the-hollywood-reporter/)
 - The Hollywood Reporter, Magazine of the Year, [2015](//www.hollywoodreporter.com/news/hollywood-reporter-nominated-magazine-year-855858), [2014](//www.hollywoodreporter.com/news/hollywood-reporter-wins-national-magazine-769564)
