@@ -10,8 +10,7 @@ permalink: programmer-designer-workflows/
 featured_image: /assets/os.svg
 ---
 
-The factory function pattern is a way to create an object which can make information private but avoids the awkwardness of having the key work _this_ not bound to the function initiation.
+
 {: .first-paragraph }
 
-Here's an example of a factory function pattern:
 
