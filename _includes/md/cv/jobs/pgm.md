@@ -17,3 +17,5 @@ KPIs
 - Increased page load speed
 - Improved productivity & sustainability
 - Increased readership (by 15% \- both brands)
+
+{% include page/cv/awards.html %}

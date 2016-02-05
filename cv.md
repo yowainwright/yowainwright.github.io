@@ -14,8 +14,6 @@ hide_header: true
 As a User Interface Specialist, I’m passionate about turning ideas into high performing interfaces for the websites & apps. With a design background, I approach products from conception to quality usable code with an engineering team.
 {: .first-paragraph }
 
-{% include page/cv/awards.html %}
-
 {% include page/cv/experience.html %}
 
 {% include page/cv/education.html %}

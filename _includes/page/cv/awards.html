@@ -1,9 +1,4 @@
-<section class="cv__section">
+Associated Team Awards
+{: .cv__sub-section-title }
 
-<div class="cv__section-content">
-	<h2 class="cv__section-title">Awards Associated with Team Projects</h2>
-
-	{% capture awards %}{% include md/cv/awards.md %}{% endcapture %}{{ awards | markdownify }}
-</div>
-
-</section>
+{% capture awards %}{% include md/cv/awards.md %}{% endcapture %}{{ awards | markdownify }}
