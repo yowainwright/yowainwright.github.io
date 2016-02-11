@@ -1,1 +1,1 @@
-I'm Jeff Wainwright. This site is built on a blogging platform designed & architected by me. I build things like this site, using design & code. You can read more about me [here](/cv/) or you can get know me by reading my posts. Also, I live in Los Angeles & I ride bikes a lot.
+I'm Jeff Wainwright. I build things like this [site](), using design & code. You can read more about my work [here](/cv/). I live in Los Angeles & ride bikes.
