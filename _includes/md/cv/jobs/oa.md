@@ -1,7 +1,7 @@
 User Interface Developer \| Outlook Amusements
 {: .cv__sub-title }
 
-Burbank, CA \| March 2011 - March 2014
+Burbank, CA \| March 2012 - March 2014
 {: .cv__sub-meta }
 
 - Built responsive frontend framework for New Conversion Sites

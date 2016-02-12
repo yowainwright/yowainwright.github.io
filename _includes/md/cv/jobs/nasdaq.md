@@ -1,4 +1,4 @@
-UI Developer \| Nasdaq
+User Interface Developer \| Nasdaq
 {: .cv__sub-title }
 
 Rockville, MD \| Jan 2011-Jan 2012
