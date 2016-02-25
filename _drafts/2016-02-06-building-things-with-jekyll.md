@@ -2,17 +2,19 @@
 layout: post
 title: Built with Jekyll, this site is all Markdown, Liquid Lang & Sass
 meta: Built with Jekyll
+author: Jeff Wainwright
+permalink: /built-with-jekyll/
 categories:
 - code
 - jekyll
 - portfolio
 - project
-permalink: /built-with-jekyll/
 featured_image: /assets/icons/jekyll-icon.svg
 ---
 
 This site is built with [Jekyll](//jekyllrb.com/). Building things with Jekyll is efficient, in-expensive & easy to extend. Really all you need is a url & place to host some text files.
 {: .first-paragraph }
+
 ## Concept
 
 When building this site, I knew I wanted a few things.
@@ -21,7 +23,21 @@ When building this site, I knew I wanted a few things.
 
 2. I knew that to make building the site worth while, I'd want to be able to extend modules to other jekyll projects.
 
-Why did I want to use 3rd party stuff so much? Well, I'm not here, writing on this blog to re-invent the wheel at every step. I want to start with as much as possible as easily as possible. 
+### Why did I want to use 3rd party stuff so much?
+
+Well, I'm not writing posts here to re-invent the wheel on social behavior, business logic or any of that. My posts & this site are to create custom _Jeff_ *experiences* for customers within the content that I create - however small of a difference that might be from other web page experiences. So, with that being said: users have their facebook, twitter, email & disqus to communicate, if they were to so choose, about the *experiences* I create.
+
+## I highlighted _experiences_ in the above paragraph a few times & why
+
+Experiences are a key to great content & they're often a balancing act which rely on customer's desire for:
+
+- Quality content
+- Time
+- Unique Interface
+
+
+
+
 
 
 
