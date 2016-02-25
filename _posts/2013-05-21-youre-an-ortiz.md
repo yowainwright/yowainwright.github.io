@@ -1,13 +1,14 @@
-
 ---
 layout: post
-title: You're an Ortiz, how I gained family & through them things changed for the better
+title:  "You're an Ortiz, how I gained family & through them things changed for the better"
+date: 2013-05-21
+author: Jeff Wainwright
 meta: A short story about moving out of the a bad situation & into a good one
-categories:
-- story
-- thoughts
 permalink: /youre-an-ortiz/
-featured_image: /assets/youre-an-ortiz/henry-working-on-bike.jpg
+categories: story general
+post_type: post--featured
+featured_image: //c2.staticflickr.com/6/5703/22541280060_9bc6f31bb4_o.jpg
+special_class: has-special-image-widths
 ---
 
 In 2010 I was in a pretty low spot. I had been laid off from my job earlier that year and moved into a low-income area to save money. It turned into a nightmare.
