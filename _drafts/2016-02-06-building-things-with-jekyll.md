@@ -27,7 +27,7 @@ When building this site, I knew I wanted a few things.
 
 Well, I'm not writing posts here to re-invent the wheel on social behavior, business logic or any of that. My posts & this site are to create custom _Jeff_ *experiences* for customers within the content that I create - however small of a difference that might be from other web page experiences. So, with that being said: users have their facebook, twitter, email & disqus to communicate, if they were to so choose, about the *experiences* I create.
 
-## I highlighted _experiences_ in the above paragraph a few times & why
+### I highlighted _experiences_ in the above paragraph a few times & why
 
 Experiences are a key to great content & they're often a balancing act which rely on customer's desire for:
 
@@ -35,7 +35,7 @@ Experiences are a key to great content & they're often a balancing act which rel
 - Time
 - Unique Interface
 
-
+**Quality Content** is content that is unique to the rest of internet. A unique photo, text or video counts as _quality content_if it originated on the site which is provided it - that's pretty special.
 
 
 
