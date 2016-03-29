@@ -33,15 +33,18 @@ The second presentor discussed Nodebots. He described why node made building rob
 
 The third presentor, [Yunong Xiao](//yunong.io/), discsussed Node in production; especially debugging it. He briefly summarized how the product is set up & then dug into how he & his team went into debugging issues using their node product.
 
-### Node in production
+## Node in production
 
-#### Summary
+### Summary
+
 - website runs on node
 - built with react
 - dynamic asset manager
 
-#### Debugging
+### Debugging
+
 _lets work the problem & not guessing (Apollo 13)_
+
 
 - Runtime performance
 -- Restify
