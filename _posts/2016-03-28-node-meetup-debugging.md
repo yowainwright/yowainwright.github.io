@@ -14,7 +14,7 @@ On Friday, I had the opportunity to go to the first LA Node.js Meetup. It was gr
 {: .first-paragraph }
 
 
-The first presentor was a CodeSmith student. His name is Jaret Fowler & he can be found [here](//github.com/10000highfives). He started the project [Webflight](//webflight.io). Webflight's goal is to use BitTorrent in a peer-to-peer format to allow users to host the cotent of that site. This would mean that as the users of that site increased so would the speed of that site.
+The first presentor was a CodeSmith student. His name is Jaret Fowler & he can be found [here](//github.com/10000highfives). He started the project [Webflight](//webflight.io). Webflight's goal is to use BitTorrent in a peer-to-peer format to allow users to host the content of that site. This would mean that as users of the site increased so would the speed of that site.
 
 ### Cliff notes of Webflight
 
@@ -29,17 +29,17 @@ The first presentor was a CodeSmith student. His name is Jaret Fowler & he can b
 -- mis-using electron
 -- torrent version
 
-The second presentor discussed Nodebots. He described why node made building robotics easier (My lack of notes for his presentation has nothing to do with the quality of the presentation). 
+The second presentor discussed Nodebots. He described why nodejs made building robotics easier (My lack of notes for his presentation has nothing to do with the quality of the presentation). 
 
-The third presentor, [Yunong Xiao](//yunong.io/), discsussed Node in production; especially debugging it. He briefly summarized how the product is set up & then dug into how he & his team went into debugging issues using their node product.
+The third presentor, [Yunong Xiao](//yunong.io/), discsussed *node in production*; especially debugging it. He briefly summarized how the product is set up & then dug into how he & his team went into debugging issues using their node product.
 
 ## Node in production
 
 ### Summary
 
-- website runs on node
-- built with react
-- dynamic asset manager
+- Website runs on node
+- Built with react
+- Dynamic asset manager
 
 ### Debugging
 
