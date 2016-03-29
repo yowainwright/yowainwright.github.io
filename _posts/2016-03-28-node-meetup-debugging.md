@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Node Meetup, debugging with Yunong Xiao
-date: 2016-01-20
+date: 2016-03-28
 author: Jeff Wainwright
 meta: Node Meetup, debugging with Yunong Xiao
 categories: javascript code
