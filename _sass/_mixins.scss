@@ -1,6 +1,6 @@
 // media queries
-@mixin media-query($device) {
-    @media screen and (min-width: $device) {
+@mixin media-query($width) {
+    @media screen and (min-width: $width) {
         @content;
     }
 }

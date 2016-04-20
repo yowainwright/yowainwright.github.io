@@ -1,7 +1,7 @@
 Front End Engineer \| PGM - Billboard & The Hollywood Reporter
 {: .cv__sub-title }
 
-Los Angeles, CA \| May 2014 - current
+Los Angeles, CA \| May 2014 - March 2016
 {: .cv__sub-meta }
 
 - Design/discuss products for Billboard, THR & Pret-a-reporter re-designs (Illustrator, Photoshop, [Basecamp](//basecamp.com/), [Jira](//www.atlassian.com/software/jira))
