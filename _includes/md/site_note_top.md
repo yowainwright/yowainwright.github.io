@@ -1,1 +1,1 @@
-I'm Jeff Wainwright. I build things like this [site](), using design & code. You can read more about my work [here](/cv/). I live in Los Angeles & ride bikes.
+Hi, I'm Jeff Wainwright. I build things like this site. You can read more about my work [here](/about/). I live in Los Angeles & [ride bikes](//www.strava.com/athletes/722335).
