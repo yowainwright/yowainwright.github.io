@@ -1,18 +1,18 @@
 ---
 layout: post
-title:  "Punch Static Sites: The Nitty Gritty Is Actually Pretty Great"
+title:  "Punch Static Sites: My experience getting setup"
 date: 2016-04-26
 author: Jeff Wainwright
-meta: "Punch Static Sites: The Nitty Gritty Is Actually Pretty Great"
-permalink: /punch-static-sites/
+meta: "Punch Static Sites: My experience getting setup"
+permalink: /punch-setup/
 categories: javascript code
 type: code
 featured_image: /assets/js.svg
 redirect_from:
-  - 
+  - /punch-static-sites/
 ---
 
-Building static sites with punch is actually very simple. After adding the [npm plugin](//www.npmjs.com/package/punch), setting up the initial static site takes a few minutes. The CLI commands are super straight forward & the site re-builds super fast.
+Getting started with [Punch](//laktek.github.io/punch/) is very easy. After adding the [npm plugin](//www.npmjs.com/package/punch), setting up the initial static site takes a few minutes. The CLI commands are super straight forward & the site re-builds super fast.
 {: .first-paragraph }
 
 <figure class="figure figure--full">
@@ -23,8 +23,6 @@ Building static sites with punch is actually very simple. After adding the [npm 
 		<p><a href="//laktek.github.io/punch/">This picture is copied from the Punch website - go there to read more about punch</a></p>
 	</figcaption>
 </figure>
-
-> Building static sites with punch is actually very simple.
 
 ## Setup
 
@@ -43,9 +41,9 @@ In terminal run:
 * If you have already have a directory setup, just run `punch setup` in _that_ directory
 
 
-## Why Punch?
+## An aside: Why Punch?
 
-Here are 2 big benefits for choosing punch.
+Here are 2 big benefits for choosing punch specifically over other static site generators.
 
 1. *Quick setup*: you really can be up & running in a few minutes
 
