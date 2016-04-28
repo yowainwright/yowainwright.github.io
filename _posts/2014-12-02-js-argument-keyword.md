@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Javascript for loop & the argument key word
-date: 2016-01-28
+date: 2014-12-02
 author: Jeff Wainwright
 meta: Javascript for loop & the argument key worddefined & why it is misunderstood
 categories: javascript code
