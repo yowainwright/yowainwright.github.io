@@ -55,7 +55,5 @@ Here are 2 big benefits for choosing punch specifically over other static site g
 
 - Another link to the [homepage](//laktek.github.io/punch/)
 
-I'll be writing more about punch in the near[er] future. ~Thanks
-
 
 
