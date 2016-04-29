@@ -9,13 +9,13 @@
   "github_username":  "yowainwright",
   "instagram_username": "yowainwright",
   "codepen_username": "yowainwright",
-  "posts":[
+  "posts": [
   {% for post in site.posts %}
     {
-      "title"    : "{{ post.title }}",
-      "url"     : "{{ post.url }}",
-      "date"     : "{{ post.date | date: "%B %d, %Y" }}",
-      "content"  : "{{ post.content | markdownify | replace: '"', '\"' | strip_newlines }}"
+      "title": "{{ post.title }}",
+      "url": "{{ post.url }}",
+      "date": "{{ post.date | date: "%B %d, %Y" }}",
+      "content": "{{ site.url }}{{ post.permalink }}"
     } {% if forloop.last %}{% else %},{% endif %}
   {% endfor %}
   ]
