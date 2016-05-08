@@ -1,7 +1,7 @@
 Apps
 {: .cv__sub-title }
 
-- Sublime Text, Terminal, Illustrator, Indesign, Photoshop. Sketch
+- Sublime Text, Terminal, Illustrator, Indesign, Photoshop, Sketch
 
 Code base
 {: .cv__sub-title }
