@@ -1,0 +1,5 @@
+<section class="posts posts--column">
+  {% for post in site.categories.general limit: 3 %}
+    {% include posts/post.html %}
+  {% endfor %}
+</section>

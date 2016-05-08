@@ -1,0 +1,11 @@
+<article class="post__item">
+	<h2 class="post__title">
+		<a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	</h2>
+	<div class="post__content">
+		<time class="post__date">{{ post.date | date: "%b %-d, %Y" }}</time>
+		<p class="post__description">
+			<a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.excerpt | strip_html }}</a>
+		</p>
+	</div>
+</article>

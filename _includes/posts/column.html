@@ -1,0 +1,23 @@
+<section class="posts posts--column">
+	<div class="posts__content" data-post-list-title="{{ include.postListTitle }}">
+
+		{% if include.postnumber %}
+
+			{% for post in site.posts limit: include.postnumber %}
+			
+				{% include posts/post.html %}
+
+			{% endfor %}
+
+		{% else %}
+
+			{% for post in site.posts %}
+
+				{% include posts/post.html %}
+
+			{% endfor %}
+
+		{% endif %}
+
+	</div>
+</section>
