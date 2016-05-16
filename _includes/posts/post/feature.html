@@ -1,0 +1,21 @@
+<article class="post__item">
+{% if post.featured_image %}
+	<figure class="post__figure">
+		<img class="post__image" src="{{ post.featured_image }}" {% if post.featured_image_figcaption %}alt="{{ post.featured_image_figcaption }}"{% endif %} />
+	{% if post.featured_image_figcaption %}
+		<figcaption class="post__figcaption"></figcaption>
+	{% endif %}
+	</figure>
+{% endif %}
+	<header class="post__header">
+		<h2 class="post__title">
+			<a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+		</h2>
+	</header>
+	<div class="post__content">
+		<time class="post__date">{{ post.date | date: "%b %-d, %Y" }}</time>
+		<p class="post__description">
+			<a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.excerpt | strip_html }}</a>
+		</p>
+	</div>
+</article>
