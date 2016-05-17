@@ -1,0 +1,27 @@
+{
+  "name": "yowainwright.github.io",
+  "version": "1.0.0",
+  "description": "Jeffry Wainwright's personal webpage",
+  "main": "index.html",
+  "scripts": {
+    "test": "Jeffry.in"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yowainwright/yowainwright.github.io.git"
+  },
+  "keywords": [
+    "blog",
+    "webpage",
+    "jekyll"
+  ],
+  "author": "Jeffry Wainwright",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
+  },
+  "homepage": "https://github.com/yowainwright/yowainwright.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
