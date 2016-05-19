@@ -1,0 +1,12 @@
+page:
+  - name: About
+    path: /about/
+  - name: Archive
+    path: /archive/
+social:
+  - name: Email
+    path: mailto:jjwainwright2@gmail.com
+  - name: Github
+    path: //github.com/yowainwright
+  - name: Instagram
+    path: //instagram.com/yowainwright
