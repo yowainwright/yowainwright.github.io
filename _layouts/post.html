@@ -15,8 +15,7 @@ layout: default
     <h1 class="post__title">{{ page.title }}</h1>
     <p class="post__meta">
       <date class="post__date" datetime="{{ page.date }}">{{ page.date | date: "%b %-d, %Y" }}</date>
-      {% if page.author %}by&nbsp;<a class="post__author" href="{% if page.author == 'Jeff Wainwright' %}/cv/{% else %}{{ author.author_site }}{% endif %}">{{ page.author }}</a>
-      {% endif %}
+      by&nbsp;<a class="post__author" href="/about/">{{ page.author }}</a>
     </p>
   </header>
   <article class="content post__content">
