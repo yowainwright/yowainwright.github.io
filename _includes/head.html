@@ -12,9 +12,9 @@
   <meta name="twitter:site" content="@yowainwright">
   <meta name="twitter:url" property="og:url" content="{{ site.url }}{{page.permalink }}">
   <meta name="twitter:title" property="og:title" content="{{ page.title }}">
-  <meta name="twitter:description" property="og:description" content="{{ page.metadescription }}">
+  <meta name="twitter:description" property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
-  <meta name="twitter:image" property="og:image" content="{% if page.featured_image %}{{ page.featured_image }}{% else %}{{ site.url }}/assets/w.jpg{% endif %}">
+  <meta name="twitter:image" property="og:image" content="{% if page.featured_image %}{{ site.url }}{{ page.featured_image }}{% else %}{{ site.url }}/assets/w.jpg{% endif %}">
 
   {% include script/analytics.html %}
 

@@ -1,10 +1,9 @@
 .site-footer {
 	background-color: black;
-  border-top: 1px solid $color-grey-dark;
   clear: both;
   overflow: hidden;
   text-align: center;
-  &__headline,
+  &__title,
   &__link {
   	color: white;
     font-family: $font-family-default;

@@ -1,8 +1,11 @@
-<article class="post__item">
-	<header class="post__header">
-		<h2 class="post__title">
-			<a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+{% comment %}
+	This post type breaks away from the other post types completely & that is why it takes on a different naming convention.
+{% endcomment %}
+<article class="simple">
+	<header class="simple__header">
+		<h2 class="simple__title">
+			<a class="simple__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 		</h2>
-		<time class="post__date">{{ post.date | date: "%b %-d, %Y" }}</time>
+		<time class="simple__date">{{ post.date | date: "%b %-d, %Y" }}</time>
 	</header>
 </article>

@@ -10,7 +10,8 @@
 [src='/assets/md.svg'] {
 	opacity: .75;
 }
-[src='/assets/js.svg']  {
+[src='/assets/js.svg'],
+[src='/assets/os.svg'] {
 	.site-header & {
 		background-color: $color-yellow;
 	}

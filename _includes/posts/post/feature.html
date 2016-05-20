@@ -1,21 +1,25 @@
-<article class="post__item">
+{% comment %}
+	This post type breaks away from the other post types completely & that is why it takes on a different naming convention.
+{% endcomment %}
+<article class="feature">
 {% if post.featured_image %}
-	<figure class="post__figure">
-		<img class="post__image" src="{{ post.featured_image }}" {% if post.featured_image_figcaption %}alt="{{ post.featured_image_figcaption }}"{% endif %} />
+	<figure class="feature__figure">
+		<img class="feature__image" src="{{ post.featured_image }}" {% if post.featured_image_figcaption %}alt="{{ post.featured_image_figcaption }}"{% endif %} />
 	{% if post.featured_image_figcaption %}
-		<figcaption class="post__figcaption"></figcaption>
+		<figcaption class="feature__figcaption"></figcaption>
 	{% endif %}
 	</figure>
 {% endif %}
-	<header class="post__header">
-		<h2 class="post__title">
-			<a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	<header class="feature__header">
+		<h2 class="feature__title">
+			<a class="feature__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 		</h2>
 	</header>
-	<div class="post__content">
-		<time class="post__date">{{ post.date | date: "%b %-d, %Y" }}</time>
-		<p class="post__description">
-			<a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.excerpt | strip_html }}</a>
-		</p>
+	<div class="feature__content">
+		<time class="feature__date">{{ post.date | date: "%b %-d, %Y" }}</time>
+		{% if post.description %}<p class="feature__description">
+			<a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.description }}</a>
+		</p>{% endif %}
+		{{ post.content }}
 	</div>
 </article>
