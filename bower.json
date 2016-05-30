@@ -20,7 +20,5 @@
     "tests"
   ],
   "devDependencies": {
-    "Swiper": "swiper#^3.3.1",
-    "jasmine-core": "jasmine#^2.4.1"
   }
 }
