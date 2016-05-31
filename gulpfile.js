@@ -6,6 +6,11 @@ var sassGlob = require('gulp-sass-glob');
 var purifyCSS = require('gulp-purifycss');
 var cssnano = require('gulp-cssnano');
 
+gulp.task('copy', function() {
+  gulp.src('./bower_components/normalize-css/normalize.css')
+  	.pipe(rename({prefix: '_', suffix: '_compiled', extname: '.scss'}))
+    .pipe(gulp.dest('./assets/style/pre/'));
+});
 
 // compile styles 
 gulp.task('styles', function() {
