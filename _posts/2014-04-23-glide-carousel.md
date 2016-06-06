@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Glide Carousel, a easy to use slider for Semantic UI"
-date: 2012-10-21
+date: 2014-04-23
 author: Jeff Wainwright
 meta: This is a demo on how to use the Glide Carousel with Semantic UI
 categories: code
