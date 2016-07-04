@@ -1,39 +1,23 @@
 {
   "name": "yowainwright.github.io",
   "version": "1.0.0",
-  "description": "Jeffry Wainwright's personal webpage",
-  "main": "index.html",
+  "description": "yowainwright.github.io ======================",
+  "main": "index.js",
   "scripts": {
-    "test": "Jeffry.in"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yowainwright/yowainwright.github.io.git"
   },
-  "keywords": [
-    "blog",
-    "webpage",
-    "jekyll"
-  ],
-  "author": "Jeffry Wainwright",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
   },
   "homepage": "https://github.com/yowainwright/yowainwright.github.io#readme",
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
-    "cssnano": "^3.5.2",
-    "gulp": "^3.9.1",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-htmlmin": "^2.0.0",
-    "gulp-postcss": "^6.1.1",
-    "lost": "^6.8.0",
-    "postcss-cli": "^2.5.2",
-    "postcss-initial": "^1.5.1",
-    "postcss-safe-parser": "^1.0.7",
-    "postcss-short-color": "^1.0.0",
-    "precss": "^1.4.0",
-    "stylelint": "^6.3.3"
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1"
   }
 }

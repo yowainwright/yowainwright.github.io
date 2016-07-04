@@ -4,9 +4,11 @@
 @charset "utf-8";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
+//@import "components/mixins";
 @import
         "variables",
         "mixins",
+        "extends",
         "base",
         "page/layout",
         "page/content",
@@ -22,7 +24,6 @@
         "feature/block_positioning", //TODO: better name
         "feature/columns",
         "feature/site_note",
-        "feature/disqus",
         "feature/code_sample",
 
         "feature/post/default",
@@ -40,6 +41,8 @@
 
         "feature/media/picture",
         "feature/media/image",
+
+        "post/disqus",
 
         "posts/post",
         "posts/feature",

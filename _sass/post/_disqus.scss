@@ -1,0 +1,13 @@
+.disqus {
+	border-top: 1px solid $color-grey-lightest;
+	padding: ($spacing-unit * 2) $spacing-unit;
+	&__wrapper {
+		max-width: $width-650;
+    margin-left: auto;
+    margin-right: auto;
+	}
+	@include media-query($width-default) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

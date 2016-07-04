@@ -12,6 +12,10 @@ tumblr_account: http://ratherbe.in
 
 # Build settings
 markdown: kramdown
+kramdown:
+  auto_ids: false
+sass:
+    style: compressed
 
 gems:
   - jekyll-sitemap
