@@ -2,13 +2,10 @@
 <html>
   {% include head.html %}
   <body>
-    {% include script/tag_manager.html %}
+    {% include scripts/tag_manager.html %}
     {% include use.html %}
-    {% include header.html %}
-    <main id="page-content" class="page-content">
-        {{ content }}
-    </main>
+    {% include nav.html %}
+    {{ content }}
     {% include footer.html %}
-    {% include script/fonts.html %}
   </body>
 </html>

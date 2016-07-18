@@ -3,52 +3,25 @@
 ---
 @charset "utf-8";
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-//@import "components/mixins";
+@import "components/mixins";
+
 @import
-        "variables",
-        "mixins",
-        "extends",
-        "base",
-        "page/layout",
-        "page/content",
-
-        "site/header",
-        "site/footer",
-
-        "feature/first_paragraph",
-        "feature/svgs",
-        "feature/syntax_highlighting",
-        "feature/social/share",
-        "feature/social/inline",
-        "feature/block_positioning", //TODO: better name
-        "feature/columns",
-        "feature/site_note",
-        "feature/code_sample",
-
-        "feature/post/default",
-        "feature/post/first",
-        "feature/post/second",
-
-        "feature/post_list/default",
-        "feature/post_list/3column",
-        "feature/post_list/3_2right",
-        "feature/post_list/1column",
-        "feature/post_list/single_post",
-
-        "feature/figure/default",
-        "feature/figure/author",
-
-        "feature/media/picture",
-        "feature/media/image",
-
-        "post/disqus",
-
-        "posts/post",
-        "posts/feature",
-
-        "page/home/featured_post",
-        "page/home/page",
-        "page/post/special",
-        "page/cv/page"
+  "variables",
+  "mixins",
+  "extends",
+  "base",
+  "nav",
+  "footer",
+  "post",
+  "posts",
+  "svgs",
+  "post/content",
+  "post/disqus",
+  "post/header",
+  "post/meta",
+  "post/share",
+  "posts/single",
+  "posts/feature",
+  "posts/column",
+  "syntax_highlighting"
 ;

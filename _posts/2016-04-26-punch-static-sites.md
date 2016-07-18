@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "Punch Static Sites: My experience getting setup"
+title: "Punch Static Sites: My experience getting setup"
 date: 2016-04-26
-author: Jeff Wainwright
 meta: "Punch Static Sites: My experience getting setup"
 permalink: /punch-setup/
 categories: javascript code
@@ -15,14 +14,7 @@ redirect_from:
 Getting started with [Punch](//laktek.github.io/punch/) is very easy. After adding the [npm plugin](//www.npmjs.com/package/punch), setting up the initial static site takes a few minutes. The CLI commands are super straight forward & the site re-builds super fast.
 {: .first-paragraph }
 
-<figure class="figure figure--full">
-	<a href="//laktek.github.io/punch/" title="This picture is copied from the Punch website - go there to read more about punch">
-		{% include media/picture.html pictureClass="picture__secondary" imageSM="/assets/punch-static-sites/punch.png" imageTitle="This picture is copied from the Punch website - go there to read more about punch" %}
-	</a>
-	<figcaption class="figure__caption">
-		<p><a href="//laktek.github.io/punch/">This picture is copied from the Punch website - go there to read more about punch</a></p>
-	</figcaption>
-</figure>
+![<img alt="This picture is copied from the Punch website - go there to read more about punch" src="/assets/punch-static-sites/punch.png" />](http://laktek.github.io/punch/)
 
 ## Setup
 
@@ -39,7 +31,6 @@ In terminal run:
 5. Press `ctrl + c` to stop your local server
 
 * If you have already have a directory setup, just run `punch setup` in _that_ directory
-
 
 ## An aside: Why Punch?
 

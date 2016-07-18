@@ -2,7 +2,6 @@
 layout: post
 title:  Understanding Javascript Objects - static objects to classes
 date: 2014-12-20
-author: Jeff Wainwright
 meta: Understanding JavaScript Objects, from static objects to classes
 categories:
 - code

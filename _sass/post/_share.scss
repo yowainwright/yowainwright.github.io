@@ -1,0 +1,45 @@
+.social-item-inline {
+    display: inline-block;
+    height: 100%;
+    max-height: $spacing-unit * 1.5;
+    max-width: $spacing-unit * 1.5;
+    overflow: hidden;
+    width: 100%;
+}
+.social-svg {
+  fill: $text-color;
+}
+.post {
+  &__share {
+    margin: 0;
+    overflow: hidden;
+    padding: $spacing-unit 0 $spacing-unit-large;
+    text-align: center;
+    &:before {
+      content: 'Share this post';
+      display: block;
+      font-family: $font-family-serif;
+      font-size: $font-size-default;
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: $spacing-unit;
+    }
+  }
+  &__link--share {
+    display: block;
+    height: $svg-unit;
+    overflow: hidden;
+    position: relative;
+    width: $svg-unit;
+    .post__share & {
+      display: inline-block;
+    }
+  }
+  &__text {
+    position: absolute;
+    right: -#{$spacing-unit * 100 / 16};
+  }
+  svg {
+    fill: $text-color;
+  }
+}

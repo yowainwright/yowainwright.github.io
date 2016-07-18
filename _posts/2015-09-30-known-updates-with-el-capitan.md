@@ -2,7 +2,6 @@
 layout: post
 title:  "Known changes needed after updating to El Capitan OS"
 date: 2015-09-30
-author: Jeff Wainwright
 meta: Known changes needed after updating to El Capitan OS
 permalink: /known-updates-with-el-capitan-os/
 categories:

@@ -1,0 +1,96 @@
+.site-nav {
+  border-bottom: 1px solid $color-grey-lighter;
+	overflow: hidden;
+	position: relative;
+	height: $site-nav-height;
+	&__link {
+		color: black;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+		&--logo {
+			border: 3px dotted black;
+			display: block;
+			float: left;
+			height: $brand-unit-circle;
+			opacity: 1;
+			overflow: hidden;
+			margin: $spacing-unit;
+			padding: $spacing-unit / 2;
+			width: $brand-unit-circle;
+			top: $spacing-unit;
+			@include prefix(border-radius, 100%, webkit ms moz);
+		}
+	}
+	&__site-title {
+		position: absolute;
+		left: -#{$spacing-unit * 500 / 16};
+	}
+	&__title {
+		font-size: $font-size-default;
+		font-style: italic;
+		font-weight: normal;
+		left: #{$spacing-unit * (102 / 16)};
+		margin: 0;
+		padding-right: $spacing-unit;
+		@include vertical-align(absolute);
+		@include media-query($width-small) {
+			max-width: calc(40% - #{$spacing-unit * (102 / 16)});
+		}
+	}
+	&__posts {
+		display: none;
+		margin-top: $spacing-unit;
+		max-width: 60%;
+		position: absolute;
+		right: 0;
+		vertical-align: middle;
+		@include micro-clearfix;
+		@include media-query($width-small) {
+			display: table;
+		}
+		&:before {
+			background-color: black;
+			bottom: -$spacing-unit-small;
+			left: 0;
+			color: white;
+			content: 'recent';
+			display: block;
+			font-size: $font-size-small;
+			font-weight: bold;
+			position: absolute;
+			text-align: center;
+			text-transform: uppercase;
+			width: $spacing-unit * 65 / 16;
+			@include prefix(transform, rotate(-90deg), webkit ms moz);
+			@include prefix(transform-origin, left bottom 0, webkit ms moz);
+		}
+	}
+	&__post {
+		display: none;
+		max-width: $spacing-unit * 200 / 16;
+		padding: 0 $spacing-unit-small;
+		@include media-query($width-small) {
+			display: table-cell;
+		}
+		&:last-of-type {
+			display: none;
+			@include media-query($width-medium) {
+				display: table-cell;
+			}
+		}
+	}
+	&__image {
+		float: left;
+		margin-right: $spacing-unit-small;
+		height: $site-nav-post-images;
+	}
+	&__title--post {
+		font-family: $font-family-default;
+		font-size: $font-size-small;
+		font-weight: normal;
+		margin: 0;
+		padding-left: $spacing-unit-small;
+	}
+}

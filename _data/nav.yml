@@ -1,8 +1,6 @@
 page:
   - name: About
     path: /about/
-  - name: Archive
-    path: /archive/
 social:
   - name: Email
     path: mailto:jjwainwright2@gmail.com

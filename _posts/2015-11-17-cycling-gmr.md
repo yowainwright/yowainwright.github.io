@@ -2,7 +2,6 @@
 layout: post
 title:  "GMR a road cycling paradise"
 date: 2015-11-17
-author: Jeff Wainwright
 meta: Glendora Mountain Road is a road cycling paradise
 categories:
 - featured
@@ -23,12 +22,7 @@ Route: The route, found [all over strave](https://www.strava.com/segments/search
 
 Parking: For the ride I parked my car at [Bike Central](http://www.thebicyclecentral.com/) which is a short & easy ride to the GMR. Beware if you follow Google directions for bicycles you WILL end up on a hiking trail not suited for road bikes unless you & your bike are way more bad ass than me.
 
-<figure class="figure">
-{% include media/picture.html pictureClass="picture__secondary" imageMD="https://c2.staticflickr.com/6/5804/23722600469_f8a9a34ba0_b.jpg" imageSM="//c2.staticflickr.com/6/5804/23722600469_f8a9a34ba0.jpg" imageTitle="GMR, image 1" %}
-	<figcaption class="figure__caption">
-		<p>A few miles into the <strong>GMR</strong> boast beautiful canyon view with LA in the distance.</p>
-	</figcaption>
-</figure>
+![A few miles into the GMR boast beautiful canyon view with LA in the distance.](https://c2.staticflickr.com/6/5804/23722600469_f8a9a34ba0_b.jpg)
 
 Water & Food: That’s a pretty cool part about this ride because, well, you don’t have to worry much. There’s water & food in Azusa & there’s water & food in Mount Baldy Village so if you plan on 20 miles in between both points - you should be good.
 

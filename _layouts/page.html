@@ -2,15 +2,6 @@
 layout: default
 ---
 
-<div class="page {% if page.page_type %}{{ page.page_type }}{% else %}{% endif %}" data-post-url="{{ page.permalink }}" data-post-share-image="{% if page.featured_image %}{{ page.featured_image }}{% else %}{{ site.url }}/assets/w.jpg{% endif %}">
-	{% if page.hide_header != true %}
-		<header class="header">
-			{% if page.featured %}{{ page.featured }}{% else %}{% endif %}
-		<h1 class="title">{{ page.title }}</h1>
-		</header>
-	{% endif %}
-
-	<article class="content">
+<main class="page page--{{page.page}}">
 	{{ content }}
-	</article>
-</div>
+</main>

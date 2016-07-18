@@ -1,2 +1,0 @@
-As a frontend engineer & user interface specialist, I’m passionate about turning ideas into high performing interfaces for the websites & apps. With a design background, I approach products from conception to quality usable code with an engineering team.
-{: .first-paragraph }

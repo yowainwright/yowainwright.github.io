@@ -1,116 +1,92 @@
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
-}
-html,
-body {
+dl, dd, ol, ul, figure, html, body {
     margin: 0;
     padding: 0;
 }
 body {
-    font-family: $font-family-default;
+    font-family: $font-family-serif;
     font-size: $font-size-default;
     line-height: $line-height-default;
     font-weight: 300;
     color: $text-color;
     -webkit-text-size-adjust: 100%;
 }
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
-}
-h1 {
-  
-}
 p {
-    margin-left: auto;
-    margin-right: auto;
+  @extend %centerblock;
+  @extend %contentReaderMaxWidth;
 }
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100% !important;
+  display: block;
+  max-width: 100% !important;
+  @extend %centerblock;
 }
-figcaption {
-    font-size: $font-size-small;
+hr,
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+iframe,
+code,
+pre,
+blockquote,
+article {
+  @extend %centerblock;
+  @extend %contentDefaultMaxWidth;
 }
-a {
-    color: $color-blue-default;
-    text-decoration: underline;
-    h1 &,
-    h2 &,
-    h3 & {
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  font-family: $font-family-serif;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
+  }
 }
-
-// TODO: this is too much for no class
 blockquote {
-    background: $color-grey-lightest;
-    border-left: 4px solid $color-grey-light;
-    color: $color-grey-dark;
-    clear: both;
-    font-style: italic;
-    letter-spacing: -1px;
-    padding: ($spacing-unit / 2) $spacing-unit;
-    > :last-child {
-        margin-bottom: 0;
-    }
-    p {
-        font-size: $font-size-default * 1.8 !important;
-        margin-bottom: 0 !important;
-        margin-top: 0 !important;
-    }
+  border-left: 4px solid $color-grey-light;
+  clear: both;
+  font-size: $font-size-largest;
+  font-style: italic;
+  padding: $spacing-unit-small $spacing-unit;
+}
+pre {
+  padding: $spacing-unit-small $spacing-unit;
+  overflow-x: scroll;
+}
+small {
+  font-family: $font-family-serif;
+  font-style: italic;
+}
+iframe {
+  display: block;
+  height: auto;
+  width: 100%;
 }
 pre,
 code {
-    border: 1px solid $color-grey-light;
-    border-radius: 3px;
-    background-color: $color-grey-light;
+  border: 1px solid $color-grey-light;
+  border-radius: $spacing-unit * 3 / 16;
+  background-color: $color-grey-light;
 }
 code {
-    padding: ($spacing-unit / 8) ($spacing-unit / 2);
-}
-pre {
-    padding: ($spacing-unit / .8) ($spacing-unit);
-    overflow-x: scroll;
-    > code {
-        border: 0;
-        max-width: $width-default;
-        margin-left: auto;
-        margin-right: auto;
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
-def {
-    border: 1px dashed $color-grey-dark;
-    display: block;
-    margin: $spacing-unit auto;
-    max-width: $width-default;
-    p {
-        margin: 0;
-        padding: $spacing-unit;
-    }
-}
-small {
-    font-family: $font-family-serif;
-    font-style: italic;
-}
-ol,
-ul {
-  margin: $spacing-unit auto;
-  max-width: calc(#{$width-650} - #{$spacing-unit * 2});
-}
-iframe {
-    display: block;
-    height: auto;
-    margin: 0 auto;
-    max-width: $width-650;
-    width: 100%;
+  padding: $spacing-unit-small;
+  pre & {
+    border: 0;
+    border-radius: 0;
+  }
 }

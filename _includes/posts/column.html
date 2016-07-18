@@ -1,0 +1,28 @@
+<section class="posts posts--column">
+	<div class="posts__container">
+		{% if include.postnumber %}
+		{% for post in site.posts limit: include.postnumber %}
+		<article class="post post--column">
+			<h2 class="post__title">
+				<a class="post__link post__link--title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+			</h2>
+			<span class="post__meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+			<p class="post__excerpt">
+				{{ post.excerpt | strip_html }}
+			</p>
+		</article>
+		{% endfor %}
+		{% else %}{% for post in site.posts %}
+		<article class="post post--column">
+			<h2 class="post__title">
+				<a class="post__link post__link--title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+			</h2>
+			<span class="post__meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+			<p class="post__excerpt">
+				{{ post.excerpt | strip_html }}
+			</p>
+		</article>
+		{% endfor %}
+		{% endif %}
+	</div>
+</section>

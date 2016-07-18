@@ -2,7 +2,6 @@
 layout: post
 title:  Javascript Closure all wrapped up & why
 date: 2014-10-15
-author: Jeff Wainwright
 meta: Understanding Javascript Closure & what it does
 categories:
 - code

@@ -1,72 +1,68 @@
 // fonts
-	// defaults
-	$font-family-default: systrem, -apple-systrem, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-	$font-family-light: 'Lato', $font-family-default;
-	$font-family-serif: 'Playfair Display', Times, sans-serif;
+$font-family-default: systrem, -apple-systrem, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+$font-family-serif: 'Playfair Display', Times, sans-serif;
 
-	// line heights
-	$line-height-default: 1.5;
+// line height
+$line-height-default: 1.5;
 
-	// weights
-	$font-weight-normal: 500;
-	$font-weight-semi-bold: 600;
-	$font-weight-bold: 800;
+// weights
+$font-weight-normal: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 800;
 
-	// size
-	$font-size-default: 1rem !default;
-	$font-size-small: $font-size-default * 0.875;
-	$font-size-large: $font-size-default * 2;
-	$font-size-largest: $font-size-default * 2.5;
-	$font-size-featured: 3rem !default;
-	$font-size-featured-large: 6rem !default;
+// font sizes
+$font-size-default: 1rem !default;
+$font-size-small: $font-size-default * .8;
+$font-size-large: $font-size-default * 2;
+$font-size-larger: $font-size-default * 2.5;
+$font-size-largest: $font-size-default * 3;
 
-// color vars
+// colors
+// greys
+$color-grey-dark: #292929;
+$color-grey: #828282;
+$color-grey-light: #aaa;
+$color-grey-lighter: #ccc;
+$color-grey-lightest: #fdfdfd;
 
-	// greys
-	$color-grey-dark: #292929;
-	$color-grey-lightest: #fdfdfd;
-	$color-grey: #828282;
-	$color-grey-light: lighten($color-grey, 40%);
-	$color-grey-middle: #ccc;
-	$color-grey-lighter: lighten(#ccc, 15%);
+$color-blue-default: #2a7ae2;
+$color-biege: #fcf2d4;
+$color-orange-rust: #c25b1d;
+$color-red-light: #c94244;
+$color-blue-light: #deedfc;
+$color-pink-light: #f5d0e4;
+$color-yellow: #ffff80;
+$color-yellow-light: #ffffcc;
+$color-green-light: #ccffcc;
 
-	// site related (special)
-	$color-blue-default: #2a7ae2;
-	$color-biege: #fcf2d4;
-	$color-orange-rust: #c25b1d;
-	$color-red-light: #c94244;
-	$color-blue-light: #deedfc;
-	$color-pink-light: #f5d0e4;
-	$color-yellow: #ffff80;
-	$color-yellow-light: #ffffcc;
-	$color-green-light: #ccffcc;
-
-	// ui
-	$text-color: black;
-	$background-color-default: $color-grey-lightest;
-	$background-color-light: $color-pink-light;
-	$border-color-default: $color-grey-light;
-	$border-color-dark: $color-grey-dark;
+$text-color: black;
+$background-color-default: $color-grey-lightest;
+$border-color-default: $color-grey-lighter;
+$border-color-dark: $color-grey-dark;
 
 // spacing
-// TODO: change these naming conventions
 $spacing-unit: 1rem !default;
-$spacing-unit-large: 4rem !default;
+$spacing-unit-small: $spacing-unit / 2;
+$spacing-unit-smallest: $spacing-unit / 4;
+$spacing-unit-large: $spacing-unit * 2;
+$spacing-unit-largest: $spacing-unit * 4;
 
 // Media Queries (px, maybe this sux but px is way faster for me with media queries)
-$width-default: 800px !default;
-$width-500: 500px !default;
-$width-650: 650px !default;
-$width-900: 900px !default;
-$width-1000: 1000px !default;
-$width-1300: 1300px !default;
+$width-default: $spacing-unit * 800 / 16 !default;
+$width-reader: $spacing-unit * 700 / 16 !default;
+// breakpoints
+$width-wide: $screen-lg;
+$width-medium: $screen-md;
+$width-small: $screen-sm;
 $calc-max-width: calc(#{$width-default} - #{$spacing-unit} * 2);
 
-// Branding
-$brand-unit: 20px;
-$brand-unit-large: $brand-unit + 10;
-$brand-unit-circle: calc(20px + 1.2rem);
-$brand-unit-circle-large: calc(30px + 1.2rem);
-$site-header-height: calc(58px + 3rem);
-$site-header-height-large: calc(68px + 3rem);
-$svg-unit: 42px;
+// branding
+$brand-unit: $spacing-unit * 20 / 16;
+$brand-unit-large: $spacing-unit * 30 / 16;
+$brand-unit-circle: $spacing-unit * 62 / 16;
+// nav
+$site-nav-height: $spacing-unit * 94 / 16;
+$site-nav-post-images: $spacing-unit * 52 / 16;
+
+// social svg
+$svg-unit: $spacing-unit * 42 / 16;

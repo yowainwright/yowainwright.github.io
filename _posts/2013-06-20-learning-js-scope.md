@@ -2,7 +2,6 @@
 layout: post
 title:  Discussing Javascript Scope, let's keep it between us
 date: 2013-06-20
-author: Jeff Wainwright
 meta: Discussing Javascript Scope & terms that are discussed when talking about it
 categories:
 - javascript

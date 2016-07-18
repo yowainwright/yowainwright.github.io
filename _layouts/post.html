@@ -2,27 +2,27 @@
 layout: default
 ---
 
-<div class="post{% if page.post_type %} {{ page.post_type }}{% else %}{% endif %}{% if page.special_class %} {{ page.special_class }}{% endif %}" data-post-url="{{ page.permalink }}" data-post-share-image="{% if page.featured_image %}{{ page.featured_image }}{% else %}{{ site.url }}/assets/w.jpg{% endif %}">
-
-  <header class="post__header">
-    {% if page.show_featured == true %}
-      <div class="picture post__featured-picture">
-        <picture>
-          <img class="post__featured-image" src="{{page.featured_image }}" alt="{{ page.title }}" />
-        </picture>
-      </div>
+<main class="post post--page">
+  <article class="{% if type.page %}page__content{% else %}post__content{% endif %}">
+    <header class="post__header">
+      <h1 class="post__title">{{ page.title }}</h1>
+    </header>
+    {% if page.featured_image %}
+    <figure class="post__figure">
+      <img src="{{page.featured_image}}" alt="{{ page.title }}" />
+      {% if page.featured_caption %}
+      <figcaption class="post__caption">{{ page.featured_caption }}</figcaption>
+      {% endif %}
+    </figure>
     {% endif %}
-    <h1 class="post__title">{{ page.title }}</h1>
-    <p class="post__meta">
-      <date class="post__date" datetime="{{ page.date }}">{{ page.date | date: "%b %-d, %Y" }}</date>
-      by&nbsp;<a class="post__author" href="/about/">{{ page.author }}</a>
-    </p>
-  </header>
-  <article class="content post__content">
+    {% if type != page %}
+      <!-- meta -->
+    {% endif %}
     {{ content }}
-    <div class="post__share">
-      {% include social/share.html email="true" twitter="true" tumblr="true" facebook="true" link="true" shareTitle=page.title shareURL=page.url %}
-    </div>
+    {% if type != page %}
+    {% include post/share.html %}
+    {% endif %}
   </article>
-</div>
-{% include social/disqus.html %}
+  {% include post/disqus.html %}
+
+</main>

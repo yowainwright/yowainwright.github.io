@@ -1,3 +1,23 @@
+%vertical-rhythm {
+  margin-bottom: $spacing-unit-small;
+}
 %pageTitle {
 	@include pageTitle;
+}
+%centerblock {
+	margin-left: auto;
+	margin-right: auto;
+}
+%contentWidthMargins {
+	max-width: calc(100vw - #{$spacing-unit-large});
+}
+%contentDefaultMaxWidth {
+	@include media-query($width-small) {
+		max-width: $width-default;
+	}
+}
+%contentReaderMaxWidth {
+	@include media-query($width-small) {
+		max-width: $width-reader;
+	}
 }

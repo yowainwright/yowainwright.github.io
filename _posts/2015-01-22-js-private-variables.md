@@ -2,7 +2,6 @@
 layout: post
 title:  Creating private information in JavaScript
 date: 2015-01-22
-author: Jeff Wainwright
 meta: Creating a private information in JavaScript to be used in future functions
 categories:
 - code

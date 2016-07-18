@@ -2,7 +2,6 @@
 layout: post
 title:  Less used & known CSS selectors, aka attribute selectors
 date: 2014-10-29
-author: Jeff Wainwright
 meta: Less known CSS selectors, aka attribute selectors
 categories:
 - code

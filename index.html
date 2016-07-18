@@ -1,14 +1,12 @@
 ---
 layout: page
 title: A collection of posts designed & written by me, Jeff Wainwright
+page: home
 permalink: /
-page_type: page--home
-hide_header: true
 ---
 
-{% include site_note.html siteNote="_top" siteNoteClass="site-note--top"  %}
-{% include featured/post_first.html %}
-{% include post_list/single_post.html postnumber="1" postListTitle="The post title will go here" %}
-{% include post_list/1column.html postnumber="6"  %}
-{% include post_list/3column.html postnumber="3" %}
-{% include site_note.html siteNote="_bottom" siteNoteClass="site-note--bottom"  %}
+{% include posts/column.html postnumber="3"  %}
+{% include posts/single.html postnumber="1" %}
+{% include posts/column.html postnumber="3"  %}
+{% include posts/single.html postnumber="1" %}
+{% include posts/column.html %}

@@ -2,7 +2,6 @@
 layout: post
 title:  Creating Aliases on a Mac
 date: 2016-05-19
-author: Jeff Wainwright
 meta: Creating Aliases on a Mac is an easy thing to do & can save a lot of time
 categories:
 - code

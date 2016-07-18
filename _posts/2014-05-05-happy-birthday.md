@@ -2,12 +2,8 @@
 layout: post
 title:  Happy Birthday, a project to say happy birthday
 date: 2014-05-05
-author: Jeff Wainwright
 permalink: /happy-birthday/
 categories: story projects general
-post_type: post--featured
-featured_headline: <h1 class="featured-text featured-text--headline">Happy Birthday</h1>
-featured_summary: <h2 class=""></h2>
 featured_image: https://c1.staticflickr.com/1/570/22740380891_ef1ba45e24_o.jpg
 ---
 
