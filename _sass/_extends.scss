@@ -9,7 +9,7 @@
 	margin-right: auto;
 }
 %contentWidthMargins {
-	max-width: calc(100vw - #{$spacing-unit-large});
+	max-width: calc(100% - #{$spacing-unit-large});
 }
 %contentDefaultMaxWidth {
 	@include media-query($width-small) {
@@ -20,4 +20,33 @@
 	@include media-query($width-small) {
 		max-width: $width-reader;
 	}
+}
+%firstParagraph {
+	font-family: $font-family-serif;
+	font-size: $font-size-medium * 1.2;
+  margin-top: 0;
+  &:first-letter {
+    font-size: $font-size-largest * 1.5;
+    font-weight: bolder;
+    position: relative;
+    line-height: .75;
+    margin-right: $spacing-unit * .2;
+  }
+}
+%meta {
+	font-size: $font-size-small;
+  font-weight: bold;
+}
+%blockquote {
+	border-left: 4px solid $color-grey-light;
+  clear: both;
+  font-size: $font-size-medium;
+  font-style: italic;
+  padding: $spacing-unit-small $spacing-unit;
+  @extend %contentWidthMargins;
+  @extend %contentWidthMargins;
+  @extend %contentReaderMaxWidth;
+  p {
+  	margin: 0;
+  }
 }

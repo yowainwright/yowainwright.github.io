@@ -1,14 +1,3 @@
-.social-item-inline {
-    display: inline-block;
-    height: 100%;
-    max-height: $spacing-unit * 1.5;
-    max-width: $spacing-unit * 1.5;
-    overflow: hidden;
-    width: 100%;
-}
-.social-svg {
-  fill: $text-color;
-}
 .post {
   &__share {
     margin: 0;

@@ -7,6 +7,7 @@ categories:
 - javascript
 - code
 type: code
+note: feature-image-aside
 permalink: /js-scope/
 featured_image: /assets/js.svg
 redirect_from:

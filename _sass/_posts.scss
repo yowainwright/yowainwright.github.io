@@ -1,0 +1,18 @@
+.posts {
+	@include micro-clearfix;	
+	.post {
+		&__title {
+			max-width: $width-reader;
+			@extend %contentReaderMaxWidth;
+			a {
+				color: black;
+			}
+		}
+		&__date {
+			font-family: $font-family-serif;
+			@extend %centerblock;
+			@extend %contentWidthMargins;
+			@extend %contentReaderMaxWidth;
+		}
+	}
+}

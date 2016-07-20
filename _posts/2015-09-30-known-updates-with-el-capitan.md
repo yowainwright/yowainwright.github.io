@@ -4,6 +4,7 @@ title:  "Known changes needed after updating to El Capitan OS"
 date: 2015-09-30
 meta: Known changes needed after updating to El Capitan OS
 permalink: /known-updates-with-el-capitan-os/
+note: feature-image-aside
 categories:
 - programming
 - mac

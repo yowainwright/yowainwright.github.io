@@ -3,6 +3,7 @@ layout: post
 title:  Less used & known CSS selectors, aka attribute selectors
 date: 2014-10-29
 meta: Less known CSS selectors, aka attribute selectors
+note: feature-image-aside
 categories:
 - code
 - sass

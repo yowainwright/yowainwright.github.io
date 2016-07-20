@@ -3,6 +3,7 @@ layout: post
 title:  Javascript's keyword this; THIS is what I'm talking about!
 date: 2015-01-10
 meta: This post goes into Javascript's keyword this, how it is defined & why it is misunderstood
+note: feature-image-aside
 categories: javascript code
 type: code
 permalink: /js-keyword-this/

@@ -1,13 +1,17 @@
-.disqus {
-	border-top: 1px solid $color-grey-lightest;
-	padding: ($spacing-unit * 2) $spacing-unit;
-	&__wrapper {
-		max-width: $width-default;
+.post {
+	&__disqus {
+		padding: ($spacing-unit * 2) $spacing-unit;
+		@include media-query($width-small) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	&__disqus-wrapper {
+		max-width: calc(100% - #{$spacing-unit-large});
     margin-left: auto;
     margin-right: auto;
-	}
-	@include media-query($width-default) {
-		padding-left: 0;
-		padding-right: 0;
+    @include media-query($width-small) {
+    	max-width: $width-reader;
+    }
 	}
 }

@@ -3,6 +3,7 @@ layout: post
 title:  Javascript for loop & the argument key word
 date: 2014-12-02
 meta: Javascript for loop & the argument key worddefined & why it is misunderstood
+note: feature-image-aside
 categories: javascript code
 type: code
 permalink: /js-argument-key-word/

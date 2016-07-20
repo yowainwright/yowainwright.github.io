@@ -1,11 +1,4 @@
 .posts .post {
-	@include micro-clearfix;
-	&__title {
-		max-width: $width-default;
-		a {
-			color: black;
-		}
-	}
 	&__image {
 		border-top: 2px solid black;
 		margin-left: auto;

@@ -3,6 +3,7 @@ layout: post
 title:  Javascript Closure all wrapped up & why
 date: 2014-10-15
 meta: Understanding Javascript Closure & what it does
+note: feature-image-aside
 categories:
 - code
 - javascript

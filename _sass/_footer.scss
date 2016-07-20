@@ -1,20 +1,41 @@
 .site-footer {
-	background-color: black;
   clear: both;
   overflow: hidden;
   text-align: center;
-  &__title,
-  &__link {
-  	color: white;
-    font-family: $font-family-default;
-    font-size: $font-size-default;
+  &__content,
+  .site-footer__link {
+    color: black;
+    text-decoration: none;
+  }
+  &__content {
+    display: table;
+    margin: 0 auto;
+    padding: $spacing-unit;
+  }
+  &__text,
+  &__social {
+    display: table-cell;
+    height: $spacing-unit-largest;
+    line-height: $spacing-unit-largest;
+    vertical-align: middle;
+  }
+  &__social {
+    padding-left: $spacing-unit;
+  }
+  &__date {
+    border-right: 1px dotted $color-grey;
+    padding: $spacing-unit-small $spacing-unit;
+  }
+  .site-footer__link {
     text-transform: uppercase;
   }
-  .social-item-inline {
+  svg {
+    height: $spacing-unit-large;
     position: relative;
-    top: $spacing-unit / 2;
+    top: $spacing-unit-small;
+    width: $spacing-unit-large;
   }
-  .social-svg {
-    fill: white;
+  use {
+    fill: black;
   }
 }

@@ -1,0 +1,22 @@
+.post {
+	&__figure {
+		.post--feature-image-aside & {
+			float: left;
+			margin: 0 $spacing-unit-medium $spacing-unit 0;
+			width: 33.3%;
+			@include media-query($width-small) {
+				margin-left: -10%;
+				width: 40%;
+			}
+			@include media-query($width-medium) {
+				margin-left: -25%;
+				width: 50%;
+			}
+		}
+	}
+	&__image {
+		.post--feature-image-aside & {
+			float: right;
+		}
+	}
+}

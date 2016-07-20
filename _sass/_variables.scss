@@ -1,6 +1,7 @@
 // fonts
 $font-family-default: systrem, -apple-systrem, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
 $font-family-serif: 'Playfair Display', Times, sans-serif;
+$font-family-serif-other: $font-family-serif;
 
 // line height
 $line-height-default: 1.5;
@@ -12,6 +13,7 @@ $font-weight-bold: 800;
 
 // font sizes
 $font-size-default: 1rem !default;
+$font-size-medium: $font-size-default * 1.25;
 $font-size-small: $font-size-default * .8;
 $font-size-large: $font-size-default * 2;
 $font-size-larger: $font-size-default * 2.5;
@@ -23,7 +25,7 @@ $color-grey-dark: #292929;
 $color-grey: #828282;
 $color-grey-light: #aaa;
 $color-grey-lighter: #ccc;
-$color-grey-lightest: #fdfdfd;
+$color-grey-lightest: #f2f2f2;
 
 $color-blue-default: #2a7ae2;
 $color-biege: #fcf2d4;
@@ -44,6 +46,7 @@ $border-color-dark: $color-grey-dark;
 $spacing-unit: 1rem !default;
 $spacing-unit-small: $spacing-unit / 2;
 $spacing-unit-smallest: $spacing-unit / 4;
+$spacing-unit-medium: $spacing-unit * 1.5;
 $spacing-unit-large: $spacing-unit * 2;
 $spacing-unit-largest: $spacing-unit * 4;
 

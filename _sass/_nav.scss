@@ -28,10 +28,12 @@
 		left: -#{$spacing-unit * 500 / 16};
 	}
 	&__title {
+		font-family: $font-family-serif-other;
 		font-size: $font-size-default;
 		font-style: italic;
 		font-weight: normal;
 		left: #{$spacing-unit * (102 / 16)};
+		line-height: 1.25;
 		margin: 0;
 		padding-right: $spacing-unit;
 		@include vertical-align(absolute);
@@ -58,7 +60,8 @@
 			content: 'recent';
 			display: block;
 			font-size: $font-size-small;
-			font-weight: bold;
+			letter-spacing: .25px;
+			line-height: 1.5;
 			position: absolute;
 			text-align: center;
 			text-transform: uppercase;
@@ -68,6 +71,7 @@
 		}
 	}
 	&__post {
+		border-right: 1px dotted black;
 		display: none;
 		max-width: $spacing-unit * 200 / 16;
 		padding: 0 $spacing-unit-small;
@@ -75,6 +79,7 @@
 			display: table-cell;
 		}
 		&:last-of-type {
+			border-right: 0;
 			display: none;
 			@include media-query($width-medium) {
 				display: table-cell;
@@ -88,8 +93,10 @@
 	}
 	&__title--post {
 		font-family: $font-family-default;
-		font-size: $font-size-small;
+		font-size: $font-size-default * .65;
 		font-weight: normal;
+		letter-spacing: .25px;
+		line-height: 1.75;
 		margin: 0;
 		padding-left: $spacing-unit-small;
 	}

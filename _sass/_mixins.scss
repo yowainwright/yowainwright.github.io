@@ -31,16 +31,11 @@
 }
 
 @mixin pageTitle {
-	font-size: $font-size-default * 2.25;
-  font-weight: $font-weight-bold;
-  line-height: 1;
-  margin: ($spacing-unit / 6) auto;
-  padding: $spacing-unit;
-  text-align: center;
-  text-shadow: 0 1px 1px $color-red-light;
-  text-transform: uppercase;
+  font-family: $font-family-serif-other;
+	font-size: $font-size-large;
+  line-height: 1.25;
+  margin: 0;
   @include media-query($width-default) {
-    font-size: $font-size-default * 3;
-    padding: $spacing-unit 0;
+    font-size: $font-size-largest;
   }
 }

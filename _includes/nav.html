@@ -4,9 +4,8 @@
       <svg name="site-logo" viewBox="0 0 1000 1000">
         <use class="site-logo" xlink:href="#logo-w" x="0" y="0" />
       </svg>
-      <h2 class="site-nav__site-title">{{ site.title }}</h2>
     </a>
-    <p class="site-nav__title">{{page.title}}</p>
+    <p class="site-nav__title">{% if  page.meta %}{{ page.meta }}{% else %}{{ site.description }}{% endif %}</p>
 	  <div class="site-nav__posts">
     	{% for post in site.posts limit: 3 %}
 			<article class="site-nav__post">

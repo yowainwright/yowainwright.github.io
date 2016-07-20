@@ -12,9 +12,6 @@
 @import "bourbon/bourbon.scss";
 @import "neat/neat.scss";
 
-// imports foundation
-@import 'foundation/foundation.scss';
-
 // Mixins provided by SCSS Utility Mixins
 @import "variables";
 @import "browser/appearance";
@@ -30,6 +27,7 @@
 @import "layout/clearfix";
 @import "layout/positioning";
 @import "layout/clearfix";
+@import "layout/query";
 @import "media/image/circle";
 @import "media/video/play_button_circle";
 @import "media/video/play_button_rounded";

@@ -6,6 +6,7 @@ meta: It's amazing the way things change. I, Jeff Wainwright, discuss myself & t
 categories:
 - art
 - thoughts
+note: feature-image-aside
 permalink: /things-change-william-kentridge/
 featured_image: /assets/things-change/man.jpg
 ---
@@ -22,17 +23,17 @@ The Kentridge Exhibit was at the [MCA](//mcachicago.org/Home) & it was during th
 We all (my hair, my girlfriend & me) entered the museum & got to the exhibit. The exhibit was a series of installation videos. Each video was a narrative done in charcoal frames.
 
 As I understand it, this was Kentridge's process for making his videos:
-
 - do the drawing with charcoal on paper,
 - manipulate the unset charcoal on that _same piece of paper_ for multiple stills of the video.
-
 The result of his drawing process was that rest of the gallery space, besides the videos, were the beautiful drawings that he used for each video still. It was impressive. I loved Kentride's confidence to make the drawing & then change it. It takes a rare artist to be unafraid of changing work to further communicate a narrative. This is why I found this exhibit so exciting.
 
 <iframe style="height: auto; min-height: 315px; width: 100%;" src="https://www.youtube.com/embed/OmvK7A84dlk" frameborder="0" allowfullscreen></iframe>
 
 As I was watching Kentridge's short films which dealt with time & social issues in South Africa during that time I felt my intense heart getting soft. Kentridge's sketches did more than demonstrate a deep understanding of space techinically in his drawing style but also had feeling. It seemed to me that Kentridge wanted to _have a point_ more than _a beautiful sketch_. My girlfriend looked at me, I had tears welling in my eyes. This is what I remember her liking about me - my ability to be there, in a moment. I could just love something. I grabbed her hand & we walked around the museum together smiling with tears in my eyes (a common scenario for me still). I felt myself being curious about the world which Kentridge had created. The empathetic narrative in his artwork extended to me wondering about my girlfriend’s reality & her feelings. I'd been selfish earlier that day, throwing tantrums & being grumpy. We'd drove down from Madison together & she was taking the same semester finals as me at the same college. I had made the drive & the trip all about me.
 
-![Drawing by William Kentridge: Anything Is Possible](/assets/things-change/william-kentridge.jpg)
+<figure>
+<img src="/assets/things-change/william-kentridge.jpg" alt="Drawing by William Kentridge: Anything Is Possible" />
+</figure>
 
 After getting dinner, we went back to Madison. It was business as usual, studying for finals & going to class. We didn't talk much about those moments at the MCA. In general at that time I had an amazing gift of being a light hearted center of a party type of guy until **I wasn't**. So we coasted until the semester was done. Those moments probably probably were in the front of both of our minds & but the furthest thing from words.
 
@@ -46,4 +47,6 @@ We, Emily (my girlfriend of that time) & I, talked a few times after that & not 
 
 Years later, I did a series of work - fully embracing that eye opening situation & the new door to life that was accessed after seeing William Kentridge’s work.
 
-![Drawing by William Kentridge: Anything Is Possible](/assets/things-change/man.jpg)
+<figure>
+<img src="/assets/things-change/man.jpg" alt="Drawing by William Kentridge: Anything Is Possible" />
+</figure>

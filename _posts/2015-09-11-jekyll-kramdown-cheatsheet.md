@@ -5,6 +5,7 @@ date: 2015-09-11 16:33:51
 meta: Kramdown Syntax Cheatsheet
 permalink: /kramdown-syntax-cheatsheet/
 categories: jekyll kramdown markdown code
+note: feature-image-aside
 type: code
 featured_image: /assets/md.svg
 ---

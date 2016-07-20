@@ -1,0 +1,20 @@
+.post {
+	&__content {
+		.post--feature-image-aside & {
+			@extend %centerblock;
+			@extend %contentReaderMaxWidth;
+		}
+	}
+	p {
+		@extend %centerblock;
+		@extend %contentWidthMargins;
+		@extend %contentReaderMaxWidth;
+		line-height: 1.75;
+	}
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;	
+		}
+	}
+}

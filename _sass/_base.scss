@@ -1,20 +1,27 @@
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure, html, body {
+html, body {
     margin: 0;
     padding: 0;
 }
 body {
     font-family: $font-family-serif;
-    font-size: $font-size-default;
-    line-height: $line-height-default;
-    font-weight: 300;
+    font-size: $font-size-medium;
+    line-height: 1.5;
     color: $text-color;
     -webkit-text-size-adjust: 100%;
 }
-p {
+p,
+ul,
+ol, {
   @extend %centerblock;
   @extend %contentReaderMaxWidth;
+}
+h1, 
+h2, 
+h3, 
+h4 {
+  .post__content & {
+    @extend %contentReaderMaxWidth;
+  }
 }
 img {
   display: block;
@@ -39,7 +46,7 @@ iframe,
 code,
 pre,
 blockquote,
-article {
+table {
   @extend %centerblock;
   @extend %contentDefaultMaxWidth;
 }
@@ -50,6 +57,7 @@ h4,
 h5, 
 h6 {
   font-family: $font-family-serif;
+  font-weight: normal;
   a {
     text-decoration: none;
     &:hover {
@@ -57,12 +65,19 @@ h6 {
     }
   }
 }
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  letter-spacing: -1.25px;
+}
+h1 {
+  @extend %pageTitle;
+}
 blockquote {
-  border-left: 4px solid $color-grey-light;
-  clear: both;
-  font-size: $font-size-largest;
-  font-style: italic;
-  padding: $spacing-unit-small $spacing-unit;
+  @extend %blockquote;
 }
 pre {
   padding: $spacing-unit-small $spacing-unit;
@@ -79,9 +94,9 @@ iframe {
 }
 pre,
 code {
-  border: 1px solid $color-grey-light;
+  border: .5px solid $color-grey-lighter;
   border-radius: $spacing-unit * 3 / 16;
-  background-color: $color-grey-light;
+  background-color: $color-grey-lightest;
 }
 code {
   padding: $spacing-unit-small;
@@ -89,4 +104,14 @@ code {
     border: 0;
     border-radius: 0;
   }
+}
+
+main {
+  padding: $spacing-unit 0;
+  @include media-query($width-small) {
+    padding: $spacing-unit-largest 0;
+  }
+}
+.first-paragraph {
+  @extend %firstParagraph;
 }

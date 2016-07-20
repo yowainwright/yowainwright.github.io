@@ -1,0 +1,13 @@
+.post { 
+	&__header {
+		margin-bottom: $spacing-unit-medium;
+		@include media-query($width-small) {
+			margin-bottom: $spacing-unit-largest;
+		}
+	}
+	&__title {
+		@extend %centerblock;
+		@extend %contentWidthMargins;
+		@extend %contentReaderMaxWidth;
+	}
+}

@@ -5,6 +5,7 @@ date: 2016-03-28
 meta: Node Meetup, debugging with Yunong Xiao
 categories: javascript code
 type: code
+note: feature-image-aside
 permalink: /node-meetup-debugging-with-yunong-xiao/
 featured_image: /assets/js.svg
 ---

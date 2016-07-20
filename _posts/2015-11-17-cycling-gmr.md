@@ -10,6 +10,7 @@ categories:
 - cycling
 permalink: /glendora-mountain-road/
 post_type: post--featured
+note: feature-image-aside
 featured_image: //c2.staticflickr.com/6/5804/23722600469_f8a9a34ba0.jpg
 redirect_from:
   - personal-site/glendora-mountain-road/
