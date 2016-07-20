@@ -11,6 +11,11 @@
 		@extend %contentReaderMaxWidth;
 		line-height: 1.75;
 	}
+	h2,
+	h3 {
+		border-bottom: 1px solid $color-grey-lightest;
+		padding-bottom: $spacing-unit;
+	}
 	a {
 		text-decoration: none;
 		&:hover {

@@ -24,7 +24,6 @@ Creating private information, meaning variables, properties/property values, fun
 ## _Public_ vs _Private_
 
 - Public variables or functions can be added to, modified, or deleted.
-
 - Private variables or functions can't be changed.
 
 ## A recent code challenge
@@ -32,15 +31,10 @@ Creating private information, meaning variables, properties/property values, fun
 This concept is still pretty new to me so my boss gave me the task of writting some functions that would iterate on a number so that:
 
 - there would be 3 functions that would be aware of each other & each function would add 1.
-
 - there would then be a global variable that would be declared that would call 1 of the functions
-
 - then there would be another parent function that would call the 2nd original function
-
 - within that parent function there would be another child function that would call the 3rd function & log the value for the 3 orginal functions
-
 - within that parent function, after the child function - the child function would be called twice.
-
 - after then closing of the parent function, the parent function would be called three times
 
 {% highlight javascript %}

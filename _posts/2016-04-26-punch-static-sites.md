@@ -19,15 +19,11 @@ Getting started with [Punch](//laktek.github.io/punch/) is very easy. After addi
 
 In terminal run:
 
-1. `npm install -g punch` Install punch global
-
-2. `punch setup [my awesome site name]` *site setup
-
-3. `cd mysite` 
-
-4. `punch s` starts your local server
-
-5. Press `ctrl + c` to stop your local server
+- `npm install -g punch` Install punch global
+- `punch setup [my awesome site name]` *site setup
+- `cd mysite` 
+- `punch s` starts your local server
+- Press `ctrl + c` to stop your local server
 
 * If you have already have a directory setup, just run `punch setup` in _that_ directory
 
@@ -35,14 +31,12 @@ In terminal run:
 
 Here are 2 big benefits for choosing punch specifically over other static site generators.
 
-1. *Quick setup*: you really can be up & running in a few minutes
-
-2. *Prototyping*: you can quickly do templating for platform cms sites where you can use dummy [json](//www.json.org/). This is great in a situation where multiple CMS's are on the table that use [mustache](//mustache.github.io/mustache.5).html)
+- *Quick setup*: you really can be up & running in a few minutes
+- *Prototyping*: you can quickly do templating for platform cms sites where you can use dummy [json](//www.json.org/). This is great in a situation where multiple CMS's are on the table that use [mustache](//mustache.github.io/mustache.5).html)
 
 ## More information
 
 - Here's a link to the [wiki](//github.com/laktek/punch/wiki), &
-
 - Another link to the [homepage](//laktek.github.io/punch/)
 
 

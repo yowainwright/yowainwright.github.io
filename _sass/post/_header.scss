@@ -10,4 +10,7 @@
 		@extend %contentWidthMargins;
 		@extend %contentReaderMaxWidth;
 	}
+	&__meta {
+		@extend %meta;
+	}
 }

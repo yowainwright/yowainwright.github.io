@@ -50,3 +50,6 @@
   	margin: 0;
   }
 }
+%clearfix {
+  @include micro-clearfix;
+}

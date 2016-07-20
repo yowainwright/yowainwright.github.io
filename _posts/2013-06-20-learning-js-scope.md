@@ -37,10 +37,10 @@ Scope, in Javascript, refers to where stored information can be accessed.
 
 **4 commonly talked about scopes are:**
 
-1. Lexical Scope
-2. Global Scope
-3. Local Scope
-4. Execution Context
+- Lexical Scope
+- Global Scope
+- Local Scope
+- Execution Context
 
 #### Lexical Scope
 

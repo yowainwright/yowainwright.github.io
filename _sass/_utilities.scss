@@ -1,0 +1,16 @@
+.first-paragraph {
+  @extend %firstParagraph;
+}
+.clear-fix-small {
+  @extend %clearfix;
+}
+.clear-fix-medium {
+  @include media-query($width-small) {
+    @extend %clearfix;
+  }
+}
+.clear-fix-large {
+  @include media-query($width-medium) {
+    @extend %clearfix;
+  }
+}
