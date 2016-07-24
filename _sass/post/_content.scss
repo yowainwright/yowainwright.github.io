@@ -22,6 +22,11 @@
 			@extend %centerblock;
 			@extend %contentReaderMaxWidth;
 		}
+		.highlight {
+			@extend %centerblock;
+			@extend %contentWidthMargins;
+			@extend %contentWidthMargins;
+		}
 	}
 	p {
 		line-height: 1.75;
