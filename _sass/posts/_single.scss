@@ -10,13 +10,14 @@
 		}
 		&__title {
 			background: rgba(0, 0, 0, 0.8);
-			font-size: $font-size-largest;
+			font-size: $font-size-larger;
 			max-width: 100%;
 			margin: 0;
 			padding: $spacing-unit;
 			width: 100%;
 			@include middle-align(absolute);
 			@include media-query($width-small) {
+				font-size: $font-size-largest;
 				max-width: $width-default;
 
 			}

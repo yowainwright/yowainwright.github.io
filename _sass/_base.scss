@@ -101,9 +101,9 @@ ol {
   clear: both;
 }
 main {
-  padding: $spacing-unit 0;
+  padding: 0 0 $spacing-unit;
   @include media-query($width-small) {
-    padding: $spacing-unit-largest 0;
+    padding: $spacing-unit-large 0 $spacing-unit-largest;
   }
 }
 .page--about {
@@ -123,4 +123,12 @@ main {
   .meta {
     margin: 0;
   }
+}
+.site-header__content {
+  background-color: $color-grey-lightest;
+  font-style: italic;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: $spacing-unit;
+  @extend %centerblock;
 }
