@@ -15,48 +15,48 @@ Using [markdown](http://daringfireball.net/projects/markdown/) is a quick way to
 
 ## Below is a useful cheatsheet, mainly for me.
 
-```
+{% highlight markdown %}
 **Bold**
-```
+{% endhighlight %}
 
 **Bold**
 
-```
+{% highlight markdown %}
 _Italics_
-```
+{% endhighlight %}
 
 _Italics_
 
-```
+{% highlight markdown %}
 `Monospaced`
-```
+{% endhighlight %}
 
 `Monospaced`
 
-```
+{% highlight markdown %}
 > Quoted text
-```
+{% endhighlight %}
 
 > Quoted text
 
-```
+{% highlight markdown %}
 [link](http://makandra.com/)
-```
+{% endhighlight %}
 
 [link](http://makandra.com/)
 
-```
+{% highlight markdown %}
 ![image alt text](//placekitten.com/g/900/600)
-```
+{% endhighlight %}
 
 ![image alt text](//placekitten.com/g/900/600)
 
 If you want to enforce a line break,\\
 you need to use two backslashes.
 
-```
+{% highlight markdown %}
 # Headline
-```
+{% endhighlight %}
 
 # Headline
 Lorem ipsum...
@@ -70,17 +70,17 @@ Code
 
 wrap a code block with '```'
 
-```
+{% highlight markdown %}
 def foo
   "hello!"
 end
-```
+{% endhighlight %}
 
 Unordered List
 
-```
+{% highlight markdown %}
 \* Unordered List Item
-```
+{% endhighlight %}
 
 * Unordered List Item 1
 * Unordered List Item 2

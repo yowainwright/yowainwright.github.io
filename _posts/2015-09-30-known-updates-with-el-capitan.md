@@ -21,13 +21,13 @@ Recently, I upgraded to El Capitan. Suddenly my local websites using vagrant wer
 
 Below are a short list of things that helped me get back up & running again. Hope it helps you too.
 
-# 1. Vagrant
+- Vagrant
 [Quickguide](https://davidturner.name/setting-up-vagrant-in-os-x-10-11-el-capitan/)
 
 ^ Follow the instructions in the link provided
 
 
-# 2. Ruby
+- Ruby
 [Various Ruby Updates - this link is for Jekyll](https://github.com/jekyll/jekyll/issues/3984)
 
 ^ Several ruby gems (like Jekyll) may not work not work

@@ -8,23 +8,34 @@
     text-decoration: none;
   }
   &__content {
-    display: table;
-    margin: 0 auto;
-    padding: $spacing-unit;
+    border-top: 1px solid $color-grey-lighter;
+    @extend %centerblock;
+    @extend %contentWidthMargins;
+    @include media-query($width-small) {
+      border-top: 0;
+      display: table;
+      padding: $spacing-unit;
+    }
   }
   &__text,
   &__social {
-    display: table-cell;
+    display: block;
     height: $spacing-unit-largest;
     line-height: $spacing-unit-largest;
+    margin: 0;
     vertical-align: middle;
+    @include media-query($width-small) {
+      display: table-cell;
+    }
   }
   &__social {
     padding-left: $spacing-unit;
   }
   &__date {
-    border-right: 1px dotted $color-grey;
-    padding: $spacing-unit-small $spacing-unit;
+    @include media-query($width-small) {
+      border-right: 1px dotted $color-grey;
+      padding: $spacing-unit-small $spacing-unit;
+    }
   }
   .site-footer__link {
     text-transform: uppercase;

@@ -1,9 +1,19 @@
 .post {
 	&__content {
 		h2,
+		h3,
+		ul,
+		ol {
+			@extend %centerblock;
+			@extend %contentWidthMargins;
+		}
+		h2,
 		h3 {
 			border-bottom: 1px solid $color-grey-lightest;
 			padding-bottom: $spacing-unit;
+		}
+		figure {
+			margin: 0;
 		}
 		img {
 			max-width: 100% !important;
@@ -14,10 +24,10 @@
 		}
 	}
 	p {
+		line-height: 1.75;
 		@extend %centerblock;
 		@extend %contentWidthMargins;
 		@extend %contentReaderMaxWidth;
-		line-height: 1.75;
 	}
 	a {
 		text-decoration: none;

@@ -1,23 +1,22 @@
 .post {
+  &__share,
+  &__link--share {
+    overflow: hidden;
+  }
   &__share {
     margin: 0;
-    overflow: hidden;
     padding: $spacing-unit 0 $spacing-unit-large;
     text-align: center;
     &:before {
       content: 'Share this post';
       display: block;
-      font-family: $font-family-serif;
-      font-size: $font-size-default;
       font-style: italic;
-      font-weight: bold;
       margin-bottom: $spacing-unit;
     }
   }
   &__link--share {
     display: block;
     height: $svg-unit;
-    overflow: hidden;
     position: relative;
     width: $svg-unit;
     .post__share & {

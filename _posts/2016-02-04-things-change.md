@@ -7,7 +7,7 @@ categories:
 - art
 - thoughts
 show_image: true
-note: feature-image-aside
+note: no-featured-image
 permalink: /things-change-william-kentridge/
 featured_image: /assets/things-change/man.jpg
 ---

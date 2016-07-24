@@ -20,6 +20,27 @@
 		overflow: hidden;
 	}
 }
+.image-left {
+  img {
+    @include media-query($width-small) {
+      float: left;
+      margin: $spacing-unit $spacing-unit-large $spacing-unit 0;
+    }
+  }
+}
+.image-right {
+  img {
+    @include media-query($width-small) {
+      float: right;
+      margin: $spacing-unit 0 $spacing-unit $spacing-unit-large;
+    }
+  }
+}
+.post__content .max-300 {
+  img {
+    max-width: $spacing-unit * 300 / 16 !important;
+  }
+}
 .title {
 	font-size: $font-size-large;
 }

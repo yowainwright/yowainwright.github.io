@@ -1,27 +1,24 @@
 html, 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-    font-family: $font-family-serif;
-    font-size: $font-size-medium;
-    line-height: 1.5;
-    color: $text-color;
-    -webkit-text-size-adjust: 100%;
-}
-p,
-ul,
-ol,
-header {
-  @extend %centerblock;
-  @extend %contentReaderMaxWidth;
+  font-family: $font-family-serif;
+  font-size: $font-size-medium;
+  line-height: $line-height-default;
+  color: $text-color;
+  -webkit-text-size-adjust: 100%;
 }
 h1, 
 h2, 
 h3, 
-h4 {
+h4,
+ul,
+ol {
   .post__content & {
+    @extend %centerblock;
+    @extend %contentWidthMargins;
     @extend %contentReaderMaxWidth;
   }
 }
@@ -43,6 +40,12 @@ h4,
 h5,
 h6,
 p,
+ul,
+ol,
+header {
+  @extend %centerblock;
+  @extend %contentReaderMaxWidth;
+}
 iframe,
 code,
 pre,
@@ -57,7 +60,6 @@ h3,
 h4, 
 h5, 
 h6 {
-  font-family: $font-family-serif;
   font-weight: normal;
   a {
     text-decoration: none;
@@ -72,14 +74,6 @@ h1 {
 blockquote {
   @extend %blockquote;
 }
-pre {
-  padding: $spacing-unit-small $spacing-unit;
-  overflow-x: scroll;
-}
-small {
-  font-family: $font-family-serif;
-  font-style: italic;
-}
 iframe {
   display: block;
   height: auto;
@@ -90,6 +84,10 @@ code {
   border: .5px solid $color-grey-lighter;
   border-radius: $spacing-unit * 3 / 16;
   background-color: $color-grey-lightest;
+}
+pre {
+  padding: $spacing-unit-small $spacing-unit;
+  overflow-x: scroll;
 }
 code {
   padding: $spacing-unit-small;

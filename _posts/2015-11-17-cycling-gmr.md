@@ -9,9 +9,8 @@ categories:
 - first
 - cycling
 permalink: /glendora-mountain-road/
-show_image: true
-note: feature-image-aside
 featured_image: /assets/gmr/gmr.jpg
+note: no-featured-image
 redirect_from:
   - personal-site/glendora-mountain-road/
 ---
