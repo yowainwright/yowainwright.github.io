@@ -8,7 +8,7 @@ categories:
 - terminal
 - mac
 - snippet
-note: no-featured-image
+note: feature-image-aside
 permalink: /creating-aliases/
 featured_image: /assets/os.svg
 ---

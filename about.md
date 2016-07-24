@@ -1,29 +1,26 @@
 ---
-layout: post
-title: A brief summation of me, Jeffry Wainwright.
+layout: page
+title: About me, Jeffry Wainwright
 meta: Jeff Wainwright is user interface specialist, frontend engineer & athlete living in Southern California
 permalink: /about/
 page: about
-type: page
 redirect_from:
  - cv/
 ---
 
-## About me
-{: .title}
+# About Me
 
-### Extra Curricular
-{: .title}
 
 When I’m not working, I try to be an active member of the design & developer community, especially JavaScript. I enjoy teaching what I know & learning as much as possible. I ride road bikes a lot & am a member of [The Rapha Cycling Club](//www.rapha.cc/us/en_US/rcc-public-landing) & [Ritte Cycling Club](//ritte.cc/) in Los Angeles.
 {: .first-paragraph }
 
-### Work
+As a frontend engineer & user interface specialist, I’m passionate about turning ideas into high performing interfaces for the websites & apps. With a design background, I approach products from conception to quality usable code with an engineering team.
+
+Work
 {: .title}
 
 Front End Engineer \| DSC - content
 {: .subtitle }
-
 Los Angeles, CA \| March 2016 - current
 {: .meta }
 
@@ -31,7 +28,6 @@ Los Angeles, CA \| March 2016 - current
 
 Front End Engineer \| PGM - Billboard & The Hollywood Reporter
 {: .subtitle }
-
 Los Angeles, CA \| May 2014 - March 2016
 {: .meta }
 
@@ -45,7 +41,6 @@ Los Angeles, CA \| May 2014 - March 2016
 - The Hollywood Reporter, Magazine of the Year, [2015](//www.hollywoodreporter.com/news/hollywood-reporter-nominated-magazine-year-855858), [2014](//www.hollywoodreporter.com/news/hollywood-reporter-wins-national-magazine-769564)
 
 KPIs
-{: .title }
 
 - Increased page load speed
 - Improved productivity & sustainability
@@ -53,7 +48,6 @@ KPIs
 
 User Interface Developer \| Outlook Amusements
 {: .subtitle }
-
 Burbank, CA \| March 2012 - March 2014
 {: .meta }
 
@@ -64,17 +58,12 @@ Burbank, CA \| March 2012 - March 2014
 - Tools: Photoshop, Sublime Text, [Visual Studio](//www.visualstudio.com/en-us/visual-studio-homepage-vs.aspx)
 
 KPIs
-{: .subtitle }
 
 - Increased user clicks (over 50% increase - email)
 - Saved money (responsive pages vs supporting mobile & desktop websites)
 
-As a frontend engineer & user interface specialist, I’m passionate about turning ideas into high performing interfaces for the websites & apps. With a design background, I approach products from conception to quality usable code with an engineering team.
-{: .first-paragraph }
-
 User Interface Developer \| Nasdaq
 {: .subtitle }
-
 Rockville, MD \| Jan 2011-Jan 2012
 {: .meta }
 
@@ -85,8 +74,6 @@ Rockville, MD \| Jan 2011-Jan 2012
 - Tools: [Notepad ++](//notepad-plus-plus.org/), Visual Studio, [Visual Source Safe](//msdn.microsoft.com/en-US/library/3h0544kx(v=vs.80).aspx)
 
 KPIs
-{: .title }
-
 - Increased production time (4x faster),
 - Daily unique users (+300k)
 
@@ -95,22 +82,23 @@ Education
 
 B.F.A. Visual Communications | The Illinois Institute of Art Chicago
 {: .subtitle }
-
 Chicago, IL 2009
+{: .meta }
 
 B.S. Fine Art | The University of Wisconsin - Madison
 {: .subtitle }
-
 Madison, WI 2003
+{: .meta }
 
 Summer Program | American University
 {: .subtitle }
-
 Washington, DC 2000
+{: .meta }
 
 Pre-college Program | The Art Institue of Chicago
-{: .sub-section-title }
+{: .subtitle }
 Chicago, IL 1999
+{: .meta }
 
 Assets
 {: .title}

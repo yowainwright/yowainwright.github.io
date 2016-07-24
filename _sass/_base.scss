@@ -1,4 +1,5 @@
-html, body {
+html, 
+body {
     margin: 0;
     padding: 0;
 }
@@ -11,7 +12,8 @@ body {
 }
 p,
 ul,
-ol, {
+ol,
+header {
   @extend %centerblock;
   @extend %contentReaderMaxWidth;
 }
@@ -25,7 +27,6 @@ h4 {
 }
 img {
   display: block;
-  max-width: 100% !important;
   @extend %centerblock;
 }
 hr,
@@ -65,14 +66,6 @@ h6 {
     }
   }
 }
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6 {
-  letter-spacing: -1.25px;
-}
 h1 {
   @extend %pageTitle;
 }
@@ -105,10 +98,31 @@ code {
     border-radius: 0;
   }
 }
-
+ul,
+ol {
+  clear: both;
+}
 main {
   padding: $spacing-unit 0;
   @include media-query($width-small) {
     padding: $spacing-unit-largest 0;
+  }
+}
+.page--about {
+  @extend %centerblock;
+  @extend %contentWidthMargins;
+  @include media-query($width-small) {
+    @extend %contentReaderMaxWidth;
+
+  }
+  h1 {
+    margin-bottom: $spacing-unit-large;
+  }
+  .title {
+    border-bottom: 1px solid $color-grey-lightest;
+  }
+  .subtitle,
+  .meta {
+    margin: 0;
   }
 }

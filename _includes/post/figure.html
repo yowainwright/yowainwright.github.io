@@ -1,6 +1,14 @@
 <figure class="post__figure">
-  <img class="post__image" src="{{page.featured_image}}" alt="{{ page.title }}" />
+	{% if post.featured_image %}
+	<a class="post__link" href="{{ post.url | prepend: site.baseurl }}">
+  	<img class="post__image" src="{{post.featured_image}}" alt="{{ post.title }}" />
+  </a>
+  {% else %}
+  	<img class="post__image" src="{{page.featured_image}}" alt="{{ page.title }}" />
+  {% endif %}
   {% if page.featured_caption %}
   <figcaption class="post__caption">{{ page.featured_caption }}</figcaption>
+  {% elsif post.feature_caption %}
+  <figcaption class="post__caption">{{ post.featured_caption }}</figcaption>
   {% endif %}
 </figure>

@@ -1,5 +1,13 @@
 .post {
 	&__content {
+		h2,
+		h3 {
+			border-bottom: 1px solid $color-grey-lightest;
+			padding-bottom: $spacing-unit;
+		}
+		img {
+			max-width: 100% !important;
+		}
 		.post--feature-image-aside & {
 			@extend %centerblock;
 			@extend %contentReaderMaxWidth;
@@ -10,11 +18,6 @@
 		@extend %contentWidthMargins;
 		@extend %contentReaderMaxWidth;
 		line-height: 1.75;
-	}
-	h2,
-	h3 {
-		border-bottom: 1px solid $color-grey-lightest;
-		padding-bottom: $spacing-unit;
 	}
 	a {
 		text-decoration: none;

@@ -8,7 +8,9 @@
 	&__title {
 		@extend %centerblock;
 		@extend %contentWidthMargins;
-		@extend %contentReaderMaxWidth;
+		@include media-query($width-small) {
+			@extend %contentReaderMaxWidth;
+		}
 	}
 	&__meta {
 		@extend %meta;

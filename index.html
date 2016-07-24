@@ -5,8 +5,8 @@ page: home
 permalink: /
 ---
 
-{% include posts/column.html postnumber="3"  %}
-{% include posts/single.html postnumber="1" %}
-{% include posts/column.html postnumber="3"  %}
-{% include posts/single.html postnumber="1" %}
-{% include posts/column.html %}
+{% include posts/column.html postcount="3" %}
+{% include posts/single.html postcount="1" postoffset="3" specialclass="single" %}
+{% include posts/column.html postcount="3" postoffset="4" %}
+{% include posts/single.html postcount="1" postoffset="7" specialclass="single" %}
+{% include posts/column.html postoffset="8" %}

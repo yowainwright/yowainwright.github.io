@@ -1,8 +1,10 @@
 .posts {
 	@include micro-clearfix;	
 	.post {
+		&__figure {
+			margin: 0;
+		}
 		&__title {
-			max-width: $width-reader;
 			@extend %contentReaderMaxWidth;
 			a {
 				color: black;
@@ -14,5 +16,6 @@
 			@extend %contentWidthMargins;
 			@extend %contentReaderMaxWidth;
 		}
+
 	}
 }

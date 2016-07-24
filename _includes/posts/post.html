@@ -1,0 +1,9 @@
+<article class="post{% if include.specialclass %}post--{{ include.specialclass }}{% endif %}">
+	{% if post.show_image or include.specialclass %}
+		{% include post/figure.html %}
+	{% endif %}
+	{% include post/header.html %}
+	<p class="post__content">
+		{{ post.excerpt | strip_html }}
+	</p>
+</article>

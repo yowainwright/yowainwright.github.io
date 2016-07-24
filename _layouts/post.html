@@ -1,14 +1,17 @@
 ---
 layout: default
+
 ---
 
-<main class="post post--{% if page.note %}{{page.note}}{% endif %}">
+<main class="post{% if page.note %} post--{{page.note}}{% endif %}">
   <article class="{% if type.page %}page__content{% else %}post__content{% endif %}">
     {% include post/header.html %}
-    {% if page.featured_image and page.note != 'no-featured-image' and page.note != 'feature-image-aside' %}
+    {% if page.featured_image %} 
+    {% if page.note != 'no-featured-image' %} 
+    {% if page.note != 'feature-image-aside' %}
       {% include post/figure.html %}
     {% endif %}
-    {% if type != page %}
+    {% endif %}
     {% endif %}
     <div class="post__content">
     {% if page.featured_image and page.note == 'feature-image-aside' %}
@@ -20,5 +23,7 @@ layout: default
       {% include post/share.html %}
     {% endif %}
   </article>
+  {% if type != page %}
   {% include post/disqus.html %}
+  {% endif %}
 </main>

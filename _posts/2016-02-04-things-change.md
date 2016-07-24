@@ -6,6 +6,7 @@ meta: It's amazing the way things change. I, Jeff Wainwright, discuss myself & t
 categories:
 - art
 - thoughts
+show_image: true
 note: feature-image-aside
 permalink: /things-change-william-kentridge/
 featured_image: /assets/things-change/man.jpg

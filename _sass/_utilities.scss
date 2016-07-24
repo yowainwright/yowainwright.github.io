@@ -2,15 +2,30 @@
   @extend %firstParagraph;
 }
 .clear-fix-small {
-  @extend %clearfix;
+  @include clearfix;
 }
 .clear-fix-medium {
   @include media-query($width-small) {
-    @extend %clearfix;
+    @include clearfix;
   }
 }
 .clear-fix-large {
   @include media-query($width-medium) {
-    @extend %clearfix;
+    @include clearfix;
   }
+}
+.image-circle {
+	img {
+		border-radius: 100%;
+		overflow: hidden;
+	}
+}
+.title {
+	font-size: $font-size-large;
+}
+.subtitle {
+	font-size: $font-size-medium;
+}
+.meta {
+	font-size: $font-size-small;
 }

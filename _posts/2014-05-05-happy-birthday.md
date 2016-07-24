@@ -4,6 +4,7 @@ title:  Happy Birthday, a project to say happy birthday
 date: 2014-05-05
 permalink: /happy-birthday/
 categories: story projects general
+show_image: true
 featured_image: https://c1.staticflickr.com/1/570/22740380891_ef1ba45e24_o.jpg
 ---
 

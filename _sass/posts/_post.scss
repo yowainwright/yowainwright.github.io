@@ -1,0 +1,30 @@
+.posts .post {
+	margin-bottom: $spacing-unit-largest;
+	&__title,
+	&__content {
+		@extend %centerblock;		
+		@extend %contentReaderMaxWidth;
+	}
+	&__image {
+		max-width: calc(100% - #{$spacing-unit-large});
+		@include media-query($width-medium) {
+			max-width: $width-default;
+			padding: $spacing-unit 0;
+		}
+	}
+	&__header {
+		margin-bottom: $spacing-unit;
+	}
+	&__title {
+		margin-bottom: $spacing-unit;
+	}
+	&__author {
+		color: black;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&__content {
+		margin-top: 0;
+	}
+}

@@ -1,33 +1,28 @@
-.posts .post {
-	&__image {
-		border-top: 2px solid black;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: $spacing-unit * 2;
-		max-width: $width-default;
-		@include media-query($width-default) {
-			padding: ($spacing-unit * 2) 0;
+.post--single {
+	margin-bottom: $spacing-unit-largest;
+	position: relative;
+	.post {
+		&__figure {
+			margin: 0;
 		}
-	}
-	&__content {
-		margin-left: auto;
-		margin-right: auto;
-		max-width: $width-default;
-	}
-	&__date {
-		font-family: $font-family-serif;
-		font-size: $font-size-default * 1.2;
-		font-style: italic;
-		font-weight: bold;
-	}
-	&__link {
-		color: black;
-		text-decoration: none;
-		&:hover {
-			text-decoration: underline;
+		&__image {
+			max-width: 100% !important;
 		}
-	}
-	&__description {
-		font-family: $font-family-serif;
+		&__title {
+			background: rgba(0, 0, 0, 0.8);
+			font-size: $font-size-largest;
+			max-width: 100%;
+			margin: 0;
+			padding: $spacing-unit;
+			width: 100%;
+			@include middle-align(absolute);
+			@include media-query($width-small) {
+				max-width: $width-default;
+
+			}
+		}
+		&__link {
+			color: white;
+		}
 	}
 }
