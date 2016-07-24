@@ -9,6 +9,7 @@ categories:
 type: code
 note: feature-image-aside
 permalink: /js-scope/
+share_image: /assets/icons/js.jpg
 featured_image: /assets/js.svg
 redirect_from:
   - js-scope/

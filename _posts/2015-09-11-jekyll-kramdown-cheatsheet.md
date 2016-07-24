@@ -7,6 +7,7 @@ permalink: /kramdown-syntax-cheatsheet/
 categories: jekyll kramdown markdown code
 note: feature-image-aside
 type: code
+share_image: /assets/icons/markdown.jpg
 featured_image: /assets/md.svg
 ---
 

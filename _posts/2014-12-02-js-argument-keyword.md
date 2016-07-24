@@ -7,6 +7,7 @@ note: feature-image-aside
 categories: javascript code
 type: code
 permalink: /js-argument-key-word/
+share_image: /assets/icons/js.jpg
 featured_image: /assets/js.svg
 ---
 

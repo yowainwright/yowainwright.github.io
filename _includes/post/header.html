@@ -5,7 +5,7 @@
   	<h2 class="post__title"><a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
   {% endif %}
   <p class="post__meta">
-    <time class="post__date">{% if page.title %}{{ page.date | date: "%b %-d, %Y" }}{% else %}{{ post.date | date: "%b %-d, %Y" }}{% endif %}</time> by
+    <time class="post__date">{% if page.date %}{{ page.date | date: "%b %-d, %Y" }}{% else %}{{ post.date | date: "%b %-d, %Y" }}{% endif %}</time> by
     <a class="post__author" href="{{ site.baseurl }}/about/">Jeff Wainwright</a>
   </p>
 </header>

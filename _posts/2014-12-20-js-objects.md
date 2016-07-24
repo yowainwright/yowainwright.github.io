@@ -9,6 +9,7 @@ categories:
 - javascript
 - objects
 permalink: /js-objects/
+share_image: /assets/icons/js.jpg
 featured_image: /assets/js.svg
 redirect_from:
   - personal-site/js-scope/

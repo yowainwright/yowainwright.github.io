@@ -7,6 +7,7 @@ permalink: /punch-setup/
 categories: javascript code
 type: code
 note: feature-image-aside
+share_image: /assets/icons/js.jpg
 featured_image: /assets/js.svg
 redirect_from:
   - /punch-static-sites/

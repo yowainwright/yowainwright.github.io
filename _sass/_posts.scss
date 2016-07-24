@@ -1,7 +1,7 @@
 .posts {
 	margin-bottom: $spacing-unit-largest;
-	@include micro-clearfix;	
 	.post {
+		@extend %clearfix;	
 		&__figure {
 			margin: 0;
 		}
@@ -28,6 +28,8 @@
 		}
 		&__content {
 			margin-top: 0;
+			padding-bottom: $spacing-unit-large;
+			border-bottom: 1px solid $color-grey-lightest;
 		}
 		&__author {
 			color: black;

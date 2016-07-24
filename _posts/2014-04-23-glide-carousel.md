@@ -5,6 +5,7 @@ date: 2014-04-23
 meta: This is a demo on how to use the Glide Carousel with Semantic UI
 categories: code
 permalink: /glide-carousel/
+note: no-featured-image
 featured_image: /assets/city-country.png
 ---
 
@@ -59,6 +60,6 @@ Just call glide to run in your local JS
 Note: my JS for glide is slightly different but this is all you need.
 
 <div class="code-sample">
-	<p data-height="268" data-theme-id="0" data-slug-hash="71fdafe5e8fdae857086e9be2bd928ba" data-default-tab="result" data-user="yowainwright" class='codepen'>See the Pen <a href='http://codepen.io/yowainwright/pen/71fdafe5e8fdae857086e9be2bd928ba/'>71fdafe5e8fdae857086e9be2bd928ba</a> by Jeff Wainwright (<a href='http://codepen.io/yowainwright'>@yowainwright</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	<p styles="min-height: 300px;" data-height="268" data-theme-id="0" data-slug-hash="71fdafe5e8fdae857086e9be2bd928ba" data-default-tab="result" data-user="yowainwright" class='codepen'>See the Pen <a href='http://codepen.io/yowainwright/pen/71fdafe5e8fdae857086e9be2bd928ba/'>71fdafe5e8fdae857086e9be2bd928ba</a> by Jeff Wainwright (<a href='http://codepen.io/yowainwright'>@yowainwright</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 	<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 </div>

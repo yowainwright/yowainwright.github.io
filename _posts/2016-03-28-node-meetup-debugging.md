@@ -7,6 +7,7 @@ categories: javascript code
 type: code
 note: feature-image-aside
 permalink: /node-meetup-debugging-with-yunong-xiao/
+share_image: /assets/icons/js.jpg
 featured_image: /assets/js.svg
 ---
 

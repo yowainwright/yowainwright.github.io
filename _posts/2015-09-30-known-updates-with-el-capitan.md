@@ -13,6 +13,7 @@ categories:
 - code
 - third
 type: code
+share_image: /assets/icons/os.jpg
 featured_image: /assets/os.svg
 ---
 

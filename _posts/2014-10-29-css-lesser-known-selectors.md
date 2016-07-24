@@ -9,6 +9,7 @@ categories:
 - sass
 - css
 permalink: /css-less-known-selectors/
+share_image: /assets/icons/sass.jpg
 featured_image: /assets/sass.svg
 redirect_from:
  - css-lesser-known-selectors/

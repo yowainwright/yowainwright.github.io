@@ -10,6 +10,7 @@ categories:
 - snippet
 note: feature-image-aside
 permalink: /creating-aliases/
+share_image: /assets/icons/os.jpg
 featured_image: /assets/os.svg
 ---
 

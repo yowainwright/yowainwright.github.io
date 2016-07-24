@@ -8,6 +8,7 @@ categories:
 - code
 - javascript
 permalink: /js-closure/
+share_image: /assets/icons/js.jpg
 featured_image: /assets/js.svg
 redirect_from:
   - personal-site/js-keyword-this/
