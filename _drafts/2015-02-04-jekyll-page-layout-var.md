@@ -9,8 +9,11 @@ categories:
 - code
 - jekyll
 permalink: /jekyll-page-layout/
-featured_image: /assets/os.svg
+share_image: /assets/icons/md.jpg
+featured_image: /assets/md.svg
 ---
+
+{: .first-paragraph }
 
 {% highlight html %}
 	{{ page.layout }}

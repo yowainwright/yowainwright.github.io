@@ -43,6 +43,9 @@
 .max-300.image-left img {
   position: relative;
 }
+.height-300 img {
+  height: $spacing-unit * 300 / 16 !important;
+}
 .max-300.image-right img {
   @include media-query($width-small) {
     left: -#{($spacing-unit * (300 / 2) / 16) - $spacing-unit-large};
