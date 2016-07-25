@@ -1,6 +1,7 @@
 .post { 
 	&__header {
 		margin-bottom: $spacing-unit-medium;
+		margin-top: $spacing-unit;
 		@include media-query($width-small) {
 			margin-bottom: $spacing-unit-largest;
 		}
