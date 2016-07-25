@@ -19,33 +19,41 @@ Although navigations stuck to the top of browser windows are sometimes scrutiniz
 
 > `*position: fixed` is a css rule for sticky navigation which positions `html elements` at a fixed point on the page.
 
-Sticky Navigation in my purview seems to have become more relavant with an implemenation of [scrollspy](http://v4-alpha.getbootstrap.com/components/scrollspy/) by bootstrap years ago. It seemed that providing users with visual queues became expected by users or by companies to provide location & extra navigation to users on webpages. `Triggers` that set a navigation's position to stick & change vary throughout many web experiences so I'm only going to focus on a few things that I've seen.
+Sticky Navigation in my purview became more relavant with an implemenation of [scrollspy](http://v4-alpha.getbootstrap.com/components/scrollspy/) by bootstrap years ago. It seemed that providing users with visual queues became expected by users or by companies to provide location & extra navigation to users on webpages. `Triggers` that set a navigation's position to stick & change vary throughout many web experiences so I'm only going to focus on a few things that I've seen.
 
 ### Browser sticky navigation
 {: #device-fixed-position }
 
-*Sticky navigation:* This is when a navigation is sticky to the top of a webpage from the start. This is typically done when setting an element to `position: fixed` & then either setting adding a `margin-top` that is equal to the height of the fixed navigation or adding and `element` that wraps the sticky nav & then has a height that is set to the height of the fixed navigation.
+*Sticky navigation:* This is when a navigation is sticky to the top of a webpage from the start. This is typically done when setting an element to `position: fixed` & then either setting adding a `margin-top` to the next sibling element that is equal to the height of the fixed navigation or adding an `element` that wraps the sticky nav & then has a height that is set to the height of the fixed navigation.
 
 <figure>
+	<a href="https://www.dollarshaveclub.com/blades">
 	<img src="/assets/device-scrolling/dsc-fixed-nav.jpg" alt="Sticky navigation" />
+	</a>
 </figure>
 
-*Static then fixed navigation:* This is when a navigation appears to be static & then a when a customer scrolls to where the top of the browser window meets the top of the element - the element appears to snap to the top of the browser window. This is done by typically  wrapping the sticky navigation in an element that is set to the height of the navigation. Using a Javascript `.onscroll` event we detect when the browser `window.scrollY` is greater that the sticky navigation's `.offsetTop`. This is typically a very expensive javascript call as it is done continually throughout the process of a customer's scroll. This is why functions like [throttling](https://remysharp.com/2010/07/21/throttling-function-calls), [debouncing](https://davidwalsh.name/javascript-debounce-function) & [requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) are often used to help. This is still an issue as delays in the sticky navigation can easily occur.
+*Static then fixed navigation:* This is when a navigation appears to be static & then a when a customer scrolls to where the top of the browser window meets the top of the sticky element - the element appears to snap to the top of the browser window. This is done by typically  wrapping the sticky navigation in an element that is set to the height of the navigation. Using a Javascript `.onscroll` event - the browser scroll event tracks for when `window.scrollY` is greater that the sticky navigation element's `.offsetTop`. This is typically a very expensive javascript call as it is done continually throughout the process of a customer's scroll. This is why functions like [throttling](https://remysharp.com/2010/07/21/throttling-function-calls), [debouncing](https://davidwalsh.name/javascript-debounce-function) & [requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) are often used to help. This is still an issue as delays in the sticky navigation can easily occur.
 
 <figure>
+	<a href="https://medium.com/">
 	<img src="/assets/device-scrolling/medium.jpg" alt="Static then fixed navigation" />
+	</a>
 </figure>
 
-*Fixed navigation with a scroll stop:* This is when a navigation is sticky & then at a certain point the sticky nav stops. This is often done by setting a navigation to fixed & then when element reaches a scroll stopping point, the navigation is set with a `position` of `absolute` with a `top` position that equals the _height of the stopping offset_.
+*Fixed navigation with a scroll stop:* This is when a navigation is sticky & then at a certain point the sticky nav stops. This is often done by setting a navigation to fixed & then when element reaches a scroll `stopping point`, the navigation is set with a `position` of `absolute` with a `top` position that equals the _height of the stopping offset_.
 
 <figure>
+<a href="http://www.billboard.com/">
 	<img src="/assets/device-scrolling/billboard.jpg" alt="Fixed navigation with a scroll stop" />
+	</a>
 </figure>
 
 *Scrolled distance queue navigation:* This is when a navigation is set to fixed & has some sort of visual queue that lets a user know how far they've scrolled. This is often done by returning a scrolled distance relative to a total window scroll. This is done by first storing scroll in a variable & thend returning it out of a function.
 
 <figure>
+	<a href="http://www.hollywoodreporter.com/features/beverly-hills-1-billion-vineyard-819299">
 	<img src="/assets/device-scrolling/thr.jpg" alt="Scrolled distance queue navigation" />
+	</a>
 </figure> 
 
 {% highlight javascript %}
@@ -73,7 +81,9 @@ Device sticky items are [very undependable](http://bradfrost.com/blog/mobile/fix
 > Device sticky items are very undependable as many devices don't support `fixed positioning`
 
 <figure>
-	<img src="" alt="Device sticky items" />
+	<a href="http://leafo.net/sticky-kit/">
+	<img src="/assets/device-scrolling/leafo.jpg" alt="Device sticky items" />
+	</a>
 </figure> 
 
 It seems that fixed position was more supported by IOS a few years ago but support has lagged as Apple has defined fixed positioning as [different because of an unchangeable size for a browser window](https://developer.apple.com/library/ios/technotes/tn2010/tn2262/_index.html#//apple_ref/doc/uid/DTS40009577-CH1-SAFARI_ON_IPAD_READINESS_CHECKLIST-4__MODIFY_CODE_THAT_RELIES_ON_CSS_FIXED_POSITIONING). [More...](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html)
