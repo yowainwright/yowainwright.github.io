@@ -36,7 +36,7 @@ Sticky Navigation in my purview became more relavant with an implemenation of [s
 
 <figure>
 	<a href="https://medium.com/">
-	<img src="/assets/device-scrolling/medium.jpg" alt="Static then fixed navigation" />
+	<img src="/assets/device-scrolling/Medium.jpg" alt="Static then fixed navigation" />
 	</a>
 </figure>
 
