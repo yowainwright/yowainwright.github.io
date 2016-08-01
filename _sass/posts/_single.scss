@@ -1,6 +1,8 @@
 .post--single {
-	margin-bottom: $spacing-unit-largest;
 	position: relative;
+	@include media-query($width-small) {
+		margin-bottom: $spacing-unit-large;
+	}
 	.post {
 		&__figure {
 			margin: 0;

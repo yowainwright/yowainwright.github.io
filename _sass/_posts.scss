@@ -1,5 +1,8 @@
 .posts {
-	margin-bottom: $spacing-unit-largest;
+	margin-bottom: $spacing-unit-large;
+	@include media-query($width-small) {
+		margin-bottom: $spacing-unit-largest;
+	}
 	.post {
 		@extend %clearfix;	
 		&__figure {
@@ -21,14 +24,13 @@
 			@extend %contentReaderMaxWidth;
 		}
 		&__title {
-			margin-bottom: $spacing-unit;
+			margin-bottom: 0;
 			a {
 				color: black;
 			}
 		}
 		&__content {
 			margin-top: 0;
-			padding-bottom: $spacing-unit-large;
 			border-bottom: 1px solid $color-grey-lightest;
 			&:last-of-type {
 				border-bottom: 0;
