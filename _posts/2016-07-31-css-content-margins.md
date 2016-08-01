@@ -1,20 +1,35 @@
 ---
 layout: post
-title:  CSS Margins, Max Widths or Maybe Not Margins
+title:  Creating layouts by calculating the max width of elements
 author: Jeff Wainwright
 date: 2016-07-31
-meta: Using css calc max widths to set content widths is better than adding margins, for devices especially
-permalink: /css-max-widths-instead-of-margins/
+meta: Use css calc values to set the max width of elements within content blocks & create beautiful layouts, for devices especially
+permalink: /css-calc-max-widths/
 categories: code css sass
 note: feature-image-aside
 share_image: /assets/icons/sass.jpg
 featured_image: /assets/sass.svg
+redirect_from:
+  - css-max-widths-instead-of-margins/
 ---
 
-I used to (& I'm not the only one) write css margins properties on containers of html elements. If you're not aware _containers_ are technical terms when talking about html & css that are used to describe html elements that contain other html elements. I try to avoid this pattern now by placing a `max width` on individual elements. In this post I'll describe in detail what I used to do, the solution I used more recently & what I'm doing now. 
+I used to (& I'm not the only one) write css margins properties on containers of html elements. If you're not aware, _container_ is technical term when talking about html & css that is used to describe an html element that "contains" other html elements. I try to avoid the pattern (of containing elements) by placing a `max width` on individual elements within a content area. In this post I'll describe in detail what I used to do, the solution I used more recently & what I'm doing now. 
 {: .first-paragraph }
 
-## The old way, setting margins on wrapper elements
+First, to go into more detail if I've already confused you _(sorry)_, I'll more clearly describe what I see as the problem. When creating content blocks for webpages, widths are set so that the reader line length doesn't get to long. For smaller browser views, like on mobile devices, space to the left & right of content areas are set so that text doesn't extend the full width of the browser width or, worse yet - extend out of the browser so that the text can't be read. 
+
+> When creating content blocks for webpages, widths are set so that the reader line length doesn't get to long. For smaller browser views, like on mobile devices, space to the left & right of content areas are set so that text doesn't extend the full width of the browser
+
+## The 3 approaches
+
+- Using containers to set the width of content.
+
+- Setting margins on elements within a content area.
+
+- Setting the margins once & setting elements widths as desired 
+
+
+## The old way, using containers to set the width of content
 
 {% highlight sass %}
 	// Old way
@@ -25,7 +40,7 @@ I used to (& I'm not the only one) write css margins properties on containers of
 		margin: 0;
 	}
 	// set margins to the left & right of the wrapper element
-	.wrapper {
+	.container {
 		// margins are set in this example on the left, right, top & bottom
 		// max width is set here too
 		margin: 1rem;
@@ -33,16 +48,16 @@ I used to (& I'm not the only one) write css margins properties on containers of
 	}
 	@media (min-width: 50rem) {
 		// center the wrapper if the width is greater than 50rem
-		.wrapper {
+		.container {
 			margin-left: auto;
 			margin-right: auto;
 		}
 	}
 {% endhighlight %}
 
-In this method of setting margins & widths on content, a wrapper element is used to set the `width` of the content & the margins that are set on the left & right of the content. The positives of this approach are that content width & margins can be set on one wrapper element. The negatives are that content becomes less dynamic visually because different elements within a content block can't have different widths.
+In this method of setting margins & widths on content, a container element is used to set the `width` of the content & the margins that are set on the left & right of the content. The positives of this approach are that content width & margins can be set on one wrapper element. The negatives with this approach are - what if you have an image, or another element that you'd like to have a different width - you might set a negative margin & exaggerate the width like, `margin: 0 -1rem 0 1rem, width: calc(100% + 2rem);`. This is already bad & then what if the containing element has a `oveflow: hidden` property set. Ugh, you're going to get into crazy town & fast. 
 
-## The last _current_ way, setting different margins on different content elements
+## The _last current_ way, setting different margins on different content elements
 
 {% highlight sass %}
 	// The last current way
@@ -60,15 +75,15 @@ In this method of setting margins & widths on content, a wrapper element is used
 		}
 	}
 	// set margins to the left & right of the wrapper element
-	.wrapper {
+	.content{
 		// no margins in this example on the left, right, top & bottom
 		// no max width set on this example
 	}
 {% endhighlight %}
 
-In this method, a wrapper element plays no role in setting the width of content within a viewport. Elements within a content block are contained by margins & max widths. Max widths may or may not be set on elements but this method often requires the use 2 margin rules on different viewports & setting a width or max width on larger viewports. 
+In this method, a container element plays no role in setting the width of content within a viewport. Elements within a content block are contained by margins & max widths. Max widths may or may not be set on elements but this method often requires the use 2 margin rules on different viewports & setting a width or max width on larger viewports. The margins will almost always go something like be `1rem` to the _left_ & _right_ on small viewports but be set to `auto` on large viewports. With this approach there is almost always that in between moment where to content gets really wide or is positioning on the left of browser because the left & right margins haven't been set to `auto` yet. 
 
-## The _current_ current way, setting the margin, then changing the max-width based on viewport size 
+## The _current_ current way, setting the margins once & setting elements widths as desired 
 
 {% highlight sass %}
 	// The new new way
@@ -93,6 +108,6 @@ In this method, a wrapper element plays no role in setting the width of content 
 	}
 {% endhighlight %}
 
-The _new_ new method I'm enjoying is setting the margin once & reseting the width of elements if needed by using css calc. This ensures that block elements are always centered & the widths are defined within content are defined as needed.
+Finally, my perferred approach is to set the margins of properties only once & resetting the preferred width of elements based on the viewport size. I do this with calc. It works great. So for a mobile view I have the width set to `calc(100% - 2rem)` which tells the browser make this element 100% of the viewport width with a margin of 1 on either side. You'll find in this approach that the content is always centered & that elements with of 100% can be centered as well.
 
 
