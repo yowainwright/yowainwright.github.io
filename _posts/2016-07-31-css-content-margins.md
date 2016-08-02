@@ -75,7 +75,7 @@ In this method of setting margins & widths on content, a container element is us
 		}
 	}
 	// set margins to the left & right of the wrapper element
-	.content{
+	.container {
 		// no margins in this example on the left, right, top & bottom
 		// no max width set on this example
 	}
@@ -102,7 +102,7 @@ In this method, a container element plays no role in setting the width of conten
 		}
 	}
 	// set margins to the left & right of the wrapper element
-	.wrapper {
+	.container {
 		// no margins in this example on the left, right, top & bottom
 		// no max width set on this example
 	}

@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{{ page.title }} - Jeffry.in</title>
-  <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines }} - Jeffry.in">
+  <meta name="description" content="{% if page.meta %}{{ page.meta }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %} - Jeffry.in">
   <meta name="google-site-verification" content="8eHITXF6-kLwRSGadGPduRcZYBmX-R_L85vU_DCB9gU" />
   <meta name="robots" content="index,follow" />
   <meta name="viewport" content="width=device-width">
@@ -12,7 +12,7 @@
   <meta name="twitter:site" content="@yowainwright">
   <meta name="twitter:url" property="og:url" content="{{ site.url }}{{page.permalink }}">
   <meta name="twitter:title" property="og:title" content="{{ page.title }}">
-  <meta name="twitter:description" property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:description" property="og:description" content="{% if page.meta %}{{ page.meta }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
 
   <meta name="twitter:image" property="og:image" content="{% if page.share_image %}{{ site.url }}{{page.share_image}}{% elsif page.featured_image %}{{ site.url }}{{ page.featured_image }}{% else %}{{ site.url }}/assets/w.jpg{% endif %}">
 

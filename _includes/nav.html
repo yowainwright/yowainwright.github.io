@@ -5,7 +5,7 @@
         <use class="site-logo" xlink:href="#logo-w" x="0" y="0" />
       </svg>
     </a>
-    <p class="site-nav__title">{% if  page.excerpt %}{{ page.excerpt | truncatewords: 16 | '&hellip;' | strip_html }}{% else %}{{ site.description }}{% endif %}</p>
+    <p class="site-nav__title">{% if page.meta %}{{ page.meta }}{% elsif page.excerpt %}{{ page.excerpt | truncatewords: 16 | '&hellip;' | strip_html }}{% else %}{{ site.description }}{% endif %}</p>
 	  <div class="site-nav__posts">
     	{% for post in site.posts limit: 3 %}
 			<article class="site-nav__post">
