@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Creating layouts by calculating the max width of elements
+title:  Creating beautiful layouts by setting element widths with calc
 author: Jeff Wainwright
 date: 2016-07-31
-meta: Use css calc values to set the max width of elements within content blocks & create beautiful layouts, for devices especially
+meta: Use css calc values to set the width of elements within content blocks & create beautiful layouts, for devices especially
 permalink: /css-calc-max-widths/
 categories: code css sass
 note: feature-image-aside
@@ -13,7 +13,7 @@ redirect_from:
   - css-max-widths-instead-of-margins/
 ---
 
-I used to (& I'm not the only one) write css margins properties on containers of html elements. If you're not aware, _container_ is technical term when talking about html & css that is used to describe an html element that "contains" other html elements. I try to avoid the pattern (of containing elements) by placing a `max width` on individual elements within a content area. In this post I'll describe in detail what I used to do, the solution I used more recently & what I'm doing now. 
+I used to (& I'm not the only one) write css margins properties on containers of html elements to contain their widths on small viewports. If you're not aware, _container_ is technical term when talking about html & css that is used to describe an html element that "contains" other html elements. I try to avoid the pattern (of containing elements) by placing a `max width` on individual elements within a content area. In this post I'll describe in detail what I used to do, the solution I used more recently & what I'm doing now. 
 {: .first-paragraph }
 
 First, to go into more detail if I've already confused you _(sorry)_, I'll more clearly describe what I see as the problem. When creating content blocks for webpages, widths are set so that the reader line length doesn't get to long. For smaller browser views, like on mobile devices, space to the left & right of content areas are set so that text doesn't extend the full width of the browser width or, worse yet - extend out of the browser so that the text can't be read. 
@@ -109,5 +109,9 @@ In this method, a container element plays no role in setting the width of conten
 {% endhighlight %}
 
 Finally, my perferred approach is to set the margins of properties only once & resetting the preferred width of elements based on the viewport size. I do this with calc. It works great. So for a mobile view I have the width set to `calc(100% - 2rem)` which tells the browser make this element 100% of the viewport width with a margin of 1 on either side. You'll find in this approach that the content is always centered & that elements with of 100% can be centered as well.
+
+I hope you've found this post to be informative. Please comment below if you disagree, feel I could've been more clear or have other opinions. 
+
+~Thanks
 
 
