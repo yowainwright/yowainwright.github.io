@@ -4,8 +4,8 @@
 			background-color: white;
 			float: left;
 			margin: 0;
-			padding: 0 $spacing-unit-medium $spacing-unit 0;
-			width: 33.3%;
+			padding: 0 $spacing-unit-medium $spacing-unit $spacing-unit-medium;
+			width: 50%;
 			@include media-query($width-small) {
 				margin-left: -10%;
 				width: 40%;
