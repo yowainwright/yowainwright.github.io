@@ -16,7 +16,6 @@ redirect_from:
 ---
 
 Javascript **scope** is an essential for keeping & accessing information where we want it & using it when we want to.
-{: .first-paragraph }
 
 ## Discussing JS Scope through the mall example
 
@@ -30,7 +29,7 @@ When we go into that shoe store, we're still at the mall & can get certain infor
 
 As we go around to these stores & purchase things, eating food & interacting with people at the mall while listening to that awesome mall music we're attaining 'stuff'. We're getting information from the music, perhaps purchasing goods from the store. We can think of that as the _Execution Context_. Execution Context is essentially, all of the stuff that we comes with & happens to us as we go there the mall. We keep the items that buy but, hopefully, forget some of the music that we listen to.
 
-### Now, Scope, seriously
+## Now, Scope, seriously
 
 To understand **scope**, we need to know about variables & how we store information. **[Variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)** store bits of information in the key words _var_, _**[let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)**_, or _**[const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)**_. Const store a read only bit of information which means the information can’t be re-assigned. I will not be discussing _const_ anymore right now so forget I brought it up. _Let_ is very similar to _var_ to the point that I had to [find](http://stackoverflow.com/questions/762011/let-keyword-vs-var-keyword) the difference: var is scoped to the nearest function scope which let is enclosed to the nearest closing block.
 
@@ -43,19 +42,19 @@ Scope, in Javascript, refers to where stored information can be accessed.
 - Local Scope
 - Execution Context
 
-#### Lexical Scope
+## Lexical Scope
 
 [Lexical](http://whatis.techtarget.com/definition/lexical-scoping-static-scoping) Scope refers to where a variables can be accessed within code blocks.
 
-#### Global Scope
+## Global Scope
 
 **Global** Scope means that a variable was declared outside of a function so it can be accessed & modified throughout a program.
 
-#### Local Scope
+## Local Scope
 
 Local Scope refers the a variable that was declared within a function which means mean that it can only be accessed within that function.
 
-##### example:
+**example:**
 {% highlight javascript %}
 
 var globalVar = ‘This var is global’;
@@ -64,12 +63,12 @@ var myFunc = function() {
 };
 {% endhighlight %}
 
-#### Execution Context
+## Execution Context
 
 Execution context is memory scope. It’s created as a program runs.
 
 
-##### A fun example which demonstrates scope:
+**A fun example which demonstrates scope:**
 {% highlight javascript %}
 
 var makeArray = function() {

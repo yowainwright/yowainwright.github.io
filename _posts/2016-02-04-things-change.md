@@ -13,7 +13,6 @@ featured_image: /assets/things-change/man.jpg
 ---
 
 Remembering the first time I saw [William Kentridge](//en.wikipedia.org/wiki/William_Kentridge): it was in Chicago & I drove down from Madison, Madison Wisconsin with my girlfriend. I was around 21. I'm 35 now. I threw a temper tantrum while trying to find a place to park in the magnificent mile area.
-{: .first-paragraph }
 
 After parking, I remember looking into girlfriend's big green eyes right after we got out of the car. She was looking at me so empathically. "I'm going to dump you in a few months" she was probably thinking. She was just waiting for right exit. It's not that I didn't have good qualities then. I was full of charisma & passion but my passion was usually about art or skateboarding & _I could be selfish_ in general. However, this moment at the MCA, seeing Kentridge's work for the first time, was a moment in which my passion for art allowed me to be open to a beautiful world outside of me.
 
@@ -26,6 +25,7 @@ We all (my hair, my girlfriend & me) entered the museum & got to the exhibit. Th
 As I understand it, this was Kentridge's process for making his videos:
 - do the drawing with charcoal on paper,
 - manipulate the unset charcoal on that _same piece of paper_ for multiple stills of the video.
+
 The result of his drawing process was that rest of the gallery space, besides the videos, were the beautiful drawings that he used for each video still. It was impressive. I loved Kentride's confidence to make the drawing & then change it. It takes a rare artist to be unafraid of changing work to further communicate a narrative. This is why I found this exhibit so exciting.
 
 <iframe style="height: auto; min-height: 315px; width: 100%;" src="https://www.youtube.com/embed/OmvK7A84dlk" frameborder="0" allowfullscreen></iframe>

@@ -9,7 +9,8 @@
   }
   &__content {
     border-top: 1px solid $color-grey-lightest;
-    @extend %centerblock;
+    margin-left: auto;
+    margin-right: auto;
     @extend %contentWidthMargins;
     @include media-query($width-small) {
       border-top: 0;

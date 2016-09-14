@@ -10,21 +10,10 @@ body {
   color: $text-color;
   -webkit-text-size-adjust: 100%;
 }
-h1, 
-h2, 
-h3, 
-h4,
-ul,
-ol {
-  .post__content & {
-    @extend %centerblock;
-    @extend %contentWidthMargins;
-    @extend %contentReaderMaxWidth;
-  }
-}
 img {
   display: block;
-  @extend %centerblock;
+  margin-left: auto;
+  margin-right: auto;
 }
 hr,
 h1, 
@@ -43,7 +32,8 @@ p,
 ul,
 ol,
 header {
-  @extend %centerblock;
+  margin-left: auto;
+  margin-right: auto;
   @extend %contentReaderMaxWidth;
 }
 iframe,
@@ -51,7 +41,8 @@ code,
 pre,
 blockquote,
 table {
-  @extend %centerblock;
+  margin-left: auto;
+  margin-right: auto;
   @extend %contentDefaultMaxWidth;
 }
 h1, 
@@ -69,10 +60,23 @@ h6 {
   }
 }
 h1 {
-  @extend %pageTitle;
+  @include pageTitle;
 }
 blockquote {
-  @extend %blockquote;
+  border-left: 4px solid $color-grey-lightest;
+  clear: both;
+  font-size: $font-size-medium;
+  font-style: italic;
+  margin-bottom: $spacing-unit-large;
+  margin-top: $spacing-unit-large;
+  max-width: calc(100% - #{$spacing-unit-large});
+  padding: $spacing-unit-small $spacing-unit;
+  @include media-query($width-small) {
+    max-width: $width-reader;
+  }
+  p {
+    margin: 0;
+  }
 }
 iframe {
   display: block;
@@ -107,7 +111,8 @@ main {
   }
 }
 .page--about {
-  @extend %centerblock;
+  margin-left: auto;
+  margin-right: auto;
   @extend %contentWidthMargins;
   @include media-query($width-small) {
     @extend %contentReaderMaxWidth;
@@ -128,7 +133,8 @@ main {
   background-color: $color-grey-lightest;
   font-style: italic;
   margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 0;
   padding: $spacing-unit;
-  @extend %centerblock;
 }

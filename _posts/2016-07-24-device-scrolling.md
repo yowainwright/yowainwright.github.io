@@ -15,7 +15,6 @@ featured_image: /assets/js.svg
 ---
 
 Although navigations stuck to the top of browser windows are sometimes scrutinized, their relavance on webpages cannot easily be overlooked. Recently, I was challenged to make some sticky items that were fairly complex so I decided to write a plugin that would work for me & my use cases called [Sticky Bits](https://github.com/yowainwright/sticky-bits).
-{: .first-paragraph }
 
 > `*position: fixed` is a css rule for sticky navigation which positions `html elements` at a fixed point on the page.
 
@@ -57,7 +56,6 @@ Sticky Navigation in my purview became more relavant with an implemenation of [s
 </figure> 
 
 {% highlight javascript %}
-
 	var scrollPosition = 0;
 
 	var scrollDistance = function() {
@@ -70,10 +68,9 @@ Sticky Navigation in my purview became more relavant with an implemenation of [s
 		return scrollPosition = newScrollPosition;
 	};
 	return window.addOnScroll(scrollDistance);
-
 {% endhighlight %}
 
-### Device Fixed Position & Sticky Bits
+## Device Fixed Position & Sticky Bits
 {: #device-fixed-position }
 
 Device sticky items are [very undependable](http://bradfrost.com/blog/mobile/fixed-position/) as many devices don't support `fixed positioning` or only partially support it which often creates a weird lag when a customer is scrolls a page. 
@@ -91,7 +88,6 @@ It seems that fixed position was more supported by IOS a few years ago but suppo
 It was after trying very hard to come up with a solition for fixed position support that I decided to see if making `absolute positioning` work like fixed position could be a solution. It was then that I came on to this [post](https://coderwall.com/p/8rz_7g/how-to-emulate-position-fixed-using-absolute-positioning) which uses css to essentially hijack window scrolling from the window so that elements positioned absolutely can behave in a way similarly to what we'd expect with fixed position. 
 
 {% highlight css %}
-
 	html {
 	  position: absolute;
 	  height: 100%;
@@ -106,7 +102,6 @@ It was after trying very hard to come up with a solition for fixed position supp
 	.fixed {
 	  position: absolute;
 	}
-
 {% endhighlight %}
 
 I've been writing a plugin to accept standard web fixed position patterns as well as device fixed position patterns called [Sticky Bits](https://github.com/yowainwright/sticky-bits). 

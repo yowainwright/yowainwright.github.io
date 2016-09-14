@@ -12,8 +12,6 @@ featured_image: /assets/js.svg
 ---
 
 On Friday, I had the opportunity to go to the first LA Node.js Meetup. It was great. The presentors did a great job. I wrote down notes the best I could but unfortunately there are a few gaps. 
-{: .first-paragraph }
-
 
 The first presentor was a CodeSmith student. His name is Jaret Fowler & he can be found [here](//github.com/10000highfives). He started the project [Webflight](//webflight.io). Webflight's goal is to use BitTorrent in a peer-to-peer format to allow users to host the content of that site. This would mean that as users of the site increased so would the speed of that site.
 
@@ -36,16 +34,14 @@ The third presentor, [Yunong Xiao](//yunong.io/), discsussed *node in production
 
 ## Cliff notes of Node in production
 
-### Summary
-
+**Summary**
 - Website runs on node
 - Built with react
 - Dynamic asset manager
 
-### Debugging
+## Debugging
 
 _lets work the problem & not guessing (Apollo 13)_
-
 
 - Runtime performance
 -- Restify

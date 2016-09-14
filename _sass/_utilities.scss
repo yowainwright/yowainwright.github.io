@@ -1,5 +1,11 @@
 .first-paragraph {
-  @extend %firstParagraph;
+  &:first-letter {
+    font-size: $font-size-largest * 1.5;
+    font-weight: bolder;
+    position: relative;
+    line-height: .75;
+    margin-right: $spacing-unit * .2;
+  }
 }
 .clear-fix-small {
   @include clearfix;

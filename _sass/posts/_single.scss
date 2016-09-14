@@ -1,27 +1,36 @@
+$font-size-super: $font-size-default * 5;
 .post--single {
 	position: relative;
-	@include media-query($width-small) {
-		margin-bottom: $spacing-unit-large;
-	}
+	margin-bottom: $spacing-unit-largest;  
 	.post {
 		&__figure {
 			margin: 0;
+			@include media-query($width-small) {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: $width-medium;
+			}
 		}
 		&__image {
 			max-width: 100% !important;
 		}
 		&__title {
 			background: rgba(0, 0, 0, 0.8);
-			font-size: $font-size-larger;
+			font-size: $font-size-large;
 			max-width: 100%;
 			margin: 0;
 			padding: $spacing-unit;
+			text-align: center;
 			width: 100%;
 			@include middle-align(absolute);
 			@include media-query($width-small) {
 				font-size: $font-size-largest;
 				max-width: $width-default;
-
+			}
+			@include media-query($width-medium) {
+				font-size: $font-size-super;
+				line-height: 1.2;
+				padding: $spacing-unit-medium $spacing-unit-large;
 			}
 		}
 		&__link {

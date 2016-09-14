@@ -1,9 +1,6 @@
 %vertical-rhythm {
   margin-bottom: $spacing-unit-small;
 }
-%pageTitle {
-	@include pageTitle;
-}
 %centerblock {
 	margin-left: auto;
 	margin-right: auto;
@@ -32,10 +29,6 @@
     line-height: .75;
     margin-right: $spacing-unit * .2;
   }
-}
-%meta {
-	font-size: $font-size-small;
-  font-weight: bold;
 }
 %blockquote {
 	border-left: 4px solid $color-grey-light;

@@ -14,7 +14,6 @@ redirect_from:
 ---
 
 The _**this**_ keyword in Javascript is something that has often confused me, especial which object it is attached to. I've realized trying to explain it a few times that it's difficult to explain.
-{: .first-paragraph }
 
 The _this_ keyword is a parameter that gets bound to an object. That parameter this is determined by how a function of method is called. It behaves almost exactly like a normal parameter.
 

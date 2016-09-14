@@ -16,7 +16,6 @@ redirect_from:
 ---
 
 JavaScript [Objects](//developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects) are used to store information called properties with values AND code blocks that do stuff (functions) which are called methods.
-{: .first-paragraph }
 
 In this post I'm going to explore JavaScript Objects from a simple object to a bit more complex object which can be called a [class](//developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript) (although JavaScript didn't officially have classes until [ECMA6](//developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes))
 
@@ -26,7 +25,7 @@ The classic JavaScript Object example that I've seen across the internet is the 
 
 Re-iterating a bit, JavaScript Objects are used to store information & re-usable blocks of code. So, getting started with a Car Object - I'll create basic care properties & values with a method to define the properties & functions of a car.
 
-### 1. Writing a basic object
+## 1. Writing a basic object
 
 {% highlight javascript %}
 var car = {
@@ -64,14 +63,13 @@ console.log(car, van);
 var car = 0;
 console.log(car);
 // & crap, now setting the variable car to 0 - we just overwrote the object.
-
 {% endhighlight %}
 
 Live [code](//codepen.io/yowainwright/pen/6880faa269c6a2efc627943fccdb9085).
 
 From the last example above, we can see that writing out all of those objects like that would be difficult. Also, we can see that we can/could just re-assign the variable which defines the object & the entire object would be re-defined.
 
-### 2. Prototype Chains
+## 2. Prototype Chains
 
 After seeing a basic Javascript Object & seeing where it can fail & where it can become very repetitious we can begin to understand why more complex objects are more important.
 1. We should always try to keep our code [DRY](//code.tutsplus.com/tutorials/3-key-software-principles-you-must-understand--net-25161) (not repeating).
@@ -79,7 +77,7 @@ After seeing a basic Javascript Object & seeing where it can fail & where it can
 
 Prototype Chains, deal with the first issue - keep things DRY.
 
-#### Generally be aware of these things while reading this post or building objects
+## Generally be aware of these things while reading this post or building objects
 
 **Object.create** is used to copy another object
 - After Object.create is used, if an object DOES NOT have a property it will go to the original object to see if that object has the property.
@@ -123,7 +121,7 @@ Live [code](//codepen.io/yowainwright/pen/cd51d0d430c6dd567cd42670d4429565).
 
 So, in summary of Prototype Chains - they save us some time by allowing us to copy Objects & there properties but the still do not resolve the first issue - the original Object can be overwritten if it is assigned to a new value.
 
-### 3. Object Decorator Pattern
+## 3. Object Decorator Pattern
 
 The Object Decorator takes in an object & adds properties or methods to it. It's common to use adjectives (see below for reference, note the name _descriptive_).
 
@@ -139,7 +137,7 @@ var descriptive = function(obj, num) {
 
 **Important Note:** Notice in the example above that _obj_ is used where we could seemingly use the key word _this_. The reason why _obj_ was used is because of the _execution context_. If _this_ was used we would keep recreating the function descriptiveCount every time a new instance of the _descriptive_ object.
 
-### 4. Functional Classes
+## 4. Functional Classes
 
 A simple summation of a JavaScript Class is a function that can create similar Objects.
 
@@ -188,7 +186,7 @@ AClass.methods = {
 - The example above demonstrates how to add a method to a class without duplicating the method within the execution context every times a new instance is created.
 - **Note**: we could use extends to extend the methods of the _AClass (from the example above)_ or a _Class_ but this is not provided natively in JavaScript.
 
-### 5. Prototypal Classes
+## 5. Prototypal Classes
 
 Prototypal Classes can be used instead of _extends_ or (from the last example above) _obj.methods = AClass.methods;_ to store all methods of a _class_.
 
@@ -208,7 +206,7 @@ var aNewClass = AClass(1);
 aNewClass.addOne();
 {% endhighlight %}
 
-### 6. Pseudo-classical Classes
+## 6. Pseudo-classical Classes
 
 The difference between Pseudo-classical Classes & Prototypal Classes is that the _new_ key word to instansiate a new object so we no longer need to return the Object or use _Object.create()_. See the example below for reference.
 
@@ -226,7 +224,7 @@ var aNewClass = new AClass(1);
 aNewClass.addOne();
 {% endhighlight %}
 
-### 7. Super-Classes & Sub-Classes
+## 7. Super-Classes & Sub-Classes
 
 _**Sub-Classes**_ & _**Super-Classes**_ give the power for objects to share classes but be different.
 
@@ -258,7 +256,7 @@ _**Sub-Classes**_ & _**Super-Classes**_ give the power for objects to share clas
   cop.call();
 {% endhighlight %}
 
-### 8. Super-Class, Sub-Class & Pseudo Classical Sub-Classes
+## 8. Super-Class, Sub-Class & Pseudo Classical Sub-Classes
 
 {% highlight javascript %}
   var Car = function(loc) {
@@ -286,31 +284,3 @@ _**Sub-Classes**_ & _**Super-Classes**_ give the power for objects to share clas
 
 As I was preparing through this post I was gathering information from various sources but was mainly following the instruction of [UdaCity's JS OOP Course](//www.udacity.com/course/object-oriented-javascript--ud015).
 {: .first-paragraph }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

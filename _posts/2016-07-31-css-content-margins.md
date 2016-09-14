@@ -15,7 +15,6 @@ redirect_from:
 ---
 
 I used to (& I'm not the only one) write css margins properties on containers of html elements to contain their widths on small viewports. If you're not aware, _container_ is technical term when talking about html & css that is used to describe an html element that "contains" other html elements. I try to avoid the pattern (of containing elements) by placing a `max width` on individual elements within a content area. In this post I'll describe in detail what I used to do, the solution I used more recently & what I'm doing now. 
-{: .first-paragraph }
 
 First, to go into more detail if I've already confused you _(sorry)_, I'll more clearly describe what I see as the problem. When creating content blocks for webpages, widths are set so that the reader line length doesn't get to long. For smaller browser views, like on mobile devices, space to the left & right of content areas are set so that text doesn't extend the full width of the browser width or, worse yet - extend out of the browser so that the text can't be read. 
 

@@ -9,7 +9,6 @@ featured_image: /assets/hb/hb.jpg
 ---
 
 A year ago I was not able to be with one of my dear friends on their birthday so I made this.
-{: .first-paragraph }
 
 _This_ being posed images of myself to make each letter for the word _Happy Birthday_.
 

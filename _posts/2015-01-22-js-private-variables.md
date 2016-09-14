@@ -16,7 +16,6 @@ redirect_from:
 ---
 
 Creating private information, meaning variables, properties/property values, function, methods in JavaScript is an important concept for storing information that can't be overwritten.
-{: .first-paragraph }
 
 ## What does _private_ mean?
 
@@ -75,18 +74,15 @@ newSaga();
 **Which renders the result of:**
 
 {% highlight javascript %}
-
 1 3 2
 1 4 2
 1 6 5
 1 7 5
-
 {% endhighlight %}
 
 After a little understand of the concept for the above task, I was able to render the result fairly easily. Then my boss threw in what he called a wrinkle. He put in a check that sets `num` to be the letter `a`.
 
 {% highlight javascript %}
-
 var theNumber = 1;
 
 var aHero = function() {
@@ -119,19 +115,16 @@ var newSaga = function() {
 };
 newSaga();
 newSaga();
-
 {% endhighlight %}
 
 **The code abe renders this result:**
 
 {% highlight javascript %}
-
 NaN NaN NaN
 NaN NaN NaN
 NaN NaN NaN
 NaN NaN NaN
 NaN NaN NaN
-
 {% endhighlight %}
 
 My boss then asked me to, without changing anything inside of the parent, `NewSaga()` function, render the original result which was honestly very challenging for me.
@@ -139,7 +132,6 @@ My boss then asked me to, without changing anything inside of the parent, `NewSa
 This is what I came up with with some help.
 
 {% highlight javascript %}
-
 var incrementProvider = function() {
   var num = 1;
   var addTheNumber = function() {
@@ -182,7 +174,6 @@ var newSaga = function() {
 };
 newSaga();
 newSaga();
-
 {% endhighlight %}
 
 Live [code](//codepen.io/yowainwright/pen/14c4a193a20462b0b7c23a8b3128bc2d)
@@ -190,8 +181,6 @@ Live [code](//codepen.io/yowainwright/pen/14c4a193a20462b0b7c23a8b3128bc2d)
 **And this is what my boss came up with:**
 
 {% highlight javascript %}
-
-
 var GeneratorClass = function() {
   var inside = 1;
   var numberGenerator = function() {
@@ -228,7 +217,6 @@ var newSaga = function() {
 };
 newSaga();
 newSaga();
-
 {% endhighlight %}
 
 Live [code](http://codepen.io/scottlaplante/pen/RryKEe)

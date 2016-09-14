@@ -15,7 +15,6 @@ redirect_from:
 ---
 
 Javascript Closures are bundles of code or inner functions that have access to outer functions & variables. IT IS THAT SIMPLE! But, understanding why they’re so important quickly become pretty complex.
-{: .first-paragraph }
 
 ## JavaScript Closure by Example
 

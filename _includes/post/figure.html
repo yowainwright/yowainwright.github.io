@@ -4,7 +4,7 @@
   	<img class="post__image" src="{{post.featured_image}}" alt="{{ post.title }}" />
   </a>
   {% else %}
-  	<img class="post__image" src="{{page.featured_image}}" alt="{{ page.title }}" />
+  	<img class="post__image post__image--featured" src="{{page.featured_image}}" alt="{{ page.title }}" />
   {% endif %}
   {% if page.featured_caption %}
   <figcaption class="post__caption">{{ page.featured_caption }}</figcaption>
