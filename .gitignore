@@ -1,10 +1,8 @@
 .sass-cache
-.codekit-cache
 bower_components
 bower_components/*
 node_modules
 node_modules/*
 _site
 _site/*
-config.codekit
 

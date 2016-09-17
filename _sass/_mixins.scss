@@ -1,9 +1,0 @@
-@mixin pageTitle {
-  font-family: $font-family-serif-other;
-	font-size: $font-size-large;
-  line-height: 1.25;
-  margin: 0;
-  @include media-query($width-default) {
-    font-size: $font-size-largest;
-  }
-}

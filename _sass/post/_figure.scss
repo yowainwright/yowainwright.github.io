@@ -18,6 +18,7 @@
 	}
 	&__image {
 		.post--feature-image-aside & {
+			border-radius: 100%;
 			float: right;
 		}
 	}

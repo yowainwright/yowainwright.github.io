@@ -1,5 +1,8 @@
 .site-footer {
+  border-top: 1px solid $color-grey-lighter;
   clear: both;
+  margin: 0 auto;
+  max-width: $spacing-unit * 1180 / $conversion-number;
   overflow: hidden;
   text-align: center;
   &__content,
@@ -11,7 +14,7 @@
     border-top: 1px solid $color-grey-lightest;
     margin-left: auto;
     margin-right: auto;
-    @extend %contentWidthMargins;
+    max-width: calc(100% - #{$spacing-unit-large});
     @include media-query($width-small) {
       border-top: 0;
       display: table;
@@ -38,8 +41,8 @@
       padding: $spacing-unit-small $spacing-unit;
     }
   }
-  .site-footer__link {
-    text-transform: uppercase;
+  &__link {
+    font-style: italic;
   }
   svg {
     height: $spacing-unit-large;

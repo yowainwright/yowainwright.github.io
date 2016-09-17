@@ -3,12 +3,10 @@
 ---
 @charset "utf-8";
 
-@import "components/mixins";
+@import "../node_modules/sassimple/mixins/_sassimple.scss";
 
 @import
   "variables",
-  "mixins",
-  "extends",
   "base",
   "utilities",
   "nav",

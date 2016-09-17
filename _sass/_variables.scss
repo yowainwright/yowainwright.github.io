@@ -1,3 +1,4 @@
+$conversion-number: 16;
 // fonts
 $font-family-default: systrem, -apple-systrem, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
 $font-family-serif: 'Playfair Display', Times, sans-serif;
@@ -13,11 +14,11 @@ $font-weight-bold: 800;
 
 // font sizes
 $font-size-default: 1rem !default;
-$font-size-medium: $font-size-default * 1.25;
 $font-size-small: $font-size-default * .8;
-$font-size-large: $font-size-default * 2;
-$font-size-larger: $font-size-default * 2.5;
-$font-size-largest: $font-size-default * 3;
+$font-size-medium: $font-size-default * 1.25;
+$font-size-large: $font-size-default * 1.5;
+$font-size-larger: $font-size-default * 1.75;
+$font-size-largest: $font-size-default * 2;
 
 // colors
 // greys
@@ -54,7 +55,7 @@ $spacing-unit-largest: $spacing-unit * 4;
 $width-default: $spacing-unit * 800 / 16 !default;
 $width-reader: $spacing-unit * 700 / 16 !default;
 // breakpoints
-$width-wide: $screen-lg;
+$width-large: $screen-lg;
 $width-medium: $screen-md;
 $width-small: $screen-sm;
 $calc-max-width: calc(#{$width-default} - #{$spacing-unit} * 2);

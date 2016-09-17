@@ -34,7 +34,9 @@ ol,
 header {
   margin-left: auto;
   margin-right: auto;
-  @extend %contentReaderMaxWidth;
+  @include media-query($width-small) {
+    max-width: $width-reader;
+  }
 }
 iframe,
 code,
@@ -43,7 +45,9 @@ blockquote,
 table {
   margin-left: auto;
   margin-right: auto;
-  @extend %contentDefaultMaxWidth;
+  @include media-query($width-small) {
+    max-width: $width-default;
+  }
 }
 h1, 
 h2, 
@@ -60,13 +64,17 @@ h6 {
   }
 }
 h1 {
-  @include pageTitle;
+  font-family: $font-family-serif-other;
+  font-size: $font-size-large;
+  line-height: 1.25;
+  margin: 0;
+  @include media-query($width-default) {
+    font-size: $font-size-largest;
+  }
 }
 blockquote {
   border-left: 4px solid $color-grey-lightest;
   clear: both;
-  font-size: $font-size-medium;
-  font-style: italic;
   margin-bottom: $spacing-unit-large;
   margin-top: $spacing-unit-large;
   max-width: calc(100% - #{$spacing-unit-large});
@@ -75,8 +83,14 @@ blockquote {
     max-width: $width-reader;
   }
   p {
-    margin: 0;
+     margin: 0;
   }
+}
+
+blockquote,
+blockquote p {
+  font-size: $font-size-large;
+  font-style: italic;
 }
 iframe {
   display: block;
@@ -85,7 +99,7 @@ iframe {
 }
 pre,
 code {
-  border: .5px solid $color-grey-lighter;
+  border: #{$spacing-unit * .2 / $conversion-number} solid $color-grey-lighter;
   border-radius: $spacing-unit * 3 / 16;
   background-color: $color-grey-lightest;
 }
@@ -94,7 +108,7 @@ pre {
   overflow-x: scroll;
 }
 code {
-  padding: $spacing-unit-small;
+  padding: $spacing-unit * .3 / $conversion-number;
   pre & {
     border: 0;
     border-radius: 0;
@@ -113,10 +127,9 @@ main {
 .page--about {
   margin-left: auto;
   margin-right: auto;
-  @extend %contentWidthMargins;
+  max-width: calc(100% - #{$spacing-unit-large});
   @include media-query($width-small) {
-    @extend %contentReaderMaxWidth;
-
+    max-width: $width-reader;
   }
   h1 {
     margin-bottom: $spacing-unit-large;
@@ -131,6 +144,7 @@ main {
 }
 .site-header__content {
   background-color: $color-grey-lightest;
+  font-size: $font-size-default;
   font-style: italic;
   margin-bottom: 0;
   margin-left: auto;
