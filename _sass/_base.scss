@@ -10,10 +10,37 @@ body {
   color: $text-color;
   -webkit-text-size-adjust: 100%;
 }
-img {
-  display: block;
+hr,
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+header,
+img,
+iframe,
+code,
+pre,
+blockquote,
+table {
   margin-left: auto;
   margin-right: auto;
+}
+img {
+  display: block;
+}
+figure {
+  margin: 0 auto;
 }
 hr,
 h1, 
@@ -32,8 +59,7 @@ p,
 ul,
 ol,
 header {
-  margin-left: auto;
-  margin-right: auto;
+  max-width: calc(100% - #{$spacing-unit-large});
   @include media-query($width-small) {
     max-width: $width-reader;
   }
@@ -43,11 +69,17 @@ code,
 pre,
 blockquote,
 table {
-  margin-left: auto;
-  margin-right: auto;
   @include media-query($width-small) {
     max-width: $width-default;
   }
+}
+h2,
+ul,
+ol {
+  margin-bottom: $spacing-unit;
+}
+li {
+  margin-bottom: $spacing-unit-smallest;
 }
 h1, 
 h2, 
@@ -72,21 +104,41 @@ h1 {
     font-size: $font-size-largest;
   }
 }
+p, 
+li {
+  font-family: $font-family-serif;
+  font-size: $font-size-default;
+  line-height: 2.2;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  max-width: calc(100% - #{$spacing-unit-large});
+  @include media-query($width-small) {
+    max-width: $width-reader;
+  }
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline; 
+  }
+}
 blockquote {
   border-left: 4px solid $color-grey-lightest;
   clear: both;
-  margin-bottom: $spacing-unit-large;
-  margin-top: $spacing-unit-large;
+  margin-bottom: $spacing-unit;
+  margin-top: $spacing-unit;
   max-width: calc(100% - #{$spacing-unit-large});
   padding: $spacing-unit-small $spacing-unit;
   @include media-query($width-small) {
+    margin-bottom: $spacing-unit-large;
+    margin-top: $spacing-unit-large;
     max-width: $width-reader;
   }
   p {
      margin: 0;
   }
 }
-
 blockquote,
 blockquote p {
   font-size: $font-size-large;
@@ -117,6 +169,7 @@ code {
 ul,
 ol {
   clear: both;
+  padding-left: 1rem;
 }
 main {
   padding: 0 0 $spacing-unit;
@@ -142,13 +195,21 @@ main {
     margin: 0;
   }
 }
-.site-header__content {
+.site-header {
+  max-width: none;
   background-color: $color-grey-lightest;
-  font-size: $font-size-default;
-  font-style: italic;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  padding: $spacing-unit;
+  @include media-query($width-small) {
+    max-width: $width-reader;
+  }
+  &__content {
+    font-size: $font-size-default;
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none;
+    margin-top: 0;
+    padding: $spacing-unit;
+  }
 }

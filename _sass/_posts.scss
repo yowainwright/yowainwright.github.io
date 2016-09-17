@@ -5,6 +5,14 @@
 	}
 	.post {
 		@include micro-clearfix;	
+		&:first-of-type {
+			.post__title {
+				border-top: none;
+				@include media-query($width-medium) {
+					border-top: 1px solid $color-grey-lightest;
+				}
+			}
+		}
 		&__figure {
 			margin: 0;
 		}
@@ -18,7 +26,6 @@
 		&__header {
 			margin-bottom: $spacing-unit-medium;
 		}
-		&__title,
 		&__content {
 			margin-left: auto;
 			margin-right: auto;	
@@ -26,8 +33,17 @@
 				max-width: $width-reader;
 			}
 		}
+		&__meta,
 		&__title {
-			margin-bottom: $spacing-unit-small;
+			max-width: none;
+		}
+		&__title {
+			border-top: 1px solid $color-grey-lightest;
+			padding-top: $spacing-unit-small;
+			margin-bottom: 0;
+			@include media-query($width-small) {
+				margin-bottom: $spacing-unit-small;
+			}
 			a {
 				color: black;
 			}
@@ -43,15 +59,6 @@
 			color: black;
 			&:hover {
 				text-decoration: underline;
-			}
-		}
-		&__date {
-			font-family: $font-family-serif;
-			margin-left: auto;
-			margin-right: auto;
-			max-width: calc(100% - #{$spacing-unit-large});
-			@include media-query($width-small) {
-				max-width: $width-reader;
 			}
 		}
 	}

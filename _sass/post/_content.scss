@@ -1,36 +1,14 @@
 .post {
-	&--about {
-		.post__content {
-			h2,
-			ul,
-			ol {
-				margin-bottom: $spacing-unit;
-			}
-			li {
-				margin-bottom: $spacing-unit-small;
-			}
-		}
-	}
 	&__content {
-		h1,  
-		h2,
-		h3,
-		h4,
-		ul,
-		ol {
-			margin-left: auto;
-			margin-right: auto;
-			max-width: calc(100% - #{$spacing-unit-large});
-			@include media-query($width-small) {
-				max-width: $width-reader;
-			}
-		}
 		h2,
 		h3 {
 			border-bottom: 1px solid $color-grey-lightest;
 			margin-bottom: 0;
 			margin-top: $spacing-unit-large;
 			padding-bottom: $spacing-unit;
+			.post--about & {
+				margin-bottom: $spacing-unit;
+			}
 			@include media-query($width-small) {
 				margin-top: $spacing-unit-largest;
 			}
@@ -39,32 +17,11 @@
 		ol {
 			margin-bottom: $spacing-unit;
 			margin-top: $spacing-unit;
-			li {
-				font-size: $font-size-medium;
-				@include media-query($width-small) {
-					font-size: $font-size-medium * 1.2;
-				}
-			}
 			li > p {
 				margin-bottom: 0;
 			}
 		}
-		figure {
-			margin: 0;
-		}
-		img {
-			max-width: 100% !important;
-			margin-bottom: $spacing-unit;
-			margin-top: $spacing-unit;
-			@include media-query($width-small) {
-				margin-bottom: $spacing-unit-large;
-				margin-top: $spacing-unit-large;
-			}
-			@include media-query($width-medium) {
-				margin-bottom: $spacing-unit-largest;
-				margin-top: $spacing-unit-largest;
-			}
-		}
+		img, 
 		iframe {
 			margin-bottom: $spacing-unit;
 			margin-top: $spacing-unit;
@@ -78,7 +35,7 @@
 			}
 		}
 		.post__image--featured {
-			margin: 0;
+			margin: 0 auto;
 		}
 		.post--feature-image-aside & {
 			margin-left: auto;
@@ -96,24 +53,6 @@
 			@include media-query($width-small) {
 				margin-bottom: $spacing-unit-largest;
 			}
-		}
-	}
-	p {
-		font-family: $font-family-serif;
-		font-size: $font-size-default;
-		line-height: 2.2;
-		margin-left: auto;
-		margin-right: auto;
-  	margin-top: 0;
-		max-width: calc(100% - #{$spacing-unit-large});
-		@include media-query($width-small) {
-			max-width: $width-reader;
-		}
-	}
-	a {
-		text-decoration: none;
-		&:hover {
-			text-decoration: underline;	
 		}
 	}
 }

@@ -6,17 +6,18 @@
 			margin-bottom: $spacing-unit-largest;
 		}
 	}
+	&__title,
+	&__meta {
+		max-width: none;
+	}
 	&__title {
 		font-size: $font-size-large;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: calc(100% - #{$spacing-unit-large});
 		@include media-query($width-small) {
 			font-size: $font-size-largest;
 			max-width: $width-reader;
 		}
 	}
-	.post__meta {
+	&__meta {
 		font-size: $font-size-small;
   	font-weight: bold;
 	}

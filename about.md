@@ -11,7 +11,7 @@ redirect_from:
 
 ## Hello, I'm Jeff - a user interface specialist & frontend engineer 
 
-When I’m not working, I try to be an active member of the design & developer community, especially JavaScript. I also enjoy teaching what I know & learning as much as possible. I ride road bikes run & run a lot. I try to surf & still skateboard everyday.
+When I’m not working, I try to be an active member of the design & developer community, especially JavaScript. I also enjoy teaching what I know & learning as much as possible. I ride road bikes & run a lot. I try to surf & still skateboard everyday.
 
 ## Experience
 

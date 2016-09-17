@@ -55,7 +55,7 @@ $width-medium-large: $spacing-unit * 1000 / $conversion-number;
 			max-width: calc(35% - #{$spacing-unit * 110 / $conversion-number});
 		}
 		@include media-query($width-large) {
-			max-width: calc(30% - #{$spacing-unit * 110 / $conversion-number});
+			max-width: calc(29% - #{$spacing-unit * 110 / $conversion-number});
 		}
 	}
 	&__featured-content {
@@ -178,6 +178,7 @@ $width-medium-large: $spacing-unit * 1000 / $conversion-number;
 		letter-spacing: .25px;
 		line-height: 1.75;
 		margin: 0;
+		max-width: none;
 		padding-left: $spacing-unit-small;
 	}
 }
