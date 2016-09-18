@@ -95,20 +95,27 @@ h6 {
     }
   }
 }
-h1 {
+h1, 
+h2,
+h3 {
   font-family: $font-family-serif-other;
-  font-size: $font-size-large;
   line-height: 1.25;
+}
+h1 {
+  font-size: $font-size-large;
   margin: 0;
   @include media-query($width-default) {
     font-size: $font-size-largest;
   }
 }
+h2,
+h3 {
+  font-size: $font-size-medium;
+}
 p, 
 li {
   font-family: $font-family-serif;
   font-size: $font-size-default;
-  line-height: 2.2;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
@@ -116,6 +123,16 @@ li {
   @include media-query($width-small) {
     max-width: $width-reader;
   }
+}
+p {
+  line-height: 2.2;
+}
+li {
+  margin-bottom: $spacing-unit-small;
+}
+li,
+li p {
+  line-height: 1.5;
 }
 a {
   text-decoration: none;
@@ -141,7 +158,8 @@ blockquote {
 }
 blockquote,
 blockquote p {
-  font-size: $font-size-large;
+  color: $color-grey;
+  font-size: $font-size-medium;
   font-style: italic;
 }
 iframe {

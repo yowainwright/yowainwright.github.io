@@ -10,6 +10,7 @@
     &:before {
       content: 'Share this post';
       display: block;
+      font-size: $font-size-default;
       font-style: italic;
       margin-bottom: $spacing-unit;
     }
