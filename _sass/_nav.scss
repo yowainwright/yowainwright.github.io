@@ -1,3 +1,4 @@
+$width-small-pre-small: $spacing-unit * 420 / $conversion-number;
 $width-small-very-small: $spacing-unit * 500 / $conversion-number;
 $width-small-small: $spacing-unit * 670 / $conversion-number;
 $width-small-medium: $spacing-unit * 825 / $conversion-number;
@@ -59,11 +60,15 @@ $width-medium-large: $spacing-unit * 1000 / $conversion-number;
 		}
 	}
 	&__featured-content {
-		@include prefix(display, flex, webkit ms moz);
+		float: right;
 		padding: 0 $spacing-unit;
-		width: calc(100% - #{$spacing-unit * 110 / $conversion-number});
 		vertical-align: middle;
+		@include prefix(display, flex, webkit ms moz);
 		@include micro-clearfix;
+		@include media-query($width-small-pre-small) {
+			float: auto; 
+			width: calc(100% - #{$spacing-unit * 110 / $conversion-number});
+		}
 		@include media-query($width-small-medium) {
 			float: right;
 			max-width: 70%;
@@ -78,10 +83,13 @@ $width-medium-large: $spacing-unit * 1000 / $conversion-number;
 	&__posts,
 	&__about {
 		margin-top: $spacing-unit;
+		max-width: 50%;
 		position: relative;
-		width: 100%;
 		vertical-align: middle;
 		@include micro-clearfix;
+		@include media-query($width-small-pre-small) {
+			width: 100%;
+		}
 		&:before {
 			border-top: 2px solid black;
 			bottom: -$spacing-unit-small;
@@ -102,7 +110,9 @@ $width-medium-large: $spacing-unit * 1000 / $conversion-number;
 	&__about {
 		display: table;
 		margin-right: $spacing-unit * 1.5;
-		max-width: 20%;
+		@include media-query($width-small-pre-small) {
+			max-width: 20%;
+		}
 		@include media-query($width-small-very-small) {
 			max-width: 50%;
 		}
@@ -124,7 +134,9 @@ $width-medium-large: $spacing-unit * 1000 / $conversion-number;
 	}
 	&__posts {
 		display: table;
-		max-width: 80%;
+		@include media-query($width-small-pre-small) {
+			max-width: 80%;
+		}
 		@include media-query($width-small-very-small) {
 			max-width: 50%;
 		}
@@ -136,6 +148,12 @@ $width-medium-large: $spacing-unit * 1000 / $conversion-number;
 		}
 		&:before {
 			content: 'recent';
+		}
+		.site-nav__title--post {
+			display: none;
+			@include media-query($width-small-pre-small) {
+				display: block;
+			}
 		}
 	}
 	&__post {
