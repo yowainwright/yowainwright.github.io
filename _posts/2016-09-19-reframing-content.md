@@ -11,24 +11,37 @@ share_image: /assets/reframing-content/aspect-ratio.jpg
 featured_image: /assets/js.svg
 ---
 
-There are unique challenges for developers working with content generated from a [CMS](https://en.wikipedia.org/wiki/Content_management_system) (Content Management System) like [wordpress](https://wordpress.com/). The most meaningful part of the webpage, the content, is a *_largely unknown_ thing. It's created by an author that both expects the rendered content to convey their message but also the message of the site as a whole. A very important thing to present well on a content site is _embedded content_.
+There are unique challenges for developers working with content. The reason: the most meaningful part of the webpage, the content, is a **largely unknown** thing. Content is created by an author that both expects it to convey their message but also the message of the site as a whole. A very important thing to present well on a content site is _embedded content_.
+
+> The most meaningful part of the webpage, the content, [can be] a largely unknown thing
 
 ## Rendering unknown content
 
-The reason why content is _**largely unknown**_ is because the author puts images, text, embeds & other things into a text field in a CMS & then that content goes through a *_process_ that displays the content on a webpage. The _**process**_ of rendering content from an editor to a webpage means that the CMS often adds or removes things with the goal to make the content look as nice as possible. To best support this process, a developer has to write code to be both hands off but aware of the content.
+The reason why content is **largely unknown** is because the author puts images, text, embeds & other things somewhere & then that goes through a **process** that displays the content on a webpage. The process of rendering content to a webpage means that often things are added or removed in an attempt to make it stuff look awesome. To best support this **process**, a developer has to write code to be both hands off & aware.
 
 ## Reframing Content
 
-When writing great content, authors use many tools to describe & captivate readers. Sometimes content that is great for conveying content does not translate well - so we need to **reframe** it. This is where _**reframe.js**_ comes into play. Reframe.js, wraps embedded content so that it is a perfect ratio of what it was original but at an appropriate width for the content. Specifically, this ratio is called an [intrinsic ratio](http://alistapart.com/article/creating-intrinsic-ratios-for-video). 
+When writing great content, authors use many tools to describe & captivate readers. Sometimes content that is great for conveying content does not translate well - so we need to **reframe** it. This is where **[reframe.js](https://dollarshaveclub.github.io/reframe.js/)** comes into play. Reframe.js, wraps embedded content in a perfect ratio of what it was originally there but at an appropriate width for the content. Specifically, this ratio is called an **[intrinsic ratio](http://alistapart.com/article/creating-intrinsic-ratios-for-video)**. 
 
 <p data-height="380" data-theme-id="0" data-slug-hash="qaaGYV" data-default-tab="result" data-user="yowainwright" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/yowainwright/pen/qaaGYV/">Intrinsic Ratio Animation</a> by Jeff Wainwright (<a href="http://codepen.io/yowainwright">@yowainwright</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-Videos, playlists, podcasts & even more are often embedded. Embedded content is written, writely so, to best commincate _**it's**_ content which often means it has a `fixed` height & width. This is I wrote [Reframe.js](https://github.com/dollarshaveclub/reframe.js) while working on a new product for Dollar Shave Club, with the support from my team, [@dscengineering](https://twitter.com/dscengineering). 
+Videos, playlists, podcasts & are examples of things that are usually embedded content. Embedded content is written, writely so, to best commincate **it's** content well which often means it has a `fixed` height & width. [Reframe.js](https://github.com/dollarshaveclub/reframe.js) was written to address this issue of reframing embedded at the appropriate size for the content.
 
-Previous to writing this plugin, I used [FitVids](http://fitvidsjs.com/). FitVids is a great plugin for solving reframing embedded content. It's written by 2 of my idols, [Chris Coyier](http://chriscoyier.net/) & [Dave Ruppert](http://daverupert.com/). The reason that **Reframe.js** was originally made was because it doesn't require [jQuery](http://jquery.com/). It doesn't assume your reframing just videos & offers a css mixin to or support things which can make your dom a bit cleaner. It leaves those assumutions to the developer which could be better for their case - debatedly. This makes the code lighter & also allows the jquery plugin to be shaken out with [Tree shaking](https://medium.com/@Rich_Harris/tree-shaking-versus-dead-code-elimination-d3765df85c80#.ccnp22e5f).
+## Why
 
-The 1 option supported is the ability to add your own css class. This is so that the end result of using **reframe.js** on a webpage can be next to 0 (1 inline style added for the intersic ratio). The plugin can be used as jQuery plugin but if you enable tree shaking even that bit of code (5 lines) will be dropped in your build if you don't use **reframe.js** as a jQuery plugin. 
+Previous to writing this plugin, I used [FitVids](http://fitvidsjs.com/). FitVids is a great plugin for solving reframing embedded content. It's written by 2 of my idols, [Chris Coyier](http://chriscoyier.net/) & [Dave Ruppert](http://daverupert.com/). The reason that **Reframe.js** was originally made was because it doesn't require [jQuery](http://jquery.com/). 
+It also: 
+
+1. doesn't assume your reframing just videos, 
+2. offers a css mixin rather than inlining css which can make your dom (html) cleaner 
+3. & the jquery plugin is written in such a way that if unused - it can be shaken out with [Tree shaking](https://medium.com/@Rich_Harris/tree-shaking-versus-dead-code-elimination-d3765df85c80#.ccnp22e5f).
+
+These things make the code lighter initially.
+
+## Option-s-
+
+The 1 option supported is the ability to add your own css class. This is so that the end result of using **reframe.js** on a webpage _can be_ next to 0 imprint on your webpage (1 inline style added for the intersic ratio). This makes reframe hands off & engineers can be hands on. The plugin **can** be used as jQuery plugin but if you enable tree shaking even that bit of code (5 lines) will be dropped in your build if you don't use **reframe.js** as a jQuery plugin. 
 
 **Reframe.js's** simplicity in both language & options is meant to make the plugin easy to understand & easy to write code to support _**your**_ products end goal. 
 
@@ -69,7 +82,7 @@ div.appendChild(frame);
 
 {% endhighlight %}
 
-Add padding to create our intrinsic ratio.
+Add padding to create an intrinsic ratio.
 
 {% highlight javascript %}
 
