@@ -57,7 +57,7 @@ In this sass mixin, we're assuming that the aspect ratio is 16:9 but we can over
 
 **JavaScript**
 
-1. Wrap a selected element in a `div`.
+Wrap a selected element in a `div`.
 
 {% highlight javascript %}
 
@@ -69,7 +69,7 @@ div.appendChild(frame);
 
 {% endhighlight %}
 
-2. Add padding to create our intrinsic ratio.
+Add padding to create our intrinsic ratio.
 
 {% highlight javascript %}
 
@@ -81,7 +81,7 @@ div.style.paddingTop = padding + '%';
 
 {% endhighlight %}
 
-3. Make a plugin for jQuery or zepto.
+Make a plugin for jQuery or zepto.
 
 {% highlight javascript %}
 
@@ -95,7 +95,7 @@ if (window.$) {
 
 {% endhighlight %}
 
-4. Add a check to the top of the plugin which allows us to select the element to reframe with jquery _or_ vanilla js (Kodos to one of my mentors, [Jacob Kelly](http://jakiestfu.com/) especially here)
+Add a check to the top of the plugin which allows us to select the element to reframe with jquery _or_ vanilla js (Kodos to one of my mentors, [Jacob Kelly](http://jakiestfu.com/) especially here)
 
 {% highlight javascript %}
 
