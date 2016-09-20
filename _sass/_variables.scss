@@ -1,8 +1,8 @@
 $conversion-number: 16;
 // fonts
-$font-family-default: systrem, -apple-systrem, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-$font-family-serif: 'Playfair Display', Times, sans-serif;
-$font-family-serif-other: $font-family-serif;
+$font-family-default: sans-serif;
+$font-family-serif: $font-family-default;
+$font-family-serif-other: $font-family-default;
 
 // line height
 $line-height-default: 1.5;

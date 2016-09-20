@@ -86,8 +86,10 @@ h2,
 h3, 
 h4, 
 h5, 
-h6 {
-  font-weight: normal;
+h6,
+b,
+strong {
+  font-weight: bold;
   a {
     text-decoration: none;
     &:hover {
@@ -116,6 +118,7 @@ p,
 li {
   font-family: $font-family-serif;
   font-size: $font-size-default;
+  font-weight: lighter;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
