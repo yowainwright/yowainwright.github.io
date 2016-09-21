@@ -11,11 +11,11 @@ share_image: /assets/reframing-content/aspect-ratio.jpg
 featured_image: /assets/js.svg
 ---
 
-The most meaningful part of the webpage, the content, can be a largely unknown thing. Authors create content & in one place & expect it to render well in another. Embedded content adds another level of complexity to this process.
+The most meaningful part of the webpage, the content, can be a largely unknown thing. Authors create content in one place & expect it to render well in another. Embedded content adds another level of complexity to this process.
 
 ## Reframing Content
 
-Embedded content, like videos, images, podcasts & tweets often do not translate well to a fluid webpage - so we need to reframe them. This is what **[Reframe.js](https://dollarshaveclub.github.io/reframe.js/)** does. It wraps embedded content in a perfect ratio (an [intrinsic ratio](http://alistapart.com/article/creating-intrinsic-ratios-for-video)) of the original embed but with styling for fluid sizing. 
+Embedded content, like videos, images, podcasts & tweets often do not translate well to a fluid webpage - so we need to reframe them. This is what **[Reframe.js](https://dollarshaveclub.github.io/reframe.js/)** does. It wraps embedded content in a perfect ratio (an [intrinsic ratio](http://alistapart.com/article/creating-intrinsic-ratios-for-video)) of the original embed but with fluid sizing so that the embedded content looks great at any size.
 
 <p data-height="380" data-theme-id="0" data-slug-hash="qaaGYV" data-default-tab="result" data-user="yowainwright" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/yowainwright/pen/qaaGYV/">Intrinsic Ratio Animation</a> by Jeff Wainwright (<a href="http://codepen.io/yowainwright">@yowainwright</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
@@ -30,9 +30,9 @@ Reframe.js also:
 
 These things make the code lighter initially.
 
-## Option-s-
+## Options
 
-The one option supported by Reframe.js is the ability to add your own css class. This is so that the end result of using the library on a webpage is minimal - just 1 inline style added (for the intersic ratio). This makes plugin hands off so that engineers can be hands on. 
+The one option supported by Reframe.js is the ability to add your own css class. This is so that the end result of using the library on a webpage is minimal - just 1 inline style added (for the intersic ratio). This makes the plugin hands off so that engineers can be hands on. 
 
 Reframe.js's simplicity in both language & options is meant to make the plugin easy to understand & easy to write code to support your product's end goal. 
 
@@ -128,6 +128,6 @@ Also, I think I will be adding a docs folder for using the plugin & specific use
 
 ## Summary
 
-One of the fun challenges when write code for content is to support creativity in a controlled way. Reframe.js is a great solve for making embedded content look great on your website. Initially, we didn't know if we would be using jQuery for our product here at [DSC](https://www.dollarshaveclub.com/) so [FitVids](http://fitvidsjs.com/) was out of the question - which led me down the path of writing some new code. The end result was Reframe.js. Hope it works well for you if you use it. I plan on writing more light weight plugins to solve common content problems in the future.
+One of the fun challenges when writing code for content is to support creativity in a controlled way. Reframe.js is a great solve for making embedded content look great on your website. Initially, we didn't know if we would be using jQuery for our product at [DSC](https://www.dollarshaveclub.com/) so [FitVids](http://fitvidsjs.com/) was out of the question - which led me down the path of writing some new code. The end result was Reframe.js. Hope it works well for you if you use it. I plan on writing more light weight plugins to solve common content problems in the future.
 
 If you have questions or ideas in regards to [Reframe.js](https://github.com/dollarshaveclub/reframe.js) please contact me [here](mailto:{{ site.email }}), on [twitter](https://twitter.com/yowainwright) or [github](https://github.com/yowainwright). 
