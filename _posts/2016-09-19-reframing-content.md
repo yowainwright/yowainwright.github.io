@@ -15,24 +15,23 @@ The most meaningful part of the webpage, the content, can be a largely unknown t
 
 ## Reframing Content
 
-Embedded content, like videos, images, podcasts & tweets often do not translate well to a fluid webpage - so we need to reframe them. This is what **[Reframe.js](https://dollarshaveclub.github.io/reframe.js/)** does. It wraps embedded content in a perfect ratio (an [intrinsic ratio](http://alistapart.com/article/creating-intrinsic-ratios-for-video)) of the original embed but with fluid sizing so that the embedded content looks great at any size.
+Embedded content, like videos, images, podcasts & tweets often do not translate well to a fluid webpage - so we need to reframe them. This is what [Reframe.js](https://dollarshaveclub.github.io/reframe.js/) does. It wraps embedded content in an [intrinsic ratio](http://alistapart.com/article/creating-intrinsic-ratios-for-video) of the original embed but with fluid sizing so that the embedded content looks great at any size.
 
 <p data-height="380" data-theme-id="0" data-slug-hash="qaaGYV" data-default-tab="result" data-user="yowainwright" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/yowainwright/pen/qaaGYV/">Intrinsic Ratio Animation</a> by Jeff Wainwright (<a href="http://codepen.io/yowainwright">@yowainwright</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-## Why
+## Why Reframe.js
 
-Previous to writing this plugin, I used [FitVids](http://fitvidsjs.com/). FitVids is a great plugin for solving reframing videos. It's written by 2 of my idols, [Chris Coyier](http://chriscoyier.net/) & [Dave Ruppert](http://daverupert.com/). Fitvids _takes a chance_ that most of your content will be 1 of 5 variable  & if that's right (& if you're using jQuery) - FitVids is golden. If not, there a little extra code. The reason that Reframe.js was originally made was because [jQuery](http://jquery.com/) was not being used on a new product at [DSC](http://dollarshaveclub.com).
+Previous to writing this plugin, I used [FitVids](http://fitvidsjs.com/). FitVids is a great plugin for solving reframing videos. It's written by 2 of my idols, [Chris Coyier](http://chriscoyier.net/) & [Dave Ruppert](http://daverupert.com/). Fitvids _takes a chance_ that most of your content will be 1 of 5 `selectors`. If those assumptions are correct (& if you're using jQuery) - FitVids is golden. If not, there might need to be little extra code on top of the little extra code added that assumes your embedded content will be 1 of 5 `selectors`. The reason that Reframe.js was originally made was because [jQuery](http://jquery.com/) was not being used on a new product at [DSC](http://dollarshaveclub.com).
 Reframe.js also: 
 1. doesn't assume your reframing just videos (by name at least), 
 2. offers a css mixin rather than inlining css which can make your dom (html) cleaner 
 3. & offers jQuery plugin that is written in such a way that if unused - it can be shaken out with [Tree shaking](https://medium.com/@Rich_Harris/tree-shaking-versus-dead-code-elimination-d3765df85c80#.ccnp22e5f).
-
 These things make the code lighter initially.
 
 ## Options
 
-The one option supported by Reframe.js is the ability to add your own css class. This is so that the end result of using the library on a webpage is minimal - just 1 inline style added (for the intersic ratio). This makes the plugin hands off so that engineers can be hands on. 
+The one option supported by Reframe.js is the ability to add your own css class instead of the default css class `js-reframe`. This is so that the end result of using the library on a webpage is minimal - just 1 inline style added (for the intersic ratio).
 
 Reframe.js's simplicity in both language & options is meant to make the plugin easy to understand & easy to write code to support your product's end goal. 
 
@@ -40,7 +39,7 @@ Reframe.js's simplicity in both language & options is meant to make the plugin e
 
 **CSS (aspect ratio)**
 
-In this sass mixin, we're assuming that the aspect ratio is 16:9 but we can override it to make the perfect image ratio size.
+In this sass mixin, the default aspect ratio is 16:9 but we can override that to make the reframe a perfect ratio of the embed's original size.
 
 {% highlight sass %}
 
@@ -99,7 +98,7 @@ if (window.$) {
 
 {% endhighlight %}
 
-Add a check to the top of the plugin which allows us to select the element to reframe with jquery _or_ vanilla js (Kodos to [Jacob Kelly](http://jakiestfu.com/) here).
+Add a check to the top of the plugin which allows us to select the element to reframe with jquery _or_ plain js (Kodos to [Jacob Kelly](http://jakiestfu.com/) here).
 
 {% highlight javascript %}
 
@@ -123,11 +122,11 @@ reframe('selector');
 
 ## To Dos
 
-Currently, I'm playing with the idea of removing the default padding of the ratio because it should be overwritten everytime the plugin is called.
+Currently, I'm playing with the idea of removing the default padding of the ratio (56.25%) that's in the `css` because it is overwritten everytime the plugin is called.
 Also, I think I will be adding a docs folder for using the plugin & specific use cases that might come up.
 
 ## Summary
 
-One of the fun challenges when writing code for content is to support creativity in a controlled way. Reframe.js is a great solve for making embedded content look great on your website. Initially, we didn't know if we would be using jQuery for our product at [DSC](https://www.dollarshaveclub.com/) so [FitVids](http://fitvidsjs.com/) was out of the question - which led me down the path of writing some new code. The end result was Reframe.js. Hope it works well for you if you use it. I plan on writing more light weight plugins to solve common content problems in the future.
+One of the fun challenges when writing code for content is to support creativity in a controlled way. Reframe.js is a great solve for making embedded content look great on your website. Initially, we didn't know if we would be using jQuery for our product at [DSC](https://www.dollarshaveclub.com/) so [FitVids](http://fitvidsjs.com/) was out of the question - which led me down the path of writing some new code. The end result was Reframe.js. Hope it works well for you if you use it. 
 
-If you have questions or ideas in regards to [Reframe.js](https://github.com/dollarshaveclub/reframe.js) please contact me [here](mailto:{{ site.email }}), on [twitter](https://twitter.com/yowainwright) or [github](https://github.com/yowainwright). 
+I plan on writing more light weight plugins to solve common content problems in the future. If you have questions or ideas in regards to [Reframe.js](https://github.com/dollarshaveclub/reframe.js) please contact me - links below.  
