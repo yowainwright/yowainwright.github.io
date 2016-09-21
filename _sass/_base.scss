@@ -176,8 +176,12 @@ code {
   background-color: $color-grey-lightest;
 }
 pre {
+  max-width: calc(100% - #{$spacing-unit-large});
   padding: $spacing-unit-small $spacing-unit;
   overflow-x: scroll;
+  @include media-query($width-small) {
+    max-width: $width-reader;
+  }
 }
 code {
   padding: $spacing-unit * .3 / $conversion-number;
