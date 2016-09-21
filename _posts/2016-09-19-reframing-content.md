@@ -11,39 +11,32 @@ share_image: /assets/reframing-content/aspect-ratio.jpg
 featured_image: /assets/js.svg
 ---
 
-There are unique challenges for developers working with content. The reason: the most meaningful part of the webpage, the content, is a **largely unknown** thing. Content is created by an author that both expects it to convey their message but also the message of the site as a whole. A very important thing to present well on a content site is _embedded content_.
+The most meaningful part of the webpage, the content, can be a largely unknown thing. Authors create content & in one place & expect it to render well in another. _Embedded content_ adds another level of complexity to this process.
 
-> The most meaningful part of the webpage, the content, [can be] a largely unknown thing
-
-## Rendering unknown content
-
-The reason why content is **largely unknown** is because the author puts images, text, embeds & other things somewhere & then that goes through a **process** that displays the content on a webpage. The process of rendering content to a webpage means that often things are added or removed in an attempt to make it stuff look awesome. To best support this **process**, a developer has to write code to be both hands off & aware.
+> The most meaningful part of the webpage, the content, can be a largely unknown thing.
 
 ## Reframing Content
 
-When writing great content, authors use many tools to describe & captivate readers. Sometimes content that is great for conveying content does not translate well - so we need to **reframe** it. This is where **[reframe.js](https://dollarshaveclub.github.io/reframe.js/)** comes into play. Reframe.js, wraps embedded content in a perfect ratio of what it was originally there but at an appropriate width for the content. Specifically, this ratio is called an **[intrinsic ratio](http://alistapart.com/article/creating-intrinsic-ratios-for-video)**. 
+Embedded content, like videos, images, podcasts & tweets often do not translate well to a fluid webpage - so we need to reframe them. This is what **[reframe.js](https://dollarshaveclub.github.io/reframe.js/)** does. It wraps embedded content in a perfect ratio (an [intrinsic ratio](http://alistapart.com/article/creating-intrinsic-ratios-for-video)) of the original embed but with styling for fluid sizing. 
 
 <p data-height="380" data-theme-id="0" data-slug-hash="qaaGYV" data-default-tab="result" data-user="yowainwright" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/yowainwright/pen/qaaGYV/">Intrinsic Ratio Animation</a> by Jeff Wainwright (<a href="http://codepen.io/yowainwright">@yowainwright</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-Videos, playlists, podcasts & are examples of things that are usually embedded content. Embedded content is written, writely so, to best commincate **it's** content well which often means it has a `fixed` height & width. [Reframe.js](https://github.com/dollarshaveclub/reframe.js) was written to address this issue of reframing embedded at the appropriate size for the content.
-
 ## Why
 
-Previous to writing this plugin, I used [FitVids](http://fitvidsjs.com/). FitVids is a great plugin for solving reframing embedded content. It's written by 2 of my idols, [Chris Coyier](http://chriscoyier.net/) & [Dave Ruppert](http://daverupert.com/). The reason that **Reframe.js** was originally made was because it doesn't require [jQuery](http://jquery.com/). 
-It also: 
-
+Previously to writing this plugin, I used [FitVids](http://fitvidsjs.com/). FitVids is a great plugin for solving reframing videos. It's written by 2 of my idols, [Chris Coyier](http://chriscoyier.net/) & [Dave Ruppert](http://daverupert.com/). It _takes a chance_ that you're going to reframe 4 video types & if you do - you're golden. If not, there a little extran code. The reason that **Reframe.js** was originally made was because [jQuery](http://jquery.com/) was not being used on a new product at [DSC](http://dollarshaveclub.com).
+Reframe.js also: 
 1. doesn't assume your reframing just videos, 
 2. offers a css mixin rather than inlining css which can make your dom (html) cleaner 
-3. & the jquery plugin is written in such a way that if unused - it can be shaken out with [Tree shaking](https://medium.com/@Rich_Harris/tree-shaking-versus-dead-code-elimination-d3765df85c80#.ccnp22e5f).
+3. & offers jquery plugin that is written in such a way that if unused - it can be shaken out with [Tree shaking](https://medium.com/@Rich_Harris/tree-shaking-versus-dead-code-elimination-d3765df85c80#.ccnp22e5f).
 
 These things make the code lighter initially.
 
 ## Option-s-
 
-The 1 option supported is the ability to add your own css class. This is so that the end result of using **reframe.js** on a webpage _can be_ next to 0 imprint on your webpage (1 inline style added for the intersic ratio). This makes reframe hands off & engineers can be hands on. The plugin **can** be used as jQuery plugin but if you enable tree shaking even that bit of code (5 lines) will be dropped in your build if you don't use **reframe.js** as a jQuery plugin. 
+The one option supported by **Reframe.js** is the ability to add your own css class. This is so that the end result of using the library on a webpage is minimal - just 1 inline style added (for the intersic ratio). This makes plugin hands off so that engineers can be hands on. 
 
-**Reframe.js's** simplicity in both language & options is meant to make the plugin easy to understand & easy to write code to support _**your**_ products end goal. 
+**Reframe.js's** simplicity in both language & options is meant to make the plugin easy to understand & easy to write code to support **your** product's end goal. 
 
 ## Plugin Breakdown
 
@@ -94,7 +87,7 @@ div.style.paddingTop = padding + '%';
 
 {% endhighlight %}
 
-Make a plugin for jQuery or zepto.
+Make a plugin for jQuery or [Zepto](http://zeptojs.com/).
 
 {% highlight javascript %}
 
@@ -108,7 +101,7 @@ if (window.$) {
 
 {% endhighlight %}
 
-Add a check to the top of the plugin which allows us to select the element to reframe with jquery _or_ vanilla js (Kodos to one of my mentors, [Jacob Kelly](http://jakiestfu.com/) especially here)
+Add a check to the top of the plugin which allows us to select the element to reframe with jquery _or_ vanilla js (Kodos to [Jacob Kelly](http://jakiestfu.com/) here).
 
 {% highlight javascript %}
 
