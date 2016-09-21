@@ -34,7 +34,7 @@ These things make the code lighter initially.
 
 The one option supported by Reframe.js is the ability to add your own css class. This is so that the end result of using the library on a webpage is minimal - just 1 inline style added (for the intersic ratio). This makes plugin hands off so that engineers can be hands on. 
 
-Reframe.js's simplicity in both language & options is meant to make the plugin easy to understand & easy to write code to support **your** product's end goal. 
+Reframe.js's simplicity in both language & options is meant to make the plugin easy to understand & easy to write code to support your product's end goal. 
 
 ## Plugin Breakdown
 
