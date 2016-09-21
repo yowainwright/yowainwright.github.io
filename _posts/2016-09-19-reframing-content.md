@@ -22,11 +22,11 @@ Embedded content, like videos, images, podcasts & tweets often do not translate 
 
 ## Why
 
-Previously to writing this plugin, I used [FitVids](http://fitvidsjs.com/). FitVids is a great plugin for solving reframing videos. It's written by 2 of my idols, [Chris Coyier](http://chriscoyier.net/) & [Dave Ruppert](http://daverupert.com/). It _takes a chance_ that you're going to reframe 4 video types & if you do - you're golden. If not, there a little extran code. The reason that **Reframe.js** was originally made was because [jQuery](http://jquery.com/) was not being used on a new product at [DSC](http://dollarshaveclub.com).
+Previously to writing this plugin, I used [FitVids](http://fitvidsjs.com/). FitVids is a great plugin for solving reframing videos. It's written by 2 of my idols, [Chris Coyier](http://chriscoyier.net/) & [Dave Ruppert](http://daverupert.com/). It _takes a chance_ that you're going to reframe 4 video types & if you do - you're golden. If not, there a little extra code. The reason that **Reframe.js** was originally made was because [jQuery](http://jquery.com/) was not being used on a new product at [DSC](http://dollarshaveclub.com).
 Reframe.js also: 
 1. doesn't assume your reframing just videos, 
 2. offers a css mixin rather than inlining css which can make your dom (html) cleaner 
-3. & offers jquery plugin that is written in such a way that if unused - it can be shaken out with [Tree shaking](https://medium.com/@Rich_Harris/tree-shaking-versus-dead-code-elimination-d3765df85c80#.ccnp22e5f).
+3. & offers jQuery plugin that is written in such a way that if unused - it can be shaken out with [Tree shaking](https://medium.com/@Rich_Harris/tree-shaking-versus-dead-code-elimination-d3765df85c80#.ccnp22e5f).
 
 These things make the code lighter initially.
 
