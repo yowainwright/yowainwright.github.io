@@ -37,9 +37,6 @@
 				margin-top: $spacing-unit-largest;
 			}
 		}
-		.post__image--featured {
-			margin: 0 auto;
-		}
 		.post--feature-image-aside & {
 			margin-left: auto;
 			margin-right: auto;
@@ -47,8 +44,11 @@
 				max-width: $width-reader;
 			}
 		}
-		.highlight {
-			margin: $spacing-unit auto;
-		}
 	}
+}
+.highlight {
+	margin: $spacing-unit auto;
+}
+.post__image--featured {
+	margin: 0 auto;
 }

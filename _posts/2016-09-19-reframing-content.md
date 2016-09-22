@@ -13,14 +13,12 @@ featured_image: /assets/js.svg
 
 The most meaningful part of the webpage, the content, can be a largely unknown thing. Authors create content in one place & expect it to render well in another. Embedded content adds another level of complexity to this process.
 
-## Reframing Content
-
 Embedded content, like videos, images, podcasts & tweets often do not translate well to a fluid webpage - so we need to reframe them. This is what [Reframe.js](https://dollarshaveclub.github.io/reframe.js/) does. It wraps embedded content in an [intrinsic ratio](http://alistapart.com/article/creating-intrinsic-ratios-for-video) of the original embed but with fluid sizing so that the embedded content looks great at any size.
 
 <p data-height="380" data-theme-id="0" data-slug-hash="qaaGYV" data-default-tab="result" data-user="yowainwright" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/yowainwright/pen/qaaGYV/">Intrinsic Ratio Animation</a> by Jeff Wainwright (<a href="http://codepen.io/yowainwright">@yowainwright</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-## Why Reframe.js
+## Why Reframe.js?
 
 Previous to writing this plugin, I used [FitVids](http://fitvidsjs.com/). FitVids is a great plugin for solving reframing videos. It's written by 2 of my idols, [Chris Coyier](http://chriscoyier.net/) & [Dave Ruppert](http://daverupert.com/). Fitvids _takes a chance_ that most of your content will be 1 of 5 `selectors`. If those assumptions are correct (& if you're using jQuery) - FitVids is golden. If not, there might need to be little extra code on top of the little extra code added that assumes your embedded content will be 1 of 5 `selectors`. The reason that Reframe.js was originally made was because [jQuery](http://jquery.com/) was not being used on a new product at [DSC](http://dollarshaveclub.com).
 Reframe.js also: 
@@ -98,7 +96,7 @@ if (window.$) {
 
 {% endhighlight %}
 
-Add a check to the top of the plugin which allows us to select the element to reframe with jquery _or_ plain js (Kodos to [Jacob Kelly](http://jakiestfu.com/) here).
+Add a check to the top of the plugin which allows us to select the element to reframe with jquery _or_ plain js (Kodos to [Jacob Kelley](http://jakiestfu.com/) here).
 
 {% highlight javascript %}
 
@@ -129,4 +127,4 @@ Also, I think I will be adding a docs folder for using the plugin & specific use
 
 One of the fun challenges when writing code for content is to support creativity in a controlled way. Reframe.js is a great solve for making embedded content look great on your website. Initially, we didn't know if we would be using jQuery for our product at [DSC](https://www.dollarshaveclub.com/) so [FitVids](http://fitvidsjs.com/) was out of the question - which led me down the path of writing some new code. The end result was Reframe.js. Hope it works well for you if you use it. 
 
-I plan on writing more light weight plugins to solve common content problems in the future. If you have questions or ideas in regards to [Reframe.js](https://github.com/dollarshaveclub/reframe.js) please contact me - links below.  
+I plan on writing more lightweight plugins to solve common content problems in the future. If you have questions or ideas in regards to [Reframe.js](https://github.com/dollarshaveclub/reframe.js) please contact me - links below.  
