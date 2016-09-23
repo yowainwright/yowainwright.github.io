@@ -1,7 +1,7 @@
 $font-size-super: $font-size-default * 5;
 .post--single {
 	position: relative;
-	margin-bottom: $spacing-unit-largest;  
+	margin-bottom: $spacing-unit-largest;
 	.post {
 		&__figure {
 			margin: 0;
@@ -17,15 +17,16 @@ $font-size-super: $font-size-default * 5;
 		&__title {
 			background: rgba(0, 0, 0, 0.8);
 			font-size: $font-size-large;
-			max-width: 100%;
+			max-width: calc(100% - #{$spacing-unit-large});
 			margin: 0;
 			padding: $spacing-unit;
-			text-transform: uppercase;
-			width: 100%;
-			@include middle-align(absolute);
+			bottom: $spacing-unit-medium;
+			width: calc(100vw - #{$spacing-unit-medium});
+			@include horizontal-align(absolute);
 			@include media-query($width-small) {
 				font-size: $font-size-largest;
-				max-width: $width-default;
+				max-width: $width-medium;
+				width: calc(#{$width-medium} / 1.25);
 			}
 			@include media-query($width-medium) {
 				font-size: $font-size-super;

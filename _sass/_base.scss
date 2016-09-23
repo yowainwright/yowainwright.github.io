@@ -1,4 +1,4 @@
-html, 
+html,
 body {
   margin: 0;
   padding: 0;
@@ -11,12 +11,6 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 hr,
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6,
 h1,
 h2,
 h3,
@@ -36,6 +30,15 @@ table {
   margin-left: auto;
   margin-right: auto;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: sarif;
+  letter-spacing: -1px;
+}
 img {
   display: block;
 }
@@ -43,11 +46,11 @@ figure {
   margin: 0 auto;
 }
 hr,
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+h1,
+h2,
+h3,
+h4,
+h5,
 h6,
 h1,
 h2,
@@ -81,11 +84,11 @@ ol {
 li {
   margin-bottom: $spacing-unit-smallest;
 }
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+h1,
+h2,
+h3,
+h4,
+h5,
 h6,
 b,
 strong {
@@ -97,10 +100,17 @@ strong {
     }
   }
 }
-h1, 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+}
+h1,
 h2,
 h3 {
-  font-family: $font-family-serif-other;
   line-height: 1.25;
 }
 h1 {
@@ -114,7 +124,7 @@ h2,
 h3 {
   font-size: $font-size-medium;
 }
-p, 
+p,
 li {
   font-family: $font-family-serif;
   font-size: $font-size-default;
@@ -140,7 +150,7 @@ li p {
 a {
   text-decoration: none;
   &:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
   }
 }
 blockquote {
