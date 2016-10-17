@@ -1,17 +1,17 @@
 ---
-layout: post
-title:  Javascript Closure all wrapped up & why
-date: 2014-10-15
-meta: Understanding Javascript Closure & what it does
-note: feature-image-aside
+title: Javascript Closure all wrapped up & why
+date: 2014-10-15 00:00:00 Z
+permalink: "/js-closure/"
 categories:
 - code
 - javascript
-permalink: /js-closure/
-share_image: /assets/icons/js.jpg
-featured_image: /assets/js.svg
+layout: post
+meta: Understanding Javascript Closure & what it does
+note: feature-image-aside
+share_image: "/assets/icons/js.jpg"
+featured_image: "/assets/js.svg"
 redirect_from:
-  - personal-site/js-keyword-this/
+- personal-site/js-keyword-this/
 ---
 
 Javascript Closures are bundles of code or inner functions that have access to outer functions & variables. IT IS THAT SIMPLE! But, understanding why they’re so important quickly become pretty complex.

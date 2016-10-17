@@ -1,18 +1,18 @@
 ---
-layout: post
-title:  Discussing Javascript Scope, let's keep it between us
-date: 2013-06-20
-meta: Discussing Javascript Scope & terms that are discussed when talking about it
+title: Discussing Javascript Scope, let's keep it between us
+date: 2013-06-20 00:00:00 Z
+permalink: "/js-scope/"
 categories:
 - javascript
 - code
+layout: post
+meta: Discussing Javascript Scope & terms that are discussed when talking about it
 type: code
 note: feature-image-aside
-permalink: /js-scope/
-share_image: /assets/icons/js.jpg
-featured_image: /assets/js.svg
+share_image: "/assets/icons/js.jpg"
+featured_image: "/assets/js.svg"
 redirect_from:
-  - js-scope/
+- js-scope/
 ---
 
 Javascript **scope** is an essential for keeping & accessing information where we want it & using it when we want to.

@@ -1,14 +1,18 @@
 ---
+title: Reframing content responsively with Reframe.js
+date: 2016-09-19 00:00:00 Z
+permalink: "/reframing-content/"
+categories:
+- code
+- js
+- javascript
 layout: post
-title:  Reframing content responsively with Reframe.js 
 author: Jeff Wainwright
-date: 2016-09-19
-meta: Reframing content, one of the most important things to present well on a content site is embedded content.
-permalink: /reframing-content/
-categories: code js javascript
+meta: Reframing content, one of the most important things to present well on a content
+  site is embedded content.
 note: feature-image-aside
-share_image: /assets/reframing-content/aspect-ratio.jpg
-featured_image: /assets/js.svg
+share_image: "/assets/reframing-content/aspect-ratio.jpg"
+featured_image: "/assets/js.svg"
 ---
 
 The most meaningful part of the webpage, the content, can be a largely unknown thing. Authors create content in one place & expect it to render well in another. Embedded content adds another level of complexity to this process.

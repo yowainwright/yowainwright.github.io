@@ -1,11 +1,14 @@
 ---
+title: Happy Birthday, a project to say happy birthday
+date: 2014-05-05 00:00:00 Z
+permalink: "/happy-birthday/"
+categories:
+- story
+- projects
+- general
 layout: post
-title:  Happy Birthday, a project to say happy birthday
-date: 2014-05-05
-permalink: /happy-birthday/
-categories: story projects general
 show_image: true
-featured_image: /assets/hb/hb.jpg
+featured_image: "/assets/hb/hb.jpg"
 ---
 
 A year ago I was not able to be with one of my dear friends on their birthday so I made this.

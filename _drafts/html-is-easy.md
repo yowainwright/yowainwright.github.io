@@ -1,13 +1,17 @@
 ---
+title: HTML is easy and that's why we all write it wrong
+date: 2016-09-30 00:00:00 Z
+permalink: "/html-is-easy/"
+categories:
+- story
+- general
+- second
 layout: post
-title:  "HTML is easy and that's why we all write it wrong"
-date: 2016-09-30
-meta: In this post, I'll dig into html in order to sell the importance of understanding it
-permalink: /html-is-easy/
+meta: In this post, I'll dig into html in order to sell the importance of understanding
+  it
 note: no-featured-image
-categories: story general second
-share_image: /assets/icons/os.jpg
-featured_image: /assets/os.svg
+share_image: "/assets/icons/os.jpg"
+featured_image: "/assets/os.svg"
 ---
 
 After discussing concepts of [semantic html](https://en.wikipedia.org/wiki/Semantic_HTML) with a co-worker this week, I decided to go home and feel vindicated in how much I knew by reading spec on html on [mdn](https://developer.mozilla.org/en-US/). Like all stories that start out this way - wow, _I was wrong_! Not only was I wrong, but I haven't been leveraging many features that might make webpages I write more usable and perhaps with less css.

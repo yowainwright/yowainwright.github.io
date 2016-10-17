@@ -1,12 +1,13 @@
 ---
+title: Glide Carousel, a easy to use slider for Semantic UI
+date: 2014-04-23 00:00:00 Z
+permalink: "/glide-carousel/"
+categories:
+- code
 layout: post
-title:  Glide Carousel, a easy to use slider for Semantic UI
-date: 2014-04-23
 meta: This is a demo on how to use the Glide Carousel with Semantic UI
-categories: code
-permalink: /glide-carousel/
 note: no-featured-image
-featured_image: /assets/city-country.png
+featured_image: "/assets/city-country.png"
 ---
 
 This carousel was originally done for a bootstrap project. I quickly implemented it using [Glide JS](http://jedrzejchalubek.com/glide/) which fits in nicely with [Semantic UI](http://semantic-ui.com/) (the framework I use on this site). This post describes my implementation.

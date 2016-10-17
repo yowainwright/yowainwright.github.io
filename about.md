@@ -1,12 +1,13 @@
 ---
-layout: about
 title: About me, Jeffry Wainwright
-meta: Hey, I'm Jeff - a user interface specialist, frontend engineer & athlete living in Southern California
-permalink: /about/
+permalink: "/about/"
+layout: about
+meta: Hey, I'm Jeff - a user interface specialist, frontend engineer & athlete living
+  in Southern California
 page: about
 type: page
 redirect_from:
- - cv/
+- cv/
 ---
 
 ## Hello, I'm Jeff - a user interface specialist & frontend engineer 

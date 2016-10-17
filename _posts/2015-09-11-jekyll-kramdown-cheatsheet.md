@@ -1,14 +1,18 @@
 ---
+title: Jekyll Kramdown Syntax Cheatsheet
+date: 2015-09-11 16:33:51 Z
+permalink: "/kramdown-syntax-cheatsheet/"
+categories:
+- jekyll
+- kramdown
+- markdown
+- code
 layout: post
-title:  "Jekyll Kramdown Syntax Cheatsheet"
-date: 2015-09-11 16:33:51
 meta: Kramdown Syntax Cheatsheet
-permalink: /kramdown-syntax-cheatsheet/
-categories: jekyll kramdown markdown code
 note: feature-image-aside
 type: code
-share_image: /assets/icons/markdown.jpg
-featured_image: /assets/md.svg
+share_image: "/assets/icons/markdown.jpg"
+featured_image: "/assets/md.svg"
 ---
 
 Using [markdown](http://daringfireball.net/projects/markdown/) is a quick way to set up a _semi-formatted_ post or page. It can really bring a page to life quickly &amp; help to visually define the layout of text. This site is built with [jekyll](http://jekyllrb.com) so I'm using [kramdown](http://kramdown.gettalong.org/), a version of markdown.

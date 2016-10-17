@@ -1,18 +1,18 @@
 ---
-layout: post
-title:  "GMR a road cycling paradise"
-date: 2015-11-17
-meta: Glendora Mountain Road is a road cycling paradise
+title: GMR a road cycling paradise
+date: 2015-11-17 00:00:00 Z
+permalink: "/glendora-mountain-road/"
 categories:
 - featured
 - travel
 - first
 - cycling
-permalink: /glendora-mountain-road/
-featured_image: /assets/gmr/gmr.jpg
+layout: post
+meta: Glendora Mountain Road is a road cycling paradise
+featured_image: "/assets/gmr/gmr.jpg"
 note: no-featured-image
 redirect_from:
-  - personal-site/glendora-mountain-road/
+- personal-site/glendora-mountain-road/
 ---
 
 [Glendora Mountain Road](http://www.differentspokes.com/index.cfm?action=showEvent&eventID=1888) or GMR is approximately a 20 mile ride where you’ll be challenged with climbs, turns & a strong desire to take a lot of pictures.

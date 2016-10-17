@@ -1,12 +1,15 @@
 ---
+title: You're an Ortiz, how I gained family & through them things changed for the
+  better
+date: 2013-05-21 00:00:00 Z
+permalink: "/youre-an-ortiz/"
+categories:
+- story
+- general
 layout: post
-title:  "You're an Ortiz, how I gained family & through them things changed for the better"
-date: 2013-05-21
 meta: A short story about moving out of the a bad situation & into a good one
-permalink: /youre-an-ortiz/
-categories: story general
 note: no-featured-image
-featured_image: /assets/youre-an-ortiz/water-puddles.jpg
+featured_image: "/assets/youre-an-ortiz/water-puddles.jpg"
 ---
 
 In 2010 I was in a pretty low spot. I had been laid off from my job earlier that year and moved into a low-income area to save money. It turned into a nightmare.

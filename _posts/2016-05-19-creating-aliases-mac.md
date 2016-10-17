@@ -1,17 +1,17 @@
 ---
-layout: post
-title:  Creating Aliases on a Mac
-date: 2016-05-19
-meta: Creating Aliases on a Mac is an easy thing to do & can save a lot of time
+title: Creating Aliases on a Mac
+date: 2016-05-19 00:00:00 Z
+permalink: "/creating-aliases/"
 categories:
 - code
 - terminal
 - mac
 - snippet
+layout: post
+meta: Creating Aliases on a Mac is an easy thing to do & can save a lot of time
 note: feature-image-aside
-permalink: /creating-aliases/
-share_image: /assets/icons/os.jpg
-featured_image: /assets/os.svg
+share_image: "/assets/icons/os.jpg"
+featured_image: "/assets/os.svg"
 ---
 
 Creating Aliases on a Mac is an easy thing to do & can save a lot of time. When working in Terminal or another command line app, you may want to set up an alias to make your workflows easier.

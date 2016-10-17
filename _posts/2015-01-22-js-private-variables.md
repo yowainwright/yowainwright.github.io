@@ -1,18 +1,18 @@
 ---
-layout: post
-title:  Creating private information in JavaScript
-date: 2015-01-22
-meta: Creating a private information in JavaScript to be used in future functions
-note: feature-image-aside
+title: Creating private information in JavaScript
+date: 2015-01-22 00:00:00 Z
+permalink: "/js-private-information/"
 categories:
 - code
 - javascript
 - objects
-permalink: /js-private-information/
-share_image: /assets/icons/js.jpg
-featured_image: /assets/js.svg
+layout: post
+meta: Creating a private information in JavaScript to be used in future functions
+note: feature-image-aside
+share_image: "/assets/icons/js.jpg"
+featured_image: "/assets/js.svg"
 redirect_from:
-  - personal-site/js-private-information/
+- personal-site/js-private-information/
 ---
 
 Creating private information, meaning variables, properties/property values, function, methods in JavaScript is an important concept for storing information that can't be overwritten.

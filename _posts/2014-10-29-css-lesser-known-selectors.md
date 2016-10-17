@@ -1,20 +1,19 @@
 ---
-layout: post
-title:  Less used & known CSS selectors, aka attribute selectors
-date: 2014-10-29
-meta: Less known CSS selectors, aka attribute selectors
-note: feature-image-aside
+title: Less used & known CSS selectors, aka attribute selectors
+date: 2014-10-29 00:00:00 Z
+permalink: "/css-less-known-selectors/"
 categories:
 - code
 - sass
 - css
-permalink: /css-less-known-selectors/
-share_image: /assets/icons/sass.jpg
-featured_image: /assets/sass.svg
+layout: post
+meta: Less known CSS selectors, aka attribute selectors
+note: feature-image-aside
+share_image: "/assets/icons/sass.jpg"
+featured_image: "/assets/sass.svg"
 redirect_from:
- - css-lesser-known-selectors/
+- css-lesser-known-selectors/
 ---
-
 
 Having written CSS & SASS for years & using [BEM](//csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) it's a rarity that I find the need to use some of the selectors I'll list below but, every once in a while a situation comes up where I'm so thankful that they're there.
 

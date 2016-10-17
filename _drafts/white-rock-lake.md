@@ -1,12 +1,14 @@
 ---
+title: Hanging out around White Rock Lake
+date: 2016-06-07 00:00:00 Z
+permalink: "/white-rock-lake/"
+categories:
+- story
+- general
 layout: post
-title:  "Hanging out around White Rock Lake"
-date: 2016-06-07
 author: Jeff Wainwright
-meta: "Hanging out around White Rock Lake"
-permalink: /white-rock-lake/
-categories: story general 
-featured_image: /assets/white-rock-lake/brett-riding-sq.jpg
+meta: Hanging out around White Rock Lake
+featured_image: "/assets/white-rock-lake/brett-riding-sq.jpg"
 ---
 
 Riding bikes around white rock late when I went to Denver was very special to me. I felt the humid Texas air against my skin. I listened to the sounds of wildlife turn up the sun went down. The light as it creeped below the horizon of the lake peeked rays through the soft tree landscape. It reminded me of my childhood.
