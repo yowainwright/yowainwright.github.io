@@ -1,13 +1,17 @@
 ---
+title: HTML is easy and that's why we all write it wrong
+date: 2016-09-30 00:00:00 Z
+permalink: "/html-is-easy/"
+categories:
+- story
+- general
+- second
 layout: post
-title:  "HTML is easy and that's why we all write it wrong"
-date: 2016-09-30
-meta: In this post, I'll dig into html in order to sell the importance of understanding it
-permalink: /html-is-easy/
+meta: In this post, I'll dig into html in order to sell the importance of understanding
+  it
 note: no-featured-image
-categories: story general second
-share_image: /assets/icons/os.jpg
-featured_image: /assets/os.svg
+share_image: "/assets/icons/os.jpg"
+featured_image: "/assets/os.svg"
 ---
 
 Most developers seem to have gone the route of bulldozing right past _deep html_ learning 🚜. It makes sense. We're given jobs where quizzes and interview questions demand answers that have nothing to do with - can you write valid html? If developers were asked that question, I imagine some might even feel insulted.

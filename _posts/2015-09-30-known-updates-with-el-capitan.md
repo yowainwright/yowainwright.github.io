@@ -1,10 +1,7 @@
 ---
-layout: post
-title:  "Known changes needed after updating to El Capitan OS"
-date: 2015-09-30
-meta: Known changes needed after updating to El Capitan OS
-permalink: /known-updates-with-el-capitan-os/
-note: feature-image-aside
+title: Known changes needed after updating to El Capitan OS
+date: 2015-09-30 00:00:00 Z
+permalink: "/known-updates-with-el-capitan-os/"
 categories:
 - programming
 - mac
@@ -12,9 +9,12 @@ categories:
 - general
 - code
 - third
+layout: post
+meta: Known changes needed after updating to El Capitan OS
+note: feature-image-aside
 type: code
-share_image: /assets/icons/os.jpg
-featured_image: /assets/os.svg
+share_image: "/assets/icons/os.jpg"
+featured_image: "/assets/os.svg"
 ---
 
 Recently, I upgraded to El Capitan. Suddenly my local websites using vagrant weren't working & I had to reinstall some of my ruby gems like jekyll, what I use for this blog.

@@ -1,18 +1,18 @@
 ---
-layout: post
-title:  Understanding Javascript Objects - static objects to classes
-date: 2014-12-20
-meta: Understanding JavaScript Objects, from static objects to classes
-note: feature-image-aside
+title: Understanding Javascript Objects - static objects to classes
+date: 2014-12-20 00:00:00 Z
+permalink: "/js-objects/"
 categories:
 - code
 - javascript
 - objects
-permalink: /js-objects/
-share_image: /assets/icons/js.jpg
-featured_image: /assets/js.svg
+layout: post
+meta: Understanding JavaScript Objects, from static objects to classes
+note: feature-image-aside
+share_image: "/assets/icons/js.jpg"
+featured_image: "/assets/js.svg"
 redirect_from:
-  - personal-site/js-scope/
+- personal-site/js-scope/
 ---
 
 JavaScript [Objects](//developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects) are used to store information called properties with values AND code blocks that do stuff (functions) which are called methods.

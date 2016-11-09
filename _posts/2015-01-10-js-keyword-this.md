@@ -1,16 +1,19 @@
 ---
+title: Javascript's keyword this; THIS is what I'm talking about!
+date: 2015-01-10 00:00:00 Z
+permalink: "/js-keyword-this/"
+categories:
+- javascript
+- code
 layout: post
-title:  Javascript's keyword this; THIS is what I'm talking about!
-date: 2015-01-10
-meta: This post goes into Javascript's keyword this, how it is defined & why it is misunderstood
+meta: This post goes into Javascript's keyword this, how it is defined & why it is
+  misunderstood
 note: feature-image-aside
-categories: javascript code
 type: code
-permalink: /js-keyword-this/
-share_image: /assets/icons/js.jpg
-featured_image: /assets/js.svg
+share_image: "/assets/icons/js.jpg"
+featured_image: "/assets/js.svg"
 redirect_from:
-  - personal-site/js-keyword-this/
+- personal-site/js-keyword-this/
 ---
 
 The _**this**_ keyword in Javascript is something that has often confused me, especial which object it is attached to. I've realized trying to explain it a few times that it's difficult to explain.

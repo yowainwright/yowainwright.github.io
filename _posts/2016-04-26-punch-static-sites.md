@@ -1,16 +1,18 @@
 ---
+title: 'Punch Static Sites: My experience getting setup'
+date: 2016-04-26 00:00:00 Z
+permalink: "/punch-setup/"
+categories:
+- javascript
+- code
 layout: post
-title: "Punch Static Sites: My experience getting setup"
-date: 2016-04-26
-meta: "Punch Static Sites: My experience getting setup"
-permalink: /punch-setup/
-categories: javascript code
+meta: 'Punch Static Sites: My experience getting setup'
 type: code
 note: feature-image-aside
-share_image: /assets/icons/js.jpg
-featured_image: /assets/js.svg
+share_image: "/assets/icons/js.jpg"
+featured_image: "/assets/js.svg"
 redirect_from:
-  - /punch-static-sites/
+- "/punch-static-sites/"
 ---
 
 Getting started with [Punch](//laktek.github.io/punch/) is very easy. After adding the [npm plugin](//www.npmjs.com/package/punch), setting up the initial static site takes a few minutes. The CLI commands are super straight forward & the site re-builds super fast.

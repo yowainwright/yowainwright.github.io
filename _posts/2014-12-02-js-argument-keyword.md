@@ -1,14 +1,16 @@
 ---
+title: Javascript for loop & the argument key word
+date: 2014-12-02 00:00:00 Z
+permalink: "/js-argument-key-word/"
+categories:
+- javascript
+- code
 layout: post
-title:  Javascript for loop & the argument key word
-date: 2014-12-02
 meta: Javascript for loop & the argument key worddefined & why it is misunderstood
 note: feature-image-aside
-categories: javascript code
 type: code
-permalink: /js-argument-key-word/
-share_image: /assets/icons/js.jpg
-featured_image: /assets/js.svg
+share_image: "/assets/icons/js.jpg"
+featured_image: "/assets/js.svg"
 ---
 
 Today, I was assigned the task of printing logs to the page instead of to the `console` if there was a certain string appended to the url so that the our Q/A engineer could get that data into his program.

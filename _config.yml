@@ -1,22 +1,26 @@
-# Site settings
 title: Jeffry In
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 email: jjwainwright2@gmail.com
 description: Jeffry.in is a collection of posts by me, Jeffry Wainwright - a User Interface Engineer & Athlete
 baseurl: ""
 url: "//jeffry.in"
 twitter_username: yowainwright
-github_username:  yowainwright
+github_username: yowainwright
 instagram_username: yowainwright
 codepen_username: yowainwright
 tumblr_account: http://ratherbe.in
-
-# Build settings
 markdown: kramdown
 kramdown:
   auto_ids: false
 sass:
-    style: compressed
-
+  style: compressed
 gems:
-  - jekyll-sitemap
-  - jekyll-redirect-from
+- jekyll-sitemap
+- jekyll-redirect-from

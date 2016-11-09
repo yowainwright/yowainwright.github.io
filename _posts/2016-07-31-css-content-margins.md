@@ -1,17 +1,21 @@
 ---
+title: Creating beautiful layouts by setting element widths with calc
+date: 2016-07-31 00:00:00 Z
+permalink: "/css-pretty-widths-with-calc/"
+categories:
+- code
+- css
+- sass
 layout: post
-title:  Creating beautiful layouts by setting element widths with calc
 author: Jeff Wainwright
-date: 2016-07-31
-meta: Use css calc values to set the width of elements within content blocks & create beautiful layouts, for devices especially
-permalink: /css-pretty-widths-with-calc/
-categories: code css sass
+meta: Use css calc values to set the width of elements within content blocks & create
+  beautiful layouts, for devices especially
 note: feature-image-aside
-share_image: /assets/icons/sass.jpg
-featured_image: /assets/sass.svg
+share_image: "/assets/icons/sass.jpg"
+featured_image: "/assets/sass.svg"
 redirect_from:
-  - css-max-widths-instead-of-margins/
-  - css-calc-max-widths/
+- css-max-widths-instead-of-margins/
+- css-calc-max-widths/
 ---
 
 I used to (& I'm not the only one) write css margins properties on containers of html elements to contain their widths on small viewports. If you're not aware, _container_ is technical term when talking about html & css that is used to describe an html element that "contains" other html elements. I try to avoid the pattern (of containing elements) by placing a `max width` on individual elements within a content area. In this post I'll describe in detail what I used to do, the solution I used more recently & what I'm doing now. 

@@ -1,15 +1,16 @@
 ---
-layout: post
 title: It's amazing the way that things change & William Kentridge
-date: 2016-02-04
-meta: It's amazing the way things change. I, Jeff Wainwright, discuss myself & the first time I saw a William Kentridge exhibit
+date: 2016-02-04 00:00:00 Z
+permalink: "/things-change-william-kentridge/"
 categories:
 - art
 - thoughts
+layout: post
+meta: It's amazing the way things change. I, Jeff Wainwright, discuss myself & the
+  first time I saw a William Kentridge exhibit
 show_image: true
 note: no-featured-image
-permalink: /things-change-william-kentridge/
-featured_image: /assets/things-change/man.jpg
+featured_image: "/assets/things-change/man.jpg"
 ---
 
 Remembering the first time I saw [William Kentridge](//en.wikipedia.org/wiki/William_Kentridge): it was in Chicago & I drove down from Madison, Madison Wisconsin with my girlfriend. I was around 21. I'm 35 now. I threw a temper tantrum while trying to find a place to park in the magnificent mile area.

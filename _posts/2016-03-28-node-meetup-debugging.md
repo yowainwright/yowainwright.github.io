@@ -1,14 +1,16 @@
 ---
+title: Node Meetup, debugging with Yunong Xiao
+date: 2016-03-28 00:00:00 Z
+permalink: "/node-meetup-debugging-with-yunong-xiao/"
+categories:
+- javascript
+- code
 layout: post
-title:  Node Meetup, debugging with Yunong Xiao
-date: 2016-03-28
 meta: Node Meetup, debugging with Yunong Xiao
-categories: javascript code
 type: code
 note: feature-image-aside
-permalink: /node-meetup-debugging-with-yunong-xiao/
-share_image: /assets/icons/js.jpg
-featured_image: /assets/js.svg
+share_image: "/assets/icons/js.jpg"
+featured_image: "/assets/js.svg"
 ---
 
 On Friday, I had the opportunity to go to the first LA Node.js Meetup. It was great. The presentors did a great job. I wrote down notes the best I could but unfortunately there are a few gaps. 
