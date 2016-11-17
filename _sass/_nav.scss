@@ -58,8 +58,8 @@ $width-medium-large: $spacing-unit * 1000 / $conversion-number;
     position: absolute;
     width: calc(100% - 12.375rem);
     @include media-query($width-small) {
-      left: 16.5rem;
-      width: calc(100% - 16.5rem);
+      left: 15.5rem;
+      width: calc(100% - 15.5rem);
     }
   }
 	&__items {
