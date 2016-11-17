@@ -1,36 +1,32 @@
 <nav id="site-nav" class="site-nav">
-	<div class="site-nav__content">
-    <a class="site-nav__link site-nav__link--logo" href="{{ '/' | prepend: site.baseurl }}">
-      <svg name="site-logo" viewBox="0 0 1000 1000">
-        <use class="site-logo" xlink:href="#logo-w" x="0" y="0" />
-      </svg>
-    </a>
-    <p class="site-nav__title">{% if page.meta %}{{ page.meta | truncate: 80 | '&hellip;' | strip_html }}{% elsif page.excerpt %}{{ page.excerpt | truncate: 80 | '&hellip;' | strip_html }}{% else %}{{ site.description | truncate: 80 | '&hellip;' | strip_html }}{% endif %}</p>
-    <div class="site-nav__featured-content">
-	    <div class="site-nav__about">
-				<article class="site-nav__post">
-					<a class="site-nav__link" href="{{ '/about/' | prepend: site.baseurl }}">
-		      	<img class="site-nav__image" src="//c2.staticflickr.com/2/1668/23805681434_4d8862baae.jpg" alt="Hi, I'm a user interface specialist & frontend engineer">
-						<h3 class="site-nav__title--post">
-							Hi, I'm a user interface specialist &amp; frontend engineer
-						</h3>
-					</a>
-				</article>
-		  </div>
-		  <div class="site-nav__posts">
-	    	{% for post in site.posts limit: 3 %}
-				<article class="site-nav__post">
-					<a class="site-nav__link" href="{{ post.url | prepend: site.baseurl }}">
-					{% if post.featured_image %}
-		        <img class="site-nav__image" src="{{ post.featured_image }}" alt="{{ post.title }}">
-					{% endif %}
-						<h3 class="site-nav__title--post">
-						{{ post.title | truncate: 50, '&hellip;' }}
-						</h3>
-					</a>
-				</article>
-	    	{% endfor %}
-		  </div>
-	  </div>
+  <a class="site-nav__link site-nav__link--logo" href="{{ '/' | prepend: site.baseurl }}">
+    <svg name="site-logo" viewBox="0 0 1000 1000">
+      <use class="site-logo" xlink:href="#logo-w" x="0" y="0" />
+    </svg>
+  </a>
+  <p class="site-nav__title">{% if page.meta %}{{ page.meta | truncate: 80 | '&hellip;' | strip_html }}{% elsif page.excerpt %}{{ page.excerpt | truncate: 80 | '&hellip;' | strip_html }}{% else %}{{ site.description | truncate: 80 | '&hellip;' | strip_html }}{% endif %}</p>
+  <div class="site-nav__content">
+    <div class="site-nav__items">
+  		<article class="site-nav__item site-nav__item--about">
+  			<a class="site-nav__link" href="{{ '/about/' | prepend: site.baseurl }}">
+        	<img class="site-nav__image" src="//c2.staticflickr.com/2/1668/23805681434_4d8862baae.jpg" alt="Hi, I'm a user interface specialist & frontend engineer">
+  				<h3 class="site-nav__title--post">
+  					Hi, I'm a user interface specialist &amp; frontend engineer
+  				</h3>
+  			</a>
+  		</article>
+    	{% for post in site.posts limit: 3 %}
+  		<article class="site-nav__item">
+  			<a class="site-nav__link" href="{{ post.url | prepend: site.baseurl }}">
+  			{% if post.featured_image %}
+          <img class="site-nav__image" src="{{ post.featured_image }}" alt="{{ post.title }}">
+  			{% endif %}
+  				<h3 class="site-nav__title--post">
+  				{{ post.title | truncate: 50, '&hellip;' }}
+  				</h3>
+  			</a>
+  		</article>
+    	{% endfor %}
+    </div>
   </div>
 </nav>
