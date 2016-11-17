@@ -1,6 +1,6 @@
 <section class="posts posts--column">
 	<div class="posts__container">
-		{% for post in site.posts limit: include.postcount offset: include.postoffset %}
+		{% for post in site.posts offset: include.postoffset %}
 			{% include posts/post.html %}
 		{% endfor %}
 	</div>
