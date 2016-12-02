@@ -10,7 +10,7 @@ redirect_from:
 - cv/
 ---
 
-## Hello, I'm Jeff - a user interface specialist & frontend engineer 
+## Hello, I'm Jeff - a user interface specialist & frontend engineer
 
 When I’m not working, I try to be an active member of the design & developer community, especially JavaScript. I also enjoy teaching what I know & learning as much as possible. I ride road bikes & run a lot. I try to surf & still skateboard everyday.
 
@@ -103,10 +103,3 @@ Chicago, IL 1999
 - **CSS**: SASS, PostCss
 - **JS**: jQuery, Backbone, Underscore, Grunt, Gulp, Webpack, Underscore
 - **Frameworks**: Bootstrap, Semantic
-
-![Me, looking very thoughtful](https://c2.staticflickr.com/2/1668/23805681434_4d8862baae.jpg)
-{: .image-circle }
-
-
-
-

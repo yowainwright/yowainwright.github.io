@@ -5,8 +5,8 @@ layout: default
 <main class="post{% if page.note %} post--{{page.note}}{% endif %}">
   <article class="{% if type.page %}page__content{% else %}post__content{% endif %}">
     {% include post/header.html %}
-    {% if page.featured_image %} 
-    {% if page.note != 'no-featured-image' %} 
+    {% if page.featured_image %}
+    {% if page.note != 'no-featured-image' %}
     {% if page.note != 'feature-image-aside' %}
       {% include post/figure.html %}
     {% endif %}

@@ -210,7 +210,7 @@ ol {
 main {
   padding: 0 0 $spacing-unit;
   @include media-query($width-small) {
-    padding: $spacing-unit-large 0 $spacing-unit-largest;
+    padding: 0 0 $spacing-unit-largest;
   }
 }
 .page--about {
@@ -236,6 +236,7 @@ main {
   background-color: $color-grey-lightest;
   @include media-query($width-small) {
     max-width: $width-reader;
+    margin-top: 2rem;
   }
   &__content {
     font-size: $font-size-default;
