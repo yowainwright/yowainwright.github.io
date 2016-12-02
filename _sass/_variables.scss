@@ -1,6 +1,6 @@
 $conversion-number: 16;
 // fonts
-$font-family-default: sans-serif;
+$font-family-default: serif;
 $font-family-serif: $font-family-default;
 $font-family-serif-other: $font-family-default;
 
@@ -53,7 +53,7 @@ $spacing-unit-largest: $spacing-unit * 4;
 
 // Media Queries (px, maybe this sux but px is way faster for me with media queries)
 $width-default: $spacing-unit * 800 / 16 !default;
-$width-reader: $spacing-unit * 700 / 16 !default;
+$width-reader: $spacing-unit * 650 / 16 !default;
 // breakpoints
 $width-large: $screen-lg;
 $width-medium: $screen-md;

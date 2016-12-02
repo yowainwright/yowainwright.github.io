@@ -1,14 +1,11 @@
 .post {
 	&__header {
-		margin-bottom: $spacing-unit-large;
 		margin-top: $spacing-unit;
-		@include media-query($width-small) {
-			margin-bottom: $spacing-unit-largest;
-		}
 	}
 	&__title,
 	&__meta {
 		max-width: none;
+		text-align: center;
 	}
 	&__title {
 		font-size: $font-size-large;
@@ -19,7 +16,7 @@
 	}
 	&__meta {
 		font-family: serif;
-		font-weight: normal;
+		font-weight: bold;
 		font-size: $font-size-small;
 	}
 }
