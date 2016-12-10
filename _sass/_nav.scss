@@ -18,7 +18,7 @@ $width-medium-large: $spacing-unit * 1000 / $conversion-number;
 			text-decoration: underline;
 		}
 		&--logo {
-			border: 3px dotted black;
+			border: 3px solid black;
 			display: block;
 			float: left;
 			height: $brand-unit-circle;
@@ -46,7 +46,7 @@ $width-medium-large: $spacing-unit * 1000 / $conversion-number;
     z-index: 2;
 		@include vertical-align(absolute);
     @include media-query($width-small) {
-      padding: .5rem 1rem .5rem 0;
+      padding: 1rem 1rem 1rem 0;
       width: 11.125rem;
     }
 	}
@@ -113,6 +113,7 @@ $width-medium-large: $spacing-unit * 1000 / $conversion-number;
     }
   }
 	&__image {
+		border-radius: 100%;
 		float: left;
 		margin-right: $spacing-unit-small;
 		height: $site-nav-post-images;

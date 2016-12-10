@@ -10,19 +10,19 @@
   <meta name="viewport" content="width=device-width">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@yowainwright">
-  <meta name="twitter:url" property="og:url" content="{{ site.url }}{{page.permalink }}">
+  <meta name="twitter:url" property="og:url" content="http:{{ site.url }}{{page.permalink }}">
   <meta name="twitter:title" property="og:title" content="{{ page.title }}">
   <meta name="twitter:description" property="og:description" content="{% if page.meta %}{{ page.meta }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
 
-  <meta name="twitter:image" property="og:image" content="{% if page.share_image %}{{ site.url }}{{page.share_image}}{% elsif page.featured_image %}{{ site.url }}{{ page.featured_image }}{% else %}{{ site.url }}/assets/w.jpg{% endif %}">
+  <meta name="twitter:image" property="og:image" content="http:{% if page.share_image %}{{ site.url }}{{page.share_image}}{% elsif page.featured_image %}{{ site.url }}{{ page.featured_image }}{% else %}{{ site.url }}/assets/w.jpg{% endif %}">
 
   {% include scripts/analytics.html %}
 
   {% include scripts/fonts.html %}
 
-  <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="{{ site.url }}/assets/favicon.ico" rel="icon" />
-  <link href="{{ site.url }}/assets/w.png" rel="apple-touch-icon" />
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="stylesheet" href="http:{{ '/css/main.css' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="http:{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href="http:{{ site.url }}/assets/favicon.ico" rel="icon" />
+  <link href="http:{{ site.url }}/assets/w.png" rel="apple-touch-icon" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="http:{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 </head>
