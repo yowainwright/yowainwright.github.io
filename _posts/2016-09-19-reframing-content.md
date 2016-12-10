@@ -26,17 +26,17 @@ Embedded content, like videos, images, podcasts & tweets often do not translate 
 
 Previous to writing this plugin, I used [FitVids](http://fitvidsjs.com/). FitVids is a great plugin for solving reframing videos. It's written by 2 of my idols, [Chris Coyier](http://chriscoyier.net/) & [Dave Ruppert](http://daverupert.com/). Fitvids _takes a chance_ that most of your content will be 1 of 5 `selectors`. If those assumptions are correct (& if you're using jQuery) - FitVids is golden. If not, there might need to be little extra code on top of the little extra code added that assumes your embedded content will be 1 of 5 `selectors`. The reason that Reframe.js was originally made was because [jQuery](http://jquery.com/) was not being used on a new product at [DSC](http://dollarshaveclub.com).
 
-Reframe.js also: 
-1. doesn't assume your reframing just videos (by name at least), 
-2. offers a css mixin rather than inlining css which can make your dom (html) cleaner 
+Reframe.js also:
+1. doesn't assume your reframing just videos (by name at least),
+2. offers a css mixin rather than inlining css which can make your dom (html) cleaner
 3. & offers jQuery plugin that is written in such a way that if unused - it can be shaken out with [Tree shaking](https://medium.com/@Rich_Harris/tree-shaking-versus-dead-code-elimination-d3765df85c80#.ccnp22e5f).
 These things make the code lighter initially.
 
 ## Options
 
-The one option supported by Reframe.js is the ability to add your own css class instead of the default css class `js-reframe`. This is so that the end result of using the library on a webpage is minimal - just 1 inline style added (for the intersic ratio). 
+The one option supported by Reframe.js is the ability to add your own css class instead of the default css class `js-reframe`. This is so that the end result of using the library on a webpage is minimal - just 1 inline style added (for the intersic ratio).
 
-Reframe.js's simplicity in both language & options is meant to make the plugin easy to understand & easy to write code to support your product's end goal. 
+Reframe.js's simplicity in both language & options is meant to make the plugin easy to understand & easy to write code to support your product's end goal.
 
 ## Plugin Breakdown
 
@@ -130,6 +130,6 @@ Also, I think I will be adding a docs folder for using the plugin & specific use
 
 ## Summary
 
-One of the fun challenges when writing code for content is to support creativity in a controlled way. Reframe.js is a great solve for making embedded content look great on your website. Initially, we didn't know if we would be using jQuery for our product at [DSC](https://www.dollarshaveclub.com/) so [FitVids](http://fitvidsjs.com/) was out of the question - which led me down the path of writing some new code. The end result was Reframe.js. Hope it works well for you if you use it. 
+One of the fun challenges when writing code for content is to support creativity in a controlled way. Reframe.js is a great solve for making embedded content look great on your website. Initially, we didn't know if we would be using jQuery for our product at [DSC](https://www.dollarshaveclub.com/) so [FitVids](http://fitvidsjs.com/) was out of the question - which led me down the path of writing some new code. The end result was Reframe.js. Hope it works well for you if you use it.
 
-I plan on writing more lightweight plugins to solve common content problems in the future. If you have questions or ideas in regards to [Reframe.js](https://github.com/dollarshaveclub/reframe.js) please contact me - links below.  
+I plan on writing more lightweight plugins to solve common content problems in the future. If you have questions or ideas in regards to [Reframe.js](https://github.com/dollarshaveclub/reframe.js) please contact me - links below.

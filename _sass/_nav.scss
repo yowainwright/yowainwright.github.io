@@ -46,6 +46,7 @@ $width-medium-large: $spacing-unit * 1000 / $conversion-number;
     z-index: 2;
 		@include vertical-align(absolute);
     @include media-query($width-small) {
+			height: 4.065rem;
       padding: 1rem 1rem 1rem 0;
       width: 11.125rem;
     }
