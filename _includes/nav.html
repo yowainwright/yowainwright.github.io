@@ -1,7 +1,33 @@
 <nav id="site-nav" class="site-nav">
-  <a class="site-nav__link site-nav__link--logo" href="{{ '/' | prepend: site.baseurl }}">
-    <svg name="site-logo" viewBox="0 0 1000 1000">
-      <use class="site-logo" xlink:href="#logo-w" x="0" y="0" />
-    </svg>
-  </a>
+	<div class="site-nav__container">
+	  <ol class="site-nav__items">
+	  	<li class="site-nav__item site-nav__item--home">
+	  		<a class="site-nav__link site-nav__link--logo" href="http:{{ '/' | prepend: site.baseurl }}">
+	    		<svg name="site-logo" viewBox="0 0 1000 1000">
+	      		<use class="site-logo" xlink:href="#logo-w" x="0" y="0" />
+	    		</svg>
+	  		</a>
+	  	</li>
+	  	<li class="site-nav__item">
+	  		<a class="site-nav__link" href="https://github.com/yowainwright" target="_blank">
+	  			Github
+	  		</a>
+	  	</li>
+	  	<li class="site-nav__item">
+	  		<a class="site-nav__link" href="https://twitter.com/yowainwright" target="_blank">
+	  			Twitter
+	  		</a>
+	  	</li>
+	  	<li class="site-nav__item">
+	  		<a class="site-nav__link" href="https://.instagram.com/yowainwright" target="_blank">
+	  			Instagram
+	  		</a>
+	  	</li>
+	  	<li class="site-nav__item">
+	  		<a class="site-nav__link" href="http://jeffry.in/about">
+	  			About
+	  		</a>
+	  	</li>
+	  </ol>
+  </div>
 </nav>

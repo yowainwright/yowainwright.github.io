@@ -2,27 +2,32 @@
 title: About me, Jeffry Wainwright
 permalink: "/about/"
 layout: about
-meta: Hey, I'm Jeff - a user interface specialist, frontend engineer & athlete living
-  in Southern California
+meta: This blog contains written posts by Jeffry Wainwright - a user interface specialist, frontend engineer & athlete living in Southern California
 page: about
 type: page
 redirect_from:
 - cv/
 ---
 
-## Hello, I'm Jeff - a user interface specialist & frontend engineer
+## A bit about me, Jeff Wainwright
 
-When I’m not working, I try to be an active member of the design & developer community, especially JavaScript. I also enjoy teaching what I know & learning as much as possible. I ride road bikes & run a lot. I try to surf & still skateboard everyday.
+When not working, I try to be an active member of the design and developer community; especially JavaScript. I enjoy teaching and learning. Actively, I ride road bikes, run and try to skateboard everyday. However, lately, my outdoor passion has been surfing. 🏄
 
-## Experience
+I'm not a traditionally trained software engineer; I taught myself. After going to design school, I became passionate about how software tools I used worked. This obsession has led me to care tremendously about how and the why software is made. 
+
+
+## Some work history
 
 **Dollar Shave Club**<br/>
 Front End Engineer<br/>
 Los Angeles, CA \| March 2016 - current
 
--  Currently building a content platform _(updated: 9/13)_
+-  Building a content platform, [shipped](https://content.dollarshaveclub.com/) September of 2016 🚀
+-  Maintain [DSC Engineering Blog](http://engineering.dollarshaveclub.com/)
+-  Maintain Open Source Products such as [reframe.js](https://dollarshaveclub.github.io/reframe.js/) and [shave](https://dollarshaveclub.github.io/shave/)
+-  Build content applications in various langs, details to come (updated 12/10/16)
 
-**Billboard & The Hollywood Reporter**<br/>
+**[Billboard](http://www.billboard.com/) & [The Hollywood Reporter](http://www.hollywoodreporter.com/)**<br/>
 Front End Engineer<br/>
 Los Angeles, CA \| May 2014 - March 2016
 
@@ -43,7 +48,7 @@ Los Angeles, CA \| May 2014 - March 2016
 -  Improved productivity & sustainability
 -  Increased readership (by 15% \- both brands)
 
-**Outlook Amusements**<br/>
+**Outlook Amusements ([California Psychics](https://www.californiapsychics.com/))**<br/>
 User Interface Developer<br/>
 Burbank, CA \| March 2012 - March 2014
 
@@ -57,7 +62,7 @@ Burbank, CA \| March 2012 - March 2014
 -  Increased user clicks (over 50% increase - email)
 -  Saved money (responsive pages vs supporting mobile & desktop websites)
 
-**Nasdaq**<br/>
+**[Nasdaq](http://www.nasdaq.com/)**<br/>
 User Interface Developer<br />
 Rockville, MD \| Jan 2011-Jan 2012
 

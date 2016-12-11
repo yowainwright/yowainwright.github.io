@@ -31,4 +31,7 @@ gems:
 - jekyll/tagging
 - jekyll-tagging-related_posts
 - jekyll-minifier
+- jekyll-autoprefixer
+- jemoji
+
 
