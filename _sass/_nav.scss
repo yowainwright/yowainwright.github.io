@@ -31,60 +31,36 @@ $width-medium-large: $spacing-unit * 1000 / $conversion-number;
 			@include prefix(border-radius, 100%, webkit ms moz);
 		}
 	}
-
-	&__title {
-    background-color: white;
-    border-right: 2px solid black;
-		font-family: $font-family-serif-other;
-		font-size: $font-size-default * .65;
-		font-style: italic;
-		left: 5.5rem;
-		line-height: 1.5;
-		margin-right: .5rem;
-    padding: .1rem 1rem .2rem 0;
-    width: 8rem;
-    z-index: 2;
-		@include vertical-align(absolute);
-    @include media-query($width-small) {
-      padding: .75rem 1rem .75rem 0;
-      width: 11.125rem;
-    }
-	}
   &__content {
-    left: 12.375rem;
+    left: 6.5rem;
     padding: 1.25rem 0 2rem .25rem;
     overflow-x: auto;
     overflow-y: hidden;
     position: absolute;
-    width: calc(100% - 12.375rem);
-    @include media-query($width-small) {
-      left: 15.5rem;
-      width: calc(100% - 15.5rem);
-    }
+    width: calc(100% - 6.5rem);
   }
 	&__items {
     display: flex;
     justify-content: center;
-    width: 52rem;
 	}
   &__item {
+    border-right: 1px dotted black;
     flex-shrink: 0;
     height: 3.25rem;
 		padding: 0 $spacing-unit-small;
     position: relative;
     width: 12rem;
-		&:nth-of-type(2),
-    &:nth-of-type(3) {
-      border-right: 1px dotted black;
-		}
-		&:last-of-type(4) {
+		&:last-of-type {
 			border-right: 0;
 		}
     &--about,
-    &:nth-of-type(2) {
+    &:nth-of-type(1) {
+      border-left: 1px dotted black;
       margin-left: 1rem;
       &:before {
+        border-top: 2px solid black;
         bottom: -$spacing-unit-small;
+        content: 'recent';
         left: 0;
         display: block;
         font-size: $font-size-small;
@@ -96,19 +72,6 @@ $width-medium-large: $spacing-unit * 1000 / $conversion-number;
         width: $spacing-unit * 65 / 16;
         @include prefix(transform, rotate(-90deg), webkit ms moz);
         @include prefix(transform-origin, left bottom 0, webkit ms moz);
-      }
-    }
-    &--about {
-      border-right: 0;
-      padding-right: 1rem;
-      &:before {
-        content: 'about';
-      }
-    }
-    &:nth-of-type(2) {
-      &:before {
-        border-top: 2px solid black;
-        content: 'recent';
       }
     }
   }

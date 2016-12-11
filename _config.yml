@@ -23,6 +23,12 @@ kramdown:
   auto_ids: false
 sass:
   style: compressed
+jekyll-minifier:
+  exclude: '' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
 gems:
 - jekyll-sitemap
 - jekyll-redirect-from
+- jekyll/tagging
+- jekyll-tagging-related_posts
+- jekyll-minifier
+
