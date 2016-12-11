@@ -5,9 +5,13 @@ $width-small-medium: $spacing-unit * 825 / $conversion-number;
 $width-medium-large: $spacing-unit * 1000 / $conversion-number;
 $nav-height: 3.875rem;
 .site-nav {
+	border-bottom: 1px solid #ccc;
 	position: relative;
 	margin: 0 auto;
 	max-width: 67.5rem;
+	@include media-query($width-small) {
+		border-bottom: 0;
+	}
 	&__container {
 
 	}

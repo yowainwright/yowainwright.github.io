@@ -18,6 +18,6 @@ You can also connect with me socially on:
 If you'd like to help me with my repo or even write a post:
 -   download the repository
 -   building locally
---   `bundle exec jekyll liveserve -w --config _config.yml,_config_dev.yml`
+--   `bundle exec jekyll serve -w --config _config.yml,_config_dev.yml`
 --   The command above allows us to have a configurable `site.url` for links between prod & dev environments
 -  then submit a pull request (without merge conflicts preferably)
