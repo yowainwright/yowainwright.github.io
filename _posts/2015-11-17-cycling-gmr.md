@@ -11,6 +11,7 @@ layout: post
 meta: Glendora Mountain Road is a road cycling paradise
 featured_image: "/assets/gmr/gmr.jpg"
 note: no-featured-image
+show_image: true
 redirect_from:
 - personal-site/glendora-mountain-road/
 ---
@@ -32,4 +33,3 @@ Key sites: During most of the ride youâ€™ll have great views. Particularly, youâ
 The trip personally for me was bitter sweet. One of my best riding buds, [Brett Pitts](https://www.strava.com/athletes/1283635?oq=bre), is about to move so we decided we had to make the ride happen. We zipped up the inline from Azusa & raced on the ridge after switching to [Glendora Ridge Rd](http://www.toughascent.com/blog/tag/glendora-ridge-road/). We made the ride in the middle of November so we were comfortable riding with our kits & a vest. I wore my [Rapha Lightweight Kit & Vest](http://www.rapha.cc/us/en_US/shop/gift-bundles/category/bundles) & it suited me perfectly for the ride.
 
 <iframe frameborder='0' allowtransparency='true' style="min-height: 405px;" scrolling='no' src='//www.strava.com/activities/432826817/embed/96dd9da58f55dc1ec44bc7fd57e72442ad7d36e7'></iframe>
-
