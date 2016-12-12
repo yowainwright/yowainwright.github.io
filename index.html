@@ -7,4 +7,10 @@ page: home
 ---
 
 {% include header.html %}
-{% include posts/column.html %}
+<section class="posts posts--column">
+  <div class="posts__container">
+    {% for post in site.posts offset: include.postoffset %}
+      {% include posts/post.html %}
+    {% endfor %}
+  </div>
+</section>
