@@ -2,7 +2,8 @@
 title: About me, Jeffry Wainwright
 permalink: "/about/"
 layout: about
-meta: This blog contains written posts by Jeffry Wainwright - a user interface specialist, frontend engineer & athlete living in Southern California
+meta: This blog contains written posts by Jeffry Wainwright - a user interface specialist,
+  frontend engineer & athlete living in Southern California
 page: about
 type: page
 redirect_from:
