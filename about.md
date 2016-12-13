@@ -11,9 +11,9 @@ redirect_from:
 
 ## A bit about me, Jeff Wainwright
 
-When not working, I try to be an active member of the design and developer community; especially JavaScript. I enjoy teaching and learning. Actively, I ride road bikes, run and try to skateboard everyday. However, lately, my outdoor passion has been surfing. 🏄
+Outside of work, I try to be an active member of the design and developer community. I ride road bikes, run and try to skateboard everyday. Lately, my outdoor passion has been surfing. 🏄
 
-I'm not a traditionally trained software engineer; I taught myself. After going to design school, I became passionate about how software tools I used worked. This obsession has led me to care tremendously about how and the why software is made. 
+I'm not a traditionally trained software engineer. After going to design school, I became passionate about how software tools I used actually worked. This obsession has led me to care tremendously about how and why software is made. 
 
 
 ## Some work history

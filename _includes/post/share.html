@@ -4,7 +4,7 @@
       <use class="social-svg" xlink:href="#mail-svg" x="0" y="0" />
     </svg>
   </a>
-  <a class="post__link post__link--share" href="//twitter.com/share?url=http://jeffry.in{% if page.url %}{{ page.url }}{% else %}{{ post.url }}{% endif %}&text={% if page.title %}{{ page.title }}{% else %}{{ post.title }}{% endif %}&via=@{{ site.twitter_username }}{% if page.shareHashTag or post.shareHashTag %}&hashtags={% if page.shareHashTag %}{{ page.shareHashTag }}{%elsif post.shareHashTag %}{{ page.shareHashTag }}{% endif %}{% endif %}" target="_blank">
+  <a class="post__link post__link--share" href="//twitter.com/share?url=http://jeffry.in{% if page.url %}{{ page.url }}{% else %}{{ post.url }}{% endif %}&text={% if page.title %}{{ page.title }}{% else %}{{ post.title }}{% endif %}&via={{ site.twitter_username }}" target="_blank">
     <svg name="twitter-svg" viewBox="0 0 512 512">
       <use class="social-svg" xlink:href="#twitter-svg" x="0" y="0" />
     </svg>
