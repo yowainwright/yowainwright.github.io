@@ -24,7 +24,7 @@ kramdown:
 sass:
   style: compressed
 jekyll-minifier:
-  exclude: '' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
+  exclude: ''
 gems:
 - jekyll-sitemap
 - jekyll-redirect-from
@@ -33,5 +33,3 @@ gems:
 - jekyll-minifier
 - jekyll-autoprefixer
 - jemoji
-
-
