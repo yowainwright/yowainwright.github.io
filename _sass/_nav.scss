@@ -20,7 +20,7 @@ $nav-height: 3.875rem;
 		height: $nav-height;
     font: .65rem/1 $font-family-default;
     letter-spacing: .1rem;
-		line-height: $nav-height;
+		line-height: $nav-height !important;
 		text-align: center;
 		text-decoration: none;
     text-transform: uppercase;
