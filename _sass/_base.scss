@@ -4,8 +4,7 @@ body {
   padding: 0;
 }
 body {
-  font-family: $font-family-serif;
-  font-size: $font-size-medium;
+  font-family: $font-family-default;
   line-height: $line-height-default;
   color: $text-color;
   -webkit-text-size-adjust: 100%;
@@ -36,8 +35,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: sarif;
-  letter-spacing: -1px;
+  font-family: $font-family-default;
+  letter-spacing: -.1rem;
 }
 img {
   display: block;
@@ -102,14 +101,6 @@ strong {
 }
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: serif;
-}
-h1,
-h2,
 h3 {
   line-height: 1.25;
 }
@@ -126,8 +117,7 @@ h3 {
 }
 p,
 li {
-  font-family: $font-family-serif;
-  font-size: $font-size-default;
+  font-family: $font-family-default;
   font-weight: lighter;
   margin-left: auto;
   margin-right: auto;
@@ -138,7 +128,7 @@ li {
   }
 }
 p {
-  line-height: 2.2;
+  line-height: 2;
 }
 li {
   margin-bottom: $spacing-unit-small;

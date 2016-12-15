@@ -18,9 +18,12 @@ $nav-height: 3.875rem;
 	&__link {
 		color: black;
 		height: $nav-height;
+    font: $font-nav;
+    letter-spacing: .1rem;
 		line-height: $nav-height;
 		text-align: center;
 		text-decoration: none;
+    text-transform: uppercase;
 		&:hover {
 			text-decoration: underline;
 		}

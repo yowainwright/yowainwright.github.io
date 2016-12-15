@@ -1,8 +1,7 @@
 $conversion-number: 16;
 // fonts
-$font-family-default: serif;
-$font-family-serif: $font-family-default;
-$font-family-serif-other: $font-family-default;
+$font-family-default: Helvetica, Arial, sans-serif;
+$font-family-headline: Helvetica, Arial, sans-serif;
 
 // line height
 $line-height-default: 1.5;
@@ -16,9 +15,12 @@ $font-weight-bold: 800;
 $font-size-default: 1rem !default;
 $font-size-small: $font-size-default * .8;
 $font-size-medium: $font-size-default * 1.25;
-$font-size-large: $font-size-default * 1.5;
-$font-size-larger: $font-size-default * 2;
-$font-size-largest: $font-size-default * 3;
+$font-size-large: $font-size-default * 2;
+$font-size-larger: $font-size-default * 2.5;
+$font-size-largest: $font-size-default * 3.5;
+
+
+$font-nav: .75rem/1 $font-family-default;
 
 // colors
 // greys

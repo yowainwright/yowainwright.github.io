@@ -5,7 +5,6 @@
 	&__title,
 	&__meta {
 		max-width: none;
-		text-align: center;
 	}
 	&__title {
 		font-size: $font-size-large;
@@ -15,8 +14,9 @@
 		}
 	}
 	&__meta {
-		font-family: serif;
 		font-weight: bold;
 		font-size: $font-size-small;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
 	}
 }
