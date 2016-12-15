@@ -18,12 +18,15 @@ $nav-height: 3.875rem;
 	&__link {
 		color: black;
 		height: $nav-height;
-    font: $font-nav;
+    font: .65rem/1 $font-family-default;
     letter-spacing: .1rem;
 		line-height: $nav-height;
 		text-align: center;
 		text-decoration: none;
     text-transform: uppercase;
+    @include media-query($width-small) {
+      font: .75rem/1 $font-family-default;
+    }
 		&:hover {
 			text-decoration: underline;
 		}
