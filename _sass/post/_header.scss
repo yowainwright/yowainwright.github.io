@@ -1,6 +1,9 @@
 .post {
 	&__header {
 		margin-top: $spacing-unit;
+    @include media-query($width-small) {
+      margin-top: 8.5rem;
+    }
 	}
 	&__title,
 	&__meta {

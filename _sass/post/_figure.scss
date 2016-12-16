@@ -25,5 +25,8 @@
       position: relative;
       z-index: 1;
 		}
+    &--featured {
+      max-width: 100%;
+    }
 	}
 }

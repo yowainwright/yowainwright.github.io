@@ -9,79 +9,16 @@ body {
   color: $text-color;
   -webkit-text-size-adjust: 100%;
 }
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-header,
-img,
-iframe,
-code,
-pre,
-blockquote,
-table {
-  margin-left: auto;
-  margin-right: auto;
-}
+
+// fonts
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-default;
+  font-family: $font-family-headline;
   letter-spacing: -.1rem;
-}
-img {
-  display: block;
-}
-figure {
-  margin: 0 auto;
-}
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-header {
-  max-width: calc(100% - #{$spacing-unit-large});
-  @include media-query($width-small) {
-    max-width: $width-reader;
-  }
-}
-iframe,
-code,
-pre,
-blockquote,
-table {
-  @include media-query($width-small) {
-    max-width: $width-default;
-  }
-}
-h2,
-ul,
-ol {
-  margin-bottom: $spacing-unit;
-}
-li {
-  margin-bottom: $spacing-unit-smallest;
 }
 h1,
 h2,
@@ -98,6 +35,22 @@ strong {
       text-decoration: underline;
     }
   }
+}
+h2,
+ul,
+ol {
+  margin-bottom: $spacing-unit;
+}
+ul,
+ol {
+  margin-bottom: $spacing-unit;
+  margin-top: $spacing-unit;
+  li > p {
+    margin-bottom: 0;
+  }
+}
+li {
+  margin-bottom: $spacing-unit-smallest;
 }
 h1,
 h2,
@@ -145,8 +98,13 @@ a {
     text-decoration: underline;;
   }
 }
+blockquote,
+blockquote p {
+  font-size: $font-size-medium;
+  font-style: italic;
+}
 blockquote {
-  border-left: 4px solid $color-grey-lightest;
+  border-left: 4px solid black;
   clear: both;
   margin-bottom: $spacing-unit;
   margin-top: $spacing-unit;
@@ -161,15 +119,78 @@ blockquote {
      margin: 0;
   }
 }
-blockquote,
-blockquote p {
-  color: $color-grey;
-  font-size: $font-size-medium;
-  font-style: italic;
+
+// media
+figure {
+  margin: 0 auto;
 }
+img,
 iframe {
   display: block;
-  width: 100%;
+  margin-bottom: $spacing-unit;
+  margin-top: $spacing-unit;
+  max-width: 100%;
+  @include media-query($width-small) {
+    margin-bottom: $spacing-unit-large;
+    margin-top: $spacing-unit-large;
+  }
+  @include media-query($width-medium) {
+    margin-bottom: $spacing-unit-largest;
+    margin-top: $spacing-unit-largest;
+  }
+}
+
+// element max-widths
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+header {
+  max-width: calc(100% - #{$spacing-unit-large});
+  @include media-query($width-small) {
+    max-width: $width-reader;
+  }
+}
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+header,
+img,
+iframe,
+code,
+pre,
+blockquote,
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+iframe,
+code,
+pre,
+blockquote,
+table {
+  @include media-query($width-small) {
+    max-width: $width-default;
+  }
 }
 pre,
 code {
@@ -203,6 +224,8 @@ main {
     padding: 0 0 $spacing-unit-largest;
   }
 }
+
+// trumps : general
 .page--about {
   margin-left: auto;
   margin-right: auto;

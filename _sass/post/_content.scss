@@ -14,33 +14,34 @@
 				margin-top: $spacing-unit-largest;
 			}
 		}
-		ul,
-		ol {
-			margin-bottom: $spacing-unit;
-			margin-top: $spacing-unit;
-			li > p {
-				margin-bottom: 0;
-			}
-		}
-		img {
-			max-width: 100%;
-		}
-		img,
-		iframe {
-			margin-bottom: $spacing-unit;
-			margin-top: $spacing-unit;
-			@include media-query($width-small) {
-				margin-bottom: $spacing-unit-large;
-				margin-top: $spacing-unit-large;
-			}
-			@include media-query($width-medium) {
-				margin-bottom: $spacing-unit-largest;
-				margin-top: $spacing-unit-largest;
-			}
-		}
+		// ul,
+		// ol {
+		// 	margin-bottom: $spacing-unit;
+		// 	margin-top: $spacing-unit;
+		// 	li > p {
+		// 		margin-bottom: 0;
+		// 	}
+		// }
+		// img {
+		// 	max-width: 100%;
+		// }
+		// img,
+		// iframe {
+		// 	margin-bottom: $spacing-unit;
+		// 	margin-top: $spacing-unit;
+		// 	@include media-query($width-small) {
+		// 		margin-bottom: $spacing-unit-large;
+		// 		margin-top: $spacing-unit-large;
+		// 	}
+		// 	@include media-query($width-medium) {
+		// 		margin-bottom: $spacing-unit-largest;
+		// 		margin-top: $spacing-unit-largest;
+		// 	}
+		// }
     &:first-line,
     p:first-of-type:first-line {
       font-weight: bold;
+      text-transform: uppercase;
     }
 		.post--feature-image-aside & {
 			margin-left: auto;
