@@ -10,5 +10,3 @@ meta: A quick watermelon illustration in Adobe Illustrator
 featured_image: "//c2.staticflickr.com/6/5724/22108056643_0ede6b33dd_o.png"
 ---
 
-
-
