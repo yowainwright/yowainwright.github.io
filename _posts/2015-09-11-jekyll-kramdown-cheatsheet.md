@@ -4,7 +4,6 @@ date: 2015-09-11 16:33:51 Z
 permalink: "/kramdown-syntax-cheatsheet/"
 categories:
 - jekyll
-- kramdown
 - markdown
 - code
 layout: post

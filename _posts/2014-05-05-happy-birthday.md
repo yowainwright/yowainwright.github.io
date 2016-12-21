@@ -5,7 +5,6 @@ permalink: "/happy-birthday/"
 categories:
 - story
 - projects
-- general
 layout: post
 show_image: true
 featured_image: "/assets/hb/hb.jpg"

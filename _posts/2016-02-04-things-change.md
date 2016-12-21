@@ -5,6 +5,7 @@ permalink: "/things-change-william-kentridge/"
 categories:
 - art
 - thoughts
+- story
 layout: post
 meta: It's amazing the way things change. I, Jeff Wainwright, discuss myself & the
   first time I saw a William Kentridge exhibit

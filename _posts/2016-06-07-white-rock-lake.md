@@ -4,7 +4,6 @@ date: 2016-06-07 00:00:00 Z
 permalink: "/white-rock-lake/"
 categories:
 - story
-- general
 layout: post
 author: Jeff Wainwright
 meta: Hanging out around White Rock Lake

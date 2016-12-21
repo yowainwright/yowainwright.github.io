@@ -5,7 +5,6 @@ date: 2013-05-21 00:00:00 Z
 permalink: "/youre-an-ortiz/"
 categories:
 - story
-- general
 layout: post
 meta: A short story about moving out of the a bad situation & into a good one
 note: no-featured-image

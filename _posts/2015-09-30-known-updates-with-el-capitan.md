@@ -3,12 +3,8 @@ title: Known changes needed after updating to El Capitan OS
 date: 2015-09-30 00:00:00 Z
 permalink: "/known-updates-with-el-capitan-os/"
 categories:
-- programming
-- mac
 - os
-- general
 - code
-- third
 layout: post
 meta: Known changes needed after updating to El Capitan OS
 note: feature-image-aside

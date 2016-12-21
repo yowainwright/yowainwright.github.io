@@ -5,8 +5,6 @@ permalink: "/creating-aliases/"
 categories:
 - code
 - terminal
-- mac
-- snippet
 layout: post
 meta: Creating Aliases on a Mac is an easy thing to do & can save a lot of time
 note: feature-image-aside
