@@ -2,10 +2,13 @@
 layout: page
 ---
 
-{% include post/header.html %}
 <section class="posts posts--column">
+  <header class="header">
+    <h1 class="header__category">{{page.category}}</h1>
+    <p class="header__description">{{page.title}}</p>
+  </header>
   <div class="posts__container">
-    {% for post in site.categories.[page.category] offset: include.postoffset %}
+    {% for post in site.categories[page.category] %}
       {% include posts/post.html %}
     {% endfor %}
   </div>
