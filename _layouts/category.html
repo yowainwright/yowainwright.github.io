@@ -2,6 +2,7 @@
 layout: page
 ---
 
+{% include post/header.html %}
 <section class="posts posts--column">
   <div class="posts__container">
     {% for post in site.categories.[page.category] offset: include.postoffset %}
