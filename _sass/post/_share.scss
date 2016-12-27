@@ -1,34 +1,60 @@
-.post {
-  &__share,
-  &__link--share {
+.share {
+  &__nav,
+  &__link {
     overflow: hidden;
   }
-  &__share {
-    margin: 0;
-    padding: $spacing-unit 0 $spacing-unit-large;
-    text-align: center;
+  &__nav {
     &:before {
       content: 'Share this post';
-      display: block;
-      font-size: $font-size-default;
       font-style: italic;
-      margin-bottom: $spacing-unit;
     }
   }
-  &__link--share {
-    display: block;
-    height: $svg-unit;
+  &__link {
+    display: inline-block;
     position: relative;
-    width: $svg-unit;
-    .post__share & {
-      display: inline-block;
-    }
-  }
-  &__text {
-    position: absolute;
-    right: -#{$spacing-unit * 100 / 16};
   }
   svg {
     fill: $text-color;
+  }
+}
+// trumps
+.share {
+  &--inline {
+    display: inline-block;
+    font-weight: normal;
+    position: relative;
+    top: $spacing-unit-smallest;
+    .share__nav {
+      &:before {
+        border-left: 1px solid black;
+        content: 'share';
+        font-family: $font-family-headline;
+        font-size: $font-size-small;
+        margin-left: $spacing-unit;
+        padding-left: $spacing-unit;
+        text-transform: lowercase;
+      }
+    }
+    .share__link {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+  &--main {
+    .share__nav {
+      margin: 0;
+      padding: $spacing-unit 0 $spacing-unit-large;
+      text-align: center;
+      &:before {
+        content: 'share this post';
+        display: block;
+        font-size: $font-size-default;
+        margin-bottom: $spacing-unit;
+      }
+    }
+    .share__link {
+      height: $svg-unit;
+      width: $svg-unit;
+    }
   }
 }

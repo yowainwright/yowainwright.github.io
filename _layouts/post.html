@@ -19,7 +19,9 @@ layout: default
     {{ content }}
     </div>
     {% if type != page %}
-      {% include post/share.html %}
+      <div class="share--main">
+        {% include post/share.html %}
+      </div>
     {% endif %}
   </article>
   {% if type != page %}

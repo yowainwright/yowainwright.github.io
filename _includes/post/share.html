@@ -1,25 +1,25 @@
-<nav class="post__share">
-  <a class="post__link post__link--share" href="mailto:?body=http://jeffry.in{% if page.url %}{{ page.url }}{% else %}{{ post.url }}{% endif %}&subject={% if page.title %}{{ page.title }}{% else %}{{ post.title }}{% endif %}">
+<nav class="share__nav">
+  <a class="share__link" href="mailto:?body=http://jeffry.in{% if page.url %}{{ page.url }}{% else %}{{ post.url }}{% endif %}&subject={% if page.title %}{{ page.title }}{% else %}{{ post.title }}{% endif %}">
     <svg name="mail-svg" viewbox="0 0 512 512">
       <use class="social-svg" xlink:href="#mail-svg" x="0" y="0" />
     </svg>
   </a>
-  <a class="post__link post__link--share" href="//twitter.com/share?url=http://jeffry.in{% if page.url %}{{ page.url }}{% else %}{{ post.url }}{% endif %}&text={% if page.title %}{{ page.title }}{% else %}{{ post.title }}{% endif %}&via={{ site.twitter_username }}" target="_blank">
+  <a class="share__link" href="//twitter.com/share?url=http://jeffry.in{% if page.url %}{{ page.url }}{% else %}{{ post.url }}{% endif %}&text={% if page.title %}{{ page.title }}{% else %}{{ post.title }}{% endif %}&via={{ site.twitter_username }}" target="_blank">
     <svg name="twitter-svg" viewBox="0 0 512 512">
       <use class="social-svg" xlink:href="#twitter-svg" x="0" y="0" />
     </svg>
   </a>
-  <a class="post__link post__link--share" href="//www.tumblr.com/widgets/share/tool?canonicalUrl=http://jeffry.in{% if page.url %}{{ page.url }}{% else %}{{ post.url }}{% endif %}&title={% if page.title %}{{ page.title }}{% else %}{{ post.title }}{% endif %}" target="_blank">
+  <a class="share__link" href="//www.tumblr.com/widgets/share/tool?canonicalUrl=http://jeffry.in{% if page.url %}{{ page.url }}{% else %}{{ post.url }}{% endif %}&title={% if page.title %}{{ page.title }}{% else %}{{ post.title }}{% endif %}" target="_blank">
     <svg name="tumblr-svg" viewBox="0 0 512 512">
       <use class="social-svg" xlink:href="#tumblr-svg" x="0" y="0" />
     </svg>
   </a>
-  <a class="post__link post__link--share" href="https://www.facebook.com/dialog/share?app_id=1725684487747390&display=page&href=http://jeffry.in{% if page.url %}{{ page.url }}{% else %}{{ post.url }}{% endif %}" target="_blank">
+  <a class="share__link" href="https://www.facebook.com/dialog/share?app_id=1725684487747390&display=page&href=http://jeffry.in{% if page.url %}{{ page.url }}{% else %}{{ post.url }}{% endif %}" target="_blank">
     <svg name="facebook-svg" viewBox="0 0 512 512">
       <use class="social-svg" xlink:href="#facebook-svg" x="0" y="0" />
     </svg>
   </a>
-  <!-- <a class="post__link post__link--share" href="https://reddit.com/submit?url=http://jeffry.in{% if page.url %}{{ page.url }}{% else %}{{ post.url }}{% endif %}&title={% if page.title %}{{ page.title }}{% else %}{{ post.title }}{% endif %}" target="_blank">
+  <!-- <a class="share__link" href="https://reddit.com/submit?url=http://jeffry.in{% if page.url %}{{ page.url }}{% else %}{{ post.url }}{% endif %}&title={% if page.title %}{{ page.title }}{% else %}{{ post.title }}{% endif %}" target="_blank">
     <svg name="reddit-svg" viewBox="0 0 512 512">
       <use class="social-svg" xlink:href="#reddit-svg" x="0" y="0" />
     </svg>
