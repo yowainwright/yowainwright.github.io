@@ -1,0 +1,33 @@
+.header {
+  &--category {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $spacing-unit;
+    max-width: calc(100% - #{$spacing-unit-large});
+    @include media-query($width-small) {
+      margin-top: 8.5rem;
+      max-width: $width-default;
+    }
+  }
+  &__title,
+  &__emoji {
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: $spacing-unit-medium;
+    text-transform: uppercase;
+  }
+  &__description {
+    font-size: $font-size-medium;
+    &:first-line {
+      font-weight: bold;
+    }
+  }
+  &__emoji {
+    font-size: 5rem;
+    line-height: 1;
+    @include media-query($width-small) {
+      font-size: 8rem;
+    }
+  }
+}
