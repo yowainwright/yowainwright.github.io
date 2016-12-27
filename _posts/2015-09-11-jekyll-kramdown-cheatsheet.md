@@ -8,10 +8,8 @@ categories:
 - code
 layout: post
 meta: Kramdown Syntax Cheatsheet
-note: feature-image-aside
 type: code
 share_image: "/assets/icons/markdown.jpg"
-featured_image: "/assets/md.svg"
 ---
 
 Using [markdown](http://daringfireball.net/projects/markdown/) is a quick way to set up a _semi-formatted_ post or page. It can really bring a page to life quickly &amp; help to visually define the layout of text. This site is built with [jekyll](http://jekyllrb.com) so I'm using [kramdown](http://kramdown.gettalong.org/), a version of markdown.

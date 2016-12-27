@@ -10,9 +10,7 @@ author: Jeff Wainwright
 meta: Creating a sticky nav that works while scrolling is a difficult issue that must
   be solved, many sites navigations are set to fixed position
 type: code
-note: feature-image-aside
 share_image: "/assets/icons/js.jpg"
-featured_image: "/assets/js.svg"
 ---
 
 Although navigations stuck to the top of browser windows are sometimes scrutinized, their relavance on webpages cannot easily be overlooked. Recently, I was challenged to make some sticky items that were fairly complex so I decided to write a plugin that would work for me & my use cases called [Sticky Bits](https://github.com/yowainwright/sticky-bits).

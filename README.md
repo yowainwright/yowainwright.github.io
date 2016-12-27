@@ -1,6 +1,8 @@
-# This is the personal webpage of Jeff Wainwright
-### yowainwright.github.io
+# Jeffry.in 
+
 > Probably no but if so SO YES ✨
+
+This is the Jekyll blog of Jeff Wainwright (me).
 
 Please reach out to [me](mailto:jjwainwright2@gmail.comsubject=Reaching out from the Githubs) with tips, notes or just to say 'hey'.
 
@@ -15,7 +17,7 @@ You can also connect with me socially on:
 
 ---
 
-If you'd like to help me with my repo or even write a post:
+If you'd like to help me with this blog:
 -   download the repository
 -   building locally
 --   `bundle exec jekyll serve -w --config _config.yml,_config_dev.yml`

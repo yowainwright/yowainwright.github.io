@@ -7,9 +7,7 @@ categories:
 - terminal
 layout: post
 meta: Creating Aliases on a Mac is an easy thing to do & can save a lot of time
-note: feature-image-aside
 share_image: "/assets/icons/os.jpg"
-featured_image: "/assets/os.svg"
 ---
 
 Creating Aliases on a Mac is an easy thing to do & can save a lot of time. When working in Terminal or another command line app, you may want to set up an alias to make your workflows easier.

@@ -8,9 +8,7 @@ categories:
 layout: post
 meta: 'Punch Static Sites: My experience getting setup'
 type: code
-note: feature-image-aside
 share_image: "/assets/icons/js.jpg"
-featured_image: "/assets/js.svg"
 redirect_from:
 - "/punch-static-sites/"
 ---

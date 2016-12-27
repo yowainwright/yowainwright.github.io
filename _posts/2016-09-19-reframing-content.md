@@ -10,9 +10,7 @@ layout: post
 author: Jeff Wainwright
 meta: Reframing content, one of the most important things to present well on a content
   site is embedded content.
-note: feature-image-aside
 share_image: "/assets/reframing-content/aspect-ratio.jpg"
-featured_image: "/assets/js.svg"
 ---
 
 The most meaningful part of the webpage, the content, can be a largely unknown thing. Authors create content in one place & expect it to render well in another. Embedded content adds another level of complexity to this process.

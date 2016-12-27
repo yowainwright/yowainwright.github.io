@@ -1,7 +1,7 @@
 ---
 title: About me, Jeffry Wainwright
 permalink: "/about/"
-layout: about
+layout: post
 meta: This blog contains written posts by Jeffry Wainwright - a user interface specialist,
   frontend engineer & athlete living in Southern California
 page: about
@@ -9,8 +9,6 @@ type: page
 redirect_from:
 - cv/
 ---
-
-## A bit about me, Jeff Wainwright
 
 Outside of work, I try to be an active member of the design and developer community. I ride road bikes, run and try to skateboard everyday. Lately, my outdoor passion has been surfing. 🏄
 

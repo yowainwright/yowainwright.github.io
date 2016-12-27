@@ -10,9 +10,7 @@ layout: post
 author: Jeff Wainwright
 meta: Use css calc values to set the width of elements within content blocks & create
   beautiful layouts, for devices especially
-note: feature-image-aside
 share_image: "/assets/icons/sass.jpg"
-featured_image: "/assets/sass.svg"
 redirect_from:
 - css-max-widths-instead-of-margins/
 - css-calc-max-widths/

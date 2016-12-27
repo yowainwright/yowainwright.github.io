@@ -8,9 +8,7 @@ categories:
 - objects
 layout: post
 meta: Creating a private information in JavaScript to be used in future functions
-note: feature-image-aside
 share_image: "/assets/icons/js.jpg"
-featured_image: "/assets/js.svg"
 redirect_from:
 - personal-site/js-private-information/
 ---

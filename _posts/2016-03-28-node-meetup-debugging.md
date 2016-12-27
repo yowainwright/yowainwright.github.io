@@ -8,9 +8,7 @@ categories:
 layout: post
 meta: Node Meetup, debugging with Yunong Xiao
 type: code
-note: feature-image-aside
 share_image: "/assets/icons/js.jpg"
-featured_image: "/assets/js.svg"
 ---
 
 On Friday, I had the opportunity to go to the first LA Node.js Meetup. It was great. The presentors did a great job. I wrote down notes the best I could but unfortunately there are a few gaps. 

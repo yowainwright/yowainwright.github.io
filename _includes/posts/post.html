@@ -1,8 +1,8 @@
 <article class="post{% if post.show_image %} post--shows-image{% endif %}{% if include.specialclass %} post--{{ include.specialclass }}{% endif %}">
-	{% if post.show_image or include.specialclass %}
-		{% include post/figure.html %}
-	{% endif %}
 	{% include post/header.html %}
+  {% if post.show_image or include.specialclass %}
+    {% include post/figure.html %}
+  {% endif %}
 	<p class="post__content">
 		{{ post.excerpt | strip_html }}
 	</p>

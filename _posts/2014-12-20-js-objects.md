@@ -8,9 +8,7 @@ categories:
 - objects
 layout: post
 meta: Understanding JavaScript Objects, from static objects to classes
-note: feature-image-aside
 share_image: "/assets/icons/js.jpg"
-featured_image: "/assets/js.svg"
 redirect_from:
 - personal-site/js-scope/
 ---

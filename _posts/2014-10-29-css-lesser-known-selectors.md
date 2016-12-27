@@ -8,9 +8,7 @@ categories:
 - css
 layout: post
 meta: Less known CSS selectors, aka attribute selectors
-note: feature-image-aside
 share_image: "/assets/icons/sass.jpg"
-featured_image: "/assets/sass.svg"
 redirect_from:
 - css-lesser-known-selectors/
 ---

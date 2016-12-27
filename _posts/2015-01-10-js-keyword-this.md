@@ -8,10 +8,8 @@ categories:
 layout: post
 meta: This post goes into Javascript's keyword this, how it is defined & why it is
   misunderstood
-note: feature-image-aside
 type: code
 share_image: "/assets/icons/js.jpg"
-featured_image: "/assets/js.svg"
 redirect_from:
 - personal-site/js-keyword-this/
 ---

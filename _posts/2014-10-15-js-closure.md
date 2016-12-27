@@ -7,9 +7,7 @@ categories:
 - javascript
 layout: post
 meta: Understanding Javascript Closure & what it does
-note: feature-image-aside
 share_image: "/assets/icons/js.jpg"
-featured_image: "/assets/js.svg"
 redirect_from:
 - personal-site/js-keyword-this/
 ---
