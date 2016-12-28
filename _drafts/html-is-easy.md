@@ -1,12 +1,13 @@
 ---
 title: HTML is easy and that's why we all write it wrong
-date: 2016-09-30 00:00:00 
+date: 2016-09-30 00:00:00 Z
 permalink: "/html-is-easy/"
 categories:
 - html
 - code
 layout: post
-meta: This post digs into html in order to sell the importance of understanding it and being open to how much more many can learn about it.
+meta: This post digs into html in order to sell the importance of understanding it
+  and being open to how much more many can learn about it.
 share_image: "/assets/icons/os.jpg"
 ---
 

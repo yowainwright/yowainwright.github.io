@@ -9,7 +9,8 @@ categories:
 - html
 layout: post
 author: Jeff Wainwright
-meta: Email share links are often disregarded as simple but there are a few challenges to be aware of
+meta: Email share links are often disregarded as simple but there are a few challenges
+  to be aware of
 featured_image: "/assets/js.svg"
 ---
 
