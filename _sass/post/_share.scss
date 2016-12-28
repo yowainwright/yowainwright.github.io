@@ -5,7 +5,8 @@
   }
   &__nav {
     &:before {
-      content: 'Share this post';
+      content: 'Share';
+      font-family: $font-family-headline;
       font-style: italic;
     }
   }
@@ -21,18 +22,18 @@
 .share {
   &--inline {
     display: inline-block;
-    font-weight: normal;
-    position: relative;
-    top: $spacing-unit-smallest;
     .share__nav {
+      display: flex;
+      font-weight: normal;
       &:before {
         border-left: 1px solid black;
-        content: 'share';
-        font-family: $font-family-headline;
         font-size: $font-size-small;
+        height: 1.5rem;
+        line-height: 1.5rem;
         margin-left: $spacing-unit;
         padding-left: $spacing-unit;
-        text-transform: lowercase;
+        padding-right: $spacing-unit-small;
+        text-transform: initial;
       }
     }
     .share__link {
@@ -46,15 +47,14 @@
       padding: $spacing-unit 0 $spacing-unit-large;
       text-align: center;
       &:before {
-        content: 'share this post';
         display: block;
         font-size: $font-size-default;
         margin-bottom: $spacing-unit;
       }
     }
     .share__link {
-      height: $svg-unit;
-      width: $svg-unit;
+      height: 2rem;
+      width: 2rem;
     }
   }
 }
