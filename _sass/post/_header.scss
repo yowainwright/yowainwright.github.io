@@ -17,9 +17,14 @@
 		}
 	}
 	&__meta {
-		font-weight: bold;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    font-family: $font-family-headline;
 		font-size: $font-size-small;
     margin: $spacing-unit 0;
-    text-transform: uppercase;
+    padding: $spacing-unit 0;
+    @include media-query($width-small) {
+      margin: 2rem 0 4rem;
+    }
 	}
 }

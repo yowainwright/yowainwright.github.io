@@ -6,7 +6,6 @@
   &__nav {
     &:before {
       content: 'Share';
-      font-family: $font-family-headline;
       font-style: italic;
     }
   }
@@ -27,6 +26,7 @@
       font-weight: normal;
       &:before {
         border-left: 1px solid black;
+        font-family: $font-family-headline;
         font-size: $font-size-small;
         height: 1.5rem;
         line-height: 1.5rem;
