@@ -12,7 +12,6 @@ script: ./script/cibuild
 # branch whitelist, only for GitHub Pages
 branches:
   only:
-  - gh-pages     # test the gh-pages branch
   - master
 
 sudo: false
