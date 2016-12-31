@@ -2,10 +2,12 @@
 title: About me, Jeffry Wainwright
 permalink: "/about/"
 layout: post
-meta: This blog contains written posts by Jeffry Wainwright - a user interface specialist, engineer & athlete living in Southern California
+meta: This blog contains written posts by Jeffry Wainwright - a user interface specialist,
+  engineer & athlete living in Southern California
 page: about
 type: page
-description: Just a small town guy with a passion for learning and living life with purpose here in Southern California. 🙏
+description: "Just a small town guy with a passion for learning and living life with
+  purpose here in Southern California. \U0001F64F"
 redirect_from:
 - cv/
 ---
