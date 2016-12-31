@@ -7,12 +7,17 @@
 		@include micro-clearfix;
     border-top: 1px solid $color-grey-lightest;
     margin: 0 auto $spacing-unit-medium;
-    max-width: calc(100% - #{$spacing-unit-large});
     @include media-query($width-small) {
       max-width: $width-default;
     }
 		&:first-of-type {
 			border-top: none;
+      .post__header {
+        margin-top: 1rem;
+        @include media-query($width-small) {
+          margin-top: 8.5rem;
+        }
+      }
       .post__title {
         margin-top: 0;
       }
@@ -31,7 +36,7 @@
 			}
 		}
 		&__header {
-			margin-bottom: $spacing-unit-medium;
+			margin-bottom: $spacing-unit;
 		}
 		&__content {
       border-bottom: 1px solid $color-grey-lightest;

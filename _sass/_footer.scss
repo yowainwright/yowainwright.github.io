@@ -36,6 +36,7 @@
     padding-left: $spacing-unit;
   }
   &__date {
+    padding-left: $spacing-unit-small;
     @include media-query($width-small) {
       border-right: 1px dotted $color-grey;
       padding: $spacing-unit-small $spacing-unit;

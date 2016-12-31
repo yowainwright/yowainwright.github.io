@@ -2,7 +2,7 @@
 	&__header {
 		margin-top: $spacing-unit;
     @include media-query($width-small) {
-      margin-top: 8.5rem;
+      margin-top: 9.5rem;
     }
 	}
 	&__title,
@@ -18,14 +18,15 @@
 		}
 	}
 	&__meta {
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    border-bottom: 1px solid $color-grey-lighter;
+    border-top: 1px solid $color-grey-lighter;
     font-family: $font-family-headline;
 		font-size: $font-size-small;
     margin: $spacing-unit 0;
     padding: $spacing-unit 0;
     @include media-query($width-small) {
-      margin: 2rem 0 4rem;
+      margin: 3rem 0 4rem;
+      padding: $spacing-unit-medium 0;
     }
 	}
 }

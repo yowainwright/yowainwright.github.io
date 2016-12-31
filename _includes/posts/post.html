@@ -1,6 +1,12 @@
 <article class="post{% if post.show_image %} post--shows-image{% endif %}{% if include.specialclass %} post--{{ include.specialclass }}{% endif %}">
-	{% include post/header.html %}
-  {% if post.show_image or include.specialclass %}
+	<header class="post__header">
+    <h2 class="post__title"><a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <div class="post__meta">
+      <time class="post__date">{{ post.date | date: "%b %-d, %Y" }}</time>
+      <div class="share--inline">{% include post/share.html %}</div>
+    </div>
+  </header>
+  {% if post.show_image %}
     {% include post/figure.html %}
   {% endif %}
 	<p class="post__content">{{ post.excerpt | strip_html }}<a class="post__link post__link--read-more" href="{{ post.url | prepend: site.baseurl }}">Read More</a></p>

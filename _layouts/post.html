@@ -4,27 +4,28 @@ layout: default
 
 <main class="post{% if page.note %} post--{{page.note}}{% endif %}">
   <article class="{% if type.page %}page{% else %}post{% endif %}">
-    {% include post/header.html %}
-    {% if page.featured_image %}
-    {% if page.note != 'no-featured-image' %}
-    {% if page.note != 'feature-image-aside' %}
-      {% include post/figure.html %}
-    {% endif %}
-    {% endif %}
-    {% endif %}
+    <header class="post__header">
+      <h1 class="post__title">{{ page.title }}</h1>
+      <div class="post__meta">
+      {{ page.description }}
+      {% if page.date %}
+        <time class="post__date">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {% endif %}
+      {% if page.type == blank %}
+        <div class="share--inline">{% include post/share.html %}</div>
+      {% endif %}
+      </div>
+    </header>
     <div class="post__content">
-    {% if page.featured_image and page.note == 'feature-image-aside' %}
-      {% include post/figure.html %}
-    {% endif %}
     {{ content }}
     </div>
-    {% if type != page %}
+    {% if page.type == blank %}
       <div class="share--main">
         {% include post/share.html %}
       </div>
     {% endif %}
   </article>
-  {% if type != page %}
+  {% if page.type == blank %}
   {% include post/disqus.html %}
   {% endif %}
 </main>

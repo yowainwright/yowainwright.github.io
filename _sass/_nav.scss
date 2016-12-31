@@ -31,6 +31,7 @@ $nav-height: 3.875rem;
 			text-decoration: underline;
 		}
 		&--logo {
+      background-color: $color-yellow-light;
 			border: 3px solid black;
 			opacity: 1;
 			overflow: hidden;
