@@ -9,8 +9,7 @@ collections:
     title: Uploads
     output: true
 email: jjwainwright2@gmail.com
-description: Jeffry.in is a collection of posts by me, Jeffry Wainwright - a User
-  Interface Engineer & Athlete
+description: Jeffry.in is a collection of posts by me, Jeffry Wainwright
 baseurl: ''
 url: "//jeffry.in"
 twitter_username: yowainwright
