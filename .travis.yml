@@ -1,9 +1,7 @@
 sudo: false
 language: ruby
-rbenv:
+rvm:
   - 2.3.1
 
-# branch whitelist, only for GitHub Pages
-branches:
-  only:
-  - master
+script: "bundle exec jekyll build"
+
