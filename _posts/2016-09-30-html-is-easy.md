@@ -1,0 +1,60 @@
+---
+title: HTML is easy and that's why we all write it wrong
+date: 2016-09-30 00:00:00 Z
+permalink: "/html-is-easy/"
+categories:
+- html
+- code
+layout: post
+meta: This post digs into html in order to sell the importance of understanding it
+  and being open to how much more can be learned about it.
+share_image: "/assets/icons/os.jpg"
+---
+
+It seems that many many many developers seem to have gone the route of bulldozing right past deep HTML learning 🚜 and **_it makes sense_**! We're given complex tasks where the benefits of quality HTML are not considered in my recent experience. Questions like, _is html valid?_ or _is the html semantice?_ are never asked. 
+
+Before ranting more about html, this is a _thought_ post! It's an attempt to feel thoughts before digging deeply into the results of techinical discory. 🤓
+
+## Semantic HTML?
+
+[Semantic html](https://en.wikipedia.org/wiki/Semantic_HTML) is often an assumed part of writing webpages. Yet, it is not uncommon when looking at webpages (pages, I've writen too) to find html that could be improved semantically. Tools, like CSS and Search Engines could _probably_ greatly benefit from semantically thoughtful html. Ensuring that this thoughtfulness is added to webpages, in my experience from reading, writing and working with developers and product teams is not considered.
+
+## Valid HTML? 
+
+Beyond Semantic HTML, valid HTML also seemes to be an issue. With browser advancements, checking whether html is actually valid doesn't happen. 
+
+-  [Google Search](https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.google.com%2F) doesn't render valid html according to W3C spec.
+-  Neither does [Facebook](https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.facebook.com%2F)
+
+Does this mean that the webpages they're rendering aren't valid and absolutely semantic to their customers? Absolutely not. Customers are very satisfied (I think). However, most websites are **not** Google and Facebook. This is where the point of valid html could _still_ be a very important thing to consider.
+
+Websites looking to grow their audience should always look to provide rich experiences that can be shared accross the most possible platforms in the easiest way. Valid and semantic html would definitely (probably) make that easier and with less long run effort. 
+
+## Writing HTML back in the day
+
+Years ago when making webpages professionally, everything that was done had to pass the [w3c test](https://validator.w3.org/). HTML validation tests were even looked at as a tool to find unclosed element tags and fix layout issues. Sure, there where a lot of `divs` but we could make a webpage render in Internet Explorer 6 _as expected_!
+
+## Test everything but not html
+
+As browsers became better, HTML5 elements became more supported, and jQuery allowing easy dom manipulation HTML testing and review seemed to become more and more of an after thought. Then, the iPhone came and Apps took a front seat. Everyone wanted an App and webpages to look like Apps so wether a webpage's HTML was valid or not didn't matter.
+
+Now, years later, we know people don't go to many [webpages](https://www.quora.com/How-many-webpages-does-an-average-user-visit-per-day) and they don't use many [apps](http://fortune.com/2015/09/24/apps-smartphone-facebook/) so webpages have to be consumable for websites people _do_ go, usable for when people do get them, and fast for when they _are_ viewed.
+
+## Better Opportunities in HTML?
+
+**High quality html is:**
+
+-  **Consumable:** when webpages are consumed by third party services like Medium and Facebook instant articles, high quality HTML is _probably_ much more consumable.
+-  **Usable:** thoughtful HTML is much more usable for people with special needs and people in general.
+-  **Fast:** browsers can probably render thoughtful HTML better. 
+
+## Tools
+
+**Here are a few tools that can be used to write better html:**
+
+-  [html validator](https://validator.w3.org/)
+-  [htmllint](https://github.com/htmllint/htmllint)
+-  [linter-htmlhint](https://github.com/AtomLinter/linter-htmlhint)
+
+
+
