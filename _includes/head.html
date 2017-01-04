@@ -10,11 +10,11 @@
   <meta name="viewport" content="width=device-width">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@yowainwright">
-  <meta name="twitter:url" property="og:url" content="http:{{ site.url }}{{page.permalink }}">
+  <meta name="twitter:url" property="og:url" content="https:{{ site.url }}{{page.permalink }}">
   <meta name="twitter:title" property="og:title" content="{{ page.title }}">
   <meta name="twitter:description" property="og:description" content="{% if page.meta %}{{ page.meta }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
 
-  <meta name="twitter:image" property="og:image" content="http:{% if page.share_image %}{{ site.url }}{{page.share_image}}{% elsif page.featured_image %}{{ site.url }}{{ page.featured_image }}{% else %}{{ site.url }}/assets/w.jpg{% endif %}">
+  <meta name="twitter:image" property="og:image" content="https:{% if page.share_image %}{{ site.url }}{{page.share_image}}{% elsif page.featured_image %}{{ site.url }}{{ page.featured_image }}{% else %}{{ site.url }}/assets/w.jpg{% endif %}">
 
   {% include scripts/analytics.html %}
 
