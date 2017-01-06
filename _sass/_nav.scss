@@ -12,9 +12,9 @@ $nav-height: 3.875rem;
 	@include media-query($width-small) {
 		border-bottom: 0;
 	}
-	&__container {
-
-	}
+  @include media-query($width-medium) {
+    margin-top: 8rem;
+  }
 	&__link {
 		color: black;
 		height: $nav-height;
