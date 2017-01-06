@@ -5,6 +5,7 @@ permalink: "/html-is-easy/"
 categories:
 - html
 - code
+- rant
 layout: post
 meta: This post is an opinion piece about potential gains from understanding and being more thoughtful when writing html.
 share_image: "/assets/icons/os.jpg"

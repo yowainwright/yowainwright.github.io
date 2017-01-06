@@ -9,5 +9,5 @@
   {% if post.show_image %}
     {% include post/figure.html %}
   {% endif %}
-	<p class="post__content">{{ post.excerpt | strip_html }}<a class="post__link post__link--read-more" href="{{ post.url | prepend: site.baseurl }}">Read More</a></p>
+	<p class="post__content">{{ post.excerpt | strip_html }}<a class="post__link post__link--read-more" href="{{ post.url | prepend: site.baseurl }}">Read More&hellip;</a></p>
 </article>

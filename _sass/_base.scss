@@ -201,7 +201,7 @@ code {
 pre {
   max-width: calc(100% - #{$spacing-unit-large});
   padding: $spacing-unit-small $spacing-unit;
-  overflow-x: scroll;
+  overflow-x: auto;
   @include media-query($width-small) {
     max-width: $width-reader;
   }
