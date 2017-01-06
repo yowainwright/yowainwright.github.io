@@ -1,5 +1,5 @@
 ---
-title: "Arrow Function Notes  After Watching ES6 For Everyone"
+title: Arrow Function Notes  After Watching ES6 For Everyone
 date: 2017-01-06 00:00:00 Z
 permalink: "/arrow-functions/"
 categories:
