@@ -10,7 +10,7 @@ meta: This post is an opinion piece about understanding html and thinking about 
 share_image: "/assets/icons/os.jpg"
 ---
 
-It seems many of us developers seem to have gone the route of bulldozing past truly thinking about HTML 🚜 _which makes sense_**! We're given complex tasks where the benefits of quality HTML are not considered. Questions like, _is the HTML valid?_ or _is the HTML semantic?_ are never asked. 
+It seems many of us developers seem to have gone the route of bulldozing past truly thinking about HTML 🚜 _which makes sense_! We're given complex tasks where the benefits of quality HTML are not considered. Questions like, _is the HTML valid?_ or _is the HTML semantic?_ are never asked. 
 
 Before ranting more about HTML, please note - this is a _thought_ post! It's an attempt to feel thoughts before digging deeply into results from technical discovery. 🤓
 
