@@ -6,7 +6,8 @@ categories:
 - html
 - code
 layout: post
-meta: This post is an opinion piece about understanding html and thinking about potential gains from being thoughtful about how it is written.
+meta: This post is an opinion piece about understanding html and thinking about potential
+  gains from being thoughtful about how it is written.
 share_image: "/assets/icons/os.jpg"
 ---
 
