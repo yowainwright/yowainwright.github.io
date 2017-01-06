@@ -1,12 +1,13 @@
 ---
-title: "Rant: HTML is easy and that's why we all write it wrong!"
+title: 'Rant: HTML is easy and that''s why we all write it wrong!'
 date: 2016-09-30 00:00:00 Z
 permalink: "/html-is-easy/"
 categories:
 - html
 - code
 layout: post
-meta: This post is an opinion piece about potential gains from understanding and being more thoughtful when writing html.
+meta: This post is an opinion piece about potential gains from understanding and being
+  more thoughtful when writing html.
 share_image: "/assets/icons/os.jpg"
 ---
 
