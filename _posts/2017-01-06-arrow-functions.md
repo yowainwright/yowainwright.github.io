@@ -22,7 +22,7 @@ Notes about Arrow Functions after watching [ES6 For Everyone](https://es6.io/) b
 
 When writing a function normal `this` can be bound to things (like elements in example). With arrow functions, _this_ (pun intended) is not the case.
 
-### This Is Undefined
+### The This Key Word Is Undefined
 
 **ES5 Function**
 
@@ -72,9 +72,9 @@ button3.addEventListener('click', () => console.log('arrow function with less cr
 
 {% endhighlight %}
 
-### Objects cannot be used in arrow functions
+### Objects cannot be used in arrow function arguments
 
-Arrow functions can use arguments——as long as they're not objects.
+Arrow Functions Can use Arguments——As Long As They're Not Objects.
 
 **Standard Way of Writing an Arrow Function**
 
@@ -86,6 +86,7 @@ const anObj = {
 };
 button4.addEventListener('click', (anObj) => {
   console.log(anObj);
+  // anObj will be undefined
 });
 
 {% endhighlight %}
@@ -97,4 +98,4 @@ Play with the examples above on [CodePen](http://codepen.io/yowainwright/pen/5e5
 
 What the `this` key word will be bound to and how minimal arrow functions can be is well documented. ES6 For Everyone gives clear examples of that make it much clearer though.
 
-~Thank you Wes Bos!!!
+~Thank you [Wes Bos](http://wesbos.com/)!!!
