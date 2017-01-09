@@ -5,12 +5,13 @@ permalink: "/arrow-functions/"
 categories:
 - html
 - code
+- note
 layout: post
-meta: This post reviews some things I learned from Wes Bos's ES6 for everyone.
+meta: This post reviews some things about arrow functions that I learned from Wes Bos's ES6 for everyone.
 share_image: "/assets/icons/js.jpg"
 ---
 
-Notes about Arrow Functions after watching [ES6 For Everyone](https://es6.io/) by [Wes Bos](http://wesbos.com/). Arrow functions are simplier way to write functions in JavaScript. 
+Note post: this short post about Arrow Functions after watching [ES6 For Everyone](https://es6.io/)(EFE——for this post) by [Wes Bos](http://wesbos.com/)! Arrow functions are simplier way to write functions in [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). This post contains a few things that I wasn't completely clear on about Arrow Functions that EFE really clarified for me.
 
 ## Arrow Function Illuminations:
 
@@ -72,9 +73,9 @@ button3.addEventListener('click', () => console.log('arrow function with less cr
 
 {% endhighlight %}
 
-### Objects cannot be used in arrow function arguments
+### Objects Cannot Be Used In Arrow Function Arguments
 
-Arrow Functions Can use Arguments——As Long As They're Not Objects.
+Arrow functions can use arguments——as long as they're not objects.
 
 **Standard Way of Writing an Arrow Function**
 

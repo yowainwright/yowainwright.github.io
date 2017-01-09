@@ -1,20 +1,23 @@
 ---
-title: About me, Jeffry Wainwright
+title: About me, Jeffry
 permalink: "/about/"
 layout: post
-meta: This blog contains written posts by Jeffry Wainwright - a user interface specialist,
-  engineer & athlete living in Southern California
+meta: Jeffry Wainwright is a software engineer who enjoys open source, being outside and trying to live life with purpose
 page: about
 type: page
-description: "Just a small town guy with a passion for learning and living life with
-  purpose here in Southern California. \U0001F64F"
+description: "As a software engineer, I strive to write awesome code 🚀—enterprise and <a href=\"//www.npmjs.com/package/shave\">open source</a>. I also deeply enjoy being outside. Trying to live life with purpose is important to me. \U0001F64F"
 redirect_from:
 - cv/
 ---
 
-Outside of work, I try to be active in the developer community. I ride road bikes, run and commute as much as possible by skateboard. Lately, my outdoor passion has been surfing which has allowed me experience the world in a whole new way - hundreds of feet from land! 🏄 
+Writing software and progressing software is a lifestyle for me. I'm very active in the software engineering community online and in person. Unrelated to software, I [ride road bikes](//www.strava.com/athletes/722335), run and commute as much as possible via skateboard. Lately, my outdoor passion has been surfing which has allowed me to experience the world in a whole new way—hundreds of feet from land! 🏄 
 
-I'm not traditionally trained as a software engineer. For 20 years, I wanted nothing else then to be a oil painter. After graduating from the University of Wisconsin in 2003, I worked as a FedEx Service Manager to support my painting. 3 years later I went to design school. It was there, I became passionate about software. I began teaching myself ways to speed up my computer workflows, develop repeatable patterns and think differently about how to solve problems. This naturally led me learning code which I did for a few years before beginning my career in software. 💻
+
+## Open Source Projects
+
+
+-  [Shave](//github.com/dollarshaveclub/shave), a minimal JavaScript Plugin for Truncated text
+-  [Reframe.js](//github.com/dollarshaveclub/reframe.js), a minimal JavaScript Plugin for reframing html elements so they're an intrisic ratio of the original—greate for embeds
 
 
 ## Some work history 💼
