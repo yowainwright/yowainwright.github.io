@@ -1,5 +1,5 @@
 ---
-title: 'Rant: HTML is easy and that''s why we all write it wrong!'
+title: "Rant: HTML is easy and that's why we all write it wrong!"
 date: 2016-09-30 00:00:00 Z
 permalink: "/html-is-easy/"
 categories:
@@ -7,14 +7,13 @@ categories:
 - code
 - rant
 layout: post
-meta: This post is an opinion piece about potential gains from understanding and being
-  more thoughtful when writing html.
+meta: Rant post  about potential gains from understanding and being more thoughtful when writing html.
 share_image: "/assets/icons/os.jpg"
 ---
 
-This post is a _rant/thought piece_ attempting to express what seems to be a growing issue: **lack of deep thought behind HTML on webpages**! There is **no** data backing these next few paragraphs——just my feelings! In order to do understand the data I _might_ want to find, rant first and data second (maybe)——because that's me.&nbsp;🤓 
+This post is a _rant_ attempting to express what seems to be a growing issue: lack of deep thought behind HTML on webpages!🤓 
 
-## Write HTML with a Bulldozer
+## Write HTML like a Bulldozer
 
 Developers bulldoze right past truly thinking about HTML&nbsp;🚜. It makes sense_! Complex tasks where benefits of thoughtful HTML are just not considered. Not only that, project goals are iterative——they are grown upon and updated in steps. Questions like, _is the HTML valid?_ or _is the HTML semantic?_ are _never_ asked. This small issue then grows on _a_ webpage as new features are added and more websites follow a similar pattern. The word and developers think it's fine because browsers have improved and the webpage looks fine——but is it? 
 
@@ -22,7 +21,7 @@ Developers bulldoze right past truly thinking about HTML&nbsp;🚜. It makes sen
 
 ## What is Semantic HTML beside something we used to care about? 
 
-Developers, product managers, maybe the whole world at this point assumes _tt is easy to write [Semantic html](https://en.wikipedia.org/wiki/Semantic_HTML)_. We should not! Semantic HTML makes webpage content more legible to browsers, search engines, other developers, and is _much_ easier to maintain! How ever, when looking at source code on _many many many_ webpages, it is not hard to find html that could be greatly improved semantically. 
+Developers, product managers, maybe the whole world at this point assumes _it is easy to write [Semantic html](https://en.wikipedia.org/wiki/Semantic_HTML)_. We should not! Semantic HTML makes webpage content more legible to browsers, search engines, other developers, and is _much_ easier to maintain. Yet, when looking at source code on _many many many_ webpages, it is easy to find html that could be  semantically improved. 
 
 ## Of course my HTML is valid
 
@@ -31,11 +30,11 @@ Beyond Semantic HTML, valid HTML is an issue. With browser advancements, checkin
 -  [Google Search](https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.google.com%2F) doesn't render valid html according to W3C spec.
 -  Neither does [Facebook](https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.facebook.com%2F)
 
-Stepping back, does this mean that Google and Facebook aren't valid and absolutely semantic to their customers? Absolutely not. Customers are very satisfied (I think ...? 🤔). However, most websites are _not_ Google or Facebook. This is where the point of valid html is _still_ be a very important thing to consider! 💭
+Validation may not be an issue for Google and Facebook because there usership maybe be so large. However, most websites are _not_ Google or Facebook. This is where the point of valid html is _still_ be a very important thing to consider! 💭
 
 ## Why might this rant matter? &hellip;Or are am I just screaming in the wind (again)?
 
-Companies looking to grow their audience through webpages should always look to provide rich experiences that can be shared across the most possible platforms in the easiest way. Valid and semantic html would definitely (probably) make that easier and with less long run effort. 
+Companies looking to grow their audience through webpages should always look to provide rich experiences that can be shared across the most possible platforms in the easiest way. Valid and semantic html would definitely make that easier and with less long run effort. 
 
 ## Writing HTML back in the day vs. now
 
