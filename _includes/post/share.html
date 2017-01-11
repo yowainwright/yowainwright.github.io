@@ -1,5 +1,5 @@
 <nav class="share__nav">
-  <a class="share__link" href="mailto:?body=https://jeffry.in{% if page.url %}{{ page.url }}{% else %}{{ post.url }}{% endif %}&subject={% if page.title %}{{ page.title }}{% else %}{{ post.title }}{% endif %}">
+  <a class="share__link" href="mailto:?body={{ site.url }}{% if page.url %}{{ page.url }}{% else %}{{ post.url }}{% endif %}&subject={% if page.title %}{{ page.title }}{% else %}{{ post.title }}{% endif %}">
     <svg name="mail-svg" viewbox="0 0 512 512">
       <use class="social-svg" xlink:href="#mail-svg" x="0" y="0" />
     </svg>

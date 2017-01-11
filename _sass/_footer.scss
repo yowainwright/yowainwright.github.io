@@ -20,6 +20,9 @@
       display: table;
       padding: $spacing-unit;
     }
+    @include media-query($width-medium) {
+      padding: 4rem $spacing-unit;
+    }
   }
   &__text,
   &__social {
@@ -38,7 +41,7 @@
   &__date {
     padding-left: $spacing-unit-small;
     @include media-query($width-small) {
-      border-right: 1px dotted $color-grey;
+      border-right: 1px solid $color-grey-lightest;
       padding: $spacing-unit-small $spacing-unit;
     }
   }
