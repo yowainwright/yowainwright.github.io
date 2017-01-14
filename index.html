@@ -1,14 +1,15 @@
 ---
 title: Jeffry.in is a collection of posts by me, Jeffry Wainwright - a User Interface
   Engineer in Los Angeles
-permalink: "/"
 layout: page
 page: home
+pagination:
+  enabled: true
 ---
 
 <section class="posts posts--column">
   <div class="posts__container">
-    {% for post in site.posts offset: include.postoffset %}
+    {% for post in site.posts %}
       {% include posts/post.html %}
     {% endfor %}
   </div>
