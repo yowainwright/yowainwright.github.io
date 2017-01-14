@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
+gem 'jekyll'
+gem 'github-pages', github: "github/pages-gem", group: :jekyll_plugins
 gem 'jekyll-tagging-related_posts'
 gem 'jekyll-minifier'
 gem 'hawkins'
