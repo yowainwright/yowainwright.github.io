@@ -2,7 +2,8 @@
 title: About me, Jeffry
 permalink: "/about/"
 layout: post
-meta: Jeffry Wainwright is a software engineer who enjoys open source, being outside and trying to live life with purpose
+meta: Jeffry Wainwright is a software engineer who enjoys open source, being outside
+  and trying to live life with purpose
 page: about
 note: about
 description: "As a software engineer, I strive to write awesome code \U0001F680—enterprise
