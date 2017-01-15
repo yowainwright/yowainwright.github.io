@@ -92,6 +92,8 @@ GEM
     htmlcompressor (0.3.1)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
+    imgix (1.1.0)
+      addressable
     jekyll (3.3.1)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -118,6 +120,8 @@ GEM
     jekyll-github-metadata (2.3.0)
       jekyll (~> 3.1)
       octokit (~> 4.0, != 4.4.0)
+    jekyll-imgix (1.1.0)
+      imgix (~> 1.1.0)
     jekyll-mentions (1.2.0)
       activesupport (~> 4.0)
       html-pipeline (~> 2.3)
@@ -234,6 +238,7 @@ DEPENDENCIES
   hawkins
   jekyll
   jekyll-autoprefixer
+  jekyll-imgix
   jekyll-minifier
   jekyll-tagging-related_posts
   jemoji
