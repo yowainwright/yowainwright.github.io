@@ -6,11 +6,13 @@
   &__nav {
     &:before {
       content: 'Share';
-      font-style: italic;
+      font-family: $font-family-headline;
+      font-weight: bold;
     }
   }
   &__link {
     display: inline-block;
+    margin-left: 1rem;
     position: relative;
   }
   svg {
@@ -23,17 +25,12 @@
     display: inline-block;
     .share__nav {
       display: flex;
-      font-weight: normal;
       &:before {
-        border-left: 1px solid $color-grey-lighter;
-        font-family: $font-family-headline;
-        font-size: $font-size-small;
+        border-left: 1px solid black;
         height: 1.5rem;
         line-height: 1.5rem;
         margin-left: $spacing-unit;
         padding-left: $spacing-unit;
-        padding-right: $spacing-unit-small;
-        text-transform: initial;
       }
     }
     .share__link {

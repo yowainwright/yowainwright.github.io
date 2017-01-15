@@ -5,7 +5,7 @@ layout: post
 meta: Jeffry Wainwright is a software engineer who enjoys open source, being outside
   and trying to live life with purpose
 page: about
-type: page
+note: about
 description: "As a software engineer, I strive to write awesome code \U0001F680—enterprise
   and <a href=\"//www.npmjs.com/package/shave\">open source</a>. I also deeply enjoy
   being outside. Trying to live life with purpose is important to me. \U0001F64F"
