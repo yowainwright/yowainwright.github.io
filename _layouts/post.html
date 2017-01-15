@@ -11,7 +11,7 @@ layout: default
       {% if page.date %}
         <time class="post__date">{{ page.date | date: "%b %-d, %Y" }}</time>
       {% endif %}
-      {% if page.type == blank %}
+      {% if page.note == blank %}
         <div class="share--inline">{% include post/share.html %}</div>
       {% endif %}
       </div>

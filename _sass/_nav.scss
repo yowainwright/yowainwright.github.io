@@ -7,12 +7,19 @@ $nav-height: 4rem;
 .site-nav {
 	border-bottom: 2px solid black;
 	position: relative;
-	margin: 0 auto;
-	max-width: 67.5rem;
+	margin: 0 auto 2rem;
 	@include media-query($width-small) {
 		border-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 4rem;
+    margin-bottom: 0;
+    max-width: calc(100% - 2rem);
 	}
   @include media-query($width-medium) {
+    margin-top: 4rem;
+  }
+  @include media-query($width-large) {
+    max-width: 67.5rem;
     margin-top: 8rem;
   }
 	&__link {
@@ -78,4 +85,8 @@ $nav-height: 4rem;
   &__link {
   	display: block;
   }
+}
+[name=site-logo] {
+  fill: black;
+  opacity: 1;
 }
