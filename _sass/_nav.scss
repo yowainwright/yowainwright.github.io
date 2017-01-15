@@ -3,9 +3,9 @@ $width-small-very-small: $spacing-unit * 500 / $conversion-number;
 $width-small-small: $spacing-unit * 670 / $conversion-number;
 $width-small-medium: $spacing-unit * 825 / $conversion-number;
 $width-medium-large: $spacing-unit * 1000 / $conversion-number;
-$nav-height: 3.875rem;
+$nav-height: 4rem;
 .site-nav {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 2px solid black;
 	position: relative;
 	margin: 0 auto;
 	max-width: 67.5rem;
@@ -19,20 +19,22 @@ $nav-height: 3.875rem;
 		color: black;
 		height: $nav-height;
     font: .65rem/1 $font-family-nav;
+    font-weight: bold;
     letter-spacing: .1rem;
 		line-height: $nav-height !important;
 		text-align: center;
 		text-decoration: none;
     text-transform: uppercase;
     @include media-query($width-small) {
-      font-size: .75rem;
+      font-size: .85rem;
+      line-height: 4.25rem !important;
     }
 		&:hover {
 			text-decoration: underline;
 		}
 		&--logo {
       background-color: $color-yellow-light;
-			border: 3px solid black;
+			border: 5px solid black;
 			opacity: 1;
 			overflow: hidden;
 			padding: $spacing-unit / 2;
@@ -53,7 +55,7 @@ $nav-height: 3.875rem;
     }
     &:after {
     	@include media-query($width-small) {
-	    	border-bottom: 1px solid black;
+	    	border-bottom: 4px solid black;
 	    	content: ' ';
 	    	left: 0;
 	    	position: absolute;
