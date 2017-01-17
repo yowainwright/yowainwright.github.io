@@ -1,12 +1,6 @@
-# general
+---
 title: Jeffry In
 timezone: UTC
-email: jjwainwright2@gmail.com
-description: Jeffry.in is a collection of posts by me, Jeffry Wainwright
-baseurl: ''
-url: "//jeffry.in"
-
-# collections
 collections:
   posts:
     title: Posts
@@ -14,24 +8,21 @@ collections:
   uploads:
     title: Uploads
     output: true
-
-# imgjx
+email: jjwainwright2@gmail.com
+description: Jeffry.in is a collection of posts by me, Jeffry Wainwright
+baseurl: ''
+url: "//jeffry.in"
 imgix: "//yowainwright.imgix.net"
 imgSq: "?fit=crop&w=700&h=700&auto=format"
 imgSqSm: "?fit=crop&w=300&h=300&auto=format"
-imgLs: "?fit=crop&w=700&h=350&auto=format"
 imgLs: "?fit=crop&w=350&h=175&auto=format"
 imgFull: "?fit=crop&w=1500&h=500&auto=format"
 imgFullSm: "?fit=crop&w=500&h=167&auto=format"
-
-# social
 twitter_username: yowainwright
 github_username: yowainwright
 instagram_username: yowainwright
 codepen_username: yowainwright
 tumblr_account: "//ratherbe.in"
-
-# plugins
 markdown: kramdown
 kramdown:
   auto_ids: false
