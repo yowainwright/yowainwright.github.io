@@ -12,8 +12,10 @@
   }
   &__link {
     display: inline-block;
-    margin-left: 1rem;
     position: relative;
+    @include media-query($width-small) {
+      margin-left: $spacing-unit;
+    }
   }
   svg {
     fill: $text-color;
