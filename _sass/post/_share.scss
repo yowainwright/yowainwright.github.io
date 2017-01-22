@@ -4,11 +4,6 @@
     overflow: hidden;
   }
   &__nav {
-    &:before {
-      content: 'Share';
-      font-family: $font-family-headline;
-      font-weight: bold;
-    }
   }
   &__link {
     display: inline-block;
@@ -25,19 +20,26 @@
 // trumps
 .share {
   &--inline {
-    display: inline-block;
+    float: right;
+    padding: .65rem 0;
+    position: relative;
     .share__nav {
+      background: repeating-linear-gradient(
+        -55deg,
+        #fff,
+        #fff 3px,
+        #f2f2f2 3px,
+        #f2f2f2 8px
+      );
+      background-color: white;
+      border-bottom: 1px solid #eee;
+      border-right: 1px solid #eee;
       display: flex;
-      &:before {
-        border-left: 1px solid black;
-        height: 1.5rem;
-        line-height: 1.5rem;
-        margin-left: $spacing-unit;
-        padding-left: $spacing-unit;
-      }
+      padding: .5rem .5rem .5rem 0;
     }
     .share__link {
       height: 1.5rem;
+      margin-left: .5rem;
       width: 1.5rem;
     }
   }
@@ -47,6 +49,7 @@
       padding: $spacing-unit 0 $spacing-unit-large;
       text-align: center;
       &:before {
+        content: 'Share';
         display: block;
         font-size: $font-size-default;
         margin-bottom: $spacing-unit;
