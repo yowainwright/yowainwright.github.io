@@ -29,7 +29,7 @@
       margin: 3rem 0 4rem;
     }
     &:before {
-      border-top: 2px solid black;
+      border-top: 2px solid #eee;
       content: ' ';
       position: absolute;
       top: 1.8rem;
@@ -42,7 +42,7 @@
 	}
   &__date {
     background-color: white;
-    border: 5px solid black;
+    border: 5px solid #eee;
     float: left;
     padding: 1rem;
     text-align: center;
