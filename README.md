@@ -23,6 +23,25 @@ You can also connect with me socially on:
 If you'd like to help me with this blog:
 -   download the repository
 -   building locally
---   `bundle exec jekyll serve -w --config _config.yml,_config_dev.yml`
+--   `bundle exec jekyll serve -w --config _config.yml,_config_dev.yml --incremental`
 --   The command above allows us to have a configurable `site.url` for links between prod & dev environments
 -  then submit a pull request 😊
+
+---
+
+## Notes
+
+For issues with github-pages security checkout that look like this:
+```sh
+
+GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data....error:
+
+```
+
+Run this in your terminal
+```sh
+
+bundle config git.allow_insecure true
+
+```
+

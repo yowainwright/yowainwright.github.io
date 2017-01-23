@@ -36,6 +36,7 @@ exclude:
 gems:
 - jekyll-sitemap
 - jekyll-redirect-from
+- github-pages
 - jekyll-minifier
 - jekyll-autoprefixer
 - jemoji
