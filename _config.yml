@@ -30,12 +30,12 @@ sass:
   style: compressed
 jekyll-minifier:
   exclude: ''
+exclude:
+    - node_modules
+    - _drafts
 gems:
 - jekyll-sitemap
 - jekyll-redirect-from
-- jekyll/tagging
-- jekyll-tagging-related_posts
 - jekyll-minifier
 - jekyll-autoprefixer
 - jemoji
-- jekyll-imgix
