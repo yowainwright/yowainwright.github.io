@@ -31,8 +31,8 @@ sass:
 jekyll-minifier:
   exclude: ''
 exclude:
-    - node_modules
-    - _drafts
+- node_modules
+- _drafts
 gems:
 - jekyll-sitemap
 - jekyll-redirect-from
