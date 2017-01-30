@@ -1,32 +1,55 @@
 <head>
+
+<meta name="twitter:url" property="og:url" content="https://dollarshaveclub.github.io/scrolldir/">
+<meta name="twitter:title" property="og:title" content="Vertical scroll direction without jitter">
+<meta name="twitter:image:alt" content="Vertical scroll direction without jitter">
+<meta name="twitter:description" property="og:description" content="Vertical scroll direction without jitter">
+<meta name="twitter:image" content="https://dollarshaveclub.github.io/scrolldir/scrolldir-share-twitter.png" itemprop="image"><meta property="og:image:height" content="600">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="http://dollarshaveclub.github.io/scrolldir/scrolldir-share-fb.png" itemprop="image">
+<meta property="og:image:secure_url" content="https://dollarshaveclub.github.io/scrolldir/scrolldir-share-fb.png" itemprop="image">
+<meta name="robots" content="index,follow">
+
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:locale" content="en_US">
   <meta name="theme-color" content="#ffffcc">
   <title>{{ page.title }} - Jeffry.in</title>
+  <link rel="manifest" href="{{ site.url }}/manifest.json">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <meta name="description" content="{% if page.meta %}{{ page.meta }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %} - Jeffry.in">
   <meta name="google-site-verification" content="8eHITXF6-kLwRSGadGPduRcZYBmX-R_L85vU_DCB9gU" />
   <meta name="robots" content="index,follow" />
-  <meta name="viewport" content="width=device-width">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@yowainwright">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link href="{{ site.url }}/assets/favicon.ico" rel="icon" />
+  <link href="{{ site.url }}/assets/w.png" rel="apple-touch-icon" />
+  <meta name="description" content="{% if page.meta %}{{ page.meta }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
+  {% comment %}
+    Facebook || Twitter Card Info
+  {% endcomment %}
   <meta name="twitter:url" property="og:url" content="{{ site.url }}{{page.permalink }}">
   <meta name="twitter:title" property="og:title" content="{{ page.title }}">
   <meta name="twitter:description" property="og:description" content="{% if page.meta %}{{ page.meta }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="twitter:image" property="og:image" content="{% if page.imgix != true %}{{ site.url }}{% endif %}{% if page.share_image %}{{page.share_image}}{% elsif page.featured_image %}{{ page.featured_image }}{% else %}/assets/w.jpg{% endif %}">
-  {% include scripts/fonts.html %}
-  <link rel="manifest" href="{{ site.url }}/manifest.json">
+  {% comment %}
+    Twitter Card Info
+  {% endcomment %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@yowainwright">
+  <meta name="twitter:creator" content="@yowainwright">
+  <meta name="twitter:image" content="{% if page.imgix != true %}{{ site.url }}{% endif %}{% if page.share_image %}{{page.share_image}}{% elsif page.featured_image %}{{ page.featured_image }}{% else %}/assets/w.jpg{% endif %}?w=1200&h=600&fit=crop&crop=focalpoint&auto=format" itemprop="image">
+  {% comment %}
+    Facebook Card Info
+  {% endcomment %}
+  <meta property="og:site_name" content="Jeffry.in">
+  <meta property="og:image" content="{% if page.imgix != true %}{{ site.url }}{% endif %}{% if page.share_image %}{{page.share_image}}{% elsif page.featured_image %}{{ page.featured_image }}{% else %}/assets/w.jpg{% endif %}?w=1200&h=600&fit=crop&crop=focalpoint&auto=format" itemprop="image">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
   <style>
   {% capture styles %}
     {% include styles.scss %}
   {% endcapture %}
   {{ styles | scssify }}
   </style>
-  {% comment %}
-  <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl | prepend: site.url }}">
-  {% endcomment %}
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="{{ site.url }}/assets/favicon.ico" rel="icon" />
-  <link href="{{ site.url }}/assets/w.png" rel="apple-touch-icon" />
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 </head>
