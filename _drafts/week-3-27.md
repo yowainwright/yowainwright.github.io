@@ -6,7 +6,8 @@ categories:
 - note
 - story
 layout: post
-meta: This post summarizes week 3 of 2017. ScrollDir was released and the weather was better so more surfing
+meta: This post summarizes week 3 of 2017. ScrollDir was released and the weather
+  was better so more surfing
 show_image: true
 imgix: true
 featured_image: https://yowainwright.imgix.net/wk-3/angeles-highway.jpg
