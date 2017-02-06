@@ -15,13 +15,20 @@ redirect_from:
 
 Writing software and progressing software is a lifestyle for me. I'm very active in the software engineering community online and in person. Unrelated to software, I [ride road bikes](//www.strava.com/athletes/722335), run and commute as much as possible via skateboard. Lately, my outdoor passion has been surfing which has allowed me to experience the world in a whole new way—hundreds of feet from land! 🏄 
 
+You can connect with me on [LinkedIn](https://www.linkedin.com/in/jeffrywainwright) if you'd prefer to be less personal.
 
 ## Open Source Projects
 
+**Core Contributor**
 
+-  [Scrolldir](//github.com/dollarshaveclub/scrolldir), y-axis scroll direction without jitter
 -  [Shave](//github.com/dollarshaveclub/shave), a minimal JavaScript Plugin for Truncated text
 -  [Reframe.js](//github.com/dollarshaveclub/reframe.js), a minimal JavaScript Plugin for reframing html elements so they're an intrisic ratio of the original—greate for embeds
 
+**Contributor**
+
+-  [Postmate](//github.com/dollarshaveclub/postmate), a promise-based postMessage library by [Jacob Kelley](https://github.com/jakiestfu)
+-  [Ecto_shortcuts](//github.com/MishaConway/ecto_shortcuts), shortcuts for common operations in ecto by [Misha Conway](https://github.com/MishaConway)
 
 ## Some work history 💼
 
