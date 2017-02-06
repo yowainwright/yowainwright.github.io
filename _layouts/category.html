@@ -10,7 +10,7 @@ layout: page
   </header>
   <div class="posts__container">
     {% for post in site.categories[page.title] %}
-      {% include posts/post.html %}
+      {% include posts/post_full.html %}
     {% endfor %}
   </div>
 </section>
