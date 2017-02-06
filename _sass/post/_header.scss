@@ -39,14 +39,9 @@
     }
 	}
   &__date {
-    color: $color-grey;
     float: left;
     font-family: $font-family-headline;
     font-size: $font-size-small;
-    width: 8rem;
-    @include media-query($width-small) {
-      width: 9rem;
-    }
   }
 }
 .post {
