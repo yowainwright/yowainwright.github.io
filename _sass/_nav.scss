@@ -16,6 +16,7 @@ $nav-height: 4rem;
 	}
 	&__link {
 		color: black;
+    display: block;
 		height: $nav-height;
     font: .65rem/1 $font-family-nav;
     font-weight: bold;
@@ -73,9 +74,6 @@ $nav-height: 4rem;
   	@include media-query($width-small) {
   		padding: 0 1rem;
   	}
-  }
-  &__link {
-  	display: block;
   }
 }
 [name=site-logo] {

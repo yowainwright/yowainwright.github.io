@@ -220,7 +220,6 @@ DEPENDENCIES
   jekyll-redirect-from
   jekyll-sitemap
   jemoji
-  json
 
 BUNDLED WITH
    1.13.1
