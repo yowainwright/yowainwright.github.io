@@ -24,10 +24,11 @@
       padding: 4rem $spacing-unit;
     }
   }
-  &__text,
-  &__social {
+  &__text {
     display: block;
     height: $spacing-unit-largest;
+    font-family: $font-family-nav;
+    font-weight: bold;
     line-height: $spacing-unit-largest;
     margin: 0;
     vertical-align: middle;
@@ -35,26 +36,11 @@
       display: table-cell;
     }
   }
-  &__social {
-    padding-left: $spacing-unit;
-  }
   &__date {
     padding-left: $spacing-unit-small;
     @include media-query($width-small) {
       border-right: 1px solid $color-grey-lightest;
       padding: $spacing-unit-small $spacing-unit;
     }
-  }
-  &__link {
-    font-style: italic;
-  }
-  svg {
-    height: $spacing-unit-large;
-    position: relative;
-    top: $spacing-unit-small;
-    width: $spacing-unit-large;
-  }
-  use {
-    fill: black;
   }
 }

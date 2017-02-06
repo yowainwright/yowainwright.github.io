@@ -11,17 +11,9 @@ $nav-height: 4rem;
 	@include media-query($width-small) {
 		border-bottom: 0;
     margin-bottom: 0;
-    margin-top: 4rem;
-    margin-bottom: 0;
-    max-width: calc(100% - 2rem);
+    margin-top: 2rem;
+    max-width: 50rem;
 	}
-  @include media-query($width-medium) {
-    margin-top: 4rem;
-  }
-  @include media-query($width-large) {
-    max-width: 67.5rem;
-    margin-top: 8rem;
-  }
 	&__link {
 		color: black;
 		height: $nav-height;
@@ -62,7 +54,7 @@ $nav-height: 4rem;
     }
     &:after {
     	@include media-query($width-small) {
-	    	border-bottom: 4px solid black;
+	    	border-bottom: 3px solid black;
 	    	content: ' ';
 	    	left: 0;
 	    	position: absolute;

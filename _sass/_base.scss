@@ -18,7 +18,6 @@ h4,
 h5,
 h6 {
   font-family: $font-family-headline;
-  letter-spacing: -.1rem;
 }
 h1,
 h2,
@@ -119,7 +118,6 @@ blockquote {
      margin: 0;
   }
 }
-
 // media
 figure {
   margin: 0 auto;
@@ -131,12 +129,9 @@ iframe {
   margin-top: $spacing-unit;
   max-width: 100%;
   @include media-query($width-small) {
-    margin-bottom: $spacing-unit-large;
-    margin-top: $spacing-unit-large;
-  }
-  @include media-query($width-medium) {
-    margin-bottom: $spacing-unit-largest;
-    margin-top: $spacing-unit-largest;
+    // margin-bottom: $spacing-unit-large;
+    // margin-top: $spacing-unit-large;
+    max-width: $width-default;
   }
 }
 

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<main class="post{% if page.note %} post--{{page.note}}{% endif %}">
+<main class="page page--post{% if page.note %} post--{{page.note}}{% endif %}">
   <article class="{% if type.page %}page{% else %}post{% endif %}">
     <header class="post__header">
       <h1 class="post__title">{{ page.title }}</h1>

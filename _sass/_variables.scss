@@ -52,8 +52,8 @@ $spacing-unit-large: $spacing-unit * 2;
 $spacing-unit-largest: $spacing-unit * 4;
 
 // Media Queries (px, maybe this sux but px is way faster for me with media queries)
-$width-default: $spacing-unit * 800 / 16 !default;
-$width-reader: $spacing-unit * 650 / 16 !default;
+$width-default: $spacing-unit * 600 / 16 !default;
+$width-reader: $spacing-unit * 600 / 16 !default;
 // breakpoints
 $width-large: $screen-lg;
 $width-medium: $screen-md;

@@ -5,10 +5,6 @@
       font-size: $font-size-medium;
 			margin-bottom: 1rem;
 			margin-top: $spacing-unit-large;
-			@include media-query($width-small) {
-        font-size: $font-size-large;
-				margin-top: $spacing-unit-largest;
-			}
 		}
     a {
       text-decoration: underline;

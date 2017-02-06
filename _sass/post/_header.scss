@@ -1,8 +1,10 @@
 .post {
 	&__header {
 		margin-top: $spacing-unit;
-    @include media-query($width-small) {
-      margin-top: 9.5rem;
+    .page--post & {
+      @include media-query($width-small) {
+        margin-top: 4.5rem;
+      }
     }
 	}
 	&__title,
@@ -12,21 +14,17 @@
 	&__title {
 		font-size: $font-size-large;
 		@include media-query($width-small) {
-			font-size: $font-size-largest;
 			max-width: $width-reader;
 		}
 	}
 	&__meta {
-    font-family: $font-family-headline;
-		font-size: $font-size-small;
-    font-weight: bold;
     margin: $spacing-unit 0;
     position: relative;
     text-decoration: italic;
     @include micro-clearfix;
     @include media-query($width-small) {
       font-size: $font-size-default;
-      margin: 3rem 0 4rem;
+      margin: $spacing-unit-medium 0;
     }
     &:before {
       border-top: 2px solid #eee;
@@ -41,11 +39,10 @@
     }
 	}
   &__date {
-    background-color: white;
-    border: 5px solid #eee;
+    color: $color-grey;
     float: left;
-    padding: 1rem;
-    text-align: center;
+    font-family: $font-family-headline;
+    font-size: $font-size-small;
     width: 8rem;
     @include media-query($width-small) {
       width: 9rem;

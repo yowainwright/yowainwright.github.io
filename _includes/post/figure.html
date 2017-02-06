@@ -1,7 +1,7 @@
 <figure class="post__figure">
 	{% if post.featured_image %}
 	<a class="post__link" href="{{ post.url | prepend: site.baseurl }}">
-  	<img class="post__image" src="{{post.featured_image}}" alt="{{ post.title }}" />
+  	<img class="post__image" src="{{post.featured_image}}?w=600&h=600&fit=crop&crop=focalpoint&auto=format" alt="{{ post.title }}" />
   </a>
   {% else %}
   	<img class="post__image post__image--featured" src="{{page.featured_image}}" alt="{{ page.title }}" />

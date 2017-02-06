@@ -1,4 +1,9 @@
 <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta property="og:locale" content="en_US">
 
 <meta name="twitter:url" property="og:url" content="https://dollarshaveclub.github.io/scrolldir/">
 <meta name="twitter:title" property="og:title" content="Vertical scroll direction without jitter">
@@ -8,20 +13,13 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image" content="http://dollarshaveclub.github.io/scrolldir/scrolldir-share-fb.png" itemprop="image">
 <meta property="og:image:secure_url" content="https://dollarshaveclub.github.io/scrolldir/scrolldir-share-fb.png" itemprop="image">
-<meta name="robots" content="index,follow">
 
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:locale" content="en_US">
   <meta name="theme-color" content="#ffffcc">
   <title>{{ page.title }} - Jeffry.in</title>
   <link rel="manifest" href="{{ site.url }}/manifest.json">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <meta name="description" content="{% if page.meta %}{{ page.meta }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %} - Jeffry.in">
   <meta name="google-site-verification" content="8eHITXF6-kLwRSGadGPduRcZYBmX-R_L85vU_DCB9gU" />
-  <meta name="robots" content="index,follow" />
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
   <link href="{{ site.url }}/assets/favicon.ico" rel="icon" />
   <link href="{{ site.url }}/assets/w.png" rel="apple-touch-icon" />
@@ -46,9 +44,10 @@
   <meta property="og:image" content="{% if page.imgix != true %}{{ site.url }}{% endif %}{% if page.share_image %}{{page.share_image}}{% elsif page.featured_image %}{{ page.featured_image }}{% else %}/assets/w.jpg{% endif %}?w=1200&h=600&fit=crop&crop=focalpoint&auto=format" itemprop="image">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="600">
+
   <style>
   {% capture styles %}
-    {% include styles.scss %}
+    {% include main.scss %}
   {% endcapture %}
   {{ styles | scssify }}
   </style>
