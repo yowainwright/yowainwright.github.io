@@ -4,7 +4,7 @@
 		margin-bottom: $spacing-unit-largest;
 	}
 	.post {
-		@include micro-clearfix;
+		// @include micro-clearfix;
     border-top: 1px solid $color-grey-lightest;
     margin: 0 auto $spacing-unit-medium;
     @include media-query($width-small) {
@@ -55,15 +55,6 @@
 			margin-bottom: 0;
 			@include media-query($width-small) {
 				margin-bottom: $spacing-unit-small;
-			}
-			a {
-				color: black;
-			}
-		}
-		&__author {
-			color: black;
-			&:hover {
-				text-decoration: underline;
 			}
 		}
 	}

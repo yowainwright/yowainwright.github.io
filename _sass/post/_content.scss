@@ -14,13 +14,6 @@
       font-weight: bold;
       text-transform: uppercase;
     }
-		.post--feature-image-aside & {
-			margin-left: auto;
-			margin-right: auto;
-			@include media-query($width-small) {
-				max-width: $width-reader;
-			}
-		}
 	}
   &__link--read-more {
     font-family: $font-family-headline;
@@ -32,7 +25,4 @@
 }
 .highlight {
 	margin: $spacing-unit auto;
-}
-.post__image--featured {
-	margin: 0 auto;
 }
