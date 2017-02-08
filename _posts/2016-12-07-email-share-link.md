@@ -1,5 +1,5 @@
 ---
-title: Debugging email share links 
+title: Debugging email share links
 date: 2016-12-07 00:00:00 Z
 permalink: "/email-share-link/"
 categories:
