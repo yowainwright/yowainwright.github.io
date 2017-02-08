@@ -1,8 +1,3 @@
-$width-small-pre-small: $spacing-unit * 420 / $conversion-number;
-$width-small-very-small: $spacing-unit * 500 / $conversion-number;
-$width-small-small: $spacing-unit * 670 / $conversion-number;
-$width-small-medium: $spacing-unit * 825 / $conversion-number;
-$width-medium-large: $spacing-unit * 1000 / $conversion-number;
 $nav-height: 4rem;
 .site-nav {
 	border-bottom: 2px solid black;
@@ -15,7 +10,6 @@ $nav-height: 4rem;
     max-width: 50rem;
 	}
 	&__link {
-		color: black;
     display: block;
 		height: $nav-height;
     font: .65rem/1 $font-family-nav;
@@ -23,15 +17,11 @@ $nav-height: 4rem;
     letter-spacing: .1rem;
 		line-height: $nav-height !important;
 		text-align: center;
-		text-decoration: none;
     text-transform: uppercase;
     @include media-query($width-small) {
       font-size: .85rem;
       line-height: 4.25rem !important;
     }
-		&:hover {
-			text-decoration: underline;
-		}
 		&--logo {
       background-color: $color-yellow-light;
 			border: 5px solid black;
@@ -43,16 +33,11 @@ $nav-height: 4rem;
 		}
 	}
 	&__items {
-		clear: none;
     display: flex;
     justify-content: space-around;
-    margin: .5rem .25rem;
     max-width: none;
     padding: 0;
     position: relative;
-    @include media-query($width-small) {
-    	margin: 1rem 0;
-    }
     &:after {
     	@include media-query($width-small) {
 	    	border-bottom: 3px solid black;
@@ -66,7 +51,7 @@ $nav-height: 4rem;
 	}
   &__item {
   	background-color: white;
-  	display: inline-block;
+  	list-style-type: none;
   	margin: 0;
   	padding: 0 .5rem;
   	position: relative;
