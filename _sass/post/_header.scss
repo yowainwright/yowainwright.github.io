@@ -43,18 +43,10 @@
 .post {
   &--about {
     .post__meta {
-      border-bottom: 1px solid black;
-      border-top: 1px solid black;
       font-size: $font-size-default;
       font-weight: normal;
       line-height: 1.5;
       padding: $spacing-unit 0;
-      @include media-query($width-small) {
-        padding: $spacing-unit-medium 0;
-      }
-      &:before {
-        border: 0;
-      }
     }
   }
 

@@ -9,7 +9,7 @@ collections:
     title: Uploads
     output: true
 email: jjwainwright2@gmail.com
-description: Jeffry.in is a collection of posts by me, Jeffry Wainwright
+description: Jeffry.in are posts by me, Jeffry Wainwright
 baseurl: ''
 url: "//jeffry.in"
 imgix: "//yowainwright.imgix.net"
@@ -38,15 +38,4 @@ gems:
 - jekyll-minifier
 - jekyll-autoprefixer
 - jemoji
-exclude:
-- CNAME
-- README
-- node_modules
-- node_modules/*
-- _data
-- _data/*
-- _drafts
-- _drafts/*
-- bower.json
-- package.json
-- LICENSE
+exclude: [CNAME, README, node_modulesn, _data, _drafts, bower.json, package.json, LICENSE]

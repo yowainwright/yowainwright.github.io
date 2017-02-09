@@ -1,10 +1,3 @@
-.posts {
-	margin-bottom: $spacing-unit-large;
-	@include media-query($width-small) {
-		margin-bottom: $spacing-unit-largest;
-	}
-}
-
 .post--posts {
   border-top: 1px solid $color-grey-lightest;
   margin: 0 auto $spacing-unit-medium;
@@ -27,7 +20,7 @@
     margin-bottom: 0;
   }
   .post__header {
-    margin-bottom: $spacing-unit;
+    margin-bottom: 1.5rem;
   }
   .post__content {
     border-bottom: 1px solid $color-grey-lightest;
@@ -50,42 +43,3 @@
     }
   }
 }
-
-// .post {
-//   &__content--posts {
-//     @include media-query($width-small) {
-//       position: relative;
-//       margin-top: 2rem;
-//       min-height: 11.25rem;
-//     }
-//   }
-//   &--shows-image {
-//     .post__description {
-//       @include media-query($width-small) {
-//         margin-left: 10.25rem;
-//       }
-//     }
-//     .post__image {
-//       @include media-query($width-small) {
-//         margin: 0;
-//       }
-//     }
-//   }
-//   &__figure,
-//   &__image {
-//     @include media-query($width-small) {
-//       height: 9.25rem;
-//       width: 9.25rem;
-//     }
-//   }
-//   &__figure {
-//     @include media-query($width-small) {
-//       left: 0;
-//       margin: 0;
-//       overflow: hidden;
-//       position: absolute;
-//       top: 0;
-//     }
-//   }
-// }
-
