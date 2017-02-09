@@ -7,10 +7,10 @@ categories:
 - javascript
 layout: post
 author: Jeff Wainwright
-meta: This post lists out the 4 types of Open Source JavaScript Projects and summarizes them.
+meta: This post lists out the 4 types of Open Source JavaScript Projects and summarizes
+  them.
 share_image: "/assets/icons/js.jpg"
 ---
-
 
 I separate JavaScript Open Source Projects into 4 categories. It's important for me to remember these categories when learning about projects so that I can better realize my time spent learning, building and tooling with JavaScript. Currently (2017), JavaScript churn is real and it is easy to be overwhelmed. I find that when I break down projects this way, I'm able to invest my time appropriately and pick the tools I want to use faster. 
 
