@@ -38,4 +38,12 @@ gems:
 - jekyll-minifier
 - jekyll-autoprefixer
 - jemoji
-exclude: [CNAME, README, node_modulesn, _data, _drafts, bower.json, package.json, LICENSE]
+exclude:
+- CNAME
+- README
+- node_modulesn
+- _data
+- _drafts
+- bower.json
+- package.json
+- LICENSE
