@@ -7,7 +7,7 @@ categories:
 - projects
 layout: post
 show_image: true
-featured_image: "https://yowainwright.imgix.net/hb/hb.jpg"
+featured_image: https://yowainwright.imgix.net/hb/hb.jpg
 ---
 
 A year ago I was not able to be with one of my dear friends on their birthday so I made this.
