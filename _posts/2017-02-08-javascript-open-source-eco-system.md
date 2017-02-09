@@ -1,5 +1,5 @@
 ---
-title: The JavaScript Open Source Eco System
+title: The 4 Categories of the JavaScript Open Source Eco System
 date: 2017-02-08 00:00:00 Z
 permalink: "/js-open-source-eco-system/"
 categories:
