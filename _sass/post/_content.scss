@@ -26,3 +26,25 @@
 .highlight {
 	margin: $spacing-unit auto;
 }
+.update {
+  background-color: $color-grey-lightest;
+  border: #eee;
+  padding: 1rem;
+  @include media-query($width-small) {
+    border-radius: .25rem;
+  }
+  &:before {
+    content: 'update';
+    display: block;
+    font-family: $font-family-headline;
+    font-size: $font-size-small;
+    text-shadow: 0 1px 0 white;
+    text-transform: uppercase;
+  }
+  .post__content & {
+    max-width: 100vw;
+    @include media-query($width-small) {
+      max-width: $width-reader + 2;
+    }
+  }
+}

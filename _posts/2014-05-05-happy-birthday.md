@@ -16,28 +16,28 @@ _This_ being posed images of myself to make each letter for the word _Happy Birt
 
 I posted the images on Instagram in reverse order so that my friends could slowly get the message that I had _posed_ for them.
 
-!['H' in Happy birthday](/assets/hb/h.jpg)
+!['H' in Happy birthday](https://yowainwright.imgix.net/hb/h.jpg)
 
-!['A' in Happy birthday](/assets/hb/a.jpg)
+!['A' in Happy birthday](https://yowainwright.imgix.net/hb/a.jpg)
 
-!['P' in Happy birthday](/assets/hb/p.jpg)
+!['P' in Happy birthday](https://yowainwright.imgix.net/hb/p.jpg)
 
-!['P' in Happy Birthday](/assets/hb/p2.jpg)
+!['P' in Happy Birthday](https://yowainwright.imgix.net/hb/p2.jpg)
 
-!['Y' in Happy Birthday](/assets/hb/y.jpg)
+!['Y' in Happy Birthday](https://yowainwright.imgix.net/hb/y.jpg)
 
-!['B' in Happy Birthday](/assets/hb/b.jpg)
+!['B' in Happy Birthday](https://yowainwright.imgix.net/hb/b.jpg)
 
-!['I' in Happy Birthday](/assets/hb/i.jpg)
+!['I' in Happy Birthday](https://yowainwright.imgix.net/hb/i.jpg)
 
-!['R' in Happy Birthday](/assets/hb/r.jpg)
+!['R' in Happy Birthday](https://yowainwright.imgix.net/hb/r.jpg)
 
-!['T' in Happy Birthday](/assets/hb/t.jpg)
+!['T' in Happy Birthday](https://yowainwright.imgix.net/hb/t.jpg)
 
-!['H' in Happy Birthday](/assets/hb/h.jpg)
+!['H' in Happy Birthday](https://yowainwright.imgix.net/hb/h.jpg)
 
-!['D' in Happy Birthday](/assets/hb/d.jpg)
+!['D' in Happy Birthday](https://yowainwright.imgix.net/hb/d.jpg)
 
-!['A' in Happy Birthday](/assets/hb/a.jpg)
+!['A' in Happy Birthday](https://yowainwright.imgix.net/hb/a.jpg)
 
-!['Y' in Happy Birthday](/assets/hb/y2.jpg)
+!['Y' in Happy Birthday](https://yowainwright.imgix.net/hb/y2.jpg)
