@@ -7,7 +7,8 @@ categories:
 - javascript
 layout: post
 author: Jeff Wainwright
-meta: This post lists out the 4 types of Frontend JavaScript Projects and summarizes them.
+meta: This post lists out the 4 types of Frontend JavaScript Projects and summarizes
+  them.
 share_image: "/assets/icons/js.jpg"
 redirect_from:
 - js-open-source-eco-system/
