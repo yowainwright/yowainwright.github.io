@@ -1,14 +1,14 @@
-<figure class="post__figure">
+<figure class="post__figure" itemtype="http://schema.org/ImageObject">
 	{% if post.featured_image %}
 	<a class="post__link" href="{{ post.url | prepend: site.baseurl }}">
-  	<img class="post__image" src="{{post.featured_image}}?w=600&h=600&fit=crop&crop=focalpoint&auto=format" alt="{{ post.title }}" />
+  	<img class="post__image" src="{{post.featured_image}}?w=600&h=600&fit=crop&crop=focalpoint&auto=format" alt="{{ post.title }}" itemprop="contentURL" />
   </a>
   {% else %}
-  	<img class="post__image" src="{{page.featured_image}}" alt="{{ page.title }}" />
+  	<img class="post__image" src="{{page.featured_image}}" alt="{{ page.title }}" itemprop="contentURL"/>
   {% endif %}
   {% if page.featured_caption %}
-    <figcaption class="post__caption">{{ page.featured_caption }}</figcaption>
+    <figcaption class="post__caption" itemprop="caption">{{ page.featured_caption }}</figcaption>
   {% elsif post.feature_caption %}
-    <figcaption class="post__caption">{{ post.featured_caption }}</figcaption>
+    <figcaption class="post__caption" itemprop="caption">{{ post.featured_caption }}</figcaption>
   {% endif %}
 </figure>
