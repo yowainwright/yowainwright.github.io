@@ -9,8 +9,7 @@
     a {
       text-decoration: underline;
     }
-    &:first-line,
-    p:first-of-type:first-line {
+    p:first-child:first-line {
       font-weight: bold;
       text-transform: uppercase;
     }

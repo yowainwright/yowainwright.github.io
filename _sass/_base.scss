@@ -94,21 +94,11 @@ a {
     text-decoration: underline;;
   }
 }
-blockquote,
-blockquote p {
-  font-size: $font-size-medium;
-  font-style: italic;
-}
 blockquote {
-  border-left: 4px solid black;
-  clear: both;
-  margin-bottom: $spacing-unit;
-  margin-top: $spacing-unit;
+  border-left: 4px solid $color-grey-lighter;
   max-width: calc(100% - #{$spacing-unit-large});
   padding: $spacing-unit-small $spacing-unit;
   @include media-query($width-small) {
-    margin-bottom: $spacing-unit-large;
-    margin-top: $spacing-unit-large;
     max-width: $width-reader;
   }
   p {

@@ -3,8 +3,8 @@ title: Switching Back To Sublime 3 and Why It Was a Good Move
 date: 2017-02-13 00:00:00 Z
 permalink: "/switching-back-to-sublime/"
 categories:
-- note
-- story
+- code
+- os
 layout: post
 meta: This post discusses why I switched back to the Sublime text dditor after trying out Atom, another text editor.
 imgix: true
@@ -37,36 +37,29 @@ I love Atom's out of the box beauty. I've found that it only takes a few minutes
 ## How I added things I liked from Atom to Sublime
 
 1. For adding file icons, and an awesome them I went to the sublime package manager and downloaded them. I recommend the [material theme](https://github.com/equinusocio/material-theme) b/c I it transitions between regular and italic fonts and has a nice sweet of supporting features—linke icons for files.
-
-```terminal
-Sublime Text > Preferences > Package Control
-```
+  - Sublime Text > Preferences > Package Control
 
 2. For adding a new app icons, I went [here](https://github.com/YabataDesign/sublime-text-icon) and followed the steps
-
-```terminal
--  click download
--  open /Applications/Sublime\ Text.app/Contents/Resources/
--  replace Sublime Text.icns
--  right click on the Sublime Text App > select 'get info'
--  drag the downloaded 'Sublime Text.icns' over the deafult icon in the top left corner
-```
+  -  click download
+  -  open /Applications/Sublime\ Text.app/Contents/Resources/
+  -  replace Sublime Text.icns
+  -  right click on the Sublime Text App > select 'get info'
+  -  drag the downloaded 'Sublime Text.icns' over the deafult icon in the top left corner
 3. For changing the font, first I downloaded a font, [m-2m](http://www.fontspace.com/m-fonts/m-2m). Then I updated my Sublime Settings.
+  -  download and install the font
+  -  Sublime Text (nav) > Preferences > Settings 
 
-```terminal
--  download and install the font
--  Sublime Text (nav) > Preferences > Settings 
-```
-And here's the JSON
-```javascript
-"font_face": "mplus-2m-medium",
-  "font_options":
-  [
-    "gray_antialias",
-    "subpixel_antialias"
-  ],
-  "font_size": 17.0
-```
+  **Here's the JSON:**
+  {% highlight javascript %}
+  "font_face": "mplus-2m-medium",
+    "font_options":
+    [
+      "gray_antialias",
+      "subpixel_antialias"
+    ],
+    "font_size": 17.0
+  {% endhighlight %}
+
 ## Summary
 
 Atom is great. I really like how it is built but I like Sublime more for. It's easy to get caught up in the churn of trying new tools. I'm glad I went back to Sublime because it is still just the best (for me right now). 💛
