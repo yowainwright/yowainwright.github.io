@@ -53,13 +53,15 @@ I love Atom's out of the box beauty. I've found that it only takes a few minutes
 
   **Here's the JSON:**
   {% highlight javascript %}
-  "font_face": "mplus-2m-medium",
-    "font_options":
-    [
-      "gray_antialias",
-      "subpixel_antialias"
-    ],
-    "font_size": 17.0
+    {
+    "font_face": "mplus-2m-medium",
+      "font_options":
+      [
+        "gray_antialias",
+        "subpixel_antialias"
+      ],
+      "font_size": 17.0
+    }
   {% endhighlight %}
 
 ## Summary
