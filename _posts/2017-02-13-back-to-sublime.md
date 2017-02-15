@@ -18,7 +18,7 @@ The majority of people on the Frontend Team in my current use [Atom](https://ato
 
 My initial take on Atom was that beautiful—more beautiful out-of-the-box than Sublime and I liked that. I started to invest time learning quick keys. Over time, I noticed that Sublime had out of the box features that were not available with Atom—like drag-and-drop.  Avoiding dragging is important but for *_1 thing_ I do a lot I couldn't find a solution and dragging seems easier for me. 
 
-> *RE =>1 thing: With an Atom Window open I could not figure out a way to drag-and-drop a new project folder into its sidebar. 
+> *RE: 1 thing: With an Atom Window open I could not figure out a way to drag-and-drop a new project folder into its sidebar. 
 
 Beyond that, I found Atom to be slow and a memory hog. I've heard the debate that Sublime can become slow when a lot of plugins are added but I've never seen or felt that. 
 

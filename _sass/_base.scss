@@ -11,14 +11,7 @@ body {
 }
 
 // fonts
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-family-headline;
-}
+
 h1,
 h2,
 h3,
@@ -27,7 +20,6 @@ h5,
 h6,
 b,
 strong {
-  font-weight: bold;
   a {
     text-decoration: none;
     &:hover {
@@ -57,16 +49,10 @@ h3 {
   line-height: 1.25;
 }
 h1 {
-  font-size: $font-size-large;
   margin: 0;
-}
-h2,
-h3 {
-  font-size: $font-size-medium;
 }
 p,
 li {
-  font-family: $font-family-default;
   font-weight: lighter;
   margin-left: auto;
   margin-right: auto;
@@ -204,7 +190,6 @@ main {
     padding: 0 0 $spacing-unit-largest;
   }
 }
-
 // trumps : general
 .page--about {
   margin-left: auto;
@@ -215,24 +200,5 @@ main {
   }
   h1 {
     margin-bottom: $spacing-unit-large;
-  }
-}
-.site-header {
-  max-width: none;
-  background-color: $color-grey-lightest;
-  @include media-query($width-small) {
-    max-width: $width-reader;
-    margin-top: 2rem;
-  }
-  &__content {
-    font-size: $font-size-default;
-    line-height: 1.5;
-    font-style: italic;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: none;
-    margin-top: 0;
-    padding: $spacing-unit;
   }
 }
