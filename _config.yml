@@ -11,8 +11,8 @@ collections:
 email: jjwainwright2@gmail.com
 description: Jeffry.in are posts by me, Jeffry Wainwright
 baseurl: ''
-url: "https://jeffry.in"
-imgix: "https://yowainwright.imgix.net"
+url: https://jeffry.in
+imgix: https://yowainwright.imgix.net
 imgSq: "?fit=crop&w=700&h=700&auto=format"
 imgSqSm: "?fit=crop&w=300&h=300&auto=format"
 imgLs: "?fit=crop&w=350&h=175&auto=format"
@@ -22,7 +22,7 @@ twitter_username: yowainwright
 github_username: yowainwright
 instagram_username: yowainwright
 codepen_username: yowainwright
-tumblr_account: "https://ratherbe.in"
+tumblr_account: https://ratherbe.in
 markdown: kramdown
 kramdown:
   auto_ids: false
