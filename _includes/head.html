@@ -1,4 +1,4 @@
-<head>
+<head itemscope itemtype="http://schema.org/WebSite">
 
 {% comment %}
   Basic Meta Data
@@ -9,11 +9,11 @@
 <meta name="robots" content="index,follow">
 <meta property="og:locale" content="en_US">
 <meta name="description" content="{% if page.meta %}{{ page.meta }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
-<title>{{ page.title }} - Jeffry.in</title>
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<title itemprop="name">{{ page.title }} - Jeffry.in</title>
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" itemprop="url">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 <link href="{{ site.url }}/assets/favicon.ico" rel="icon" />
-<link href="{{ site.url }}/assets/w.png" rel="apple-touch-icon" />
+<link href="{{ site.url }}/assets/w.png" rel="apple-touch-icon" itemprop="logo" />
 
 {% comment %}
   Google
@@ -27,8 +27,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {% comment %}
   Schema.org
 {% endcomment %}
-<meta name="keywords" content="html5, schema.org" />
-
+<meta name="keywords" content="jeffry, wainwright, jeffry wainwright, code, programmer, artist, athlete, developer, engineer" />
 {% comment %}
   Manifest
 {% endcomment %}
