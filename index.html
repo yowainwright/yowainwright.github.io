@@ -8,7 +8,7 @@ pagination:
 
 <section class="posts posts--column">
   <div class="posts__container">
-    {% for post in site.posts %}
+    {% for post in site.posts limit: 6 %}
       {% include posts/post_full.html %}
     {% endfor %}
   </div>
