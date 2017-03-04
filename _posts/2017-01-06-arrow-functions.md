@@ -6,6 +6,7 @@ categories:
 - html
 - code
 - note
+- javascript
 layout: post
 meta: This post reviews some things about arrow functions that I learned from Wes
   Bos's ES6 for everyone.
@@ -101,3 +102,6 @@ Play with the examples above on [CodePen](http://codepen.io/yowainwright/pen/5e5
 What the `this` key word will be bound to and how minimal arrow functions can be is well documented. ES6 For Everyone gives clear examples of that make it much clearer though.
 
 ~Thank you [Wes Bos](http://wesbos.com/)!!!
+
+After talking with Dan Benson a bit, I discovered even more about arrow functions. These things were covered in Wes Bos's course but I'm even clearer now. [See more](https://jeffry.in/arrow-functions-cont/) examples here. 
+{: .update }

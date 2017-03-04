@@ -1,12 +1,12 @@
 ---
-title: Today, I lost a friend
+title: Today, I lost a friend. You will be missed and Remembered.
 date: 2017-02-26 00:00:00 Z
-permalink: "/lost-a-fried"
+permalink: "/lost-a-friend/"
 categories:
 - note
 - story
 layout: post
-meta: Week 7, 2017—Today, I lost a friend.
+meta: Week 7, 2017—Today, I lost a friend. Lauren Schlueter was a friend of mine who helped me through laughter. She was a historian, a teacher and a comedian. 
 show_image: true
 imgix: true
 featured_image: https://yowainwright.imgix.net/lost-a-friend/gulf-of-mexico.jpg
