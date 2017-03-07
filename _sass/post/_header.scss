@@ -46,6 +46,9 @@
       font-weight: normal;
       line-height: 1.5;
       padding: $spacing-unit 0;
+      &:before {
+        display: none;
+      }
     }
   }
 

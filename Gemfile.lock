@@ -7,11 +7,11 @@ GIT
 
 GIT
   remote: git://github.com/github/pages-gem.git
-  revision: dc3324db5bff04b725a5ed4e11dc7a9d79d31dce
+  revision: 0172ac120f3b54b8ccca15585c136f40055d4e0b
   specs:
-    github-pages (124)
+    github-pages (126)
       activesupport (= 4.2.7)
-      github-pages-health-check (= 1.3.1)
+      github-pages-health-check (= 1.3.3)
       jekyll (= 3.3.1)
       jekyll-avatar (= 0.4.2)
       jekyll-coffeescript (= 1.0.1)
@@ -77,10 +77,10 @@ GEM
     execjs (2.7.0)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.17)
+    ffi (1.9.18)
     forwardable-extended (2.6.0)
     gemoji (3.0.0)
-    github-pages-health-check (1.3.1)
+    github-pages-health-check (1.3.3)
       addressable (~> 2.3)
       net-dns (~> 0.8)
       octokit (~> 4.0)
