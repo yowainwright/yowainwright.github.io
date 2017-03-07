@@ -7,7 +7,8 @@ categories:
 - javascript
 layout: post
 author: Jeff Wainwright
-meta: This post summarizes my notes on template strings and template tagging after watching Wes Bos's ES6 For Everyone
+meta: This post summarizes my notes on template strings and template tagging after
+  watching Wes Bos's ES6 For Everyone
 share_image: "/assets/icons/js.jpg"
 ---
 
