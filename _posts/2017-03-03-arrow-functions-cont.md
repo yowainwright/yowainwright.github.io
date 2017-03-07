@@ -9,7 +9,7 @@ categories:
 layout: post
 meta: This post reviews some things about arrow functions that I learned from Wes
   Bos's ES6 for everyone.
-share_image: "https://yowainwright.imgix.net/icons/js.jpg"
+share_image: https://yowainwright.imgix.net/icons/js.jpg
 ---
 
 Note post: this short post continued from my 1st [Arrow Functions Post](https://jeffry.in/arrow-functions/) after trying out some more things with Arrow Functions with [Dan Benson](https://www.linkedin.com/in/dansbenson/).
