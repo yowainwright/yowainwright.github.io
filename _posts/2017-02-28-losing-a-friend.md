@@ -1,5 +1,5 @@
 ---
-title: Some great memories have you in the foreground
+title: Some great memories have Lauren in the foreground
 date: 2017-02-28 00:00:00 Z
 permalink: "/losing-a-friend/"
 categories:
