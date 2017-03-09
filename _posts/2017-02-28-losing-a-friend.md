@@ -6,7 +6,8 @@ categories:
 - note
 - story
 layout: post
-meta: Recently, I lost a friend. Lauren Schlueter was a friend of mine who helped me through laughter. She was a historian, a teacher and a comedian. 
+meta: Recently, I lost a friend. Lauren Schlueter was a friend of mine who helped
+  me through laughter. She was a historian, a teacher and a comedian.
 show_image: true
 imgix: true
 featured_image: https://yowainwright.imgix.net/losing-a-friend/gulf-of-mexico.jpg
