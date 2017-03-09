@@ -1,39 +1,33 @@
 ---
-title: Today, I lost a friend. You will be missed and Remembered.
+title: Some great memories had you in the foreground
 date: 2017-02-26 00:00:00 Z
 permalink: "/lost-a-friend/"
 categories:
 - note
 - story
 layout: post
-meta: Week 7, 2017—Today, I lost a friend. Lauren Schlueter was a friend of mine who helped me through laughter. She was a historian, a teacher and a comedian. 
+meta: Recently, I lost a friend. Lauren Schlueter was a friend of mine who helped me through laughter. She was a historian, a teacher and a comedian. 
 show_image: true
 imgix: true
 featured_image: https://yowainwright.imgix.net/lost-a-friend/gulf-of-mexico.jpg
 ---
 
-The first time I met Lauren—it was pretty much one of the coolest things of my life. One of my best friends girlfriend's, hit me up and said she had a friend that was visiting Southern California and asked if I'd want to meet up with _her_. _Her_? I was generally excited to meet a_her_, especially if she was beautiful—which she was. I tried to play it cool in the 30 seconds that it took me to reply, "Yeah sure, I'd be up to meet her". 
+Lauren and I met through a mutual friend of ours from Chicago. When she arrived in Manhattan Beach, where I lived, we became fast friends. At the time, I was recovering from a serious bout with Pneomonia. The sickness has left me a bit depressed. She had just gone through some changes of her own making us the perfect travel/hang-out duo.
 
-A few days later I got a text from Lauren that she could come visit me that night where I was living in Manhattan Beach. I don't think the seconds could go fast enough when I was a work because I was so excited to see her. So many things were going through my mind. Who is Lauren? What is she like? Would she like me? Don't overthink this. Who are you kidding? You are going to over think this. 
+After meeting, we immediately discussed politics and history. She was passionate about certain things, like Cuba, and these certain things she could describe in great detail which I could listen to for hours. I truly enjoyed debating certain points with her just because of how my I would learn when she would respond. 
 
-When I got home, Lauren was already there. We greeted each other awkwardly. She was so beautiful. I asked her if she would want to ride bikes down to Hermosa Beach for dinner. She said okay, so we did. I remember the evening was foggy and the waves had been very large along the coast. To me, it seemed like I'd gone back in time and we were riding bikes on an old time boardwalk. It was wonderful. 
+She had a lot to say about several television shows. I know, many do—but not like Lauren. She could converse, debate and laugh about each episode of a show she was a fan of in so much detail. I would just watch shows to connect-dots of the stories Lauren would tell about shows. 
 
-During dinner, Lauren and I discussed politics and philosophy. We joked about life and love. Lauren was smart, fiery and funny. I remember thinking, 'this is a person that will stand for something when it matters'. 
+The first trip that she roped-me-into was from Chicago to Orlando, in the dead of winter. I don't know why she choose me to go but we went. We left Chicago in a blizzard and I remember thinking, 'This is a horrible idea! Why am I the one who is doing this?'. We stopped in Memphis, and listened to blues before heading further South—to the Gulf of Mexico. 
 
-I wanted to kiss her after dinner but didn't what to be rude or assume that she would feel the same. We rode bikes to Manhattan Beach Pier and walked out on the Pier. The waves were so big that the spray from them was crashing over the Pier. I asked her, if she would want to kiss me and she said laughing, 'Are you serious? You can do better than that!'. I immediatedly loved that about Lauren. She wasn't going to fake it. She'd make light of it ...but she wasn't going to fake it. 
+I remember arriving close to the Gulf of Mexico and asking if we could watch the sunset from the Gulf. We went to an old lighthouse for the sunset. The water was so calm; much more calm than I ever see on the Pacific. Lauren walked to shore facing the sun, buckled her knees (as she would) and crossed her arms. She looked almost mad at first. Then she took in a deep breath and it seemed that her whole body melted in view. It was the best sunset. At that moment, I was so glad I was on that trip with her. After, I arriving in Orlando I assumed I wouldn't see her again. She had made plans to be a teacher abroad. 
 
-After that initial meeting Lauren and I joked around a lot via text. A few months later we met in Chicago and drove down South to Florida. We visited ended up arriving at the Gulf of Mexico to enjoy a sunset that I will never forget. 
+A few weeks later, she reached out with a request to drive to Big Sur—a place she had wanted to go to and a favorite place of mine. She came back out to California and we drove up the coast staying in Santa Barbara, Monterey and Morro Bay. It was a memorable trip. Lauren left to teach in Doah after. 
 
-----------
+Lauren and I would touch base after—to reflect on our trips, what was up in our lives and reminisce a bit about fun times we'd had. She'd seemed well and that made me happy. I felt like we'd grown so much together. For myself, I'd learned how to live my life ourside of who I'd been before Pneomonia. The new me was a bit more accepting of myself and I am thankful for what I learned from Lauren. I felt a stronger desire to just-enjoy-stuff and accept the people I care about for who the are and were. 
 
-Lauren and I had been friends for a few years. I met her through a mutual friend of ours from Chicago. When she arrived in Manhattan Beach, where I lived, we became fast friends. At the time, I was recovering from a serious bout with Pneomonia. The sickness has left me a bit depressed. She had just gone through some changes of her own making her the perfect travel/hang-out buddy.
-
-We immediately discussed politics and history. She was passionate about certain things and these certain things she could describe in great detail which was interesting. I truly enjoyed debating certain points with her just because of how my I would learn when she would respond. 
-
-Besides that, she had a lot for many television shows. I know, many do—but not like Lauren. She could converse, debate and laugh about each episode in so much detail. I truly would just watch shows so that I could connect _some_ of the dots for the summation I knew I would get from Lauren. 
-
-Our relationship was very much debative and that was what was so nice for me
+I'll never forget Lauren for that and our trips. She will live on in my mind; appreciating a sunsetting, accepting the world so much that she seemed to become a part of it. She will be missed. I think I'll always see a bit of her in every sunset I watch—a quite good-bye mixed with fiery light. Miss you Lauren Schlueter. 🙏
 
 <figure>
-  <img src="//yowainwright.imgix.net/lost-a-friend/gulf-of-mexico.jpg?w=800&h=800&crop=focalpoint&auto=format" alt="Running From Water at Leo Cabrillo" />
+  <img src="//yowainwright.imgix.net/lost-a-friend/gulf-of-mexico.jpg?w=800&h=800&crop=focalpoint&auto=format" alt="Lauren" />
 </figure>
