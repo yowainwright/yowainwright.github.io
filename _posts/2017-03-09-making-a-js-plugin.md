@@ -13,12 +13,12 @@ share_image: "/assets/icons/js.jpg"
 
 I've made a few small JavaScript Open Source plugins—[reframe.js](https://dollarshaveclub.github.io/reframe.js/), [shave](https://dollarshaveclub.github.io/shave/) and, recently [scrolldir](https://github.com/dollarshaveclub/scrolldir)(built off of [Patrick Fisher's](https://github.com/pwfisher) [scroll-intent](https://github.com/pwfisher/scroll-intent.js)). While making them, I've had a few _a-ha_ moments. 
 
-## A-ha Moments
+## A-ha Moments 💭
 **Plugins should be simple.** Their functionality should be all that matters. Making them as usuable as possible is key. 
 
 **Open source and 'Plugins'** are loosely defined in the Open Source community—which I hope will change. Here's how I define [Plugins](https://jeffry.in/4-categories-js-projects/) within the JavaScript eco-system. There was heavy debate, even with my friends about that post—which I think pointed to the fact that _plugins are loosely defined_.
 
-## Plugins Should Be Simple
+## Plugins Should Be Simple 💁
 
 _JavaScript plugins should be simple_! It should be easy to setup plugins to do the thing that they are supposed to do. Between downloading and integration, plugins should take only several minutes to understand, implement and try out.
 
@@ -46,7 +46,7 @@ if (typeof window !== 'undefined') {
 
 A really cool thing about writing code this way is that all of the code be tree shaken if unneeded. As JavaScript Services like Webpack and Rollup become more advanced Plugins can be more modifiable to serve the user of the plugin.
 
-## The Functionality Is What Matters
+## The Functionality Is What Matters 📈
 
 A plugin's users should be able to understand its code but trust that it works. Featurization should not extend far beyond the problem that the plugin solves. 
 
@@ -54,18 +54,17 @@ To understand this concept, I think of [carousels](http://shouldiuseacarousel.co
 
 So, when making or looking for plugins, I suggest trying to support a simple function and making that function's options support usability of that function rather then features that may not be needed. If you like to offer featuring options, it should be important to make sure that unnused features can be removed or unincluded by treeshaking or in a build step of the plugin.
 
-## Plugins Should Be Very Usable
+## Plugins Should Be Very Usable 🛠
 
 Users of a JavaScript plugin should be able to require it, wrap it and treeshake it to make it truly only do what it is supposed to do! When making plugins, focus should on the extension of it wrather then its options. 
 
 When providing options, I often use options as a way to remove any trace of the plugin itself. From there, I may try to provide ways to make the plugin extendable. If the extension of an extendable bit of code reaches too far—it makes sense to write another plugin. This helps with the plugin's simplicity and functionality. 
 
 
-## Why make these small plugins?
-
+## Why make these small plugins? 
 I've been making small plugins to support larger JavaScript projects or for simple use. I look for opportunities to minimize my code by seeing if I can simplify what's out there or if I find a great jQuery plugin and simplify it with ES6. 
 
-## Make Plugins
+## In Conclusion, Make Plugins! 🚀
 
 In conclusion, I try to make plugins. Maybe at some point I'll discover a reason to make a framework or library but for right now, plugins that consist of a few simple functions are very usable and extendable. I'm learning a lot for how I can build plugins to be smaller and more usable. 
 
