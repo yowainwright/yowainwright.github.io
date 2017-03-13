@@ -1,7 +1,7 @@
 ---
-title: A Formula For Writing Good Git Commits—AWW
+title: A Formula For Writing Git Commits—AWW
 date: 2017-03-12 00:00:00 Z
-permalink: "/good-commits/"
+permalink: "/formula-for-commits/"
 categories:
 - code
 - terminal
@@ -9,6 +9,8 @@ layout: post
 meta: This post discusses a formula (AWW) for writing meaningful commit messages with
   git.
 share_image: https://yowainwright.imgix.net/icons/os.jpg
+redirect_from:
+- good-commits/
 ---
 
 It is easy to reach agreement that we should write good commit messages. It equally as easy to reach agreement that most commit messages are not good. In this post, I will discuss a formula (AWW) for writing basic meaningful commit messages.
