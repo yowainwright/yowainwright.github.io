@@ -6,7 +6,8 @@ categories:
 - code
 - terminal
 layout: post
-meta: This post discusses a formula (AWW) for writing meaningful commit messages with git.
+meta: This post discusses a formula (AWW) for writing meaningful commit messages with
+  git.
 share_image: https://yowainwright.imgix.net/icons/os.jpg
 ---
 
