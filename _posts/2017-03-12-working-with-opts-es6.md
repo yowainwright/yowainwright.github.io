@@ -1,5 +1,5 @@
 ---
-title: Using ES6 Functio Destructuring with JavaScript Plugin Options 
+title: Using ES6 Functio Destructuring with JavaScript Plugin Options
 date: 2017-03-12 00:00:00 Z
 permalink: "/destructing-function-opts/"
 categories:
@@ -7,7 +7,8 @@ categories:
 - code
 - javascript
 layout: post
-meta: This post explains how to use ES6 function destructuring for more readable JavaScript Plugin Options. 
+meta: This post explains how to use ES6 function destructuring for more readable JavaScript
+  Plugin Options.
 share_image: https://yowainwright.imgix.net/icons/js.jpg
 ---
 
