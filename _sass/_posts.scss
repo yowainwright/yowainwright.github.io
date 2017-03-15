@@ -37,8 +37,10 @@
     max-width: none;
   }
   .post__title {
+    font-size: 1.5rem;
     margin-bottom: 0;
     @include media-query($width-small) {
+      font-size: 2.25rem;
       margin-bottom: $spacing-unit-small;
     }
   }

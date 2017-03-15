@@ -7,7 +7,14 @@ $nav-height: 4rem;
 		border-bottom: 0;
     margin-bottom: 0;
     margin-top: 2rem;
-    max-width: 50rem;
+    &:after {
+      border-bottom: 3px solid black;
+      content: ' ';
+      left: 0;
+      position: absolute;
+      top: 2rem;
+      width: 100%;
+    }
 	}
 	&__link {
     display: block;
@@ -38,15 +45,8 @@ $nav-height: 4rem;
     max-width: none;
     padding: 0;
     position: relative;
-    &:after {
-    	@include media-query($width-small) {
-	    	border-bottom: 3px solid black;
-	    	content: ' ';
-	    	left: 0;
-	    	position: absolute;
-	    	top: 2rem;
-	    	width: 100%;
-    	}
+    @include media-query($width-small) {
+      max-width: 50rem;
     }
 	}
   &__item {
