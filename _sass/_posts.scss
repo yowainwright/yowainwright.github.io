@@ -1,47 +1,40 @@
 .post--posts {
-  border-top: 1px solid $color-grey-lightest;
-  margin: 0 auto $spacing-unit-medium;
-  @include media-query($width-small) {
-    max-width: $width-default;
+  margin: 4rem auto;
+  p {
+    margin-bottom: 2.5rem;
+    &:first-line {
+      font-weight: 500;
+    }
+    @include media-query($width-small) {
+      max-width: $width-default;
+    }
+  }
+  hr {
+    @include media-query($width-small) {
+      margin-top: 3rem;
+    }
   }
   &:first-of-type {
-    border-top: none;
-    .post__header {
-      margin-top: 1rem;
-      @include media-query($width-small) {
-        margin-top: 4.5rem;
-      }
-    }
-    .post__title {
-      margin-top: 0;
+    @include media-query($width-small) {
+      margin-top: 8rem;
     }
   }
   &:last-of-type {
-    margin-bottom: 0;
-  }
-  .post__header {
-    margin-bottom: 1.5rem;
-  }
-  .post__content {
-    border-bottom: 1px solid $color-grey-lightest;
-    margin: 0 auto;
-    @include media-query($width-small) {
-      max-width: $width-reader;
-    }
-     &:last-of-type {
-      border-bottom: 0;
+    margin-bottom: 8rem;
+    hr {
+      display: none;
     }
   }
-  .post__meta,
-  .post__title {
-    max-width: none;
+  img + hr {
+    margin-top: 4rem;
   }
-  .post__title {
-    font-size: 1.5rem;
-    margin-bottom: 0;
-    @include media-query($width-small) {
-      font-size: 2.25rem;
-      margin-bottom: $spacing-unit-small;
-    }
+}
+.post__title--posts {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  @include media-query($width-small) {
+    font-size: 3rem;
+    max-width: 50rem;
+    margin-bottom: $spacing-unit-small;
   }
 }

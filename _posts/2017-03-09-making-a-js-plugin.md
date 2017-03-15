@@ -46,7 +46,7 @@ if (typeof window !== 'undefined') {
 
 A really cool thing about writing code this way is that all of the code be tree shaken if unneeded. As JavaScript Services like Webpack and Rollup become more advanced Plugins can be more modifiable to serve the user of the plugin.
 
-## The Functionality Is What Matters 📈
+## Functionality Is What Matters 📈
 
 A plugin's users should be able to understand its code but trust that it works. Featurization should not extend far beyond the problem that the plugin solves. 
 
@@ -54,14 +54,14 @@ To understand this concept, I think of [carousels](http://shouldiuseacarousel.co
 
 So, when making or looking for plugins, I suggest trying to support a simple function and making that function's options support usability of that function rather then features that may not be needed. If you like to offer featuring options, it should be important to make sure that unnused features can be removed or unincluded by treeshaking or in a build step of the plugin.
 
-## Plugins Should Be Very Usable 🛠
+## Plugins Should Be Usable 🛠
 
 Users of a JavaScript plugin should be able to require it, wrap it and treeshake it to make it truly only do what it is supposed to do! When making plugins, focus should on the extension of it wrather then its options. 
 
 When providing options, I often use options as a way to remove any trace of the plugin itself. From there, I may try to provide ways to make the plugin extendable. If the extension of an extendable bit of code reaches too far—it makes sense to write another plugin. This helps with the plugin's simplicity and functionality. 
 
 
-## Why make these small plugins? 
+## Why make small plugins? 
 I've been making small plugins to support larger JavaScript projects or for simple use. I look for opportunities to minimize my code by seeing if I can simplify what's out there or if I find a great jQuery plugin and simplify it with ES6. 
 
 ## In Conclusion, Make Plugins! 🚀

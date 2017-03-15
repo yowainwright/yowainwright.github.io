@@ -15,7 +15,7 @@ redirect_from:
 
 It is easy to reach agreement that we should write good commit messages. It equally as easy to reach agreement that most commit messages are not good. In this post, I will discuss a formula (AWW) for writing basic meaningful commit messages.
 
-## Basic meaningful commit messages usually have 3 things
+## 3 Things Meaningful Commit Messages Should Have
 
 -  **action**: this word is a verb that describes what the commit does
 -  **what**: word(s) that describe what the _action_ is relative to

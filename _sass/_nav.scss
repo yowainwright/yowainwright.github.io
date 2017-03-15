@@ -19,14 +19,13 @@ $nav-height: 4rem;
 	&__link {
     display: block;
 		height: $nav-height;
-    font: .65rem/1 $font-family-nav;
-    font-weight: bold;
+    font-size: .85rem;
+    font-weight: 500;
     letter-spacing: .1rem;
-		line-height: $nav-height !important;
+		line-height: $nav-height;
 		text-align: center;
     text-transform: uppercase;
     @include media-query($width-small) {
-      font-size: .85rem;
       line-height: 4.25rem !important;
     }
 		&--logo {
@@ -45,9 +44,6 @@ $nav-height: 4rem;
     max-width: none;
     padding: 0;
     position: relative;
-    @include media-query($width-small) {
-      max-width: 50rem;
-    }
 	}
   &__item {
   	background-color: white;

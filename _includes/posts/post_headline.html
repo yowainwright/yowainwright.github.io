@@ -1,8 +1,7 @@
 <article class="post post--posts post--headline">
-  <header class="post__header">
-    <h2 class="post__title"><a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-    <div class="post__meta">
-      <time class="post__date">{{ post.date | date: "%b %-d, %Y" }}</time>
-    </div>
+  <header>
+    <h2 class="post__title--posts"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <time>{{ post.date | date: "%b %-d, %Y" }}</time>
   </header>
+  <hr>
 </article>

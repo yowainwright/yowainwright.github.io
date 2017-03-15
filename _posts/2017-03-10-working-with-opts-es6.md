@@ -1,5 +1,5 @@
 ---
-title: Using ES6 Functio Destructuring with JavaScript Plugin Options 
+title: Using ES6 Function Destructuring with JavaScript Plugin Options 
 date: 2017-03-12 00:00:00 Z
 permalink: "/destructing-function-opts/"
 categories:
@@ -50,7 +50,7 @@ The _log_ will now looking something like:
   Object: attr: "data-attr", document: Window, element: html
 {% endhighlight %}
 
-## How Options Are Defined Is Confusing
+## Defined Options Is Confusing
 
 The `options` code above is confusing! I mean, what the heck is going on here?
 {% highlight javaScript %}
@@ -59,7 +59,7 @@ The `options` code above is confusing! I mean, what the heck is going on here?
 
 This code needs an `el` property. It says, define the `el` property from `opts` (passed in from a function) or get the default `el` value. That's a lot of work to make sure that a property has a value.
 
-## How Option Readability Can Be Improved With ES6
+## Option Readability Can Be Improved With ES6
 
 ES6, with function destructuring allows us to make options code more readable.
 

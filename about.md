@@ -1,21 +1,20 @@
 ---
-title: About me, Jeffry
+title: About me
 permalink: "/about/"
 layout: post
 meta: Jeffry Wainwright is a software engineer who enjoys open source, being outside
   and trying to live life with purpose
 page: about
 note: about
-description: "As a software engineer, I strive to write awesome code \U0001F680—enterprise
-  and <a href=\"//www.npmjs.com/package/shave\">open source</a>. I also deeply enjoy
-  being outside. Trying to live life with purpose is important to me. \U0001F64F"
 redirect_from:
 - cv/
 ---
 
-Writing software and progressing software is a lifestyle for me. I'm very active in the software engineering community online and in person. Unrelated to software, I [ride road bikes](//www.strava.com/athletes/722335), run and commute as much as possible via skateboard. Lately, my outdoor passion has been surfing which has allowed me to experience the world in a whole new way—hundreds of feet from land! 🏄 
+My name is Jeffry Wainwright. I'm a software developer who enjoys living an active lifestyle in Playa Vista, California. Writing software and progressing software is a lifestyle for me. I'm very active in the software engineering community online and in person. 
 
-You can connect with me on [LinkedIn](https://www.linkedin.com/in/jeffrywainwright) if you'd prefer to be less personal.
+Unrelated to software, I [ride road bikes](//www.strava.com/athletes/722335), run and commute as much as possible via skateboard. Lately, my outdoor passion has been surfing which has allowed me to experience the world in a whole new way—hundreds of feet from land! 🏄 
+
+Connect with me on [LinkedIn](https://www.linkedin.com/in/jeffrywainwright) if you'd prefer.
 
 ## Open Source Projects
 

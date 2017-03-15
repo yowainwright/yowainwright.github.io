@@ -1,8 +1,8 @@
 $conversion-number: 16;
 // fonts
-$font-family-nav: Helvetica, Arial, sans-serif;
-$font-family-headline: Helvetica, Arial, sans-serif;
-$font-family-default:  Roboto, Helvetica, Arial, sans-serif;
+$font-family-default:  'Oswald', sans-serif;
+$font-family-nav: $font-family-default;
+$font-family-headline: $font-family-default;
 
 // line height
 $line-height-default: 1.5;
@@ -38,7 +38,7 @@ $color-yellow: #ffff80;
 $color-yellow-light: #ffffcc;
 $color-green-light: #ccffcc;
 
-$text-color: black;
+// $text-color: black;
 $background-color-default: $color-grey-lightest;
 $border-color-default: $color-grey-lighter;
 $border-color-dark: $color-grey-dark;

@@ -4,47 +4,24 @@
     overflow: hidden;
   }
   &__nav {
+    margin: 0 auto;
+    padding: $spacing-unit 0;
+    text-align: center;
+    &:before {
+      content: 'Share this';
+      display: block;
+      font-family: $font-family-headline;
+      font-size: 1.5rem;
+      padding-bottom: .5rem;
+    }
   }
   &__link {
     display: inline-block;
-    height: 1.5rem;
+    height: 3rem;
     position: relative;
-    width: 1.5rem;
-    @include media-query($width-small) {
-      margin-left: $spacing-unit;
-    }
+    width: 3rem;
   }
   svg {
     fill: $text-color;
-  }
-}
-
-// trumps
-.share {
-  &--inline {
-    bottom: .5rem;
-    float: right;
-    position: relative;
-    .share__nav {
-      display: flex;
-    }
-    .share__link {
-      margin-left: .5rem;
-    }
-  }
-  &--main {
-    .share__nav {
-      margin: 0 auto;
-      padding: $spacing-unit 0;
-      text-align: center;
-      &:before {
-        color: $color-grey;
-        content: 'Share this';
-        display: block;
-        font-family: $font-family-headline;
-        font-size: $font-size-small;
-        padding-bottom: .5rem;
-      }
-    }
   }
 }

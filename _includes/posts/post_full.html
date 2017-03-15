@@ -1,14 +1,11 @@
 <article class="post post--posts{% if post.show_image %} post--shows-image{% endif %}">
 	<header class="post__header">
-    <h2 class="post__title"><a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-    <div class="post__meta">
-      <time class="post__date">{{ post.date | date: "%b %-d, %Y" }}</time>
-    </div>
+    <h2 class="post__title--posts"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <time>{{ post.date | date: "%b %-d, %Y" }}</time>
   </header>
-  <div class="post__content--posts">
-    <p class="post__description">{{ post.excerpt | strip_html | truncatewords: 40 }}<a class="post__link post__link--read-more" href="{{ post.url | prepend: site.baseurl }}">Read More&hellip;</a></p>
-    {% if post.show_image %}
-      {% include post/figure.html %}
-    {% endif %}
-  </div>
+  {% if post.show_image %}
+    {% include post/figure.html %}
+  {% endif %}
+  <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.excerpt | strip_html | truncatewords: 40 }}</a></p>
+  <hr>
 </article>

@@ -22,7 +22,7 @@ My initial take on Atom was that beautiful—more beautiful out-of-the-box than 
 
 Beyond that, I found Atom to be slow and a memory hog. I've heard the debate that Sublime can become slow when a lot of plugins are added but I've never seen or felt that. 
 
-## Realizing that I am more productive with Sublime
+## I am more productive with Sublime
 
 After a few months of feeling like I wasn't as productive with Atom, I decided to switch back to Sublime. I started re-learning my quick keys and then looking into some of the features that I liked about Atom—to see if I could add them with a plugin in Sublime.
 
@@ -36,18 +36,18 @@ I love Atom's out of the box beauty. I've found that it only takes a few minutes
 
 3. A sweet font: watching [Wes Bos's](http://wesbos.com/) videos caused me to wonder about that awesome font he uses ([Operator](https://www.typography.com/blog/introducing-operator)) as an editor font. I don't have the $270 for Operator on my home and work computer so I went with a another recommendation from [him](http://wesbos.com/programming-fonts/) called [m-2m](http://www.fontspace.com/m-fonts/m-2m).
 
-## How I added things I liked from Atom to Sublime
+## Adding things I liked from Atom to Sublime
 
-1. For adding file icons, and an awesome them I went to the sublime package manager and downloaded them. I recommend the [material theme](https://github.com/equinusocio/material-theme) b/c I it transitions between regular and italic fonts and has a nice sweet of supporting features—linke icons for files.
-  - Sublime Text > Preferences > Package Control
+-  For adding file icons, and an awesome them I went to the sublime package manager and downloaded them. I recommend the [material theme](https://github.com/equinusocio/material-theme) b/c I it transitions between regular and italic fonts and has a nice sweet of supporting features—linke icons for files.
+- Sublime Text > Preferences > Package Control
 
-2. For adding a new app icons, I went [here](https://github.com/YabataDesign/sublime-text-icon) and followed the steps
+-  For adding a new app icons, I went [here](https://github.com/YabataDesign/sublime-text-icon) and followed the steps
   -  click download
   -  open /Applications/Sublime\ Text.app/Contents/Resources/
   -  replace Sublime Text.icns
   -  right click on the Sublime Text App > select 'get info'
   -  drag the downloaded 'Sublime Text.icns' over the deafult icon in the top left corner
-3. For changing the font, first I downloaded a font, [m-2m](http://www.fontspace.com/m-fonts/m-2m). Then I updated my Sublime Settings.
+-  For changing the font, first I downloaded a font, [m-2m](http://www.fontspace.com/m-fonts/m-2m). Then I updated my Sublime Settings.
   -  download and install the font
   -  Sublime Text (nav) > Preferences > Settings 
 
