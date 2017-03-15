@@ -7,7 +7,8 @@ categories:
 - code
 - javascript
 layout: post
-meta: This post explains how to use ES6 function destructuring for more readable JavaScript Plugin Options. 
+meta: This post explains how to use ES6 function destructuring for more readable JavaScript
+  Plugin Options.
 share_image: https://yowainwright.imgix.net/icons/js.jpg
 ---
 
