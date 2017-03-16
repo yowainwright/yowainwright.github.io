@@ -1,5 +1,5 @@
 ---
-title: Using ES6 Function Destructuring with JavaScript Plugin Options 
+title: Using ES6 Function Destructuring with JavaScript Plugin Options
 date: 2017-03-12 00:00:00 Z
 permalink: "/destructing-function-opts/"
 categories:
