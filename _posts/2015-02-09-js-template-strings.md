@@ -13,6 +13,7 @@ share_image: "/assets/icons/js.jpg"
 ---
 
 Writing Strings and String Template in ES6 are so much cleaner that writing strings before and very powerful. Where some ES6 featuring can get ugly at build time, I've found that ES6 strings are very powerful. 
+{: .first-paragraph}
 
 Strings with dynamic data used to be structured something like this:
 {% highlight javaScript %}

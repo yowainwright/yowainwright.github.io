@@ -14,6 +14,7 @@ redirect_from:
 ---
 
 JavaScript [Objects](//developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects) are used to store information called properties with values AND code blocks that do stuff (functions) which are called methods.
+{: .first-paragraph}
 
 In this post I'm going to explore JavaScript Objects from a simple object to a bit more complex object which can be called a [class](//developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript) (although JavaScript didn't officially have classes until [ECMA6](//developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes))
 

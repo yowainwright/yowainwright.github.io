@@ -12,6 +12,7 @@ share_image: "/assets/icons/js.jpg"
 ---
 
 I've made a few small JavaScript Open Source plugins—[reframe.js](https://dollarshaveclub.github.io/reframe.js/), [shave](https://dollarshaveclub.github.io/shave/) and, recently [scrolldir](https://github.com/dollarshaveclub/scrolldir)(built off of [Patrick Fisher's](https://github.com/pwfisher) [scroll-intent](https://github.com/pwfisher/scroll-intent.js)). While making them, I've had a few _a-ha_ moments. 
+{: .first-paragraph}
 
 ## A-ha Moments 💭
 **Plugins should be simple.** Their functionality should be all that matters. Making them as usuable as possible is key. 

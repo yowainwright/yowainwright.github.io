@@ -12,6 +12,7 @@ meta: Email share links are often disregarded as simple but there are a few chal
 ---
 
 After an Apple Phone IOS update, there was an issue with email links on several content websites when customers would click the **email share link**. When clicking on the email share, customers were being shown an alert box. 
+{: .first-paragraph}
 
 On desktop devices, there was no issue. 
 

@@ -14,6 +14,7 @@ share_image: "/assets/icons/js.jpg"
 ---
 
 Note post: this short post about Arrow Functions after watching [ES6 For Everyone](https://es6.io/)(EFE——for this post) by [Wes Bos](http://wesbos.com/)! Arrow functions are simplier way to write functions in [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). This post contains a few things that I wasn't completely clear on about Arrow Functions that EFE really clarified for me.
+{: .first-paragraph}
 
 ## Arrow Function Illuminations:
 

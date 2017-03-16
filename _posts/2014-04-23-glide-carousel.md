@@ -11,6 +11,7 @@ featured_image: "/assets/city-country.png"
 ---
 
 This carousel was originally done for a bootstrap project. I quickly implemented it using [Glide JS](http://jedrzejchalubek.com/glide/) which fits in nicely with [Semantic UI](http://semantic-ui.com/) (the framework I use on this site). This post describes my implementation.
+{: .first-paragraph}
 
 Many people don't like carousels and I _somewhat_ agree. Image carousels like the on above can be somewhat intruding to the content and are very often un-touched or swiped through by users. However, with a mobile first User Interface a carousel can be designed to act more as a swipe and can introduce an interesting way to present content.
 

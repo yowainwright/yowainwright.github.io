@@ -14,6 +14,7 @@ redirect_from:
 ---
 
 Javascript **scope** is an essential for keeping & accessing information where we want it & using it when we want to.
+{: .first-paragraph}
 
 ## Discussing JS Scope through the mall example
 

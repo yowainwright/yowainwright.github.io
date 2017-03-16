@@ -13,6 +13,7 @@ share_image: https://yowainwright.imgix.net/icons/js.jpg
 ---
 
 The majority of people on the Frontend Team in my current use [Atom](https://atom.io/) as a text editor. To more closely mimic my team, I decided to make the switch from Sublime 3 (another text editor) to Atom.
+{: .first-paragraph}
 
 ## Initial Feelings
 

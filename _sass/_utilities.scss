@@ -1,15 +1,4 @@
-.image-circle {
-	img {
-		border-radius: 100%;
-		overflow: hidden;
-	}
-}
-.title {
-	font-size: $font-size-large;
-}
-.subtitle {
-	font-size: $font-size-medium;
-}
-.meta {
-	font-size: $font-size-small;
+.text {
+  &--hidden {
+  }
 }

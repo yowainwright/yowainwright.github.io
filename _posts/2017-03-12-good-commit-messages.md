@@ -14,6 +14,7 @@ redirect_from:
 ---
 
 It is easy to reach agreement that we should write good commit messages. It equally as easy to reach agreement that most commit messages are not good. In this post, I will discuss a formula (AWW) for writing basic meaningful commit messages.
+{: .first-paragraph}
 
 ## 3 Things Meaningful Commit Messages Should Have
 

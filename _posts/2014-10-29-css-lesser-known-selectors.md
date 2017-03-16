@@ -14,6 +14,7 @@ redirect_from:
 ---
 
 Having written CSS & SASS for years & using [BEM](//csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) it's a rarity that I find the need to use some of the selectors I'll list below but, every once in a while a situation comes up where I'm so thankful that they're there.
+{: .first-paragraph}
 
 **Here are some attribute examples**
 

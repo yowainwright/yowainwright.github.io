@@ -14,6 +14,7 @@ share_image: "/assets/reframing-content/aspect-ratio.jpg"
 ---
 
 The most meaningful part of the webpage, the content, can be a largely unknown thing. Authors create content in one place & expect it to render well in another. Embedded content adds another level of complexity to this process.
+{: .first-paragraph}
 
 Embedded content, like videos, images, podcasts & tweets often do not translate well to a fluid webpage - so we need to reframe them. This is what [Reframe.js](https://dollarshaveclub.github.io/reframe.js/) does. It wraps embedded content in an [intrinsic ratio](http://alistapart.com/article/creating-intrinsic-ratios-for-video) of the original embed but with fluid sizing so that the embedded content looks great at any size.
 

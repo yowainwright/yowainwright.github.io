@@ -3,24 +3,36 @@ layout: default
 ---
 
 <main class="page page--post{% if page.note %} post--{{page.note}}{% endif %}" itemscope itemtype="http://schema.org/NewsArticle">
-  <article class="{% if type.page %}page{% else %}post{% endif %}" itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://google.com/article">
+  <article class="article{% if type.page %}page{% else %}post{% endif %}" itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://google.com/article">
     <header>
       <h1 itemprop="headline">{{ page.title }}</h1>
-      {{ page.description }}
       {% if page.date %}
       <time itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
       {% endif %}
     </header>
-    <div class="post__content">
-    {{ content }}
-    </div>
-    <div class="share">
-      {% include post/share.html %}
+    <div class="wrapper">
+     {% comment %}
+      <aside class="aside aside--reference">
+        <div class="meta">
+          {{ page.meta }}
+        </div>
+        {% include post/share.html %}
+      </div>
+    {% endcomment %}
+      <div class="content">
+          {{ content }}
+        {% comment %}
+          <footer class="post__footer">
+              {% include post/tags.html %}
+              {% include post/respond.html %}
+              {% include post/share.html %}
+          </footer>
+        {% endcomment %}
+      </section>
+    {% comment %}
+      <aside class="aside aside--general">
+      </aside>
+    {% endcomment %}
     </div>
   </article>
-  {% comment %}
-  <!-- {% if page.type == blank %}
-  {% include post/disqus.html %}
-  {% endif %} -->
-  {% endcomment %}
 </main>

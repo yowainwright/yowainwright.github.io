@@ -15,6 +15,7 @@ redirect_from:
 ---
 
 [Glendora Mountain Road](http://www.differentspokes.com/index.cfm?action=showEvent&eventID=1888) or GMR is approximately a 20 mile ride where you’ll be challenged with climbs, turns & a strong desire to take a lot of pictures.
+{: .first-paragraph}
 
 Route: The route, found [all over strave](https://www.strava.com/segments/search?utf8=%E2%9C%93&keywords=gmr&gsf=1), starts in [Azusa, CA](http://www.ci.azusa.ca.us/) & ends in [Mount Baldy Village](https://en.wikipedia.org/wiki/Mount_Baldy,_California).
 

@@ -12,6 +12,7 @@ share_image: "/assets/icons/os.jpg"
 ---
 
 Recently, I upgraded to El Capitan. Suddenly my local websites using vagrant weren't working & I had to reinstall some of my ruby gems like jekyll, what I use for this blog.
+{: .first-paragraph}
 
 Below are a short list of things that helped me get back up & running again. Hope it helps you too.
 

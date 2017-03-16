@@ -14,6 +14,7 @@ redirect_from:
 ---
 
 Creating private information, meaning variables, properties/property values, function, methods in JavaScript is an important concept for storing information that can't be overwritten.
+{: .first-paragraph}
 
 ## What does _private_ mean?
 

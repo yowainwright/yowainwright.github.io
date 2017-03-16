@@ -12,6 +12,7 @@ share_image: "/assets/icons/js.jpg"
 ---
 
 Today, I was assigned the task of printing logs to the page instead of to the `console` if there was a certain string appended to the url so that the our Q/A engineer could get that data into his program.
+{: .first-paragraph}
 
 My task was manageable, but before committing my pull request my boss & I went over the debug program (called `debug.js`). The process of describing what's happening in a program I find highly beneficial. As I was talking through the program I noticed the `[argument](//developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)` key word.
 

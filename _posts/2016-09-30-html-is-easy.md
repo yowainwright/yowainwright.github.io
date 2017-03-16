@@ -13,6 +13,7 @@ share_image: "/assets/icons/os.jpg"
 ---
 
 This post is a _rant_ attempting to express what seems to be a growing issue: lack of deep thought behind writing HTML for webpages—that will go to production! 🤓 Yes, more time is spent writing that animation, that slider, that app like experience than prioritizing what would probably ensure that customers come to webpages and have a better experience: semantic valid html. 
+{: .first-paragraph}
 
 ## Write HTML like a Bulldozer&nbsp;🚜
 

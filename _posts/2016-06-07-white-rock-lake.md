@@ -13,6 +13,7 @@ featured_image: https://yowainwright.imgix.net/white-rock-lake/brett-riding-sq.j
 ---
 
 Riding bikes around [White Rock Lake](https://en.wikipedia.org/wiki/White_Rock_Lake) when I went to Dallas was very special to me. I felt the humid Texas air against my skin. I listened to the sounds of wildlife turn up as the sun went down. The light as it creeped below the horizon of the lake peeked rays through the soft tree landscape. It reminded me of my childhood.
+{: .first-paragraph}
 
 I was surprised by how many families were there, at the lake & how alive the park seemed. When I was done with my ride, my friend pointed out a firefly & said, "it's been so long since I've seen 1 of those". "Me too", I said.
 

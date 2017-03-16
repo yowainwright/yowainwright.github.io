@@ -14,6 +14,7 @@ redirect_from:
 ---
 
 Getting started with [Punch](//laktek.github.io/punch/) is very easy. After adding the [npm plugin](//www.npmjs.com/package/punch), setting up the initial static site takes a few minutes. The CLI commands are super straight forward & the site re-builds super fast.
+{: .first-paragraph}
 
 ## Setup
 
