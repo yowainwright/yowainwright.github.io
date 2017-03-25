@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Oswald:500');
 html,
 body {
   margin: 0;
@@ -17,6 +18,7 @@ h5,
 h6,
 b,
 strong {
+  font-family: $font-family-headline;
   font-weight: 500;
 }
 h2,
@@ -43,13 +45,14 @@ h1 {
   text-align: center;
   @include media-query($width-small) {
     font-size: 5rem;
-    max-width: 70rem;
+    max-width: 60rem;
   }
 }
 p,
 li {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 300;
+  line-height: 2.5;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
@@ -68,6 +71,8 @@ li {
 li,
 li p {
   line-height: 1.5;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 a {
   color: black;
@@ -114,7 +119,10 @@ iframe {
 }
 time {
   display: block;
-  font-size: 1rem;
+  font-family: sans-serif;
+  font-size: .8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
   margin: 1rem 0;
   position: relative;
   text-align: center;
@@ -180,7 +188,7 @@ hr {
   border: 0;
   border-top: 1px solid lightgray;
   @include media-query($width-small) {
-    max-width: 50rem;
+    max-width: 45rem;
   }
 }
 iframe,
@@ -189,7 +197,7 @@ pre,
 blockquote,
 table {
   @include media-query($width-small) {
-    max-width: 50rem;
+    max-width: 45rem;
   }
 }
 pre,
@@ -235,16 +243,16 @@ main {
   }
 }
 time,
-.page--archive h1,
-.post--about h1,
-.post__content h2,
-.post__content h3 {
+.content h2,
+.content h3 {
   &:after,
   &:before {
     color: lightgray;
     content: '———';
     display: inline-block;
+    font-family: $font-family-headline;
     font-size: 1rem;
+    letter-spacing: 0;
   }
   &:after {
     padding-left: 1rem;

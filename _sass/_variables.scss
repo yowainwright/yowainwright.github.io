@@ -1,8 +1,8 @@
 $conversion-number: 16;
 // fonts
-$font-family-default:  'Oswald', sans-serif;
-$font-family-nav: $font-family-default;
-$font-family-headline: $font-family-default;
+$font-family-default:  'Bitter', serif;;
+$font-family-nav: 'Oswald', sans-serif;
+$font-family-headline: 'Oswald', sans-serif;
 
 // line height
 $line-height-default: 1.5;
@@ -52,8 +52,8 @@ $spacing-unit-large: $spacing-unit * 2;
 $spacing-unit-largest: $spacing-unit * 4;
 
 // Media Queries (px, maybe this sux but px is way faster for me with media queries)
-$width-default: $spacing-unit * 600 / 16 !default;
-$width-reader: $spacing-unit * 600 / 16 !default;
+$width-default: $spacing-unit * 550 / 16 !default;
+$width-reader: $width-default;
 // breakpoints
 $width-large: $screen-lg;
 $width-medium: $screen-md;

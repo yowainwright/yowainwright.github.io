@@ -24,6 +24,7 @@ instagram_username: yowainwright
 codepen_username: yowainwright
 tumblr_account: https://ratherbe.in
 markdown: kramdown
+highlighter: none
 kramdown:
   auto_ids: false
 sass:

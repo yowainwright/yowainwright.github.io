@@ -19,6 +19,7 @@ $nav-height: 4rem;
 	&__link {
     display: block;
 		height: $nav-height;
+    font-family: $font-family-nav;
     font-size: .85rem;
     font-weight: 500;
     letter-spacing: .1rem;
@@ -30,12 +31,7 @@ $nav-height: 4rem;
     }
 		&--logo {
       background-color: $color-yellow-light;
-			border: 5px solid black;
-			opacity: 1;
-			overflow: hidden;
-			padding: $spacing-unit / 2;
-			width: $nav-height;
-			border-radius: 100%;
+      padding: 0 1rem;
 		}
 	}
 	&__items {

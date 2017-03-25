@@ -1,13 +1,14 @@
 .site-footer {
+  margin: 2rem 0;
   text-align: center;
-  color: white;
   &__content {
-    background-color: black;
+    border: 1px solid black;
     display: inline-block;
+    font-family: $font-family-headline;
     padding: 1rem;
+    text-transform: uppercase;
   }
   &__link {
-    color: white;
     text-decoration: none;
   }
   &__date {
