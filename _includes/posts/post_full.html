@@ -1,6 +1,6 @@
 <article class="post post--posts{% if post.show_image %} post--shows-image{% endif %}">
 	<header class="post__header">
-    <h2 class="post__title--posts"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <h2 class="post__title--full"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
     <time>{{ post.date | date: "%b %-d, %Y" }}</time>
   </header>
   {% if post.show_image %}

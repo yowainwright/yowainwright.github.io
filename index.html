@@ -6,7 +6,7 @@ pagination:
   enabled: true
 ---
 
-<section class="posts posts--column">
+<section class="posts posts--column posts--{{ page.page }}">
   <div class="posts__container">
     {% for post in site.posts limit: 6 %}
       {% include posts/post_full.html %}

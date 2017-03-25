@@ -9,8 +9,15 @@ layout: page
     <p class="header__description">{{page.description}}</p>
   </header>
   <div class="posts__container">
-    {% for post in site.categories[page.title] %}
-      {% include posts/post_full.html %}
-    {% endfor %}
+   {% for post in site.categories[page.title] %}
+    {% capture result %}{{ forloop.index0 | modulo: 3 }}{% endcapture %}
+    {% if forloop.first == true or result == '0' %}
+    <div class="row">
+    {% endif %}
+    {% include posts/post_headline.html %}
+    {% if forloop.last == true or result == '2' %}
+    </div>
+    {% endif %}
+  {% endfor %}
   </div>
 </section>
