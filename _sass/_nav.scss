@@ -51,6 +51,12 @@ $nav-height: 4rem;
   	@include media-query($width-small) {
   		padding: 0 1rem;
   	}
+    &--github {
+      display: none;
+      @include media-query($width-small) {
+        display: list-item;
+      }
+    }
   }
 }
 [name=site-logo] {

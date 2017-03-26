@@ -216,7 +216,6 @@ pre {
 }
 code {
   padding: $spacing-unit * .3 / $conversion-number;
-  font-size: 1.25rem;
   pre & {
     border: 0;
     border-radius: 0;
@@ -229,9 +228,6 @@ ol {
 }
 main {
   padding: 0 0 $spacing-unit;
-  @include media-query($width-small) {
-    padding: 0 0 $spacing-unit-largest;
-  }
 }
 // trumps : general
 .page--about {
@@ -248,17 +244,15 @@ time,
   &:after,
   &:before {
     color: lightgray;
-    content: '———';
+    content: '—';
     display: inline-block;
-    font-family: $font-family-headline;
     font-size: 1rem;
-    letter-spacing: 0;
   }
   &:after {
-    padding-left: 1rem;
+    padding-left: .25rem;
   }
   &:before {
-    padding-right: 1rem;
+    padding-right: .25rem;
   }
 }
 .page h1 {
@@ -270,5 +264,18 @@ time,
   margin-bottom: 2rem;
   @include media-query($width-small) {
     margin-bottom: 4.5rem;
+  }
+}
+.header__title {
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+.header__description {
+  border-bottom: 1px solid lightgray;
+  padding: 1.5rem 0;
+  @include media-query($width-small) {
+    border-bottom: 0;
+    padding-bottom: 0;
   }
 }

@@ -1,5 +1,10 @@
-.post--posts {
+.post--full {
   margin: 4rem auto;
+  &:first-of-type {
+    @include media-query($width-small) {
+      margin-top: 8rem;
+    }
+  }
   p {
     margin-bottom: 2.5rem;
     &:first-line {
@@ -15,36 +20,50 @@
     }
   }
   &:last-of-type {
-    margin-bottom: 8rem;
-    hr {
-      display: none;
-    }
+    margin-bottom: 0;
   }
   img + hr {
     margin-top: 4rem;
   }
 }
-.posts--home {
-  .post--posts {
-    &:first-of-type {
-      @include media-query($width-small) {
-        margin-top: 8rem;
-      }
+.post--headline {
+  @include media-query($width-small) {
+    height: 12rem;
+    margin: 1rem;
+    position: relative;
+    width: calc(33.3% - 2rem);
+  }
+  header {
+    @include media-query($width-small) {
+      margin-top: 0;
+      @include vertical-align(absolute);
+    }
+  }
+  hr {
+    @include media-query($width-small) {
+      display: none;
+    }
+  }
+  time {
+    @include media-query($width-small) {
+      margin-bottom: 0;
     }
   }
 }
-.post__title--full,
-.post__title--headline {
-  font-size: 1.5rem;
-  margin-bottom: 0;
-}
 .post__title {
+  &--full,
+  &--headline {
+    margin-bottom: 0;
+  }
   &--full {
+    font-size: 1.5rem;
     @include media-query($width-small) {
-      font-size: 3rem;
-      max-width: 45rem;
       margin-bottom: $spacing-unit-small;
     }
+  }
+  &--headline {
+    font-family: $font-family-default;
+    font-size: 1rem;
   }
 }
 .row {
@@ -62,25 +81,6 @@
   &:last-of-type {
     @include media-query($width-small) {
       border-bottom: 1px solid lightgray;
-    }
-  }
-  .post--headline {
-    @include media-query($width-small) {
-      height: 15rem;
-      margin: 1rem;
-      position: relative;
-      width: calc(33.3% - 2rem);
-    }
-    header {
-      @include media-query($width-small) {
-        margin-top: 0;
-        @include vertical-align(absolute);
-      }
-    }
-    hr {
-      @include media-query($width-small) {
-        display: none;
-      }
     }
   }
 }

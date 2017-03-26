@@ -1,20 +1,33 @@
 ---
-title: About me
+title: About Jeffry.in
 permalink: "/about/"
 layout: post
-meta: Jeffry Wainwright is a software engineer who enjoys open source, being outside
-  and trying to live life with purpose
+meta: Jeffry.in is the blog of Jeffry Wainwright, a software engineer who enjoys open source, being outside, and trying to live life with purpose.
 page: about
 note: about
 redirect_from:
 - cv/
 ---
+<hr>
 
-My name is Jeffry Wainwright. I'm a software developer who enjoys living an active lifestyle in Playa Vista, California. Writing software and progressing software is a lifestyle for me. I'm very active in the software engineering community online and in person. 
+Jeffry.in is the blog of Jeffry Wainwright, a software engineer who enjoys open source, being outside, and trying to live life with purpose. 
+{: .first-paragraph}
 
-Unrelated to software, I [ride road bikes](//www.strava.com/athletes/722335), run and commute as much as possible via skateboard. Lately, my outdoor passion has been surfing which has allowed me to experience the world in a whole new way—hundreds of feet from land! 🏄 
+Unrelated to software, he [rides road bikes](//www.strava.com/athletes/722335), runs and commutes as much as possible via skateboard. His latest passion is surfing! 🏄 
 
-Connect with me on [LinkedIn](https://www.linkedin.com/in/jeffrywainwright) if you'd prefer.
+Everything on this site was written and built by him—except for some potential shared videos which will be cited.
+
+## Social Networks
+
+<p align="center">
+  <a href="https://github.com/yowainwright">Github</a>&nbsp;
+  <a href="https://instagram.com/yowainwright">Instagram</a>&nbsp;
+  <a href="https://twitter.com/yowainwright">Twitter</a>&nbsp;
+  <a href="https://ratherbe.in">Tumblr</a>&nbsp;
+  <a href="https://www.strava.com/athletes/722335">Strava</a>&nbsp;
+  <a href="https://www.linkedin.com/in/jeffrywainwright/">LinkedIn</a>&nbsp;
+  <a href="https://facebook.com/yowainwright">Facebook</a>
+</p>
 
 ## Open Source Projects
 

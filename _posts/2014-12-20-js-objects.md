@@ -5,7 +5,6 @@ permalink: "/js-objects/"
 categories:
 - code
 - javascript
-- objects
 layout: post
 meta: Understanding JavaScript Objects, from static objects to classes
 share_image: "/assets/icons/js.jpg"

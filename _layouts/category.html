@@ -4,12 +4,11 @@ layout: page
 
 <section class="posts posts--column">
   <header class="header--category">
-    <figure class="header__emoji">{{page.emoji}}</figure>
     <h1 class="header__title">{{page.title}}</h1>
     <p class="header__description">{{page.description}}</p>
   </header>
   <div class="posts__container">
-   {% for post in site.categories[page.title] %}
+   {% for post in site.categories[page.category] %}
     {% capture result %}{{ forloop.index0 | modulo: 3 }}{% endcapture %}
     {% if forloop.first == true or result == '0' %}
     <div class="row">

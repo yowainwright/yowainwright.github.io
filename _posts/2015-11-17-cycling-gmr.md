@@ -4,7 +4,6 @@ date: 2015-11-17 00:00:00 Z
 permalink: "/glendora-mountain-road/"
 categories:
 - travel
-- cycling
 layout: post
 meta: Glendora Mountain Road is a road cycling paradise
 featured_image: "/assets/gmr/gmr.jpg"

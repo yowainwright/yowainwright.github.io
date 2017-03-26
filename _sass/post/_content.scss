@@ -15,11 +15,8 @@
 .first-paragraph {
   border-bottom: 1px solid lightgray;
   padding: 1.5rem 0;
-  &:first-letter {
-    font-size: 3.75rem;
+  &:first-line {
     font-weight: bold;
-    line-height: 1;
-    margin-right: .5rem;
   }
 }
 .update {
