@@ -2,12 +2,14 @@
 title: About Jeffry.in
 permalink: "/about/"
 layout: post
-meta: Jeffry.in is the blog of Jeffry Wainwright, a software engineer who enjoys open source, being outside, and trying to live life with purpose.
+meta: Jeffry.in is the blog of Jeffry Wainwright, a software engineer who enjoys open
+  source, being outside, and trying to live life with purpose.
 page: about
 note: about
 redirect_from:
 - cv/
 ---
+
 <hr>
 
 Jeffry.in is the blog of Jeffry Wainwright, a software engineer who enjoys open source, being outside, and trying to live life with purpose. 
