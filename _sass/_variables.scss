@@ -1,72 +1,23 @@
-$conversion-number: 16;
 // fonts
-$font-family-default:  'Rokkitt', serif;;
+$font-family-default:  'Rokkitt', serif;
 $font-family-nav: 'Oswald', sans-serif;
 $font-family-headline: 'Oswald', sans-serif;
-
-// line height
-$line-height-default: 1.5;
-
-// weights
-$font-weight-normal: 500;
-$font-weight-semi-bold: 600;
-$font-weight-bold: 800;
-
-// font sizes
 $font-size-default: 1rem !default;
-$font-size-small: $font-size-default * .8;
-$font-size-medium: $font-size-default * 1.25;
-$font-size-large: $font-size-default * 2;
-$font-size-larger: $font-size-default * 2.5;
-$font-size-largest: $font-size-default * 3.5;
-
 // colors
-// greys
-$color-grey-dark: #292929;
 $color-grey: #828282;
 $color-grey-light: #aaa;
 $color-grey-lighter: #ccc;
 $color-grey-lightest: #f2f2f2;
-
-$color-blue-default: #2a7ae2;
-$color-biege: #fcf2d4;
-$color-orange-rust: #c25b1d;
-$color-red-light: #c94244;
-$color-blue-light: #deedfc;
-$color-pink-light: #f5d0e4;
-$color-yellow: #ffff80;
 $color-yellow-light: #ffffcc;
-$color-green-light: #ccffcc;
-
-// $text-color: black;
-$background-color-default: $color-grey-lightest;
-$border-color-default: $color-grey-lighter;
-$border-color-dark: $color-grey-dark;
-
+$conversion-number: 16;
 // spacing
 $spacing-unit: 1rem !default;
-$spacing-unit-small: $spacing-unit / 2;
-$spacing-unit-smallest: $spacing-unit / 4;
-$spacing-unit-medium: $spacing-unit * 1.5;
-$spacing-unit-large: $spacing-unit * 2;
-$spacing-unit-largest: $spacing-unit * 4;
-
-// Media Queries (px, maybe this sux but px is way faster for me with media queries)
-$width-default: $spacing-unit * 550 / 16 !default;
+$spacing-unit-small: .5rem !default;
+$spacing-unit-large: 2rem;
+// queries
+$width-default: 35rem !default;
 $width-reader: $width-default;
-// breakpoints
 $width-large: $screen-lg;
 $width-medium: $screen-md;
 $width-small: $screen-sm;
-$calc-max-width: calc(#{$width-default} - #{$spacing-unit} * 2);
-
-// branding
-$brand-unit: $spacing-unit * 20 / 16;
-$brand-unit-large: $spacing-unit * 30 / 16;
-$brand-unit-circle: $spacing-unit * 62 / 16;
-// nav
-$site-nav-height: $spacing-unit * 94 / 16;
-$site-nav-post-images: $spacing-unit * 52 / 16;
-
-// social svg
-$svg-unit: $spacing-unit * 42 / 16;
+$calc-max-width: calc(#{$width-default} - 2rem);

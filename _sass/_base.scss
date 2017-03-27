@@ -1,4 +1,6 @@
+// fonts
 @import url('https://fonts.googleapis.com/css?family=Rokkitt:300|Oswald:500');
+
 html,
 body {
   margin: 0;
@@ -6,9 +8,9 @@ body {
 }
 body {
   font-family: $font-family-default;
-  line-height: $line-height-default;
+  line-height: 1.5;
   color: black;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 h1,
 h2,
@@ -48,6 +50,17 @@ h1 {
     max-width: 60rem;
   }
 }
+h2,
+h3 {
+  .content & {
+    font-family: sans-serif;
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    margin: 3rem auto;
+    max-width: calc(100% - #{$spacing-unit-large});
+  }
+}
 p,
 li {
   font-size: 1.2rem;
@@ -82,7 +95,7 @@ a {
   }
 }
 blockquote {
-  border-left: 4px solid $color-grey-lighter;
+  border-left: 4px solid lightgray;
   max-width: calc(100% - #{$spacing-unit-large});
   padding: $spacing-unit-small $spacing-unit;
   @include media-query($width-small) {
@@ -202,7 +215,7 @@ table {
 }
 pre,
 code {
-  border: #{$spacing-unit * .2 / $conversion-number} solid $color-grey-lighter;
+  border: 1px solid lightgray;
   border-radius: $spacing-unit * 3 / 16;
   background-color: $color-grey-lightest;
 }

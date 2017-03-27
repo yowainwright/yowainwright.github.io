@@ -198,7 +198,7 @@ GEM
     thread_safe (0.3.6)
     typhoeus (0.8.0)
       ethon (>= 0.8.0)
-    tzinfo (1.2.2)
+    tzinfo (1.2.3)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
       execjs (>= 0.3.0)

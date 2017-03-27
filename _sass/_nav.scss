@@ -1,4 +1,7 @@
+$site-nav-height: $spacing-unit * 94 / 16;
+$site-nav-post-images: $spacing-unit * 52 / 16;
 $nav-height: 4rem;
+// nav
 .site-nav {
 	border-bottom: 2px solid black;
 	position: relative;
@@ -58,8 +61,4 @@ $nav-height: 4rem;
       }
     }
   }
-}
-[name=site-logo] {
-  fill: black;
-  opacity: 1;
 }
