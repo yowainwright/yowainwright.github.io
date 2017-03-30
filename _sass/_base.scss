@@ -60,7 +60,6 @@ h3 {
     font-weight: bold;
     letter-spacing: .2rem;
     margin: 3rem auto;
-    max-width: calc(100% - #{$spacing-unit-large});
   }
 }
 p,
@@ -146,7 +145,8 @@ pre,
 iframe,
 code,
 table,
-hr {
+hr,
+.content h2 {
   max-width: calc(100% - #{$spacing-unit-large});
   @include media-query($width-small) {
     max-width: $width-reader;
