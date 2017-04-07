@@ -16,12 +16,12 @@ share_image: https://yowainwright.imgix.net/icons/os.jpg
 Because tags oftem specify specific changes in code, sometimes updates need to be added to specific tags. This update can be made in a few simple steps.
 
 Establish tags
-{% highlight terminal %}
+{% highlight bash %}
 git tag
 {% endhighlight %}
 
 Delete tag
-{% highlight terminal %}
+{% highlight bash %}
 git push origin :refs/tags/[tag version]
 {% endhighlight %}
 
