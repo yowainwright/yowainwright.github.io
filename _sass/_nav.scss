@@ -54,7 +54,8 @@ $nav-height: 4rem;
   	@include media-query($width-small) {
   		padding: 0 1rem;
   	}
-    &--github {
+    &--github,
+    &--twitter {
       display: none;
       @include media-query($width-small) {
         display: list-item;
