@@ -35,6 +35,7 @@ Everything on this site was written and built by him—except for some potential
 
 **Core Contributor**
 
+-  [StickyBits](//github.com/dollarshaveclub/stickybits), Stickybits is a lightweight (<2KB) alternative to `position: sticky` polyfills
 -  [Scrolldir](//github.com/dollarshaveclub/scrolldir), y-axis scroll direction without jitter
 -  [Shave](//github.com/dollarshaveclub/shave), a minimal JavaScript Plugin for Truncated text
 -  [Reframe.js](//github.com/dollarshaveclub/reframe.js), a minimal JavaScript Plugin for reframing html elements so they're an intrisic ratio of the original—greate for embeds
@@ -47,13 +48,13 @@ Everything on this site was written and built by him—except for some potential
 ## Some work history 💼
 
 **Dollar Shave Club**<br/>
-Front End Engineer<br/>
+Engineer<br/>
 Los Angeles, CA \| March 2016 - current
 
--  Building a content platform, [shipped](https://content.dollarshaveclub.com/) September of 2016 🚀
--  Maintain [DSC Engineering Blog](http://engineering.dollarshaveclub.com/)
--  Maintain Open Source Products such as [reframe.js](https://dollarshaveclub.github.io/reframe.js/) and [shave](https://dollarshaveclub.github.io/shave/)
--  Build content applications in various langs, details to come (updated 12/10/16)
+-  Engineer Analytics Platform
+-  Built a content platform, [shipped](https://content.dollarshaveclub.com/) September of 2016 🚀
+-  Maintain Open Source Products (see above)
+-  Build content applications in various languages
 
 
 **[Billboard](http://www.billboard.com/) & [The Hollywood Reporter](http://www.hollywoodreporter.com/)**<br/>
@@ -133,5 +134,5 @@ Rockville, MD \| Jan 2011-Jan 2012
 
 -  **HTML**: Jade, Twig, Liquid, Jinja, Mustache, Handlebars
 -  **CSS**: SASS, PostCss
--  **JS**: jQuery, Backbone, Underscore, Grunt, Gulp, Webpack, Underscore, LoDash, Rollup, Node
+-  **JS**: jQuery, Backbone, Underscore, Ember, Grunt, Gulp, Webpack, LoDash, Rollup, Node
 -  **Frameworks**: Bootstrap, Semantic
