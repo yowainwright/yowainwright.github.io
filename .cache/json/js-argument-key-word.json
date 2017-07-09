@@ -1,0 +1,21 @@
+{
+    "data": {
+        "site": {
+            "siteMetadata": {
+                "title": "Gatsby Starter Blog",
+                "author": "Kyle Mathews"
+            }
+        },
+        "markdownRemark": {
+            "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-02-js-argument-keyword/index.md absPath of file >>> MarkdownRemark",
+            "html": "<p>Today, I was assigned the task of printing logs to the page instead of to the <code>console</code> if there was a certain string appended to the url so that the our Q/A engineer could get that data into his program.\n{: .first-paragraph}</p>\n<p>My task was manageable, but before committing my pull request my boss &#x26; I went over the debug program (called <code>debug.js</code>). The process of describing what’s happening in a program I find highly beneficial. As I was talking through the program I noticed the <code>[argument](//developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)</code> key word.</p>\n<p>The <code>argument</code> key word is an object that stores the arguments passed into a function within the scope of that function.</p>\n<p>{% highlight javascript %}\nvar passArguments = function() {\nreturn document.write(arguments.length);\n};\npassArguments(1, 2, 3, 4, 5);\n// result: the document prints out 5\n{% endhighlight %}</p>\n<p>Live <a href=\"//codepen.io/yowainwright/pen/2f64d380b74302b396927d297828cd3a\">Code</a></p>\n<p>For the program that I was working on today, the program takes the first argument of the function <code>passArguments</code> as stores it in a variable set as category. Then it loops through the other argemuents &#x26; strong them in the logs array.</p>\n<p>{% highlight javascript %}\nvar passArguments = function() {\nvar category = arguments[0];\nlogs = new Array( arguments.length - 1 );\nfor (var i = 0, j = logs.length; i &#x3C; j; i++) {\nlogs[i] = arguments[i+1];\n}\ndocument.write(category + ’ : ’ + ’[’ + logs + ’]’ );\n};\npassArguments(‘Categories’, ‘1’, ‘2’, ‘3’, ‘4’, ‘5’);\n{% endhighlight %}</p>\n<p>Live <a href=\"//codepen.io/yowainwright/pen/6b24e79b8dcd00668619acd396dd4b46\">Code</a></p>\n<p>While my boss &#x26; I were going over the program, he wrote out the code similarily to how a browser compiles it.</p>\n<p>{% highlight javascript %}\narguments = [‘ga’, ‘info a’, ‘info b’, ‘info c’]\narguments = [‘ga’, ‘info a’, ‘info b’, ‘info c’]</p>\n<p>category = ‘ga’;\nlogs = [ , , ]</p>\n<p>for loop\nstart at: 0\ngo to: 3</p>\n<p>for loop 1( i = 0)\nlogs[0] = ‘info a’\nlogs = [ ‘info a’, , ]</p>\n<p>for loop 2 (i = 1)\nlogs = [ ‘info a’, ‘info b’, ]</p>\n<p>for loop 3\nlogs = [ ‘info a’, ‘info b’, ‘info c’]</p>\n<p>end for loop\n{% endhighlight %}</p>",
+            "frontmatter": {
+                "title": "Javascript for loop & the argument key word",
+                "date": "December 02, 2014"
+            }
+        }
+    },
+    "pathContext": {
+        "path": "/js-argument-key-word/"
+    }
+}

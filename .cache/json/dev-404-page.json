@@ -1,0 +1,55 @@
+{
+    "data": {
+        "allSitePage": {
+            "totalCount": 9,
+            "edges": [
+                {
+                    "node": {
+                        "path": "/youre-an-ortiz/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/js-scope/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/art-lived/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/happy-birthday/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/glide-carousel/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/js-closure/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/css-less-known-selectors/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/js-argument-key-word/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/"
+                    }
+                }
+            ]
+        }
+    },
+    "pathContext": {}
+}

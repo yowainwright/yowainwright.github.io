@@ -1,0 +1,52 @@
+[
+    {
+        "componentChunkName": "page-component---cache-dev-404-page-js",
+        "jsonName": "dev-404-page.json",
+        "path": "/dev-404-page/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "youre-an-ortiz.json",
+        "path": "/youre-an-ortiz/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "js-scope.json",
+        "path": "/js-scope/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "art-lived.json",
+        "path": "/art-lived/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "happy-birthday.json",
+        "path": "/happy-birthday/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "glide-carousel.json",
+        "path": "/glide-carousel/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "js-closure.json",
+        "path": "/js-closure/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "css-less-known-selectors.json",
+        "path": "/css-less-known-selectors/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "js-argument-key-word.json",
+        "path": "/js-argument-key-word/"
+    },
+    {
+        "componentChunkName": "page-component---src-pages-index-js",
+        "jsonName": "index.json",
+        "path": "/"
+    }
+]

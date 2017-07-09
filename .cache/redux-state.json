@@ -1,0 +1,1951 @@
+{
+  "nodes": {
+    "SitePage /dev-404-page/": {
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/dev-404-page.js",
+      "path": "/dev-404-page/",
+      "componentChunkName": "page-component---cache-dev-404-page-js",
+      "jsonName": "dev-404-page.json",
+      "internalComponentName": "ComponentDev404Page",
+      "context": {},
+      "pluginCreator___NODE": "Plugin dev-404-page",
+      "id": "SitePage /dev-404-page/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "2e8e56aa9ee117a5c118b9fe67bbcc6e",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin component-page-creator": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby/dist/internal-plugins/component-page-creator",
+      "name": "component-page-creator",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby/dist/internal-plugins/component-page-creator",
+      "packageJson": {
+        "name": "component-page-creator",
+        "description": "An internal Gatsby plugin that creates pages from component files in src/pages",
+        "version": "1.0.0",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin component-page-creator",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "8c8f46270a9d9dd5fe0dd5142e265919",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin internal-data-bridge": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "name": "internal-data-bridge",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "packageJson": {
+        "name": "internal-data-bridge",
+        "description": "An internal Gatsby plugin which creates data nodes from internal data",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin internal-data-bridge",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "cefa4f8c18e0aba44926790e915d0794",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin dev-404-page": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "name": "dev-404-page",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "packageJson": {
+        "name": "dev-404-page",
+        "description": "Internal plugin to add a 404 page in development with helpful information",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin dev-404-page",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "6a828f8551e8b431dd5c94af1812bf2c",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin prod-404": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "name": "prod-404",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "packageJson": {
+        "name": "prod-404",
+        "description": "Internal plugin to detect various flavors of 404 pages and ensure there's a 404.html path created as well to ensure compatability with static hosts",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin prod-404",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "3458f6b7d3e7e9faaba35ca8f6e530b7",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin query-runner": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "name": "query-runner",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "packageJson": {
+        "name": "query-runner",
+        "description": "Internal plugin for running queries",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin query-runner",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "96fdea2472b2e07c97b37937a8dcc3c3",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-source-filesystem": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-source-filesystem",
+      "name": "gatsby-source-filesystem",
+      "version": "1.0.1",
+      "pluginOptions": {
+        "plugins": [],
+        "path": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages",
+        "name": "pages"
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-source-filesystem",
+      "packageJson": {
+        "name": "gatsby-source-filesystem",
+        "description": "Gatsby plugin which parses files within a directory for further parsing by other plugins",
+        "version": "1.0.1",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.24.1"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "chokidar",
+            "version": "^1.7.0"
+          },
+          {
+            "name": "pretty-bytes",
+            "version": "^4.0.2"
+          },
+          {
+            "name": "slash",
+            "version": "^1.0.0"
+          }
+        ],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin gatsby-source-filesystem",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "715b7a18d173f73e8096def90b993797",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-transformer-remark": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-transformer-remark",
+      "name": "gatsby-transformer-remark",
+      "version": "1.0.1",
+      "pluginOptions": {
+        "plugins": [
+          {
+            "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-images",
+            "name": "gatsby-remark-images",
+            "version": "1.0.1",
+            "pluginOptions": {
+              "plugins": [],
+              "maxWidth": 590
+            },
+            "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-images"
+          },
+          {
+            "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-responsive-iframe",
+            "name": "gatsby-remark-responsive-iframe",
+            "version": "1.0.1",
+            "pluginOptions": {
+              "plugins": [],
+              "wrapperStyle": "margin-bottom: 1.0725rem"
+            },
+            "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-responsive-iframe"
+          },
+          {
+            "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-prismjs",
+            "name": "gatsby-remark-prismjs",
+            "version": "1.0.1",
+            "pluginOptions": {
+              "plugins": []
+            },
+            "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-prismjs"
+          },
+          {
+            "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-copy-linked-files",
+            "name": "gatsby-remark-copy-linked-files",
+            "version": "1.0.1",
+            "pluginOptions": {
+              "plugins": []
+            },
+            "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-copy-linked-files"
+          },
+          {
+            "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-smartypants",
+            "name": "gatsby-remark-smartypants",
+            "version": "1.0.1",
+            "pluginOptions": {
+              "plugins": []
+            },
+            "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-smartypants"
+          }
+        ]
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-transformer-remark",
+      "packageJson": {
+        "name": "gatsby-transformer-remark",
+        "description": "Gatsby transformer plugin for Markdown using the Remark library and ecosystem",
+        "version": "1.0.1",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "markdown",
+          "remark"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "gray-matter",
+            "version": "^2.1.0"
+          },
+          {
+            "name": "hast-util-to-html",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.4"
+          },
+          {
+            "name": "mdast-util-to-hast",
+            "version": "^2.4.0"
+          },
+          {
+            "name": "remark",
+            "version": "^7.0.1"
+          },
+          {
+            "name": "sanitize-html",
+            "version": "^1.14.1"
+          },
+          {
+            "name": "underscore.string",
+            "version": "^3.3.4"
+          },
+          {
+            "name": "unist-util-select",
+            "version": "^1.5.0"
+          },
+          {
+            "name": "unist-util-visit",
+            "version": "^1.1.1"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.24.1"
+          },
+          {
+            "name": "babel-plugin-transform-object-rest-spread",
+            "version": "^6.20.2"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin gatsby-transformer-remark",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "ac79be7d08f98b0230c8dda4cd448846",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-remark-images": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-images",
+      "name": "gatsby-remark-images",
+      "version": "1.0.1",
+      "pluginOptions": {
+        "plugins": [],
+        "maxWidth": 590
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-images",
+      "packageJson": {
+        "name": "gatsby-remark-images",
+        "description": "Processes images in markdown so they can be used in the production build.",
+        "version": "1.0.1",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "markdown",
+          "remark",
+          "image",
+          "responsive images"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "cheerio",
+            "version": "^1.0.0-rc.1"
+          },
+          {
+            "name": "image-size",
+            "version": "^0.5.1"
+          },
+          {
+            "name": "is-relative-url",
+            "version": "^2.0.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.4"
+          },
+          {
+            "name": "unist-util-select",
+            "version": "^1.5.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.24.1"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin gatsby-remark-images",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "7fa456f1cabcc0c6232684b462bc7a49",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-remark-responsive-iframe": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-responsive-iframe",
+      "name": "gatsby-remark-responsive-iframe",
+      "version": "1.0.1",
+      "pluginOptions": {
+        "plugins": [],
+        "wrapperStyle": "margin-bottom: 1.0725rem"
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-responsive-iframe",
+      "packageJson": {
+        "name": "gatsby-remark-responsive-iframe",
+        "description": "Make iframes in Markdown processed by Remark responsive",
+        "version": "1.0.1",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "remark"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "cheerio",
+            "version": "^0.22.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.4"
+          },
+          {
+            "name": "unist-util-visit",
+            "version": "^1.1.1"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.24.1"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin gatsby-remark-responsive-iframe",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "eacb894b0ff61ee52e733524bf2df5ea",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-remark-prismjs": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-prismjs",
+      "name": "gatsby-remark-prismjs",
+      "version": "1.0.1",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-prismjs",
+      "packageJson": {
+        "name": "gatsby-remark-prismjs",
+        "description": "Adds syntax highlighting to code blocks at build time using PrismJS",
+        "version": "1.0.1",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "prismjs",
+          "remark"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "parse-numeric-range",
+            "version": "^0.0.2"
+          },
+          {
+            "name": "prismjs",
+            "version": "^1.6.0"
+          },
+          {
+            "name": "unist-util-visit",
+            "version": "^1.1.1"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.24.1"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin gatsby-remark-prismjs",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "7bfdb900de122f80b17b6e05ca68ea2e",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-remark-copy-linked-files": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-copy-linked-files",
+      "name": "gatsby-remark-copy-linked-files",
+      "version": "1.0.1",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-copy-linked-files",
+      "packageJson": {
+        "name": "gatsby-remark-copy-linked-files",
+        "description": "Find files which are linked to from markdown and copy them to the public directory",
+        "version": "1.0.1",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "prismjs",
+          "remark"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "cheerio",
+            "version": "^1.0.0-rc.1"
+          },
+          {
+            "name": "fs-extra",
+            "version": "^3.0.1"
+          },
+          {
+            "name": "is-relative-url",
+            "version": "^2.0.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.4"
+          },
+          {
+            "name": "unist-util-visit",
+            "version": "^1.1.1"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.24.1"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin gatsby-remark-copy-linked-files",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "1f4e671262bd5513e514f50acee03ebe",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-remark-smartypants": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-smartypants",
+      "name": "gatsby-remark-smartypants",
+      "version": "1.0.1",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-remark-smartypants",
+      "packageJson": {
+        "name": "gatsby-remark-smartypants",
+        "description": "Use retext-smartypants to auto-enhance typography of markdown",
+        "version": "1.0.1",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "smartypants"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "retext",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "retext-smartypants",
+            "version": "^2.0.0"
+          },
+          {
+            "name": "unist-util-visit",
+            "version": "^1.1.1"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.24.1"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin gatsby-remark-smartypants",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "81001be2908e60326fcb071a4588ff5d",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-transformer-sharp": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-transformer-sharp",
+      "name": "gatsby-transformer-sharp",
+      "version": "1.0.1",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-transformer-sharp",
+      "packageJson": {
+        "name": "gatsby-transformer-sharp",
+        "description": "Gatsby transformer plugin for images using Sharp",
+        "version": "1.0.1",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "sharp",
+          "image"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.24.1"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin gatsby-transformer-sharp",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "73bf20ca5a7b3152366aa84ecc229c20",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-plugin-sharp": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-plugin-sharp",
+      "name": "gatsby-plugin-sharp",
+      "version": "1.0.1",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-plugin-sharp",
+      "packageJson": {
+        "name": "gatsby-plugin-sharp",
+        "description": "Wrapper of the Sharp image manipulation library for Gatsby plugins",
+        "version": "1.0.1",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "image",
+          "sharp"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "async",
+            "version": "^2.4.1"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "image-size",
+            "version": "^0.5.1"
+          },
+          {
+            "name": "imagemin",
+            "version": "^5.2.2"
+          },
+          {
+            "name": "imagemin-pngquant",
+            "version": "^5.0.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.4"
+          },
+          {
+            "name": "progress",
+            "version": "^1.1.8"
+          },
+          {
+            "name": "sharp",
+            "version": "^0.17.3"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.24.1"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin gatsby-plugin-sharp",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "d01c767490e77ffd4ba935cd1f345d31",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-plugin-google-analytics": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-plugin-google-analytics",
+      "name": "gatsby-plugin-google-analytics",
+      "version": "1.0.1",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-plugin-google-analytics",
+      "packageJson": {
+        "name": "gatsby-plugin-google-analytics",
+        "description": "Gatsby plugin to add google analytics onto a site",
+        "version": "1.0.1",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "google analytics"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.24.1"
+          }
+        ],
+        "dependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin gatsby-plugin-google-analytics",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "fb138ee36ebd52f2dfca2cb7db8037f2",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-plugin-offline": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-plugin-offline",
+      "name": "gatsby-plugin-offline",
+      "version": "1.0.1",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-plugin-offline",
+      "packageJson": {
+        "name": "gatsby-plugin-offline",
+        "description": "Gatsby plugin which sets up a site to be able to run offline",
+        "version": "1.0.1",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "offline",
+          "precache",
+          "service-worker"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "sw-precache",
+            "version": "^5.0.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.24.1"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin gatsby-plugin-offline",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "12f244a2f650f80cfc00a222c78ee0a0",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-plugin-react-helmet": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-plugin-react-helmet",
+      "name": "gatsby-plugin-react-helmet",
+      "version": "1.0.1",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-plugin-react-helmet",
+      "packageJson": {
+        "name": "gatsby-plugin-react-helmet",
+        "description": "Stub description for gatsby-plugin-react-helmet",
+        "version": "1.0.1",
+        "main": "index.js",
+        "keywords": [
+          "gatsby"
+        ],
+        "author": {
+          "name": "Kyle Mathews &lt;mathews.kyle@gmail.com&gt;"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "react-helmet",
+            "version": "^5.1.3"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.24.1"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin gatsby-plugin-react-helmet",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "e95ca52e2847ee28ea5a23c16c17b728",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin default-site-plugin": {
+      "resolve": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io",
+      "name": "default-site-plugin",
+      "version": "9a9fb57b6dfbcac682058e30fe5550bd",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io",
+      "packageJson": {
+        "name": "Jeffry.in",
+        "description": "Jeffry.in, Jeff Wainwright's blog",
+        "version": "1.0.0",
+        "main": "n/a",
+        "keywords": [
+          "gatsby"
+        ],
+        "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "gatsby",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-link",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-plugin-google-analytics",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-plugin-manifest",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-plugin-offline",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-plugin-preact",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-plugin-react-helmet",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-plugin-sharp",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-remark-copy-linked-files",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-remark-prismjs",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-remark-responsive-iframe",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-remark-images",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-remark-smartypants",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-source-filesystem",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-transformer-remark",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "gatsby-transformer-sharp",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.15.0"
+          },
+          {
+            "name": "react-responsive-grid",
+            "version": "^0.3.3"
+          },
+          {
+            "name": "react-typography",
+            "version": "^0.15.0"
+          },
+          {
+            "name": "typeface-merriweather",
+            "version": "^0.0.25"
+          },
+          {
+            "name": "typeface-montserrat",
+            "version": "^0.0.24"
+          },
+          {
+            "name": "typography",
+            "version": "^0.15.8"
+          },
+          {
+            "name": "typography-theme-wordpress-2016",
+            "version": "^0.15.1"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "gh-pages",
+            "version": "^0.12.0"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "id": "Plugin default-site-plugin",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "0b4e309a2b53419c4bbf23f185ab4da4",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Site": {
+      "siteMetadata": {
+        "title": "Gatsby Starter Blog",
+        "author": "Kyle Mathews"
+      },
+      "port": "8000",
+      "host": "localhost",
+      "buildTime": "2017-07-09T08:13:22.165Z",
+      "id": "Site",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "eb89bced1f8c0882b05bb2cf28c24d99",
+        "type": "Site",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/.DS_Store absPath of file": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/.DS_Store absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "6a40846ad2d30aac3ee1689da6d503cd",
+        "mediaType": "application/octet-stream",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/.DS_Store",
+      "relativePath": ".DS_Store",
+      "extension": "",
+      "size": 6148,
+      "prettySize": "6.15 kB",
+      "modifiedTime": "2017-07-09T08:11:14.000Z",
+      "accessTime": "2017-07-09T08:11:15.000Z",
+      "changeTime": "2017-07-09T08:11:14.000Z",
+      "birthTime": "2017-07-09T05:28:21.000Z",
+      "root": "/",
+      "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages",
+      "base": ".DS_Store",
+      "ext": "",
+      "name": ".DS_Store",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 49031307,
+      "blocks": 16,
+      "atime": "2017-07-09T08:11:15.000Z",
+      "mtime": "2017-07-09T08:11:14.000Z",
+      "ctime": "2017-07-09T08:11:14.000Z",
+      "birthtime": "2017-07-09T05:28:21.000Z"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/favicon.ico absPath of file": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/favicon.ico absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "c6acedaff906029fc5455d9ec52c7f42",
+        "mediaType": "image/x-icon",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/favicon.ico",
+      "relativePath": "favicon.ico",
+      "extension": "ico",
+      "size": 198,
+      "prettySize": "198 B",
+      "modifiedTime": "2017-07-09T03:02:52.000Z",
+      "accessTime": "2017-07-09T08:06:32.000Z",
+      "changeTime": "2017-07-09T05:35:56.000Z",
+      "birthTime": "2017-07-09T03:02:52.000Z",
+      "root": "/",
+      "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages",
+      "base": "favicon.ico",
+      "ext": ".ico",
+      "name": "favicon",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 48909581,
+      "blocks": 8,
+      "atime": "2017-07-09T08:06:32.000Z",
+      "mtime": "2017-07-09T03:02:52.000Z",
+      "ctime": "2017-07-09T05:35:56.000Z",
+      "birthtime": "2017-07-09T03:02:52.000Z"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/index.js absPath of file": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/index.js absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "61d8447d8762fb5a25782392f2fea9dc",
+        "mediaType": "application/javascript",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/index.js",
+      "relativePath": "index.js",
+      "extension": "js",
+      "size": 1543,
+      "prettySize": "1.54 kB",
+      "modifiedTime": "2017-07-09T07:59:56.000Z",
+      "accessTime": "2017-07-09T08:06:32.000Z",
+      "changeTime": "2017-07-09T07:59:56.000Z",
+      "birthTime": "2017-07-09T03:02:52.000Z",
+      "root": "/",
+      "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages",
+      "base": "index.js",
+      "ext": ".js",
+      "name": "index",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 48909582,
+      "blocks": 8,
+      "atime": "2017-07-09T08:06:32.000Z",
+      "mtime": "2017-07-09T07:59:56.000Z",
+      "ctime": "2017-07-09T07:59:56.000Z",
+      "birthtime": "2017-07-09T03:02:52.000Z"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/robots.txt absPath of file": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/robots.txt absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "b6216d61c03e6ce0c9aea6ca7808f7ca",
+        "mediaType": "text/plain",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/robots.txt",
+      "relativePath": "robots.txt",
+      "extension": "txt",
+      "size": 24,
+      "prettySize": "24 B",
+      "modifiedTime": "2017-07-09T03:02:52.000Z",
+      "accessTime": "2017-07-09T08:06:32.000Z",
+      "changeTime": "2017-07-09T05:35:56.000Z",
+      "birthTime": "2017-07-09T03:02:52.000Z",
+      "root": "/",
+      "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages",
+      "base": "robots.txt",
+      "ext": ".txt",
+      "name": "robots",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 48909583,
+      "blocks": 8,
+      "atime": "2017-07-09T08:06:32.000Z",
+      "mtime": "2017-07-09T03:02:52.000Z",
+      "ctime": "2017-07-09T05:35:56.000Z",
+      "birthtime": "2017-07-09T03:02:52.000Z"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz/index.md absPath of file": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz/index.md absPath of file",
+      "children": [
+        "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz/index.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "c785b23b89512ce978fbed7775d387b2",
+        "mediaType": "text/x-markdown",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz/index.md",
+      "relativePath": "2013-05-21-youre-an-ortiz/index.md",
+      "extension": "md",
+      "size": 1951,
+      "prettySize": "1.95 kB",
+      "modifiedTime": "2017-07-09T08:02:41.000Z",
+      "accessTime": "2017-07-09T08:06:32.000Z",
+      "changeTime": "2017-07-09T08:02:41.000Z",
+      "birthTime": "2017-07-09T05:35:40.000Z",
+      "root": "/",
+      "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 49034840,
+      "blocks": 8,
+      "atime": "2017-07-09T08:06:32.000Z",
+      "mtime": "2017-07-09T08:02:41.000Z",
+      "ctime": "2017-07-09T08:02:41.000Z",
+      "birthtime": "2017-07-09T05:35:40.000Z"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-06-20-learning-js-scope/index.md absPath of file": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-06-20-learning-js-scope/index.md absPath of file",
+      "children": [
+        "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-06-20-learning-js-scope/index.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "82f32d7bac80082301339a73b805ecd6",
+        "mediaType": "text/x-markdown",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-06-20-learning-js-scope/index.md",
+      "relativePath": "2013-06-20-learning-js-scope/index.md",
+      "extension": "md",
+      "size": 4901,
+      "prettySize": "4.9 kB",
+      "modifiedTime": "2017-07-09T08:02:50.000Z",
+      "accessTime": "2017-07-09T08:06:32.000Z",
+      "changeTime": "2017-07-09T08:02:50.000Z",
+      "birthTime": "2017-07-09T00:54:50.000Z",
+      "root": "/",
+      "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-06-20-learning-js-scope",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 49031415,
+      "blocks": 16,
+      "atime": "2017-07-09T08:06:32.000Z",
+      "mtime": "2017-07-09T08:02:50.000Z",
+      "ctime": "2017-07-09T08:02:50.000Z",
+      "birthtime": "2017-07-09T00:54:50.000Z"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived/index.md absPath of file": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived/index.md absPath of file",
+      "children": [
+        "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived/index.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "5c41b9f1b26d32c4dd92904615caee9d",
+        "mediaType": "text/x-markdown",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived/index.md",
+      "relativePath": "2012-10-21-art-lived/index.md",
+      "extension": "md",
+      "size": 3435,
+      "prettySize": "3.44 kB",
+      "modifiedTime": "2017-07-09T08:02:25.000Z",
+      "accessTime": "2017-07-09T08:06:32.000Z",
+      "changeTime": "2017-07-09T08:02:25.000Z",
+      "birthTime": "2017-07-09T05:29:29.000Z",
+      "root": "/",
+      "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 49032491,
+      "blocks": 8,
+      "atime": "2017-07-09T08:06:32.000Z",
+      "mtime": "2017-07-09T08:02:25.000Z",
+      "ctime": "2017-07-09T08:02:25.000Z",
+      "birthtime": "2017-07-09T05:29:29.000Z"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz/index.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz/index.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz/index.md absPath of file",
+      "internal": {
+        "content": "---\ntitle: You're an Ortiz, how I gained family & through them things changed for the\n  better\ndate: \"2013-05-21\"\nlayout: post\nreadNext: \"/\"\npath: \"/youre-an-ortiz/\"\n---\n\nIn 2010 I was in a pretty low spot. I had been laid off from my job earlier that year and moved into a low-income area to save money. It turned into a nightmare.\n{: .first-paragraph }\n\nMy situation went from not very good to pretty bad one day in July when a rain storm came. Our apartment on the top floor started to flood. Water started free flowing through the panelling. We didn't know what to do and had no where to go. Then our roof literally started to cave in.\n\n<figure>\n<img src=\"/assets/youre-an-ortiz/water-logged-ceiling.jpg\" alt=\"Image of the painting the day of\" /> \n</figure>\n\nI was working at a bike shop in Pilsen (a neighborhood of Chicago) and had expressed my worry that I may have no place to go to the shop's owner.\n\n> \"Sounds like we have to clear out the attic.\" Henry (the shop owner) said.\n\n<figure>\n<img src=\"/assets/youre-an-ortiz/water-puddles.jpg\" alt=\"My apartment on day 3 when the ceiling started to cave in\" /> \n</figure>\n\nI helped Henry and his family clear out the attic and that's where I lived for the next two months before moving to Washington D.C.\nHenry, Ricky, Abel, Veronica and many others took such good care of me and I was able to get back on my feet.\n\n<figure>\n<img src=\"/assets/youre-an-ortiz/henry-working-on-bike.jpg\" alt=\"Henry working on my bike\" /> \n</figure>\n\nA few months later, I started working for a stock exchange. My life did a complete 180!\nI talk to the Henry and the rest of the Ortiz family regularly and thank them for what they did for me.\nHenry always replies \"You're family. You're an Ortiz and I am proud of you.\"\n\n<figure>\n<img src=\"/assets/youre-an-ortiz/text-message.jpg\" alt=\"Image of a text that Henry sent me\" /> \n</figure>\n\n> Henry always replies \"You're family. You're an Ortiz and I am proud of you.\"\n",
+        "contentDigest": "2ded316eb2250ea8fe8c13d7abc45794",
+        "type": "MarkdownRemark",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "You're an Ortiz, how I gained family & through them things changed for the better",
+        "date": "2013-05-21",
+        "layout": "post",
+        "readNext": "/",
+        "path": "/youre-an-ortiz/",
+        "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz/index.md absPath of file"
+      },
+      "fileAbsolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz/index.md"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-06-20-learning-js-scope/index.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-06-20-learning-js-scope/index.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-06-20-learning-js-scope/index.md absPath of file",
+      "internal": {
+        "content": "---\ntitle: Discussing Javascript Scope, let's keep it between us\ndate: \"2013-06-20\"\nlayout: post\nreadNext: \"/\"\npath: \"/js-scope/\"\n---\n\nJavascript **scope** is an essential for keeping & accessing information where we want it & using it when we want to.\n{: .first-paragraph}\n\n## Discussing JS Scope through the mall example\n\nIf you've ever gone to a shopping mall & you're like me, you go to a mall for the multiple stores you'll have access too. You expect a mall to have stores for shoes, stores for electronics & potentially restaurants for food after you've become hungry from going to a bunch of stores.\n\nJavascript scope can be viewed like a mall. We could say that the mall is _global_ or that it is the _global scope_ which means that you can access all that the mall has to offer. However, people, or me at least, don't go to a mall for to walk around in it's large amount of space, we go for stores with specific it's at specialized stores.\n\nWe can consider these specialized stores the _local scope_ which means that when we go to 'a shoe store' we have access to shoes there but not food & when we go to a restaurant, we have access to food but not shoes.\n\nWhen we go into that shoe store, we're still at the mall & can get certain information from the mall - like that awesome mall music but we also have access to shoes (but not food). This idea is known as _Lexical Scope_. So Lexical Scope deals with where information can be accessed.\n\nAs we go around to these stores & purchase things, eating food & interacting with people at the mall while listening to that awesome mall music we're attaining 'stuff'. We're getting information from the music, perhaps purchasing goods from the store. We can think of that as the _Execution Context_. Execution Context is essentially, all of the stuff that we comes with & happens to us as we go there the mall. We keep the items that buy but, hopefully, forget some of the music that we listen to.\n\n## Now, Scope, seriously\n\nTo understand **scope**, we need to know about variables & how we store information. **[Variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)** store bits of information in the key words _var_, _**[let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)**_, or _**[const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)**_. Const store a read only bit of information which means the information can’t be re-assigned. I will not be discussing _const_ anymore right now so forget I brought it up. _Let_ is very similar to _var_ to the point that I had to [find](http://stackoverflow.com/questions/762011/let-keyword-vs-var-keyword) the difference: var is scoped to the nearest function scope which let is enclosed to the nearest closing block.\n\nScope, in Javascript, refers to where stored information can be accessed.\n\n**4 commonly talked about scopes are:**\n\n- Lexical Scope\n- Global Scope\n- Local Scope\n- Execution Context\n\n## Lexical Scope\n\n[Lexical](http://whatis.techtarget.com/definition/lexical-scoping-static-scoping) Scope refers to where a variables can be accessed within code blocks.\n\n## Global Scope\n\n**Global** Scope means that a variable was declared outside of a function so it can be accessed & modified throughout a program.\n\n## Local Scope\n\nLocal Scope refers the a variable that was declared within a function which means mean that it can only be accessed within that function.\n\n**example:**\n{% highlight javascript %}\n\nvar globalVar = ‘This var is global’;\nvar myFunc = function() {\n     var localVar = ‘This var is local’;\n};\n{% endhighlight %}\n\n## Execution Context\n\nExecution context is memory scope. It’s created as a program runs.\n\n\n**A fun example which demonstrates scope:**\n{% highlight javascript %}\n\nvar makeArray = function() {\n    return [];\n};\nvar array1 = makeArray();\nvar array2 = makeArray();\n\nconsole.log(array1 === array2); // returns false\n// it returns false b/c array1 & array2 are 2 different array objects\n// they have 2 different execution contexts\n\nconsole.log(array1 == array2); // also, returns false\n// == still returns false because the do not refer to the same object\n// http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3 (1.f.)\n{% endhighlight  %}\n\nJavascript Scope, like a mall, is essential. It's great walking through the mall but you're not at Walmart. You want specialized items. You can walk around the mall & hear that mall music. That's The Global Scope. You don't want to go into a Footlocker to get shoes & walk out with a taco. You don't go to Taco Bell to get the new J's but if you could for the price of a taco - that'd be cool. Where you're able to go to purchase shoes or a taco - that's Lexical Scope. Anything that you buy or other interactions that happen as you go through the mall can be remembered as the execution context.\n",
+        "contentDigest": "9907a5b967677be705ec8d850f91529c",
+        "type": "MarkdownRemark",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "Discussing Javascript Scope, let's keep it between us",
+        "date": "2013-06-20",
+        "layout": "post",
+        "readNext": "/",
+        "path": "/js-scope/",
+        "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-06-20-learning-js-scope/index.md absPath of file"
+      },
+      "fileAbsolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-06-20-learning-js-scope/index.md"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived/index.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived/index.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived/index.md absPath of file",
+      "internal": {
+        "content": "---\ntitle: Art Lived, A Story Of How A Painting Was Given, Lost & Found\ndate: \"2012-10-21\"\nlayout: post\nreadNext: \"/\"\npath: \"/art-lived/\"\n---\n\nChatting with a friend, we began discussing challenging things that had overcome in the past years. We both decided that I should post an image of _Lemonade_ on Facebook to acknowledge what we had overcome: Turning Lemons to Lemonade.\n{: .first-paragraph}\n\n![Image of the painting the day of](/assets/art-lived/art-lived-start.jpg)\n\nNeedless to say - I did not follow through with my promise to post an image of _Lemonade_ on Facebook and this is the story of why.\n\nFirst, let me prefice the story with a brief timeline:\n\n1. Conversation with my friend,\n2. Planned posting of the Lemonade image until\n3. The incident described below happened.\n\n> A gentleman walks by _looking down on his luck_ and says, 'your lucky ... flats can be fixed!'\n\n![Image of my tire after getting a flat off the CA 10](/assets/art-lived/art-lived-tire.jpg)\n\nI was in Venice 2 weekends ago working on stuff with the founders of this new clothing company and one of the founders just happened to have this beautiful painting sitting out in their lawn. I took the sec to say, 'Wow! That painting is beautiful!'. Little did I know that this statement would lead to a wild night and early morning!\n\nAs I was leaving after a day of _data planning_ the owner of the painting says, 'bet that painting would look great on a wall in your house!'. I agreed and we decided to wrap the painting in cloth & tie to my car safe and sound ... Right? Wrong! I was driving on the 10 (Los Angeles Area Highway towards Downtown LA (where I currently live) and suddenly _Whoosh_. The painting was flying through the air. I was initially scared that it was going to cause problems but it landed flat on the front of a semi & immediately looked to explode.\n\n![Image of the painting after being hit](/assets/art-lived/art-lived-broken.jpg)\n\nWhen I got home, I called the person that had given me the painting & told him what happened. We sat on opposite ends of the phone silently for a sec. Then he goes, 'Do you remember where on the highway the painting flew off?'. Yup (I knew)! He says, 'Come get me!'. I go and pick him up & we go searching for the painting on the 10 [again, Los Angeles Highway (always busy)] & there it is sitting on the side of the Freeway. It might as well have been folded it was so perfect. We pull over & pick up the painting. As we are driving to the highway exit we hear a _whoop whoop whoop_. I had a flat tire. One of the wood chips from the painting's frame had lodged itself right into my tire. The tire was flatten almost immediately.\n\nSo there we were fixing a flat at about 3am on _Crenshaw_. Crenshaw is not the safest spot in LA to fix a flat. A gentleman walks by _looking down on his luck_ & says, 'your lucky ... flats can be fixed!'. He was right. I drove the owner of the painting home & before we bid our good byes he unfolded the painting & we looked at it - still beautiful. Art, for the night, lived!\n\nAfter scrambling to get my car fixed & other obligations, I didn't have time for the _lemonade_ picture post on Facebook but somehow I hoped that after sharing this story - it doesn't matter. I think that recovering the painting was actually a better symbol & I hope that my friend feels the same.\n\n![Image of the painting after being rebuilt](/assets/art-lived/art-lived-finished2.jpg)\n",
+        "contentDigest": "23c794b47440695827e2896240c042dd",
+        "type": "MarkdownRemark",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "Art Lived, A Story Of How A Painting Was Given, Lost & Found",
+        "date": "2012-10-21",
+        "layout": "post",
+        "readNext": "/",
+        "path": "/art-lived/",
+        "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived/index.md absPath of file"
+      },
+      "fileAbsolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived/index.md"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-04-23-glide-carousel/index.md absPath of file": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-04-23-glide-carousel/index.md absPath of file",
+      "children": [
+        "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-04-23-glide-carousel/index.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "e2bd53a8674231a8cf8f97d3fd746ba3",
+        "mediaType": "text/x-markdown",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-04-23-glide-carousel/index.md",
+      "relativePath": "2014-04-23-glide-carousel/index.md",
+      "extension": "md",
+      "size": 2770,
+      "prettySize": "2.77 kB",
+      "modifiedTime": "2017-07-09T08:13:01.000Z",
+      "accessTime": "2017-07-09T08:13:01.000Z",
+      "changeTime": "2017-07-09T08:13:01.000Z",
+      "birthTime": "2017-07-09T00:54:50.000Z",
+      "root": "/",
+      "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-04-23-glide-carousel",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 49046867,
+      "blocks": 8,
+      "atime": "2017-07-09T08:13:01.000Z",
+      "mtime": "2017-07-09T08:13:01.000Z",
+      "ctime": "2017-07-09T08:13:01.000Z",
+      "birthtime": "2017-07-09T00:54:50.000Z"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-05-05-happy-birthday/index.md absPath of file": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-05-05-happy-birthday/index.md absPath of file",
+      "children": [
+        "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-05-05-happy-birthday/index.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "6fa574aaf17ccd6dce670b2231bcc594",
+        "mediaType": "text/x-markdown",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-05-05-happy-birthday/index.md",
+      "relativePath": "2014-05-05-happy-birthday/index.md",
+      "extension": "md",
+      "size": 1339,
+      "prettySize": "1.34 kB",
+      "modifiedTime": "2017-07-09T08:12:49.000Z",
+      "accessTime": "2017-07-09T08:12:49.000Z",
+      "changeTime": "2017-07-09T08:12:49.000Z",
+      "birthTime": "2017-07-09T00:54:50.000Z",
+      "root": "/",
+      "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-05-05-happy-birthday",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 49046868,
+      "blocks": 8,
+      "atime": "2017-07-09T08:12:49.000Z",
+      "mtime": "2017-07-09T08:12:49.000Z",
+      "ctime": "2017-07-09T08:12:49.000Z",
+      "birthtime": "2017-07-09T00:54:50.000Z"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-15-js-closure/index.md absPath of file": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-15-js-closure/index.md absPath of file",
+      "children": [
+        "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-15-js-closure/index.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "54554b2f8aad46dc2aa0320b36f2a796",
+        "mediaType": "text/x-markdown",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-15-js-closure/index.md",
+      "relativePath": "2014-10-15-js-closure/index.md",
+      "extension": "md",
+      "size": 3255,
+      "prettySize": "3.25 kB",
+      "modifiedTime": "2017-07-09T08:12:40.000Z",
+      "accessTime": "2017-07-09T08:12:40.000Z",
+      "changeTime": "2017-07-09T08:12:40.000Z",
+      "birthTime": "2017-07-09T00:54:50.000Z",
+      "root": "/",
+      "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-15-js-closure",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 49046869,
+      "blocks": 8,
+      "atime": "2017-07-09T08:12:40.000Z",
+      "mtime": "2017-07-09T08:12:40.000Z",
+      "ctime": "2017-07-09T08:12:40.000Z",
+      "birthtime": "2017-07-09T00:54:50.000Z"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-29-css-lesser-known-selectors/index.md absPath of file": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-29-css-lesser-known-selectors/index.md absPath of file",
+      "children": [
+        "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-29-css-lesser-known-selectors/index.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "e866117ddce8abf43abc904b1a89ae3f",
+        "mediaType": "text/x-markdown",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-29-css-lesser-known-selectors/index.md",
+      "relativePath": "2014-10-29-css-lesser-known-selectors/index.md",
+      "extension": "md",
+      "size": 3305,
+      "prettySize": "3.31 kB",
+      "modifiedTime": "2017-07-09T08:12:27.000Z",
+      "accessTime": "2017-07-09T08:12:27.000Z",
+      "changeTime": "2017-07-09T08:12:27.000Z",
+      "birthTime": "2017-07-09T00:54:50.000Z",
+      "root": "/",
+      "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-29-css-lesser-known-selectors",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 49046870,
+      "blocks": 8,
+      "atime": "2017-07-09T08:12:27.000Z",
+      "mtime": "2017-07-09T08:12:27.000Z",
+      "ctime": "2017-07-09T08:12:27.000Z",
+      "birthtime": "2017-07-09T00:54:50.000Z"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-02-js-argument-keyword/index.md absPath of file": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-02-js-argument-keyword/index.md absPath of file",
+      "children": [
+        "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-02-js-argument-keyword/index.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "6cbcda5c62717e514b910ddbb48b723d",
+        "mediaType": "text/x-markdown",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-02-js-argument-keyword/index.md",
+      "relativePath": "2014-12-02-js-argument-keyword/index.md",
+      "extension": "md",
+      "size": 2271,
+      "prettySize": "2.27 kB",
+      "modifiedTime": "2017-07-09T08:12:06.000Z",
+      "accessTime": "2017-07-09T08:12:06.000Z",
+      "changeTime": "2017-07-09T08:12:06.000Z",
+      "birthTime": "2017-07-09T00:54:50.000Z",
+      "root": "/",
+      "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-02-js-argument-keyword",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 49046871,
+      "blocks": 8,
+      "atime": "2017-07-09T08:12:06.000Z",
+      "mtime": "2017-07-09T08:12:06.000Z",
+      "ctime": "2017-07-09T08:12:06.000Z",
+      "birthtime": "2017-07-09T00:54:50.000Z"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-05-05-happy-birthday/index.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-05-05-happy-birthday/index.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-05-05-happy-birthday/index.md absPath of file",
+      "internal": {
+        "content": "---\ntitle: Happy Birthday, a project to say happy birthday\ndate: \"2014-05-05\"\nlayout: post\nreadNext: \"/\"\npath: \"/happy-birthday/\"\n---\n\nA year ago I was not able to be with one of my dear friends on their birthday so I made this.\n{: .first-paragraph}\n\n_This_ being posed images of myself to make each letter for the word _Happy Birthday_.\n\nI posted the images on Instagram in reverse order so that my friends could slowly get the message that I had _posed_ for them.\n\n!['H' in Happy birthday](https://yowainwright.imgix.net/hb/h.jpg)\n\n!['A' in Happy birthday](https://yowainwright.imgix.net/hb/a.jpg)\n\n!['P' in Happy birthday](https://yowainwright.imgix.net/hb/p.jpg)\n\n!['P' in Happy Birthday](https://yowainwright.imgix.net/hb/p2.jpg)\n\n!['Y' in Happy Birthday](https://yowainwright.imgix.net/hb/y.jpg)\n\n!['B' in Happy Birthday](https://yowainwright.imgix.net/hb/b.jpg)\n\n!['I' in Happy Birthday](https://yowainwright.imgix.net/hb/i.jpg)\n\n!['R' in Happy Birthday](https://yowainwright.imgix.net/hb/r.jpg)\n\n!['T' in Happy Birthday](https://yowainwright.imgix.net/hb/t.jpg)\n\n!['H' in Happy Birthday](https://yowainwright.imgix.net/hb/h.jpg)\n\n!['D' in Happy Birthday](https://yowainwright.imgix.net/hb/d.jpg)\n\n!['A' in Happy Birthday](https://yowainwright.imgix.net/hb/a.jpg)\n\n!['Y' in Happy Birthday](https://yowainwright.imgix.net/hb/y2.jpg)\n",
+        "contentDigest": "6d5e4c72b79a5a0e0bc2a4c55c53e9f2",
+        "type": "MarkdownRemark",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "Happy Birthday, a project to say happy birthday",
+        "date": "2014-05-05",
+        "layout": "post",
+        "readNext": "/",
+        "path": "/happy-birthday/",
+        "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-05-05-happy-birthday/index.md absPath of file"
+      },
+      "fileAbsolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-05-05-happy-birthday/index.md"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-04-23-glide-carousel/index.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-04-23-glide-carousel/index.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-04-23-glide-carousel/index.md absPath of file",
+      "internal": {
+        "content": "---\ntitle: Glide Carousel, a easy to use slider for Semantic UI\ndate: \"2014-04-23\"\nlayout: post\nreadNext: \"/\"\npath: \"/glide-carousel/\"\n---\n\nThis carousel was originally done for a bootstrap project. I quickly implemented it using [Glide JS](http://jedrzejchalubek.com/glide/) which fits in nicely with [Semantic UI](http://semantic-ui.com/) (the framework I use on this site). This post describes my implementation.\n{: .first-paragraph}\n\nMany people don't like carousels and I _somewhat_ agree. Image carousels like the on above can be somewhat intruding to the content and are very often un-touched or swiped through by users. However, with a mobile first User Interface a carousel can be designed to act more as a swipe and can introduce an interesting way to present content.\n\nGood imagery with clean verbage can get a user to go through a carousel or can used to create a _side swipe_ as demonstrated here. Notice how im my _Reference Rolex_ a user can swipe or click from the side to view new content rather than to continue to scroll down. This, from my perspective, becomes most effective and relavant for users on a mobile view where swiping is more standard.\n\n**The CSS used**\n{% highlight html %}\n\t<linl rel=\"stylesheet\" href=\"http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css\"/>\n{% endhighlight %}\n\n**The JS used**\n{% highlight javascript %}\n\t<script src=\"//code.jquery.com/jquery-1.11.0.min.js\"></script>\n\t<script src=\"http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/javascript<ntic.min.js\"></script>\n\t<script src=\"http://cdn.jsdelivr.net/jquery.glide/1.0.6/jquery.glide.min.js\"></script>\n{% endhighlight %}\n\n**The html**\n\nThe HTML for the first 2 slides\n{% highlight html %}\n\t<div class=\"slider slider1\">\n    <div class=\"slides\">\n      <div class=\"slide-item item1\">\n      </div>\n      <div class=\"slide-item item2\"> \n      </div>\n      <div class=\"slide-item item3\">\n      </div>\n      <div class=\"slide-item item4\">\n      </div>\n  \t</div>\n\t</div>\n{% endhighlight %}\n\n**The JS added locally**\n\nJust call glide to run in your local JS\n{% highlight javascript %}\n\t$('.slider').glide();\n{% endhighlight %}\n\nNote: my JS for glide is slightly different but this is all you need.\n\n<div class=\"code-sample\">\n\t<p styles=\"min-height: 300px;\" data-height=\"268\" data-theme-id=\"0\" data-slug-hash=\"71fdafe5e8fdae857086e9be2bd928ba\" data-default-tab=\"result\" data-user=\"yowainwright\" class='codepen'>See the Pen <a href='http://codepen.io/yowainwright/pen/71fdafe5e8fdae857086e9be2bd928ba/'>71fdafe5e8fdae857086e9be2bd928ba</a> by Jeff Wainwright (<a href='http://codepen.io/yowainwright'>@yowainwright</a>) on <a href='http://codepen.io'>CodePen</a>.</p>\n\t<script async src=\"//assets.codepen.io/assets/embed/ei.js\"></script>\n</div>\n",
+        "contentDigest": "d484b0813d1211835555c5aae2d0a9a7",
+        "type": "MarkdownRemark",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "Glide Carousel, a easy to use slider for Semantic UI",
+        "date": "2014-04-23",
+        "layout": "post",
+        "readNext": "/",
+        "path": "/glide-carousel/",
+        "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-04-23-glide-carousel/index.md absPath of file"
+      },
+      "fileAbsolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-04-23-glide-carousel/index.md"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-15-js-closure/index.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-15-js-closure/index.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-15-js-closure/index.md absPath of file",
+      "internal": {
+        "content": "---\ntitle: Javascript Closure all wrapped up & why\ndate: \"2014-10-15\"\nlayout: post\nreadNext: \"/\"\npath: \"/js-closure/\"\n---\n\nJavascript Closures are bundles of code or inner functions that have access to outer functions & variables. IT IS THAT SIMPLE! But, understanding why they’re so important quickly become pretty complex.\n{: .first-paragraph}\n\n## JavaScript Closure by Example\n\nThe first thing that comes to mind when I try to think of an example to explain Javascript Closures is the process of microwaving. When we put something, food preferably, in a microwave, we're expecting something tasty to come out after a few minutes. Well, maybe not tasty but definitely different.\n\nWe can think of a Javascript Closure like a microwave. There's an outer function, a chunk of re-usable code, which is represented by a microwave & an inner function which we could think of as the 'thingy' that cooks the food. \n\nWe don't want whatever is cooking that food, to cook us, so we put the food in the microwave (outer function) & then the actual 'thingy' that cooks the food (inner function). That encapsulated process that cooks the food is what & why we use a function.\n\nClosures are important because:\n- They can create private variables\n- They have access to functions & variables of a higher scope\n- They’re useful with time interval functions\n\n## Gettin' more serious about Closures\n\nJavascript Closure is created when an inner function is made accessible from outside of it’s parent function. This is commonly done by returning the inner function. So like when you put food into the microwave & then get it out.\n\n**Examples**\n{% highlight javascript %}\n// What are Closures?\nvar closureFunction = 'Closer are functions ';\nvar rememberWhat = 'that remember ';\nvar theirEnvironment = 'the environment there were created in. ';\n\nvar aVar = closureFunction;\nvar bVar = rememberWhat;\nvar cVar = theirEnvironment;\n\n// let's make some sentences tat describe closure\nvar varA = aVar;\nvar anArray = [];\nvar outerFunction = function() {\n  var varB = bVar;\n  anArray.push( function() {\n    var varC = cVar;\n   document.write(varA + varB + varC);\n  });\n};\nouterFunction();\nanArray[0]();\n\nvar varA = 'Private variables ';\nvar bVar = 'can be accessed ';\nvar cVar = 'with closure. ';\nouterFunction();\n//anArray[0](); //Uncomment & look at the sentence (not good - that is not correct)\nanArray[1]();\n{% endhighlight %}\nView the [live code](//codepen.io/yowainwright/pen/d9926371f494ac0809bb8805d73575d8) sample.\n\n**& another super basic dive into Javascript closure:**\n{% highlight javascript %}\nvar myFunc = function() {\n  var myOtherFunc = function() {\n    document.write('This is a closure');\n  }\n  return myOtherFunc();\n};\nmyFunc();\n{% endhighlight %}\n[Click here](//codepen.io/yowainwright/pen/19d990da9c7cf57945e588461b0bb1f7) to view the live code sample.\n\n{% highlight javascript %}\nvar myFunc = function() {\n  var myOtherFunc = function() {\n    document.write('This is a closure. ');\n  }\n  return myOtherFunc();\n};\n\nvar i = 0;\nsetInterval(function() {\n  i += 1;\n  if (i < 5) {\n    myFunc();\n  }\n}, 1000);\n{% endhighlight %}\nYou can view & play with the code about by going to the [link here](//codepen.io/yowainwright/pen/6d2d1f7e8ae56ea51f5082e1058421e3).\n",
+        "contentDigest": "191e1442537c558e304f7b8571c45320",
+        "type": "MarkdownRemark",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "Javascript Closure all wrapped up & why",
+        "date": "2014-10-15",
+        "layout": "post",
+        "readNext": "/",
+        "path": "/js-closure/",
+        "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-15-js-closure/index.md absPath of file"
+      },
+      "fileAbsolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-15-js-closure/index.md"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-29-css-lesser-known-selectors/index.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-29-css-lesser-known-selectors/index.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-29-css-lesser-known-selectors/index.md absPath of file",
+      "internal": {
+        "content": "---\ntitle: Less used & known CSS selectors, aka attribute selectors\ndate: \"2014-10-29\"\nlayout: post\nreadNext: \"/\"\npath: \"/css-less-known-selectors/\"\n---\n\nHaving written CSS & SASS for years & using [BEM](//csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) it's a rarity that I find the need to use some of the selectors I'll list below but, every once in a while a situation comes up where I'm so thankful that they're there.\n{: .first-paragraph}\n\n**Here are some attribute examples**\n\n- target:&nbsp;`[target=\"val\"]`\n- value:&nbsp;`[target=\"val\"]`\n\n**Here's a reference table of selectors I'll mention in this post:**\n\n| Selector | Example |\n|----------|:-------------:|\n| Begins with | `[attr^=\"val\"]` |\n| Ends with | `[attr$=\"val\"]` |\n| Contains (string) | `[attr*=\"val\"]` |\n| Contains (text) | `[title~=\"text\"]` |\n{: .centered-item .content__table }\n\n## Begins with\n\nThe **Begins with** css selector uses the `^` or carrot and will select an element that starts with the defined value.\n\n**Example**\n{% highlight html %}\n<a href=\"#something\">something</a>\n<a href=\"#not-something\"></a>\n{% endhighlight %}\n\n\n{% highlight css %}\na[href^=\"#something\"] {\n    background: red;\n}\n{% endhighlight %}\n\nIn the example above the first `<a>`, or anchor tag would have a red background & the second `<a>` would have no background.\n\n## Ends with\n\nThe **ends width** css selector uses the `$` or dollar sign and will select an element that ends with the defined value.\n\n**Example**\n{% highlight html %}\n<a href=\"#something-else\">something</a>\n<a href=\"#something\"></a>\n{% endhighlight %}\n\n\n{% highlight css %}\na[href$=\"#else\"] {\n    background: blue;\n}\n{% endhighlight %}\n\nIn the example above the first `<a>`, or anchor tag would have a blue background & the second `<a>` would have no background.\nThis can be useful if your looking to select an something in a script library like [jQuery](http://jquery.com) where the begin of the classname is a standard naming convention.\n\n## Contains (string)\n\nThe **Container (string)** css selector uses the `*` or star and will select an element that has the defined value in a string.\n\n**Example**\n{% highlight html %}\n<a href=\"#something-in-here\">something</a>\n<a href=\"#something\"></a>\n{% endhighlight %}\n\n\n{% highlight css %}\na[href*=\"here\"] {\n    background: yellow;\n}\n{% endhighlight %}\n\nIn the example above the first `<a>`, or anchor tag would have a yellow background & the second `<a>` would have no background. This can be useful if you're trying to select something that has been concatenated into a data attribute.\n\n## Contains (text)\n\nThe **Container (text)** css selector uses the `~` or approx and will select an element that has the defined text in an attribute.\n\n**Example**\n{% highlight html %}\n<a title=\"some special text\">something</a>\n<a title=\"text\"></a>\n{% endhighlight %}\n\n{% highlight css %}\na[href~=\"text\"] {\n    background: yellow;\n}\n{% endhighlight %}\n\nIn the example above the first `<a>`, or anchor tag would have a green background & the second `<a>` would have no background.\nThis can be useful if you're trying to select something that has specific word in a title attribute.\n\n## Summation\n\nThese selectors are powerful; especially when you have to select 3rd party content (content that may or may not be on a page).\n",
+        "contentDigest": "4878940a168b370057a98ea8058a09df",
+        "type": "MarkdownRemark",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "Less used & known CSS selectors, aka attribute selectors",
+        "date": "2014-10-29",
+        "layout": "post",
+        "readNext": "/",
+        "path": "/css-less-known-selectors/",
+        "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-29-css-lesser-known-selectors/index.md absPath of file"
+      },
+      "fileAbsolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-29-css-lesser-known-selectors/index.md"
+    },
+    "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-02-js-argument-keyword/index.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-02-js-argument-keyword/index.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-02-js-argument-keyword/index.md absPath of file",
+      "internal": {
+        "content": "---\ntitle: Javascript for loop & the argument key word\ndate: \"2014-12-02\"\nlayout: post\nreadNext: \"/\"\npath: \"/js-argument-key-word/\"\n---\n\nToday, I was assigned the task of printing logs to the page instead of to the `console` if there was a certain string appended to the url so that the our Q/A engineer could get that data into his program.\n{: .first-paragraph}\n\nMy task was manageable, but before committing my pull request my boss & I went over the debug program (called `debug.js`). The process of describing what's happening in a program I find highly beneficial. As I was talking through the program I noticed the `[argument](//developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)` key word.\n\nThe `argument` key word is an object that stores the arguments passed into a function within the scope of that function.\n\n{% highlight javascript %}\nvar passArguments = function() {\n  return document.write(arguments.length);\n};\npassArguments(1, 2, 3, 4, 5);\n// result: the document prints out 5\n{% endhighlight %}\n\nLive [Code](//codepen.io/yowainwright/pen/2f64d380b74302b396927d297828cd3a)\n\nFor the program that I was working on today, the program takes the first argument of the function `passArguments` as stores it in a variable set as category. Then it loops through the other argemuents & strong them in the logs array.\n\n{% highlight javascript %}\nvar passArguments = function() {\n\tvar category = arguments[0];\n\tlogs = new Array( arguments.length - 1 );\n\tfor (var i = 0, j = logs.length; i < j; i++) {\n\t  logs[i] = arguments[i+1];\n\t}\n\tdocument.write(category + ' : ' + '[' + logs + ']' );\n};\npassArguments('Categories', '1', '2', '3', '4', '5');\n{% endhighlight %}\n\nLive [Code](//codepen.io/yowainwright/pen/6b24e79b8dcd00668619acd396dd4b46)\n\nWhile my boss & I were going over the program, he wrote out the code similarily to how a browser compiles it.\n\n{% highlight javascript %}\narguments = ['ga', 'info a', 'info b', 'info c']\narguments = ['ga', 'info a', 'info b', 'info c']\n\ncategory = 'ga';\nlogs = [ , , ]\n\nfor loop\nstart at: 0\ngo to: 3\n\nfor loop 1( i = 0)\nlogs[0] = 'info a'\nlogs = [ 'info a', , ]\n\nfor loop 2 (i = 1)\nlogs = [ 'info a', 'info b', ]\n\nfor loop 3\nlogs = [ 'info a', 'info b', 'info c']\n\nend for loop\n{% endhighlight %}\n",
+        "contentDigest": "d6f402a77439c765d9b17ec27ae2eea9",
+        "type": "MarkdownRemark",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "Javascript for loop & the argument key word",
+        "date": "2014-12-02",
+        "layout": "post",
+        "readNext": "/",
+        "path": "/js-argument-key-word/",
+        "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-02-js-argument-keyword/index.md absPath of file"
+      },
+      "fileAbsolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-02-js-argument-keyword/index.md"
+    },
+    "SitePage /youre-an-ortiz/": {
+      "path": "/youre-an-ortiz/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/youre-an-ortiz/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "youre-an-ortiz.json",
+      "internalComponentName": "ComponentYoureAnOrtiz",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /youre-an-ortiz/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "329b9983b3b56128b602f1e43d32f8d1",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /js-scope/": {
+      "path": "/js-scope/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/js-scope/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "js-scope.json",
+      "internalComponentName": "ComponentJsScope",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /js-scope/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "606bcd9fac2ba1209194631d230725eb",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /art-lived/": {
+      "path": "/art-lived/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/art-lived/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "art-lived.json",
+      "internalComponentName": "ComponentArtLived",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /art-lived/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "30db27ceab63fd098d5cdac67eef5fc2",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /happy-birthday/": {
+      "path": "/happy-birthday/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/happy-birthday/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "happy-birthday.json",
+      "internalComponentName": "ComponentHappyBirthday",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /happy-birthday/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "82e5263951f87fa780934448cf9c143b",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /glide-carousel/": {
+      "path": "/glide-carousel/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/glide-carousel/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "glide-carousel.json",
+      "internalComponentName": "ComponentGlideCarousel",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /glide-carousel/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "2e6ab0d6d8db0145be435f8bac87b498",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /js-closure/": {
+      "path": "/js-closure/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/js-closure/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "js-closure.json",
+      "internalComponentName": "ComponentJsClosure",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /js-closure/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "491f58ec33485f6be71194b9a9c27f78",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /css-less-known-selectors/": {
+      "path": "/css-less-known-selectors/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/css-less-known-selectors/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "css-less-known-selectors.json",
+      "internalComponentName": "ComponentCssLessKnownSelectors",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /css-less-known-selectors/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "5aedcc6b52e226813657a4d8b0e79827",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /js-argument-key-word/": {
+      "path": "/js-argument-key-word/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/js-argument-key-word/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "js-argument-key-word.json",
+      "internalComponentName": "ComponentJsArgumentKeyWord",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /js-argument-key-word/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "a908a457e360a1f4d175c56d450ee993",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /": {
+      "path": "/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/index.js",
+      "componentChunkName": "page-component---src-pages-index-js",
+      "jsonName": "index.json",
+      "internalComponentName": "ComponentIndex",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "id": "SitePage /",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "80ff98b97dea5b63f3399e98a28e4266",
+        "owner": "internal-data-bridge"
+      }
+    }
+  },
+  "status": {
+    "plugins": {},
+    "PLUGINS_HASH": "a06e38e0efd123ced2f147e0c9489bdd"
+  },
+  "pageDataDependencies": {
+    "nodes": {
+      "Site": [
+        "/youre-an-ortiz/",
+        "/js-scope/",
+        "/art-lived/",
+        "/",
+        "/happy-birthday/",
+        "/glide-carousel/",
+        "/js-closure/",
+        "/css-less-known-selectors/",
+        "/js-argument-key-word/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz/index.md absPath of file >>> MarkdownRemark": [
+        "/youre-an-ortiz/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-06-20-learning-js-scope/index.md absPath of file >>> MarkdownRemark": [
+        "/js-scope/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived/index.md absPath of file >>> MarkdownRemark": [
+        "/art-lived/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-05-05-happy-birthday/index.md absPath of file >>> MarkdownRemark": [
+        "/happy-birthday/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-04-23-glide-carousel/index.md absPath of file >>> MarkdownRemark": [
+        "/glide-carousel/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-15-js-closure/index.md absPath of file >>> MarkdownRemark": [
+        "/js-closure/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-29-css-lesser-known-selectors/index.md absPath of file >>> MarkdownRemark": [
+        "/css-less-known-selectors/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-02-js-argument-keyword/index.md absPath of file >>> MarkdownRemark": [
+        "/js-argument-key-word/"
+      ]
+    },
+    "connections": {
+      "SitePage": [
+        "/dev-404-page/"
+      ],
+      "MarkdownRemark": [
+        "/"
+      ]
+    }
+  }
+}

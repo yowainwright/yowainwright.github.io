@@ -1,0 +1,78 @@
+{
+    "data": {
+        "site": {
+            "siteMetadata": {
+                "title": "Gatsby Starter Blog"
+            }
+        },
+        "allMarkdownRemark": {
+            "edges": [
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/youre-an-ortiz/",
+                            "title": "You're an Ortiz, how I gained family & through them things changed for the better"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/js-scope/",
+                            "title": "Discussing Javascript Scope, let's keep it between us"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/art-lived/",
+                            "title": "Art Lived, A Story Of How A Painting Was Given, Lost & Found"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/happy-birthday/",
+                            "title": "Happy Birthday, a project to say happy birthday"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/glide-carousel/",
+                            "title": "Glide Carousel, a easy to use slider for Semantic UI"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/js-closure/",
+                            "title": "Javascript Closure all wrapped up & why"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/css-less-known-selectors/",
+                            "title": "Less used & known CSS selectors, aka attribute selectors"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/js-argument-key-word/",
+                            "title": "Javascript for loop & the argument key word"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "pathContext": {}
+}
