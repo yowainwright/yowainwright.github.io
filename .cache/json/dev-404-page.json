@@ -1,18 +1,8 @@
 {
     "data": {
         "allSitePage": {
-            "totalCount": 9,
+            "totalCount": 21,
             "edges": [
-                {
-                    "node": {
-                        "path": "/youre-an-ortiz/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/js-scope/"
-                    }
-                },
                 {
                     "node": {
                         "path": "/art-lived/"
@@ -20,12 +10,17 @@
                 },
                 {
                     "node": {
-                        "path": "/happy-birthday/"
+                        "path": "/youre-an-ortiz/"
                     }
                 },
                 {
                     "node": {
                         "path": "/glide-carousel/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/js-scope/"
                     }
                 },
                 {
@@ -41,6 +36,71 @@
                 {
                     "node": {
                         "path": "/js-argument-key-word/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/happy-birthday/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/js-objects/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/js-keyword-this/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/js-private-information/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/making-a-js-plugin/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/kramdown-syntax-cheatsheet/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/known-updates-with-el-capitan-os/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/glendora-mountain-road/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/things-change-william-kentridge/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/node-meetup-debugging-with-yunong-xiao/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/punch-setup/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/creating-aliases/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/making-echo-app/"
                     }
                 },
                 {

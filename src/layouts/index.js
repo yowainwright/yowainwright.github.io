@@ -46,7 +46,7 @@ class Template extends React.Component {
             }}
             to={"/"}
           >
-            Gatsby Starter Blog
+            Jeffry.in
           </Link>
         </h3>
       )

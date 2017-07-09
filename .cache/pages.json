@@ -6,28 +6,23 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "youre-an-ortiz.json",
-        "path": "/youre-an-ortiz/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "js-scope.json",
-        "path": "/js-scope/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "art-lived.json",
         "path": "/art-lived/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "happy-birthday.json",
-        "path": "/happy-birthday/"
+        "jsonName": "youre-an-ortiz.json",
+        "path": "/youre-an-ortiz/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "glide-carousel.json",
         "path": "/glide-carousel/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "js-scope.json",
+        "path": "/js-scope/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -43,6 +38,71 @@
         "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "js-argument-key-word.json",
         "path": "/js-argument-key-word/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "happy-birthday.json",
+        "path": "/happy-birthday/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "js-objects.json",
+        "path": "/js-objects/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "js-keyword-this.json",
+        "path": "/js-keyword-this/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "js-private-information.json",
+        "path": "/js-private-information/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "making-a-js-plugin.json",
+        "path": "/making-a-js-plugin/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "kramdown-syntax-cheatsheet.json",
+        "path": "/kramdown-syntax-cheatsheet/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "known-updates-with-el-capitan-os.json",
+        "path": "/known-updates-with-el-capitan-os/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "glendora-mountain-road.json",
+        "path": "/glendora-mountain-road/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "things-change-william-kentridge.json",
+        "path": "/things-change-william-kentridge/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "node-meetup-debugging-with-yunong-xiao.json",
+        "path": "/node-meetup-debugging-with-yunong-xiao/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "punch-setup.json",
+        "path": "/punch-setup/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "creating-aliases.json",
+        "path": "/creating-aliases/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "making-echo-app.json",
+        "path": "/making-echo-app/"
     },
     {
         "componentChunkName": "page-component---src-pages-index-js",

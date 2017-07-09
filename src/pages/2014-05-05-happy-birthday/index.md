@@ -4,10 +4,15 @@ date: "2014-05-05"
 layout: post
 readNext: "/"
 path: "/happy-birthday/"
+show_image: true
+meta: A post which creates letters with the body that spell out Happy Birthday!
+featured_image: https://yowainwright.imgix.net/hb/hb.jpg
+categories:
+- story
+- projects
 ---
 
 A year ago I was not able to be with one of my dear friends on their birthday so I made this.
-{: .first-paragraph}
 
 _This_ being posed images of myself to make each letter for the word _Happy Birthday_.
 

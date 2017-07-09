@@ -4,6 +4,11 @@ date: "2013-06-20"
 layout: post
 readNext: "/"
 path: "/js-scope/"
+meta: Discussing Javascript Scope & terms that are discussed when talking about it
+share_image: "/assets/icons/js.jpg"
+categories:
+- javascript
+- code
 ---
 
 Javascript **scope** is an essential for keeping & accessing information where we want it & using it when we want to.
@@ -47,13 +52,13 @@ Scope, in Javascript, refers to where stored information can be accessed.
 Local Scope refers the a variable that was declared within a function which means mean that it can only be accessed within that function.
 
 **example:**
-{% highlight javascript %}
+```javascript
 
 var globalVar = ‘This var is global’;
 var myFunc = function() {
      var localVar = ‘This var is local’;
 };
-{% endhighlight %}
+```
 
 ## Execution Context
 
@@ -61,7 +66,7 @@ Execution context is memory scope. It’s created as a program runs.
 
 
 **A fun example which demonstrates scope:**
-{% highlight javascript %}
+```javascript
 
 var makeArray = function() {
     return [];
@@ -76,6 +81,6 @@ console.log(array1 === array2); // returns false
 console.log(array1 == array2); // also, returns false
 // == still returns false because the do not refer to the same object
 // http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3 (1.f.)
-{% endhighlight  %}
+```
 
 Javascript Scope, like a mall, is essential. It's great walking through the mall but you're not at Walmart. You want specialized items. You can walk around the mall & hear that mall music. That's The Global Scope. You don't want to go into a Footlocker to get shoes & walk out with a taco. You don't go to Taco Bell to get the new J's but if you could for the price of a taco - that'd be cool. Where you're able to go to purchase shoes or a taco - that's Lexical Scope. Anything that you buy or other interactions that happen as you go through the mall can be remembered as the execution context.
