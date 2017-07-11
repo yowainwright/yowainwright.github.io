@@ -1,7 +1,7 @@
 {
     "data": {
         "allSitePage": {
-            "totalCount": 21,
+            "totalCount": 57,
             "edges": [
                 {
                     "node": {
@@ -101,6 +101,186 @@
                 {
                     "node": {
                         "path": "/making-echo-app/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/white-rock-lake/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/device-sticky-bits-on-scroll/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/css-pretty-widths-with-calc/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/reframing-content/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/html-is-easy/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/email-share-link/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/arrow-functions/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-1-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-2-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-3-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-4-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/4-categories-js-projects/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/switching-back-to-sublime/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-5-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-6-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-7-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/losing-a-friend/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/arrow-functions-cont/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-8-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/formula-for-commits/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/destructing-function-opts/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-9-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/git-tag-update/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-10-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-11-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-12-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-13-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-14-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-15-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-16-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-17-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-18-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-19-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-20-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/surfing-face/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/turning-37/"
                     }
                 },
                 {

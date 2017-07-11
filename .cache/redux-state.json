@@ -1077,12 +1077,12 @@
       },
       "port": "8000",
       "host": "localhost",
-      "buildTime": "2017-07-09T20:17:07.402Z",
+      "buildTime": "2017-07-11T02:55:38.301Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "6fa91895756d816df6660fb0b1b13639",
+        "contentDigest": "a6b92f000635ce0a7d6a3fd8bc3f8dfb",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -2534,7 +2534,7 @@
       ],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "ac38c9e07246df253b6a2c07af873a15",
+        "contentDigest": "38bedcfd9c1808a76c09a1da1fcf030a",
         "mediaType": "text/x-markdown",
         "type": "File",
         "owner": "gatsby-source-filesystem"
@@ -2543,11 +2543,11 @@
       "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-06-07-white-rock-lake/index.md",
       "relativePath": "2016-06-07-white-rock-lake/index.md",
       "extension": "md",
-      "size": 2042,
-      "prettySize": "2.04 kB",
-      "modifiedTime": "2017-07-09T19:41:59.000Z",
-      "accessTime": "2017-07-09T20:08:35.000Z",
-      "changeTime": "2017-07-09T20:08:35.000Z",
+      "size": 2013,
+      "prettySize": "2.01 kB",
+      "modifiedTime": "2017-07-11T02:55:00.000Z",
+      "accessTime": "2017-07-11T02:55:00.000Z",
+      "changeTime": "2017-07-11T02:55:00.000Z",
       "birthTime": "2017-07-09T00:54:50.000Z",
       "root": "/",
       "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-06-07-white-rock-lake",
@@ -2563,9 +2563,9 @@
       "blksize": 4096,
       "ino": 49058167,
       "blocks": 8,
-      "atime": "2017-07-09T20:08:35.000Z",
-      "mtime": "2017-07-09T19:41:59.000Z",
-      "ctime": "2017-07-09T20:08:35.000Z",
+      "atime": "2017-07-11T02:55:00.000Z",
+      "mtime": "2017-07-11T02:55:00.000Z",
+      "ctime": "2017-07-11T02:55:00.000Z",
       "birthtime": "2017-07-09T00:54:50.000Z"
     },
     "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-07-24-device-scrolling/index.md absPath of file": {
@@ -2748,8 +2748,8 @@
       "children": [],
       "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-06-07-white-rock-lake/index.md absPath of file",
       "internal": {
-        "content": "---\ntitle: Hanging out around White Rock Lake\ndate: \"2016-06-07\"\nlayout: post\nreadNext: \"/\"\npermalink: \"/white-rock-lake/\"\nmeta: Hanging out around White Rock Lake\nnote: no-featured-image\nshow_image: true\nfeatured_image: https://yowainwright.imgix.net/white-rock-lake/brett-riding-sq.jpg\ncategories:\n- story\n---\n\nRiding bikes around [White Rock Lake](https://en.wikipedia.org/wiki/White_Rock_Lake) when I went to Dallas was very special to me. I felt the humid Texas air against my skin. I listened to the sounds of wildlife turn up as the sun went down. The light as it creeped below the horizon of the lake peeked rays through the soft tree landscape. It reminded me of my childhood.\n\nI was surprised by how many families were there, at the lake & how alive the park seemed. When I was done with my ride, my friend pointed out a firefly & said, \"it's been so long since I've seen 1 of those\". \"Me too\", I said.\n\nI felt community in that moment at White Rock that I hadn't felt in years.\n\n<figure>\n\t<img src=\"https://yowainwright.imgix.net/white-rock-lake/brett-riding.jpg\" alt=\"Brett Riding\" />\n</figure>\n\nWhen I was young, traveling between my parent's homes, I would visit family around lakes in Wisconsin. My older cousins would ride boats & water ski. As 1 of the younger cousins, I would swim within the shallow parts around docks. We (other younger cousins as I) would sometimes get in canoes & look for crawfish, turtles & frogs. At night, we would try to catch fireflies.\n\nLife seemed very simple. It seemed like a small place by the water was every family's goal. If 1 family didn't have much - they'd just stay with another family by a lake on the weekend. It felt like community - american community. I don't know if that community exists as much anymore. I know it doesn't for me. I felt very proud & content.\n\n>It felt like community - American community. I don't know if that community exists as much anymore (?).\n\n<figure>\n\t<img src=\"https://yowainwright.imgix.net/white-rock-lake/me-riding.jpg\" alt=\"Me Riding\" />\n</figure>\n",
-        "contentDigest": "350ba9caec7adcda0bfac873c3554454",
+        "content": "---\ntitle: Hanging out around White Rock Lake\ndate: \"2016-06-07\"\nlayout: post\nreadNext: \"/\"\npath: \"/white-rock-lake/\"\nmeta: Hanging out around White Rock Lake\nshow_image: true\nfeatured_image: https://yowainwright.imgix.net/white-rock-lake/brett-riding-sq.jpg\ncategories:\n- story\n---\n\nRiding bikes around [White Rock Lake](https://en.wikipedia.org/wiki/White_Rock_Lake) when I went to Dallas was very special to me. I felt the humid Texas air against my skin. I listened to the sounds of wildlife turn up as the sun went down. The light as it creeped below the horizon of the lake peeked rays through the soft tree landscape. It reminded me of my childhood.\n\nI was surprised by how many families were there, at the lake & how alive the park seemed. When I was done with my ride, my friend pointed out a firefly & said, \"it's been so long since I've seen 1 of those\". \"Me too\", I said.\n\nI felt community in that moment at White Rock that I hadn't felt in years.\n\n<figure>\n\t<img src=\"https://yowainwright.imgix.net/white-rock-lake/brett-riding.jpg\" alt=\"Brett Riding\" />\n</figure>\n\nWhen I was young, traveling between my parent's homes, I would visit family around lakes in Wisconsin. My older cousins would ride boats & water ski. As 1 of the younger cousins, I would swim within the shallow parts around docks. We (other younger cousins as I) would sometimes get in canoes & look for crawfish, turtles & frogs. At night, we would try to catch fireflies.\n\nLife seemed very simple. It seemed like a small place by the water was every family's goal. If 1 family didn't have much - they'd just stay with another family by a lake on the weekend. It felt like community - american community. I don't know if that community exists as much anymore. I know it doesn't for me. I felt very proud & content.\n\n>It felt like community - American community. I don't know if that community exists as much anymore (?).\n\n<figure>\n\t<img src=\"https://yowainwright.imgix.net/white-rock-lake/me-riding.jpg\" alt=\"Me Riding\" />\n</figure>\n",
+        "contentDigest": "46a1192ea2dd322d83f089c9f46f3923",
         "type": "MarkdownRemark",
         "owner": "gatsby-transformer-remark"
       },
@@ -2758,9 +2758,8 @@
         "date": "2016-06-07",
         "layout": "post",
         "readNext": "/",
-        "permalink": "/white-rock-lake/",
+        "path": "/white-rock-lake/",
         "meta": "Hanging out around White Rock Lake",
-        "note": "no-featured-image",
         "show_image": true,
         "featured_image": "https://yowainwright.imgix.net/white-rock-lake/brett-riding-sq.jpg",
         "categories": [
@@ -5470,6 +5469,690 @@
         "owner": "internal-data-bridge"
       }
     },
+    "SitePage /white-rock-lake/": {
+      "path": "/white-rock-lake/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/white-rock-lake/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "white-rock-lake.json",
+      "internalComponentName": "ComponentWhiteRockLake",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /white-rock-lake/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "7333dfe0c5ac88e1fc5f4fcb83a7c2af",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /device-sticky-bits-on-scroll/": {
+      "path": "/device-sticky-bits-on-scroll/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/device-sticky-bits-on-scroll/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "device-sticky-bits-on-scroll.json",
+      "internalComponentName": "ComponentDeviceStickyBitsOnScroll",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /device-sticky-bits-on-scroll/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "659260a4e9f64db1203e04b19fd11583",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /css-pretty-widths-with-calc/": {
+      "path": "/css-pretty-widths-with-calc/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/css-pretty-widths-with-calc/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "css-pretty-widths-with-calc.json",
+      "internalComponentName": "ComponentCssPrettyWidthsWithCalc",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /css-pretty-widths-with-calc/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "8dcd31753722c3da3c4b038a5ca0b43c",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /reframing-content/": {
+      "path": "/reframing-content/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/reframing-content/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "reframing-content.json",
+      "internalComponentName": "ComponentReframingContent",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /reframing-content/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "24fb94b8962cf83ac6213255406ba9b5",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /html-is-easy/": {
+      "path": "/html-is-easy/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/html-is-easy/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "html-is-easy.json",
+      "internalComponentName": "ComponentHtmlIsEasy",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /html-is-easy/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "d24fe77cc1996a03aa79dae202c81bb2",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /email-share-link/": {
+      "path": "/email-share-link/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/email-share-link/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "email-share-link.json",
+      "internalComponentName": "ComponentEmailShareLink",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /email-share-link/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "fbc8e0562e2e01e256aeb84cf5a6c34d",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /arrow-functions/": {
+      "path": "/arrow-functions/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/arrow-functions/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "arrow-functions.json",
+      "internalComponentName": "ComponentArrowFunctions",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /arrow-functions/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "ade81cfb3a23d5a373adba61caf7d2ce",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-1-17/": {
+      "path": "/week-1-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-1-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-1-17.json",
+      "internalComponentName": "ComponentWeek117",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-1-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "961b7c62a8f6add4d7a1f2aac0c1d04d",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-2-17/": {
+      "path": "/week-2-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-2-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-2-17.json",
+      "internalComponentName": "ComponentWeek217",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-2-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "fc650c4f1768ba78cad790f3c333a3a8",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-3-17/": {
+      "path": "/week-3-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-3-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-3-17.json",
+      "internalComponentName": "ComponentWeek317",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-3-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "155546bfa05ff5fc76d7406a95b0daaa",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-4-17/": {
+      "path": "/week-4-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-4-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-4-17.json",
+      "internalComponentName": "ComponentWeek417",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-4-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "f1401293e5bdd7480b9084ab9c83928a",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /4-categories-js-projects/": {
+      "path": "/4-categories-js-projects/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/4-categories-js-projects/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "4-categories-js-projects.json",
+      "internalComponentName": "Component4CategoriesJsProjects",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /4-categories-js-projects/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "ad1b7c028d1efbe21f23e5821a9fe524",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /switching-back-to-sublime/": {
+      "path": "/switching-back-to-sublime/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/switching-back-to-sublime/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "switching-back-to-sublime.json",
+      "internalComponentName": "ComponentSwitchingBackToSublime",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /switching-back-to-sublime/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "5faea9b88898df35101fac381e133ace",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-5-17/": {
+      "path": "/week-5-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-5-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-5-17.json",
+      "internalComponentName": "ComponentWeek517",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-5-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "f689f04742f890531d16b92541760a18",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-6-17/": {
+      "path": "/week-6-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-6-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-6-17.json",
+      "internalComponentName": "ComponentWeek617",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-6-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "a5d6306de480e50681e0e9c2fd4c2d0b",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-7-17/": {
+      "path": "/week-7-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-7-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-7-17.json",
+      "internalComponentName": "ComponentWeek717",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-7-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "306e4d052c94ccc6cc98b76b5a3e6a38",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /losing-a-friend/": {
+      "path": "/losing-a-friend/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/losing-a-friend/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "losing-a-friend.json",
+      "internalComponentName": "ComponentLosingAFriend",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /losing-a-friend/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "bd53b2a79de53a9e045dad01f495e06e",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /arrow-functions-cont/": {
+      "path": "/arrow-functions-cont/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/arrow-functions-cont/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "arrow-functions-cont.json",
+      "internalComponentName": "ComponentArrowFunctionsCont",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /arrow-functions-cont/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "6ef2d0fb218efe5b8a8f9c81579e939d",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-8-17/": {
+      "path": "/week-8-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-8-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-8-17.json",
+      "internalComponentName": "ComponentWeek817",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-8-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "63476588220edd7988319b2e397999f4",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /formula-for-commits/": {
+      "path": "/formula-for-commits/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/formula-for-commits/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "formula-for-commits.json",
+      "internalComponentName": "ComponentFormulaForCommits",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /formula-for-commits/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "c42ebbf38a3566f46e6c1ed1a683088d",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /destructing-function-opts/": {
+      "path": "/destructing-function-opts/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/destructing-function-opts/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "destructing-function-opts.json",
+      "internalComponentName": "ComponentDestructingFunctionOpts",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /destructing-function-opts/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "539effa4217b58f15becbf6a4bfc3e1b",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-9-17/": {
+      "path": "/week-9-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-9-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-9-17.json",
+      "internalComponentName": "ComponentWeek917",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-9-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "4fdba6d40c88fc30e2992fa1764d6574",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /git-tag-update/": {
+      "path": "/git-tag-update/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/git-tag-update/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "git-tag-update.json",
+      "internalComponentName": "ComponentGitTagUpdate",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /git-tag-update/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "225536f92a541d3c1edddb53e36ff844",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-10-17/": {
+      "path": "/week-10-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-10-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-10-17.json",
+      "internalComponentName": "ComponentWeek1017",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-10-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "a169feaf6a150da44863c7beae1fdf1e",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-11-17/": {
+      "path": "/week-11-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-11-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-11-17.json",
+      "internalComponentName": "ComponentWeek1117",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-11-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "b6d1e551e13f50b204d104433f5d1bd3",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-12-17/": {
+      "path": "/week-12-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-12-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-12-17.json",
+      "internalComponentName": "ComponentWeek1217",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-12-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "60d516061e93f590e17de74dd6a97b55",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-13-17/": {
+      "path": "/week-13-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-13-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-13-17.json",
+      "internalComponentName": "ComponentWeek1317",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-13-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "e402c8f7b80685f989db8d839a34463c",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-14-17/": {
+      "path": "/week-14-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-14-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-14-17.json",
+      "internalComponentName": "ComponentWeek1417",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-14-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "42ef39b47c7b6e69b86b4952a4e813c5",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-15-17/": {
+      "path": "/week-15-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-15-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-15-17.json",
+      "internalComponentName": "ComponentWeek1517",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-15-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "b5b373da75c223b6aebd9fd0b1673ff8",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-16-17/": {
+      "path": "/week-16-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-16-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-16-17.json",
+      "internalComponentName": "ComponentWeek1617",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-16-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "65adcfe2dd31599621cbc8b024511aa2",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-17-17/": {
+      "path": "/week-17-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-17-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-17-17.json",
+      "internalComponentName": "ComponentWeek1717",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-17-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "2bab52371d1ade8e74247f76a3a2dfeb",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-18-17/": {
+      "path": "/week-18-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-18-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-18-17.json",
+      "internalComponentName": "ComponentWeek1817",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-18-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "edb148bfd0a01c1eb83c0530172633f0",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-19-17/": {
+      "path": "/week-19-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-19-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-19-17.json",
+      "internalComponentName": "ComponentWeek1917",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-19-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "2fd022b6b40cb846db5d5cfb2bcf2515",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /week-20-17/": {
+      "path": "/week-20-17/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/week-20-17/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "week-20-17.json",
+      "internalComponentName": "ComponentWeek2017",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /week-20-17/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "54b83d4c54e64d68d840a3e17b83c0a7",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /surfing-face/": {
+      "path": "/surfing-face/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/surfing-face/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "surfing-face.json",
+      "internalComponentName": "ComponentSurfingFace",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /surfing-face/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "733aacc62e5b2ff5f465018ed68289c4",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /turning-37/": {
+      "path": "/turning-37/",
+      "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js",
+      "context": {
+        "path": "/turning-37/"
+      },
+      "componentChunkName": "page-component---src-templates-blog-post-js",
+      "jsonName": "turning-37.json",
+      "internalComponentName": "ComponentTurning37",
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "id": "SitePage /turning-37/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "eb25ad17189cc852cfeee21a99153ca2",
+        "owner": "internal-data-bridge"
+      }
+    },
     "SitePage /": {
       "path": "/",
       "component": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/index.js",
@@ -5515,7 +6198,43 @@
         "/node-meetup-debugging-with-yunong-xiao/",
         "/punch-setup/",
         "/creating-aliases/",
-        "/making-echo-app/"
+        "/making-echo-app/",
+        "/white-rock-lake/",
+        "/device-sticky-bits-on-scroll/",
+        "/css-pretty-widths-with-calc/",
+        "/reframing-content/",
+        "/html-is-easy/",
+        "/email-share-link/",
+        "/arrow-functions/",
+        "/week-1-17/",
+        "/week-2-17/",
+        "/week-3-17/",
+        "/week-4-17/",
+        "/4-categories-js-projects/",
+        "/switching-back-to-sublime/",
+        "/week-5-17/",
+        "/week-6-17/",
+        "/week-7-17/",
+        "/losing-a-friend/",
+        "/arrow-functions-cont/",
+        "/week-8-17/",
+        "/formula-for-commits/",
+        "/destructing-function-opts/",
+        "/week-9-17/",
+        "/git-tag-update/",
+        "/week-10-17/",
+        "/week-11-17/",
+        "/week-12-17/",
+        "/week-13-17/",
+        "/week-14-17/",
+        "/week-15-17/",
+        "/week-16-17/",
+        "/week-17-17/",
+        "/week-18-17/",
+        "/week-19-17/",
+        "/week-20-17/",
+        "/surfing-face/",
+        "/turning-37/"
       ],
       "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived/index.md absPath of file >>> MarkdownRemark": [
         "/art-lived/"
@@ -5576,6 +6295,114 @@
       ],
       "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-05-24-echo-app/index.md absPath of file >>> MarkdownRemark": [
         "/making-echo-app/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-06-07-white-rock-lake/index.md absPath of file >>> MarkdownRemark": [
+        "/white-rock-lake/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-07-24-device-scrolling/index.md absPath of file >>> MarkdownRemark": [
+        "/device-sticky-bits-on-scroll/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-07-31-css-content-margins/index.md absPath of file >>> MarkdownRemark": [
+        "/css-pretty-widths-with-calc/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-09-19-reframing-content/index.md absPath of file >>> MarkdownRemark": [
+        "/reframing-content/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-09-30-html-is-easy/index.md absPath of file >>> MarkdownRemark": [
+        "/html-is-easy/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-12-07-email-share-link/index.md absPath of file >>> MarkdownRemark": [
+        "/email-share-link/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-01-06-arrow-functions/index.md absPath of file >>> MarkdownRemark": [
+        "/arrow-functions/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-01-13-week-1-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-1-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-01-17-week-2-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-2-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-01-30-week-3-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-3-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-06-week-4-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-4-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-08-javascript-open-source-eco-system/index.md absPath of file >>> MarkdownRemark": [
+        "/4-categories-js-projects/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-13-back-to-sublime/index.md absPath of file >>> MarkdownRemark": [
+        "/switching-back-to-sublime/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-15-week-5-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-5-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-25-week-6-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-6-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-26-week-7-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-7-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-28-losing-a-friend/index.md absPath of file >>> MarkdownRemark": [
+        "/losing-a-friend/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-03-arrow-functions-cont/index.md absPath of file >>> MarkdownRemark": [
+        "/arrow-functions-cont/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-05-week-8-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-8-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-12-good-commit-messages/index.md absPath of file >>> MarkdownRemark": [
+        "/formula-for-commits/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-12-working-with-opts-es6/index.md absPath of file >>> MarkdownRemark": [
+        "/destructing-function-opts/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-13-week-9-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-9-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-14-git-update-tag/index.md absPath of file >>> MarkdownRemark": [
+        "/git-tag-update/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-27-week-10-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-10-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-27-week-11-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-11-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-06-week-12-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-12-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-18-week-13-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-13-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-19-week-14-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-14-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-19-week-15-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-15-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-19-week-16-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-16-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-05-07-week-17-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-17-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-05-15-week-18-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-18-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-05-22-week-19-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-19-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-05-29-week-20-17/index.md absPath of file >>> MarkdownRemark": [
+        "/week-20-17/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-06-03-face/index.md absPath of file >>> MarkdownRemark": [
+        "/surfing-face/"
+      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-06-09-birthday/index.md absPath of file >>> MarkdownRemark": [
+        "/turning-37/"
       ]
     },
     "connections": {
