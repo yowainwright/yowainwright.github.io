@@ -1077,12 +1077,12 @@
       },
       "port": "8000",
       "host": "localhost",
-      "buildTime": "2017-07-11T02:55:38.301Z",
+      "buildTime": "2017-07-12T17:39:20.988Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "a6b92f000635ce0a7d6a3fd8bc3f8dfb",
+        "contentDigest": "5194d9e60465a0a29099920072d59e4b",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1170,7 +1170,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "61d8447d8762fb5a25782392f2fea9dc",
+        "contentDigest": "2e9eefa810cd4baeaf7db85508fcaa6e",
         "mediaType": "application/javascript",
         "type": "File",
         "owner": "gatsby-source-filesystem"
@@ -1179,11 +1179,11 @@
       "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/index.js",
       "relativePath": "index.js",
       "extension": "js",
-      "size": 1543,
+      "size": 1539,
       "prettySize": "1.54 kB",
-      "modifiedTime": "2017-07-09T07:59:56.000Z",
-      "accessTime": "2017-07-09T16:33:30.000Z",
-      "changeTime": "2017-07-09T07:59:56.000Z",
+      "modifiedTime": "2017-07-12T17:22:30.000Z",
+      "accessTime": "2017-07-12T17:23:16.000Z",
+      "changeTime": "2017-07-12T17:22:30.000Z",
       "birthTime": "2017-07-09T03:02:52.000Z",
       "root": "/",
       "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages",
@@ -1199,9 +1199,9 @@
       "blksize": 4096,
       "ino": 48909582,
       "blocks": 8,
-      "atime": "2017-07-09T16:33:30.000Z",
-      "mtime": "2017-07-09T07:59:56.000Z",
-      "ctime": "2017-07-09T07:59:56.000Z",
+      "atime": "2017-07-12T17:23:16.000Z",
+      "mtime": "2017-07-12T17:22:30.000Z",
+      "ctime": "2017-07-12T17:22:30.000Z",
       "birthtime": "2017-07-09T03:02:52.000Z"
     },
     "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/robots.txt absPath of file": {
