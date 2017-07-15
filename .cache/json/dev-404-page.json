@@ -15,27 +15,7 @@
                 },
                 {
                     "node": {
-                        "path": "/glide-carousel/"
-                    }
-                },
-                {
-                    "node": {
                         "path": "/js-scope/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/js-closure/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/css-less-known-selectors/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/js-argument-key-word/"
                     }
                 },
                 {
@@ -45,7 +25,27 @@
                 },
                 {
                     "node": {
+                        "path": "/glide-carousel/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/js-closure/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/js-argument-key-word/"
+                    }
+                },
+                {
+                    "node": {
                         "path": "/js-objects/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/css-less-known-selectors/"
                     }
                 },
                 {
@@ -55,12 +55,17 @@
                 },
                 {
                     "node": {
+                        "path": "/making-a-js-plugin/"
+                    }
+                },
+                {
+                    "node": {
                         "path": "/js-private-information/"
                     }
                 },
                 {
                     "node": {
-                        "path": "/making-a-js-plugin/"
+                        "path": "/known-updates-with-el-capitan-os/"
                     }
                 },
                 {
@@ -70,7 +75,7 @@
                 },
                 {
                     "node": {
-                        "path": "/known-updates-with-el-capitan-os/"
+                        "path": "/node-meetup-debugging-with-yunong-xiao/"
                     }
                 },
                 {
@@ -85,16 +90,6 @@
                 },
                 {
                     "node": {
-                        "path": "/node-meetup-debugging-with-yunong-xiao/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/punch-setup/"
-                    }
-                },
-                {
-                    "node": {
                         "path": "/creating-aliases/"
                     }
                 },
@@ -105,12 +100,17 @@
                 },
                 {
                     "node": {
-                        "path": "/white-rock-lake/"
+                        "path": "/device-sticky-bits-on-scroll/"
                     }
                 },
                 {
                     "node": {
-                        "path": "/device-sticky-bits-on-scroll/"
+                        "path": "/punch-setup/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/html-is-easy/"
                     }
                 },
                 {
@@ -120,12 +120,12 @@
                 },
                 {
                     "node": {
-                        "path": "/reframing-content/"
+                        "path": "/white-rock-lake/"
                     }
                 },
                 {
                     "node": {
-                        "path": "/html-is-easy/"
+                        "path": "/reframing-content/"
                     }
                 },
                 {
@@ -155,11 +155,6 @@
                 },
                 {
                     "node": {
-                        "path": "/week-4-17/"
-                    }
-                },
-                {
-                    "node": {
                         "path": "/4-categories-js-projects/"
                     }
                 },
@@ -170,12 +165,22 @@
                 },
                 {
                     "node": {
-                        "path": "/week-5-17/"
+                        "path": "/week-4-17/"
                     }
                 },
                 {
                     "node": {
                         "path": "/week-6-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-5-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/arrow-functions-cont/"
                     }
                 },
                 {
@@ -186,11 +191,6 @@
                 {
                     "node": {
                         "path": "/losing-a-friend/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/arrow-functions-cont/"
                     }
                 },
                 {
@@ -210,17 +210,12 @@
                 },
                 {
                     "node": {
-                        "path": "/week-9-17/"
-                    }
-                },
-                {
-                    "node": {
                         "path": "/git-tag-update/"
                     }
                 },
                 {
                     "node": {
-                        "path": "/week-10-17/"
+                        "path": "/week-9-17/"
                     }
                 },
                 {
@@ -240,7 +235,17 @@
                 },
                 {
                     "node": {
+                        "path": "/week-10-17/"
+                    }
+                },
+                {
+                    "node": {
                         "path": "/week-14-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-17-17/"
                     }
                 },
                 {
@@ -255,17 +260,12 @@
                 },
                 {
                     "node": {
-                        "path": "/week-17-17/"
+                        "path": "/week-19-17/"
                     }
                 },
                 {
                     "node": {
                         "path": "/week-18-17/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/week-19-17/"
                     }
                 },
                 {

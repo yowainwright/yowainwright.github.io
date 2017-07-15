@@ -26,40 +26,8 @@
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/glide-carousel/",
-                            "title": "Glide Carousel, a easy to use slider for Semantic UI"
-                        }
-                    }
-                },
-                {
-                    "node": {
-                        "frontmatter": {
                             "path": "/js-scope/",
                             "title": "Discussing Javascript Scope, let's keep it between us"
-                        }
-                    }
-                },
-                {
-                    "node": {
-                        "frontmatter": {
-                            "path": "/js-closure/",
-                            "title": "Javascript Closure all wrapped up & why"
-                        }
-                    }
-                },
-                {
-                    "node": {
-                        "frontmatter": {
-                            "path": "/css-less-known-selectors/",
-                            "title": "Less used & known CSS selectors, aka attribute selectors"
-                        }
-                    }
-                },
-                {
-                    "node": {
-                        "frontmatter": {
-                            "path": "/js-argument-key-word/",
-                            "title": "Javascript for loop & the argument key word"
                         }
                     }
                 },
@@ -74,8 +42,40 @@
                 {
                     "node": {
                         "frontmatter": {
+                            "path": "/glide-carousel/",
+                            "title": "Glide Carousel, a easy to use slider for Semantic UI"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/js-closure/",
+                            "title": "Javascript Closure all wrapped up & why"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/js-argument-key-word/",
+                            "title": "Javascript for loop & the argument key word"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
                             "path": "/js-objects/",
                             "title": "Understanding Javascript Objects - static objects to classes"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/css-less-known-selectors/",
+                            "title": "Less used & known CSS selectors, aka attribute selectors"
                         }
                     }
                 },
@@ -90,6 +90,14 @@
                 {
                     "node": {
                         "frontmatter": {
+                            "path": "/making-a-js-plugin/",
+                            "title": "Template Strings and Template Tagging After Watching ES6 For Everyone"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
                             "path": "/js-private-information/",
                             "title": "Creating private information in JavaScript"
                         }
@@ -98,8 +106,8 @@
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/making-a-js-plugin/",
-                            "title": "Template Strings and Template Tagging After Watching ES6 For Everyone"
+                            "path": "/known-updates-with-el-capitan-os/",
+                            "title": "Known changes needed after updating to El Capitan OS"
                         }
                     }
                 },
@@ -114,8 +122,8 @@
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/known-updates-with-el-capitan-os/",
-                            "title": "Known changes needed after updating to El Capitan OS"
+                            "path": "/node-meetup-debugging-with-yunong-xiao/",
+                            "title": "Node Meetup, debugging with Yunong Xiao"
                         }
                     }
                 },
@@ -138,22 +146,6 @@
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/node-meetup-debugging-with-yunong-xiao/",
-                            "title": "Node Meetup, debugging with Yunong Xiao"
-                        }
-                    }
-                },
-                {
-                    "node": {
-                        "frontmatter": {
-                            "path": "/punch-setup/",
-                            "title": "Punch Static Sites: My experience getting setup"
-                        }
-                    }
-                },
-                {
-                    "node": {
-                        "frontmatter": {
                             "path": "/creating-aliases/",
                             "title": "Creating Aliases on a Mac"
                         }
@@ -170,16 +162,24 @@
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/white-rock-lake/",
-                            "title": "Hanging out around White Rock Lake"
+                            "path": "/device-sticky-bits-on-scroll/",
+                            "title": "All about Sticky Navs & what happens to them on devices"
                         }
                     }
                 },
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/device-sticky-bits-on-scroll/",
-                            "title": "All about Sticky Navs & what happens to them on devices"
+                            "path": "/punch-setup/",
+                            "title": "Punch Static Sites: My experience getting setup"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/html-is-easy/",
+                            "title": "Rant: HTML is easy and that's why we all write it wrong!"
                         }
                     }
                 },
@@ -194,16 +194,16 @@
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/reframing-content/",
-                            "title": "Reframing content responsively with Reframe.js"
+                            "path": "/white-rock-lake/",
+                            "title": "Hanging out around White Rock Lake"
                         }
                     }
                 },
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/html-is-easy/",
-                            "title": "Rant: HTML is easy and that's why we all write it wrong!"
+                            "path": "/reframing-content/",
+                            "title": "Reframing content responsively with Reframe.js"
                         }
                     }
                 },
@@ -250,14 +250,6 @@
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/week-4-17/",
-                            "title": "Week 4, 2017—Great surfing and improving negotiation skills"
-                        }
-                    }
-                },
-                {
-                    "node": {
-                        "frontmatter": {
                             "path": "/4-categories-js-projects/",
                             "title": "The 4 Categories of Frontend JavaScript Projects"
                         }
@@ -274,8 +266,8 @@
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/week-5-17/",
-                            "title": "Week 5, 2017—Analytics Tech and Viewing Ocean Caves"
+                            "path": "/week-4-17/",
+                            "title": "Week 4, 2017—Great surfing and improving negotiation skills"
                         }
                     }
                 },
@@ -284,6 +276,22 @@
                         "frontmatter": {
                             "path": "/week-6-17/",
                             "title": "Week 6, 2017—Looking for rainbows in the rain, shipping analytics and best friends"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/week-5-17/",
+                            "title": "Week 5, 2017—Analytics Tech and Viewing Ocean Caves"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/arrow-functions-cont/",
+                            "title": "Arrow Function Notes After Watching ES6 For Everyone, Continued"
                         }
                     }
                 },
@@ -300,14 +308,6 @@
                         "frontmatter": {
                             "path": "/losing-a-friend/",
                             "title": "Some great memories have Lauren in the foreground"
-                        }
-                    }
-                },
-                {
-                    "node": {
-                        "frontmatter": {
-                            "path": "/arrow-functions-cont/",
-                            "title": "Arrow Function Notes After Watching ES6 For Everyone, Continued"
                         }
                     }
                 },
@@ -346,14 +346,6 @@
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/week-9-17/",
-                            "title": "Week 9, 2017—Getting Back to Surfing, Changing Teams and Feeling Beta"
-                        }
-                    }
-                },
-                {
-                    "node": {
-                        "frontmatter": {
                             "path": "/git-tag-update/",
                             "title": "Updating Git Tags That Have Been Pushed"
                         }
@@ -362,8 +354,8 @@
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/week-10-17/",
-                            "title": "Week 10, A Week With Few Words"
+                            "path": "/week-9-17/",
+                            "title": "Week 9, 2017—Getting Back to Surfing, Changing Teams and Feeling Beta"
                         }
                     }
                 },
@@ -394,8 +386,24 @@
                 {
                     "node": {
                         "frontmatter": {
+                            "path": "/week-10-17/",
+                            "title": "Week 10, A Week With Few Words"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
                             "path": "/week-14-17/",
                             "title": "Week 14, releasing analytics updates and my first trip South in 2017"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "path": "/week-17-17/",
+                            "title": "Week 17, dealing with an ankle injury and using an observer and/or a mediator pattern"
                         }
                     }
                 },
@@ -418,8 +426,8 @@
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/week-17-17/",
-                            "title": "Week 17, dealing with an ankle injury and using an observer and/or a mediator pattern"
+                            "path": "/week-19-17/",
+                            "title": "Week 19, mislabeled mountains and other things I enjoy"
                         }
                     }
                 },
@@ -428,14 +436,6 @@
                         "frontmatter": {
                             "path": "/week-18-17/",
                             "title": "Week 18, a trip to the North West to celebrate my sister's birthday"
-                        }
-                    }
-                },
-                {
-                    "node": {
-                        "frontmatter": {
-                            "path": "/week-19-17/",
-                            "title": "Week 19, mislabeled mountains and other things I enjoy"
                         }
                     }
                 },
