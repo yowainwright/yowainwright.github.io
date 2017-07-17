@@ -1054,12 +1054,12 @@
       },
       "port": "8000",
       "host": "localhost",
-      "buildTime": "2017-07-15T14:04:56.506Z",
+      "buildTime": "2017-07-17T18:48:22.566Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "2ba863999273002b81d9d62f22196420",
+        "contentDigest": "8899010fac2d4a01d87236d3cb4e55e2",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
