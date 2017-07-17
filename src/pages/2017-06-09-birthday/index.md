@@ -1,0 +1,13 @@
+---
+title: Birthday, turning 37 and feeling good about my age 
+date: "2017-06-09"
+layout: post
+readNext: "/"
+path: "/turning-37/"
+meta: A short post about turning 37 and how I feel about it.
+categories:
+- note
+- story
+---
+
+Yesterday, I turned 37. It seemed like only a few days ago that I was walking the streets of Prague—where I lived in high school. I often times reflect on my time alive and realize that there are so many moments that have disappeared to me. Yet, I can live in a worm-hole of just a few seconds for years. I try to keep that in mind everyday. I try to look for moments that will last and be productive during all of the time that doesn't matter much to me.  

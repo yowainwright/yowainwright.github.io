@@ -1,0 +1,41 @@
+---
+title: Week 14, releasing analytics updates and my first trip South in 2017
+date: "2017-04-19"
+layout: post
+readNext: "/"
+path: "/week-14-17/"
+meta: Week 14, I'm releasing a new analytics product and I was able to stay in Encinitas
+  which  for the weekend.
+show_image: true
+imgix: true
+featured_image: https://yowainwright.imgix.net/wk-14/countyline.jpg
+categories:
+- note
+- story
+---
+
+Last week, our cadence on the analytics project grew a lot. We're were on the verge of releasing our new version and creating better test coverage.
+Outside of work, I found time to surf and get to the gym. We had a 3 day weekend so I surfed all 3 days and went down the coast to surf Encinitas.
+
+## Analytics and Stickybits
+
+The ramp up time to productivity on the analytics project is taking some time. The team is good. We just have to get all parts of the team machine firing—and in unison. Last week, I began to see this happening. I'm hoping to see more and faster products gains in the following weeks. 
+
+[Stickybits](https://github.com/dollarshaveclub/stickybits), my most recent User Interface Open Source project is reaching maturity and I've been working hard on promoting it. Not having many followers in the tech space makes that tough but I've started to make gains which is good because I've put some time in understanding `position: sticky` and thinking about it's benefits.
+
+## I've been surfing a lot lately
+
+Surfing has been great for me. I started a few years ago with my roommate at that time, [Garret Martucci](http://garretmartucci.com/). Garret and I were living in [Manhattan Beach, CA](https://en.wikipedia.org/wiki/Manhattan_Beach,_California) so we headed down to beach and surfed a few times. After Garret and I moved out, I stopped surfing before I had really started. Fast forward a few years, I met my friend and co-worker [Justin Berg](http://justinintime.com/). We started meeting before work and surfing. Before I knew it, I was going surfing as much as I could. 
+
+As of now, I've been surfing a lot since last September. It challenges and gives me satisfaction. I find even on the days I struggle catching waves or get into a wave just right, I'm given the opportunity to get frustrated in the ocean by myself—and I _usually_ get a better work out. 🙃 Then, some days, I feel something new 'click' and my mind is opened to something new I enjoy about surfing. This past weekend, turning left started to 'click' for me. It felt exhilarating and empowering to be able to consider going either way on a wave (left or right).
+
+<figure>
+  <img src="//yowainwright.imgix.net/wk-14/carlsbad-1.jpg?w=800&h=800&crop=focalpoint&auto=format" alt="Jetty in Playa Del Ray" />
+</figure>
+
+
+
+
+
+
+

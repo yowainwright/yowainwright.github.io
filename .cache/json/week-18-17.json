@@ -1,0 +1,21 @@
+{
+    "data": {
+        "site": {
+            "siteMetadata": {
+                "title": "Jeffry.in",
+                "author": "Jeff Wainwright"
+            }
+        },
+        "markdownRemark": {
+            "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-05-15-week-18-17/index.md absPath of file >>> MarkdownRemark",
+            "html": "<p>This week I wrapped up work on a variance issue with an analytics tool. Outside of working I was still dealing an ankle injury. I combated these things by heading up to visit my sister for her birthday. My sister has recently be up in Northwestern United States—a great place to enjoy moody weather and lots of coffee. </p>\n<figure>\n  <img src=\"//yowainwright.imgix.net/wk-18/ruby-beach-2.jpg?w=800&h=800&crop=focalpoint&auto=format\" alt=\"Ruby Beach\" />\n</figure>",
+            "frontmatter": {
+                "title": "Week 18, a trip to the North West to celebrate my sister's birthday",
+                "date": "May 15, 2017"
+            }
+        }
+    },
+    "pathContext": {
+        "path": "/week-18-17/"
+    }
+}

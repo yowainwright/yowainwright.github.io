@@ -1,0 +1,15 @@
+---
+title: Face is the place I want to be while surfing
+date: "2017-06-03"
+layout: post
+readNext: "/"
+path: "/surfing-face/"
+meta: Face is the part of the wave that is unbroken. It is where people riding waves want to be while riding
+categories:
+- note
+- story
+---
+
+Over the past 9 months, I've made an effort to become a better surfer. Surfing has been enjoyable, therapeutic and humbling. Riding waves while standing on my feet has been only a small part of my learning. I've had to learn to swim with a surfboard, how to balance my core while paddling, how to balance while sitting and how to attempt to stand while dropping into waves. Most of the past months has been about small progressions and basic new understandings. The goal I've been striving for while learning to surf is to be in the face of the wave before it breaks or after it has broken on the face in the area that is called the corner. 
+
+If I'm standing in the face of the waves, I'm ahead of the break. Metaphorically, I'm ahead of an end. Not only that, I'm defining my destiny. As I've been able to get into the face of waves more and for longer, I've felt amazing feelings: I'm ahead of the end; I'm defining my destiny—at least for a very short time. It's great!

@@ -1,0 +1,37 @@
+---
+title: Week 20, code more, surf more—managing time for happiness
+date: "2017-05-29"
+layout: post
+readNext: "/"
+path: "/week-20-17/"
+meta: Week 20, figuring out how to code more and surf more—what makes me happy
+categories:
+- note
+- story
+---
+
+This week, while assessing current life, I realized with procedural changes I had room to grow time spent doing what makes me happy. Growing happiness and optimizing my time are the same—if I optimize my time, I have more time to do things that make me happy. I try assess how happy I am and what is not making me happy often. 
+
+I know that its time to make my happiness level assessment when I have unhappy. Unhappiness is a very abstract thing. It is not factual or logical. It is good to have unhappy feelings. Unhappy feelings stress what is not working or what needs to be worked on. In the past, I would have feelings of unhappiness but I would not think about why I was unhappy logically. This caused me to feel unhappy longer. It caused me feel powerless to change my unhappiness. I was reliant on unhappy situations to end by themselves or change outside of the scope of my control.
+
+4 years ago, I realized that if I thought through why I was feeling unhappy—really breaking down what was not going well—that I was able to either accepts the problems or make a conscious effort to fix it.
+
+There are steps I follow and questions I ask to address my unhappy feelings. 
+
+-  I address potential physical issues
+   -  Am I having physical pains that might be associated with my feelings?
+   -  Am I having physical ailments that could be leading me to have unhappy feelings?
+   -  How's my sleep schedule been?
+-  What is a realistic worst case scenario of my unhappy feelings? 
+   -  What are my options if that scenario happens?
+   -  What is the actual probability of that scenario happening?
+-  What is a realistic time line to a resolution of my unhappy feelings?
+-  Who can I share theses feelings with that will be respectful yet honest?
+
+Digging into the worst case scenario, for me, makes it a problem to be solved rather than something that is an abstract unhappy feeling. I am able to think of alternate options, possible benefits and every time so far—I've realized that the worst case scenario is not very realistic. 
+
+Last week, I was having some unhappy feelings. I thought about why. I had suffered an ankle injury. I had projects that seemed bleek. My team seemed stressed. Taking the time to think about these things relaxed me. Rather than thinking about my sucky situation, I began to think about solutions. I talked to a few people as soon as I could about it. Together, we assessed my feelings and then solutions. The result, so far, has been more productivity which has lead to more fun for me. 
+
+<figure>
+  <img src="//yowainwright.imgix.net/wk-20/beach.jpg?w=800&h=800&crop=focalpoint&auto=format" alt="Brian and Lala at Sunset Beach" />
+</figure>
