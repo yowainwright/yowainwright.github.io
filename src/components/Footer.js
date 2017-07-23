@@ -3,8 +3,6 @@ import React from "react"
 class Footer extends React.Component {
   render() {
     return (
-      ~
-      {" "}
       <footer
         class="site-footer"
         role="contentinfo"

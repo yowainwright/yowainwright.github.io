@@ -1054,12 +1054,12 @@
       },
       "port": "8000",
       "host": "localhost",
-      "buildTime": "2017-07-17T18:48:22.566Z",
+      "buildTime": "2017-07-23T19:50:07.746Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "8899010fac2d4a01d87236d3cb4e55e2",
+        "contentDigest": "c79653ed7421ee21524043db185f8b23",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1108,7 +1108,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "2e9eefa810cd4baeaf7db85508fcaa6e",
+        "contentDigest": "541c4ffee729090ca9d45ebf4c97e966",
         "mediaType": "application/javascript",
         "type": "File",
         "owner": "gatsby-source-filesystem"
@@ -1117,12 +1117,12 @@
       "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/index.js",
       "relativePath": "index.js",
       "extension": "js",
-      "size": 1539,
-      "prettySize": "1.54 kB",
-      "modifiedTime": "2017-07-12T17:22:30.000Z",
-      "accessTime": "2017-07-15T14:04:58.000Z",
-      "changeTime": "2017-07-12T17:22:30.000Z",
-      "birthTime": "2017-07-09T03:02:52.000Z",
+      "size": 1531,
+      "prettySize": "1.53 kB",
+      "modifiedTime": "2017-07-23T20:04:31.000Z",
+      "accessTime": "2017-07-23T20:04:32.000Z",
+      "changeTime": "2017-07-23T20:04:31.000Z",
+      "birthTime": "2017-07-17T18:47:13.000Z",
       "root": "/",
       "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages",
       "base": "index.js",
@@ -1135,12 +1135,12 @@
       "gid": 20,
       "rdev": 0,
       "blksize": 4096,
-      "ino": 48909582,
+      "ino": 51488599,
       "blocks": 8,
-      "atime": "2017-07-15T14:04:58.000Z",
-      "mtime": "2017-07-12T17:22:30.000Z",
-      "ctime": "2017-07-12T17:22:30.000Z",
-      "birthtime": "2017-07-09T03:02:52.000Z"
+      "atime": "2017-07-23T20:04:32.000Z",
+      "mtime": "2017-07-23T20:04:31.000Z",
+      "ctime": "2017-07-23T20:04:31.000Z",
+      "birthtime": "2017-07-17T18:47:13.000Z"
     },
     "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/.DS_Store absPath of file": {
       "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/.DS_Store absPath of file",

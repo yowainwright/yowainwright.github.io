@@ -13,12 +13,12 @@ class BlogIndex extends React.Component {
     const siteTitle = get(this, "props.data.site.siteMetadata.title")
     const posts = get(this, "props.data.allMarkdownRemark.edges")
     posts.reverse();
-    posts.forEach(post => {
+    posts.forEach((post, i) => {
       if (post.node.path !== "/404/") {
         const title = get(post, "node.frontmatter.title") || post.node.path
         pageLinks.push(
           <li
-            key={post.node.path}
+            key={i}
             style={{
               marginBottom: rhythm(1 / 4),
             }}
