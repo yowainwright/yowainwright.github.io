@@ -1,6 +1,6 @@
 var plugins = [{
       plugin: require('/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-plugin-google-analytics/gatsby-browser.js'),
-      options: {"plugins":[]},
+      options: {"plugins":[],"trackingId":"GTM-NRFFQ9"},
     },{
       plugin: require('/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/node_modules/gatsby-plugin-offline/gatsby-browser.js'),
       options: {"plugins":[]},

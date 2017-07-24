@@ -7,6 +7,7 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
   },
   "dependencies": {
+    "babel-eslint": "^7.2.3",
     "gatsby": "^1.0.0",
     "gatsby-link": "^1.0.0",
     "gatsby-plugin-feed": "^1.0.9",

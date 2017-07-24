@@ -16,8 +16,18 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "glide-carousel.json",
+        "path": "/glide-carousel/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "js-scope.json",
         "path": "/js-scope/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "js-closure.json",
+        "path": "/js-closure/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -26,13 +36,8 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "glide-carousel.json",
-        "path": "/glide-carousel/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "js-closure.json",
-        "path": "/js-closure/"
+        "jsonName": "css-less-known-selectors.json",
+        "path": "/css-less-known-selectors/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -46,8 +51,8 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "css-less-known-selectors.json",
-        "path": "/css-less-known-selectors/"
+        "jsonName": "js-private-information.json",
+        "path": "/js-private-information/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -56,13 +61,8 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "making-a-js-plugin.json",
-        "path": "/making-a-js-plugin/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "js-private-information.json",
-        "path": "/js-private-information/"
+        "jsonName": "kramdown-syntax-cheatsheet.json",
+        "path": "/kramdown-syntax-cheatsheet/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -71,8 +71,8 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "kramdown-syntax-cheatsheet.json",
-        "path": "/kramdown-syntax-cheatsheet/"
+        "jsonName": "glendora-mountain-road.json",
+        "path": "/glendora-mountain-road/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -81,13 +81,18 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "glendora-mountain-road.json",
-        "path": "/glendora-mountain-road/"
+        "jsonName": "things-change-william-kentridge.json",
+        "path": "/things-change-william-kentridge/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "things-change-william-kentridge.json",
-        "path": "/things-change-william-kentridge/"
+        "jsonName": "punch-setup.json",
+        "path": "/punch-setup/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "white-rock-lake.json",
+        "path": "/white-rock-lake/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -106,23 +111,13 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "punch-setup.json",
-        "path": "/punch-setup/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "html-is-easy.json",
-        "path": "/html-is-easy/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "css-pretty-widths-with-calc.json",
         "path": "/css-pretty-widths-with-calc/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "white-rock-lake.json",
-        "path": "/white-rock-lake/"
+        "jsonName": "html-is-easy.json",
+        "path": "/html-is-easy/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -141,13 +136,18 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "week-2-17.json",
+        "path": "/week-2-17/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "week-1-17.json",
         "path": "/week-1-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-2-17.json",
-        "path": "/week-2-17/"
+        "jsonName": "week-4-17.json",
+        "path": "/week-4-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -156,18 +156,13 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "4-categories-js-projects.json",
-        "path": "/4-categories-js-projects/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "switching-back-to-sublime.json",
         "path": "/switching-back-to-sublime/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-4-17.json",
-        "path": "/week-4-17/"
+        "jsonName": "4-categories-js-projects.json",
+        "path": "/4-categories-js-projects/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -181,8 +176,8 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "arrow-functions-cont.json",
-        "path": "/arrow-functions-cont/"
+        "jsonName": "losing-a-friend.json",
+        "path": "/losing-a-friend/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -191,13 +186,13 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "losing-a-friend.json",
-        "path": "/losing-a-friend/"
+        "jsonName": "arrow-functions-cont.json",
+        "path": "/arrow-functions-cont/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-8-17.json",
-        "path": "/week-8-17/"
+        "jsonName": "making-a-js-plugin.json",
+        "path": "/making-a-js-plugin/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -211,8 +206,8 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "git-tag-update.json",
-        "path": "/git-tag-update/"
+        "jsonName": "week-8-17.json",
+        "path": "/week-8-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -221,18 +216,8 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-11-17.json",
-        "path": "/week-11-17/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-12-17.json",
-        "path": "/week-12-17/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-13-17.json",
-        "path": "/week-13-17/"
+        "jsonName": "git-tag-update.json",
+        "path": "/git-tag-update/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -241,18 +226,23 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "week-11-17.json",
+        "path": "/week-11-17/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "week-13-17.json",
+        "path": "/week-13-17/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "week-12-17.json",
+        "path": "/week-12-17/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "week-14-17.json",
         "path": "/week-14-17/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-17-17.json",
-        "path": "/week-17-17/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-15-17.json",
-        "path": "/week-15-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -261,18 +251,28 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "week-15-17.json",
+        "path": "/week-15-17/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "week-17-17.json",
+        "path": "/week-17-17/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "week-19-17.json",
         "path": "/week-19-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-18-17.json",
-        "path": "/week-18-17/"
+        "jsonName": "week-20-17.json",
+        "path": "/week-20-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-20-17.json",
-        "path": "/week-20-17/"
+        "jsonName": "week-18-17.json",
+        "path": "/week-18-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",

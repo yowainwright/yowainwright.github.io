@@ -4,7 +4,7 @@ date: "2017-06-09"
 layout: post
 readNext: "/"
 path: "/turning-37/"
-meta: A short post about turning 37 and how I feel about it.
+description: A short post about turning 37 and how I feel about it.
 categories:
 - note
 - story

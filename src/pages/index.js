@@ -14,19 +14,32 @@ class BlogIndex extends React.Component {
     const posts = get(this, "props.data.allMarkdownRemark.edges")
     posts.reverse();
     posts.forEach((post, i) => {
+      const title = get(post, "node.frontmatter.title") || post.node.path
+      const date = get(post, "node.frontmatter.date ") || post.node.date
+      const path = get(post, "node.frontmatter.path") || post.node.path
+      const description = get(post, "node.frontmatter.description") || post.node.description
+      const image = get(post, "node.frontmatter.featured_image") ? `https://yowainwright.imgix.net${node.frontmatter.featured_image}?w=1000&amp;h=1000&amp;fit=crop&amp;crop=focalpoint&amp;auto=format` : null
+      const header = (
+        <header className="post__header">
+          <h2 className="post__title"><Link to={path}>{title}</Link></h2>
+          <time>{date}</time>
+        </header>
+      )
+      const figure = (
+        <figure itemType="http://schema.org/ImageObject">
+          <Link to={path}>
+            <img src={image} alt={title} itemProp='contentURL' />
+          </Link>
+        </figure>
+      )
       if (post.node.path !== "/404/") {
-        const title = get(post, "node.frontmatter.title") || post.node.path
         pageLinks.push(
-          <li
-            key={i}
-            style={{
-              marginBottom: rhythm(1 / 4),
-            }}
-          >
-            <Link style={{ boxShadow: "none" }} to={post.node.frontmatter.path}>
-              {post.node.frontmatter.title}
-            </Link>
-          </li>
+           <article key={i} className="post--article">
+              {header}
+              {figure}
+              <p>{description}</p>
+              <hr />
+            </article>
         )
       }
     })
@@ -34,9 +47,7 @@ class BlogIndex extends React.Component {
     return (
       <div>
         <Helmet title={get(this, "props.data.site.siteMetadata.title")} />
-        <ul>
-          {pageLinks}
-        </ul>
+        {pageLinks}
       </div>
     )
   }
@@ -55,7 +66,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           frontmatter {
