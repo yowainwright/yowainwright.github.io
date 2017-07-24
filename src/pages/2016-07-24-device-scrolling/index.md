@@ -6,7 +6,7 @@ readNext: "/"
 path: "/device-sticky-bits-on-scroll/"
 meta: Creating a sticky nav that works while scrolling is a difficult issue that must
   be solved, many sites navigations are set to fixed position
-share_image: "/assets/icons/js.jpg"
+share_image: "https://yowainwright.imgix.net/icons/js.jpg"
 categories:
 - javascript
 - code

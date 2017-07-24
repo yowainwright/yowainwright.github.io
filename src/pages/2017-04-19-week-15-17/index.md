@@ -7,9 +7,8 @@ readNext: "/"
 path: "/week-15-17/"
 meta: Week 15, I was trying to be a good friend, surf, and gain momentum on StickyBits—an
   open source project I did.
-show_image: true
-imgix: true
-featured_image: https://yowainwright.imgix.net/wk-15/sunset-surf-spot.jpg
+featured_image: "https://yowainwright.imgix.net/wk-15/sunset-surf-spot.jpg"
+share_image: null
 categories:
 - note
 - story

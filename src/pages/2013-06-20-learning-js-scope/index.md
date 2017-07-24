@@ -5,7 +5,8 @@ layout: post
 readNext: "/"
 path: "/js-scope/"
 meta: Discussing Javascript Scope & terms that are discussed when talking about it
-share_image: "/assets/icons/js.jpg"
+share_image: "https://yowainwright.imgix.net/icons/js.jpg"
+featured_image: null
 categories:
 - javascript
 - code

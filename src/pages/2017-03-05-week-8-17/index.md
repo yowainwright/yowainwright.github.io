@@ -7,7 +7,8 @@ readNext: "/"
 path: "/week-8-17/"
 meta: Week 8, 2017—This week I was sick, lost a few friends and started to do some
   transitioning.
-featured_image: https://yowainwright.imgix.net/wk-7/running.jpg
+featured_image: "https://yowainwright.imgix.net/wk-7/running.jpg"
+share_image: null
 categories:
 - note
 - story

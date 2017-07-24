@@ -8,17 +8,15 @@ import { rhythm } from "../utils/typography"
 
 class BlogIndex extends React.Component {
   render() {
-    // console.log("props", this.props)
     const pageLinks = []
     const siteTitle = get(this, "props.data.site.siteMetadata.title")
     const posts = get(this, "props.data.allMarkdownRemark.edges")
-    posts.reverse();
+    posts.reverse()
     posts.forEach((post, i) => {
       const title = get(post, "node.frontmatter.title") || post.node.path
       const date = get(post, "node.frontmatter.date ") || post.node.date
       const path = get(post, "node.frontmatter.path") || post.node.path
-      const description = get(post, "node.frontmatter.description") || post.node.description
-      const image = get(post, "node.frontmatter.featured_image") ? `https://yowainwright.imgix.net${node.frontmatter.featured_image}?w=1000&amp;h=1000&amp;fit=crop&amp;crop=focalpoint&amp;auto=format` : null
+      const description = get(post, "node.frontmatter.meta") || post.node.meta
       const header = (
         <header className="post__header">
           <h2 className="post__title"><Link to={path}>{title}</Link></h2>
@@ -26,11 +24,7 @@ class BlogIndex extends React.Component {
         </header>
       )
       const figure = (
-        <figure itemType="http://schema.org/ImageObject">
-          <Link to={path}>
-            <img src={image} alt={title} itemProp='contentURL' />
-          </Link>
-        </figure>
+        <figure itemType="http://schema.org/ImageObject"></figure>
       )
       if (post.node.path !== "/404/") {
         pageLinks.push(
@@ -71,8 +65,8 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             path
-          }
-          frontmatter {
+            path
+            meta
             title
           }
         }

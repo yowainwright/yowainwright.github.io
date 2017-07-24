@@ -5,7 +5,8 @@ layout: post
 readNext: "/"
 path: "/punch-setup/"
 meta: 'Punch Static Sites: My experience getting setup'
-share_image: "/assets/icons/js.jpg"
+share_image: "https://yowainwright.imgix.net/icons/js.jpg"
+featured_image: null
 categories:
 - javascript
 - code

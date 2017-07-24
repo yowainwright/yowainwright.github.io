@@ -5,9 +5,8 @@ layout: post
 readNext: "/"
 path: "/week-13-17/"
 meta: Week 13, I am doing it—camping above Ojai, surfing and finding to code.
-show_image: true
-imgix: true
-featured_image: https://yowainwright.imgix.net/wk-13/hwy-33-3.jpg
+featured_image: "https://yowainwright.imgix.net/wk-13/hwy-33-3.jpg"
+share_image: null
 categories:
 - note
 - story

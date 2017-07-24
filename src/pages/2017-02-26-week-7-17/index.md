@@ -6,9 +6,8 @@ readNext: "/"
 path: "/week-7-17/"
 meta: Week 7, 2017—This week I'm beginning to climbing more consistently and catch
   waves more consistently.
-show_image: true
-imgix: true
-featured_image: https://yowainwright.imgix.net/wk-7/hands-up.jpg
+featured_image: "https://yowainwright.imgix.net/wk-7/hands-up.jpg"
+share_image: null
 categories:
 - note
 - story

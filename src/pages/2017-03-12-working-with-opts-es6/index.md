@@ -7,6 +7,7 @@ path: "/destructing-function-opts/"
 meta: This post explains how to use ES6 function destructuring for more readable JavaScript
   Plugin Options.
 share_image: https://yowainwright.imgix.net/icons/js.jpg
+featured_image: null
 categories:
 - html
 - code

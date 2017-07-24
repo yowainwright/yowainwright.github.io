@@ -8,7 +8,7 @@
         },
         "markdownRemark": {
             "id": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-19-week-15-17/index.md absPath of file >>> MarkdownRemark",
-            "html": "<p>This past week has been a tough week for some people I’m close to. I thought about my friends a lot and tried to be there from them as best I could think of. With a lot of extra hard work outside of work, a user interface plugin I made for Dollar Shave Club has started to gain momentum. Check out and start <a href=\"https://github.com/dollarshaveclub/stickybits\">Stickybits</a>! </p>\n<figure>\n  <img src=\"//yowainwright.imgix.net/wk-15/playa-del-rey-point.jpg?w=800&h=800&crop=focalpoint&auto=format\" alt=\"Jetty in Playa Del Ray\" />\n</figure>",
+            "html": "<p>This past week has been a tough week for some people I'm close to. I thought about my friends a lot and tried to be there from them as best I could think of. With a lot of extra hard work outside of work, a user interface plugin I made for Dollar Shave Club has started to gain momentum. Check out and start <a href=\"https://github.com/dollarshaveclub/stickybits\">Stickybits</a>! </p>\n<figure>\n  <img src=\"//yowainwright.imgix.net/wk-15/playa-del-rey-point.jpg?w=800&h=800&crop=focalpoint&auto=format\" alt=\"Jetty in Playa Del Ray\" />\n</figure>",
             "frontmatter": {
                 "title": "Week 15, was about being a good friend, surfing and gaining momentum on another open source project.",
                 "date": "April 19, 2017"

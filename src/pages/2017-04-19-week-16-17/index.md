@@ -5,7 +5,8 @@ layout: post
 readNext: "/"
 path: "/week-16-17/"
 meta: Week 16, I had a great week surfing and felt pretty tired besides that.
-show_image: false
+featured_image: null
+share_image: null
 categories:
 - note
 - story

@@ -6,9 +6,8 @@ readNext: "/"
 path: "/week-12-17/"
 meta: Week 12, I was given the opportunity to catch up with some people I care about
   and visit Wrightwood, CA for the first time.
-show_image: true
-imgix: true
-featured_image: https://yowainwright.imgix.net/wk-12/mormon-rocks-2.jpg
+featured_image: "https://yowainwright.imgix.net/wk-12/mormon-rocks-2.jpg"
+share_image: null
 categories:
 - note
 - story

@@ -5,7 +5,8 @@ layout: post
 readNext: "/"
 path: "/kramdown-syntax-cheatsheet/"
 meta: Kramdown Syntax Cheatsheet
-share_image: "/assets/icons/markdown.jpg"
+share_image: "https://yowainwright.imgix.net/icons/markdown.jpg"
+featured_image: null
 categories:
 - code
 ---

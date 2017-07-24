@@ -5,7 +5,8 @@ layout: post
 readNext: "/"
 path: "/node-meetup-debugging-with-yunong-xiao/"
 meta: Node Meetup, debugging with Yunong Xiao
-share_image: "/assets/icons/js.jpg"
+share_image: "https://yowainwright.imgix.net/icons/js.jpg"
+featured_image: null
 categories:
 - javascript
 - code

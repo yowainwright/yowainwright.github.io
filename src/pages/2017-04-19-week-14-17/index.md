@@ -6,9 +6,8 @@ readNext: "/"
 path: "/week-14-17/"
 meta: Week 14, I'm releasing a new analytics product and I was able to stay in Encinitas
   which  for the weekend.
-show_image: true
-imgix: true
-featured_image: https://yowainwright.imgix.net/wk-14/countyline.jpg
+featured_image: "https://yowainwright.imgix.net/wk-14/countyline.jpg"
+share_image: null
 categories:
 - note
 - story

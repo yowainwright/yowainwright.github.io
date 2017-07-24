@@ -5,7 +5,8 @@ layout: post
 readNext: "/"
 path: "/making-a-js-plugin/"
 meta: Moments writing JavaScript Plugins
-share_image: "/assets/icons/js.jpg"
+share_image: "https://yowainwright.imgix.net/icons/icons/js.jpg"
+featured_image: null
 categories:
 - code
 - javascript

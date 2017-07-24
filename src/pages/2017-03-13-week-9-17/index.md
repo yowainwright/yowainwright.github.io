@@ -6,9 +6,8 @@ readNext: "/"
 path: "/week-9-17/"
 meta: Week 9, 2017—This week I was feeling pretty beta after changing teams, recovering
   from being sick and getting back to surfing.
-show_image: true
-imgix: true
-featured_image: https://yowainwright.imgix.net/wk-9/wave-rocks-4.jpg
+featured_image: "https://yowainwright.imgix.net/wk-9/wave-rocks-4.jpg"
+share_image: null
 categories:
 - note
 - story

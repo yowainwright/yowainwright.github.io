@@ -5,7 +5,8 @@ layout: post
 readNext: "/"
 path: "/js-argument-key-word/"
 meta: Javascript for loop & the argument key word defined & why it is misunderstood
-share_image: "/assets/icons/js.jpg"
+share_image: "https://yowainwright.imgix.net/icons/js.jpg"
+featured_image: null
 categories:
 - javascript
 - code

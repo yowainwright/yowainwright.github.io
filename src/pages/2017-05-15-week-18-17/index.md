@@ -5,6 +5,8 @@ layout: post
 readNext: "/"
 path: "/week-18-17/"
 meta: Week 18, a trip to the North West to celebrate my sister's birthday
+featured_image: null
+share_image: null
 categories:
 - note
 - story

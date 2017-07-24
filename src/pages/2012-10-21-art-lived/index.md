@@ -5,7 +5,7 @@ layout: post
 readNext: "/"
 path: "/art-lived/"
 meta: Art Lived, A Story Of A Painting
-featured_image: "/assets/art-lived/art-lived-start.jpg"
+featured_image: "https://yowainwright.imgix.net/art-lived/art-lived-start.jpg"
 category: 
 - story
 ---

@@ -7,9 +7,8 @@ readNext: "/"
 path: "/week-6-17/"
 meta: Week 6, 2017—This week we shipped analytics at work. I had some of my best friends
   in town and we surfed and explored some spots in Malibu.
-show_image: true
-imgix: true
-featured_image: https://yowainwright.imgix.net/wk-6/mike-mork.jpg
+featured_image: "https://yowainwright.imgix.net/wk-6/mike-mork.jpg"
+share_image: null
 categories:
 - note
 - story

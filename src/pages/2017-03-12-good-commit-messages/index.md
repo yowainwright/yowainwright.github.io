@@ -6,6 +6,7 @@ readNext: "/"
 path: "/formula-for-commits/"
 meta: This post describes AWW, a formula for writing meaningful commit messages with git.
 share_image: https://yowainwright.imgix.net/icons/os.jpg
+featured_image: null
 categories:
 - code
 - terminal

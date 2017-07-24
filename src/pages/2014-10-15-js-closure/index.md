@@ -8,7 +8,8 @@ meta: Understanding Javascript Closure & what it does
 categories:
 - code
 - javascript
-share_image: "/assets/icons/js.jpg"
+share_image: "https://yowainwright.imgix.net/icons/js.jpg"
+featured_image: null
 ---
 
 Javascript Closures are bundles of code or inner functions that have access to outer functions & variables. IT IS THAT SIMPLE! But, understanding why they’re so important quickly become pretty complex.

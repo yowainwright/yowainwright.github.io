@@ -6,7 +6,8 @@ readNext: "/"
 path: "/html-is-easy/"
 meta: Rant post  about potential gains from understanding and being more thoughtful
   when writing html.
-share_image: "/assets/icons/os.jpg"
+share_image: "https://yowainwright.imgix.net/icons/os.jpg"
+featured_image: null
 categories:
 - html
 - code

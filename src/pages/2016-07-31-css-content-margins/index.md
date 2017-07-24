@@ -6,7 +6,8 @@ readNext: "/"
 path: "/css-pretty-widths-with-calc/"
 meta: Use css calc values to set the width of elements within content blocks & create
   beautiful layouts, for devices especially
-share_image: "/assets/icons/sass.jpg"
+share_image: "https://yowainwright.imgix.net/icons/sass.jpg"
+featured_image: null
 categories:
 - code
 - css

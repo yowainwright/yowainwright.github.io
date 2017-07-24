@@ -6,7 +6,8 @@ readNext: "/"
 path: "/making-echo-app/"
 meta: MDR Developer Meetup, Making an Echo App for Alexa by Patrick Teague of Washio
   & Hacking on the Impact Spectrum with Andrew Skotzko
-share_image: "/assets/icons/js.jpg"
+share_image: "https://yowainwright.imgix.net/icons/js.jpg"
+featured_image: null
 categories:
 - javascript
 - code

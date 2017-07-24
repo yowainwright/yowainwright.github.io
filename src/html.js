@@ -8,7 +8,7 @@ export default class HTML extends React.Component {
       <html lang="en">
         <HeadContent />
         <body>
-          <div
+          <main
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />

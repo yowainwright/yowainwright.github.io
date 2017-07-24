@@ -5,6 +5,8 @@ layout: post
 readNext: "/"
 path: "/week-20-17/"
 meta: Week 20, figuring out how to code more and surf more—what makes me happy
+featured_image: null
+share_image: null
 categories:
 - note
 - story

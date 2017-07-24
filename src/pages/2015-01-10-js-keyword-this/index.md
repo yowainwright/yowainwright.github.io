@@ -6,7 +6,8 @@ readNext: "/"
 path: "/js-keyword-this/"
 meta: This post goes into Javascript's keyword this, how it is defined & why it is
   misunderstood
-share_image: "/assets/icons/js.jpg"
+share_image: "https://yowainwright.imgix.net/icons/js.jpg"
+featured_image: null
 categories:
 - javascript
 - code

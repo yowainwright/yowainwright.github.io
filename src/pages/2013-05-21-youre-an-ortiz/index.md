@@ -7,7 +7,7 @@ readNext: "/"
 path: "/youre-an-ortiz/"
 meta: A short story about moving out of the a bad situation & into a good one
 note: no-featured-image
-featured_image: "/assets/youre-an-ortiz/water-puddles.jpg"
+featured_image: "https://yowainwright.imgix.net/youre-an-ortiz/water-puddles.jpg"
 category:
 - story
 ---

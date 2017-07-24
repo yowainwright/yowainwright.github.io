@@ -6,9 +6,8 @@ readNext: "/"
 path: "/week-5-17/"
 meta: Week 5, 2017—I was able to work on analytics for a current project and see Ocean
   Caves at Leo Carillo State Beach.
-show_image: true
-imgix: true
-featured_image: https://yowainwright.imgix.net/wk-5/leo-carillo-rock.jpg
+featured_image: "https://yowainwright.imgix.net/wk-5/leo-carillo-rock.jpg"
+share_image: "https://yowainwright.imgix.net/wk-5/leo-carillo-rock.jpg"
 categories:
 - note
 - story

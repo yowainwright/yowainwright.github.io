@@ -6,7 +6,8 @@ readNext: "/"
 path: "/making-a-js-plugin/"
 meta: This post summarizes my notes on template strings and template tagging after
   watching Wes Bos's ES6 For Everyone
-share_image: "/assets/icons/js.jpg"
+share_image: "https://yowainwright.imgix.net/icons/js.jpg"
+featured_image: null
 categories:
 - code
 - javascript

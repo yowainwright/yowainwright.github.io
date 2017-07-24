@@ -5,7 +5,8 @@ layout: post
 readNext: "/"
 path: "/known-updates-with-el-capitan-os/"
 meta: Known changes needed after updating to El Capitan OS
-share_image: "/assets/icons/os.jpg"
+share_image: "https://yowainwright.imgix.net/icons/os.jpg"
+featured_image: null
 categories:
 - os
 - code

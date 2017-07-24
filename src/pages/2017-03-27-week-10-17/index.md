@@ -9,6 +9,8 @@ categories:
 -  story
 meta: Week 10, 2017—This was a week with few words as I was transitioning teams at
   work, sick and injured.
+featured_image: null
+share_image: null
 ---
 
 I'm getting to this post a bit late—1 week. Why? I switched teams at work. I'm now be working on an analytics product. 

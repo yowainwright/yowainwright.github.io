@@ -11,18 +11,13 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "youre-an-ortiz.json",
-        "path": "/youre-an-ortiz/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "glide-carousel.json",
         "path": "/glide-carousel/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "js-scope.json",
-        "path": "/js-scope/"
+        "jsonName": "youre-an-ortiz.json",
+        "path": "/youre-an-ortiz/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -36,8 +31,8 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "css-less-known-selectors.json",
-        "path": "/css-less-known-selectors/"
+        "jsonName": "js-scope.json",
+        "path": "/js-scope/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -46,18 +41,13 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "css-less-known-selectors.json",
+        "path": "/css-less-known-selectors/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "js-objects.json",
         "path": "/js-objects/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "js-private-information.json",
-        "path": "/js-private-information/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "js-keyword-this.json",
-        "path": "/js-keyword-this/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -66,8 +56,8 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "known-updates-with-el-capitan-os.json",
-        "path": "/known-updates-with-el-capitan-os/"
+        "jsonName": "js-keyword-this.json",
+        "path": "/js-keyword-this/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -76,23 +66,18 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "node-meetup-debugging-with-yunong-xiao.json",
-        "path": "/node-meetup-debugging-with-yunong-xiao/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "things-change-william-kentridge.json",
         "path": "/things-change-william-kentridge/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "punch-setup.json",
-        "path": "/punch-setup/"
+        "jsonName": "node-meetup-debugging-with-yunong-xiao.json",
+        "path": "/node-meetup-debugging-with-yunong-xiao/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "white-rock-lake.json",
-        "path": "/white-rock-lake/"
+        "jsonName": "making-a-js-plugin.json",
+        "path": "/making-a-js-plugin/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -101,8 +86,23 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "making-echo-app.json",
-        "path": "/making-echo-app/"
+        "jsonName": "js-private-information.json",
+        "path": "/js-private-information/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "white-rock-lake.json",
+        "path": "/white-rock-lake/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "known-updates-with-el-capitan-os.json",
+        "path": "/known-updates-with-el-capitan-os/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "punch-setup.json",
+        "path": "/punch-setup/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -111,13 +111,18 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "css-pretty-widths-with-calc.json",
-        "path": "/css-pretty-widths-with-calc/"
+        "jsonName": "html-is-easy.json",
+        "path": "/html-is-easy/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "html-is-easy.json",
-        "path": "/html-is-easy/"
+        "jsonName": "making-echo-app.json",
+        "path": "/making-echo-app/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "arrow-functions.json",
+        "path": "/arrow-functions/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -131,13 +136,13 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "arrow-functions.json",
-        "path": "/arrow-functions/"
+        "jsonName": "week-4-17.json",
+        "path": "/week-4-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-2-17.json",
-        "path": "/week-2-17/"
+        "jsonName": "css-pretty-widths-with-calc.json",
+        "path": "/css-pretty-widths-with-calc/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -146,23 +151,23 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-4-17.json",
-        "path": "/week-4-17/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "week-3-17.json",
         "path": "/week-3-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "switching-back-to-sublime.json",
-        "path": "/switching-back-to-sublime/"
+        "jsonName": "week-2-17.json",
+        "path": "/week-2-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "4-categories-js-projects.json",
         "path": "/4-categories-js-projects/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "arrow-functions-cont.json",
+        "path": "/arrow-functions-cont/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -176,28 +181,13 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "switching-back-to-sublime.json",
+        "path": "/switching-back-to-sublime/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "losing-a-friend.json",
         "path": "/losing-a-friend/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-7-17.json",
-        "path": "/week-7-17/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "arrow-functions-cont.json",
-        "path": "/arrow-functions-cont/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "making-a-js-plugin.json",
-        "path": "/making-a-js-plugin/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "formula-for-commits.json",
-        "path": "/formula-for-commits/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -206,13 +196,13 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-8-17.json",
-        "path": "/week-8-17/"
+        "jsonName": "week-7-17.json",
+        "path": "/week-7-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-9-17.json",
-        "path": "/week-9-17/"
+        "jsonName": "week-8-17.json",
+        "path": "/week-8-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -221,18 +211,13 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-10-17.json",
-        "path": "/week-10-17/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "week-11-17.json",
         "path": "/week-11-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-13-17.json",
-        "path": "/week-13-17/"
+        "jsonName": "formula-for-commits.json",
+        "path": "/formula-for-commits/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -241,13 +226,23 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-14-17.json",
-        "path": "/week-14-17/"
+        "jsonName": "week-10-17.json",
+        "path": "/week-10-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-16-17.json",
-        "path": "/week-16-17/"
+        "jsonName": "week-13-17.json",
+        "path": "/week-13-17/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "week-9-17.json",
+        "path": "/week-9-17/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "week-14-17.json",
+        "path": "/week-14-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -261,13 +256,13 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-19-17.json",
-        "path": "/week-19-17/"
+        "jsonName": "week-16-17.json",
+        "path": "/week-16-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-20-17.json",
-        "path": "/week-20-17/"
+        "jsonName": "week-19-17.json",
+        "path": "/week-19-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -276,13 +271,18 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "turning-37.json",
+        "path": "/turning-37/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "surfing-face.json",
         "path": "/surfing-face/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "turning-37.json",
-        "path": "/turning-37/"
+        "jsonName": "week-20-17.json",
+        "path": "/week-20-17/"
     },
     {
         "componentChunkName": "page-component---src-pages-index-js",

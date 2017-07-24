@@ -6,8 +6,8 @@ readNext: "/"
 path: "/switching-back-to-sublime/"
 meta: This post discusses why I switched back to the Sublime text dditor after trying
   out Atom, another text editor.
-imgix: true
-share_image: https://yowainwright.imgix.net/icons/js.jpg
+share_image: "https://yowainwright.imgix.net/icons/js.jpg"
+featured_image: null
 categories:
 - code
 - os

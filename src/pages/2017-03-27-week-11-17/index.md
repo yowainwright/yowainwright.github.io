@@ -6,9 +6,8 @@ path: "/week-11-17/"
 layout: post
 meta: Week 11, 2017 was fair. I got some good surfing time on a new fun board and
   I felt more comfortable in my new position at work.
-show_image: true
-imgix: true
-featured_image: https://yowainwright.imgix.net/wk-11/jetty-1.jpg
+featured_image: "https://yowainwright.imgix.net/wk-11/jetty-1.jpg"
+share_image: null
 categories:
 - note
 - story

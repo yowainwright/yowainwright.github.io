@@ -6,7 +6,8 @@ readNext: "/"
 path: "/reframing-content/"
 meta: Reframing content, one of the most important things to present well on a content
   site is embedded content.
-share_image: "/assets/reframing-content/aspect-ratio.jpg"
+share_image: "https://yowainwright.imgix.net/reframing-content/aspect-ratio.jpg"
+featured_image: null
 categories:
 - code
 - js

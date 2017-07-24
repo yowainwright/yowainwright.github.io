@@ -5,9 +5,8 @@ layout: post
 readNext: "/"
 path: "/week-19-17/"
 meta: Week 19, mislabeled mountains and other things I enjoy.
-show_image: true
-imgix: true
-featured_image: https://yowainwright.imgix.net/wk-19/snow-mountains.jpg
+featured_image: "https://yowainwright.imgix.net/wk-19/snow-mountains.jpg"
+share_image: null
 categories:
 - note
 - story

@@ -6,7 +6,8 @@ readNext: "/"
 path: "/arrow-functions/"
 meta: This post reviews some things about arrow functions that I learned from Wes
   Bos's ES6 for everyone.
-share_image: "/assets/icons/js.jpg"
+share_image: "https://yowainwright.imgix.net/icons/js.jpg"
+featured_image: null
 categories:
 - html
 - code
