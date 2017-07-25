@@ -1007,12 +1007,12 @@
       },
       "port": "8000",
       "host": "localhost",
-      "buildTime": "2017-07-25T03:10:34.649Z",
+      "buildTime": "2017-07-25T17:53:01.170Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "f3266a495bb85a8ce613236c3b2f0a3b",
+        "contentDigest": "5ac18c2ea86733e841426787234b7a1c",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1262,7 +1262,7 @@
       ],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "472da85f4b51d55c190427d08d441546",
+        "contentDigest": "858e958b8ef539bd46f19a350b2f57bb",
         "mediaType": "text/x-markdown",
         "type": "File",
         "owner": "gatsby-source-filesystem"
@@ -1271,11 +1271,11 @@
       "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz/index.md",
       "relativePath": "2013-05-21-youre-an-ortiz/index.md",
       "extension": "md",
-      "size": 2245,
-      "prettySize": "2.25 kB",
-      "modifiedTime": "2017-07-24T08:05:04.000Z",
-      "accessTime": "2017-07-24T08:05:04.000Z",
-      "changeTime": "2017-07-24T08:05:04.000Z",
+      "size": 2223,
+      "prettySize": "2.22 kB",
+      "modifiedTime": "2017-07-25T17:34:41.000Z",
+      "accessTime": "2017-07-25T17:53:03.000Z",
+      "changeTime": "2017-07-25T17:34:41.000Z",
       "birthTime": "2017-07-17T18:47:13.000Z",
       "root": "/",
       "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz",
@@ -1291,9 +1291,9 @@
       "blksize": 4096,
       "ino": 51488487,
       "blocks": 8,
-      "atime": "2017-07-24T08:05:04.000Z",
-      "mtime": "2017-07-24T08:05:04.000Z",
-      "ctime": "2017-07-24T08:05:04.000Z",
+      "atime": "2017-07-25T17:53:03.000Z",
+      "mtime": "2017-07-25T17:34:41.000Z",
+      "ctime": "2017-07-25T17:34:41.000Z",
       "birthtime": "2017-07-17T18:47:13.000Z"
     },
     "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-15-js-closure/index.md absPath of file": {
@@ -3565,8 +3565,8 @@
       "children": [],
       "parent": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz/index.md absPath of file",
       "internal": {
-        "content": "---\ntitle: You're an Ortiz, how I gained family & through them things changed for the\n  better\ndate: \"2013-05-21\"\nlayout: post\nreadNext: \"/\"\npath: \"/youre-an-ortiz/\"\nmeta: A short story about moving out of the a bad situation & into a good one\nnote: no-featured-image\nfeatured_image: \"https://yowainwright.imgix.net/youre-an-ortiz/water-puddles.jpg\"\ncategory:\n- story\n---\n\nIn 2010 I was in a pretty low spot. I had been laid off from my job earlier that year and moved into a low-income area to save money. It turned into a nightmare.\n{: .first-paragraph }\n\nMy situation went from not very good to pretty bad one day in July when a rain storm came. Our apartment on the top floor started to flood. Water started free flowing through the panelling. We didn't know what to do and had no where to go. Then our roof literally started to cave in.\n\n<figure>\n<img src=\"https://yowainwright.imgix.net/youre-an-ortiz/water-logged-ceiling.jpg\" alt=\"Image of the painting the day of\" /> \n</figure>\n\nI was working at a bike shop in Pilsen (a neighborhood of Chicago) and had expressed my worry that I may have no place to go to the shop's owner.\n\n> \"Sounds like we have to clear out the attic.\" Henry (the shop owner) said.\n\n<figure>\n<img src=\"https://yowainwright.imgix.net/youre-an-ortiz/water-puddles.jpg\" alt=\"My apartment on day 3 when the ceiling started to cave in\" /> \n</figure>\n\nI helped Henry and his family clear out the attic and that's where I lived for the next two months before moving to Washington D.C.\nHenry, Ricky, Abel, Veronica and many others took such good care of me and I was able to get back on my feet.\n\n<figure>\n<img src=\"https://yowainwright.imgix.net/youre-an-ortiz/henry-working-on-bike.jpg\" alt=\"Henry working on my bike\" /> \n</figure>\n\nA few months later, I started working for a stock exchange. My life did a complete 180!\nI talk to the Henry and the rest of the Ortiz family regularly and thank them for what they did for me.\nHenry always replies \"You're family. You're an Ortiz and I am proud of you.\"\n\n<figure>\n<img src=\"https://yowainwright.imgix.net/youre-an-ortiz/text-message.jpg\" alt=\"Image of a text that Henry sent me\" /> \n</figure>\n\n> Henry always replies \"You're family. You're an Ortiz and I am proud of you.\"\n",
-        "contentDigest": "2ad1bd16a9a77f90ad7acc823fbd03a7",
+        "content": "---\ntitle: You're an Ortiz, how I gained family & through them things changed for the\n  better\ndate: \"2013-05-21\"\nlayout: post\nreadNext: \"/\"\npath: \"/youre-an-ortiz/\"\nmeta: A short story about moving out of the a bad situation & into a good one\nnote: no-featured-image\nfeatured_image: \"https://yowainwright.imgix.net/youre-an-ortiz/water-puddles.jpg\"\ncategory:\n- story\n---\n\nIn 2010 I was in a pretty low spot. I had been laid off from my job earlier that year and moved into a low-income area to save money. It turned into a nightmare.\n\nMy situation went from not very good to pretty bad one day in July when a rain storm came. Our apartment on the top floor started to flood. Water started free flowing through the panelling. We didn't know what to do and had no where to go. Then our roof literally started to cave in.\n\n<figure>\n<img src=\"https://yowainwright.imgix.net/youre-an-ortiz/water-logged-ceiling.jpg\" alt=\"Image of the painting the day of\" /> \n</figure>\n\nI was working at a bike shop in Pilsen (a neighborhood of Chicago) and had expressed my worry that I may have no place to go to the shop's owner.\n\n> \"Sounds like we have to clear out the attic.\" Henry (the shop owner) said.\n\n<figure>\n<img src=\"https://yowainwright.imgix.net/youre-an-ortiz/water-puddles.jpg\" alt=\"My apartment on day 3 when the ceiling started to cave in\" /> \n</figure>\n\nI helped Henry and his family clear out the attic and that's where I lived for the next two months before moving to Washington D.C.\nHenry, Ricky, Abel, Veronica and many others took such good care of me and I was able to get back on my feet.\n\n<figure>\n<img src=\"https://yowainwright.imgix.net/youre-an-ortiz/henry-working-on-bike.jpg\" alt=\"Henry working on my bike\" /> \n</figure>\n\nA few months later, I started working for a stock exchange. My life did a complete 180!\nI talk to the Henry and the rest of the Ortiz family regularly and thank them for what they did for me.\nHenry always replies \"You're family. You're an Ortiz and I am proud of you.\"\n\n<figure>\n<img src=\"https://yowainwright.imgix.net/youre-an-ortiz/text-message.jpg\" alt=\"Image of a text that Henry sent me\" /> \n</figure>\n\n> Henry always replies \"You're family. You're an Ortiz and I am proud of you.\"\n",
+        "contentDigest": "7bf0aa66d16fcfc25444fe901e7a95e3",
         "type": "MarkdownRemark",
         "owner": "gatsby-transformer-remark"
       },

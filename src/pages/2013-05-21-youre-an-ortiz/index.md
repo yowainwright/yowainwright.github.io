@@ -13,7 +13,6 @@ category:
 ---
 
 In 2010 I was in a pretty low spot. I had been laid off from my job earlier that year and moved into a low-income area to save money. It turned into a nightmare.
-{: .first-paragraph }
 
 My situation went from not very good to pretty bad one day in July when a rain storm came. Our apartment on the top floor started to flood. Water started free flowing through the panelling. We didn't know what to do and had no where to go. Then our roof literally started to cave in.
 

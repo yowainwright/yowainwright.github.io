@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "gatsby-link"
 
 // Import typefaces
 import "typeface-montserrat"
