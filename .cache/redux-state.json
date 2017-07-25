@@ -1007,12 +1007,12 @@
       },
       "port": "8000",
       "host": "localhost",
-      "buildTime": "2017-07-24T07:21:37.470Z",
+      "buildTime": "2017-07-25T03:10:34.649Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "4f4357c10e7cdccf5a46b7f5b6180b79",
+        "contentDigest": "f3266a495bb85a8ce613236c3b2f0a3b",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1139,7 +1139,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "660316bc32094fe5b9c7c2d9f4f1accd",
+        "contentDigest": "142e2e4a08b62659db4f222a4814ff45",
         "mediaType": "application/javascript",
         "type": "File",
         "owner": "gatsby-source-filesystem"
@@ -1148,11 +1148,11 @@
       "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/index.js",
       "relativePath": "index.js",
       "extension": "js",
-      "size": 1921,
-      "prettySize": "1.92 kB",
-      "modifiedTime": "2017-07-24T08:26:22.000Z",
-      "accessTime": "2017-07-24T08:26:22.000Z",
-      "changeTime": "2017-07-24T08:26:22.000Z",
+      "size": 2244,
+      "prettySize": "2.24 kB",
+      "modifiedTime": "2017-07-25T03:39:19.000Z",
+      "accessTime": "2017-07-25T03:39:19.000Z",
+      "changeTime": "2017-07-25T03:39:19.000Z",
       "birthTime": "2017-07-17T18:47:13.000Z",
       "root": "/",
       "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages",
@@ -1168,9 +1168,9 @@
       "blksize": 4096,
       "ino": 51488599,
       "blocks": 8,
-      "atime": "2017-07-24T08:26:22.000Z",
-      "mtime": "2017-07-24T08:26:22.000Z",
-      "ctime": "2017-07-24T08:26:22.000Z",
+      "atime": "2017-07-25T03:39:19.000Z",
+      "mtime": "2017-07-25T03:39:19.000Z",
+      "ctime": "2017-07-25T03:39:19.000Z",
       "birthtime": "2017-07-17T18:47:13.000Z"
     },
     "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived/index.md absPath of file": {

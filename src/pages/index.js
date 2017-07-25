@@ -17,15 +17,24 @@ class BlogIndex extends React.Component {
       const date = get(post, "node.frontmatter.date ") || post.node.date
       const path = get(post, "node.frontmatter.path") || post.node.path
       const description = get(post, "node.frontmatter.meta") || post.node.meta
+      const featuredImage = get(post, "node.frontmatter.featured_image") || post.node.featured_image
+      const noImage = typeof featuredImage === undefined
       const header = (
         <header className="post__header">
           <h2 className="post__title"><Link to={path}>{title}</Link></h2>
           <time>{date}</time>
         </header>
       )
-      const figure = (
-        <figure itemType="http://schema.org/ImageObject"></figure>
-      )
+      let figure
+      if (!noImage) {
+        figure = (
+          <figure itemType="http://schema.org/ImageObject">
+            <img src={featuredImage} itemProp="contentURL" />
+          </figure>
+        )
+      } else {
+        figure = ''
+      }
       if (post.node.path !== "/404/") {
         pageLinks.push(
            <article key={i} className="post--article">
@@ -65,9 +74,9 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             path
-            path
             meta
             title
+            featured_image
           }
         }
       }
