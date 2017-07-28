@@ -1,31 +1,11 @@
 {
     "data": {
         "allSitePage": {
-            "totalCount": 57,
+            "totalCount": 58,
             "edges": [
                 {
                     "node": {
                         "path": "/art-lived/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/glide-carousel/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/youre-an-ortiz/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/js-closure/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/happy-birthday/"
                     }
                 },
                 {
@@ -35,7 +15,22 @@
                 },
                 {
                     "node": {
-                        "path": "/js-argument-key-word/"
+                        "path": "/youre-an-ortiz/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/glide-carousel/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/happy-birthday/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/js-closure/"
                     }
                 },
                 {
@@ -45,7 +40,27 @@
                 },
                 {
                     "node": {
+                        "path": "/js-argument-key-word/"
+                    }
+                },
+                {
+                    "node": {
                         "path": "/js-objects/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/js-keyword-this/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/js-private-information/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/making-a-js-plugin/"
                     }
                 },
                 {
@@ -55,7 +70,7 @@
                 },
                 {
                     "node": {
-                        "path": "/js-keyword-this/"
+                        "path": "/known-updates-with-el-capitan-os/"
                     }
                 },
                 {
@@ -75,7 +90,7 @@
                 },
                 {
                     "node": {
-                        "path": "/making-a-js-plugin/"
+                        "path": "/punch-setup/"
                     }
                 },
                 {
@@ -85,7 +100,7 @@
                 },
                 {
                     "node": {
-                        "path": "/js-private-information/"
+                        "path": "/making-echo-app/"
                     }
                 },
                 {
@@ -95,32 +110,7 @@
                 },
                 {
                     "node": {
-                        "path": "/known-updates-with-el-capitan-os/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/punch-setup/"
-                    }
-                },
-                {
-                    "node": {
                         "path": "/device-sticky-bits-on-scroll/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/html-is-easy/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/making-echo-app/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/arrow-functions/"
                     }
                 },
                 {
@@ -130,12 +120,7 @@
                 },
                 {
                     "node": {
-                        "path": "/email-share-link/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/week-4-17/"
+                        "path": "/html-is-easy/"
                     }
                 },
                 {
@@ -145,12 +130,17 @@
                 },
                 {
                     "node": {
-                        "path": "/week-1-17/"
+                        "path": "/email-share-link/"
                     }
                 },
                 {
                     "node": {
-                        "path": "/week-3-17/"
+                        "path": "/arrow-functions/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-1-17/"
                     }
                 },
                 {
@@ -160,22 +150,17 @@
                 },
                 {
                     "node": {
+                        "path": "/week-3-17/"
+                    }
+                },
+                {
+                    "node": {
                         "path": "/4-categories-js-projects/"
                     }
                 },
                 {
                     "node": {
-                        "path": "/arrow-functions-cont/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/week-6-17/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/week-5-17/"
+                        "path": "/week-4-17/"
                     }
                 },
                 {
@@ -185,12 +170,12 @@
                 },
                 {
                     "node": {
-                        "path": "/losing-a-friend/"
+                        "path": "/week-5-17/"
                     }
                 },
                 {
                     "node": {
-                        "path": "/destructing-function-opts/"
+                        "path": "/week-6-17/"
                     }
                 },
                 {
@@ -200,17 +185,17 @@
                 },
                 {
                     "node": {
+                        "path": "/losing-a-friend/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/arrow-functions-cont/"
+                    }
+                },
+                {
+                    "node": {
                         "path": "/week-8-17/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/git-tag-update/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/week-11-17/"
                     }
                 },
                 {
@@ -220,7 +205,17 @@
                 },
                 {
                     "node": {
-                        "path": "/week-12-17/"
+                        "path": "/destructing-function-opts/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-9-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/git-tag-update/"
                     }
                 },
                 {
@@ -230,12 +225,17 @@
                 },
                 {
                     "node": {
-                        "path": "/week-13-17/"
+                        "path": "/week-11-17/"
                     }
                 },
                 {
                     "node": {
-                        "path": "/week-9-17/"
+                        "path": "/week-12-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-13-17/"
                     }
                 },
                 {
@@ -250,17 +250,7 @@
                 },
                 {
                     "node": {
-                        "path": "/week-17-17/"
-                    }
-                },
-                {
-                    "node": {
                         "path": "/week-16-17/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/week-19-17/"
                     }
                 },
                 {
@@ -270,12 +260,12 @@
                 },
                 {
                     "node": {
-                        "path": "/turning-37/"
+                        "path": "/week-17-17/"
                     }
                 },
                 {
                     "node": {
-                        "path": "/surfing-face/"
+                        "path": "/week-19-17/"
                     }
                 },
                 {
@@ -285,7 +275,22 @@
                 },
                 {
                     "node": {
+                        "path": "/surfing-face/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/turning-37/"
+                    }
+                },
+                {
+                    "node": {
                         "path": "/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/archive/"
                     }
                 }
             ]

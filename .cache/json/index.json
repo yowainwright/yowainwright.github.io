@@ -120,20 +120,20 @@
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/week-11-17/",
-                            "meta": "Week 11, 2017 was fair. I got some good surfing time on a new fun board and I felt more comfortable in my new position at work.",
-                            "title": "Week 11, 2017—Got Some Good Surfing In and Felt More Comfortable On My New Project",
-                            "featured_image": "https://yowainwright.imgix.net/wk-11/jetty-1.jpg"
+                            "path": "/week-10-17/",
+                            "meta": "Week 10, 2017—This was a week with few words as I was transitioning teams at work, sick and injured.",
+                            "title": "Week 10, A Week With Few Words",
+                            "featured_image": null
                         }
                     }
                 },
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/week-10-17/",
-                            "meta": "Week 10, 2017—This was a week with few words as I was transitioning teams at work, sick and injured.",
-                            "title": "Week 10, A Week With Few Words",
-                            "featured_image": null
+                            "path": "/week-11-17/",
+                            "meta": "Week 11, 2017 was fair. I got some good surfing time on a new fun board and I felt more comfortable in my new position at work.",
+                            "title": "Week 11, 2017—Got Some Good Surfing In and Felt More Comfortable On My New Project",
+                            "featured_image": "https://yowainwright.imgix.net/wk-11/jetty-1.jpg"
                         }
                     }
                 },
@@ -160,9 +160,9 @@
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/destructing-function-opts/",
-                            "meta": "This post explains how to use ES6 function destructuring for more readable JavaScript Plugin Options.",
-                            "title": "Using ES6 Function Destructuring with JavaScript Plugin Options",
+                            "path": "/formula-for-commits/",
+                            "meta": "This post describes AWW, a formula for writing meaningful commit messages with git.",
+                            "title": "AWW—A Formula For Writing Git Commits",
                             "featured_image": null
                         }
                     }
@@ -170,9 +170,9 @@
                 {
                     "node": {
                         "frontmatter": {
-                            "path": "/formula-for-commits/",
-                            "meta": "This post describes AWW, a formula for writing meaningful commit messages with git.",
-                            "title": "AWW—A Formula For Writing Git Commits",
+                            "path": "/destructing-function-opts/",
+                            "meta": "This post explains how to use ES6 function destructuring for more readable JavaScript Plugin Options.",
+                            "title": "Using ES6 Function Destructuring with JavaScript Plugin Options",
                             "featured_image": null
                         }
                     }

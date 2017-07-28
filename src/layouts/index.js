@@ -1,11 +1,14 @@
 import React from "react"
 import Link from "gatsby-link"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 import { Container } from "react-responsive-grid"
 
 import { rhythm, scale } from "../utils/typography"
 
 class Template extends React.Component {
   render() {
+
     const { location, children } = this.props
     let header
     if (location.pathname === "/") {
@@ -22,7 +25,11 @@ class Template extends React.Component {
       )
     }
     return (
-      <Container style={{maxWidth: rhythm(24), padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,}}>{header}{children()}</Container>
+      <Container style={{maxWidth: rhythm(24), padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,}}>
+        <Header />
+        {header}{children()}
+        <Footer />
+      </Container>
     )
   }
 }

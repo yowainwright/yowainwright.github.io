@@ -28,6 +28,10 @@ class HeadContent extends React.Component {
       <head>
         <meta name="robots" content="index,follow" />
         <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Jeffry.in" />
+        <meta property="og:image" content="https://yowainwright.imgix.net/w.jpg" itemProp="image" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
         {this.props.headComponents}
         <TypographyStyle typography={typography} />
         {css}
