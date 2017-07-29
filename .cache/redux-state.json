@@ -1010,12 +1010,12 @@
       },
       "port": "8000",
       "host": "localhost",
-      "buildTime": "2017-07-29T00:39:11.930Z",
+      "buildTime": "2017-07-29T01:37:43.645Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "796b51ac89fd6b1bb00e0f052e5d859e",
+        "contentDigest": "7295b23b6c7159c8e0f750eccce37aaf",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1103,7 +1103,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "a7491bbdae006c1327521208149e862e",
+        "contentDigest": "51f589d7f4e4e8310c17f28b011af75e",
         "mediaType": "application/javascript",
         "type": "File",
         "owner": "gatsby-source-filesystem"
@@ -1112,11 +1112,11 @@
       "absolutePath": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/index.js",
       "relativePath": "index.js",
       "extension": "js",
-      "size": 2530,
-      "prettySize": "2.53 kB",
-      "modifiedTime": "2017-07-29T00:26:55.000Z",
-      "accessTime": "2017-07-29T00:26:55.000Z",
-      "changeTime": "2017-07-29T00:26:55.000Z",
+      "size": 2561,
+      "prettySize": "2.56 kB",
+      "modifiedTime": "2017-07-29T01:55:37.000Z",
+      "accessTime": "2017-07-29T01:55:38.000Z",
+      "changeTime": "2017-07-29T01:55:37.000Z",
       "birthTime": "2017-07-17T18:47:13.000Z",
       "root": "/",
       "dir": "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages",
@@ -1132,9 +1132,9 @@
       "blksize": 4096,
       "ino": 51488599,
       "blocks": 8,
-      "atime": "2017-07-29T00:26:55.000Z",
-      "mtime": "2017-07-29T00:26:55.000Z",
-      "ctime": "2017-07-29T00:26:55.000Z",
+      "atime": "2017-07-29T01:55:38.000Z",
+      "mtime": "2017-07-29T01:55:37.000Z",
+      "ctime": "2017-07-29T01:55:37.000Z",
       "birthtime": "2017-07-17T18:47:13.000Z"
     },
     "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived.md absPath of file": {
@@ -6181,232 +6181,120 @@
     "nodes": {
       "Site": [
         "/art-lived/",
-        "/glide-carousel/",
-        "/youre-an-ortiz/",
-        "/js-closure/",
-        "/happy-birthday/",
         "/js-scope/",
-        "/js-argument-key-word/",
+        "/youre-an-ortiz/",
+        "/glide-carousel/",
+        "/happy-birthday/",
+        "/js-closure/",
         "/css-less-known-selectors/",
+        "/js-argument-key-word/",
         "/js-objects/",
-        "/kramdown-syntax-cheatsheet/",
         "/js-keyword-this/",
+        "/js-private-information/",
+        "/making-a-js-plugin/",
+        "/kramdown-syntax-cheatsheet/",
+        "/known-updates-with-el-capitan-os/",
         "/glendora-mountain-road/",
         "/things-change-william-kentridge/",
         "/node-meetup-debugging-with-yunong-xiao/",
-        "/making-a-js-plugin/",
-        "/creating-aliases/",
-        "/js-private-information/",
-        "/white-rock-lake/",
-        "/known-updates-with-el-capitan-os/",
         "/punch-setup/",
-        "/device-sticky-bits-on-scroll/",
-        "/html-is-easy/",
+        "/creating-aliases/",
         "/making-echo-app/",
-        "/arrow-functions/",
+        "/white-rock-lake/",
+        "/device-sticky-bits-on-scroll/",
         "/reframing-content/",
-        "/email-share-link/",
-        "/week-4-17/",
+        "/html-is-easy/",
         "/css-pretty-widths-with-calc/",
+        "/email-share-link/",
+        "/arrow-functions/",
         "/week-1-17/",
-        "/week-3-17/",
         "/week-2-17/",
+        "/week-3-17/",
         "/4-categories-js-projects/",
-        "/arrow-functions-cont/",
-        "/week-6-17/",
-        "/week-5-17/",
+        "/week-4-17/",
         "/switching-back-to-sublime/",
-        "/losing-a-friend/",
-        "/destructing-function-opts/",
+        "/week-5-17/",
+        "/week-6-17/",
         "/week-7-17/",
+        "/losing-a-friend/",
+        "/arrow-functions-cont/",
         "/week-8-17/",
-        "/git-tag-update/",
-        "/week-11-17/",
         "/formula-for-commits/",
-        "/week-12-17/",
-        "/week-10-17/",
-        "/week-13-17/",
+        "/destructing-function-opts/",
         "/week-9-17/",
+        "/git-tag-update/",
+        "/week-10-17/",
+        "/week-11-17/",
+        "/week-12-17/",
+        "/week-13-17/",
         "/week-14-17/",
         "/week-15-17/",
-        "/week-17-17/",
         "/week-16-17/",
-        "/week-19-17/",
         "/week-18-17/",
-        "/turning-37/",
-        "/surfing-face/",
+        "/week-17-17/",
+        "/week-19-17/",
         "/week-20-17/",
-        "/",
-        "/about/"
+        "/surfing-face/",
+        "/turning-37/",
+        "/about/",
+        "/"
       ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived/index.md absPath of file >>> MarkdownRemark": [
-        "/art-lived/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-04-23-glide-carousel/index.md absPath of file >>> MarkdownRemark": [
-        "/glide-carousel/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz/index.md absPath of file >>> MarkdownRemark": [
-        "/youre-an-ortiz/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-15-js-closure/index.md absPath of file >>> MarkdownRemark": [
-        "/js-closure/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-05-05-happy-birthday/index.md absPath of file >>> MarkdownRemark": [
-        "/happy-birthday/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-06-20-learning-js-scope/index.md absPath of file >>> MarkdownRemark": [
-        "/js-scope/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-02-js-argument-keyword/index.md absPath of file >>> MarkdownRemark": [
-        "/js-argument-key-word/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-29-css-lesser-known-selectors/index.md absPath of file >>> MarkdownRemark": [
-        "/css-less-known-selectors/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-20-js-objects/index.md absPath of file >>> MarkdownRemark": [
-        "/js-objects/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2015-09-11-jekyll-kramdown-cheatsheet/index.md absPath of file >>> MarkdownRemark": [
-        "/kramdown-syntax-cheatsheet/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2015-01-10-js-keyword-this/index.md absPath of file >>> MarkdownRemark": [
-        "/js-keyword-this/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2015-11-17-cycling-gmr/index.md absPath of file >>> MarkdownRemark": [
-        "/glendora-mountain-road/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-02-04-things-change/index.md absPath of file >>> MarkdownRemark": [
-        "/things-change-william-kentridge/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-03-28-node-meetup-debugging/index.md absPath of file >>> MarkdownRemark": [
-        "/node-meetup-debugging-with-yunong-xiao/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2015-02-09-js-template-strings/index.md absPath of file >>> MarkdownRemark": [
-        "/making-a-js-plugin/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-05-19-creating-aliases-mac/index.md absPath of file >>> MarkdownRemark": [
-        "/creating-aliases/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2015-01-22-js-private-variables/index.md absPath of file >>> MarkdownRemark": [
-        "/js-private-information/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-06-07-white-rock-lake/index.md absPath of file >>> MarkdownRemark": [
-        "/white-rock-lake/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2015-09-30-known-updates-with-el-capitan/index.md absPath of file >>> MarkdownRemark": [
-        "/known-updates-with-el-capitan-os/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-04-26-punch-static-sites/index.md absPath of file >>> MarkdownRemark": [
-        "/punch-setup/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-07-24-device-scrolling/index.md absPath of file >>> MarkdownRemark": [
-        "/device-sticky-bits-on-scroll/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-09-30-html-is-easy/index.md absPath of file >>> MarkdownRemark": [
-        "/html-is-easy/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-05-24-echo-app/index.md absPath of file >>> MarkdownRemark": [
-        "/making-echo-app/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-01-06-arrow-functions/index.md absPath of file >>> MarkdownRemark": [
-        "/arrow-functions/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-09-19-reframing-content/index.md absPath of file >>> MarkdownRemark": [
-        "/reframing-content/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-12-07-email-share-link/index.md absPath of file >>> MarkdownRemark": [
-        "/email-share-link/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-06-week-4-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-4-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-07-31-css-content-margins/index.md absPath of file >>> MarkdownRemark": [
-        "/css-pretty-widths-with-calc/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-01-13-week-1-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-1-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-01-30-week-3-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-3-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-01-17-week-2-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-2-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-08-javascript-open-source-eco-system/index.md absPath of file >>> MarkdownRemark": [
-        "/4-categories-js-projects/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-03-arrow-functions-cont/index.md absPath of file >>> MarkdownRemark": [
-        "/arrow-functions-cont/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-25-week-6-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-6-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-15-week-5-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-5-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-13-back-to-sublime/index.md absPath of file >>> MarkdownRemark": [
-        "/switching-back-to-sublime/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-28-losing-a-friend/index.md absPath of file >>> MarkdownRemark": [
-        "/losing-a-friend/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-12-working-with-opts-es6/index.md absPath of file >>> MarkdownRemark": [
-        "/destructing-function-opts/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-26-week-7-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-7-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-05-week-8-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-8-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-14-git-update-tag/index.md absPath of file >>> MarkdownRemark": [
-        "/git-tag-update/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-27-week-11-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-11-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-12-good-commit-messages/index.md absPath of file >>> MarkdownRemark": [
-        "/formula-for-commits/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-06-week-12-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-12-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-27-week-10-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-10-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-18-week-13-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-13-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-13-week-9-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-9-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-19-week-14-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-14-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-19-week-15-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-15-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-05-07-week-17-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-17-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-19-week-16-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-16-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-05-22-week-19-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-19-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-05-15-week-18-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-18-17/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-06-09-birthday/index.md absPath of file >>> MarkdownRemark": [
-        "/turning-37/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-06-03-face/index.md absPath of file >>> MarkdownRemark": [
-        "/surfing-face/"
-      ],
-      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-05-29-week-20-17/index.md absPath of file >>> MarkdownRemark": [
-        "/week-20-17/"
-      ],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-04-23-glide-carousel/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-05-21-youre-an-ortiz/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-15-js-closure/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-05-05-happy-birthday/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2013-06-20-learning-js-scope/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-02-js-argument-keyword/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-10-29-css-lesser-known-selectors/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2014-12-20-js-objects/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2015-09-11-jekyll-kramdown-cheatsheet/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2015-01-10-js-keyword-this/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2015-11-17-cycling-gmr/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-02-04-things-change/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-03-28-node-meetup-debugging/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2015-02-09-js-template-strings/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-05-19-creating-aliases-mac/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2015-01-22-js-private-variables/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-06-07-white-rock-lake/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2015-09-30-known-updates-with-el-capitan/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-04-26-punch-static-sites/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-07-24-device-scrolling/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-09-30-html-is-easy/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-05-24-echo-app/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-01-06-arrow-functions/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-09-19-reframing-content/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-12-07-email-share-link/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-06-week-4-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2016-07-31-css-content-margins/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-01-13-week-1-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-01-30-week-3-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-01-17-week-2-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-08-javascript-open-source-eco-system/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-03-arrow-functions-cont/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-25-week-6-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-15-week-5-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-13-back-to-sublime/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-28-losing-a-friend/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-12-working-with-opts-es6/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-02-26-week-7-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-05-week-8-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-14-git-update-tag/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-27-week-11-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-12-good-commit-messages/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-06-week-12-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-27-week-10-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-18-week-13-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-03-13-week-9-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-19-week-14-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-19-week-15-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-05-07-week-17-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-04-19-week-16-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-05-22-week-19-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-05-15-week-18-17/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-06-09-birthday/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-06-03-face/index.md absPath of file >>> MarkdownRemark": [],
+      "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2017-05-29-week-20-17/index.md absPath of file >>> MarkdownRemark": [],
       "/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/2012-10-21-art-lived.md absPath of file >>> MarkdownRemark": [
         "/art-lived/"
       ],

@@ -12,26 +12,27 @@ import Helmet from 'react-helmet'
 class BlogIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.pageLinks = []
     this.siteTitle = get(this, "props.data.site.siteMetadata.title")
     this.posts= get(this, "props.data.allMarkdownRemark.edges")
   }
 
   render() {
     // render 10 posts or less
+    const pageLinks = []
     this.posts.forEach((post, i) => {
-      if (i > 10) return
+      if (i > 11) return
       // TODO: the blog roll post could be a separate post
       const pNode = post.node
+      const postPath = get(post, "node.frontmatter.path") || pNode.path
+      if (postPath === '/404/' || postPath === '/about/') return
       const title = get(post, "node.frontmatter.title") || pNode.path
       const date = get(post, "node.frontmatter.date ") || pNode.date
-      const path = get(post, "node.frontmatter.path") || pNode.path
       const description = get(post, "node.frontmatter.meta") || pNode.meta
       const featuredImage = get(post, "node.frontmatter.featured_image") || pNode.featured_image
       const noImage = typeof featuredImage === undefined
       const header = (
         <header className="post__header">
-          <h2 className="post__title"><Link to={path}>{title}</Link></h2>
+          <h2 className="post__title"><Link to={postPath}>{title}</Link></h2>
           <time>{date}</time>
         </header>
       )
@@ -39,28 +40,27 @@ class BlogIndex extends React.Component {
       if (!noImage) {
         figure = (
           <figure itemType="http://schema.org/ImageObject">
-            <img src={featuredImage} itemProp="contentURL" />
+            <Link to={postPath}>
+              <img src={featuredImage} itemProp="contentURL" />
+            </Link>
           </figure>
         )
-      } else {
-        figure = ''
-      }
-      if (pNode.path !== "/404/") {
-        this.pageLinks.push(
-           <article key={i} className="post--article">
-              {header}
-              {figure}
-              <p>{description}</p>
-              <hr />
-            </article>
-        )
-      }
+      } else figure = ''
+
+      pageLinks.push(
+        <article key={i} className="post--article">
+          {header}
+          {figure}
+          <p>{description}</p>
+          <hr />
+        </article>
+      )
     })
 
     return (
       <main>
         <Helmet title={get(this, "props.data.site.siteMetadata.title")} />
-        {this.pageLinks}
+        {pageLinks}
       </main>
     )
   }
