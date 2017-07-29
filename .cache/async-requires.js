@@ -4,8 +4,7 @@ const preferDefault = m => m && m.default || m
 exports.components = {
   "page-component---cache-dev-404-page-js": require("gatsby-module-loader?name=page-component---cache-dev-404-page-js!/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/dev-404-page.js"),
   "page-component---src-templates-blog-post-js": require("gatsby-module-loader?name=page-component---src-templates-blog-post-js!/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js"),
-  "page-component---src-pages-index-js": require("gatsby-module-loader?name=page-component---src-pages-index-js!/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/index.js"),
-  "page-component---src-pages-archive-js": require("gatsby-module-loader?name=page-component---src-pages-archive-js!/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/archive.js")
+  "page-component---src-pages-index-js": require("gatsby-module-loader?name=page-component---src-pages-index-js!/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/index.js")
 }
 
 exports.json = {
@@ -66,8 +65,8 @@ exports.json = {
   "week-20-17.json": require("gatsby-module-loader?name=path---week-20-17!/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/json/week-20-17.json"),
   "surfing-face.json": require("gatsby-module-loader?name=path---surfing-face!/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/json/surfing-face.json"),
   "turning-37.json": require("gatsby-module-loader?name=path---turning-37!/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/json/turning-37.json"),
-  "index.json": require("gatsby-module-loader?name=path---index!/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/json/index.json"),
-  "archive.json": require("gatsby-module-loader?name=path---archive!/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/json/archive.json")
+  "about.json": require("gatsby-module-loader?name=path---about!/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/json/about.json"),
+  "index.json": require("gatsby-module-loader?name=path---index!/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/json/index.json")
 }
 
 exports.layouts = {

@@ -1,13 +1,25 @@
-import React from "react"
-import Link from "gatsby-link"
+import React from 'react'
+import Link from 'gatsby-link'
 
+/*
+  Footer (site footer)
+  ----
+  contains footer information
+  - inherits gatsby link
+  - takes in a year
+*/
 class Footer extends React.Component {
+  constructor(props) {
+    super(props)
+    this.name = 'site-footer'
+    this.year = new Date().getFullYear()
+  }
   render() {
     return (
-      <footer className="site-footer" role="contentinfo" itemType="http://schema.org/WPFooter">
-        <p className="site-footer__content">
-          <Link className="site-footer__link" to={'/'}>jeffry.in</Link>
-          <span className="site-footer__date" data-date="site-year">2017</span>
+      <footer className="{this.name}" role="contentinfo" itemType="http://schema.org/WPFooter">
+        <p className="{this.name}__content">
+          <Link className="{this.name}__link" to={'/'}>jeffry.in</Link>
+           <time className="{this.name}__date">{this.year}</time>
         </p>
       </footer>
     )

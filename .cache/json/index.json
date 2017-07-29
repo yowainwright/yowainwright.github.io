@@ -10,6 +10,16 @@
                 {
                     "node": {
                         "frontmatter": {
+                            "path": "/about/",
+                            "meta": "About Jeffry",
+                            "title": "About",
+                            "featured_image": null
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
                             "path": "/turning-37/",
                             "meta": "A short post about turning 37 and how I feel about it.",
                             "title": "Birthday, turning 37 and feeling good about my age",

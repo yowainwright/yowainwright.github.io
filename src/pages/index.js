@@ -1,23 +1,33 @@
-import React from "react"
-import Link from "gatsby-link"
-import get from "lodash/get"
-import Helmet from "react-helmet"
+import React from 'react'
+import Link from 'gatsby-link'
+// TODO: can we remove lodash depencency?
+import get from 'lodash/get'
+import Helmet from 'react-helmet'
 
-import Bio from "../components/Bio"
-import { rhythm } from "../utils/typography"
-
+/*
+  BlogIndex 📚
+  ---
+  renders a blog roll of 10 posts
+*/
 class BlogIndex extends React.Component {
+  constructor(props) {
+    super(props);
+    this.pageLinks = []
+    this.siteTitle = get(this, "props.data.site.siteMetadata.title")
+    this.posts= get(this, "props.data.allMarkdownRemark.edges")
+  }
+
   render() {
-    const pageLinks = []
-    const siteTitle = get(this, "props.data.site.siteMetadata.title")
-    const posts = get(this, "props.data.allMarkdownRemark.edges")
-    posts.reverse()
-    posts.forEach((post, i) => {
-      const title = get(post, "node.frontmatter.title") || post.node.path
-      const date = get(post, "node.frontmatter.date ") || post.node.date
-      const path = get(post, "node.frontmatter.path") || post.node.path
-      const description = get(post, "node.frontmatter.meta") || post.node.meta
-      const featuredImage = get(post, "node.frontmatter.featured_image") || post.node.featured_image
+    // render 10 posts or less
+    this.posts.forEach((post, i) => {
+      if (i > 10) return
+      // TODO: the blog roll post could be a separate post
+      const pNode = post.node
+      const title = get(post, "node.frontmatter.title") || pNode.path
+      const date = get(post, "node.frontmatter.date ") || pNode.date
+      const path = get(post, "node.frontmatter.path") || pNode.path
+      const description = get(post, "node.frontmatter.meta") || pNode.meta
+      const featuredImage = get(post, "node.frontmatter.featured_image") || pNode.featured_image
       const noImage = typeof featuredImage === undefined
       const header = (
         <header className="post__header">
@@ -35,8 +45,8 @@ class BlogIndex extends React.Component {
       } else {
         figure = ''
       }
-      if (post.node.path !== "/404/") {
-        pageLinks.push(
+      if (pNode.path !== "/404/") {
+        this.pageLinks.push(
            <article key={i} className="post--article">
               {header}
               {figure}
@@ -48,10 +58,10 @@ class BlogIndex extends React.Component {
     })
 
     return (
-      <div>
+      <main>
         <Helmet title={get(this, "props.data.site.siteMetadata.title")} />
-        {pageLinks}
-      </div>
+        {this.pageLinks}
+      </main>
     )
   }
 }
@@ -62,6 +72,14 @@ BlogIndex.propTypes = {
 
 export default BlogIndex
 
+
+
+/*
+  Graphql
+  ----
+  exports data for pages and posts
+  TODO: this probably should not live here
+*/
 export const pageQuery = graphql`
   query IndexQuery {
     site {

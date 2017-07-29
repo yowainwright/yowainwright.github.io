@@ -5,8 +5,7 @@ const preferDefault = m => m && m.default || m
 exports.components = {
   "page-component---cache-dev-404-page-js": preferDefault(require("/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/dev-404-page.js")),
   "page-component---src-templates-blog-post-js": preferDefault(require("/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/templates/blog-post.js")),
-  "page-component---src-pages-index-js": preferDefault(require("/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/index.js")),
-  "page-component---src-pages-archive-js": preferDefault(require("/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/archive.js"))
+  "page-component---src-pages-index-js": preferDefault(require("/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/src/pages/index.js"))
 }
 
 exports.json = {
@@ -67,8 +66,8 @@ exports.json = {
   "week-20-17.json": require("/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/json/week-20-17.json"),
   "surfing-face.json": require("/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/json/surfing-face.json"),
   "turning-37.json": require("/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/json/turning-37.json"),
-  "index.json": require("/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/json/index.json"),
-  "archive.json": require("/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/json/archive.json")
+  "about.json": require("/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/json/about.json"),
+  "index.json": require("/Users/jwainwright/Dropbox/me/git-docs/yowainwright.github.io/.cache/json/index.json")
 }
 
 exports.layouts = {

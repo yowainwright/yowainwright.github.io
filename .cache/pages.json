@@ -285,13 +285,13 @@
         "path": "/turning-37/"
     },
     {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "about.json",
+        "path": "/about/"
+    },
+    {
         "componentChunkName": "page-component---src-pages-index-js",
         "jsonName": "index.json",
         "path": "/"
-    },
-    {
-        "componentChunkName": "page-component---src-pages-archive-js",
-        "jsonName": "archive.json",
-        "path": "/archive/"
     }
 ]

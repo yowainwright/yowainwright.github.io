@@ -1,29 +1,28 @@
-import React from "react"
+import React from 'react'
 
-import typography from "../utils/typography"
-
-import { TypographyStyle } from "react-typography"
-
-let stylesStr
-if (process.env.NODE_ENV === `production`) {
-  try {
-    stylesStr = require(`!raw-loader!../public/styles.css`)
-  } catch (e) {
-    console.log(e)
-  }
-}
+const isProd = process.env.NODE_ENV === 'production'
 
 class HeadContent extends React.Component {
-  render() {
-    let css
-    if (process.env.NODE_ENV === `production`) {
-      css = (
-        <style
-          id="gatsby-inlined-css"
-          dangerouslySetInnerHTML={{ __html: stylesStr }}
-        />
-      )
+  constructor(props) {
+    super(props);
+    this.env = process.env.NODE_ENV
+  }
+
+  inlineStyles() {
+    if (!isProd) return
+    let stylesStr
+    try {
+      stylesStr = require(`!raw-loader!../public/styles.css`)
+    } catch (e) {
+      console.warn(e)
     }
+    return (
+      <style id="gatsby-inlined-css" dangerouslySetInnerHTML={{ __html: stylesStr }}
+      />
+    )
+  }
+
+  render() {
     return (
       <head>
         <meta name="robots" content="index,follow" />
@@ -33,8 +32,7 @@ class HeadContent extends React.Component {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="600" />
         {this.props.headComponents}
-        <TypographyStyle typography={typography} />
-        {css}
+        {this.inlineStyles}
       </head>
     )
   }
