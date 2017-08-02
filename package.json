@@ -17,7 +17,6 @@
     "gatsby-plugin-offline": "^1.0.1",
     "gatsby-plugin-preact": "^1.0.0",
     "gatsby-plugin-react-helmet": "^1.0.0",
-    "gatsby-plugin-sass": "^1.0.1",
     "gatsby-plugin-sharp": "^1.0.0",
     "gatsby-remark-copy-linked-files": "^1.0.0",
     "gatsby-remark-images": "^1.0.0",
@@ -36,6 +35,7 @@
     "typography-theme-wordpress-2016": "^0.15.1"
   },
   "devDependencies": {
+    "gatsby-plugin-sass": "^1.0.1",
     "gh-pages": "^0.12.0"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",

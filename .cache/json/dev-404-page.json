@@ -5,7 +5,7 @@
             "edges": [
                 {
                     "node": {
-                        "path": "/art-lived/"
+                        "path": "/youre-an-ortiz/"
                     }
                 },
                 {
@@ -15,7 +15,7 @@
                 },
                 {
                     "node": {
-                        "path": "/youre-an-ortiz/"
+                        "path": "/art-lived/"
                     }
                 },
                 {
@@ -40,12 +40,7 @@
                 },
                 {
                     "node": {
-                        "path": "/js-argument-key-word/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/js-objects/"
+                        "path": "/js-private-information/"
                     }
                 },
                 {
@@ -55,7 +50,12 @@
                 },
                 {
                     "node": {
-                        "path": "/js-private-information/"
+                        "path": "/js-argument-key-word/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/js-objects/"
                     }
                 },
                 {
@@ -85,22 +85,17 @@
                 },
                 {
                     "node": {
-                        "path": "/node-meetup-debugging-with-yunong-xiao/"
-                    }
-                },
-                {
-                    "node": {
                         "path": "/punch-setup/"
                     }
                 },
                 {
                     "node": {
-                        "path": "/creating-aliases/"
+                        "path": "/making-echo-app/"
                     }
                 },
                 {
                     "node": {
-                        "path": "/making-echo-app/"
+                        "path": "/node-meetup-debugging-with-yunong-xiao/"
                     }
                 },
                 {
@@ -115,7 +110,12 @@
                 },
                 {
                     "node": {
-                        "path": "/reframing-content/"
+                        "path": "/creating-aliases/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/css-pretty-widths-with-calc/"
                     }
                 },
                 {
@@ -125,7 +125,7 @@
                 },
                 {
                     "node": {
-                        "path": "/css-pretty-widths-with-calc/"
+                        "path": "/reframing-content/"
                     }
                 },
                 {
@@ -155,17 +155,17 @@
                 },
                 {
                     "node": {
-                        "path": "/4-categories-js-projects/"
-                    }
-                },
-                {
-                    "node": {
                         "path": "/week-4-17/"
                     }
                 },
                 {
                     "node": {
                         "path": "/switching-back-to-sublime/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/4-categories-js-projects/"
                     }
                 },
                 {
@@ -210,17 +210,12 @@
                 },
                 {
                     "node": {
-                        "path": "/week-9-17/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/git-tag-update/"
-                    }
-                },
-                {
-                    "node": {
                         "path": "/week-10-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-9-17/"
                     }
                 },
                 {
@@ -230,12 +225,12 @@
                 },
                 {
                     "node": {
-                        "path": "/week-12-17/"
+                        "path": "/git-tag-update/"
                     }
                 },
                 {
                     "node": {
-                        "path": "/week-13-17/"
+                        "path": "/week-12-17/"
                     }
                 },
                 {
@@ -246,6 +241,16 @@
                 {
                     "node": {
                         "path": "/week-15-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-13-17/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/week-19-17/"
                     }
                 },
                 {
@@ -265,22 +270,17 @@
                 },
                 {
                     "node": {
-                        "path": "/week-19-17/"
-                    }
-                },
-                {
-                    "node": {
                         "path": "/week-20-17/"
                     }
                 },
                 {
                     "node": {
-                        "path": "/surfing-face/"
+                        "path": "/turning-37/"
                     }
                 },
                 {
                     "node": {
-                        "path": "/turning-37/"
+                        "path": "/surfing-face/"
                     }
                 },
                 {

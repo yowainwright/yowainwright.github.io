@@ -6,8 +6,8 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "art-lived.json",
-        "path": "/art-lived/"
+        "jsonName": "youre-an-ortiz.json",
+        "path": "/youre-an-ortiz/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -16,8 +16,8 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "youre-an-ortiz.json",
-        "path": "/youre-an-ortiz/"
+        "jsonName": "art-lived.json",
+        "path": "/art-lived/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -41,13 +41,8 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "js-argument-key-word.json",
-        "path": "/js-argument-key-word/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "js-objects.json",
-        "path": "/js-objects/"
+        "jsonName": "js-private-information.json",
+        "path": "/js-private-information/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -56,8 +51,13 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "js-private-information.json",
-        "path": "/js-private-information/"
+        "jsonName": "js-argument-key-word.json",
+        "path": "/js-argument-key-word/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "js-objects.json",
+        "path": "/js-objects/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -86,23 +86,18 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "node-meetup-debugging-with-yunong-xiao.json",
-        "path": "/node-meetup-debugging-with-yunong-xiao/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "punch-setup.json",
         "path": "/punch-setup/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "creating-aliases.json",
-        "path": "/creating-aliases/"
+        "jsonName": "making-echo-app.json",
+        "path": "/making-echo-app/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "making-echo-app.json",
-        "path": "/making-echo-app/"
+        "jsonName": "node-meetup-debugging-with-yunong-xiao.json",
+        "path": "/node-meetup-debugging-with-yunong-xiao/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -116,8 +111,13 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "reframing-content.json",
-        "path": "/reframing-content/"
+        "jsonName": "creating-aliases.json",
+        "path": "/creating-aliases/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "css-pretty-widths-with-calc.json",
+        "path": "/css-pretty-widths-with-calc/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -126,8 +126,8 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "css-pretty-widths-with-calc.json",
-        "path": "/css-pretty-widths-with-calc/"
+        "jsonName": "reframing-content.json",
+        "path": "/reframing-content/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -156,11 +156,6 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "4-categories-js-projects.json",
-        "path": "/4-categories-js-projects/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "week-4-17.json",
         "path": "/week-4-17/"
     },
@@ -168,6 +163,11 @@
         "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "switching-back-to-sublime.json",
         "path": "/switching-back-to-sublime/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "4-categories-js-projects.json",
+        "path": "/4-categories-js-projects/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -211,18 +211,13 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-9-17.json",
-        "path": "/week-9-17/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "git-tag-update.json",
-        "path": "/git-tag-update/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "week-10-17.json",
         "path": "/week-10-17/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "week-9-17.json",
+        "path": "/week-9-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -231,13 +226,13 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-12-17.json",
-        "path": "/week-12-17/"
+        "jsonName": "git-tag-update.json",
+        "path": "/git-tag-update/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-13-17.json",
-        "path": "/week-13-17/"
+        "jsonName": "week-12-17.json",
+        "path": "/week-12-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -248,6 +243,16 @@
         "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "week-15-17.json",
         "path": "/week-15-17/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "week-13-17.json",
+        "path": "/week-13-17/"
+    },
+    {
+        "componentChunkName": "page-component---src-templates-blog-post-js",
+        "jsonName": "week-19-17.json",
+        "path": "/week-19-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
@@ -266,23 +271,18 @@
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "week-19-17.json",
-        "path": "/week-19-17/"
-    },
-    {
-        "componentChunkName": "page-component---src-templates-blog-post-js",
         "jsonName": "week-20-17.json",
         "path": "/week-20-17/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "surfing-face.json",
-        "path": "/surfing-face/"
+        "jsonName": "turning-37.json",
+        "path": "/turning-37/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",
-        "jsonName": "turning-37.json",
-        "path": "/turning-37/"
+        "jsonName": "surfing-face.json",
+        "path": "/surfing-face/"
     },
     {
         "componentChunkName": "page-component---src-templates-blog-post-js",

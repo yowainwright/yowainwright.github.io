@@ -7,13 +7,10 @@ import { Container } from 'react-responsive-grid'
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
-    const header = (
-      <h1><Link to={"/"}>Jeffry.in</Link></h1>
-    )
     return (
       <Container>
         <Header />
-        {header}{children()}
+        {children()}
         <Footer />
       </Container>
     )
