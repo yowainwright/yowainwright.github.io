@@ -32,7 +32,7 @@ $nav-height: 4rem;
     @include media-query($width-small) {
       line-height: 4.25rem !important;
     }
-		&--logo {
+		&--home {
       background-color: $color-yellow-light;
       padding: 0 1rem;
 		}

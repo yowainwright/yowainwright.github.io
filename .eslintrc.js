@@ -6,16 +6,26 @@ module.exports = {
     },
     "extends": "eslint:recommended",
     "parserOptions": {
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true
+        }
+    },
+    "globals": {
+      "__dirname": true
     },
     "rules": {
         "indent": [
             "error",
-            4
+            2
         ],
         "linebreak-style": [
             "error",
             "unix"
+        ],
+        "no-console": [
+          "error", { "allow": ["warn", "error"] }
         ],
         "quotes": [
             "error",
@@ -24,6 +34,12 @@ module.exports = {
         "semi": [
             "error",
             "never"
-        ]
-    }
+        ],
+        "react/jsx-uses-react": 2,
+        "react/jsx-uses-vars": 2,
+        "react/react-in-jsx-scopt": 2
+    },
+    "plugin": [
+      "react"
+    ]
 };
