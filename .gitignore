@@ -1,4 +1,9 @@
-.sass-cache
-node_modules
-node_modules/*
+node_modules/
+public
+.gatsby-context.js
+.DS_Store
+.intermediate-representation/
+.cache/
+gatsby-blog
+
 

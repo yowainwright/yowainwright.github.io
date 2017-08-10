@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Head from '../components/Head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
@@ -13,7 +12,6 @@ class Template extends Component {
     } = this.props
     return (
       <html>
-      <Head />
         <body>
         <div className="gatsby-container">
           <Header />
@@ -36,3 +34,4 @@ Template.propTypes = {
 }
 
 export default Template
+
