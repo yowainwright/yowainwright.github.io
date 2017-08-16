@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'gatsby-link'
 
 /*
@@ -8,7 +8,7 @@ import Link from 'gatsby-link'
   - inherits gatsby link
   - takes in a year
 */
-class Footer extends React.Component {
+class Footer extends Component {
   constructor(props) {
     super(props)
     this.name = 'site-footer'
@@ -18,8 +18,7 @@ class Footer extends React.Component {
     return (
       <footer className={`${this.name}`} role="contentinfo" itemType="http://schema.org/WPFooter">
         <p className={`${this.name}__content`}>
-          <Link className={`${this.name}__link`} to={'/'}>jeffry.in</Link>
-          <time className={`${this.name}__date`}>{this.year}</time>
+          <Link className={`${this.name}__link`} to={'/'}>jeffry.in {this.year}</Link>
         </p>
       </footer>
     )
