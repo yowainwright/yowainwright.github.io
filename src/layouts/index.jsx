@@ -11,15 +11,11 @@ class Template extends Component {
       children
     } = this.props
     return (
-      <html>
-        <body>
-        <div className="gatsby-container">
-          <Header />
-            {children()}
-          <Footer />
-        </div>
-        </body>
-      </html>
+      <div className="gatsby-container">
+        <Header />
+          {children()}
+        <Footer />
+      </div>
     )
   }
 }

@@ -31,7 +31,7 @@
     height: 12rem;
     margin: 1rem;
     position: relative;
-    width: calc(33.3% - 2rem);
+    width: calc(100% - 2rem);
   }
   header {
     @include media-query($width-small) {
@@ -66,21 +66,9 @@
     font-size: 1rem;
   }
 }
-.row {
+.main__grid {
   @include media-query($width-small) {
-    border-top: 1px solid lightgray;
-    display: flex;
-    margin: 0 auto;
-    max-width: 50rem;
-  }
-  &:first-of-type {
-    @include media-query($width-small) {
-      margin-top: 4rem;
-    }
-  }
-  &:last-of-type {
-    @include media-query($width-small) {
-      border-bottom: 1px solid lightgray;
-    }
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
   }
 }
