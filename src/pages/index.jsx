@@ -58,7 +58,7 @@ class BlogIndex extends Component {
 
     return (
       <main className="main">
-        <Helmet />
+        <Helmet title={title} />
         {pageLinks}
       </main>
     )

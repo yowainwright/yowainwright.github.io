@@ -43,7 +43,7 @@ class Archive extends Component {
 
     return (
       <main className="main">
-      	<Helmet />
+      	<Helmet title={title} />
       	<div className="main__grid">
         {pageLinks}
         </div>
