@@ -13,7 +13,7 @@ class Archive extends Component {
     super(props)
     // this.description = 'A full list of blog posts written by Jeffry Wainwright, a human person who enjoys building software, open source, being outside, and trying to live life with purpose.'
     this.posts = get(this, 'props.data.allMarkdownRemark.edges')
-    // this.title = 'Archive'
+    this.title = 'Archive'
   }
 
   render() {
@@ -43,7 +43,7 @@ class Archive extends Component {
 
     return (
       <main className="main">
-      	<Helmet title={title} />
+      	<Helmet title={this.title} />
       	<div className="main__grid">
         {pageLinks}
         </div>

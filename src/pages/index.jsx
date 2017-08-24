@@ -11,7 +11,7 @@ import Helmet from 'react-helmet'
 class BlogIndex extends Component {
   constructor(props) {
     super(props)
-    this.siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    this.title = get(this, 'props.data.site.siteMetadata.title')
     this.posts = get(this, 'props.data.allMarkdownRemark.edges')
   }
 
@@ -58,7 +58,7 @@ class BlogIndex extends Component {
 
     return (
       <main className="main">
-        <Helmet title={title} />
+        <Helmet title={this.title} />
         {pageLinks}
       </main>
     )
