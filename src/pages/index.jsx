@@ -8,6 +8,7 @@ import Helmet from 'react-helmet'
   ---
   renders a blog roll of 10 posts
 */
+
 class BlogIndex extends Component {
   constructor(props) {
     super(props)
@@ -15,38 +16,65 @@ class BlogIndex extends Component {
     this.posts = get(this, 'props.data.allMarkdownRemark.edges')
   }
 
-  render() {
-    // render 10 posts or less
-    const pageLinks = []
+  /*
+    generatePostHeader
+    ----
+    generates a postItems post header
+
+  */
+  generatePostHeader(title, path, date) {
+    return (
+      <header className="post__header">
+        <h2 className="post__title"><Link to={path}>{title}</Link></h2>
+        <time>{date}</time>
+      </header>
+    )
+  }
+
+  /*
+    generatePostFigure
+    ----
+    generates a postItems post figure if defined
+
+  */
+  generatePostFigure(image, path) {
+    if (typeof image === undefined) return ''
+    return (
+      <figure itemType="http://schema.org/ImageObject">
+        <Link to={path}>
+          <img src={image} itemProp="contentURL" />
+        </Link>
+      </figure>
+    )
+  }
+
+  /*
+    generatePosts
+    ----
+    generates 10 post max
+    
+  */
+  generatePosts() {
+    const postItems = []
     this.posts.forEach((post, i) => {
       if (i > 11) return
-      // TODO: the blog roll post could be a separate post
+
+      // define mandatory post data
       const pNode = post.node
-      const postPath = get(post, 'node.frontmatter.path') || pNode.path
-      if (postPath === '/404/' || postPath === '/about/') return
+      const path = get(post, 'node.frontmatter.path') || pNode.path
+      // return based on mandatory data
+      if (path === '/404/' || path === '/about/') return
+
+      // define post data
       const title = get(post, 'node.frontmatter.title') || pNode.title
       const date = get(post, 'node.frontmatter.date') || pNode.date
       const description = get(post, 'node.frontmatter.meta') || pNode.meta
-      const featuredImage = get(post, 'node.frontmatter.featured_image') || pNode.featured_image
-      const noImage = typeof featuredImage === undefined
-      const header = (
-        <header className="post__header">
-          <h2 className="post__title"><Link to={postPath}>{title}</Link></h2>
-          <time>{date}</time>
-        </header>
-      )
-      let figure
-      if (!noImage) {
-        figure = (
-          <figure itemType="http://schema.org/ImageObject">
-            <Link to={postPath}>
-              <img src={featuredImage} itemProp="contentURL" />
-            </Link>
-          </figure>
-        )
-      } else figure = ''
+      const image = get(post, 'node.frontmatter.featured_image') || post.node.featured_image
+      const header = this.generatePostHeader(title, path, date)
+      const figure = this.generatePostFigure(image, path)
 
-      pageLinks.push(
+      // build postItems [array]
+      postItems.push(
         <article key={i} className="post--article">
           {header}
           {figure}
@@ -56,10 +84,15 @@ class BlogIndex extends Component {
       )
     })
 
+    return postItems
+  }
+
+  render() {
+
     return (
       <main className="main">
         <Helmet title={this.title} />
-        {pageLinks}
+        {this.generatePosts()}
       </main>
     )
   }
@@ -70,8 +103,6 @@ BlogIndex.propTypes = {
 }
 
 export default BlogIndex
-
-
 
 /*
   Graphql
@@ -101,65 +132,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-// import React from 'react'
-// import Link from 'gatsby-link'
-// import get from 'lodash/get'
-// import Helmet from 'react-helmet'
-
-// class BlogIndex extends React.Component {
-//   render() {
-//     // console.log("props", this.props)
-//     const pageLinks = []
-//     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-//     const posts = get(this, 'props.data.allMarkdownRemark.edges')
-//     posts.forEach(post => {
-//       if (post.node.path !== '/404/') {
-//         const title = get(post, 'node.frontmatter.title') || post.node.path
-//         pageLinks.push(
-//           <li>
-//             <Link to={post.node.frontmatter.path}>
-//               {post.node.frontmatter.title}
-//             </Link>
-//           </li>
-//         )
-//       }
-//     })
-
-//     return (
-//       <div>
-//         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
-//         <ul>
-//           {pageLinks}
-//         </ul>
-//       </div>
-//     )
-//   }
-// }
-
-// BlogIndex.propTypes = {
-//   route: React.PropTypes.object,
-// }
-
-// export default BlogIndex
-
-// export const pageQuery = graphql`
-//   query IndexQuery {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-//       edges {
-//         node {
-//           frontmatter {
-//             path
-//             title
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
-

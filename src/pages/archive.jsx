@@ -6,46 +6,51 @@ import Helmet from 'react-helmet'
 /*
   Archive 📚
   ---
-  renders a roll of 10 posts
+  renders all posts without images
 */
+
 class Archive extends Component {
   constructor(props) {
     super(props)
-    // this.description = 'A full list of blog posts written by Jeffry Wainwright, a human person who enjoys building software, open source, being outside, and trying to live life with purpose.'
+    this.description = 'A full list of blog posts written by Jeffry Wainwright, a human person who enjoys building software, open source, being outside, and trying to live life with purpose.'
     this.posts = get(this, 'props.data.allMarkdownRemark.edges')
     this.title = 'Archive'
   }
 
-  render() {
-    // render 10 posts or less
-    const pageLinks = []
-    this.posts.forEach((post, i) => {
-      const pNode = post.node
-      const postPath = get(post, 'node.frontmatter.path') || pNode.path
-      if (postPath === '/404/' || postPath === '/about/') return
-      const title = get(post, 'node.frontmatter.title') || pNode.title
-      const date = get(post, 'node.frontmatter.date') || pNode.date
-      const description = get(post, 'node.frontmatter.meta') || pNode.meta
-      const header = (
+  generatePost(i, title, date, path) {
+    return (
+      <article key={i} className="post--headline">
         <header>
-          <h2 className="post__title--headline"><Link to={postPath}>{title}</Link></h2>
+          <h2 className="post__title--headline"><Link to={path}>{title}</Link></h2>
           <time>{date}</time>
         </header>
-      )
+        <hr />
+      </article>
+    )
+  }
 
-      pageLinks.push(
-        <article key={i} className="post--headline">
-          {header}
-          <hr />
-        </article>
+  generatePosts() {
+    const postItems = []
+    this.posts.forEach((post, i) => {
+      const pNode = post.node
+      const path = get(post, 'node.frontmatter.path') || pNode.path
+      if (path === '/404/' || path === '/about/') return
+      const title = get(post, 'node.frontmatter.title') || pNode.title
+      const date = get(post, 'node.frontmatter.date') || pNode.date
+      postItems.push(
+        this.generatePost(i, title, date, path)
       )
-    })
+    }) 
 
+    return postItems
+  }
+
+  render() {
     return (
       <main className="main">
-      	<Helmet title={this.title} />
+      	<Helmet title={this.title} description={this.description} />
       	<div className="main__grid">
-        {pageLinks}
+        {this.generatePosts()}
         </div>
       </main>
     )
@@ -57,8 +62,6 @@ Archive.propTypes = {
 }
 
 export default Archive
-
-
 
 /*
   Graphql
