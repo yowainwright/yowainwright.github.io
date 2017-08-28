@@ -22,7 +22,7 @@ class Head extends Component {
         <meta name="robots" content="index,follow" />
         <meta property="og:locale" content="en_US" />
         <link href="https://yowainwright.imgix.net/favicon.ico" rel="icon" />
-        <link href="https://yowainwright.imgix.net/w.png" rel="apple-touch-icon" itemprop="logo" />
+        <link href="https://yowainwright.imgix.net/w.png" rel="apple-touch-icon" itemProp="logo" />
         <meta name="google-site-verification" content="cXTq9c3NhBvHJsPXxzWAYAqbB8PRUKUxemU8mykg_vs" />
         <script async src="//www.google-analytics.com/analytics.js"></script>
         <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NRFFQ9"></script>

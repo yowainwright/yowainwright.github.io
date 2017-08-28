@@ -4,8 +4,10 @@ module.exports = {
         "commonjs": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "parser": "babel-eslint",
     "parserOptions": {
+        "ecmaVersion": 6,
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true,
@@ -13,7 +15,8 @@ module.exports = {
         }
     },
     "globals": {
-      "__dirname": true
+      "__dirname": true,
+      "graphql": true
     },
     "rules": {
         "indent": [
@@ -34,6 +37,8 @@ module.exports = {
         "semi": [
             "error",
             "never"
-        ]
+        ],
+        "react/jsx-uses-react": 2,
+        "react/jsx-uses-vars": 2
     }
 };

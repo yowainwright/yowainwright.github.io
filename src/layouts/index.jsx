@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Head from '../components/Head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -37,9 +38,9 @@ class Template extends Component {
   document children, location and route in the Gatsby context
 */
 Template.propTypes = {
-  children: React.PropTypes.func,
-  location: React.PropTypes.object,
-  route: React.PropTypes.object,
+  children: PropTypes.func,
+  location: PropTypes.object,
+  route: PropTypes.object,
 }
 
 export default Template

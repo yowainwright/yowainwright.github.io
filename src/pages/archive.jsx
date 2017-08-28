@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
@@ -58,7 +59,7 @@ class Archive extends Component {
 }
 
 Archive.propTypes = {
-  route: React.PropTypes.object,
+  route: PropTypes.object,
 }
 
 export default Archive

@@ -1,20 +1,19 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
 import get from 'lodash/get'
 
 class BlogPostTemplate extends Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const post =  this.props.data.markdownRemark
 
     return (
       <article>
         <Helmet title={`${post.frontmatter.title} | Jeffry.in`}>
-          <meta name="description" name="twitter:description" property="og:description" content={`${post.frontmatter.meta}`} />
-          <link rel="canonical" href={`${post.frontmatter.path}`} itemprop="url" />
-          <meta name="twitter:url" property="og:url" content={`${post.frontmatter.meta}`} />
+          <meta name="twitter:description" property="og:description" content={`${post.frontmatter.meta}`} />
+          <link rel="canonical" href={`${post.frontmatter.path}`} itemProp="url" />
+          <meta name="twitter:url" property="og:url" content={`${post.frontmatter.path}`} />
           <meta name="twitter:title" property="og:title" content={`${post.frontmatter.title}`} />
-          <meta name="twitter:image" property="og:image"  content={`${post.frontmatter.featured_image || 'https://yowainwright.imgix/w.jpg'}`} itemprop="image" />
+          <meta name="twitter:image" property="og:image"  content={`${post.frontmatter.featured_image || 'https://yowainwright.imgix/w.jpg'}`} itemProp="image" />
         </Helmet>
         <header>
           <h1 itemProp="headeline">{post.frontmatter.title}</h1>
@@ -50,50 +49,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-// import React from 'react'
-// import Helmet from 'react-helmet'
-// import Link from 'gatsby-link'
-// import get from 'lodash/get'
-
-// class BlogPostTemplate extends React.Component {
-//   render() {
-//     const post = this.props.data.markdownRemark
-//     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-
-//     return (
-//       <div>
-//         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-//         <h1>
-//           {post.frontmatter.title}
-//         </h1>
-//         <p>
-//           {post.frontmatter.date}
-//         </p>
-//         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-//         <hr />
-//       </div>
-//     )
-//   }
-// }
-
-// export default BlogPostTemplate
-
-// export const pageQuery = graphql`
-//   query BlogPostByPath($path: String!) {
-//     site {
-//       siteMetadata {
-//         title
-//         author
-//       }
-//     }
-//     markdownRemark(frontmatter: { path: { eq: $path } }) {
-//       id
-//       html
-//       frontmatter {
-//         title
-//         date(formatString: "MMMM DD, YYYY")
-//       }
-//     }
-//   }
-// `
