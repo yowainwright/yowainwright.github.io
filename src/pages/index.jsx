@@ -12,7 +12,7 @@ import Helmet from 'react-helmet'
 class BlogIndex extends Component {
   constructor(props) {
     super(props)
-    this.title = get(this, 'props.data.site.siteMetadata.title')
+    this.title = 'Jeffry.in'
     this.posts = get(this, 'props.data.allMarkdownRemark.edges')
   }
 

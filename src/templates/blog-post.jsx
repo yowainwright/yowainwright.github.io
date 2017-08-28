@@ -6,11 +6,10 @@ import get from 'lodash/get'
 class BlogPostTemplate extends Component {
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
       <article>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`}>
+        <Helmet title={`${post.frontmatter.title} | Jeffry.in`}>
           <meta name="description" name="twitter:description" property="og:description" content={`${post.frontmatter.meta}`} />
           <link rel="canonical" href={`${post.frontmatter.path}`} itemprop="url" />
           <meta name="twitter:url" property="og:url" content={`${post.frontmatter.meta}`} />
