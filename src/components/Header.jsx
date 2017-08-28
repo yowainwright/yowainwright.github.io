@@ -64,7 +64,7 @@ class Header extends Component {
     return (
       <nav id={`${this.name}`} className={`${this.name}`} role="navigation"  itemType="http://schema.org/SiteNavigationElement">
         <ol className={`${this.name}__items`}>
-         {this.generateNav(this.name)}
+          {this.generateNav(this.name)}
         </ol>
       </nav>
     )

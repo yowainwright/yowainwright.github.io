@@ -24,7 +24,7 @@ class Template extends Component {
       <div className="gatsby-container">
         <Head />
         <Header />
-          {children()}
+        {children()}
         <Footer />
       </div>
     )

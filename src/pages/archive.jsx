@@ -50,7 +50,7 @@ class Archive extends Component {
       <main className="main">
       	<Helmet title={this.title} description={this.description} />
       	<div className="main__grid">
-        {this.generatePosts()}
+          {this.generatePosts()}
         </div>
       </main>
     )
