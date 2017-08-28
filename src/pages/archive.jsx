@@ -49,8 +49,8 @@ class Archive extends Component {
   render() {
     return (
       <main className="main">
-      	<Helmet title={this.title} description={this.description} />
-      	<div className="main__grid">
+        <Helmet title={this.title} description={this.description} />
+        <div className="main__grid">
           {this.generatePosts()}
         </div>
       </main>

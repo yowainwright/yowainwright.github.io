@@ -3,8 +3,13 @@ import Helmet from 'react-helmet'
 import get from 'lodash/get'
 
 class BlogPostTemplate extends Component {
+  constructor(props) {
+    super(props)
+    this.post = get(this, 'props.data.markdownRemark')
+  }
+
   render() {
-    const post =  this.props.data.markdownRemark
+    const post =  this.post
 
     return (
       <article>

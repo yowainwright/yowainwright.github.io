@@ -18,7 +18,6 @@ import '../styles/main.scss'
 class Template extends Component {
   render() {
     const {
-      location,
       children
     } = this.props
     return (
