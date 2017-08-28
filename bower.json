@@ -1,0 +1,20 @@
+{
+  "name": "yowainwright.github.io",
+  "description": "yowainwright.github.io",
+  "main": "index.html",
+  "authors": [
+    "Jeff Wainwright <jjwainwright2@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/yowainwright/yowainwright.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "scss-utility-mixins": "*"
+  }
+}

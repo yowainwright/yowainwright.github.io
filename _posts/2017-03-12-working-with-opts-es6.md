@@ -1,0 +1,93 @@
+---
+title: Using ES6 Function Destructuring with JavaScript Plugin Options
+date: 2017-03-12 00:00:00 Z
+permalink: "/destructing-function-opts/"
+categories:
+- html
+- code
+- javascript
+layout: post
+meta: This post explains how to use ES6 function destructuring for more readable JavaScript
+  Plugin Options.
+share_image: https://yowainwright.imgix.net/icons/js.jpg
+---
+
+Open source plugin code can become confusing. After writing a few open source plugins, I've realized that readability is very important to get help and make code better. One area where readability becomes confusing is options code. In this short post, I will go over options code in JavaScript Plugins and how it can be improved. 
+{: .first-paragraph}
+
+## What are options?
+
+> Options, in JavaScript, are arguements passed in a function to replace default properties values.
+
+Options, in JavaScript, are arguements passed in a function to replace default properties values. In example, sometimes a plugin will have a default css class that it is associated with. Plugins will often allow users to change this default css class. 
+
+Here an example of how options look in JavaScript from ES5:
+
+{% highlight javaScript %}
+  function someFunction(opts) {
+    var defaults = {
+      el: document.documentElement,
+      win: window,
+      attribute: 'data-some-attr'
+    };
+    var el = opts && opts.el || defaults.el;
+    var win = opts && opts.win || defaults.win;
+    var attribute = opts && opts.attribute || defaults.attribute;
+    // for exampe perposes
+    return console.log({
+      element: el,
+      document: win,
+      attr: attribute
+    });
+  };
+{% endhighlight %}
+
+And here's how it can be changed when it is initiated:
+{% highlight javaScript %}
+  someFunction({attribute: 'data-attr'});
+{% endhighlight %}
+
+The _log_ will now looking something like: 
+{% highlight javaScript %}
+  Object: attr: "data-attr", document: Window, element: html
+{% endhighlight %}
+
+## Defined Options Is Confusing
+
+The `options` code above is confusing! I mean, what the heck is going on here?
+{% highlight javaScript %}
+  var el = opts && opts.el || defaults.el;
+{% endhighlight %}
+
+This code needs an `el` property. It says, define the `el` property from `opts` (passed in from a function) or get the default `el` value. That's a lot of work to make sure that a property has a value.
+
+## Option Readability Can Be Improved With ES6
+
+ES6, with function destructuring allows us to make options code more readable.
+
+With ES6, we can write this:
+{% highlight javaScript %}
+  function someFunction({
+    el = document.documentElement,
+    win = window,
+    attribute = 'data-some-attr' } = {}) {
+    return console.log({
+      element: el,
+      document: win,
+      attr: attribute
+    });
+  };
+{% endhighlight %}
+
+And then add any custom opts with:
+{% highlight javaScript %}
+  someFunction({attribute: 'data-attr'});
+{% endhighlight %}
+
+This trims down the reference to a poperty value to 2 times versus 3!
+
+## Conclusion
+
+With ES6 function destructuring, options code is much cleaner and easier to read. As a result Open Source Plugins that use this feature are easier to improve and understand.
+
+

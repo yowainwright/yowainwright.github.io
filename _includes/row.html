@@ -1,0 +1,5 @@
+<div class="row row--widget">
+{% for post in site.categories[post.featured_category] limit: 3 %}
+  {% include posts/post_headline.html %}
+{% endfor %}
+</div>
