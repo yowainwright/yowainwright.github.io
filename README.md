@@ -4,7 +4,7 @@
 
 > Jeffry.in is the personal blog of Jeff Wainwright—a software engineer living in Playa Vista, CA
 
-Please [reach out](mailto:jjwainwright2@gmail.comsubject=Reaching out from the Githubs) with tips, notes or just to say 'hi'. ✋
+Please [reach out](mailto:yowainwright@gmail.com) with tips, notes or just to say 'hi'. ✋
 
 ---
 
