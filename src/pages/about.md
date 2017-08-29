@@ -3,14 +3,13 @@ title: About
 date: "2017-07-28"
 layout: post
 readNext: "/"
-path: "/about/"
+path: "/about"
 meta: About Jeffry
 ---
 
 <hr>
 
 Jeffry.in is the blog of Jeffry Wainwright, a software engineer who enjoys open source, being outside, and trying to live life with purpose. 
-{: .first-paragraph}
 
 Unrelated to software, he [rides road bikes](//www.strava.com/athletes/722335), runs and commutes as much as possible via skateboard. His latest passion is surfing! 🏄 
 
