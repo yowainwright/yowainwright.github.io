@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/yowainwright.github.io`,
   siteMetadata: {
     title: 'Jeffry.in',
     author: 'Jeff Wainwright',
