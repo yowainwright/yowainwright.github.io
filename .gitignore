@@ -1,12 +1,9 @@
-.bundle/
-.sass-cache
-.jekyll-metadata
-bower_components
-bower_components/*
-node_modules
-node_modules/*
-_site
-_site/*
-vendor
-vendor/*
+node_modules/
+public
+.gatsby-context.js
+.DS_Store
+.intermediate-representation/
+.cache/
+gatsby-blog
+
 

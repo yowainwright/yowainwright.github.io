@@ -1,17 +1,14 @@
-# Jeffry.in 
+<h1 align="center">Jeffry.in ✨</h1>
 
-[![Build Status](https://travis-ci.org/yowainwright/yowainwright.github.io.svg?branch=master)](https://travis-ci.org/yowainwright/yowainwright.github.io)
 [![Share](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000)](https://twitter.com/home?status=Hey%20%40yowainwright%2C%20I%20saw%20your%20blog%20https%3A%2F%2Fgithub.com%2Fyowainwright%2Fyowainwright.github.io%20%F0%9F%99%8C%20%23jekyllrb)
 
-> For the love of code ✨
+> Jeffry.in is the personal blog of Jeff Wainwright—a software engineer living in Playa Vista, CA
 
-This is the Jekyll blog of Jeff Wainwright (me).
-
-Please reach out to [me](mailto:jjwainwright2@gmail.comsubject=Reaching out from the Githubs) with tips, notes or just to say 'hey'. ✋
+Please [reach out](mailto:yowainwright@gmail.com) with tips, notes or just to say 'hi'. ✋
 
 ---
 
-You can also connect with me socially on:
+Connect with me socially on:
 -  [Github](https://github.com/yowainwright)
 -  [Twitter](https://twitter.com/yowainwright)
 -  [Instagram](https://www.instagram.com/yowainwright/)
@@ -20,28 +17,39 @@ You can also connect with me socially on:
 
 ---
 
-If you'd like to help me with this blog:
--   download the repository
--   building locally
---   `bundle exec jekyll serve -w --config _config.yml,_config_dev.yml --incremental`
---   The command above allows us to have a configurable `site.url` for links between prod & dev environments
--  then submit a pull request 😊
+## Tech: In brief, Gatsby 💼
 
----
+This blog runs on [Gatsby](https://www.gatsbyjs.org/docs/). Gatsby is a site generator built with [React](https://facebook.github.io/react/docs/).
 
-## Notes
+## Gatsby Dependencies
 
-For issues with github-pages security checkout that look like this:
-```sh
+This site uses the Gatsby plugins listed below:
+- [gatsby-plugin-google-analytics](https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/)
+- [gatsby-plugin-sass](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/)
 
-GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data....error:
+\* This list is incomplete
 
+
+## Setting up
+
+Install this starter (assuming Gatsby is installed) by running from your CLI:
+`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
+
+## Development
+
+### Building
+```shell
+gatsby build
 ```
 
-Run this in your terminal
-```sh
+### Developing with reload
 
-bundle config git.allow_insecure true
-
+```shell
+gatsby develop
 ```
 
+### Deployment with necessary files
+
+```shell
+npm run deploy
+```
