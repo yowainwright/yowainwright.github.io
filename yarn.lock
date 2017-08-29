@@ -3466,7 +3466,7 @@ gatsby-plugin-google-analytics@^1.0.4:
   dependencies:
     babel-runtime "6.26.0"
 
-gatsby-plugin-manifest@^1.0.4:
+gatsby-plugin-manifest@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-1.0.5.tgz#c8087b326842cae9766524a699587268ae6859e8"
   dependencies:

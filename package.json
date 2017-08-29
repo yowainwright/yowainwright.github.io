@@ -11,7 +11,7 @@
     "gatsby": "^1.8.15",
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-google-analytics": "^1.0.4",
-    "gatsby-plugin-manifest": "^1.0.4",
+    "gatsby-plugin-manifest": "^1.0.5",
     "gatsby-plugin-offline": "^1.0.4",
     "gatsby-plugin-preact": "^1.0.3",
     "gatsby-plugin-react-helmet": "^1.0.3",
@@ -55,7 +55,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public",
+    "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public cp -r ./assets ./public",
     "deploy": "npm run pre-deploy && gatsby build && gh-pages -d public --branch master",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
