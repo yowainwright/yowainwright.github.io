@@ -35,7 +35,7 @@ class Archive extends Component {
     this.posts.forEach((post, i) => {
       const pNode = post.node
       const path = get(post, 'node.frontmatter.path') || pNode.path
-      if (path === '/404/' || path === '/about/') return
+      if (path === '/404/' || path === '/about' || path === '/about/') return
       const title = get(post, 'node.frontmatter.title') || pNode.title
       const date = get(post, 'node.frontmatter.date') || pNode.date
       postItems.push(

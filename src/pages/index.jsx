@@ -64,7 +64,7 @@ class BlogIndex extends Component {
       const pNode = post.node
       const path = get(post, 'node.frontmatter.path') || pNode.path
       // return based on mandatory data
-      if (path === '/404/' || path === '/about/') return
+      if (path === '/404/' || path === '/about' || path === '/about/') return
 
       // define post data
       const title = get(post, 'node.frontmatter.title') || pNode.title
