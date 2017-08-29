@@ -55,7 +55,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "pre-deploy": "cp CNAME public; cp *.html public",
+    "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public",
     "deploy": "npm run pre-deploy && gatsby build && gh-pages -d public --branch master",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
