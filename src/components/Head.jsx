@@ -21,7 +21,7 @@ class Head extends Component {
       <Helmet>
         <meta name="robots" content="index,follow" />
         <meta property="og:locale" content="en_US" />
-        <link href="https://yowainwright.imgix.net/favicon.ico" rel="icon" />
+        <link href="https://jeffry.in/assets/favicon.ico" rel="icon" />
         <link href="https://yowainwright.imgix.net/w.png" rel="apple-touch-icon" itemProp="logo" />
         <meta name="google-site-verification" content="cXTq9c3NhBvHJsPXxzWAYAqbB8PRUKUxemU8mykg_vs" />
         <script async src="//www.google-analytics.com/analytics.js"></script>
