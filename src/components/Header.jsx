@@ -39,12 +39,12 @@ class Header extends Component {
       {
         alias: 'archive',
         name: 'Archive',
-        path: '/archive',
+        path: '/archive/',
       },
       {
         alias: 'about',
         name: 'About',
-        path: '/about',
+        path: '/about/',
       },
     ]
 

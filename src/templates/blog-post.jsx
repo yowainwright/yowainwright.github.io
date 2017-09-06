@@ -8,6 +8,11 @@ class BlogPostTemplate extends Component {
     this.post = get(this, 'props.data.markdownRemark')
   }
 
+  generateDate() {
+    if (this.post.frontmatter.path !== '/about/') return 
+    return (<time>{this.post.frontmatter.date}</time>)
+  }
+
   render() {
     const post =  this.post
 
@@ -22,7 +27,7 @@ class BlogPostTemplate extends Component {
         </Helmet>
         <header>
           <h1 itemProp="headeline">{post.frontmatter.title}</h1>
-          <time>{post.frontmatter.date}</time>
+          {this.generateDate()}
         </header>
         <div className="wrapper">
           <div className="content" dangerouslySetInnerHTML={{ __html: post.html }} />
