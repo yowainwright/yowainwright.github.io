@@ -31,5 +31,5 @@ Lauren and I would touch base after she moved to Doha—to reflect on our trips,
 I'll never forget Lauren for that and our trips. She will live on in my mind; appreciating sunsets—accepting a landscape so much that she seems to become a part of it, like that moment at the Gulf of Mexico. She will be missed. I'll always see a bit of her in every sunset I watch—its quite good-bye mixed with fiery light. I'll miss you Lauren Schlueter. 
 
 <figure>
-  <img src="//yowainwright.imgix.net/losing-a-friend/gulf-of-mexico.jpg?w=800&h=800&crop=focalpoint&auto=format" alt="Lauren at the Gulf of Mexico" />
+  <img src="https://yowainwright.imgix.net/losing-a-friend/gulf-of-mexico.jpg?w=800&h=800&crop=focalpoint&auto=format" alt="Lauren at the Gulf of Mexico" />
 </figure>
