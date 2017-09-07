@@ -12,7 +12,7 @@ categories:
 - story
 ---
 
-**Draft:** After switching from Jekyll to Gatsby, here are some tips I wish I would have had gettings setup.
+After switching from Jekyll to Gatsby, there have been some tips I wish I would have had getting setup.
 
 ## Having problems building?
 

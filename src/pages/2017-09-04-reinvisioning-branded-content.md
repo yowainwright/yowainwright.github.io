@@ -12,13 +12,11 @@ categories:
 - story
 ---
 
-**Draft:** Over a year ago, I was given the opportunity to work with a team to design and develop branded content for Dollar Shave Club. [Dollar Shave Club](https://www.dollarshaveclub.com) and it's affiliated company, [Mel](https://melmagazine.com/) had been producing high quality content along with beautiful art for approximately 2 years before under [Josh Schollmeyer](https://www.linkedin.com/in/jschollmeyer/). This post will summarize the experience and then go into more of my workspace—engineering.
+Over a year ago, I was given the opportunity to work with a team to design and develop branded content for Dollar Shave Club. [Dollar Shave Club](https://www.dollarshaveclub.com) and it's affiliated company, [Mel](https://melmagazine.com/) had been producing high quality content along with beautiful art for approximately 2 years before under [Josh Schollmeyer](https://www.linkedin.com/in/jschollmeyer/). This post will summarize the experience of my team and then go into more of my area of expertise—engineering.
 
 
 To build a site that would be able to come close to the already set content, I was brought on under [Darshit Desai](https://www.linkedin.com/in/darshitdesai/) to work with him and other team members—[Erin Tag](https://www.linkedin.com/in/erin-taj-12596946/), Nick Lefty, [Donny Smith](https://www.linkedin.com/in/donnysmith/), [Justin Berg](https://www.linkedin.com/in/justin-berg-93722b2/), [Arvind Mishra](https://www.linkedin.com/in/arvindmishra1/), and [Melissa Williams](https://www.linkedin.com/in/melwilms/).
 
-
-\* More images and updated to be added later for this post.
 
 ----
 
@@ -28,7 +26,7 @@ Branded content is not new conceptually. We were tasked with figuring out how to
 
 We spent time, refining out look and answering questions that would have to last for a long period to come. What would be our design style? Could we create something that would allow the experience of each article feel like it's own? How could we insure that our content seemed like the good read it was/is and not like _just branded content_?
 
-After about 6 months of prototyping and developing designs we came to a few conclusions. We should have a simple palette of mainly blacks, greys, and whites to let imagery and articles stand out. We should being everything modularly so that we can more quickly add features. For the CMS for editing, we went with Wordpress so that writer would work with something that most were used to. The front end itself was separated using Wordpresses API. 
+After about 6 months of prototyping and developing designs we came to a few conclusions. We should have a simple palette of mainly blacks, greys, and whites to let imagery and articles stand out. We should being everything modularly so that we can more quickly add features. For the CMS for editing, we went with Wordpress so that writer would work with something that most were used to. The front end itself was separated using [Wordpresses API](https://wordpress.org/plugins/rest-api/). 
 
 ## The site must be fast
 
@@ -110,3 +108,5 @@ To make the site more searchable, we made sure to use as much modern html as pos
 &lt;/article&gt;
 ```
 
+
+Check out the final product [here](https://content.dollarshaveclub.com).
