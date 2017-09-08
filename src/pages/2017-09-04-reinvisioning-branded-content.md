@@ -1,5 +1,5 @@
 ---
-title: Reinvisioning branded content
+title: Reinvisioning branded content at Dollar Shave Club
 date: "2017-09-04"
 layout: post
 readNext: "/"
