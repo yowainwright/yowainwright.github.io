@@ -41,14 +41,14 @@ Everything on this site was written and built by him—except for some potential
 
 ## Some work history 💼
 
-**Dollar Shave Club**<br/>
+**[Dollar Shave Club](https://www.dollarshaveclub.com/)**<br/>
 Engineer<br/>
 Los Angeles, CA \| March 2016 - current
 
--  Engineer Analytics Platform
--  Built a content platform, [shipped](https://content.dollarshaveclub.com/) September of 2016 🚀
+-  Currently Developing Features on DSC's Web Platform
+-  Core Engineer of Front End Analytics Platform
+-  Built the Front End of [DSC's content platform](https://content.dollarshaveclub.com/) September of 2016 🚀
 -  Maintain Open Source Products (see above)
--  Build content applications in various languages
 
 
 **[Billboard](http://www.billboard.com/) & [The Hollywood Reporter](http://www.hollywoodreporter.com/)**<br/>
@@ -90,7 +90,7 @@ Burbank, CA \| March 2012 - March 2014
 User Interface Developer<br />
 Rockville, MD \| Jan 2011-Jan 2012
 
--  Built site templating system for content & data
+-  Built site templating system for content & data—still in use (September 2017)
 -  Developed & implemented an [online style guide](//styleguides.io/)
 -  Designed User Interfaces Charts, Graphs & Social Area
 -  Code: .NET Web forms (HTML templating Language), CSS, JS (jQuery)
@@ -119,15 +119,17 @@ Rockville, MD \| Jan 2011-Jan 2012
 ## Apps 
 
 -  **Design**: Illustrator, Indesign, Photoshop, Sketch
--  **Dev**: Sublime Text, Terminal, Illustrator, Indesign, Photoshop, Sketch
--  **Code Management**: Git, Stash, Github, BitBucket
+-  **Dev**: Sublime Text, iTerm, Alfred, Dash, Emmet
+-  **Code Management**: Git, Github, BitBucket
 -  **CMS**: Drupal, CQ5, Sitecore, Wordpress, SailThru, Strongmail, RebleMouse, MailChimp, SquareSpace, Shopify, Google Products
--  **Project Management** Basecamp, Bamboo, Jira, Trello
+-  **Project Management** Basecamp, Jira, Trello
 
 ## Code base
 
 -  **HTML**: Jade, Twig, Liquid, Jinja, Mustache, Handlebars
 -  **CSS**: SASS, PostCss
--  **JS**: jQuery, Backbone, Underscore, Ember, Grunt, Gulp, Webpack, LoDash, Rollup, Node
--  **Frameworks**: Bootstrap, Semantic
+-  **JS Libs/Frameworks**: jQuery, Backbone, Underscore, Ember, Grunt, Gulp, Webpack, LoDash, Rollup, Node, React
+-  **Testing**: Selenium, Sinon, qUnit, Ava, Jest, Mocha, jSDom
+-  **Frameworks/Methodologies**: Bootstrap, Semantic, BEM 
+-  **Other**: shell scripts, Go
 

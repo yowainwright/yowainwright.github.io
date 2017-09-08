@@ -23,7 +23,7 @@ class BlogPostTemplate extends Component {
           <link rel="canonical" href={`${post.frontmatter.path}`} itemProp="url" />
           <meta name="twitter:url" property="og:url" content={`${post.frontmatter.path}`} />
           <meta name="twitter:title" property="og:title" content={`${post.frontmatter.title}`} />
-          <meta name="twitter:image" property="og:image"  content={`${post.frontmatter.featured_image || 'https://yowainwright.imgix/w.jpg'}`} itemProp="image" />
+          <meta name="twitter:image" property="og:image"  content={`${post.frontmatter.featured_image || 'https://yowainwright.imgix.net/w.jpg'}`} itemProp="image" />
         </Helmet>
         <header>
           <h1 itemProp="headeline">{post.frontmatter.title}</h1>
