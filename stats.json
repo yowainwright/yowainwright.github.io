@@ -68,6 +68,10 @@
       "path----6611940bd40871b680a6.js",
       "path----6611940bd40871b680a6.js.map"
     ],
+    "path---javascript-software-mid-2017": [
+      "path---javascript-software-mid-2017-65b4efef9a86e81520a6.js",
+      "path---javascript-software-mid-2017-65b4efef9a86e81520a6.js.map"
+    ],
     "component---src-pages-archive-jsx": [
       "component---src-pages-archive-jsx-159182ef6f4826a2b3a9.js",
       "component---src-pages-archive-jsx-159182ef6f4826a2b3a9.js.map"
@@ -141,8 +145,8 @@
       "path---js-closure-056480378a27f8262a9f.js.map"
     ],
     "path---index": [
-      "path---index-d18283e25c9566323932.js",
-      "path---index-d18283e25c9566323932.js.map"
+      "path---index-2c96c132956308862648.js",
+      "path---index-2c96c132956308862648.js.map"
     ],
     "path---week-18-17": [
       "path---week-18-17-e57182f0c4f68ac0e1d4.js",
@@ -241,12 +245,12 @@
       "path---arrow-functions-cont-f37e4f85e6e15e1b46eb.js.map"
     ],
     "app": [
-      "app-bcb262694398689460f1.js",
-      "app-bcb262694398689460f1.js.map"
+      "app-d02a31e620483097738d.js",
+      "app-d02a31e620483097738d.js.map"
     ],
     "path---archive": [
-      "path---archive-12fe559efba140ff0e05.js",
-      "path---archive-12fe559efba140ff0e05.js.map"
+      "path---archive-71bd6ae2f54b17b643a0.js",
+      "path---archive-71bd6ae2f54b17b643a0.js.map"
     ],
     "path---week-10-17": [
       "path---week-10-17-638ceea714fc6a07afdc.js",
