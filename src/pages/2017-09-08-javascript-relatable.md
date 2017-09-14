@@ -1,5 +1,5 @@
 ---
-title: "JavaScript is for the people"
+title: "JavaScript is relatable"
 date: "2017-09-08"
 layout: post
 readNext: "/"
@@ -12,21 +12,69 @@ categories:
 - story
 ---
 
-JavaScript fatigue real but **JavaScript is relatable**. I remember this always. I hope others do too. The reason JavaScript has become the most used programming language is because it is relatable! It written in a [week](https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript) and delivered to a browser as a prototype. It is often looked down on. Yes, despite its status, it is used everywhere and for many different things. JavaScript is a programming language that can be understood in sentiment, starting out, and in very complex applications because it is relatable. 
+JavaScript fatigue real because **JavaScript is relatable**. That's why so much is happening with it! I remember this always. I hope others do too. JavaScript has become the most used programming language because it is relatable! It was written in a [week](https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript) and delivered to a browser as a prototype. It is often looked down on. Yet, despite its status, it is used everywhere for many different things. JavaScript is a programming language that can be understood in sentiment, starting out, and in very complex applications because it is relatable. 
 
 ## JavaScript is scrappy
 
 JavaScript is scrappy and it has been for most of its life span so far. It was a final piece of code to make that thing do that thing on a web page. It was the feeling of web pages. It was hacky. For that, logical thinking tended towards despised it and creative thinking tended towards fascination, 'How can this pile of legos became a castle?'. 
 
+#### JS write code in your chrome browser `console`
+
+```javascript
+// crack open your console (on a mac 💻)
+// cmd + opt + j
+alert('You are writing JavaScript')
+
+```
+
+#### JS write a bookmarket to do stuff in your chrome browser
+
+```javascript
+// open your bookmark manager (on a mac 💻)
+// opt + cmd + b
+// copy/paste the code snippet below into a new bookmark
+javascript: alert('You are writing JavaScript')
+// click the new bookmark on any page
+```
+
+
 ## JavaScript has a low level of entry
 
 JavaScript, when learning about computers goes right along with learning `HTML` and `CSS`. It can still be added right to web pages within a `<script>` tag. It is easy to read about all of the other things—tooling and frameworks and feel like those things need to create a valid web page but they're not. This is such a cool thing. With just HTML, CSS, and JavaScript—which is what generally people view all computer information on inspiring technology can be made. 
+
+#### JS do some inline scripting stuff
+
+```html
+&lt;body&gt;
+&lt;script&gt;
+  alert('You are writing JavaScript')
+&lt;/script&gt;
+&lt;/body&gt;
+```
+
 
 ## JavaScript is for anything
 
 Now that JavaScript is established and something that is easy to get started with, why does the barrier to entry seem so high? JavaScript seems to have a high barrier of entry because of what people are doing with it currently. Currently, JavaScript is used for everything—even HTML and CSS. This means that when JavaScript is compiled into HTML and CSS. When JavaScript is used for everything it is a lot more complex. 
 
 JavaScript having the ability to be used for everything does not mean that great things can't be built using JavaScript in a lot of different ways. This is a very important thing to note, understand and remember. 
+
+#### JS do some server stuff
+
+```shell
+# crack open a shell (on a mac 💻)
+# lines below assumes homebrew is not installed and neither is node
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && 
+brew install node 
+
+# make 'dat app
+mkdir code/express-thing && 
+cd code/express-thing && 
+npm i express --save-dev && 
+npm init -f && 
+echo 'const express=require("express"),app=express();app.get("/",function(e,p){p.send("Hello World!")}),app.listen(3e3,function(){console.log("Example app listening on port 3000!")});' > app.js && 
+node app.js 
+```
 
 ## There can be many types of JavaScript Experts
 
