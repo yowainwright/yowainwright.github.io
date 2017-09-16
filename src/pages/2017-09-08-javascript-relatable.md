@@ -12,7 +12,14 @@ categories:
 - story
 ---
 
-JavaScript fatigue real because **JavaScript is relatable**. That's why so much is happening with it! I remember this always. I hope others do too. JavaScript has become the most used programming language because it is relatable! It was written in a [week](https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript) and delivered to a browser as a prototype. It is often looked down on. Yet, despite its status, it is used everywhere for many different things. JavaScript is a programming language that can be understood in sentiment, starting out, and in very complex applications because it is relatable. 
+JavaScript fatigue real because **JavaScript is relatable**. That's why so much is happening with it! I remember this always. I hope others do too. JavaScript has become the most used programming language because it is relatable! It was written in a [week](https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript) and delivered to a browser as a prototype. It is often looked down on. Yet, despite its status, it is used everywhere for many different things. JavaScript is a programming language that can be understood in sentiment, starting out, and in very complex applications because it is relatable.
+
+<figure>
+  <a href="http://images.boomsbeat.com/data/images/full/193538/puppy-in-a-mirror-jpg">
+    <img src="https://yowainwright.imgix.net/relatable/puppy-mirror.jpg" />
+ </a>
+ <figcaption>Image from [boomsbeat](http://www.boomsbeat.com/)—found by searching 'dogs looking into mirrors'</figcaption>
+</figure> 
 
 ## JavaScript is scrappy
 
