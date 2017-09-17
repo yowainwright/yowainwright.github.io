@@ -3,7 +3,7 @@ $site-nav-post-images: $spacing-unit * 52 / 16;
 $nav-height: 4rem;
 // nav
 .site-nav {
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid $color-grey-lightest;
 	position: relative;
 	margin: 0 auto 2rem;
 	@include media-query($width-small) {
@@ -11,7 +11,7 @@ $nav-height: 4rem;
     margin-bottom: 0;
     margin-top: 2rem;
     &:after {
-      border-bottom: 3px solid black;
+      border-bottom: 3px solid $color-grey-lightest;
       content: ' ';
       left: 0;
       position: absolute;
@@ -40,7 +40,7 @@ $nav-height: 4rem;
 	&__items {
     display: flex;
     justify-content: space-around;
-    max-width: none;
+    max-width: $width-medium;
     padding: 0;
     position: relative;
 	}
