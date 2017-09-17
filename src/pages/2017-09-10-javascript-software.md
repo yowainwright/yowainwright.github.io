@@ -15,7 +15,7 @@ categories:
 This post lists very used JavaScript frameworks, libraries and tools as defined by me (Jeff Wainwright) in (mid) 2017. It is written to provide context for other posts about I write the reference JavaScript tooling—connecting the dots. For deeper context into how I define JavaScript Software, read [here](https://jeffry.in/4-categories-js-projects/). 
 
 <figure>
-  <img src="https://yowainwright.imgix.net/connecting-dots.png" />
+  <img src="https://yowainwright.imgix.net/connecting-dots.png" alt="Connecting the dots" />
 </figure> 
 
 ## JavaScript Frameworks, Libraries, and Tools
