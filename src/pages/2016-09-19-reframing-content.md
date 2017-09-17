@@ -15,7 +15,6 @@ categories:
 ---
 
 The most meaningful part of the webpage, the content, can be a largely unknown thing. Authors create content in one place & expect it to render well in another. Embedded content adds another level of complexity to this process.
-{: .first-paragraph}
 
 Embedded content, like videos, images, podcasts & tweets often do not translate well to a fluid webpage - so we need to reframe them. This is what [Reframe.js](https://dollarshaveclub.github.io/reframe.js/) does. It wraps embedded content in an [intrinsic ratio](http://alistapart.com/article/creating-intrinsic-ratios-for-video) of the original embed but with fluid sizing so that the embedded content looks great at any size.
 
@@ -44,7 +43,7 @@ Reframe.js's simplicity in both language & options is meant to make the plugin e
 
 In this sass mixin, the default aspect ratio is 16:9 but we can override that to make the reframe a perfect ratio of the embed's original size.
 
-{% highlight sass %}
+```css
 
 @mixin reframe($el: iframe, $paddingTop: 56.25%){
   padding-top: $paddingTop;
@@ -59,25 +58,24 @@ In this sass mixin, the default aspect ratio is 16:9 but we can override that to
   }
 }
 
-{% endhighlight %}
+```
 
 **JavaScript**
 
 Wrap a selected element in a `div`.
 
-{% highlight javascript %}
+```javascript
 
 const frame = element // frame is the elmeent to be wrapped
 const div = document.createElement('div');
 frame.parentNode.insertBefore(div, frame);
 frame.parentNode.removeChild(frame);
 div.appendChild(frame);
-
-{% endhighlight %}
+```
 
 Add padding to create an intrinsic ratio.
 
-{% highlight javascript %}
+```javascript
 
 // where the frame is the element & the div is the added wrapper element
 const height = frame.offsetHeight;
@@ -85,11 +83,11 @@ const width = frame.offsetWidth;
 const padding = height / width * 100;
 div.style.paddingTop = padding + '%';
 
-{% endhighlight %}
+```
 
 Make a plugin for jQuery or [Zepto](http://zeptojs.com/).
 
-{% highlight javascript %}
+```javascript
 
 if (window.$) {
   window.$.fn.extend({
@@ -99,26 +97,26 @@ if (window.$) {
   });
 }
 
-{% endhighlight %}
+```
 
 Add a check to the top of the plugin which allows us to select the element to reframe with jquery _or_ plain js (Kodos to [Jacob Kelley](http://jakiestfu.com/) here).
 
-{% highlight javascript %}
+```javascript
 
 let frames = typeof target === 'string' ? document.querySelectorAll(target) : target;
 if (!('length' in frames)) {
   frames = [frames];
 }
 
-{% endhighlight %}
+```
 
 Here's the code you write.
 
-{% highlight javascript %}
+```javascript
 
 reframe('selector');
 
-{% endhighlight %}
+```
 
 <p data-height="380" data-theme-id="0" data-slug-hash="Gjjbak" data-default-tab="css,result" data-user="yowainwright" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/yowainwright/pen/Gjjbak/">Reframe.js jQuery Demo</a> by Jeff Wainwright (<a href="http://codepen.io/yowainwright">@yowainwright</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>

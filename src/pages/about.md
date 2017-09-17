@@ -7,7 +7,7 @@ path: "/about/"
 meta: About Jeff Wainwright
 ---
 
-I'm software engineer at [Dollar Shave Club](https://www.dollarshaveclub.com/). I got into software because I'm passionate about making things. Unrelated to software, I enjoy [riding bikes](https://www.strava.com/athletes/722335), [running](https://www.strava.com/athletes/722335), and surfing! 
+I'm software engineer at [Dollar Shave Club](https://www.dollarshaveclub.com/). I started writing software because I'm passionate about making things and contributing. Unrelated to software, I enjoy [riding bikes](https://www.strava.com/athletes/722335), [running](https://www.strava.com/athletes/722335), and surfing.
 
 <br>
 
@@ -31,6 +31,7 @@ I'm software engineer at [Dollar Shave Club](https://www.dollarshaveclub.com/). 
 
 <br>
 
+<p align="center">Email me at <a href="mailto:yowainwright@gmail.com">yowainwright@gmail.com</a> or reach out on socially.</p>
 <p align="center">
   <a href="https://github.com/yowainwright"><strong>Github</strong></a>&nbsp;&nbsp;
   <a href="https://instagram.com/yowainwright"><strong>Instagram</strong></a>&nbsp;&nbsp;

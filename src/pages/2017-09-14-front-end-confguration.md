@@ -46,7 +46,7 @@ Front end development is a lot different today. Code itself if much easier to di
 
 Despite the greatly improved simplicity in the main front end APIs, the directory structure of a front end repository is much more complex.
 
-```
+```html
 
   -  dist/
   -  src/
@@ -79,7 +79,7 @@ Despite the greatly improved simplicity in the main front end APIs, the director
 
 Code itself is less complex and very modular. The steps to publish that code the browser if fair more complex. 
 
-<h2 id="configuration">Speed up front end configuration for prototyping</h2>
+<h2 id="configuration">Front end configuration notes</h2>
 
 
 

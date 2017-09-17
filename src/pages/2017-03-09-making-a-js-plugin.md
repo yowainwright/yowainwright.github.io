@@ -21,7 +21,7 @@ I've made a few small JavaScript Open Source plugins—[reframe.js](https://doll
 
 ## Plugins Should Be Simple 💁
 
-_JavaScript plugins should be simple_! It should be easy to setup plugins to do the thing that they are supposed to do. Between downloading and integration, plugins should take only several minutes to understand, implement and try out.
+JavaScript plugins should be simple! It should be easy to setup plugins to do the thing that they are supposed to do. Between downloading and integration, plugins should take only several minutes to understand, implement and try out.
 
 A simple plugin works within the functionality of larger JavaScript eco-systems. Featurization of a plugin should not extend far beyond the problem that the plugin solves and should probably just focus it's usability within a larger eco-system—not extended options.
 

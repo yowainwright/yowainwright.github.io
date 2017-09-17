@@ -28,7 +28,7 @@ JavaScript is scrappy and it has been for most of its life span so far. It was a
 #### JS write code in your chrome browser `console`
 
 ```javascript
-// crack open your console (on a mac 💻)
+// crack open your console (on a mac)
 // cmd + opt + j
 alert('You are writing JavaScript')
 
@@ -52,11 +52,11 @@ JavaScript, when learning about computers goes right along with learning `HTML` 
 #### JS do some inline scripting stuff
 
 ```html
-&lt;body&gt;
-&lt;script&gt;
+<body>
+<script>
   alert('You are writing JavaScript')
-&lt;/script&gt;
-&lt;/body&gt;
+</script>
+</body>
 ```
 
 
@@ -69,7 +69,7 @@ JavaScript having the ability to be used for everything does not mean that great
 #### JS do some server stuff
 
 ```shell
-# crack open a shell (on a mac 💻)
+# crack open a shell (on a mac )
 # lines below assumes homebrew is not installed and neither is node
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && 
 brew install node 
