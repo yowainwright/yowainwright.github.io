@@ -16,6 +16,7 @@ This post lists very used JavaScript frameworks, libraries and tools as defined 
 
 <figure>
   <img src="https://yowainwright.imgix.net/connecting-dots.png" alt="Connecting the dots" />
+  <figcaption>Connecting the dots</figcaption>
 </figure> 
 
 ## JavaScript Frameworks, Libraries, and Tools

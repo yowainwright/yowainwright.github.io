@@ -15,7 +15,6 @@ categories:
 ---
 
 Remembering the first time I saw [William Kentridge](//en.wikipedia.org/wiki/William_Kentridge): it was in Chicago and I drove down from Madison, Madison Wisconsin with my girlfriend. I was around 21. I'm 35 now. I threw a temper tantrum while trying to find a place to park in the magnificent mile area.
-{: .first-paragraph}
 
 After parking, I remember looking into girlfriend's big green eyes right after we got out of the car. She was looking at me so empathically. "I'm going to dump you in a few months" she was probably thinking. She was just waiting for right exit. It's not that I didn't have good qualities then. I was full of charisma and passion but my passion was usually about art or skateboarding and _I could be selfish_ in general. However, this moment at the MCA, seeing Kentridge's work for the first time, was a moment in which my passion for art allowed me to be open to a beautiful world outside of me.
 
