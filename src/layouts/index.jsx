@@ -11,6 +11,8 @@ import Footer from '../components/Footer'
 */
 import '../styles/main.scss'
 
+require('prismjs/themes/prism.css')
+
 /*
 
 

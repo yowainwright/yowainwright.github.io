@@ -18,11 +18,11 @@ module.exports = {
         plugins: [
           {
             resolve: 'gatsby-remark-responsive-iframe',
+            resolve: 'gatsby-remark-prismjs',
             options: {
               wrapperStyle: 'margin-bottom: 1.0725rem',
             },
           },
-          'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],

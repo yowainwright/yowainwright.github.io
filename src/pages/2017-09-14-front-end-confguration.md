@@ -46,31 +46,35 @@ Front end development is a lot different today. Code itself if much easier to di
 
 Despite the greatly improved simplicity in the main front end APIs, the directory structure of a front end repository is much more complex.
 
--  dist/
--  src/
-   -  components/
-   -  layouts/
-   -  pages/
-   -  styles/
-   -  templates/
--  test/
-   -  acceptance/
-   -  unit/
-   -  `.babelrc` another one
-   -  `.eslint.js` another one
--  `.babelrc`
--  `.circleci`
--  `.editorconfig`
--  `.eslintignore`
--  `.eslint.js`
--  `manifest.json`
--  `.nvmrc`
--  `package.json`
--  `package-lock.json`
--  `some-config.js`
--  `maybe-even-another-config.js`
--  `rollup.config.js`
--  `yarn.lock`
+```
+
+  -  dist/
+  -  src/
+     -  components/
+     -  layouts/
+     -  pages/
+     -  styles/
+     -  templates/
+  -  test/
+     -  acceptance/
+     -  unit/
+     -  .babelrc
+     -  .eslint.js
+  -  .babelrc
+  -  .circleci
+  -  .editorconfig
+  -  .eslintignore
+  -  .eslint.js
+  -  .nvmrc
+  -  manifest.json
+  -  package.json
+  -  package-lock.json
+  -  some-config.js
+  -  maybe-even-another-config.js
+  -  rollup.config.js
+  -  yarn.lock
+  
+```
 
 
 Code itself is less complex and very modular. The steps to publish that code the browser if fair more complex. 

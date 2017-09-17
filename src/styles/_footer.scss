@@ -2,9 +2,10 @@
   margin: 2rem 0;
   text-align: center;
   &__content {
-    border: 1px solid black;
+    border: 1px solid $color-grey-lightest;
     display: inline-block;
     font-family: $font-family-headline;
+    font-size: 1rem;
     padding: 1rem;
     text-transform: uppercase;
   }
