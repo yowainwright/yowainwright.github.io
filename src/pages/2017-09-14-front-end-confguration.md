@@ -8,8 +8,7 @@ meta: This posts digs into front end configuration for the purposes of prototypi
 featured_image: null
 share_image: null
 categories:
-- note
-- story
+- javascript
 ---
 
 Front end configuration has become an important part of front end development. Speeding up configuration for prototyping purposes can be very important to learning about what is being prototyped. Approximately a [decade ago](#history), front end development consisted of `HTML`, `CSS`, and `JavaScript`. Front end development is often a lot more [complex](#current) now. It includes linting, bundling, transpiling, and testing. When prototyping, it is important to get up and run as [fast as possible](#configuration). This post will document changes in front end development between then and now. It will briefly describe a current observed pain point. It will then provide potential ways to get up and running for prototyping purposes as quickly as possible.

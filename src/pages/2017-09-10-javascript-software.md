@@ -8,8 +8,7 @@ meta: JavaScript tools in 2017 as defined by Jeff Wainwright for the context of 
 featured_image: null
 share_image: null
 categories:
-- note
-- story
+- javascript
 ---
 
 This post lists very used JavaScript frameworks, libraries and tools as defined by me (Jeff Wainwright) in (mid) 2017. It is written to provide context for other posts about I write the reference JavaScript tooling—connecting the dots. For deeper context into how I define JavaScript Software, read [here](https://jeffry.in/4-categories-js-projects/). 

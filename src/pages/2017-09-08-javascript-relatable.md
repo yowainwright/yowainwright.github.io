@@ -8,8 +8,7 @@ meta: "JavaScript is for the people because it is relatable and usable"
 featured_image: null
 share_image: null
 categories:
-- note
-- story
+- javascript
 ---
 
 JavaScript fatigue real because **JavaScript is relatable**. That's why so much is happening with it! I remember this always. I hope others do too. JavaScript has become the most used programming language because it is relatable! It was written in a [week](https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript) and delivered to a browser as a prototype. It is often looked down on. Yet, despite its status, it is used everywhere for many different things. JavaScript is a programming language that can be understood in sentiment, starting out, and in very complex applications because it is relatable.
