@@ -2,6 +2,12 @@
   &--article {
     @include media-query($width-small) {
       margin-top: 4rem;
+      .post__title {
+        font-size: 2.5rem;
+      }
+    }
+    p {
+      text-align: center;
     }
   }
   &--full {
