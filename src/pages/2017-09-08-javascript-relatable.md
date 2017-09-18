@@ -4,7 +4,7 @@ date: "2017-09-08"
 layout: post
 readNext: "/"
 path: "/JS-is-relatable/"
-meta: "JavaScript is for the people because it is relatable and usable"
+meta: "JavaScript is for the people because it is relatable and usable."
 featured_image: null
 share_image: null
 categories:

@@ -4,7 +4,7 @@ date: "2017-09-14"
 layout: post
 readNext: "/"
 path: "/frontend-prototype-configuration/"
-meta: This posts digs into front end configuration for the purposes of prototyping
+meta: This posts digs into front end configuration for the purposes of prototyping.
 featured_image: null
 share_image: null
 categories:
