@@ -142,16 +142,16 @@ The Gatsby interface also makes adding plugins very easy as well. Once, I unders
 #### Helmet in `Head` component
 
 ```
-&lt;Helmet&gt;
-  &lt;meta name="robots" content="index,follow" /&gt;
-  &lt;meta property="og:locale" content="en_US" /&gt;
+<Helmet>
+  <meta name="robots" content="index,follow" />
+  <meta property="og:locale" content="en_US" />
   // more head stuff
 ```
 
 #### The `Head` component is updated in the blog template 
 
 ```
- &lt;Helmet title={`${post.frontmatter.title} | Jeffry.in`}&gt;
+ <Helmet title={`${post.frontmatter.title} | Jeffry.in`}>
 ```
 
 ## Initial Observations after changing to Gatsby

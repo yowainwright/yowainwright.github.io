@@ -9,7 +9,8 @@ class BlogPostTemplate extends Component {
   }
 
   generateDate() {
-    if (this.post.frontmatter.path !== '/about/') return 
+    console.log(this.post)
+    if (this.post.frontmatter.path === '/about/') return 
     return (<time>{this.post.frontmatter.date}</time>)
   }
 
@@ -55,6 +56,7 @@ export const pageQuery = graphql`
         meta
         title
         date(formatString: "MMMM DD, YYYY")
+        path
       }
     }
   }

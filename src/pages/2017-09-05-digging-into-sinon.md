@@ -8,8 +8,7 @@ meta: Digging into Sinon Fake Server Methods and how to use them.
 featured_image: null
 share_image: null
 categories:
-- note
-- story
+- javascript
 ---
 
 [Sinon](http://sinonjs.org/) is a powerful library used for stubbing functions, methods, xhr calls, and servers in JavaScript. The library and concept has confused me several times. I've found defining the interface to be challenging. Often, I realize that if the interface is challenging me, I need to rethink it. 

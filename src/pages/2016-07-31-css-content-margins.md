@@ -32,7 +32,7 @@ First, to go into more detail if I've already confused you _(sorry)_, I'll more 
 
 ## The old way, using containers to set the width of content
 
-{% highlight sass %}
+```css
 	// Old way
 	// don't worry about the margins on content elements 
 	p {
@@ -54,13 +54,13 @@ First, to go into more detail if I've already confused you _(sorry)_, I'll more 
 			margin-right: auto;
 		}
 	}
-{% endhighlight %}
+```
 
 In this method of setting margins & widths on content, a container element is used to set the `width` of the content & the margins that are set on the left & right of the content. The positives of this approach are that content width & margins can be set on one wrapper element. The negatives with this approach are - what if you have an image, or another element that you'd like to have a different width - you might set a negative margin & exaggerate the width like, `margin: 0 -1rem 0 1rem, width: calc(100% + 2rem);`. This is already bad & then what if the containing element has a `oveflow: hidden` property set. Ugh, you're going to get into crazy town & fast. 
 
 ## The _last current_ way, setting different margins on different content elements
 
-{% highlight sass %}
+```css
 	// The last current way
 	p {
 		margin: 1rem 1rem 0;
@@ -80,13 +80,13 @@ In this method of setting margins & widths on content, a container element is us
 		// no margins in this example on the left, right, top & bottom
 		// no max width set on this example
 	}
-{% endhighlight %}
+```
 
 In this method, a container element plays no role in setting the width of content within a viewport. Elements within a content block are contained by margins & max widths. Max widths may or may not be set on elements but this method often requires the use 2 margin rules on different viewports & setting a width or max width on larger viewports. The margins will almost always go something like be `1rem` to the _left_ & _right_ on small viewports but be set to `auto` on large viewports. With this approach there is almost always that in between moment where to content gets really wide or is positioning on the left of browser because the left & right margins haven't been set to `auto` yet. 
 
 ## The _current_ current way, setting the margins once & setting elements widths as desired 
 
-{% highlight sass %}
+```css
 	// The new new way
 	p,
 	img {
@@ -107,7 +107,7 @@ In this method, a container element plays no role in setting the width of conten
 		// no margins in this example on the left, right, top & bottom
 		// no max width set on this example
 	}
-{% endhighlight %}
+```
 
 Finally, my perferred approach is to set the margins of properties only once & resetting the preferred width of elements based on the viewport size. I do this with calc. It works great. So for a mobile view I have the width set to `calc(100% - 2rem)` which tells the browser make this element 100% of the viewport width with a margin of 1 on either side. You'll find in this approach that the content is always centered & that elements with of 100% can be centered as well.
 

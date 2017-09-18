@@ -22,16 +22,20 @@ Good imagery with clean verbage can get a user to go through a carousel or can u
 ```
 
 **The JS used**
-```javascript
+```html
+
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/javascript<ntic.min.js"></script>
 <script src="http://cdn.jsdelivr.net/jquery.glide/1.0.6/jquery.glide.min.js"></script>
+
 ```
 
 **The html**
 
 The HTML for the first 2 slides
+
 ```html
+
 <div class="slider slider1">
   <div class="slides">
     <div class="slide-item item1">
@@ -42,8 +46,9 @@ The HTML for the first 2 slides
     </div>
     <div class="slide-item item4">
     </div>
-	</div>
+  </div>
 </div>
+
 ```
 
 **The JS added locally**
@@ -56,6 +61,6 @@ $('.slider').glide();
 Note: my JS for glide is slightly different but this is all you need.
 
 <div class="code-sample">
-	<p styles="min-height: 300px;" data-height="268" data-theme-id="0" data-slug-hash="71fdafe5e8fdae857086e9be2bd928ba" data-default-tab="result" data-user="yowainwright" class='codepen'>See the Pen <a href='http://codepen.io/yowainwright/pen/71fdafe5e8fdae857086e9be2bd928ba/'>71fdafe5e8fdae857086e9be2bd928ba</a> by Jeff Wainwright (<a href='http://codepen.io/yowainwright'>@yowainwright</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+    <p styles="min-height: 300px;" data-height="268" data-theme-id="0" data-slug-hash="71fdafe5e8fdae857086e9be2bd928ba" data-default-tab="result" data-user="yowainwright" class='codepen'>See the Pen <a href='http://codepen.io/yowainwright/pen/71fdafe5e8fdae857086e9be2bd928ba/'>71fdafe5e8fdae857086e9be2bd928ba</a> by Jeff Wainwright (<a href='http://codepen.io/yowainwright'>@yowainwright</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 	<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 </div>

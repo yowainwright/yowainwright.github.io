@@ -14,7 +14,6 @@ categories:
 ---
 
 Lauren and I met through a mutual friend of ours from Chicago. When she arrived in Manhattan Beach, where I lived, we became fast friends. At the time, I was recovering from a serious bout with Pneumonia. The sickness had left me a bit depressed. She was going through some life changes making us the perfect travel/hang-out duo.
-{: .first-paragraph}
 
 After meeting, we immediately discussed politics and history. Normal stuff, right? 😂 She was passionate about certain things, like Cuba. These certain things she could describe in great detail which I enjoyed listening to for hours. We enjoyed debating certain points. I learned a from her responses. 
 

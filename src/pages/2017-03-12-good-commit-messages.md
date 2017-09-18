@@ -25,7 +25,7 @@ This is called **AWW** which sounds cute so I like it.
 Here's a git terminal example:
 
 ```bash
-  git commit -m 'changes `dataObj.id` in the `dataObj`'
+git commit -m 'changes `dataObj.id` in the `dataObj`'
 ```
 
 In the example above:

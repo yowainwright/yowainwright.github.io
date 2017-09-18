@@ -51,11 +51,14 @@ var obj = {
 -  As a constructor
 
 ```javascript
+
 function myFunc(name) {
   this.name = name;
 };
-var newMyFunc = new myFunc(‘Jeff');
-document.write(newMyFunc.name);
+
+var newMyFunc = new myFunc('Jeff');
+document.write(myFunc.name);
+
 ```
 
 - Using **.call();** or **.apply();** methods
@@ -74,6 +77,7 @@ var ninja2 = {};
 
 juggle.apply(ninja1, [1, 2, 3, 4]);
 juggle.call(ninja2, 5, 6, 7, 8);
+
 ```
 
 **example:**
