@@ -1,10 +1,10 @@
 ---
-title: Can Code Etiquette be a thing? Here are some starter thoughts on it.
+title: Can Core Review Etiquette be a thing? Here are some starter thoughts on it.
 date: "2017-09-16"
 layout: post
 readNext: "/"
-path: "/code-etiquette/"
-meta: Code Etiquette is an important for code quality, engineer happiness, and engineer growth—but is never talked about?
+path: "/core-review-etiquette/"
+meta: Core Review Etiquette is an important for code quality, engineer happiness, and engineer growth—but is never talked about?
 featured_image: null
 share_image: null
 categories:
@@ -12,9 +12,9 @@ categories:
 - story
 ---
 
-_Code Etiquette_ is not discussed with a quarter of the level of scrutiny that _code_ is within the engineering community. Code etiquette affects learning, code quality, relationships, and self confidence. Code is logical in nature. It is easy to pin point code that is incorrect or could be improved. The human condition when looking at and discussing logical things (like code) can disregard feelings of other people. This causes feelings get hurt and lose of focus on learning and collaboration. This post boils down general feelings mixed with suggestions to improve **code etiquette**.
+_Core Review Etiquette_ is not discussed with a quarter of the level of scrutiny that _code_ is within the engineering community. Core Review Etiquette affects learning, code quality, relationships, and self confidence. Code is logical in nature. It is easy to pin point code that is incorrect or could be improved. The human condition when looking at and discussing logical things (like code) can disregard feelings of other people. This causes feelings get hurt and lose of focus on learning and collaboration. This post boils down general feelings mixed with suggestions to improve **Core Review Etiquette**.
 
-**Note:** Improving code etiquette, because of the human condition, is difficult! Here is a quick list of things that I've done, said, seen, or received that are easier wins in the art of Code Etiquette.
+**Note:** Improving Core Review Etiquette, because of the human condition, is difficult! Here is a quick list of things that I've done, said, seen, or received that are easier wins in the art of Core Review Etiquette.
 
 ---
 
@@ -109,6 +109,6 @@ Developers almost always want to re-write things. It is natural to break down pr
 
 ---
 
-The above list are general high level things that can help with positive engagement when talking about, reviewing, or reading about code or technology. I am a hypocrite. I do all of the things that I've written not to do in the list above. The goal for _Code Etiquette_ is develop a standard etiquette to strive for when discussing code in any format. Much like code, communication has things that are generally right and wrong. I hope to work with other developers to improve _Code Etiquette_ by developing standards by which code can be discussed. 
+The above list are general high level things that can help with positive engagement when talking about, reviewing, or reading about code or technology. I am a hypocrite. I do all of the things that I've written not to do in the list above. The goal for _Core Review Etiquette_ is develop a standard etiquette to strive for when discussing code in any format. Much like code, communication has things that are generally right and wrong. I hope to work with other developers to improve _Core Review Etiquette_ by developing standards by which code can be discussed. 
 
-By thinking through the notes above for myself, I have created benchmarks where I have naturally begun to assess my _Code Etiquette_. I'm focusing on improving my communication based on my list daily. I would love would share these sentiments with other engineering to improve. ~Thanks
+By thinking through the notes above for myself, I have created benchmarks where I have naturally begun to assess my _Core Review Etiquette_. I'm focusing on improving my communication based on my list daily. I would love would share these sentiments with other engineering to improve. ~Thanks

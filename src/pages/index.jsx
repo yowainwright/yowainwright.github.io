@@ -14,6 +14,7 @@ class BlogIndex extends Component {
   constructor(props) {
     super(props)
     this.title = 'Jeffry.in'
+    this.description = 'Jeffry.in is the blog of Jeffry Wainwright, an engineer living in California.'
     this.posts = get(this, 'props.data.allMarkdownRemark.edges')
   }
 
@@ -92,7 +93,14 @@ class BlogIndex extends Component {
 
     return (
       <main className="main">
-        <Helmet title={this.title} />
+        <Helmet title={this.title}>
+          <meta name="twitter:description" property="og:description" content={`${this.description}`} />
+          <link rel="canonical" href="https://jeffry.in" itemProp="url" />
+          <meta name="twitter:url" property="og:url" content="https://jeffry.in" />
+          <meta name="twitter:title" property="og:title" content={`${this.title}`} />
+          <meta name="twitter:image" content="https://yowainwright.imgix.net/w.jpg?w=144&h=144&fit=crop&crop=focalpoint&auto=format" itemProp="image" />
+          <meta property="og:image" content="https://yowainwright.imgix.net/w.jpg'}?w=1200&h=600&fit=crop&crop=focalpoint&auto=format" itemProp="image" />
+        </Helmet>
         {this.generatePosts()}
       </main>
     )
