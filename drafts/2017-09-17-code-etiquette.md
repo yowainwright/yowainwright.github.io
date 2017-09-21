@@ -12,9 +12,9 @@ categories:
 - story
 ---
 
-Code Etiquette is not discussed with the a quarter of the level of scrutiny that code is. The reasons for this are curious because it affects learning, code quality, relationships, and self confidence. As code is logical in nature, it is easy to pin point where something is wrong or could be improved. When the human condition is added to defining logic, feelings get hurt and people are not focused on learning on sharing ideas.
+Code Etiquette is not discussed with a quarter of the level of scrutiny that code is within the engineering community. Code etiquette affects learning, code quality, relationships, and self confidence. As code is logical in nature, it is easy to pin point code that is incorrect or could be improved. The human condition when looking at and discussing something that is logical (code), feelings get hurt and humans loose focus on learning and collaboration. This post boils down feelings mixing with discussing code to the words **code etiquette**.
 
-There is no easy way to improve code etiquette because of the human condition and codes ability to accentaite things that could be improved. 
+Improving code etiquette, because of the human condition, is difficult. 
 
 ---
 

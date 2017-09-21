@@ -11,7 +11,7 @@ categories:
 - javascript
 ---
 
-Front end configuration has become an important part of front end development. Speeding up configuration for prototyping purposes can be very important to learning about what is being prototyped. Approximately a [decade ago](#history), front end development consisted of `HTML`, `CSS`, and `JavaScript`. Front end development is often a lot more [complex](#current) now. It includes linting, bundling, transpiling, and testing. When prototyping, it is important to get up and run as [fast as possible](#configuration). This post will document changes in front end development between then and now. It will briefly describe a current observed pain point. It will then provide potential ways to get up and running for prototyping purposes as quickly as possible.
+Front end configuration has become an important part of front end development. Speeding up configuration for prototyping purposes can be very important to learning about what is being prototyped. Approximately a [decade ago](#history), front end development consisted of `HTML`, `CSS`, and `JavaScript`. Front end development is often a lot more [complex](#current) now. It includes linting, bundling, transpiling, and testing. When prototyping, it is important to get up and run as [fast as possible](#configuration). This post will document changes in front end development between then and now. It will briefly describe a current observed pain point—_how difficult it can when have break aware standard configuration_. It will, finally, provide ways to get up and running without using a lot of configuration for prototyping as quickly as possible with as little overhead as possible.
 
 ---
 
@@ -80,30 +80,34 @@ Code itself is less complex and very modular. The steps to publish that code the
 
 <h2 id="configuration">Front end configuration notes</h2>
 
-Specific configuration for production products is in important. However, when prototyping configuration should be fast and easy so developers can focus on the tool they are trying to prototype for. When developers prototype, the tool that is focused on first is usually the view layer. The developer will decide to build a [React App](https://facebook.github.io/react/) and use `[create-react-app](https://github.com/facebookincubator/create-react-app)` or the same for [Vue](https://vuejs.org/). These sort of products are great for speed, seeing what the view layer tool can do and hopeufully getting a general understand of what the view layer does. However, when developers must stray away from the app generator, there can be a lot of confusion and rewriting. To avoid this, developers can install JavaScript tooling minimally. 
+Specific configuration for production ready products is in important. However, when prototyping, configuration should be fast and easy so developers can focus on the tool they are trying to prototype for. When developers prototype, the tool that is focused on first is usually the view layer. The developer will decide to build a [React App](https://facebook.github.io/react/) and use [create-react-app](https://github.com/facebookincubator/create-react-app) or a similar **creat-app** generator for [Vue](https://vuejs.org/) or something similar. App generator products are great for speed, seeing how a Framework's eco system _can_ work, and getting an understanding of how a Framework's view layer works. However, when developers must stray away from the **exact** app generator, it can be difficult and a ton of involved rewriting. To avoid this, developers can install JavaScript tooling minimally as will be demonstrated below. 
 
 <figure>
   <img src="https://yowainwright.imgix.net/configuration/quick-configuration.png" alt="Quick Configuration" />
-  <figcaption>Create React App, Yeoman, Codekit make configuration fast</figcaption>
+  <figcaption>The illustration above presents a loose visual reference of what `create apps tools` will configure and how that can seem to developers</figcaption>
 </figure> 
 
 <figure>
   <img src="https://yowainwright.imgix.net/configuration/configuration-problem.png" alt="Configuration Prototype" />
-  <figcaption>Problems with quick configuration are when quick configuration must be changed and then everything must be changed</figcaption>
+  <figcaption>The illustation above visually points out what can/will start to happen when developers must stay from `create app tools`</figcaption>
 </figure> 
 
 ### Simple configuration for prototyping
 
-To develop a simple configuration so developers can focus on the view layer that will define there project descide what is the prototype. Prototyping a React app is not using Create React App. Must of the work is provided provided well. However, if used without a deeper awareness of what the tool does, developers may not have awareness of the bundled, compiled, and transpiled product.
+To gain a general understanding of a framework,its tooling, and configuration, `create app tools` are awesome. To truly understand a framework, its configuration, and tooling, building a prototype **without** using a `create app tool` can be very beneficial.
 
 <figure>
   <img src="https://yowainwright.imgix.net/configuration/prototype-configuration.png" alt="Configuration Prototype" />
-  <figcaption>To setup configuration for prototyping, simplifying the build can help</figcaption>
+  <figcaption>Setting up simple configuration for prototyping can help to understand all parts of a Framework's eco system</figcaption>
 </figure> 
 
-The steps below are high level, focusing only on configuration.
+---
+
+**The steps below are high level, focusing only on configuration.**
 
 **Note:** The following steps can be done with an text editor or differently with varying shells. This post is about configuration so the focus is doing this with as few of tools as possible. Therefore, the post will document the how-to's with Nano.
+
+---
 
 ### Linting
 
@@ -132,6 +136,9 @@ Within `scripts {object}`
 ```shell
 "lint": "node_modules/eslint/bin/eslint.js . ./src/*.js"
 ```
+
+
+---
 
 **Note:** this command assumed there is a `src/` directory and doesn't assume other directories might need linting. Change the script above accordingly to suite your needs.
 
@@ -181,7 +188,7 @@ npm i -g rollup
 nano package.json
 ```
 
-Within `scripts {object}`
+Within the `scripts {object}`
 ```shell
 "bundling": "npm run transpile && rollup ./tmp/*.js --o ./dist/*.js --f umd"
 ```
@@ -204,9 +211,9 @@ After making a npm test script, make a `test.[a file].js` file that matches a `[
 
 ### Conclusion
 
-Front end development has changed a lot in the last years. Cleaner code comes with more configuration. Magic configuration or going into the weed about setting up perfect configuration can lead to highly beneficial results. For prototyping, simplifying the build process can really help learn and understand how the project might be built.
+Front end development has changed a lot in the last years. Cleaner code comes with more configuration. Magic configuration can be dangerous because developers may not have much of an understanding of the tooling. When prototyping, setting up simple configuration for a Framework without using a `create app tool` can lead to deeper understanding of a framework's eco system. 
 
-I hope the information and steps above help.
+I hope the information and steps above help. [Feedback and ideas are appreciated](https://github.com/yowainwright/yowainwright.github.io)!
 
 
 
