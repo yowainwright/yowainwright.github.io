@@ -4,7 +4,7 @@ date: "2017-09-16"
 layout: post
 readNext: "/"
 path: "/code-etiquette/"
-meta: Code Etiquette is an extremely 
+meta: Code Etiquette is an important for code quality, engineer happiness, and engineer growth—but is never talked about?
 featured_image: null
 share_image: null
 categories:
