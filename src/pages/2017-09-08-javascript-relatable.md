@@ -17,7 +17,7 @@ JavaScript fatigue real because **JavaScript is relatable**. That's why so much 
   <a href="http://images.boomsbeat.com/data/images/full/193538/puppy-in-a-mirror-jpg">
     <img src="https://yowainwright.imgix.net/relatable/puppy-mirror.jpg" />
  </a>
- <figcaption>Image from [boomsbeat](http://www.boomsbeat.com/)—found by searching 'dogs looking into mirrors'</figcaption>
+ <figcaption>Image from <a href="http://www.boomsbeat.com/">boomsbeat</a>—found by searching 'dogs looking into mirrors'</figcaption>
 </figure> 
 
 ## JavaScript is scrappy
