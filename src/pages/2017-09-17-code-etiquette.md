@@ -12,7 +12,7 @@ categories:
 - story
 ---
 
-_Code Etiquette_ is not discussed with a quarter of the level of scrutiny that _code_ is within the engineering community. Code etiquette affects learning, code quality, relationships, and self confidence. Code is logical in nature. It is easy to pin point code that is incorrect or could be improved. The human condition when looking at and discussing something that is logical (code) can disregard feelings of other people. This causes feelings get hurt and humans loose focus on learning and collaboration. This post boils down generalized feelings mixed suggested opportunities to improve **code etiquette**.
+_Code Etiquette_ is not discussed with a quarter of the level of scrutiny that _code_ is within the engineering community. Code etiquette affects learning, code quality, relationships, and self confidence. Code is logical in nature. It is easy to pin point code that is incorrect or could be improved. The human condition when looking at and discussing logical things (like code) can disregard feelings of other people. This causes feelings get hurt and lose of focus on learning and collaboration. This post boils down general feelings mixed with suggestions to improve **code etiquette**.
 
 **Note:** Improving code etiquette, because of the human condition, is difficult! Here is a quick list of things that I've done, said, seen, or received that are easier wins in the art of Code Etiquette.
 
@@ -51,7 +51,7 @@ Passion is an important motivator for improving at things. Even passion when it 
 
 <figure>
 <blockquote>Feedback that is most useful to a person is often critical in nature if the person receiving the critique is engaged.</blockquote>
-<figcaption>**Note:** the person receiving the information **must** be ingaged to the critique.</figcaption>
+<figcaption><strong>Note:</strong> the person receiving the information <strong>must</strong> be ingaged to the critique.</figcaption>
 </figure>
 
 #### Imagine this comment when stated with exaggerated psychical movement, more excited vocal tone, and higher volume
@@ -101,7 +101,7 @@ const calculateStuff = (stuff) => {
 
 In the two comments above, the first comment causes the reader to go far beyond the issue. The conversation is more abstract—even [existential](https://www.merriam-webster.com/dictionary/existential). The second comment refers directly to the issue, then provides a `sudo code` example that relates directly to the comment.
 
-Try to describe what is being discussed and try to remain on topic. This problem seems clear. 'Taking a step back', is a comment that happens often. This may be neccessary if the communicator is the one that is mis-communicating. If the communicator is referring that result of very different.
+Try to describe what is being discussed and try to remain on topic. This problem seems clear. 'Taking a step back', is a comment that happens often. This may be necessary if the communicator is the one that is mis-communicating. If the communicator is referring that result of very different.
 
 ## You will probably never know if the product was right or good
 
