@@ -31,7 +31,7 @@ Without realizing it, often the difference between insightful critique and criti
 
 The lines below dissect a code review comment of the theoretical `function` where it is suggested that the there is an opportunity to return out of the function early.
 
-#### **You and I: ** Using `you` or I `is` probably not offensive intentionally so don't worry. However, over time, involving the person _can_ start to feel less positive—especially if there are ever vocal tones added.
+#### **You and I: ** Using `you` or `I` is probably not offensive intentionally so don't worry. However, over time, involving the person _can_ start to feel less positive—especially if there are ever vocal tones added.
 
 ```md
 You should return out of this function early
@@ -61,7 +61,7 @@ Passion is an important motivator for improving at things. Even passion when it 
 <figcaption><strong>Note:</strong> the person receiving the information <strong>must</strong> be ingaged to the critique.</figcaption>
 </figure>
 
-#### Imagine this comment when stated with exaggerated psychical movement, more excited vocal tone, and higher volume
+#### Imagine this comment when stated with exaggerated physical movement, more excited vocal tone, and higher volume
 
 ```md
 There are 8 web fonts used in this mock which may affect page load speed or even certain tracking metrics that could be caused by new race conditions!
@@ -75,9 +75,9 @@ There are 8 web fonts used in this mock. This will affect page load speed and po
 
 Notice, how the comments above are almost the same. The second comment is even more direct. It states a problem as a fact and then requests feedback. 
 
-An important thing to remember when being passionate is taking on a quieter tone. This is a physical decision—not a social one. Passionate language can be the same and perceived very differently based on the orientation of the communicators tone. If psychical tone (body language), vocal tone, vocal pitch, and vocal volume remain gentle, it is observed that it is much more likely for an audience to remain engaged—even if the critique is critical in nature. 
+An important thing to remember when being passionate is taking on a quieter tone. This is a physical decision—not a social one. Passionate language can be the same and perceived very differently based on the orientation of the communicators tone. If physical tone (body language), vocal tone, vocal pitch, and vocal volume remain gentle, it is observed that it is much more likely for an audience to remain engaged—even if the critique is critical in nature. 
 
-Furthermore, it is observed that if the tone is seemingly aggressive in nature (exaggerated psychical movement, more excited vocal tone, higher volume) that the actual words used can be gentle in nature but the audience can feel very differently. This communication leads to embarrassment, a disengaged audience, and even loss of respect.
+Furthermore, it is observed that if the tone is seemingly aggressive in nature (exaggerated physical movement, more excited vocal tone, higher volume) that the actual words used can be gentle in nature but the audience can feel very differently. This communication leads to embarrassment, a disengaged audience, and even loss of respect.
 
 Seemingly aggressive communication is common with passionate communication because human condition wants to protect ideas that humans are passionate about. So, don't worry about it _too_ much if you observe that your audience is disengaged when discussing something that you're passionate about. The key is to remember that if you can create perceived gentle communication that it will be easier for your audience to remain engaged—even if they are not initially in agreement.
 
@@ -93,7 +93,7 @@ The example below shows how this behavior can happen in a code review. The examp
 return out of this function earlier. You need to learn about [functional programming](http://www.cs.utah.edu/~germain/PPS/Topics/functions.html)
 ```
 
-#### The comment below provides a comment then a sudo code suggestion
+#### The comment below provides a comment then a pesudo code suggestion
 
 ```javascipt
 /* 
