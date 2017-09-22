@@ -61,20 +61,20 @@
       "path---week-17-17-56e5e163325f3afcd3cb.js.map"
     ],
     "path---js-is-relatable": [
-      "path---js-is-relatable-0625a69a8b40134e89c3.js",
-      "path---js-is-relatable-0625a69a8b40134e89c3.js.map"
+      "path---js-is-relatable-9d4a83ca17262b5a6604.js",
+      "path---js-is-relatable-9d4a83ca17262b5a6604.js.map"
     ],
     "path---": [
       "path----6611940bd40871b680a6.js",
       "path----6611940bd40871b680a6.js.map"
     ],
     "path---javascript-software-mid-2017": [
-      "path---javascript-software-mid-2017-f3f272ee76cb3a2b69ad.js",
-      "path---javascript-software-mid-2017-f3f272ee76cb3a2b69ad.js.map"
+      "path---javascript-software-mid-2017-b073a45769cda8ea31d3.js",
+      "path---javascript-software-mid-2017-b073a45769cda8ea31d3.js.map"
     ],
     "component---src-pages-archive-jsx": [
-      "component---src-pages-archive-jsx-159182ef6f4826a2b3a9.js",
-      "component---src-pages-archive-jsx-159182ef6f4826a2b3a9.js.map"
+      "component---src-pages-archive-jsx-51e924f56a2f45c404ec.js",
+      "component---src-pages-archive-jsx-51e924f56a2f45c404ec.js.map"
     ],
     "path---making-a-js-plugin": [
       "path---making-a-js-plugin-733cfc88414a05bbd774.js",
@@ -149,8 +149,8 @@
       "path---js-closure-390f8ea843c074ad3086.js.map"
     ],
     "path---index": [
-      "path---index-0561f25982c76c0eedc2.js",
-      "path---index-0561f25982c76c0eedc2.js.map"
+      "path---index-816617cbe67f49a59539.js",
+      "path---index-816617cbe67f49a59539.js.map"
     ],
     "path---week-18-17": [
       "path---week-18-17-7588d2a1b62076c9c92d.js",
@@ -159,10 +159,6 @@
     "path---glendora-mountain-road": [
       "path---glendora-mountain-road-0264200f8e7f5c53d282.js",
       "path---glendora-mountain-road-0264200f8e7f5c53d282.js.map"
-    ],
-    "path---code-etiquette": [
-      "path---code-etiquette-d1e9db4e7594fdb7584d.js",
-      "path---code-etiquette-d1e9db4e7594fdb7584d.js.map"
     ],
     "path---js-objects": [
       "path---js-objects-6be1cfa28207e23a03a1.js",
@@ -177,8 +173,8 @@
       "path---youre-an-ortiz-14816339de9d7546ea52.js.map"
     ],
     "path---frontend-prototype-configuration": [
-      "path---frontend-prototype-configuration-0cb549e39201f481d2a2.js",
-      "path---frontend-prototype-configuration-0cb549e39201f481d2a2.js.map"
+      "path---frontend-prototype-configuration-13622b72a8d7e5e1f3f6.js",
+      "path---frontend-prototype-configuration-13622b72a8d7e5e1f3f6.js.map"
     ],
     "commons": [
       "commons-3c8704a40009f722bd68.js",
@@ -241,16 +237,16 @@
       "path---week-11-17-31e21d16efdfd43d074f.js.map"
     ],
     "component---src-templates-blog-post-jsx": [
-      "component---src-templates-blog-post-jsx-b2db2a0659669f2ddf4e.js",
-      "component---src-templates-blog-post-jsx-b2db2a0659669f2ddf4e.js.map"
+      "component---src-templates-blog-post-jsx-6060796953c1df96e603.js",
+      "component---src-templates-blog-post-jsx-6060796953c1df96e603.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-586c7e095e534a3909ec.js",
       "path---offline-plugin-app-shell-fallback-586c7e095e534a3909ec.js.map"
     ],
     "component---src-pages-index-jsx": [
-      "component---src-pages-index-jsx-686f86346245ee44b32b.js",
-      "component---src-pages-index-jsx-686f86346245ee44b32b.js.map"
+      "component---src-pages-index-jsx-5e38c157f4a6269c0ec4.js",
+      "component---src-pages-index-jsx-5e38c157f4a6269c0ec4.js.map"
     ],
     "path---week-7-17": [
       "path---week-7-17-38eb93da1f91c9b18095.js",
@@ -261,14 +257,14 @@
       "path---arrow-functions-cont-fc86ea0d08e71a9ff6ca.js.map"
     ],
     "app": [
-      "app-ce8b78fa223c5779a7f5.js",
+      "app-3fd43ebc4059598c11ac.js",
       "build-js-styles.css",
-      "app-ce8b78fa223c5779a7f5.js.map",
+      "app-3fd43ebc4059598c11ac.js.map",
       "build-js-styles.css.map"
     ],
     "path---archive": [
-      "path---archive-7a1c240ac8c277316e0d.js",
-      "path---archive-7a1c240ac8c277316e0d.js.map"
+      "path---archive-092ccd271dcbc550c118.js",
+      "path---archive-092ccd271dcbc550c118.js.map"
     ],
     "path---week-10-17": [
       "path---week-10-17-1b5a4296e51dc989df74.js",
@@ -301,6 +297,10 @@
     "path---turning-37": [
       "path---turning-37-4cf538bd77fabbe5048b.js",
       "path---turning-37-4cf538bd77fabbe5048b.js.map"
+    ],
+    "path---code-review-etiquette": [
+      "path---code-review-etiquette-bba96b9ebe88d3f72c99.js",
+      "path---code-review-etiquette-bba96b9ebe88d3f72c99.js.map"
     ],
     "path---glide-carousel": [
       "path---glide-carousel-1af85ea711f95feb95a4.js",
