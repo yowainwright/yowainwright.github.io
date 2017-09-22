@@ -6,7 +6,6 @@ readNext: "/"
 path: "/state-css-configuration/"
 meta: This post documents the state of css configuration in 2017
 featured_image: null
-share_image: null
 categories:
 - note
 - story

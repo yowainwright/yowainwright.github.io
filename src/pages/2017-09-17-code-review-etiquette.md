@@ -1,20 +1,27 @@
 ---
-title: Can Code Etiquette be a thing? Here are some starter thoughts on it.
+title: Can Code Review Etiquette be a thing? Here are some starter thoughts on it.
 date: "2017-09-16"
 layout: post
 readNext: "/"
-path: "/code-etiquette/"
-meta: Code Etiquette is an important for code quality, engineer happiness, and engineer growth—but is never talked about?
+path: "/code-review-etiquette/"
+meta: Code Review Etiquette is an important for code quality, engineer happiness, and engineer growth—but is never talked about?
 featured_image: null
-share_image: null
 categories:
 - note
 - story
 ---
 
-_Code Etiquette_ is not discussed with a quarter of the level of scrutiny that _code_ is within the engineering community. Code etiquette affects learning, code quality, relationships, and self confidence. Code is logical in nature. It is easy to pin point code that is incorrect or could be improved. The human condition when looking at and discussing logical things (like code) can disregard feelings of other people. This causes feelings get hurt and lose of focus on learning and collaboration. This post boils down general feelings mixed with suggestions to improve **code etiquette**.
+_Code Review Etiquette_ is not discussed with a quarter of the level of scrutiny that _code_ is within the engineering community. Code Review Etiquette affects learning, code quality, relationships, and self confidence. Code is logical in nature. It is easy to pin point code that is incorrect or could be improved. The human condition when looking at and discussing logical things (like code) can disregard feelings of other people. This causes feelings get hurt and lose of focus on learning and collaboration. This post boils down general feelings mixed with suggestions to improve **Code Review Etiquette**.
 
-**Note:** Improving code etiquette, because of the human condition, is difficult! Here is a quick list of things that I've done, said, seen, or received that are easier wins in the art of Code Etiquette.
+<figure>
+  <a href="https://www.mindpodnetwork.com/albert-einstein-rabindranath-tagore-discuss-music/">
+    <img src="https://yowainwright.imgix.net/code-review-etiquette/einstein-tagore.jpg" alt="Einstein and Tagore meet to discuss music" />
+  </a>
+  <figcaption>Albert Einstein & Rabindranath Tagare discussing music, July 4th, 1930. Image from <a href="https://www.mindpodnetwork.com/">Mind Pod Network</a>.</figcaption>
+</figure>
+</a>
+
+**Note:** Improving Code Review Etiquette, because of the human condition, is difficult! Here is a quick list of things that I've done, said, seen, or received that are easier wins in the art of Code Review Etiquette.
 
 ---
 
@@ -74,7 +81,7 @@ Furthermore, it is observed that if the tone is seemingly aggressive in nature (
 
 Seemingly aggressive communication is common with passionate communication because human condition wants to protect ideas that humans are passionate about. So, don't worry about it _too_ much if you observe that your audience is disengaged when discussing something that you're passionate about. The key is to remember that if you can create perceived gentle communication that it will be easier for your audience to remain engaged—even if they are not initially in agreement.
 
-## Don't point, ever
+## Don't review the author, review on the code
 
 Following the conversation above, pointing with written conversation or actual body language in almost any situation is not optimal for good communication. It changes the focal point of the conversation from the context of the conversation to a person or thing.
 
@@ -107,8 +114,10 @@ Try to describe what is being discussed and try to remain on topic. This problem
 
 Developers almost always want to re-write things. It is natural to break down problems to tasks and mentalities in real-time. Putting focus on _who's_ and _why's_ of products based on their history is an important to conceptualize because of the context that is gained. The phrase, 'history repeats itself' is key to that sentiment. This is important to remember when critiquing products or when a product you've written is critiqued. There is always a great amount of knowledge to be gained from context. 
 
+[JavaScript](https://en.wikipedia.org/wiki/JavaScript#History) was made in a week, considered a hacky scripting language, and then become the most used programming language in the world. [Scalable Vector Graphics \(SVGs\)](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) were supported in 1999, pretty much forgotten about, and now, they continue to gain popularity for the new opportunities they provide. Even the [World Wide Web](https://en.wikipedia.org/wiki/World_Wide_Web) (the internet) was meant for document sharing with little anticipation of the current result today. All of these technologies are important to remember when considering software and engineering—as logical and predictable results are supposed to be, success is often derived from unexpected results! Be open! 
+
 ---
 
-The above list are general high level things that can help with positive engagement when talking about, reviewing, or reading about code or technology. I am a hypocrite. I do all of the things that I've written not to do in the list above. The goal for _Code Etiquette_ is develop a standard etiquette to strive for when discussing code in any format. Much like code, communication has things that are generally right and wrong. I hope to work with other developers to improve _Code Etiquette_ by developing standards by which code can be discussed. 
+The above list are general high level things that can help with positive engagement when talking about, reviewing, or reading about code or technology. I am a hypocrite. I do all of the things that I've written not to do in the list above. The goal for _Code Review Etiquette_ is develop a standard etiquette to strive for when discussing code in any format. Much like code, communication has things that are generally right and wrong. I hope to work with other developers to improve _Code Review Etiquette_ by developing standards by which code can be discussed. 
 
-By thinking through the notes above for myself, I have created benchmarks where I have naturally begun to assess my _Code Etiquette_. I'm focusing on improving my communication based on my list daily. I would love would share these sentiments with other engineering to improve. ~Thanks
+By thinking through the notes above for myself, I have created benchmarks where I have naturally begun to assess my _Code Review Etiquette_. I'm focusing on improving my communication based on my list daily. I would love would share these sentiments with other engineering to improve. ~Thanks

@@ -6,7 +6,6 @@ readNext: "/"
 path: "/labor-day-week/"
 meta: This year I, Jeff Wainwright, spent Labor Day in Dallas with friends.
 featured_image:  "https://yowainwright.imgix.net/labor-day/brett-riding.jpg"
-share_image: null
 categories:
 - javascript
 ---

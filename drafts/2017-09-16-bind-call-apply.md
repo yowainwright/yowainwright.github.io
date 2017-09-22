@@ -6,7 +6,6 @@ readNext: "/"
 path: "/bind-call-apply/"
 meta: Bind, Call, and Apply 
 featured_image: null
-share_image: null
 categories:
 - note
 - story

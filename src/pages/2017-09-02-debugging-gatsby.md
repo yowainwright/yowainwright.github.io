@@ -6,7 +6,6 @@ readNext: "/"
 path: "/debugging-gatsby/"
 meta: Tips for Debugging Gatsby when Getting Started
 featured_image: null
-share_image: null
 categories:
 - note
 - story

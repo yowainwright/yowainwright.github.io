@@ -5,8 +5,7 @@ layout: post
 readNext: "/"
 path: "/JS-is-relatable/"
 meta: "JavaScript is for the people because it is relatable and usable."
-featured_image: null
-share_image: null
+featured_image: "https://yowainwright.imgix.net/relatable/puppy-mirror.jpg"
 categories:
 - javascript
 ---

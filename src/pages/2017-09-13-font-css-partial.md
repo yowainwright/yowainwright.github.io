@@ -6,7 +6,6 @@ readNext: "/"
 path: "/css-font-partial/"
 meta: Making a maintainable CSS font partial.
 featured_image: null
-share_image: null
 categories:
 - sass
 - css

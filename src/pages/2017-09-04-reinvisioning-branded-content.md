@@ -6,7 +6,6 @@ readNext: "/"
 path: "/branded-content/"
 meta: Reenvisioningg branded content at Dollar Shave Club.
 featured_image: null
-share_image: null
 categories:
 - note
 - story
