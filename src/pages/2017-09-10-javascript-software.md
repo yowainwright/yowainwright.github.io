@@ -5,8 +5,7 @@ layout: post
 readNext: "/"
 path: "/javascript-software-mid-2017/"
 meta: JavaScript tools in 2017 as defined by Jeff Wainwright for the context of blog posts.
-featured_image: null
-share_image: null
+featured_image: "https://yowainwright.imgix.net/connecting-dots.png"
 categories:
 - javascript
 ---

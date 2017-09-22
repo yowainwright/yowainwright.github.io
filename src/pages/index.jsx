@@ -72,6 +72,7 @@ class BlogIndex extends Component {
       const date = get(post, 'node.frontmatter.date') || pNode.date
       const description = get(post, 'node.frontmatter.meta') || pNode.meta
       const image = get(post, 'node.frontmatter.featured_image') || post.node.featured_image
+      const social_image = get(post, 'node.frontmatter.featured_image') || post.node.featured_image
       const header = this.generatePostHeader(title, path, date)
       const figure = this.generatePostFigure(image, path)
 
@@ -98,8 +99,8 @@ class BlogIndex extends Component {
           <link rel="canonical" href="https://jeffry.in" itemProp="url" />
           <meta name="twitter:url" property="og:url" content="https://jeffry.in" />
           <meta name="twitter:title" property="og:title" content={`${this.title}`} />
-          <meta name="twitter:image" content="https://yowainwright.imgix.net/w.jpg?w=144&h=144&fit=crop&crop=focalpoint&auto=format" itemProp="image" />
-          <meta property="og:image" content="https://yowainwright.imgix.net/w.jpg'}?w=1200&h=600&fit=crop&crop=focalpoint&auto=format" itemProp="image" />
+          <meta name="twitter:image" content="https://yowainwright.imgix.net/w-logo-twitter.jpg?w=600&h=335&fit=crop&crop=focalpoint&auto=format" itemProp="image" />
+          <meta property="og:image" content="https://yowainwright.imgix.net/w-logo-fb.jpg?w=1200&h=600&fit=crop&crop=focalpoint&auto=format" itemProp="image" />
         </Helmet>
         {this.generatePosts()}
       </main>

@@ -5,8 +5,7 @@ layout: post
 readNext: "/"
 path: "/frontend-prototype-configuration/"
 meta: This posts digs into front end configuration for the purposes of prototyping.
-featured_image: null
-share_image: null
+featured_image: "https://yowainwright.imgix.net/configuration/prototype-configuration-cropped.jpg"
 categories:
 - javascript
 ---
