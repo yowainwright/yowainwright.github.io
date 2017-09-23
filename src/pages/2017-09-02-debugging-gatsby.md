@@ -33,7 +33,7 @@ nvm install
 
 rm -rf .cache node_modules public 
 
-# sometimes it IS `npm i` vs `yarn`
+# sometimes it IS `npm i` vs. `yarn`
 yarn
 
 gatsby build
@@ -43,9 +43,9 @@ gatsby build
 
 Sometimes adding `html` within markdown is a plus and these changes can look fine in development.
 
-One potential reason for issues are Gatsby Remark Plugins, like [Gatsby-Remark-Images](https://www.gatsbyjs.org/packages/gatsby-remark-images/). 
+One potential reason for issues is Gatsby Remark Plugins, like [Gatsby-Remark-Images](https://www.gatsbyjs.org/packages/gatsby-remark-images/). 
 
-My initial somewhat hacky fix is removing some of the Gatsby Remark Plugins. This is because I prefer to fix image css issues myself. There may be a better fix though.
+My initial somewhat hacky fix is removing some of the Gatsby Remark Plugins. This is because I prefer to fix image CSS issues myself. There may be a better fix though.
 
 
 ## Deploying

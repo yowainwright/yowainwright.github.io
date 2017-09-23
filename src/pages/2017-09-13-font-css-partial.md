@@ -19,7 +19,7 @@ In the paragraphs below, a process for declaring font styles and defining them t
 
 ## Define Font Partial
 
-To clearly declare font styles, defining variables is important. In the code block below font family variables are defined using [Sass](http://sass-lang.com/) but this is similar to a other CSS processes.
+To clearly declare font styles, defining variables is important. In the code block below font family variables are defined using [Sass](http://sass-lang.com/) but this is similar to other CSS processes.
 
 ```sass
 // declare fonts families
@@ -60,9 +60,9 @@ After general font styles are declared, css is written to modify them efficientl
 }
 ```
 
-Write css as done above is purposeful. All styles are clearly nested within the `.text` block. This process provided the sense of  cascade without causing the cascade to suffer as a result. Each selector compiles to 1 CSS class. 
+Write CSS as done above is purposeful. All styles are clearly nested within the `.text` block. This process provided the sense of cascade without causing the cascade to suffer as a result. Each selector compiles to 1 CSS class. 
 
-The compiles css looks like this (un-minified)
+The compiles CSS looks like this (un-minified)
 
 ```sass
 .text {
@@ -85,7 +85,7 @@ The compiles css looks like this (un-minified)
 }
 ```
 
-Within html, styles can be applied like this
+Within HTML, styles can be applied like this
 
 ```sass
 <article>
@@ -98,7 +98,4 @@ Within html, styles can be applied like this
 
 ```
 
-The code above is descriptive and does not mess with CSS specificity. Important things to consider when using BEM are **block** naming, defining succinct **elements**, and CSS class character length. More details for those topic are outside of the scope of this post but can help writing text css.
-
-
-
+The code above is descriptive and does not mess with CSS specificity. Important things to consider when using BEM are **block** naming, defining succinct **elements**, and CSS class character length. More details for those topics are outside of the scope of this post but can help writing text CSS.

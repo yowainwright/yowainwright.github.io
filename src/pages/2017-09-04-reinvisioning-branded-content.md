@@ -11,7 +11,7 @@ categories:
 - story
 ---
 
-Over a year ago, I was given the opportunity to work with a team to design and develop branded content for Dollar Shave Club. [Dollar Shave Club](https://www.dollarshaveclub.com) and it's affiliated company, [Mel](https://melmagazine.com/) had been producing high quality content along with beautiful art for approximately 2 years before under [Josh Schollmeyer](https://www.linkedin.com/in/jschollmeyer/). This post will summarize the experience of my team and then go into more of my area of expertise—engineering.
+Over a year ago, I was given the opportunity to work with a team to design and develop branded content for Dollar Shave Club. [Dollar Shave Club](https://www.dollarshaveclub.com) and its affiliated company, [Mel](https://melmagazine.com/) had been producing high-quality content along with beautiful art for approximately two years before under [Josh Schollmeyer](https://www.linkedin.com/in/jschollmeyer/). This post will summarize the experience of my team and then go into more of my area of expertise—engineering.
 
 
 To build a site that would be able to come close to the already set content, I was brought on under [Darshit Desai](https://www.linkedin.com/in/darshitdesai/) to work with him and other team members—[Erin Tag](https://www.linkedin.com/in/erin-taj-12596946/), Nick Lefty, [Donny Smith](https://www.linkedin.com/in/donnysmith/), [Justin Berg](https://www.linkedin.com/in/justin-berg-93722b2/), [Arvind Mishra](https://www.linkedin.com/in/arvindmishra1/), and [Melissa Williams](https://www.linkedin.com/in/melwilms/).
@@ -19,13 +19,13 @@ To build a site that would be able to come close to the already set content, I w
 
 ----
 
-Branded content is not new conceptually. We were tasked with figuring out how to do it differently while creating something that was additive to the great content already being made at Dollar Shave Club. On top of that, our interface and to be normal so that writers could keep adding there content with ease.
+Branded content is not new conceptually. We were tasked with figuring out how to do it differently while creating something that was additive to the great content already being made at Dollar Shave Club. On top of that, our interface and to be normal so that writers could keep adding their content with ease.
 
 ## Sometimes it _is_ just Black and White
 
-We spent time, refining out look and answering questions that would have to last for a long period to come. What would be our design style? Could we create something that would allow the experience of each article feel like it's own? How could we insure that our content seemed like the good read it was/is and not like _just branded content_?
+We spent time, refining outlook and answering questions that would have to last for a long period to come. What would be our design style? Could we create something that would allow the experience of each article feel like its own? How could we ensure that our content seemed like the good read it was/is and not like _just branded content_?
 
-After about 6 months of prototyping and developing designs we came to a few conclusions. We should have a simple palette of mainly blacks, greys, and whites to let imagery and articles stand out. We should being everything modularly so that we can more quickly add features. For the CMS for editing, we went with Wordpress so that writer would work with something that most were used to. The front end itself was separated using [Wordpresses API](https://wordpress.org/plugins/rest-api/). 
+After about six months of prototyping and developing designs, we came to a few conclusions. We should have a simple palette of mainly blacks, greys, and whites to let imagery and articles stand out. We should be everything modularly so that we can more quickly add features. For the CMS for editing, we went with Wordpress so that writer would work with something that most were used to. The front end itself was separated using [Wordpresses API](https://wordpress.org/plugins/rest-api/). 
 
 ## The site must be fast
 
@@ -57,7 +57,7 @@ export default function () {
 ```
 
 
-**Less Fonts:** We decreased the number of fonts used by computing some fonts using the `font-weight: bold` css property on fonts that were using a normal weight. 
+**Less Fonts:** We decreased the number of fonts used by computing some fonts using the `font-weight: bold` CSS property on fonts that were using a normal weight. 
 
 #### Computing a bold font to save on fonts used
 
@@ -72,9 +72,9 @@ export default function () {
 
 ```
 
-**Cleaning up css:**[Purify CSS](https://github.com/purifycss/purifycss) is used along with a config to makes that styles added via wordpress are there but nothing more. There are very few unused styles on the site. 
+**Cleaning up CSS:**[Purify CSS](https://github.com/purifycss/purifycss) is used along with a config to makes that styles added via WordPress are there but nothing more. There are very few unused styles on the site. 
 
-### Troubleshooting state css classes by adding a .config file for purify css
+### Troubleshooting state CSS classes by adding a .config file for purifying CSS
 
 ```html
 <!-- now purify css knows not to remove it -->
@@ -85,9 +85,9 @@ export default function () {
 
 ## The site must be searchable 
 
-To make the site more searchable, we made sure to use as much modern html as possible. We also used [schema.org](http://schema.org/).
+To make the site more searchable, we made sure to use as much modern HTML as possible. We also used [schema.org](http://schema.org/).
 
-#### Example of using semantic html and schema.org to clarify what objects are on the content site
+#### Example of using semantic HTML and schema.org to clarify what objects are on the content site
 
 ```html
 <article class="post post--card style-card-hover" itemscope itemType="http://schema.org/Article">

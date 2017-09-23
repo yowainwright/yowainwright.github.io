@@ -10,7 +10,7 @@ categories:
 - javascript
 ---
 
-Front end configuration has become an important part of front end development. Speeding up configuration for prototyping purposes can be very important to learning about what is being prototyped. Approximately a [decade ago](#history), front end development consisted of `HTML`, `CSS`, and `JavaScript`. Front end development is often a lot more [complex](#current) now. It includes linting, bundling, transpiling, and testing. When prototyping, it is important to get up and run as [fast as possible](#configuration). This post will document changes in front end development between then and now. It will briefly describe a current observed pain point—_how difficult it can when have break aware standard configuration_. It will, finally, provide ways to get up and running without using a lot of configuration for prototyping as quickly as possible with as little overhead as possible.
+Front-end configuration has become an important part of front-end development. Speeding up configuration for prototyping purposes can be very important to learning about what is being prototyped. Approximately a [decade ago](#history), front end development consisted of `HTML`, `CSS`, and `JavaScript`. Front-end development is often a lot more [complex](#current) now. It includes linting, bundling, transpiling, and testing. When prototyping, it is important to get up and run as [fast as possible](#configuration). This post will document changes in front-end development between then and now. It will briefly describe a current observed pain point—_how difficult it can be when having to break aware standard configuration_. It will, finally, provide ways to get up and running without using a lot of configuration for prototyping as quickly as possible with as little overhead as possible.
 
 ---
 
@@ -40,9 +40,9 @@ That was it. `HTML`, `CSS`, and `JavaScript` APIs had a lot less to them. The di
 
 <h2 id="current">Front end configuration now</h2>
 
-Front end development is a lot different today. Code itself if much easier to digest. `HTML`, `CSS`, and `JavaScript` APIs are more mature. Browser quirks are much less mission critical. 
+Front-end development is a lot different today. Code itself if much easier to digest. `HTML`, `CSS`, and `JavaScript` APIs are more mature. Browser quirks are much less mission critical. 
 
-Despite the greatly improved simplicity in the main front end APIs, the directory structure of a front end repository is much more complex.
+Despite the greatly improved simplicity in the main front end APIs, the directory structure of a front-end repository is much more complex.
 
 ```html
 
@@ -79,7 +79,7 @@ Code itself is less complex and very modular. The steps to publish that code the
 
 <h2 id="configuration">Front end configuration notes</h2>
 
-Specific configuration for production ready products is in important. However, when prototyping, configuration should be fast and easy so developers can focus on the tool they are trying to prototype for. When developers prototype, the tool that is focused on first is usually the view layer. The developer will decide to build a [React App](https://facebook.github.io/react/) and use [create-react-app](https://github.com/facebookincubator/create-react-app) or a similar **creat-app** generator for [Vue](https://vuejs.org/) or something similar. App generator products are great for speed, seeing how a Framework's eco system _can_ work, and getting an understanding of how a Framework's view layer works. However, when developers must stray away from the **exact** app generator, it can be difficult and a ton of involved rewriting. To avoid this, developers can install JavaScript tooling minimally as will be demonstrated below. 
+Specific configuration for production-ready products is in important. However, when prototyping, configuration should be fast and easy so developers can focus on the tool they are trying to prototype for. When developers prototype, the tool that is focused on first is usually the view layer. The developer will decide to build a [React App](https://facebook.github.io/react/) and use [create-react-app](https://github.com/facebookincubator/create-react-app) or a similar **creat-app** generator for [Vue](https://vuejs.org/) or something similar. App generator products are great for speed, seeing how a Framework's eco system _can_ work, and getting an understanding of how a Framework's view layer works. However, when developers must stray away from the **exact** app generator, it can be difficult and a ton of involved rewriting. To avoid this, developers can install JavaScript tooling minimally as will be demonstrated below.
 
 <figure>
   <img src="https://yowainwright.imgix.net/configuration/quick-configuration.png" alt="Quick Configuration" />
@@ -93,7 +93,7 @@ Specific configuration for production ready products is in important. However, w
 
 ### Simple configuration for prototyping
 
-To gain a general understanding of a framework,its tooling, and configuration, `create app tools` are awesome. To truly understand a framework, its configuration, and tooling, building a prototype **without** using a `create app tool` can be very beneficial.
+To gain a general understanding of a framework, its tooling, and configuration, `create app tools` are awesome. To truly understand a framework, its configuration, and tooling, building a prototype **without** using a `create app tool` can be very beneficial.
 
 <figure>
   <img src="https://yowainwright.imgix.net/configuration/prototype-configuration.png" alt="Configuration Prototype" />
@@ -104,13 +104,13 @@ To gain a general understanding of a framework,its tooling, and configuration, `
 
 **The steps below are high level, focusing only on configuration.**
 
-**Note:** The following steps can be done with an text editor or differently with varying shells. This post is about configuration so the focus is doing this with as few of tools as possible. Therefore, the post will document the how-to's with Nano.
+**Note:** The following steps can be done with a text editor or differently with varying shells. This post is about configuration, so the focus is doing this with as few of tools as possible. Therefore, the post will document the how-tos with Nano.
 
 ---
 
 ### Linting
 
-[Linting](https://eslint.org/) communicates how a prototype's JavaScript should be written. For this tool, it is recommended to intall the defaults that are standard with the view layer.
+[Linting](https://eslint.org/) communicates how a prototype's JavaScript should be written. For this tool, it is recommended to install the defaults that are standard with the view layer.
 
 If a React App is being prototyped
 
@@ -139,7 +139,7 @@ Within `scripts {object}`
 
 ---
 
-**Note:** this command assumed there is a `src/` directory and doesn't assume other directories might need linting. Change the script above accordingly to suite your needs.
+**Note:** this command assumed there is an `src/` directory and doesn't assume other directories might need linting. Change the script above accordingly to suit your needs.
 
 ### Babel
 
@@ -213,13 +213,3 @@ After making a npm test script, make a `test.[a file].js` file that matches a `[
 Front end development has changed a lot in the last years. Cleaner code comes with more configuration. Magic configuration can be dangerous because developers may not have much of an understanding of the tooling. When prototyping, setting up simple configuration for a Framework without using a `create app tool` can lead to deeper understanding of a framework's eco system. 
 
 I hope the information and steps above help. [Feedback and ideas are appreciated](https://github.com/yowainwright/yowainwright.github.io)!
-
-
-
-
-
-
-
-
-
-
