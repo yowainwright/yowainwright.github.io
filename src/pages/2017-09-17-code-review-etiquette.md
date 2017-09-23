@@ -11,13 +11,13 @@ categories:
 - story
 ---
 
-_Code Review Etiquette_ is not discussed with a quarter of the level of scrutiny that _code_ is within the engineering community. Code Review Etiquette affects learning, code quality, relationships, and self confidence. Code is logical in nature. It is easy to pin point code that is incorrect or could be improved. The human condition when looking at and discussing logical things (like code) can disregard feelings of other people. This causes feelings get hurt and lose of focus on learning and collaboration. This post boils down general feelings mixed with suggestions to improve **Code Review Etiquette**.
+_Code Review Etiquette_ is not discussed with a quarter of the level of scrutiny that _code_ is within the engineering community. Code Review Etiquette affects learning, code quality, relationships, and self-confidence. Code is logical in nature. It is easy to pinpoint code that is incorrect or could be improved. The human condition when looking at and discussing logical things (like code) can disregard feelings of other people. This causes feelings get hurt and loss of focus on learning and collaboration. This post boils down general feelings mixed with suggestions to improve **Code Review Etiquette**.
 
 <figure>
   <a href="https://www.mindpodnetwork.com/albert-einstein-rabindranath-tagore-discuss-music/">
     <img src="https://yowainwright.imgix.net/code-review-etiquette/einstein-tagore.jpg" alt="Einstein and Tagore meet to discuss music" />
   </a>
-  <figcaption>Albert Einstein & Rabindranath Tagare discussing music, July 4th, 1930. Image from <a href="https://www.mindpodnetwork.com/">Mind Pod Network</a>.</figcaption>
+  <figcaption>Albert Einstein and Rabindranath Tagare discussing music, July 4th, 1930. Image from <a href="https://www.mindpodnetwork.com/">Mind Pod Network</a>.</figcaption>
 </figure>
 </a>
 
@@ -27,7 +27,7 @@ _Code Review Etiquette_ is not discussed with a quarter of the level of scrutiny
 
 ## Remove the person (`no personal reference`)
 
-Without realizing it, often the difference between insightful critique and criticism is involving personal relationships in communication.
+Without realizing it, often the difference between insightful critique and criticism involves personal relationships in communication.
 
 The lines below dissect a code review comment of the theoretical `function` where it is suggested that the there is an opportunity to return out of the function early.
 
@@ -50,7 +50,7 @@ return out of this function early
 ```
 
 
-Notice how the amount of text needed to communicate the same thing without using personal relationship takes less words and speaks most clearly to the to. This will help with human interaction, separate code discussion from personal discussion, and less words are need to communicate the exact same thing.
+Notice how the amount of text needed to communicate the same thing without using personal relationship takes fewer words and speaks most clearly to them too. This helps with human interaction, separate code discussion from personal discussion, and fewer words are needed to communicate the same thing.
 
 ## Keep passionate conversations quiet
 
@@ -64,18 +64,23 @@ Passion is an important motivator for improving at things. Even passion when it 
 #### Imagine this comment when stated with exaggerated physical movement, more excited vocal tone, and higher volume
 
 ```md
-There are 8 web fonts used in this mock which may affect page load speed or even certain tracking metrics that could be caused by new race conditions!
+There are 8 web fonts used in this mock which 
+may affect page load speed or even certain tracking metrics 
+that could be caused by new race conditions!
 ```
 
 #### Then, imagine a similar comment, even more terse but stated with a calm demeanor, slower delivery, and a normal vocal volume—followed by a question even
 
 ```md
-There are 8 web fonts used in this mock. This will affect page load speed and possible tracking metrics because of potential race conditions! How can this be improved?
+There are 8 web fonts used in this mock. 
+This will affect page load speed 
+and possible tracking metrics because of potential race conditions! 
+How can this be improved?
 ```
 
-Notice, how the comments above are almost the same. The second comment is even more direct. It states a problem as a fact and then requests feedback. 
+Notice, how the comments above are almost the same. The second comment is even more direct. It states a problem as a fact and then requests feedback.
 
-An important thing to remember when being passionate is taking on a quieter tone. This is a physical decision—not a social one. Passionate language can be the same and perceived very differently based on the orientation of the communicators tone. If physical tone (body language), vocal tone, vocal pitch, and vocal volume remain gentle, it is observed that it is much more likely for an audience to remain engaged—even if the critique is critical in nature. 
+An important thing to remember when being passionate is taking on a quieter tone. This is a physical decision—not a social one. Passionate language can be the same and perceived very differently based on the orientation of the communicator's tone. If physical tone (body language), vocal tone, vocal pitch, and vocal volume remain gentle, it is observed that it is much more likely for an audience to remain engaged—even if the critique is critical in nature. 
 
 Furthermore, it is observed that if the tone is seemingly aggressive in nature (exaggerated physical movement, more excited vocal tone, higher volume) that the actual words used can be gentle in nature but the audience can feel very differently. This communication leads to embarrassment, a disengaged audience, and even loss of respect.
 
@@ -90,10 +95,11 @@ The example below shows how this behavior can happen in a code review. The examp
 #### The comment below provides a comment and then a link that goes above 5 levels higher which is actually confusing in the context of the code review.
 
 ```md
-return out of this function earlier. You need to learn about [functional programming](http://www.cs.utah.edu/~germain/PPS/Topics/functions.html)
+return out of this function earlier. 
+You need to learn about [functional programming](http://www.cs.utah.edu/~germain/PPS/Topics/functions.html)
 ```
 
-#### The comment below provides a comment then a pesudo code suggestion
+#### The comment below provides a comment then a pseudo code suggestion
 
 ```javascipt
 /* 
@@ -106,18 +112,18 @@ const calculateStuff = (stuff) => {
 }
 ```
 
-In the two comments above, the first comment causes the reader to go far beyond the issue. The conversation is more abstract—even [existential](https://www.merriam-webster.com/dictionary/existential). The second comment refers directly to the issue, then provides a `sudo code` example that relates directly to the comment.
+In the two comments above, the first comment causes the reader to go far beyond the issue. The conversation is more abstract—even [existential](https://www.merriam-webster.com/dictionary/existential). The second comment refers directly to the issue, then provides a `pseudo code` example that relates directly to the comment.
 
-Try to describe what is being discussed and try to remain on topic. This problem seems clear. 'Taking a step back', is a comment that happens often. This may be necessary if the communicator is the one that is mis-communicating. If the communicator is referring that result of very different.
+Try to describe what is being discussed and try to remain on topic. This problem seems clear. 'Taking a step back', is a comment that happens often. This may be necessary if the communicator is the one that is miscommunicating. If the communicator is referring that result of very different.
 
 ## You will probably never know if the product was right or good
 
-Developers almost always want to re-write things. It is natural to break down problems to tasks and mentalities in real-time. Putting focus on _who's_ and _why's_ of products based on their history is an important to conceptualize because of the context that is gained. The phrase, 'history repeats itself' is key to that sentiment. This is important to remember when critiquing products or when a product you've written is critiqued. There is always a great amount of knowledge to be gained from context. 
+Developers almost always want to re-write things. It is natural to break down problems to tasks and mentalities in real-time. Putting focus on _who's_ and _why's_ of products based on their history is an important to conceptualize because of the context that is gained. The phrase, 'history repeats itself' is key to that sentiment. This is important to remember when critiquing products or when a product you've written is critiqued. There is always a great amount of knowledge to be gained from context.
 
-[JavaScript](https://en.wikipedia.org/wiki/JavaScript#History) was made in a week, considered a hacky scripting language, and then become the most used programming language in the world. [Scalable Vector Graphics \(SVGs\)](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) were supported in 1999, pretty much forgotten about, and now, they continue to gain popularity for the new opportunities they provide. Even the [World Wide Web](https://en.wikipedia.org/wiki/World_Wide_Web) (the internet) was meant for document sharing with little anticipation of the current result today. All of these technologies are important to remember when considering software and engineering—as logical and predictable results are supposed to be, success is often derived from unexpected results! Be open! 
+[JavaScript](https://en.wikipedia.org/wiki/JavaScript#History) was made in a week, considered a hacky scripting language, and then become the most used programming language in the world. [Scalable Vector Graphics (SVGs)](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) were supported in 1999, pretty much forgotten about, and now, they continue to gain popularity for the new opportunities they provide. Even the [World Wide Web](https://en.wikipedia.org/wiki/World_Wide_Web) (the internet) was meant for document sharing with little anticipation of the current result today. All of these technologies are important to remember when considering software and engineering—as logical and predictable results are supposed to be, success is often derived from unexpected results! Be open!
 
 ---
 
-The above list are general high level things that can help with positive engagement when talking about, reviewing, or reading about code or technology. I am a hypocrite. I do all of the things that I've written not to do in the list above. The goal for _Code Review Etiquette_ is develop a standard etiquette to strive for when discussing code in any format. Much like code, communication has things that are generally right and wrong. I hope to work with other developers to improve _Code Review Etiquette_ by developing standards by which code can be discussed. 
+The above list is general high-level things that can help with positive engagement when talking about, reviewing, or reading about code or technology. I am a hypocrite. I do all of the things that I've written not to do in the list above. The goal for _Code Review Etiquette_ is developing a standard etiquette to strive for when discussing code in any format. Much like code, communication has things that are right and wrong. I hope to work with other developers to improve _Code Review Etiquette_ by developing standards by which code can be discussed. 
 
-By thinking through the notes above for myself, I have created benchmarks where I have naturally begun to assess my _Code Review Etiquette_. I'm focusing on improving my communication based on my list daily. I would love would share these sentiments with other engineering to improve. ~Thanks
+By thinking through the notes above for myself, I have created benchmarks where I have naturally begun to assess my _Code Review Etiquette_. I'm focusing on improving my communication based on my list daily. I would love to share these sentiments with other engineers to improve. ~Thanks
