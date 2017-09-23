@@ -21,7 +21,7 @@ Open source plugin code can become confusing. After writing a few open source pl
 
 > Options, in JavaScript, are arguements passed in a function to replace default properties values.
 
-Options, in JavaScript, are arguements passed in a function to replace default properties values. In example, sometimes a plugin will have a default css class that it is associated with. Plugins will often allow users to change this default css class. 
+Options, in JavaScript, are arguments passed in a function to replace default properties values. In example, sometimes a plugin will have a default CSS class that it is associated with. Plugins will often allow users to change this default CSS class. 
 
 Here an example of how options look in JavaScript from ES5:
 
@@ -50,7 +50,7 @@ And here's how it can be changed when it is initiated:
 someFunction({attribute: 'data-attr'});
 ```
 
-The _log_ will now looking something like: 
+The _log_ will now look something like: 
 
 ```javaScript
   Object: attr: "data-attr", document: Window, element: html
@@ -63,11 +63,11 @@ The `options` code above is confusing! I mean, what the heck is going on here?
 var el = opts && opts.el || defaults.el;
 ```
 
-This code needs an `el` property. It says, define the `el` property from `opts` (passed in from a function) or get the default `el` value. That's a lot of work to make sure that a property has a value.
+This code needs an `el` property. It says, defines the `el` property from `opts` (passed in from a function) or get the default `el` value. That's a lot of work to make sure that a property has a value.
 
 ## Option Readability Can Be Improved With ES6
 
-ES6, with function destructuring allows us to make options code more readable.
+ES6, with function destructuring, allows us to make options code more readable.
 
 With ES6, we can write this:
 
@@ -90,10 +90,8 @@ And then add any custom opts with:
 someFunction({attribute: 'data-attr'});
 ```
 
-This trims down the reference to a poperty value to 2 times versus 3!
+This trims down the reference to a property value to 2 times versus 3!
 
 ## Conclusion
 
-With ES6 function destructuring, options code is much cleaner and easier to read. As a result Open Source Plugins that use this feature are easier to improve and understand.
-
-
+With ES6 function destructuring, options code is much cleaner and easier to read. As a result, Open Source Plugins that use this feature are easier to improve and understand.

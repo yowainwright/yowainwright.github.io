@@ -12,7 +12,7 @@ categories:
 - terminal
 ---
 
-For software engineers, it is easy to reach agreement that good commit messages are important. It equally easy to reach agreement that most commit messages are not good. In this post, AWW, a formula  for writing basic meaningful commit messages, will be discussed.
+For software engineers, it is easy to reach an agreement that good commit messages are important. It is equally easy to reach the agreement that most commit messages are not good. In this post, AWW, a formula for writing basic meaningful commit messages, will be discussed.
 
 ## 3 Things Meaningful Commit Messages Should Have
 
@@ -20,7 +20,7 @@ For software engineers, it is easy to reach agreement that good commit messages 
 -  **what**: word(s) that describe what the _action_ is relative to
 -  **where**: word(s) that describe _where_ the _action_ is happening to _what_ 
 
-This is called **AWW** which sounds cute so I like it.
+This is called **AWW** which sounds cute, so I like it.
 
 Here's a git terminal example:
 
@@ -35,4 +35,4 @@ In the example above:
 
 ## Why make a formula?
 
-Git messages are important. They seem simple to write in discussion. Yet, when changing multiple files or things in a file, the meaning of changes can be lost easily. Following the AWW formula helps composing meaning when committing. 
+Git messages are important. They seem simple to write in discussion. When changing multiple files or things in a file, the meaning of changes can be lost easily. Following the AWW formula helps composing meaning when committing. 
