@@ -13,8 +13,8 @@
       "path---html-is-easy-7337084ce1a38926c2ee.js.map"
     ],
     "path---week-13-17": [
-      "path---week-13-17-eb22cbcb7c0325bc7da1.js",
-      "path---week-13-17-eb22cbcb7c0325bc7da1.js.map"
+      "path---week-13-17-8583be8bb5bcf5a2a819.js",
+      "path---week-13-17-8583be8bb5bcf5a2a819.js.map"
     ],
     "path---week-6-17": [
       "path---week-6-17-4a0d89ac72382e793ac7.js",
@@ -141,20 +141,20 @@
       "path---device-sticky-bits-on-scroll-d84cd0609172aa5adca1.js.map"
     ],
     "path---week-15-17": [
-      "path---week-15-17-557c73359821a64d183c.js",
-      "path---week-15-17-557c73359821a64d183c.js.map"
+      "path---week-15-17-1d020cc6bb280b8d9785.js",
+      "path---week-15-17-1d020cc6bb280b8d9785.js.map"
     ],
     "path---js-closure": [
       "path---js-closure-390f8ea843c074ad3086.js",
       "path---js-closure-390f8ea843c074ad3086.js.map"
     ],
     "path---index": [
-      "path---index-816617cbe67f49a59539.js",
-      "path---index-816617cbe67f49a59539.js.map"
+      "path---index-0c322ee0ddfe7e546148.js",
+      "path---index-0c322ee0ddfe7e546148.js.map"
     ],
     "path---week-18-17": [
-      "path---week-18-17-7588d2a1b62076c9c92d.js",
-      "path---week-18-17-7588d2a1b62076c9c92d.js.map"
+      "path---week-18-17-7725a65754838d9fdf99.js",
+      "path---week-18-17-7725a65754838d9fdf99.js.map"
     ],
     "path---glendora-mountain-road": [
       "path---glendora-mountain-road-0264200f8e7f5c53d282.js",
@@ -189,8 +189,8 @@
       "path---css-less-known-selectors-50fc13736c42c2161fbe.js.map"
     ],
     "path---git-tag-update": [
-      "path---git-tag-update-e3483d17074a1eaa94f8.js",
-      "path---git-tag-update-e3483d17074a1eaa94f8.js.map"
+      "path---git-tag-update-1ba121ce9d114d187a04.js",
+      "path---git-tag-update-1ba121ce9d114d187a04.js.map"
     ],
     "path---4-categories-js-projects": [
       "path---4-categories-js-projects-8cb7a7ab1fbe4deca80c.js",
@@ -257,14 +257,14 @@
       "path---arrow-functions-cont-fc86ea0d08e71a9ff6ca.js.map"
     ],
     "app": [
-      "app-3fd43ebc4059598c11ac.js",
+      "app-bf619b70147f3eec2f07.js",
       "build-js-styles.css",
-      "app-3fd43ebc4059598c11ac.js.map",
+      "app-bf619b70147f3eec2f07.js.map",
       "build-js-styles.css.map"
     ],
     "path---archive": [
-      "path---archive-092ccd271dcbc550c118.js",
-      "path---archive-092ccd271dcbc550c118.js.map"
+      "path---archive-4f66b53839ab3ce1d06c.js",
+      "path---archive-4f66b53839ab3ce1d06c.js.map"
     ],
     "path---week-10-17": [
       "path---week-10-17-e7c5975f2cbb92f0c67f.js",
@@ -285,6 +285,10 @@
     "path---js-argument-key-word": [
       "path---js-argument-key-word-4221ddad3c55936fa8e8.js",
       "path---js-argument-key-word-4221ddad3c55936fa8e8.js.map"
+    ],
+    "path---narmalize-css-or-not": [
+      "path---narmalize-css-or-not-e96e2ed30e76134efd8f.js",
+      "path---narmalize-css-or-not-e96e2ed30e76134efd8f.js.map"
     ],
     "path---punch-setup": [
       "path---punch-setup-0bef9677d897b653230a.js",
