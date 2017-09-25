@@ -14,7 +14,7 @@ categories:
 
 [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are used for establishing versions of products. They usually use [Semver Versioning](http://semver.org/). 
 
-Because tags oftem specify specific changes in code, sometimes updates need to be added to specific tags. This update can be made in a few simple steps.
+Because tags often specify specific changes in code, sometimes updates need to be added to specific tags. This update can be made in a few simple steps.
 
 Establish tags
 
