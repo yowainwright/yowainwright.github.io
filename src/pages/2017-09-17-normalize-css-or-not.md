@@ -11,31 +11,31 @@ categories:
 - css
 ---
 
-For years, normalizing CSS was a starting part of building a new product. For the past few years I've become more adverse to adding common Normalization CSS files but never really clarified why. In this post I will go into what CSS normalization is, why it would be used, and why it might not be needed.  
+Normalizing CSS has been part of building front-end product for years. The last few projects I've worked on, I've become adverse to normalization CSS files but ha not clarified why for myself or others. In this post, I will go into what CSS normalization is, why it is used, and why it might not be needed.  
 
-[CSS Normalization](https://necolas.github.io/normalize.css/) is a concept of defining CSS property values so that a web pages styles behave and look consistent across web browsers, like Internet Explorer, Fire Fox, Safari, and Chrome **before** adding styles to the CSS. that gained moment back in 2012 by [Nicolas Gallagher](https://twitter.com/necolas) and [Jon Neal](https://twitter.com/jon_neal). 
+[CSS Normalization](https://necolas.github.io/normalize.css/) is a concept of defining CSS property values so that a web pages styles behave and look consistent across web browsers, like Internet Explorer, FireFox, Safari, and Chrome **before** adding styles to the CSS. that gained moment back in 2012 by [Nicolas Gallagher](https://twitter.com/necolas) and [Jon Neal](https://twitter.com/jon_neal). 
 
 ## What does this do for web projects?
 -  makes basic element styles the same across web browsers before more styles are added. 
 -  defines a standard to start with when working on a new project
 -  makes your outputted `.css` bigger
--  provides basic support against random design notes from your grand mother who uses Internet Explorer and want to view all of the table layouts you're making
+-  provides basic support for random design notes from your grandmother who uses Internet Explorer and want to view all of the table layouts you're making
 
 ## What does this _not_ do for web projects?
 
--  does not prevent other cross browser hacks that are added to the CSS Cascade after normalization
+-  does not prevent other cross-browser hacks that are added to the CSS Cascade after normalization
 -  does not define usable styles for your project—it is not a CSS framework
 -  does not provide browser hacks to normalization your CSS
 -  does not protect a project's CSS from un-normalizing itself
--  does not love your like your grandmother does and will not accept that you are defining overriding styles until you trump its styles or use something like [purify CSS](https://github.com/purifycss/purifycss)
+-  does not love you like your grandmother does and will not accept that you are defining overriding styles until you trump its styles or use something like [purify CSS](https://github.com/purifycss/purifycss)
 
 ## Why would someone use Normalization?
 
-CSS Normalization gives developers a safe starting point and which to know if there are browser quirks—they made the quirks. This is because all CSS elements should look the same across all browsers. For projects where an element inventory is not looked after regularly or, perhaps if there are very very few styles, CSS Normalize can guarantee normality of elements pre-styling.
+CSS Normalization gives developers a safe starting point at which to know styles are the same across browsers. For projects where an element inventory is not looked after regularly or, perhaps if there are very very few styles, CSS Normalize can guarantee normality of elements before any custom styling is done.
 
 #### A quick example of how
 
-In this code, browser 1 will have a preset h1 defined `font-size` of `3rem`
+In this code, browser one will have a preset h1 defined `font-size` of `3rem`
 
 ```css
 elementExample {
@@ -91,7 +91,7 @@ elementExample {
 ```
 
 
-Then if the `font-size` is declares for the actual project, `elementExamples`'s CSS has already been re-defined 3 times.
+Then if the `font-size` is declared for the actual project, `elementExamples`'s CSS has already been re-defined three times.
 
 ```css
 elementExample {
@@ -102,7 +102,7 @@ elementExample {
 
 #### 2. Projects will override the `Normalize.css` CSS
 
-Browsers come with CSS styles baked in that declare how HTML elements should look. Older browsers need a lot of normalization help. Newer browsers don't CSS Normalization styles are styles added to insure that styles are the same across browsers. 
+Browsers come with CSS styles baked in that declare how HTML elements should look. Older browsers need a lot of normalization help. Newer browsers don't need as many CSS Normalization styles, yet styles added to insure that styles are the same across browsers. When custom styles are added, they will quickly over-ride normalized styles. 
 
 
 In this code, by default, the `font-size` is `3rem`.
@@ -121,7 +121,7 @@ elementExample {
 }
 ```
 
-Then, if the developer defines `font-size` again, withough much CSS, `elementExamples`'s CSS has already been defined and overruled 3 times.
+Then, if the developer defines `font-size` again, without much CSS, `elementExamples`'s CSS has already been defined and overruled three times.
 
 ```css
 elementExample {
@@ -132,12 +132,12 @@ elementExample {
 
 #### 3. If there is a slim element Inventory, styles will be added for elements that aren't used
 
-`Normalize.css` provides CSS that normalizes CSS for all elements.
+`Normalize.css` provides CSS that normalizes CSS for **all** elements.
 
-If a project only uses 3 elements and normalize CSS provides 6 element styles, then there will be CSS rules defined for 2 extra elements.
+If a project only uses three elements and normalize CSS provides six element styles, then there will be CSS rules defined for two extra elements.
 
 
-In this code, there are 3 defined styles
+In this code, there are three defined styles
 
 ```css
 elementExample1 {
@@ -167,14 +167,14 @@ The project only uses `elementExample`
 
 ## Conclusion
 
-`Normalize.css` is a great tool that was relied on for a long time. Now, it is still an important source for defining CSS style standards. It may not need to be included in now. 
+`Normalize.css` is a great tool that was relied on for a long time. Now, it is still an important source for defining CSS style standards. It may not need to be included in all projects. 
 
+---
 
+When considering adding `Normalize` to your next library:
 
+-  make a general HTML element inventory in your head
+-  decide if a CSS framework tool will be used
+-  think about the audience that will be reached
 
-
-
-
-
-
-
+If these things are not documented, or they're difficult to think of, adding `Normalize.css` in 2017 might slow you down in more ways than one.
