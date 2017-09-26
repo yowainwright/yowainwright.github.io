@@ -70,7 +70,7 @@ elementExample {
 
 ## Why I have not used CSS Normalization for a long time?
 
-#### 1. `Normalize.css` is additive
+#### 1. Normalize.css is additive
 
 Browsers provide CSS. `Normalize.css` adds duplicate CSS rules or overrides CSS rules provided by the browser.
 
@@ -100,7 +100,7 @@ elementExample {
 ```
 
 
-#### 2. Projects will override the `Normalize.css` CSS
+#### 2. Projects will override the Normalize.css CSS
 
 Browsers come with CSS styles baked in that declare how HTML elements should look. Older browsers need a lot of normalization help. Newer browsers don't need as many CSS Normalization styles, yet styles added to insure that styles are the same across browsers. When custom styles are added, they will quickly over-ride normalized styles. 
 
