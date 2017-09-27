@@ -28,6 +28,10 @@
       "path---week-1-17-af3ae7b8381e277e6bf8.js",
       "path---week-1-17-af3ae7b8381e277e6bf8.js.map"
     ],
+    "path---normalize-css-or-not": [
+      "path---normalize-css-or-not-0776fc69030d1669c1bd.js",
+      "path---normalize-css-or-not-0776fc69030d1669c1bd.js.map"
+    ],
     "path---week-14-17": [
       "path---week-14-17-72421c028d5ff5cb0061.js",
       "path---week-14-17-72421c028d5ff5cb0061.js.map"
@@ -149,8 +153,8 @@
       "path---js-closure-390f8ea843c074ad3086.js.map"
     ],
     "path---index": [
-      "path---index-0c322ee0ddfe7e546148.js",
-      "path---index-0c322ee0ddfe7e546148.js.map"
+      "path---index-d771a1137a51159a915c.js",
+      "path---index-d771a1137a51159a915c.js.map"
     ],
     "path---week-18-17": [
       "path---week-18-17-7725a65754838d9fdf99.js",
@@ -257,14 +261,14 @@
       "path---arrow-functions-cont-fc86ea0d08e71a9ff6ca.js.map"
     ],
     "app": [
-      "app-bf619b70147f3eec2f07.js",
+      "app-436392a5e148bfa4578c.js",
       "build-js-styles.css",
-      "app-bf619b70147f3eec2f07.js.map",
+      "app-436392a5e148bfa4578c.js.map",
       "build-js-styles.css.map"
     ],
     "path---archive": [
-      "path---archive-4f66b53839ab3ce1d06c.js",
-      "path---archive-4f66b53839ab3ce1d06c.js.map"
+      "path---archive-cb72de5f8be75073b711.js",
+      "path---archive-cb72de5f8be75073b711.js.map"
     ],
     "path---week-10-17": [
       "path---week-10-17-e7c5975f2cbb92f0c67f.js",
@@ -285,10 +289,6 @@
     "path---js-argument-key-word": [
       "path---js-argument-key-word-4221ddad3c55936fa8e8.js",
       "path---js-argument-key-word-4221ddad3c55936fa8e8.js.map"
-    ],
-    "path---narmalize-css-or-not": [
-      "path---narmalize-css-or-not-349c68a9fbbbdde28347.js",
-      "path---narmalize-css-or-not-349c68a9fbbbdde28347.js.map"
     ],
     "path---punch-setup": [
       "path---punch-setup-0bef9677d897b653230a.js",
