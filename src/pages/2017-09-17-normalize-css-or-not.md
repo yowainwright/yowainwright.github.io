@@ -21,6 +21,7 @@ Normalizing CSS has been part of building front-end product for years. The last 
 </figure>
 
 ## What does this do for web projects?
+
 -  makes basic element styles the same across web browsers before more styles are added. 
 -  defines a standard to start with when working on a new project
 -  makes your outputted `.css` bigger
