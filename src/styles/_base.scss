@@ -116,14 +116,11 @@ figure {
 figcaption {
   border-bottom: 1px solid $color-grey-lighter;
   border-top: 1px solid $color-grey-lighter;
-  margin: 0 auto 1rem;
+  margin: 3rem auto;
   max-width: calc(100vw - 2rem);
   padding: 1rem 0;
   text-align: center;
   width: $width-reader;
-  @include media-query($width-small) {
-    margin-bottom: 2rem;
-  }
 }
 img,
 iframe {
