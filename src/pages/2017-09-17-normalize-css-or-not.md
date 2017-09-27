@@ -17,7 +17,7 @@ Normalizing CSS has been part of building front-end product for years. The last 
 
 <figure>
     <img src="https://yowainwright.imgix.net/normalize/normalize-post.jpg" alt="Normalize Illustration" width="1000" />
-  <figcaption>Normalization CSS can be used to make sure your CSS remains the same. Or, CSS styles can be added elsewhere, avoiding multiple overrides in the Cascade from Normalization. </figcaption>
+  <figcaption>The pseudo CSS code illustration above displays how Normalization CSS can be used to ensure your CSS remains the same across browsers which can lead to multiple overrides. Or, when encountering an issue between browsers, one CSS style can be added elsewhere—avoiding multiple overrides in the Cascade from Normalization.</figcaption>
 </figure>
 
 ## What does this do for web projects?
