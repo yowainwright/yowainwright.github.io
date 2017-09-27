@@ -89,8 +89,15 @@ li p {
 a {
   color: black;
   text-decoration: none;
+  .content & {
+    text-decoration: underline;
+    text-decoration-color: lightblue;
+  }
   &:hover {
-    text-decoration: underline;;
+    text-decoration: underline;
+    .content & {
+      text-decoration: none;
+    }
   }
 }
 blockquote {
