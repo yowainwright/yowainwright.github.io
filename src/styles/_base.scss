@@ -88,15 +88,15 @@ li p {
 }
 a {
   color: black;
-  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-color: lightblue;
   .content & {
-    text-decoration: underline;
-    text-decoration-color: lightblue;
+    text-decoration-line: underline;
   }
   &:hover {
-    text-decoration: underline;
+    text-decoration-line: underline;
     .content & {
-      text-decoration: none;
+      text-decoration-line: none;
     }
   }
 }
