@@ -79,9 +79,9 @@ class BlogIndex extends Component {
       // build postItems [array]
       postItems.push(
         <article key={i} className="post--article">
-          {header}
-          {figure}
-          <p>{description}</p>
+            {header}
+            {figure}
+            <p>{description} <Link to={path}>[...]</Link></p>
           <hr />
         </article>
       )
