@@ -96,6 +96,10 @@
       "path---surfing-face-fc9d2d043095a1717c51.js",
       "path---surfing-face-fc9d2d043095a1717c51.js.map"
     ],
+    "path---week-34-17": [
+      "path---week-34-17-d8e9739be3fac5b4388c.js",
+      "path---week-34-17-d8e9739be3fac5b4388c.js.map"
+    ],
     "path---week-20-17": [
       "path---week-20-17-c51b2102a93ea8fd7ad2.js",
       "path---week-20-17-c51b2102a93ea8fd7ad2.js.map"
@@ -153,8 +157,8 @@
       "path---js-closure-390f8ea843c074ad3086.js.map"
     ],
     "path---index": [
-      "path---index-5f65e2abe921b736730d.js",
-      "path---index-5f65e2abe921b736730d.js.map"
+      "path---index-c1fc28828eacfccb5734.js",
+      "path---index-c1fc28828eacfccb5734.js.map"
     ],
     "path---week-18-17": [
       "path---week-18-17-7725a65754838d9fdf99.js",
@@ -201,8 +205,8 @@
       "path---4-categories-js-projects-8cb7a7ab1fbe4deca80c.js.map"
     ],
     "path---laying-low": [
-      "path---laying-low-e41dd4cfe7302d94a5aa.js",
-      "path---laying-low-e41dd4cfe7302d94a5aa.js.map"
+      "path---laying-low-2621eec6f0c3edbb6229.js",
+      "path---laying-low-2621eec6f0c3edbb6229.js.map"
     ],
     "path---week-16-17": [
       "path---week-16-17-17b7c7c2a2d6835de8e2.js",
@@ -249,8 +253,8 @@
       "path---offline-plugin-app-shell-fallback-586c7e095e534a3909ec.js.map"
     ],
     "component---src-pages-index-jsx": [
-      "component---src-pages-index-jsx-f67f13cbb668699c8fa1.js",
-      "component---src-pages-index-jsx-f67f13cbb668699c8fa1.js.map"
+      "component---src-pages-index-jsx-d0434ac0b3e585a38d40.js",
+      "component---src-pages-index-jsx-d0434ac0b3e585a38d40.js.map"
     ],
     "path---week-7-17": [
       "path---week-7-17-38eb93da1f91c9b18095.js",
@@ -261,14 +265,14 @@
       "path---arrow-functions-cont-fc86ea0d08e71a9ff6ca.js.map"
     ],
     "app": [
-      "app-1f5d5bd112edd079ef29.js",
+      "app-f2026794b9ffb3e1d1b3.js",
       "build-js-styles.css",
-      "app-1f5d5bd112edd079ef29.js.map",
+      "app-f2026794b9ffb3e1d1b3.js.map",
       "build-js-styles.css.map"
     ],
     "path---archive": [
-      "path---archive-f4c81ab224200a0e5579.js",
-      "path---archive-f4c81ab224200a0e5579.js.map"
+      "path---archive-20444682b1af4b2129dd.js",
+      "path---archive-20444682b1af4b2129dd.js.map"
     ],
     "path---week-10-17": [
       "path---week-10-17-e7c5975f2cbb92f0c67f.js",
