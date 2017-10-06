@@ -44,7 +44,7 @@ class BlogIndex extends Component {
     return (
       <figure itemType="http://schema.org/ImageObject">
         <Link to={path}>
-          <img src={image} itemProp="contentURL" />
+          <img src={`${image}?w=800&h=800&fit=crop&crop=focalpoint&auto=format`} itemProp="contentURL" />
         </Link>
       </figure>
     )
@@ -54,7 +54,7 @@ class BlogIndex extends Component {
     generatePosts
     ----
     generates 10 post max
-    
+
   */
   generatePosts() {
     const postItems = []
@@ -79,9 +79,9 @@ class BlogIndex extends Component {
       // build postItems [array]
       postItems.push(
         <article key={i} className="post--article">
-            {header}
-            {figure}
-            <p>{description} <Link to={path}>[...]</Link></p>
+          {header}
+          {figure}
+          <p>{description} <Link to={path}>[...]</Link></p>
           <hr />
         </article>
       )
