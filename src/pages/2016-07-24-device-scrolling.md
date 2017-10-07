@@ -26,7 +26,7 @@ Sticky Navigation in my purview became more relavant with an implemenation of [s
 
 <figure>
 	<a href="https://www.dollarshaveclub.com/blades">
-	<img src="/assets/device-scrolling/dsc-fixed-nav.jpg" alt="Sticky navigation" />
+	<img src="https://yowainwright.imgix.net/device-scrolling/dsc-fixed-nav.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Sticky navigation" />
 	</a>
 </figure>
 
@@ -34,7 +34,7 @@ Sticky Navigation in my purview became more relavant with an implemenation of [s
 
 <figure>
 	<a href="https://medium.com/">
-	<img src="/assets/device-scrolling/Medium.jpg" alt="Static then fixed navigation" />
+	<img src="https://yowainwright.imgix.net/device-scrolling/Medium.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Static then fixed navigation" />
 	</a>
 </figure>
 
@@ -42,7 +42,7 @@ Sticky Navigation in my purview became more relavant with an implemenation of [s
 
 <figure>
 <a href="http://www.billboard.com/">
-	<img src="/assets/device-scrolling/billboard.jpg" alt="Fixed navigation with a scroll stop" />
+	<img src="https://yowainwright.imgix.net/device-scrolling/billboard.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Fixed navigation with a scroll stop" />
 	</a>
 </figure>
 
@@ -50,9 +50,9 @@ Sticky Navigation in my purview became more relavant with an implemenation of [s
 
 <figure>
 	<a href="http://www.hollywoodreporter.com/features/beverly-hills-1-billion-vineyard-819299">
-	<img src="/assets/device-scrolling/thr.jpg" alt="Scrolled distance queue navigation" />
+	<img src="https://yowainwright.imgix.net/device-scrolling/thr.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Scrolled distance queue navigation" />
 	</a>
-</figure> 
+</figure>
 
 ```javascript
 	var scrollPosition = 0;
@@ -63,7 +63,7 @@ Sticky Navigation in my purview became more relavant with an implemenation of [s
 		    	// Something to do
 		} else if ( newScrollPosition < scrollPosition ) {
 		      // Something else to do
-		} 
+		}
 		return scrollPosition = newScrollPosition;
 	};
 	return window.addOnScroll(scrollDistance);
@@ -71,19 +71,19 @@ Sticky Navigation in my purview became more relavant with an implemenation of [s
 
 ## Device Fixed Position & Sticky Bits
 
-Device sticky items are [very undependable](http://bradfrost.com/blog/mobile/fixed-position/) as many devices don't support `fixed positioning` or only partially support it which often creates a weird lag when a customer is scrolls a page. 
+Device sticky items are [very undependable](http://bradfrost.com/blog/mobile/fixed-position/) as many devices don't support `fixed positioning` or only partially support it which often creates a weird lag when a customer is scrolls a page.
 
 > Device sticky items are very undependable as many devices don't support `fixed positioning`
 
 <figure>
 	<a href="http://leafo.net/sticky-kit/">
-	<img src="/assets/device-scrolling/leafo.jpg" alt="Device sticky items" />
+	<img src="https://yowainwright.imgix.net/device-scrolling/leafo.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Device sticky items" />
 	</a>
-</figure> 
+</figure>
 
 It seems that fixed position was more supported by IOS a few years ago but support has lagged as Apple has defined fixed positioning as [different because of an unchangeable size for a browser window](https://developer.apple.com/library/ios/technotes/tn2010/tn2262/_index.html#//apple_ref/doc/uid/DTS40009577-CH1-SAFARI_ON_IPAD_READINESS_CHECKLIST-4__MODIFY_CODE_THAT_RELIES_ON_CSS_FIXED_POSITIONING). [More...](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html)
 
-It was after trying very hard to come up with a solition for fixed position support that I decided to see if making `absolute positioning` work like fixed position could be a solution. It was then that I came on to this [post](https://coderwall.com/p/8rz_7g/how-to-emulate-position-fixed-using-absolute-positioning) which uses css to essentially hijack window scrolling from the window so that elements positioned absolutely can behave in a way similarly to what we'd expect with fixed position. 
+It was after trying very hard to come up with a solition for fixed position support that I decided to see if making `absolute positioning` work like fixed position could be a solution. It was then that I came on to this [post](https://coderwall.com/p/8rz_7g/how-to-emulate-position-fixed-using-absolute-positioning) which uses css to essentially hijack window scrolling from the window so that elements positioned absolutely can behave in a way similarly to what we'd expect with fixed position.
 
 ```css
 	html {
@@ -102,7 +102,7 @@ It was after trying very hard to come up with a solition for fixed position supp
 	}
 ```
 
-I've been writing a plugin to accept standard web fixed position patterns as well as device fixed position patterns called [Sticky Bits](https://github.com/yowainwright/sticky-bits). 
+I've been writing a plugin to accept standard web fixed position patterns as well as device fixed position patterns called [Sticky Bits](https://github.com/yowainwright/sticky-bits).
 
 Here's a demo of the absolute position solution:
 

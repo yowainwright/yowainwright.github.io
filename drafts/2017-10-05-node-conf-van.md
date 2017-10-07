@@ -5,7 +5,7 @@ layout: post
 readNext: "/"
 path: "/node-conf-vancouver-17/"
 meta: Vancouver Node Conference, 2017 discussed current hot topics include GraphQL, Serverless, Web Assebly in the Browser and Speed benchmarks—along with other announces like, Node become a V8 first class citizen
-featured_image:
+featured_image: null
 categories:
 - note
 - story

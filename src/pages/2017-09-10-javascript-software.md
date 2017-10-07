@@ -1,5 +1,5 @@
 ---
-title: Popular JavaScript tools in (mid) 2017 
+title: Popular JavaScript tools in (mid) 2017
 date: "2017-09-09"
 layout: post
 readNext: "/"
@@ -10,12 +10,12 @@ categories:
 - javascript
 ---
 
-This post lists very used JavaScript frameworks, libraries, and tools as defined by me (Jeff Wainwright) in (mid) 2017. It is written to provide context for other posts about I write the reference JavaScript tooling—connecting the dots. For deeper context into how I define JavaScript Software, read [here](https://jeffry.in/4-categories-js-projects/). 
+This post lists very used JavaScript frameworks, libraries, and tools as defined by me (Jeff Wainwright) in (mid) 2017. It is written to provide context for other posts about I write the reference JavaScript tooling—connecting the dots. For deeper context into how I define JavaScript Software, read [here](https://jeffry.in/4-categories-js-projects/).
 
 <figure>
-  <img src="https://yowainwright.imgix.net/connecting-dots.png" alt="Connecting the dots" />
+  <img src="https://yowainwright.imgix.net/connecting-dots.png?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Connecting the dots" />
   <figcaption>Connecting the dots</figcaption>
-</figure> 
+</figure>
 
 ## JavaScript Frameworks, Libraries, and Tools
 
@@ -37,15 +37,15 @@ In 2017, here are a few heavily used products to create some context for this po
 <h3 id="library">Libraries</h3>
 
 -  **[jQuery](https://jquery.com/):** People still use it! jQuery makes JavaScript accessible to engineers with a clean and understandable interface with its API.
--  **[_.lodash](https://lodash.com/):** `\_\.loDash` is a utility library that gives developers utility featuring to write more performant and clear code. 
+-  **[_.lodash](https://lodash.com/):** `\_\.loDash` is a utility library that gives developers utility featuring to write more performant and clear code.
 -  **[Jest](https://webpack.github.io/):** A tool for testing the comes with other very popular testing features built right in.
 
 <h3 id="tools">Tools</h3>
 
--  **[Babel.js](https://babeljs.io/):** Babel is a tool that compiles modern JavaScript to JavaScript that can be used in the browser. It is a lot more than a compiler because plugins can be added to it. 
--  **[Eslint](https://eslint.org/):** Eslint is a tool that helps ensure JS is written in accordance with defined rules—by Eslint, plugins, or rules set in configuration which can be added in numerous ways. 
+-  **[Babel.js](https://babeljs.io/):** Babel is a tool that compiles modern JavaScript to JavaScript that can be used in the browser. It is a lot more than a compiler because plugins can be added to it.
+-  **[Eslint](https://eslint.org/):** Eslint is a tool that helps ensure JS is written in accordance with defined rules—by Eslint, plugins, or rules set in configuration which can be added in numerous ways.
 -  **[Webpack](https://webpack.github.io/):** Webpack is a bundler. It combines frameworks, libraries, and other tools optimally for web page rendering.
 
 ## Conclusion: thanks, apologies, and notes
 
-The lists above are very small and debatable. Although, I use some of the tools above—I choose items for each because they seem to be the most discussed on Twitter and Medium at this moment. I'm so appreciative for all of the open source above. Pigeon-holing things is not fun but can be useful for reference. 
+The lists above are very small and debatable. Although, I use some of the tools above—I choose items for each because they seem to be the most discussed on Twitter and Medium at this moment. I'm so appreciative for all of the open source above. Pigeon-holing things is not fun but can be useful for reference.
