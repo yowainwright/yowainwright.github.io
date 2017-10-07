@@ -11,18 +11,18 @@ categories:
 - css
 ---
 
-Normalizing CSS has been part of building front-end product for years. The last few projects I've worked on, I've become adverse to normalization CSS files but ha not clarified why for myself or others. In this post, I will go into what CSS normalization is, why it is used, and why it might not be needed.  
+Normalizing CSS has been part of building front-end product for years. The last few projects I've worked on, I've become adverse to normalization CSS files but ha not clarified why for myself or others. In this post, I will go into what CSS normalization is, why it is used, and why it might not be needed.
 
-[CSS Normalization](https://necolas.github.io/normalize.css/) is a concept of defining CSS property values so that a web pages styles behave and look consistent across web browsers, like Internet Explorer, FireFox, Safari, and Chrome **before** adding styles to the CSS. that gained moment back in 2012 by [Nicolas Gallagher](https://twitter.com/necolas) and [Jon Neal](https://twitter.com/jon_neal). 
+[CSS Normalization](https://necolas.github.io/normalize.css/) is a concept of defining CSS property values so that a web pages styles behave and look consistent across web browsers, like Internet Explorer, FireFox, Safari, and Chrome **before** adding styles to the CSS. that gained moment back in 2012 by [Nicolas Gallagher](https://twitter.com/necolas) and [Jon Neal](https://twitter.com/jon_neal).
 
 <figure>
-    <img src="https://yowainwright.imgix.net/normalize/normalize-post.jpg" alt="Normalize Illustration" width="1000" />
+    <img src="https://yowainwright.imgix.net/normalize/normalize-post.jpg?w=1000&h=800&fit=crop&crop=focalpoint&auto=format" alt="Normalize Illustration" width="1000" />
   <figcaption>The pseudo CSS code illustration above displays how Normalization CSS can be used to ensure your CSS remains the same across browsers which can lead to multiple overrides. Or, when encountering an issue between browsers, one CSS style can be added elsewhere—avoiding multiple overrides in the Cascade from Normalization.</figcaption>
 </figure>
 
 ## What does this do for web projects?
 
--  makes basic element styles the same across web browsers before more styles are added. 
+-  makes basic element styles the same across web browsers before more styles are added.
 -  defines a standard to start with when working on a new project
 -  makes your outputted `.css` bigger
 -  provides basic support for random design notes from your grandmother who uses Internet Explorer and want to view all of the table layouts you're making
@@ -57,7 +57,7 @@ elementExample {
 }
 ```
 
-When `normalize.css` is included at the top of a CSS project, it will ensure all `elements`'s have a font size `2rem` until overridden. 
+When `normalize.css` is included at the top of a CSS project, it will ensure all `elements`'s have a font size `2rem` until overridden.
 
 ```css
 elementExample {
@@ -108,7 +108,7 @@ elementExample {
 
 #### 2. Projects will override the Normalize.css CSS
 
-Browsers come with CSS styles baked in that declare how HTML elements should look. Older browsers need a lot of normalization help. Newer browsers don't need as many CSS Normalization styles, yet styles added to insure that styles are the same across browsers. When custom styles are added, they will quickly over-ride normalized styles. 
+Browsers come with CSS styles baked in that declare how HTML elements should look. Older browsers need a lot of normalization help. Newer browsers don't need as many CSS Normalization styles, yet styles added to insure that styles are the same across browsers. When custom styles are added, they will quickly over-ride normalized styles.
 
 
 In this code, by default, the `font-size` is `3rem`.
@@ -173,7 +173,7 @@ The project only uses `elementExample`
 
 ## Conclusion
 
-`Normalize.css` is a great tool that was relied on for a long time. Now, it is still an important source for defining CSS style standards. It may not need to be included in all projects. 
+`Normalize.css` is a great tool that was relied on for a long time. Now, it is still an important source for defining CSS style standards. It may not need to be included in all projects.
 
 ---
 
