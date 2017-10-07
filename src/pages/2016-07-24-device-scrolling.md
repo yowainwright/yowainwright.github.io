@@ -26,7 +26,7 @@ Sticky Navigation in my purview became more relavant with an implemenation of [s
 
 <figure>
 	<a href="https://www.dollarshaveclub.com/blades">
-	<img src="/assets/device-scrolling/dsc-fixed-nav.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Sticky navigation" />
+	<img src="https://yowainwright.imgix.net/device-scrolling/dsc-fixed-nav.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Sticky navigation" />
 	</a>
 </figure>
 
@@ -34,7 +34,7 @@ Sticky Navigation in my purview became more relavant with an implemenation of [s
 
 <figure>
 	<a href="https://medium.com/">
-	<img src="/assets/device-scrolling/Medium.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Static then fixed navigation" />
+	<img src="https://yowainwright.imgix.net/device-scrolling/Medium.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Static then fixed navigation" />
 	</a>
 </figure>
 
@@ -42,7 +42,7 @@ Sticky Navigation in my purview became more relavant with an implemenation of [s
 
 <figure>
 <a href="http://www.billboard.com/">
-	<img src="/assets/device-scrolling/billboard.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Fixed navigation with a scroll stop" />
+	<img src="https://yowainwright.imgix.net/device-scrolling/billboard.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Fixed navigation with a scroll stop" />
 	</a>
 </figure>
 
@@ -50,7 +50,7 @@ Sticky Navigation in my purview became more relavant with an implemenation of [s
 
 <figure>
 	<a href="http://www.hollywoodreporter.com/features/beverly-hills-1-billion-vineyard-819299">
-	<img src="/assets/device-scrolling/thr.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Scrolled distance queue navigation" />
+	<img src="https://yowainwright.imgix.net/device-scrolling/thr.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Scrolled distance queue navigation" />
 	</a>
 </figure>
 
@@ -77,7 +77,7 @@ Device sticky items are [very undependable](http://bradfrost.com/blog/mobile/fix
 
 <figure>
 	<a href="http://leafo.net/sticky-kit/">
-	<img src="/assets/device-scrolling/leafo.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Device sticky items" />
+	<img src="https://yowainwright.imgix.net/device-scrolling/leafo.jpg?w=800&h=800&fit=crop&crop=focalpoint&auto=format" alt="Device sticky items" />
 	</a>
 </figure>
 
