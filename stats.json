@@ -29,8 +29,8 @@
       "path---week-1-17-af3ae7b8381e277e6bf8.js.map"
     ],
     "path---normalize-css-or-not": [
-      "path---normalize-css-or-not-e5eafaa4f8a141cd3151.js",
-      "path---normalize-css-or-not-e5eafaa4f8a141cd3151.js.map"
+      "path---normalize-css-or-not-0de4066035ad88fface3.js",
+      "path---normalize-css-or-not-0de4066035ad88fface3.js.map"
     ],
     "path---week-14-17": [
       "path---week-14-17-72421c028d5ff5cb0061.js",
@@ -73,8 +73,8 @@
       "path----6611940bd40871b680a6.js.map"
     ],
     "path---javascript-software-mid-2017": [
-      "path---javascript-software-mid-2017-3010b1eb538b3da0195e.js",
-      "path---javascript-software-mid-2017-3010b1eb538b3da0195e.js.map"
+      "path---javascript-software-mid-2017-06278167e9f2ee41e5f4.js",
+      "path---javascript-software-mid-2017-06278167e9f2ee41e5f4.js.map"
     ],
     "component---src-pages-archive-jsx": [
       "component---src-pages-archive-jsx-51e924f56a2f45c404ec.js",
@@ -145,8 +145,8 @@
       "path---js-scope-28861abee1c71880655d.js.map"
     ],
     "path---device-sticky-bits-on-scroll": [
-      "path---device-sticky-bits-on-scroll-d84cd0609172aa5adca1.js",
-      "path---device-sticky-bits-on-scroll-d84cd0609172aa5adca1.js.map"
+      "path---device-sticky-bits-on-scroll-288197b6933d12f54178.js",
+      "path---device-sticky-bits-on-scroll-288197b6933d12f54178.js.map"
     ],
     "path---week-15-17": [
       "path---week-15-17-1d020cc6bb280b8d9785.js",
@@ -157,8 +157,8 @@
       "path---js-closure-390f8ea843c074ad3086.js.map"
     ],
     "path---index": [
-      "path---index-c1fc28828eacfccb5734.js",
-      "path---index-c1fc28828eacfccb5734.js.map"
+      "path---index-d494b2ce39debcee01a0.js",
+      "path---index-d494b2ce39debcee01a0.js.map"
     ],
     "path---week-18-17": [
       "path---week-18-17-7725a65754838d9fdf99.js",
@@ -177,8 +177,8 @@
       "path---week-8-17-49a001d43d0d8781c165.js.map"
     ],
     "path---youre-an-ortiz": [
-      "path---youre-an-ortiz-14816339de9d7546ea52.js",
-      "path---youre-an-ortiz-14816339de9d7546ea52.js.map"
+      "path---youre-an-ortiz-ebbcd68f2b2975bfc285.js",
+      "path---youre-an-ortiz-ebbcd68f2b2975bfc285.js.map"
     ],
     "path---frontend-prototype-configuration": [
       "path---frontend-prototype-configuration-79efc08d96b51dbccef0.js",
@@ -221,8 +221,8 @@
       "path---formula-for-commits-66aab7049ab2b317d4b0.js.map"
     ],
     "path---labor-day-week": [
-      "path---labor-day-week-c5e968f22fcc54429248.js",
-      "path---labor-day-week-c5e968f22fcc54429248.js.map"
+      "path---labor-day-week-f23f80efb661aa75c794.js",
+      "path---labor-day-week-f23f80efb661aa75c794.js.map"
     ],
     "path---debugging-gatsby": [
       "path---debugging-gatsby-7bbe14180e8ada823e11.js",
@@ -233,8 +233,8 @@
       "path---branded-content-bd6ad474dd03aabe39b7.js.map"
     ],
     "path---things-change-william-kentridge": [
-      "path---things-change-william-kentridge-04237eeb1dd07089509d.js",
-      "path---things-change-william-kentridge-04237eeb1dd07089509d.js.map"
+      "path---things-change-william-kentridge-e2a79205aa5fa31203cc.js",
+      "path---things-change-william-kentridge-e2a79205aa5fa31203cc.js.map"
     ],
     "path---week-12-17": [
       "path---week-12-17-bbb1afa498d96bc1d8c1.js",
@@ -252,6 +252,10 @@
       "path---offline-plugin-app-shell-fallback-586c7e095e534a3909ec.js",
       "path---offline-plugin-app-shell-fallback-586c7e095e534a3909ec.js.map"
     ],
+    "path---find-running-processes": [
+      "path---find-running-processes-ed2846dc16bad80b8d88.js",
+      "path---find-running-processes-ed2846dc16bad80b8d88.js.map"
+    ],
     "component---src-pages-index-jsx": [
       "component---src-pages-index-jsx-d0434ac0b3e585a38d40.js",
       "component---src-pages-index-jsx-d0434ac0b3e585a38d40.js.map"
@@ -265,14 +269,14 @@
       "path---arrow-functions-cont-fc86ea0d08e71a9ff6ca.js.map"
     ],
     "app": [
-      "app-f2026794b9ffb3e1d1b3.js",
+      "app-0870f862a2ca0763b0cd.js",
       "build-js-styles.css",
-      "app-f2026794b9ffb3e1d1b3.js.map",
+      "app-0870f862a2ca0763b0cd.js.map",
       "build-js-styles.css.map"
     ],
     "path---archive": [
-      "path---archive-20444682b1af4b2129dd.js",
-      "path---archive-20444682b1af4b2129dd.js.map"
+      "path---archive-a8817db2b5105a611aeb.js",
+      "path---archive-a8817db2b5105a611aeb.js.map"
     ],
     "path---week-10-17": [
       "path---week-10-17-e7c5975f2cbb92f0c67f.js",
