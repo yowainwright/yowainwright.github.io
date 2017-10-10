@@ -11,14 +11,14 @@ categories:
 - tip
 ---
 
-Listed below is one way to find running processes with a shell. This is useful when debugging.
+Listed below is one way to find running processes with a shell. This is useful when debugging running processes.
 
-Example command for finding running `ruby` processes.
+## Example command (finding running 'ruby' processes)
 ```sh
 ps aux | grep -i ruby
 ```
 
-Breaking down that command
+## Breaking down commands
 
 ```sh
 # display processes
@@ -29,6 +29,16 @@ aux
 grep -i
 # the process we're isolating
 ruby
+```
+
+## Deeper learning
+
+To further understand this group of commands, try isolating other running processes in your shell.
+
+## Example
+
+```sh
+ps aux | grep -i root
 ```
 
 
