@@ -40,11 +40,11 @@ class BlogIndex extends Component {
 
   */
   generatePostFigure(image, path) {
-    if (typeof image === undefined) return ''
+    if (typeof image === 'undefined') return ''
     return (
       <figure itemType="http://schema.org/ImageObject">
         <Link to={path}>
-          <img src={`${image}?w=800&h=800&fit=crop&crop=focalpoint&auto=format`} itemProp="contentURL" />
+          <img src={`${image}?w=800&&fit=crop&crop=focalpoint&auto=format`} itemProp="contentURL" />
         </Link>
       </figure>
     )
