@@ -24,9 +24,10 @@ Listed below is are general notes from talks at the conference along with a desc
 [V8](https://en.wikipedia.org/wiki/Chrome_V8) is a JavaScript Compiler for the Chrome Browser that compiles JavaScript to Machine Code that is run in the browser. Previously, V8 was built to compile JavaScript strictly for the chrome browser which meant that open source projects like Node that were dependent on V8 ran into issues with V8 updated. Ofter time there was more acknowledgement and support but ultimately, Node support did not affect V8 Chrome timelines. Now, that has changed. Node is a first class citizen of V8. This means that V8 updates must fully support Node to be released.
 
 There was more than 1 talk about V8.
-Here are some cliff notes from those talks:
 
-> V8 update run through
+----
+
+#### V8 update run through
 ~ from the [Franzi Hinkelmann](https://twitter.com/fhinkel?lang=en) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
 -  V8 has no notion of the dom or the console.
@@ -51,7 +52,9 @@ Security was a more quiet hot topic. NPM and Google speakers discussed spoke exc
 
 General browser security was discussed in many talks. It is proven to be an issue in development and in package management.
 
-> A quick run through of security issues in 2013 to now
+----
+
+#### A quick run through of security issues in 2013 to now
 ~ from the [Nwokedi Idika](https://twitter.com/nwokedi?lang=en) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
 -  Web security issues (2013)
@@ -77,6 +80,7 @@ General browser security was discussed in many talks. It is proven to be an issu
 [NPM](https://www.npmjs.com/)'s rapid growth has lead to learnings in both security and popularity suppport. NPM has been dealing with security problems in such areas as fake packages that perform malicious jobs. NPM is dealing with these issues in both their CLI and in there ability to search for malicious packages.
 
 > NPM has recently added new tooling to their CLI for more security
+
 ~ from the [C J Silverio](https://github.com/ceejbot) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
 -  `npm token`
@@ -98,7 +102,8 @@ General node talks covered the node event loop, updates, and new features that l
 The node event loop was discussed in regards to debugging and speed.
 
 > Common problems debugging node event loops (high level)
- ~ from the [Nathan White](https://github.com/nw) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
+
+~ from the [Nathan White](https://github.com/nw) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
 -  CPU problems
    -  timeouts
@@ -115,6 +120,7 @@ The node event loop was discussed in regards to debugging and speed.
 JavaScript is now releases new versions yearly. Several talks discussed new JavaScript features in more detail.
 
 > New(er) JavaScript features
+
 ~ from the [Ethan Brown](https://twitter.com/ethanrbrown?lang=en) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
 -  [es6 computed property names](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
@@ -127,6 +133,7 @@ JavaScript is now releases new versions yearly. Several talks discussed new Java
 Making web pages fast is always an important topic.
 
 > Notes on how/why Fastify is the fastest
+
 ~ from the [Matteo Collina](https://github.com/mcollina) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
 - [Fastify](https://github.com/fastify/fastify)
