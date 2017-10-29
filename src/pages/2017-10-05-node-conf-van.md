@@ -79,8 +79,9 @@ General browser security was discussed in many talks. It is proven to be an issu
 
 [NPM](https://www.npmjs.com/)'s rapid growth has lead to learnings in both security and popularity suppport. NPM has been dealing with security problems in such areas as fake packages that perform malicious jobs. NPM is dealing with these issues in both their CLI and in there ability to search for malicious packages.
 
-> NPM has recently added new tooling to their CLI for more security
+----
 
+#### NPM has recently added new tooling to their CLI for more security
 ~ from the [C J Silverio](https://github.com/ceejbot) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
 -  `npm token`
@@ -101,8 +102,9 @@ General node talks covered the node event loop, updates, and new features that l
 
 The node event loop was discussed in regards to debugging and speed.
 
-> Common problems debugging node event loops (high level)
+----
 
+#### Common problems debugging node event loops (high level)
 ~ from the [Nathan White](https://github.com/nw) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
 -  CPU problems
@@ -119,7 +121,7 @@ The node event loop was discussed in regards to debugging and speed.
 
 JavaScript is now releases new versions yearly. Several talks discussed new JavaScript features in more detail.
 
-> New(er) JavaScript features
+#### New(er) JavaScript features
 
 ~ from the [Ethan Brown](https://twitter.com/ethanrbrown?lang=en) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
