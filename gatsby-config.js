@@ -31,13 +31,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'GTM-NRFFQ9',
-      },
-    },
-    {
-    resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-manifest`,
       options: {
         "name": "Jeffry.in",
         "short_name": "Jeffry.in",
