@@ -17,7 +17,9 @@ The Vancouver Node Conference was hosted at the [Vancouver Convention Center](ht
 
 ## Vancouver Node Conference—the talks
 
-Listed below is are general notes from talks at the conference along with a description of the topic as well as useful links.
+Listed below are notes from talks along with descriptions of things that I did a little research on. This post should be looked at as quick thoughts before and after the conference.
+
+---
 
 ### Compiler JS Notes (V8)
 
@@ -28,7 +30,7 @@ There was more than 1 talk about V8.
 ----
 
 #### V8 update run through
-~ from the [Franzi Hinkelmann](https://twitter.com/fhinkel?lang=en) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
+Note from the [Franzi Hinkelmann](https://twitter.com/fhinkel?lang=en) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
 -  V8 has no notion of the dom or the console.
 -  Embedding V8 was difficult because it focused on Chrome
@@ -44,28 +46,29 @@ There was more than 1 talk about V8.
 -  VM—V8 can work in MS OS
    -  Node is on ChakraCore (Internet Explorer)
 
+----
+
 ### Security
 
 Security was a more quiet hot topic. NPM and Google speakers discussed spoke exclusively on security but it was mentioned in almost every talk.
 
-#### General browser security
+#### Browser security
 
-General browser security was discussed in many talks. It is proven to be an issue in development and in package management.
+Browser security was discussed in talks. It an issue in development as well as in package management.
 
 ----
 
 #### A quick run through of security issues in 2013 to now
-~ from the [Nwokedi Idika](https://twitter.com/nwokedi?lang=en) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
+Notes from [Nwokedi Idika](https://twitter.com/nwokedi?lang=en)'s [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
--  Web security issues (2013)
-   -  sql injections
-   -  cross site scripting (XSS)
-   -  broken auth
-   -  insecure direct object reference
-   -  functionality abuse
-   -  security definition
-      -  specifying security definitions
-
+##### Web security issues (2013)
+-  sql injections
+-  cross site scripting (XSS)
+-  broken auth
+-  insecure direct object reference
+-  functionality abuse
+-  security definition
+   -  specifying security definitions
 -  Scraping
    -  Collecting content from one of more web pages
 -  Account Creation
@@ -82,7 +85,9 @@ General browser security was discussed in many talks. It is proven to be an issu
 ----
 
 #### NPM has recently added new tooling to their CLI for more security
-~ from the [C J Silverio](https://github.com/ceejbot) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
+Notes from [C J Silverio](https://github.com/ceejbot)'s' [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
+
+NPM's new sercurity cli arguments
 
 -  `npm token`
    -  `--read-only`
