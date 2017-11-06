@@ -29,6 +29,7 @@
     "gatsby-transformer-sharp": "^1.6.1",
     "lodash": "^4.17.4",
     "react-responsive-grid": "^0.3.4",
+    "redux-devtools-extension": "^2.13.2",
     "typeface-merriweather": "0.0.25",
     "typeface-montserrat": "0.0.24",
     "typography-theme-wordpress-2016": "^0.15.10"
