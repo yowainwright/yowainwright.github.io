@@ -13,6 +13,7 @@ categories:
 
 The Vancouver Node Conference was hosted at the [Vancouver Convention Center](http://www.vancouverconventioncentre.com/). ES6 tips, [GraphQL](http://graphql.org/), [Serverless](https://en.wikipedia.org/wiki/Serverless_computing), [Web Assembly](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) in the browser, and [V8](https://developers.google.com/v8/) owned the talk space.
 
+
 ----
 
 ## Vancouver Node Conference—the talks
