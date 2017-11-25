@@ -8,7 +8,6 @@ $nav-height: 4rem;
 	margin: 0 auto 2rem;
 	@include media-query($width-small) {
 		border-bottom: 0;
-    margin-bottom: 0;
     margin-top: 2rem;
     max-width: calc(100% - 2rem);
     &:after {
@@ -20,6 +19,9 @@ $nav-height: 4rem;
       width: 100%;
     }
 	}
+  @include media-query($width-medium) {
+    margin: 6rem auto;
+  }
 	&__link {
     display: block;
 		height: $nav-height;
