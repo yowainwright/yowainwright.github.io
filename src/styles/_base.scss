@@ -53,10 +53,7 @@ h1 {
 h2,
 h3 {
   .content & {
-    font-family: sans-serif;
-    font-size: .8rem;
-    font-weight: bold;
-    letter-spacing: .2rem;
+    font-size: 1.5rem;
     margin: 3rem auto;
   }
 }
@@ -90,7 +87,7 @@ a {
   color: black;
   text-decoration: none;
   text-decoration-line: none;
-  text-decoration-color: lightblue;
+  text-decoration-color: $color-grey-lightest;
   .content & {
     text-decoration-line: underline;
   }
@@ -141,6 +138,19 @@ time {
   text-align: center;
   @include media-query($width-small) {
     margin: 2rem 0;
+  }
+  &:after,
+  &:before {
+    color: lightgray;
+    content: '—';
+    display: inline-block;
+    font-size: 1rem;
+  }
+  &:after {
+    padding-left: .25rem;
+  }
+  &:before {
+    padding-right: .25rem;
   }
 }
 
@@ -225,23 +235,6 @@ main {
 	margin-left: auto;
 	margin-right: auto;
   padding: 0 0 $spacing-unit;
-}
-time,
-.content h2,
-.content h3 {
-  &:after,
-  &:before {
-    color: lightgray;
-    content: '—';
-    display: inline-block;
-    font-size: 1rem;
-  }
-  &:after {
-    padding-left: .25rem;
-  }
-  &:before {
-    padding-right: .25rem;
-  }
 }
 .header__description {
   border-bottom: 1px solid lightgray;
