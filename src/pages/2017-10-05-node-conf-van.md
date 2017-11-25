@@ -18,7 +18,7 @@ ES6 tips, [GraphQL](http://graphql.org/), [Serverless](https://en.wikipedia.org/
 
 ## Vancouver Node Conference—the talks
 
-Listed below are notes from talks along with descriptions of things that I did a little research on. This post should be looked at as quick thoughts before and after the conference.
+Listed below are very high level quickly typed notes that were written during talks along with descriptions of key conference features that I did a little research on. This post should be looked at as quick thoughts before and after the conference.
 
 ---
 
@@ -242,17 +242,3 @@ Making web pages fast is always an important topic.
 -  can't parse html in the past because of nesting
    -  regular expressions can now parse html
    -  regular expression and regex
-
----
-
-## Other notes
-
--  Look into Choo
-
-https://en.wikipedia.org/wiki/Digital_Orca
-
-https://stdlib.io/
-
-https://en.wikipedia.org/wiki/Serverless_computing
-
-https://serverless.com/
