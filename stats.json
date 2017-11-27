@@ -1,342 +1,342 @@
 {
   "assetsByChunkName": {
     "path---week-3-17": [
-      "path---week-3-17-db1589b5f0cb64cebc11.js",
-      "path---week-3-17-db1589b5f0cb64cebc11.js.map"
+      "path---week-3-17-01ab521226abf379de3a.js",
+      "path---week-3-17-01ab521226abf379de3a.js.map"
     ],
     "path---week-35-17": [
-      "path---week-35-17-8434c121a18d252ca35c.js",
-      "path---week-35-17-8434c121a18d252ca35c.js.map"
+      "path---week-35-17-6329db6b5a4f599991d2.js",
+      "path---week-35-17-6329db6b5a4f599991d2.js.map"
     ],
     "path---losing-a-friend": [
-      "path---losing-a-friend-38bc580f3e3d9106c993.js",
-      "path---losing-a-friend-38bc580f3e3d9106c993.js.map"
+      "path---losing-a-friend-d0b6211bb04b6e626077.js",
+      "path---losing-a-friend-d0b6211bb04b6e626077.js.map"
     ],
     "path---html-is-easy": [
-      "path---html-is-easy-ddbd1f370c1859c8466f.js",
-      "path---html-is-easy-ddbd1f370c1859c8466f.js.map"
+      "path---html-is-easy-7337084ce1a38926c2ee.js",
+      "path---html-is-easy-7337084ce1a38926c2ee.js.map"
     ],
     "path---week-13-17": [
-      "path---week-13-17-b9d77d731cff7b857e41.js",
-      "path---week-13-17-b9d77d731cff7b857e41.js.map"
+      "path---week-13-17-8583be8bb5bcf5a2a819.js",
+      "path---week-13-17-8583be8bb5bcf5a2a819.js.map"
     ],
     "path---week-6-17": [
-      "path---week-6-17-4b7a1be61b6993cd9095.js",
-      "path---week-6-17-4b7a1be61b6993cd9095.js.map"
+      "path---week-6-17-4a0d89ac72382e793ac7.js",
+      "path---week-6-17-4a0d89ac72382e793ac7.js.map"
     ],
     "path---white-rock-lake": [
-      "path---white-rock-lake-a91bc77a6a32221627b3.js",
-      "path---white-rock-lake-a91bc77a6a32221627b3.js.map"
+      "path---white-rock-lake-a147a795db382716bdb7.js",
+      "path---white-rock-lake-a147a795db382716bdb7.js.map"
     ],
     "path---week-1-17": [
-      "path---week-1-17-1693826e42c884ad819f.js",
-      "path---week-1-17-1693826e42c884ad819f.js.map"
+      "path---week-1-17-af3ae7b8381e277e6bf8.js",
+      "path---week-1-17-af3ae7b8381e277e6bf8.js.map"
     ],
     "path---normalize-css-or-not": [
-      "path---normalize-css-or-not-8447c829723b338bb698.js",
-      "path---normalize-css-or-not-8447c829723b338bb698.js.map"
+      "path---normalize-css-or-not-0de4066035ad88fface3.js",
+      "path---normalize-css-or-not-0de4066035ad88fface3.js.map"
     ],
     "path---week-14-17": [
-      "path---week-14-17-9ae74b8a21eee39f8367.js",
-      "path---week-14-17-9ae74b8a21eee39f8367.js.map"
+      "path---week-14-17-72421c028d5ff5cb0061.js",
+      "path---week-14-17-72421c028d5ff5cb0061.js.map"
     ],
     "path---week-19-17": [
-      "path---week-19-17-a656ae1febf9b0f4bdd0.js",
-      "path---week-19-17-a656ae1febf9b0f4bdd0.js.map"
+      "path---week-19-17-fec120f60ce0f52eb258.js",
+      "path---week-19-17-fec120f60ce0f52eb258.js.map"
     ],
     "path---week-4-17": [
-      "path---week-4-17-6219f0f9020194e85633.js",
-      "path---week-4-17-6219f0f9020194e85633.js.map"
+      "path---week-4-17-63da5f0bd6a00b54da5d.js",
+      "path---week-4-17-63da5f0bd6a00b54da5d.js.map"
     ],
     "path---week-9-17": [
-      "path---week-9-17-d8a5456030ea117becbb.js",
-      "path---week-9-17-d8a5456030ea117becbb.js.map"
+      "path---week-9-17-a95225385be7e0c45009.js",
+      "path---week-9-17-a95225385be7e0c45009.js.map"
     ],
     "path---destructing-function-opts": [
-      "path---destructing-function-opts-ac790c35cc81c864c4eb.js",
-      "path---destructing-function-opts-ac790c35cc81c864c4eb.js.map"
+      "path---destructing-function-opts-6358ab7c9913e8887112.js",
+      "path---destructing-function-opts-6358ab7c9913e8887112.js.map"
     ],
     "path---switching-site-generators": [
-      "path---switching-site-generators-4f0d2815824839326f82.js",
-      "path---switching-site-generators-4f0d2815824839326f82.js.map"
+      "path---switching-site-generators-a68de621cf35cd48a82f.js",
+      "path---switching-site-generators-a68de621cf35cd48a82f.js.map"
     ],
     "path---css-pretty-widths-with-calc": [
-      "path---css-pretty-widths-with-calc-836ea99056ec6bb656bd.js",
-      "path---css-pretty-widths-with-calc-836ea99056ec6bb656bd.js.map"
+      "path---css-pretty-widths-with-calc-f0fd01bdc4b8f6fe3a6c.js",
+      "path---css-pretty-widths-with-calc-f0fd01bdc4b8f6fe3a6c.js.map"
     ],
     "path---week-17-17": [
-      "path---week-17-17-ef99041eb1a18dc8c863.js",
-      "path---week-17-17-ef99041eb1a18dc8c863.js.map"
+      "path---week-17-17-27ea848a851f4b573310.js",
+      "path---week-17-17-27ea848a851f4b573310.js.map"
     ],
     "path---js-is-relatable": [
-      "path---js-is-relatable-badd8112c443aad01230.js",
-      "path---js-is-relatable-badd8112c443aad01230.js.map"
+      "path---js-is-relatable-a5f39424b4d548525e47.js",
+      "path---js-is-relatable-a5f39424b4d548525e47.js.map"
     ],
     "path---": [
-      "path----557518bd178906f8d58a.js",
-      "path----557518bd178906f8d58a.js.map"
+      "path----6611940bd40871b680a6.js",
+      "path----6611940bd40871b680a6.js.map"
     ],
     "path---javascript-software-mid-2017": [
-      "path---javascript-software-mid-2017-de8e04c0bb40122f83d2.js",
-      "path---javascript-software-mid-2017-de8e04c0bb40122f83d2.js.map"
+      "path---javascript-software-mid-2017-06278167e9f2ee41e5f4.js",
+      "path---javascript-software-mid-2017-06278167e9f2ee41e5f4.js.map"
     ],
     "component---src-pages-archive-jsx": [
       "component---src-pages-archive-jsx-51e924f56a2f45c404ec.js",
       "component---src-pages-archive-jsx-51e924f56a2f45c404ec.js.map"
     ],
     "path---making-a-js-plugin": [
-      "path---making-a-js-plugin-079c9944122faa31752c.js",
-      "path---making-a-js-plugin-079c9944122faa31752c.js.map"
+      "path---making-a-js-plugin-733cfc88414a05bbd774.js",
+      "path---making-a-js-plugin-733cfc88414a05bbd774.js.map"
     ],
     "component---src-layouts-index-jsx": [
-      "component---src-layouts-index-jsx-4975eba6ed294a693885.js",
-      "component---src-layouts-index-jsx-4975eba6ed294a693885.js.map"
+      "component---src-layouts-index-jsx-453d512d73f749c71a4c.js",
+      "component---src-layouts-index-jsx-453d512d73f749c71a4c.js.map"
     ],
     "path---js-keyword-this": [
-      "path---js-keyword-this-84b29b4ce870516ae6dc.js",
-      "path---js-keyword-this-84b29b4ce870516ae6dc.js.map"
+      "path---js-keyword-this-601bb74980939c14eca1.js",
+      "path---js-keyword-this-601bb74980939c14eca1.js.map"
     ],
     "path---surfing-face": [
-      "path---surfing-face-e38c890aa65b8fccfd4a.js",
-      "path---surfing-face-e38c890aa65b8fccfd4a.js.map"
+      "path---surfing-face-fc9d2d043095a1717c51.js",
+      "path---surfing-face-fc9d2d043095a1717c51.js.map"
     ],
     "path---week-34-17": [
-      "path---week-34-17-441d18a69439a613fb0b.js",
-      "path---week-34-17-441d18a69439a613fb0b.js.map"
+      "path---week-34-17-d8e9739be3fac5b4388c.js",
+      "path---week-34-17-d8e9739be3fac5b4388c.js.map"
     ],
     "path---week-20-17": [
-      "path---week-20-17-ee568a954532be7830d8.js",
-      "path---week-20-17-ee568a954532be7830d8.js.map"
+      "path---week-20-17-c51b2102a93ea8fd7ad2.js",
+      "path---week-20-17-c51b2102a93ea8fd7ad2.js.map"
     ],
     "component---node-modules-gatsby-plugin-offline-app-shell-js": [
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---week-2-17": [
-      "path---week-2-17-5c39afef62f7c640e4e1.js",
-      "path---week-2-17-5c39afef62f7c640e4e1.js.map"
+      "path---week-2-17-e261c52715fbffb1fff1.js",
+      "path---week-2-17-e261c52715fbffb1fff1.js.map"
     ],
     "path---happy-birthday": [
-      "path---happy-birthday-d040ba94c195d11b08e2.js",
-      "path---happy-birthday-d040ba94c195d11b08e2.js.map"
+      "path---happy-birthday-83154627f217c7ba6e1c.js",
+      "path---happy-birthday-83154627f217c7ba6e1c.js.map"
     ],
     "path---sinon-fake-server-methods": [
-      "path---sinon-fake-server-methods-a6b24fc3fca6c97ba043.js",
-      "path---sinon-fake-server-methods-a6b24fc3fca6c97ba043.js.map"
+      "path---sinon-fake-server-methods-b546b4f3f70b1a11e1f5.js",
+      "path---sinon-fake-server-methods-b546b4f3f70b1a11e1f5.js.map"
     ],
     "path---email-share-link": [
-      "path---email-share-link-a6d6d8e97148d2924644.js",
-      "path---email-share-link-a6d6d8e97148d2924644.js.map"
+      "path---email-share-link-b4a3da0c11832373ac15.js",
+      "path---email-share-link-b4a3da0c11832373ac15.js.map"
     ],
     "path---css-font-partial": [
-      "path---css-font-partial-094a2985a10dc8c5d8fd.js",
-      "path---css-font-partial-094a2985a10dc8c5d8fd.js.map"
+      "path---css-font-partial-a2464bf50a7122fc495b.js",
+      "path---css-font-partial-a2464bf50a7122fc495b.js.map"
     ],
     "path---week-5-17": [
-      "path---week-5-17-3e5146882efa5f9bbb51.js",
-      "path---week-5-17-3e5146882efa5f9bbb51.js.map"
+      "path---week-5-17-30f027470bf6dec2f875.js",
+      "path---week-5-17-30f027470bf6dec2f875.js.map"
     ],
     "path---switching-back-to-sublime": [
-      "path---switching-back-to-sublime-daa82f8552f958db04f5.js",
-      "path---switching-back-to-sublime-daa82f8552f958db04f5.js.map"
+      "path---switching-back-to-sublime-f1647448fd12bcd5c9f9.js",
+      "path---switching-back-to-sublime-f1647448fd12bcd5c9f9.js.map"
     ],
     "path---art-lived": [
-      "path---art-lived-61626eb034aab562745d.js",
-      "path---art-lived-61626eb034aab562745d.js.map"
+      "path---art-lived-e0926f9061ece01ba2a4.js",
+      "path---art-lived-e0926f9061ece01ba2a4.js.map"
     ],
     "path---js-scope": [
-      "path---js-scope-bc83ba483b044678bfed.js",
-      "path---js-scope-bc83ba483b044678bfed.js.map"
+      "path---js-scope-22773ab5a25b257b3a4b.js",
+      "path---js-scope-22773ab5a25b257b3a4b.js.map"
     ],
     "path---device-sticky-bits-on-scroll": [
-      "path---device-sticky-bits-on-scroll-26f8770c428e616ac4c7.js",
-      "path---device-sticky-bits-on-scroll-26f8770c428e616ac4c7.js.map"
+      "path---device-sticky-bits-on-scroll-8d40489bc596e50f33b7.js",
+      "path---device-sticky-bits-on-scroll-8d40489bc596e50f33b7.js.map"
     ],
     "path---week-15-17": [
-      "path---week-15-17-0b6935727525453b4e4a.js",
-      "path---week-15-17-0b6935727525453b4e4a.js.map"
+      "path---week-15-17-1d020cc6bb280b8d9785.js",
+      "path---week-15-17-1d020cc6bb280b8d9785.js.map"
     ],
     "path---js-closure": [
-      "path---js-closure-bbb3e388813f8dc5bf73.js",
-      "path---js-closure-bbb3e388813f8dc5bf73.js.map"
+      "path---js-closure-a1e6d3670659b3cd7ee1.js",
+      "path---js-closure-a1e6d3670659b3cd7ee1.js.map"
     ],
     "path---index": [
-      "path---index-699835c37a66704cb4eb.js",
-      "path---index-699835c37a66704cb4eb.js.map"
+      "path---index-bb8cb774a0e52e690435.js",
+      "path---index-bb8cb774a0e52e690435.js.map"
     ],
     "path---week-18-17": [
-      "path---week-18-17-5b8bc1eb48c4815297bd.js",
-      "path---week-18-17-5b8bc1eb48c4815297bd.js.map"
+      "path---week-18-17-7725a65754838d9fdf99.js",
+      "path---week-18-17-7725a65754838d9fdf99.js.map"
     ],
     "path---glendora-mountain-road": [
-      "path---glendora-mountain-road-83f51b13f5d55fffbc16.js",
-      "path---glendora-mountain-road-83f51b13f5d55fffbc16.js.map"
+      "path---glendora-mountain-road-0264200f8e7f5c53d282.js",
+      "path---glendora-mountain-road-0264200f8e7f5c53d282.js.map"
     ],
     "path---js-objects": [
-      "path---js-objects-7146a4a597c3aa21130c.js",
-      "path---js-objects-7146a4a597c3aa21130c.js.map"
+      "path---js-objects-f230c241af7efa7c303e.js",
+      "path---js-objects-f230c241af7efa7c303e.js.map"
     ],
     "path---week-8-17": [
-      "path---week-8-17-e234076fe7b997bc05c6.js",
-      "path---week-8-17-e234076fe7b997bc05c6.js.map"
+      "path---week-8-17-49a001d43d0d8781c165.js",
+      "path---week-8-17-49a001d43d0d8781c165.js.map"
     ],
     "path---node-conf-vancouver-17": [
-      "path---node-conf-vancouver-17-f8ea73e3f7468bc061e7.js",
-      "path---node-conf-vancouver-17-f8ea73e3f7468bc061e7.js.map"
+      "path---node-conf-vancouver-17-9341b2e2d7e1b98fd098.js",
+      "path---node-conf-vancouver-17-9341b2e2d7e1b98fd098.js.map"
     ],
     "path---youre-an-ortiz": [
-      "path---youre-an-ortiz-a2bdef9b44b777a0716b.js",
-      "path---youre-an-ortiz-a2bdef9b44b777a0716b.js.map"
+      "path---youre-an-ortiz-ebbcd68f2b2975bfc285.js",
+      "path---youre-an-ortiz-ebbcd68f2b2975bfc285.js.map"
     ],
     "path---frontend-prototype-configuration": [
-      "path---frontend-prototype-configuration-0717a173b4e1a008051f.js",
-      "path---frontend-prototype-configuration-0717a173b4e1a008051f.js.map"
+      "path---frontend-prototype-configuration-79efc08d96b51dbccef0.js",
+      "path---frontend-prototype-configuration-79efc08d96b51dbccef0.js.map"
     ],
     "commons": [
-      "commons-0626f7349e799b82f5eb.js",
-      "commons-0626f7349e799b82f5eb.js.map"
+      "commons-3c8704a40009f722bd68.js",
+      "commons-3c8704a40009f722bd68.js.map"
     ],
     "path---known-updates-with-el-capitan-os": [
-      "path---known-updates-with-el-capitan-os-9842c56f990e6c996b21.js",
-      "path---known-updates-with-el-capitan-os-9842c56f990e6c996b21.js.map"
+      "path---known-updates-with-el-capitan-os-c95ea1d279895ff9d1b3.js",
+      "path---known-updates-with-el-capitan-os-c95ea1d279895ff9d1b3.js.map"
     ],
     "path---css-less-known-selectors": [
-      "path---css-less-known-selectors-620a4e1e24fd9e0ea75a.js",
-      "path---css-less-known-selectors-620a4e1e24fd9e0ea75a.js.map"
+      "path---css-less-known-selectors-50fc13736c42c2161fbe.js",
+      "path---css-less-known-selectors-50fc13736c42c2161fbe.js.map"
     ],
     "path---git-tag-update": [
-      "path---git-tag-update-e22403446e38b9d4aeae.js",
-      "path---git-tag-update-e22403446e38b9d4aeae.js.map"
+      "path---git-tag-update-1ba121ce9d114d187a04.js",
+      "path---git-tag-update-1ba121ce9d114d187a04.js.map"
     ],
     "path---4-categories-js-projects": [
-      "path---4-categories-js-projects-a844e6a7e609f469cb13.js",
-      "path---4-categories-js-projects-a844e6a7e609f469cb13.js.map"
+      "path---4-categories-js-projects-8cb7a7ab1fbe4deca80c.js",
+      "path---4-categories-js-projects-8cb7a7ab1fbe4deca80c.js.map"
     ],
     "path---laying-low": [
-      "path---laying-low-d10138d18487eb3e45ab.js",
-      "path---laying-low-d10138d18487eb3e45ab.js.map"
+      "path---laying-low-2621eec6f0c3edbb6229.js",
+      "path---laying-low-2621eec6f0c3edbb6229.js.map"
     ],
     "path---week-16-17": [
-      "path---week-16-17-40ede2943916897b7d18.js",
-      "path---week-16-17-40ede2943916897b7d18.js.map"
+      "path---week-16-17-17b7c7c2a2d6835de8e2.js",
+      "path---week-16-17-17b7c7c2a2d6835de8e2.js.map"
     ],
     "path---js-private-information": [
-      "path---js-private-information-e20b8255f18ef6adf357.js",
-      "path---js-private-information-e20b8255f18ef6adf357.js.map"
+      "path---js-private-information-bc9251b87c94d933158e.js",
+      "path---js-private-information-bc9251b87c94d933158e.js.map"
     ],
     "path---formula-for-commits": [
-      "path---formula-for-commits-7ed0089500dcc3e7060b.js",
-      "path---formula-for-commits-7ed0089500dcc3e7060b.js.map"
+      "path---formula-for-commits-66aab7049ab2b317d4b0.js",
+      "path---formula-for-commits-66aab7049ab2b317d4b0.js.map"
     ],
     "path---labor-day-week": [
-      "path---labor-day-week-8660af8e87c44760394c.js",
-      "path---labor-day-week-8660af8e87c44760394c.js.map"
+      "path---labor-day-week-f23f80efb661aa75c794.js",
+      "path---labor-day-week-f23f80efb661aa75c794.js.map"
     ],
     "path---debugging-gatsby": [
-      "path---debugging-gatsby-c5b678684221c5244cb4.js",
-      "path---debugging-gatsby-c5b678684221c5244cb4.js.map"
+      "path---debugging-gatsby-7bbe14180e8ada823e11.js",
+      "path---debugging-gatsby-7bbe14180e8ada823e11.js.map"
     ],
     "path---branded-content": [
-      "path---branded-content-13d9c8c9fa8ae0691dc6.js",
-      "path---branded-content-13d9c8c9fa8ae0691dc6.js.map"
+      "path---branded-content-42b630215ce65330cf53.js",
+      "path---branded-content-42b630215ce65330cf53.js.map"
     ],
     "path---things-change-william-kentridge": [
-      "path---things-change-william-kentridge-7b0e4bf2ab6f1d55f8d9.js",
-      "path---things-change-william-kentridge-7b0e4bf2ab6f1d55f8d9.js.map"
+      "path---things-change-william-kentridge-e2a79205aa5fa31203cc.js",
+      "path---things-change-william-kentridge-e2a79205aa5fa31203cc.js.map"
     ],
     "path---week-12-17": [
-      "path---week-12-17-aef853fa5662436d3d5d.js",
-      "path---week-12-17-aef853fa5662436d3d5d.js.map"
+      "path---week-12-17-bbb1afa498d96bc1d8c1.js",
+      "path---week-12-17-bbb1afa498d96bc1d8c1.js.map"
     ],
     "path---week-11-17": [
-      "path---week-11-17-ba12eff957477488664d.js",
-      "path---week-11-17-ba12eff957477488664d.js.map"
+      "path---week-11-17-3518cfd89cc6dbcfce87.js",
+      "path---week-11-17-3518cfd89cc6dbcfce87.js.map"
     ],
     "component---src-templates-blog-post-jsx": [
       "component---src-templates-blog-post-jsx-c5faac2f089e3aecf27f.js",
       "component---src-templates-blog-post-jsx-c5faac2f089e3aecf27f.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
-      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
-      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
+      "path---offline-plugin-app-shell-fallback-586c7e095e534a3909ec.js",
+      "path---offline-plugin-app-shell-fallback-586c7e095e534a3909ec.js.map"
     ],
     "path---find-running-processes": [
-      "path---find-running-processes-e33c73385ea9a0a3f368.js",
-      "path---find-running-processes-e33c73385ea9a0a3f368.js.map"
+      "path---find-running-processes-ed2846dc16bad80b8d88.js",
+      "path---find-running-processes-ed2846dc16bad80b8d88.js.map"
     ],
     "component---src-pages-index-jsx": [
       "component---src-pages-index-jsx-1563521a961ee3e0f2c8.js",
       "component---src-pages-index-jsx-1563521a961ee3e0f2c8.js.map"
     ],
     "path---week-7-17": [
-      "path---week-7-17-0dd88985bb4e02d376dd.js",
-      "path---week-7-17-0dd88985bb4e02d376dd.js.map"
+      "path---week-7-17-38eb93da1f91c9b18095.js",
+      "path---week-7-17-38eb93da1f91c9b18095.js.map"
     ],
     "path---arrow-functions-cont": [
-      "path---arrow-functions-cont-b7dfa0da79eb566d19f5.js",
-      "path---arrow-functions-cont-b7dfa0da79eb566d19f5.js.map"
+      "path---arrow-functions-cont-fc86ea0d08e71a9ff6ca.js",
+      "path---arrow-functions-cont-fc86ea0d08e71a9ff6ca.js.map"
     ],
     "app": [
-      "app-33ad13ff1136c1b5989d.js",
+      "app-69bc2bc03ee04ba77cff.js",
       "build-js-styles.css",
-      "app-33ad13ff1136c1b5989d.js.map",
+      "app-69bc2bc03ee04ba77cff.js.map",
       "build-js-styles.css.map"
     ],
     "path---archive": [
-      "path---archive-f883668437d3ca34fac7.js",
-      "path---archive-f883668437d3ca34fac7.js.map"
+      "path---archive-b07a642f917423cb3048.js",
+      "path---archive-b07a642f917423cb3048.js.map"
     ],
     "path---week-10-17": [
-      "path---week-10-17-7d41f9dad369388f238c.js",
-      "path---week-10-17-7d41f9dad369388f238c.js.map"
+      "path---week-10-17-e7c5975f2cbb92f0c67f.js",
+      "path---week-10-17-e7c5975f2cbb92f0c67f.js.map"
     ],
     "path---reframing-content": [
-      "path---reframing-content-1a5db3a708893dbeeb9c.js",
-      "path---reframing-content-1a5db3a708893dbeeb9c.js.map"
+      "path---reframing-content-25df74e150ef6d317bfa.js",
+      "path---reframing-content-25df74e150ef6d317bfa.js.map"
     ],
     "path---kramdown-syntax-cheatsheet": [
-      "path---kramdown-syntax-cheatsheet-98ab8ea938f0c1972164.js",
-      "path---kramdown-syntax-cheatsheet-98ab8ea938f0c1972164.js.map"
+      "path---kramdown-syntax-cheatsheet-cd408141d30aa3318ee3.js",
+      "path---kramdown-syntax-cheatsheet-cd408141d30aa3318ee3.js.map"
     ],
     "path---arrow-functions": [
-      "path---arrow-functions-35f200906ae654adde1b.js",
-      "path---arrow-functions-35f200906ae654adde1b.js.map"
+      "path---arrow-functions-f55c295e1e97646b2244.js",
+      "path---arrow-functions-f55c295e1e97646b2244.js.map"
     ],
     "path---js-argument-key-word": [
-      "path---js-argument-key-word-7a683bbd9a53b835dd8e.js",
-      "path---js-argument-key-word-7a683bbd9a53b835dd8e.js.map"
+      "path---js-argument-key-word-d259608ebceda95e1b87.js",
+      "path---js-argument-key-word-d259608ebceda95e1b87.js.map"
     ],
     "path---punch-setup": [
-      "path---punch-setup-20bbabe89e9749b6c257.js",
-      "path---punch-setup-20bbabe89e9749b6c257.js.map"
+      "path---punch-setup-0bef9677d897b653230a.js",
+      "path---punch-setup-0bef9677d897b653230a.js.map"
     ],
     "path---making-echo-app": [
-      "path---making-echo-app-788fc4bb42290e5c611a.js",
-      "path---making-echo-app-788fc4bb42290e5c611a.js.map"
+      "path---making-echo-app-d2b37e7858a6ff4fd2e6.js",
+      "path---making-echo-app-d2b37e7858a6ff4fd2e6.js.map"
     ],
     "path---turning-37": [
-      "path---turning-37-7d730740223ce5cb24b3.js",
-      "path---turning-37-7d730740223ce5cb24b3.js.map"
+      "path---turning-37-5fd784c74bdc63e62e8f.js",
+      "path---turning-37-5fd784c74bdc63e62e8f.js.map"
     ],
     "path---code-review-etiquette": [
-      "path---code-review-etiquette-7b6e1b8fbef47275b497.js",
-      "path---code-review-etiquette-7b6e1b8fbef47275b497.js.map"
+      "path---code-review-etiquette-5e8d3291dbf60c964208.js",
+      "path---code-review-etiquette-5e8d3291dbf60c964208.js.map"
     ],
     "path---glide-carousel": [
-      "path---glide-carousel-a28833d9a802da07758c.js",
-      "path---glide-carousel-a28833d9a802da07758c.js.map"
+      "path---glide-carousel-1af85ea711f95feb95a4.js",
+      "path---glide-carousel-1af85ea711f95feb95a4.js.map"
     ],
     "path---creating-aliases": [
-      "path---creating-aliases-5d1301c570a91b0ec01e.js",
-      "path---creating-aliases-5d1301c570a91b0ec01e.js.map"
+      "path---creating-aliases-ee71ce7a1659dfbff847.js",
+      "path---creating-aliases-ee71ce7a1659dfbff847.js.map"
     ],
     "path---about": [
-      "path---about-79a533b933c3ec503eef.js",
-      "path---about-79a533b933c3ec503eef.js.map"
+      "path---about-b2d49eb455db6f084799.js",
+      "path---about-b2d49eb455db6f084799.js.map"
     ],
     "path---node-meetup-debugging-with-yunong-xiao": [
-      "path---node-meetup-debugging-with-yunong-xiao-dbcdd3100d004640c9fb.js",
-      "path---node-meetup-debugging-with-yunong-xiao-dbcdd3100d004640c9fb.js.map"
+      "path---node-meetup-debugging-with-yunong-xiao-99bb2e4aa8a17757f3c5.js",
+      "path---node-meetup-debugging-with-yunong-xiao-99bb2e4aa8a17757f3c5.js.map"
     ]
   }
 }
