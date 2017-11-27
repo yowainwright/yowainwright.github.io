@@ -11,13 +11,16 @@ categories:
 - story
 ---
 
-The Vancouver Node Conference was hosted at the [Vancouver Convention Center](http://www.vancouverconventioncentre.com/). ES6 tips, [GraphQL](http://graphql.org/), [Serverless](https://en.wikipedia.org/wiki/Serverless_computing), [Web Assembly](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) in the browser, and [V8](https://developers.google.com/v8/) owned the talk space.
+ES6 tips, [GraphQL](http://graphql.org/), [Serverless](https://en.wikipedia.org/wiki/Serverless_computing), [Web Assembly](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) in the browser, and [V8](https://developers.google.com/v8/) owned the talk space at the Vancouver Node Conference host at the [Vancouver Convention Center](http://www.vancouverconventioncentre.com/).
+
 
 ----
 
 ## Vancouver Node Conference—the talks
 
-Listed below is are general notes from talks at the conference along with a description of the topic as well as useful links.
+Listed below are very high level quickly typed notes that were written during talks along with descriptions of key conference features that I did a little research on. This post should be looked at as quick thoughts before and after the conference.
+
+---
 
 ### Compiler JS Notes (V8)
 
@@ -28,7 +31,7 @@ There was more than 1 talk about V8.
 ----
 
 #### V8 update run through
-~ from the [Franzi Hinkelmann](https://twitter.com/fhinkel?lang=en) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
+Note from the [Franzi Hinkelmann](https://twitter.com/fhinkel?lang=en) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
 -  V8 has no notion of the dom or the console.
 -  Embedding V8 was difficult because it focused on Chrome
@@ -44,28 +47,29 @@ There was more than 1 talk about V8.
 -  VM—V8 can work in MS OS
    -  Node is on ChakraCore (Internet Explorer)
 
+----
+
 ### Security
 
 Security was a more quiet hot topic. NPM and Google speakers discussed spoke exclusively on security but it was mentioned in almost every talk.
 
-#### General browser security
+#### Browser security
 
-General browser security was discussed in many talks. It is proven to be an issue in development and in package management.
+Browser security was discussed in talks. It an issue in development as well as in package management.
 
 ----
 
 #### A quick run through of security issues in 2013 to now
-~ from the [Nwokedi Idika](https://twitter.com/nwokedi?lang=en) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
+Notes from [Nwokedi Idika](https://twitter.com/nwokedi?lang=en)'s [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
--  Web security issues (2013)
-   -  sql injections
-   -  cross site scripting (XSS)
-   -  broken auth
-   -  insecure direct object reference
-   -  functionality abuse
-   -  security definition
-      -  specifying security definitions
-
+##### Web security issues (2013)
+-  sql injections
+-  cross site scripting (XSS)
+-  broken auth
+-  insecure direct object reference
+-  functionality abuse
+-  security definition
+   -  specifying security definitions
 -  Scraping
    -  Collecting content from one of more web pages
 -  Account Creation
@@ -79,9 +83,12 @@ General browser security was discussed in many talks. It is proven to be an issu
 
 [NPM](https://www.npmjs.com/)'s rapid growth has lead to learnings in both security and popularity suppport. NPM has been dealing with security problems in such areas as fake packages that perform malicious jobs. NPM is dealing with these issues in both their CLI and in there ability to search for malicious packages.
 
-> NPM has recently added new tooling to their CLI for more security
+----
 
-~ from the [C J Silverio](https://github.com/ceejbot) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
+#### NPM has recently added new tooling to their CLI for more security
+Notes from [C J Silverio](https://github.com/ceejbot)'s' [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
+
+NPM's new sercurity cli arguments
 
 -  `npm token`
    -  `--read-only`
@@ -101,8 +108,9 @@ General node talks covered the node event loop, updates, and new features that l
 
 The node event loop was discussed in regards to debugging and speed.
 
-> Common problems debugging node event loops (high level)
+----
 
+#### Common problems debugging node event loops (high level)
 ~ from the [Nathan White](https://github.com/nw) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
 -  CPU problems
@@ -119,7 +127,7 @@ The node event loop was discussed in regards to debugging and speed.
 
 JavaScript is now releases new versions yearly. Several talks discussed new JavaScript features in more detail.
 
-> New(er) JavaScript features
+#### New(er) JavaScript features
 
 ~ from the [Ethan Brown](https://twitter.com/ethanrbrown?lang=en) [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
@@ -234,17 +242,3 @@ Making web pages fast is always an important topic.
 -  can't parse html in the past because of nesting
    -  regular expressions can now parse html
    -  regular expression and regex
-
----
-
-## Other notes
-
--  Look into Choo
-
-https://en.wikipedia.org/wiki/Digital_Orca
-
-https://stdlib.io/
-
-https://en.wikipedia.org/wiki/Serverless_computing
-
-https://serverless.com/
