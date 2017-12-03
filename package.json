@@ -12,7 +12,6 @@
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-google-analytics": "^1.0.4",
     "gatsby-plugin-manifest": "^1.0.5",
-    "gatsby-plugin-nprogress": "^1.0.7",
     "gatsby-plugin-offline": "^1.0.4",
     "gatsby-plugin-preact": "^1.0.3",
     "gatsby-plugin-react-helmet": "^1.0.3",
@@ -29,13 +28,11 @@
     "gatsby-transformer-sharp": "^1.6.1",
     "lodash": "^4.17.4",
     "react-responsive-grid": "^0.3.4",
-    "redux-devtools-extension": "^2.13.2",
-    "typeface-merriweather": "0.0.25",
-    "typeface-montserrat": "0.0.24",
-    "typography-theme-wordpress-2016": "^0.15.10"
+    "redux-devtools-extension": "^2.13.2"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.6.1",
     "eslint-plugin-react": "^7.3.0",
     "gh-pages": "^0.12.0",
     "prettier": "^1.5.3",
