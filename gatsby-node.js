@@ -21,22 +21,24 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           }
         }
       }
-    `).then(result => {
-      if (result.errors) {
-        console.error(result.errors)
-        reject(result.errors)
-      }
+    `
+      ).then(result => {
+        if (result.errors) {
+          console.error(result.errors)
+          reject(result.errors)
+        }
 
-      // Create blog posts pages.
-      _.each(result.data.allMarkdownRemark.edges, edge => {
-        createPage({
-          path: edge.node.frontmatter.path,
-          component: blogPost,
-          context: {
+        // Create blog posts pages.
+        _.each(result.data.allMarkdownRemark.edges, edge => {
+          createPage({
             path: edge.node.frontmatter.path,
-          },
+            component: blogPost,
+            context: {
+              path: edge.node.frontmatter.path,
+            },
+          })
         })
       })
-    }))
+    )
   })
 }
