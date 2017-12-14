@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 
 /*
-  Footer (site footer)
+  Footer (site footer) 👣
   ----
   contains footer information
   - inherits gatsby link
