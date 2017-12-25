@@ -13,10 +13,6 @@ import '../styles/main.scss'
 
 require('prismjs/themes/prism.css')
 
-/*
-
-
-*/
 class Template extends Component {
   render() {
     const {

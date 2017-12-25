@@ -9,14 +9,8 @@ import Helmet from 'react-helmet'
 class Head extends Component {
   constructor(props) {
     super(props)
-    this.gtmInlineScript = `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-73077309-1');`
+    this.gtmInlineScript = 'window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag(\'js\', new Date());gtag(\'config\', \'UA-73077309-1\');'
   }
-
-  /*
-    TODO
-    ----
-    Abstract navItems out to a config
-  */
   render() {
     return (
       <Helmet>
