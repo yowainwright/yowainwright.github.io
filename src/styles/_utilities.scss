@@ -2,7 +2,7 @@
   margin: $spacing-unit auto;
 }
 .first-paragraph {
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid $color-grey-lightest;
   padding: 1.5rem 0;
   &:first-line {
     font-weight: bold;
