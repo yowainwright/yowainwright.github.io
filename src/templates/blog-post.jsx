@@ -8,8 +8,15 @@ class BlogPostTemplate extends Component {
     this.post = get(this, 'props.data.markdownRemark')
   }
 
+  // generateCategories() {
+  //   let category
+  //   const pill = `<a href="/category/${category}">${category}</a>`
+  //   this.post.categories.map(category => pill)
+  //   return ()
+  // }
+
   generateDate() {
-    if (this.post.frontmatter.path === '/about/') return 
+    if (this.post.frontmatter.path === '/about/') return
     return (<time>{this.post.frontmatter.date}</time>)
   }
 
