@@ -27,3 +27,5 @@ categories:
 
 In late 2016, I started surfing. It was so challenging for me. It still is. I kept doing it through the challenges of struggling to paddle and/or e
 
+
+
