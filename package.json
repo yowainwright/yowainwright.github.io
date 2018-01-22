@@ -37,7 +37,8 @@
     "gh-pages": "^1.1.0",
     "prettier": "^1.5.3",
     "prismjs": "^1.8.1",
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.6.0",
+    "react-helmet": "^5.2.0"
   },
   "homepage": "https://github.com/yowainwright/yowainwright.github.io#readme",
   "keywords": [
