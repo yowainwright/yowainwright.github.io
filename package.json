@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "eslint": "^4.5.0",
-    "gatsby": "^1.8.15",
+    "gatsby": "^1.9.231",
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-google-analytics": "^1.0.4",
     "gatsby-plugin-manifest": "^1.0.5",
