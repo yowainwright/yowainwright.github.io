@@ -8,6 +8,8 @@ Please [reach out](mailto:yowainwright@gmail.com) with tips, notes or just to sa
 
 ---
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/yowainwright/yowainwright.github.io.svg)](https://greenkeeper.io/)
+
 Connect with me socially on:
 -  [Github](https://github.com/yowainwright)
 -  [Twitter](https://twitter.com/yowainwright)
