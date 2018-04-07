@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: yowainwright/yowainwright.github.io
 
 media_folder: static/assets
 
@@ -12,3 +13,9 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
+      - { name: meta, label: Meta }
+      - { name: featured_image, label: Featured_image }
+      - { name: layout, label: Layout }
+      - { name: category, label: Category }
+      - { name: content, label: Content }
+
