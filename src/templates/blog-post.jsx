@@ -9,10 +9,11 @@ class BlogPostTemplate extends Component {
   }
 
   // generateCategories() {
-  //   let category
-  //   const pill = `<a href="/category/${category}">${category}</a>`
-  //   this.post.categories.map(category => pill)
-  //   return ()
+  //   const categories = this.post.categories
+  //   if (!categories || categories.length === 0) return
+  //   return categories.forEach(category => {
+  //     (<Link to={`/category/${category}``} className='category')
+  //   })
   // }
 
   generateDate() {
