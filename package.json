@@ -53,7 +53,8 @@
   },
   "scripts": {
     "dev": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --fix --ignore-pattern public .",
+    "eslint": "./node_modules/.bin/eslint --ext .js,.jsx --fix --ignore-pattern public . --fix",
+    "eslint:ci": "./node_modules/.bin/eslint --ext .js,.jsx --fix --ignore-pattern public",
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "gatsby develop",
     "build": "gatsby build",

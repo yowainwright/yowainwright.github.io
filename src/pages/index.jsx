@@ -72,7 +72,6 @@ class BlogIndex extends Component {
       const date = get(post, 'node.frontmatter.date') || pNode.date
       const description = get(post, 'node.frontmatter.meta') || pNode.meta
       const image = get(post, 'node.frontmatter.featured_image') || post.node.featured_image
-      const social_image = get(post, 'node.frontmatter.featured_image') || post.node.featured_image
       const header = this.generatePostHeader(title, path, date)
       const figure = this.generatePostFigure(image, path)
 
