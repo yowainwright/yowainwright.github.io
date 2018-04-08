@@ -1,5 +1,5 @@
-const _ = require('lodash')
-const Promise = require('bluebird')
+// const _ = require('lodash')
+// const Promise = require('bluebird')
 const path = require('path')
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
@@ -23,21 +23,15 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       }
     `
       ).then(result => {
-        if (result.errors) {
-          console.error(result.errors)
-          reject(result.errors)
-        }
-
-        // Create blog posts pages.
-        _.each(result.data.allMarkdownRemark.edges, edge => {
+        // Create blog posts pages
+        result.data.allMarkdownRemark.edges.forEach(edge => {
           createPage({
             path: edge.node.frontmatter.path,
             component: blogPost,
-            context: {
-              path: edge.node.frontmatter.path,
-            },
           })
         })
+      }, (error) => {
+        console.error(error)
       })
     )
   })
