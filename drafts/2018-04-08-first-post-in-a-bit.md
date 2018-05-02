@@ -1,5 +1,5 @@
 ---
-title: First Post in Bit, Low Key Depression
+title: First Post in Bit, Finding Meaning in the Meaningless
 date: "2018-04-08"
 layout: post
 readNext: "/"
