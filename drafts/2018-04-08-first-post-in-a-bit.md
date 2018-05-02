@@ -27,6 +27,10 @@ After getting injured from bike riding, I felt done with inclinations of escapeâ
 
 ## Okay, here's why I stopped writing post and I'm starting again
 
-That last paragraph written, here's why I stopped writing posts. Last August, I began to realize that the respect I hoped I'd have might never come. I felt like my posts might as well be whispers in the wind. That was a tough realization for me. That fantacy was something I had thought about since childhood.
+Here's why I stopped writing posts: last August, I realized that the respect I hoped for through my dedication to design, exercise, and software might never come. I had felt for a while that my posts were like whispers in the wind. It was tough to realize that. That fantasy that had motivated me since childhoodâ€”that someday my dedication to my passions would matter to a wider audience. I somewhat secretly hoped that the invisibility I felt in reality was a case of circumstance. I fantasied that through effort in my passions that I would find a clan where my ideas would matter.
 
 ## Well, why am I writing this post now
+
+After accepting that the posts I was writing may not ever help find a clan or reach a wider audience, I decided to find excitment and passion in other writing, videos, and work. I stopped posting. I would add updates to this site to keep up with technologies but that was it!
+
+Months went by without me writing posts. I was able to maintain excitment about my passions and have acceptance about my lack of clan. I realized that I lost my own personal context which is important for me. My own personal context helps me to learn, maintain timelines for my memories, and retain what I've learned! So all of this being written, I hope to start posting. My goal is to keep my posts a little long than tweets with information about my life and/or my learnings. That's it!
