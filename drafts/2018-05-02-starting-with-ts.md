@@ -11,3 +11,10 @@ categories:
 - story
 ---
 
+The Engineering Team at Dollar Shave Club is pretty excited about TypeScript. I'm excited too but I am not familar with it yet. In this post, I will document how I build a Linked List in TypeScript.
+
+## Get My Shiny New TypeScript Project Setup
+
+For my setup, I am trying build every as close to what I'd use to build a plain old JavaScript Open Source Repository.
+
+The tools that will be
