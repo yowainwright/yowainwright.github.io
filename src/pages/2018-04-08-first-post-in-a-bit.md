@@ -4,7 +4,7 @@ date: "2018-04-08"
 layout: post
 readNext: "/"
 path: "/first-post-in-a-bit/"
-meta: This is my first post in a bit. I took time away from posting because I realized that posts of value take time. I've had things to say in the past few month but was lacking clarity
+meta: I stopped posting on this blog in September last year, 2017. It was an easy decision to make then. There were specific reasons I stopped, but I couldn't articulate them.
 featured_image: null
 categories:
 - note
