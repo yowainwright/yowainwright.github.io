@@ -44,4 +44,4 @@ Months went by without writing posts. I was able to maintain excitement about my
 
 I realized, though, that I lost my context when I stopped posting. My context helps me to learn, maintain timelines for my memories, and retain what I've learned! So, I am posting again! My goal is to keep my posts a little longer than a tweet with information about my life and/or my learnings. That's it!
 
-![Surfing Porto. Surfer not me](https://yowainwright.imgix.net/first-post-in-a-bit/surfin-el-porto.jpg)
+![Steve riding down from the Hollywood Sign, 2015](https://yowainwright.imgix.net/first-post-in-a-bit/steve-riding-hollywood-sign.jpg)
