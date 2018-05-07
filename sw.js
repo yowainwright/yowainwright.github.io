@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/app-2461df1e213fda268edb.js","67c6ea2422853841c0863c0343bf4ee2"],["/app-27f266a5f9e2efbf53f2.js","4bf901d5363d7909b9690675892106ff"],["/app-4ffe989a2bef4abf08ae.js","8529b809f87875a37e13be8ac2bfce2e"],["/app-683ff430ec27b9008737.js","386a2bd0cf96679d6ae9b69a0881770d"],["/app-6d9b6d6f4134524cbed7.js","e481eab5328a1e53943c0df601fe3609"],["/app-71fb4cef5f025726bb49.js","31ad349df8eddda29382342ba16dd6a9"],["/app-72846c41ead462975ee3.js","b581afa22a35d9f4704c3d4dcc705b68"],["/app-76bcef23bc733e1d7ec3.js","e5ddbd928a7179018621144560b765fd"],["/app-9341166464ebd1e38935.js","252fb0eee14cc47aaf93c2bbe364f95c"],["/app-9af8eb1277d14ddb12f1.js","9b0e3342a9969c9285ae000604dbce32"],["/app-a5ce9e4ed0531cc9b0da.js","a3e896e7529a581e8d2790e59fc8afdb"],["/app-ad6c9faede5875da5004.js","c5f6eba45c822d778fe57c53080cb81c"],["/app-b291677c91a1021b7afd.js","46535f54a9bed74c7041006af1f285fa"],["/app-b553c45f91f919bdbdbd.js","a9a7d9013a0489142a64cbf0636f307f"],["/app-e71091e50d78f835ce68.js","7aa130c44cd0ae41a2c1b3addefbe484"],["/app-ea254dca67f07a7d9993.js","437b4ddfd5a930eec867e05d707374f4"],["/app-f4c78b0b9b939ebaed8f.js","47ecb9e2f0587e7ec5ffa9f3d5b8285d"],["/app-f60ab4195fa406ee5727.js","e8b9989b5d2f8a5518e86d0494d99f3c"],["/commons-1638bdac7e34e6a16347.js","d0f26e2d2f9e65bc44bb665758d03ffa"],["/commons-21c52ddda06d048f0302.js","339f2572e9ab46be8c2bb0ece765c407"],["/commons-37e7ec241aad23eaba66.js","0b7c50c03626c72184e3d50e7e397c33"],["/commons-39813d6d8e19a37d9aab.js","149b689b984cae9babc61bbb5ba811d8"],["/commons-3c8704a40009f722bd68.js","8ecbe3ee17dd9052c6cdcf458cca03ce"],["/commons-6f69b9e1aadf8382f12e.js","1c25c13776a11d35d0a8e86c64c0faef"],["/index.html","cb777b99ad5d1efee45c6a50e347b298"],["/manifest.json","4914d7669e829af0507892c32a814568"],["/offline-plugin-app-shell-fallback/index.html","cf91ebf5e04330fbe1ffb9253241d7fa"]];
+var precacheConfig = [["/app-2461df1e213fda268edb.js","67c6ea2422853841c0863c0343bf4ee2"],["/app-27f266a5f9e2efbf53f2.js","4bf901d5363d7909b9690675892106ff"],["/app-4ffe989a2bef4abf08ae.js","8529b809f87875a37e13be8ac2bfce2e"],["/app-52265843b0d7880fea59.js","23c23f47b61478b27a529b8183651171"],["/app-683ff430ec27b9008737.js","386a2bd0cf96679d6ae9b69a0881770d"],["/app-6d9b6d6f4134524cbed7.js","e481eab5328a1e53943c0df601fe3609"],["/app-71fb4cef5f025726bb49.js","31ad349df8eddda29382342ba16dd6a9"],["/app-72846c41ead462975ee3.js","b581afa22a35d9f4704c3d4dcc705b68"],["/app-76bcef23bc733e1d7ec3.js","e5ddbd928a7179018621144560b765fd"],["/app-9341166464ebd1e38935.js","252fb0eee14cc47aaf93c2bbe364f95c"],["/app-9af8eb1277d14ddb12f1.js","9b0e3342a9969c9285ae000604dbce32"],["/app-a5ce9e4ed0531cc9b0da.js","a3e896e7529a581e8d2790e59fc8afdb"],["/app-ad6c9faede5875da5004.js","c5f6eba45c822d778fe57c53080cb81c"],["/app-b291677c91a1021b7afd.js","46535f54a9bed74c7041006af1f285fa"],["/app-b553c45f91f919bdbdbd.js","a9a7d9013a0489142a64cbf0636f307f"],["/app-e71091e50d78f835ce68.js","7aa130c44cd0ae41a2c1b3addefbe484"],["/app-ea254dca67f07a7d9993.js","437b4ddfd5a930eec867e05d707374f4"],["/app-f4c78b0b9b939ebaed8f.js","47ecb9e2f0587e7ec5ffa9f3d5b8285d"],["/app-f60ab4195fa406ee5727.js","e8b9989b5d2f8a5518e86d0494d99f3c"],["/commons-1638bdac7e34e6a16347.js","d0f26e2d2f9e65bc44bb665758d03ffa"],["/commons-21c52ddda06d048f0302.js","339f2572e9ab46be8c2bb0ece765c407"],["/commons-37e7ec241aad23eaba66.js","a7c57e07a330e844948295927b9bd427"],["/commons-39813d6d8e19a37d9aab.js","149b689b984cae9babc61bbb5ba811d8"],["/commons-3c8704a40009f722bd68.js","8ecbe3ee17dd9052c6cdcf458cca03ce"],["/commons-6f69b9e1aadf8382f12e.js","1c25c13776a11d35d0a8e86c64c0faef"],["/index.html","971ca03ff30d3e366c30b7dcd4cec579"],["/manifest.json","4914d7669e829af0507892c32a814568"],["/offline-plugin-app-shell-fallback/index.html","99ccc26d8c6e33073d79715ed3a77aa4"]];
 var cacheName = 'sw-precache-v3-gatsby-plugin-offline-' + (self.registration ? self.registration.scope : '');
 
 
@@ -45,7 +45,7 @@ var ignoreUrlParametersMatching = [/^utm_/];
 
 
 
-var addDirectoryIndex = function (originalUrl, index) {
+var addDirectoryIndex = function(originalUrl, index) {
     var url = new URL(originalUrl);
     if (url.pathname.slice(-1) === '/') {
       url.pathname += index;
@@ -53,7 +53,7 @@ var addDirectoryIndex = function (originalUrl, index) {
     return url.toString();
   };
 
-var cleanResponse = function (originalResponse) {
+var cleanResponse = function(originalResponse) {
     // If this is not a redirected response, then we don't have to do anything.
     if (!originalResponse.redirected) {
       return Promise.resolve(originalResponse);
@@ -75,7 +75,7 @@ var cleanResponse = function (originalResponse) {
     });
   };
 
-var createCacheKey = function (originalUrl, paramName, paramValue,
+var createCacheKey = function(originalUrl, paramName, paramValue,
                            dontCacheBustUrlsMatching) {
     // Create a new URL object to avoid modifying originalUrl.
     var url = new URL(originalUrl);
@@ -91,7 +91,7 @@ var createCacheKey = function (originalUrl, paramName, paramValue,
     return url.toString();
   };
 
-var isPathWhitelisted = function (whitelist, absoluteUrlString) {
+var isPathWhitelisted = function(whitelist, absoluteUrlString) {
     // If the whitelist is empty, then consider all URLs to be whitelisted.
     if (whitelist.length === 0) {
       return true;
@@ -104,7 +104,7 @@ var isPathWhitelisted = function (whitelist, absoluteUrlString) {
     });
   };
 
-var stripIgnoredUrlParameters = function (originalUrl,
+var stripIgnoredUrlParameters = function(originalUrl,
     ignoreUrlParametersMatching) {
     var url = new URL(originalUrl);
     // Remove the hash; see https://github.com/GoogleChrome/sw-precache/issues/290
