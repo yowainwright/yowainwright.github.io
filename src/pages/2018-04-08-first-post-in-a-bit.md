@@ -1,5 +1,5 @@
 ---
-title: First Post in Bit, Finding Meaning in the Meaningless
+title: First Post in Bit, This Is Why
 date: "2018-04-08"
 layout: post
 readNext: "/"
@@ -15,7 +15,7 @@ I stopped posting on this blog in September last year, 2017. It was an easy deci
 
 ![Image taken at Malaga Cove, in Palos Verdes](https://yowainwright.imgix.net/first-post-in-a-bit/cool-waters.jpg)
 
-## Find meaning in the meaningless—a long-winded side-step to this post's point
+## A brief history of myself—a long-winded side-step to this post's point
 
 My living parents are diplomats. They travel around the world. When I tell people about their work and my childhood, people say something like, "What a cool life to live!". They're right. It was cool. However, my parents' lives and work always came before my life.
 
@@ -41,6 +41,6 @@ It was disheartening to think that I might never have a clan and that my journey
 
 After accepting that posts I was writing may not ever help find a clan or reach a wider audience, I decided to find excitement and passion in others' writing, videos, and work. I worked hard to listen more and find beauty and knowledge in other peoples words. Months went by without writing posts. I was able to maintain excitement about my passions and have acceptance about my lack of clan. I think that was another phase of loving myself—loving myself in loniliness.
 
-I realized over the last year that by not writing my own posts, I lost my perspective for how I feel about what I'm passionate about when I stopped posting. My perspective helps me to learn, maintain timelines for my memories, and retain what I've learned! So, I am posting again! My goal is to keep my posts a little longer than a tweet with information about my life and/or my learnings. That's it!
+I realized over the last year that by not writing my own posts, I lost my perspective for how I feel about what I'm passionate about when I stopped posting. My perspective helps me to learn, maintain timelines for my memories, and retain what I've learned! So, I am posting again! My goal is to keep my posts a little longer than a tweet with information about my life and/or my learnings. That's it! That's how I found meaning in my meaningless
 
 ![Steve riding down from the Hollywood Sign, 2015](https://yowainwright.imgix.net/first-post-in-a-bit/steve-riding-hollywood-sign.jpg)
