@@ -34,7 +34,7 @@ I initially setup TypeScript with Rollup. Rollup was compiling fine. However, it
 
 ### Configuration tools I used
 
-The Dollar Shave Club team used Jest. The standard is
+The Dollar Shave Club team used Jest. When working with TypeScript, the clearest path seemed to be TS-Jest—(what Dollar Shave Club uses for TypeScript projects) so I tried it out. It turned out to be very easy to get working. I started out by added a stardard, 
 
 ### Problems I had getting started with TypeScript
 
