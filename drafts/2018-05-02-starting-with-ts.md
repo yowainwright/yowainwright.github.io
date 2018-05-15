@@ -34,7 +34,7 @@ I initially setup TypeScript with Rollup. Rollup was compiling fine. However, it
 
 ### Configuration tools I used
 
-The Dollar Shave Club team used Jest. The standard is
+The Dollar Shave Club team used Jest. The standard is for TypeScript projects that use Jest is to abstract Jest with TS-Jest. This abstraction initially seemed scary but were no problem. First I added the standard `expect(1).toBe(1)` test to ensure my pathing was correct. Then I followed up with another quick test to ensure that my `.ts` files were being imported. From there I added tests as I would writing Jest. I also used TS-Lint which extends ESLint. This also took very little time. I imported TS-Lint, added a little config and a npm script—that was it. From there I was getting TypeScript Linting Feedback. I added TypeDocs to the build with the t
 
 ### Problems I had getting started with TypeScript
 
