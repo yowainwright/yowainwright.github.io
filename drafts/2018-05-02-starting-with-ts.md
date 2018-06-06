@@ -11,15 +11,15 @@ categories:
 - story
 ---
 
-The Engineering Team at Dollar Shave Club is pretty excited about TypeScript. I'm excited too. I am not familar with TypeScript yet beyond conversations and "getting started" tutorials. In this post, I will document learning TypeScript while building a Linked List.
+The Engineering Team at Dollar Shave Club is pretty excited about TypeScript. I'm excited too. When I started writing this post, I was not familar with TypeScript beyond conversations, React PropTypes and TypeScript's "getting started" tutorials. In this post, I will document learning TypeScript while building a [Linked List](https://github.com/yowainwright/datastructures-ts/tree/master/packages/linked-list) in TypeScript.
 
 ## Get My Shiny New TypeScript Project Setup
 
-For my setup, I am trying build everything as close to what I'd use to build a plain old JavaScript Open Source Modules. I am specific about the Open Source Modules part because I use different tools depending on what I am doing.
+For this Learn TypeScript exercise, I tried to use the same tools I'd use to build a plain old Open Source JavaScript repository—excpet in TypeScript.
 
 ### My Setup
 
-In the table below, I've listed the Tool Category, what I started using initially, what I ended up using, and the reason I went the direction that I did.
+In the table below I broke down the tools I tried or used to build my first TypeScript repository.
 
 |Tool Category| Initial | Final | Reason |
 |---|---|---|---|
@@ -30,12 +30,296 @@ In the table below, I've listed the Tool Category, what I started using initiall
 
 ### Why I used TypeScript TS Compiler?
 
-I initially setup TypeScript with Rollup. Rollup was compiling fine. However, it seemed like another layer of abstracting while I was learning—so I decided to use TypeScript's compiler.
+I initially setup TypeScript with Rollup. Rollup was compiling fine. It seemed like another layer of abstracting out that I am trying to learn TypeScript So I decided to use TypeScript's compiler.
+
+### TS compiler options
+
+Listed below are some options for compiling TypeScript:
+
+- [TSC](https://www.typescriptlang.org/docs/handbook/compiler-options.html)—TypeScript's Compiler
+- [Webpack using TS-loader](https://github.com/TypeStrong/ts-loader)—Webpack's abstraction of TS compilation
+- [Rollup](https://rollupjs.org/guide/en#typescript-declarations)—Rollup compiles TS automatically
 
 ### Configuration tools I used
 
-The Dollar Shave Club team used Jest. When working with TypeScript, the clearest path seemed to be TS-Jest—(what Dollar Shave Club uses for TypeScript projects) so I tried it out. It turned out to be very easy to get working. I started out by added a stardard, 
+The Dollar Shave Club team uses Jest. The standard is for TypeScript projects that use Jest is to abstract Jest with TS-Jest. This abstraction initially seemed scary but worked for me without problems. First I added the standard `expect(1).toBe(1)` test to ensure my pathing was correct. Then I followed up with another quick test to ensure that my `.ts` files were being imported. From there I added tests as I would writing Jest. I also used TS-Lint which extends ESLint. This also took little time. I imported TS-Lint, added a little config and a npm script—that was it. From there I was getting TypeScript Linting Feedback. I added TypeDocs to the build so that I could make sure to document what the heck I was doing.
 
-### Problems I had getting started with TypeScript
+### Setting up tests with TS Jest
 
-### Conclusion: Why I really like using Types
+Listed below are steps to get [ts-jest]() up and running:
+
+Stuff is working and I'm still alive
+
+```javascript
+
+import { Node } from '../Node'
+expect(1).toBe(1)
+
+```
+
+Files are importing correctly
+
+```javascript
+
+import { Node } from '../Node'
+
+test('Jest is working, Node is imported', () => {
+  expect(typeof Node).toBe('function')
+})
+
+```
+
+Define the testing interface
+
+```javascript
+declare function test (msg: string, test: Function)
+declare function expect (result: any)
+
+import { Node } from '../Node'
+
+test('Jest is working, Node is imported', () => {
+  expect(typeof Node).toBe('function')
+})
+
+```
+
+### TypeDocs
+
+Listed below are general comment examples for [TypeDocs](https://github.com/TypeStrong/typedoc)
+
+```javascript
+
+  ...
+  /**
+   * Add methods
+   */
+  /**
+   * @param value value
+   * adds a new node to the beginning of the linkedList
+   */
+  addFirstNode (value: T) {
+    this.headNode = this.headNode
+      ? new Node(this.headNode.getNodeValue())
+      : new Node(value)
+    this.nodeCount = this.nodeCount + 1
+  }
+  ...
+
+```
+
+## Problems I had getting started with TypeScript
+
+I know there were benefits to be had because some of my team had taken on TypeScript full on. That stated, I did have some frustations getting setup. I don't know if I would have pushed through the few hours of frustration for myself had I not had teammate support. I like to think I would have.
+
+### Here are some problems I had getting started
+
+Listed below are problems I had getting started with TypeScript:
+
+- I had problems reading the TypeScript messages in VSCode
+- I had errors issues with imports in my tests (I spent a lot of time being frustated here)
+- Sometimes I have to reference VSCode after I've made minor changes to see if errors are actual errors
+
+### Here are some problems with solutions
+
+My tests globals are undefined and TypeScript barks at that.
+
+```javascript
+
+declare function test (msg: string, test: Function)
+declare function expect (result: any)
+
+```
+
+I can't read VSCode errors.
+
+> Try running TSlint => the messaging is similar. The usage of node's [chalk](https://github.com/chalk/chalk) in the commandline can help highlight issues.
+
+How do I "tsconfig.json"?
+
+> Try something like this:
+
+```json
+
+{
+  "compilerOptions": {
+    "outDir": ".",
+    "target": "es6",
+    "lib": [
+      "es6",
+      "es2016.array.include",
+      "es2017",
+      "dom"
+    ],
+    "sourceMap": true,
+    "allowJs": true,
+    "rootDir": ".",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true
+  },
+  "exclude": [
+    "coverage",
+    "node_modules",
+    "**/__tests__/*"
+  ]
+}
+
+```
+
+How do I "tsconfig.jest.json"?
+
+> Try something like this:
+
+```json
+// from package.json
+"devDependencies": {
+    "@types/jest": "^22.2.3",
+    "jest": "^22.4.3",
+    ...
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(ts?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ]
+  },
+
+```
+
+How do I [ts lint](https://github.com/palantir/tslint)?
+
+```json
+
+{
+  "extends": [
+    "tslint-config-dollarshaveclub"
+  ],
+  "rules": {
+    "no-unnecessary-type-assertion": false,
+    "trailing-comma": false,
+    "semicolon": [
+      true,
+      "never"
+    ]
+  }
+}
+
+
+```
+
+How do I compile my ts?
+
+```json
+
+ ...
+ "scripts": {
+    "build": "npm run build:ts",
+    "build:ts": "tsc -p tsconfig.json",
+  ...
+
+```
+
+I do React
+
+```javascript
+
+import React, { StatelessComponent } from 'react'
+import classNames from 'classnames'
+
+interface Crumb {
+  active?: boolean
+  empty?: boolean
+  label: string
+  link?: string
+
+interface BreadcrumbsProps extends Readonly<{
+  crumbs: Crumb[],
+  className?: string
+  style?: object
+}> { }
+
+const Breadcrumb: StatelessComponent<Crumb> = ({
+  active = false,
+  empty = false,
+  label,
+  link = false,
+}) => {
+  const crumbClasses = classNames(
+    'ui-breadcrumbs-small__crumb',
+    'ui-text--md',
+    'ui-color--paper-darkest',
+    { 'ui-breadcrumbs-small__crumb--active': active },
+  )
+  return empty
+    ? (<li className={crumbClasses}>&nbsp;</li>)
+    : (
+      <li className={crumbClasses}>
+        {link ? <a href={link} className='ui-link ui-link--inherit-color'>{label}</a> : <span>{label}</span>}
+      </li>
+    )
+}
+
+const BreadcrumbsSmall: StatelessComponent<BreadcrumbsProps> = ({
+  crumbs,
+  className,
+  style,
+}) => {
+  const inputLabelClass = classNames(
+    'ui-breadcrumbs-small',
+    'ui-list--plain',
+    { [className as string]: !!className },
+  )
+  return (
+    <ul className={inputLabelClass} style={style}>
+      {crumbs.map(({ active, empty, label, link }, index) => <Breadcrumb active={active} empty={empty} label={label} link={link} key={index} />)}
+    </ul>
+  )
+}
+
+export default BreadcrumbsSmall
+
+```
+
+I want to export/import Plain Old JavaScript
+
+```javascript
+
+export default function stickybits(
+  target: string | Element | Element[],
+  options?: StickyBits.Options,
+): StickyBits
+
+export interface StickyBits {
+  cleanup: () => void
+}
+
+export namespace StickyBits {
+  export interface Options {
+    customStickyChangeNumber?: number | null
+    noStyles?: boolean
+    stickyBitStickyOffset?: number
+    parentClass?: string
+    scrollEl?: Element
+    stickyClass?: string
+    stuckClass?: string
+    stickyChangeClass?: string
+    useStickyClasses?: boolean
+    verticalPosition?: 'top' | 'bottom'
+  }
+}
+
+```
+
+The solutions above are/were provided by me. I'm am very new to TypeScript. Use at your discrusion.
+
+## Conclusion: Why I really like using Types
+
+I'm not a rocket scientist—far from it. WHen writing code, I want feedback as quickly as possible as much as possible. After learning how Continuous Integration, Linting and Test Driven Development could help me improve, wanting more support from tools was easy. TypeScript, I've found has not just helped me define Types but it is slowly helping me break down the code I write—making it simplier. I think that tools like TypeScript can make an organized developer become an extradonary developer because they can build around what the don't know in small well defined chunks.
