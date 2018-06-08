@@ -11,11 +11,11 @@ categories:
 - story
 ---
 
-The Engineering Team at Dollar Shave Club is pretty excited about [TypeScript](https://github.com/Microsoft/TypeScript). I'm excited too. When I started writing this post, I was not familar with TypeScript beyond conversations, React PropTypes and TypeScript's "getting started" tutorials. In this post, I will document learning TypeScript while building a [Linked List](https://github.com/yowainwright/datastructures-ts/tree/master/packages/linked-list) in TypeScript.
+The Engineering Team at Dollar Shave Club is pretty excited about [TypeScript](https://github.com/Microsoft/TypeScript). I'm excited too. When I started writing this post, I was not familar with TypeScript beyond conversations, React PropTypes and TypeScript's "getting started" tutorials. In this post, I will document getting a TypeScript setup. I am building a [Linked List](https://github.com/yowainwright/datastructures-ts/tree/master/packages/linked-list) in TypeScript to learn about setting up a TypeScript project.
 
 ## Get My Shiny New TypeScript Project Setup
 
-For this Learn TypeScript exercise, I tried to use the same tools I'd use to build a plain old Open Source JavaScript repository—excpet in TypeScript.
+For this TypeScript exercise, I tried to use the same tools I'd use to build a plain old Open Source JavaScript repository—except in TypeScript.
 
 ### Tool Decisions
 
@@ -48,7 +48,7 @@ The Dollar Shave Club team uses Jest. The standard is for TypeScript projects th
 
 Listed below are steps to get [ts-jest](https://github.com/kulshekhar/ts-jest) up and running:
 
-Stuff is working and I'm still alive
+**Tests is working and I'm still alive**
 
 ```javascript
 
@@ -57,7 +57,7 @@ expect(1).toBe(1)
 
 ```
 
-Files are importing correctly
+**Files are importing correctly**
 
 ```javascript
 
@@ -69,7 +69,7 @@ test('Jest is working, Node is imported', () => {
 
 ```
 
-Define the testing interface
+**Define the testing interface**
 
 ```javascript
 declare function test (msg: string, test: Function)
@@ -312,6 +312,59 @@ export namespace StickyBits {
     verticalPosition?: 'top' | 'bottom'
   }
 }
+
+```
+
+**I want to work on a project that imports and exports TS or JS**
+
+> Try something like this:
+
+**tsconfig.json**
+
+```json
+
+{
+  "compilerOptions": {
+    "outDir": ".",
+    "target": "exnext",
+    "lib": [
+      "es6",
+      "es2016.array.include",
+      "es2017",
+      "dom"
+    ],
+    "sourceMap": true,
+    "declaration": true,
+    "allowJs": true,
+    "rootDir": ".",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true
+  },
+  "exclude": [
+    "**/*.js",
+    "coverage",
+    "node_modules",
+    "**/__tests__/*"
+  ]
+}
+
+```
+
+**package.json**
+
+```json
+
+...
+"scripts": {
+  "build": "<your js build> && tsc",
+  ...
+}
+...
 
 ```
 

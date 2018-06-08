@@ -281,6 +281,7 @@ main {
 
 table {
   border-collapse: collapse;
+  max-width: calc(100vw - 2rem);
 }
 
 td,
