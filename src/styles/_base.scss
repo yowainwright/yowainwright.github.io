@@ -282,6 +282,9 @@ main {
 table {
   border-collapse: collapse;
   max-width: calc(100vw - 2rem);
+  @include media-query($width-small) {
+    max-width: 43.75rem; // 700px
+  }
 }
 
 td,
