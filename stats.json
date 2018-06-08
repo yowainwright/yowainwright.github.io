@@ -40,10 +40,6 @@
       "path---week-14-17-0a7c3da73fabde019503.js",
       "path---week-14-17-0a7c3da73fabde019503.js.map"
     ],
-    "path---just-getting-started-with-ts": [
-      "path---just-getting-started-with-ts-0d2e3cbd62fbd4cce256.js",
-      "path---just-getting-started-with-ts-0d2e3cbd62fbd4cce256.js.map"
-    ],
     "path---week-19-17": [
       "path---week-19-17-ef2ac5d56ea580a42b4d.js",
       "path---week-19-17-ef2ac5d56ea580a42b4d.js.map"
@@ -175,8 +171,8 @@
       "path---js-closure-e28082b2c02b57a5d9a9.js.map"
     ],
     "path---index": [
-      "path---index-7440be5434f1f147a09e.js",
-      "path---index-7440be5434f1f147a09e.js.map"
+      "path---index-506f8fe0deea942d9dde.js",
+      "path---index-506f8fe0deea942d9dde.js.map"
     ],
     "path---week-18-17": [
       "path---week-18-17-f77e01f829cd5cd15019.js",
@@ -209,6 +205,10 @@
     "commons": [
       "commons-e56669638807264b500f.js",
       "commons-e56669638807264b500f.js.map"
+    ],
+    "path---getting-setup-with-ts": [
+      "path---getting-setup-with-ts-225af59e4de62f5993cd.js",
+      "path---getting-setup-with-ts-225af59e4de62f5993cd.js.map"
     ],
     "path---known-updates-with-el-capitan-os": [
       "path---known-updates-with-el-capitan-os-2019a11280b2f4faf138.js",
@@ -291,14 +291,14 @@
       "path---arrow-functions-cont-d88f0004b619ab1068b7.js.map"
     ],
     "app": [
-      "app-adeb6e3294ad6ccd1dd4.js",
+      "app-7c5888f4e591972941a8.js",
       "build-js-styles.css",
-      "app-adeb6e3294ad6ccd1dd4.js.map",
+      "app-7c5888f4e591972941a8.js.map",
       "build-js-styles.css.map"
     ],
     "path---archive": [
-      "path---archive-cd9e6473f411a783dd3f.js",
-      "path---archive-cd9e6473f411a783dd3f.js.map"
+      "path---archive-b8e5b2d8dca0ca5cb15a.js",
+      "path---archive-b8e5b2d8dca0ca5cb15a.js.map"
     ],
     "path---week-10-17": [
       "path---week-10-17-47134b6635d935855877.js",
