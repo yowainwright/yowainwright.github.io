@@ -1,23 +1,21 @@
 ---
-title: TypeScript Init—Just beyond Getting Started
+title: TypeScript Init—Getting setup with TypeScript for Noobs (like me)
 date: "2018-05-02"
 layout: post
 readNext: "/"
-path: "/just-getting-started-with-ts/"
-meta: This post documents getting starts with TypeScript—just beyond the Gettings Started Tut. In this Post I will go through and document the Linked List Data Structure in TypeScript.
+path: "/getting-setup-with-ts/"
+meta: This post documents getting setup with TypeScript—just beyond the Gettings Started TypeScript Tutorials. In this Post I will go through setting up a Test Driven TypeScript project.
 featured_image: null
 categories:
 - note
 - story
 ---
 
-The Engineering Team at Dollar Shave Club is pretty excited about [TypeScript](https://github.com/Microsoft/TypeScript). I'm excited too. When I started writing this post, I was not familar with TypeScript beyond conversations, React PropTypes and TypeScript's "getting started" tutorials. In this post, I will document getting a TypeScript setup. I am building a [Linked List](https://github.com/yowainwright/datastructures-ts/tree/master/packages/linked-list) in TypeScript to learn about setting up a TypeScript project.
+The Engineering Team at Dollar Shave Club is pretty excited about [TypeScript](https://github.com/Microsoft/TypeScript). I'm excited too. When I started writing this post, I was not familar with TypeScript beyond conversations, React PropTypes and TypeScript's "getting started" tutorials. In this post, I will document getting a TypeScript repository setup to compile, lint, and test in TypeScript. While writing this post, I am building a [Linked List](https://github.com/yowainwright/datastructures-ts/tree/master/packages/linked-list) in TypeScript.
 
-## Get My Shiny New TypeScript Project Setup
+## Tool Decisions
 
 For this TypeScript exercise, I tried to use the same tools I'd use to build a plain old Open Source JavaScript repository—except in TypeScript.
-
-### Tool Decisions
 
 In the table below I broke down the tools I tried or used to build my first TypeScript repository.
 
@@ -40,9 +38,9 @@ Listed below are some options for compiling TypeScript:
 - [Webpack using TS-loader](https://github.com/TypeStrong/ts-loader)—Webpack's abstraction of TS compilation
 - [Rollup](https://rollupjs.org/guide/en#typescript-declarations)—Rollup compiles TS automatically
 
-### Configuration tools I used
+### Jest Testing and Linting—in TypeScript
 
-The Dollar Shave Club team uses Jest. The standard is for TypeScript projects that use Jest is to abstract Jest with TS-Jest. This abstraction initially seemed scary but worked for me without problems. First I added the standard `expect(1).toBe(1)` test to ensure my pathing was correct. Then I followed up with another quick test to ensure that my `.ts` files were being imported. From there I added tests as I would writing Jest. I also used TS-Lint which extends ESLint. This also took little time. I imported TS-Lint, added a little config and a npm script—that was it. From there I was getting TypeScript Linting Feedback. I added TypeDocs to the build so that I could make sure to document what the heck I was doing.
+The Dollar Shave Club team uses Jest. Dollar Shave Club's standard is for TypeScript projects is to test with TS-Jest. Using TS-Jest initially seemed scary but worked for me without problems. First I added the standard `expect(1).toBe(1)` test to ensure my pathing was correct. Then I followed up with another quick test to ensure that my `.ts` files were being imported. From there I added tests as I would writing Jest. I also used TS-Lint which extends ESLint. This also took little time. I imported TS-Lint, added a little config and a npm script—that was it. From there I was getting TypeScript Linting Feedback. I added TypeDocs to the build so that I could make sure to document what the heck I was doing.
 
 ### Setting up tests with TS Jest
 
