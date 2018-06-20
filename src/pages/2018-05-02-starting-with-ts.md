@@ -1,5 +1,5 @@
 ---
-title: TypeScript Init—Getting setup with TypeScript for Noobs (like me)
+title: TypeScript Init—Getting a Test Driven TypeScript Repository setup for Noobs
 date: "2018-05-02"
 layout: post
 readNext: "/"
@@ -17,7 +17,7 @@ The Engineering Team at Dollar Shave Club is pretty excited about [TypeScript](h
 
 For this TypeScript exercise, I tried to use the same tools I'd use to build a plain old Open Source JavaScript repository—except in TypeScript.
 
-In the table below I broke down the tools I tried or used to build my first TypeScript repository.
+In the table below I broke down the tools I tried to build my first Test Drive Development TypeScript repository.
 
 |Category| Initial | Final | Reason |
 |---|---|---|---|
@@ -28,7 +28,7 @@ In the table below I broke down the tools I tried or used to build my first Type
 
 ### Why I used TypeScript's Compiler?
 
-I initially setup TypeScript with Rollup. Rollup was compiling fine. It seemed like another layer of abstracting out that I am trying to learn TypeScript So I decided to use TypeScript's compiler.
+I initially setup TypeScript with Rollup. Rollup was compiling fine. It seemed like another layer of abstraction. To simplify the amount of configuration,  I decided to use TypeScript's compiler.
 
 ### TS compiler options
 
@@ -40,7 +40,11 @@ Listed below are some options for compiling TypeScript:
 
 ### Jest Testing and Linting—in TypeScript
 
-The Dollar Shave Club team uses Jest. Dollar Shave Club's standard is for TypeScript projects is to test with TS-Jest. Using TS-Jest initially seemed scary but worked for me without problems. First I added the standard `expect(1).toBe(1)` test to ensure my pathing was correct. Then I followed up with another quick test to ensure that my `.ts` files were being imported. From there I added tests as I would writing Jest. I also used TS-Lint which extends ESLint. This also took little time. I imported TS-Lint, added a little config and a npm script—that was it. From there I was getting TypeScript Linting Feedback. I added TypeDocs to the build so that I could make sure to document what the heck I was doing.
+The Dollar Shave Club team uses [Jest](https://facebook.github.io/jest/) for unit testing. Dollar Shave Club's standard is for TypeScript projects is to test with [TS-Jest](https://github.com/kulshekhar/ts-jest). Using TS-Jest initially seemed scary but worked without problems. First I added the standard `expect(1).toBe(1)` test to ensure that my paths to unit tests were correct. Then I followed up with another quick test to ensure that my `.ts` files were imported correctly. From there, I added tests as I would writing Jest.
+
+For linting, I used [TS-Lint](https://palantir.github.io/tslint/) which extends [ESLint](https://eslint.org/). This took little time. I imported TS-Lint, added some configuration and a npm script—that was it. From there I was getting TypeScript Linting Feedback.
+
+I added [TypeDocs](https://github.com/TypeStrong/typedoc) so that I could make sure to document what the heck I was doing.
 
 ### Setting up tests with TS Jest
 
@@ -104,7 +108,7 @@ Listed below are general comment examples for [TypeDocs](https://github.com/Type
 
 ## Problems I had getting started with TypeScript
 
-I know there were benefits to be had because some of my team had taken on TypeScript full on. That stated, I did have some frustations getting setup. I don't know if I would have pushed through the few hours of frustration for myself had I not had teammate support. I like to think I would have.
+I knew there were benefits to be had because some of my team had taken on TypeScript full on. That stated, I did have some frustations getting setup. I don't know if I would have pushed through the few hours of frustration for myself had I not had teammate support. I'd like to think I would have.
 
 ### Here are some problems I had getting started
 
@@ -366,8 +370,8 @@ export namespace StickyBits {
 
 ```
 
-The solutions above are/were provided by me. I'm am very new to TypeScript. Use with caution but without fear or blame.
+The solutions above are/were provided by me. I'm am newer to TypeScript. Use with caution but without fear or blame.
 
 ## Conclusion: Why I will be using Types as much as possible
 
-I'm not a rocket scientist—far from it. When writing code, I want feedback as quickly as possible as much as possible. After learning how continuous integration, linting and test driven development could help me improve, wanting more support from tools was a no brainer. TypeScript, I've found has not only helped me define Types but it also is slowly helping me break down code I write—making it simplier. TypeScript can make an organized developer become an extradonary developer. It can help build around what is unknown about a piece of software by helping to define it in small chunks.
+I'm not a rocket scientist—far from it. When writing code, I want feedback as quickly as possible as much as possible. After learning how continuous integration, linting and test driven development could help me improve, wanting more support from tools like TypeScript is a no brainer. TypeScript, I've found has not only helped me define Types but it also helps me break down code—making it simplier.
