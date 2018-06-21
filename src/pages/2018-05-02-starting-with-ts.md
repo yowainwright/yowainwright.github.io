@@ -1,5 +1,5 @@
 ---
-title: TypeScript Init—Getting a Test Driven TypeScript Repository setup for Noobs
+title: TypeScript Init—Getting A Test Driven TypeScript Repository Setup For Noobs
 date: "2018-05-02"
 layout: post
 readNext: "/"
@@ -11,7 +11,7 @@ categories:
 - story
 ---
 
-The Engineering Team at Dollar Shave Club is pretty excited about [TypeScript](https://github.com/Microsoft/TypeScript). I'm excited too. When I started writing this post, I was not familar with TypeScript beyond conversations, React PropTypes and TypeScript's "getting started" tutorials. In this post, I will document getting a TypeScript repository setup to compile, lint, and test in TypeScript. While writing this post, I am building a [Linked List](https://github.com/yowainwright/datastructures-ts/tree/master/packages/linked-list) in TypeScript.
+The Engineering Team at Dollar Shave Club is pretty excited about [TypeScript](https://github.com/Microsoft/TypeScript). I'm excited too. When I started writing this post, I was not familar with TypeScript beyond conversations and TypeScript's "getting started" tutorials. In this post, I documented getting a TypeScript repository setup to compile, lint, and test in TypeScript. While writing this post, I built a [Linked List](https://github.com/yowainwright/datastructures-ts/tree/master/packages/linked-list) in TypeScript.
 
 ## Tool Decisions
 
@@ -23,7 +23,7 @@ In the table below I broke down the tools I tried to build my first Test Drive D
 |---|---|---|---|
 | Build | Rollup | TypeScript (TSC) | Rollup worked with minimal effort. I am user TSC because it means 1 less layer of abstraction. |
 | Type Checker | TypeScript | TypeScript | TypeScript works well. The feedback in VS Code is immediate and offers clear messaging. |
-| Testing | TS-Jest | TS-Jest | I was concerned about using TS-Jest because the documnetation is not very clear for me starting out...but somehow it worked. I'm familiar with Jest so that was good. |
+| Testing | TS-Jest | TS-Jest | I was concerned about using TS-Jest because the documentation is not very clear for me starting out...but somehow it worked. I'm familiar with Jest so that was good. |
 | Linting | TS-Lint | TS-Lint | TS-Lint works well in VS Code. As far as the CLI, I'm still not clear if TS-Lint is working. |
 
 ### Why I used TypeScript's Compiler?
@@ -50,7 +50,7 @@ I added [TypeDocs](https://github.com/TypeStrong/typedoc) so that I could make s
 
 Listed below are steps to get [ts-jest](https://github.com/kulshekhar/ts-jest) up and running:
 
-**Tests is working and I'm still alive**
+**Tests are working and I'm still alive**
 
 ```javascript
 
