@@ -33,6 +33,8 @@ Jokes are one of best and most important ways to engage in conversation. They co
 
 ### Listening
 
+Everyone longs to be listened to. People often express loneliness relating it human companionship but often after listening to people I sense that people's deepest desire is to be understood. People
+
 
 ## Beings received well in difficult communication
 
