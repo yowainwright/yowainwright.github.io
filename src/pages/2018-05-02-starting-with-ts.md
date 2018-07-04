@@ -11,11 +11,11 @@ categories:
 - story
 ---
 
-The Engineering Team at Dollar Shave Club is pretty excited about [TypeScript](https://github.com/Microsoft/TypeScript). I'm excited too. When I started writing this post, I was not familar with TypeScript beyond conversations and TypeScript's "getting started" tutorials. In this post, I documented getting a TypeScript repository setup to compile, lint, and test in TypeScript. While writing this post, I built a [Linked List](https://github.com/yowainwright/datastructures-ts/tree/master/packages/linked-list) in TypeScript.
+The Engineering Team at Dollar Shave Club is pretty excited about [TypeScript](https://github.com/Microsoft/TypeScript). I'm excited too. When I started writing this post, I was not familar with TypeScript beyond conversations and TypeScript's [getting started tutorials](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html). In this post, I documented getting a TypeScript repository setup to compile, lint, and test in TypeScript. While writing this post, I built a [Linked List](https://github.com/yowainwright/datastructures-ts/tree/master/packages/linked-list) in TypeScript.
 
 ## Tool Decisions
 
-For this TypeScript exercise, I tried to use the same tools I'd use to build a plain old Open Source JavaScript repository—except in TypeScript.
+For this TypeScript exercise, I tried to use the same tools I'd use to build a plain old open source JavaScript repository—except in TypeScript.
 
 In the table below I broke down the tools I tried to build my first Test Drive Development TypeScript repository.
 

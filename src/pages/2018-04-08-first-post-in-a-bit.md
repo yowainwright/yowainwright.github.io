@@ -27,7 +27,7 @@ My second inclination to learn to love myself was by letting go of memories that
 
 ![Cycling with Steve in Griffith Park, 2015](https://yowainwright.imgix.net/first-post-in-a-bit/cycling-with-steve-2015.jpg)
 
-After getting injured cycling, I felt done with trying to love myself by hoping someone else would love me or escaping my past. I sarted to feel acceptance for myself. I felt aware of my personality traits. Some of my personality traits need improvement but I have some very strong strengths as well. I came up with a few slogans for myself—my truths: "I'm a disciplined person who surrounds himself with thoughtful truth. I'm dedicated, satisfied, and want to feel good. I listen and confront problems when needed even if hard.".
+After getting injured cycling, I felt done with trying to love myself by hoping someone else would love me or escaping my past. I started to feel acceptance for myself. I felt aware of my personality traits. Some of my personality traits need improvement but I have some very strong strengths as well. I came up with a few slogans for myself—my truths: "I'm a disciplined person who strives for honesty. I'm dedicated, satisfied, and want to feel good. I listen and confront problems when needed—even if it is hard to do.".
 
 ## Okay, here's why I stopped writing post and I'm starting again
 
