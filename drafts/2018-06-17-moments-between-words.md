@@ -31,9 +31,19 @@ I thought when I was younger that a smile would always make someone feel good. I
 
 Jokes are one of best and most important ways to engage in conversation. They convey a connection to the receiver. Jokes require that the audience is listening but unlike smiles, they can lead to engaging in conversation—even if they're not understood. The key to joke telling, beyond a joke, is positve body language. Positive body language is laughing with your body. I'm not an expert here. Mostly plainly laughing is a good start.
 
-### Listening
+## Listening
 
-Everyone longs to be listened to. People often express loneliness relating it human companionship but often after listening to people I sense that people's deepest desire is to be understood. People
+Everyone longs to be listened to. People often express loneliness and relate it to human companionship. Often after listening to people, though, I sense that people's deepest desire is to be listened to. Being listened to is often related to human companionship or a failure in human companionship because of miscummunication that happens because it is REALLY HARD to listen to people.
+
+### Common misunderstanding within companionship and listening
+
+People relate listening to companionship. Often in new companionship, partners are so  engaged that the ability to perceive each other as truly listening is heightened. This may be a misunderstanding. It is nearly impossible to be deeply engaged in listening to someone forever. When people become less engaged in their companions, the emotional sentiment is often that there is something wrong within the relationship rather than, the partner may have an understanding of the person and cannot be or seem as engaged when listening.
+
+### Listening is challenging
+
+If it is hard to listen and companions are relied on for listening but can't listen intently because they may have already listened on the subject, humans long for something surreal. Humans want a shadow of themselves to receive, yet perceive information when communcating.
+
+### Listening quick tips and a note—about listening
 
 
 ## Beings received well in difficult communication
