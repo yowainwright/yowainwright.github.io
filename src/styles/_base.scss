@@ -281,9 +281,11 @@ main {
 
 table {
   border-collapse: collapse;
+  display: block;
   max-width: calc(100vw - 2rem);
   overflow-x: scroll;
   @include media-query($width-small) {
+    display: table;
     max-width: 43.75rem; // 700px
     overflow-x: auto;
   }
