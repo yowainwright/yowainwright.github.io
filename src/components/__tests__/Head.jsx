@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from '../Head'
 
 describe('Head component', () => {

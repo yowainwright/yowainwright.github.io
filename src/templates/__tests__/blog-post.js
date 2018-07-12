@@ -1,4 +1,5 @@
-import BlogPost from '..'
+import React from 'react'
+import BlogPost from '../blog-post'
 
 describe('BlogPost component', () => {
   it('renders correctly', () => {

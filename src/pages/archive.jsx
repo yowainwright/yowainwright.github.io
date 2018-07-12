@@ -18,7 +18,7 @@ class Archive extends Component {
     this.title = 'Archive | Jeffry.in'
   }
 
-  generatePost(i, title, date, path) {
+  generatePost = (i, title, date, path) => {
     return (
       <article key={i} className="post--headline">
         <header>
@@ -30,7 +30,7 @@ class Archive extends Component {
     )
   }
 
-  generatePosts() {
+  generatePosts = () => {
     const postItems = []
     this.posts.forEach((post, i) => {
       const pNode = post.node
@@ -41,7 +41,7 @@ class Archive extends Component {
       postItems.push(
         this.generatePost(i, title, date, path)
       )
-    }) 
+    })
 
     return postItems
   }

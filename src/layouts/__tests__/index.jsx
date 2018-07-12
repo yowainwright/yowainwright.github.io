@@ -1,3 +1,4 @@
+import React from 'react'
 import Template from '..'
 
 describe('Template component', () => {

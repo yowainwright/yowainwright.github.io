@@ -1,3 +1,4 @@
+import React from 'react'
 import BlogIndex from '..'
 
 describe('BlogIndex component', () => {

@@ -1,8 +1,13 @@
-const enzyme = require('enzyme')
-const Adapter = require('enzyme-adapter-react-16')
+import Enzyme, { shallow, render, mount } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 
-enzyme.configure({ adapter: new Adapter() })
 
-global.shallow = enzyme.shallow
-global.render = enzyme.render
-global.mount = enzyme.mount
+//const enzyme = require('enzyme')
+// const Adapter = require('enzyme-adapter-react-16')
+
+Enzyme.configure({ adapter: new Adapter() })
+
+global.shallow = shallow
+global.render = render
+global.mount = mount
+global.graphql = () => ''

@@ -24,7 +24,7 @@ class BlogIndex extends Component {
     generates a postItems post header
 
   */
-  generatePostHeader(title, path, date) {
+  generatePostHeader = (title, path, date) => {
     return (
       <header className="post__header">
         <h2 className="post__title"><Link to={path}>{title}</Link></h2>
@@ -39,7 +39,7 @@ class BlogIndex extends Component {
     generates a postItems post figure if defined
 
   */
-  generatePostFigure(image, path) {
+  generatePostFigure = (image, path) => {
     if (typeof image === 'undefined') return ''
     return (
       <figure itemType="http://schema.org/ImageObject">
@@ -56,7 +56,7 @@ class BlogIndex extends Component {
     generates 10 post max
 
   */
-  generatePosts() {
+  generatePosts = () => {
     const postItems = []
     this.posts.forEach((post, i) => {
       if (i > 11) return

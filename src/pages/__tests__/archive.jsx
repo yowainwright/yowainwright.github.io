@@ -1,3 +1,4 @@
+import React from 'react'
 import Archive from '../archive'
 
 describe('Archive component', () => {
