@@ -1,0 +1,569 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogPost component renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <BlogPostTemplate
+    data={
+      Object {
+        "markdownRemark": Object {
+          "frontmatter": Object {
+            "title": "foo",
+          },
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <HelmetWrapper
+          defer={true}
+          encodeSpecialCharacters={true}
+          title="foo | Jeffry.in"
+        >
+          <meta
+            content="undefined"
+            name="twitter:description"
+            property="og:description"
+          />
+          <link
+            href="undefined"
+            itemProp="url"
+            rel="canonical"
+          />
+          <meta
+            content="undefined"
+            name="twitter:url"
+            property="og:url"
+          />
+          <meta
+            content="foo"
+            name="twitter:title"
+            property="og:title"
+          />
+          <meta
+            content="https://yowainwright.imgix.net/w-logo-twitter.jpg?w=600&h=335&fit=crop&crop=focalpoint&auto=format"
+            itemProp="image"
+            name="twitter:image"
+          />
+          <meta
+            content="https://yowainwright.imgix.net/w-logo-fb.jpg?w=1200&h=600&fit=crop&crop=focalpoint&auto=format"
+            itemProp="image"
+            property="og:image"
+          />
+        </HelmetWrapper>,
+        <header>
+          <h1
+            itemProp="headeline"
+          >
+            foo
+          </h1>
+          <time />
+        </header>,
+        <div
+          className="wrapper"
+        >
+          <div
+            className="content"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+          />
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <meta
+              content="undefined"
+              name="twitter:description"
+              property="og:description"
+            />,
+            <link
+              href="undefined"
+              itemProp="url"
+              rel="canonical"
+            />,
+            <meta
+              content="undefined"
+              name="twitter:url"
+              property="og:url"
+            />,
+            <meta
+              content="foo"
+              name="twitter:title"
+              property="og:title"
+            />,
+            <meta
+              content="https://yowainwright.imgix.net/w-logo-twitter.jpg?w=600&h=335&fit=crop&crop=focalpoint&auto=format"
+              itemProp="image"
+              name="twitter:image"
+            />,
+            <meta
+              content="https://yowainwright.imgix.net/w-logo-fb.jpg?w=1200&h=600&fit=crop&crop=focalpoint&auto=format"
+              itemProp="image"
+              property="og:image"
+            />,
+          ],
+          "defer": true,
+          "encodeSpecialCharacters": true,
+          "title": "foo | Jeffry.in",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "content": "undefined",
+              "name": "twitter:description",
+              "property": "og:description",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "meta",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "href": "undefined",
+              "itemProp": "url",
+              "rel": "canonical",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "link",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "content": "undefined",
+              "name": "twitter:url",
+              "property": "og:url",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "meta",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "content": "foo",
+              "name": "twitter:title",
+              "property": "og:title",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "meta",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "content": "https://yowainwright.imgix.net/w-logo-twitter.jpg?w=600&h=335&fit=crop&crop=focalpoint&auto=format",
+              "itemProp": "image",
+              "name": "twitter:image",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "meta",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "content": "https://yowainwright.imgix.net/w-logo-fb.jpg?w=1200&h=600&fit=crop&crop=focalpoint&auto=format",
+              "itemProp": "image",
+              "property": "og:image",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "meta",
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1
+              itemProp="headeline"
+            >
+              foo
+            </h1>,
+            <time />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "foo",
+              "itemProp": "headeline",
+            },
+            "ref": null,
+            "rendered": "foo",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "time",
+          },
+        ],
+        "type": "header",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="content"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+          />,
+          "className": "wrapper",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "content",
+            "dangerouslySetInnerHTML": Object {
+              "__html": undefined,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <HelmetWrapper
+            defer={true}
+            encodeSpecialCharacters={true}
+            title="foo | Jeffry.in"
+          >
+            <meta
+              content="undefined"
+              name="twitter:description"
+              property="og:description"
+            />
+            <link
+              href="undefined"
+              itemProp="url"
+              rel="canonical"
+            />
+            <meta
+              content="undefined"
+              name="twitter:url"
+              property="og:url"
+            />
+            <meta
+              content="foo"
+              name="twitter:title"
+              property="og:title"
+            />
+            <meta
+              content="https://yowainwright.imgix.net/w-logo-twitter.jpg?w=600&h=335&fit=crop&crop=focalpoint&auto=format"
+              itemProp="image"
+              name="twitter:image"
+            />
+            <meta
+              content="https://yowainwright.imgix.net/w-logo-fb.jpg?w=1200&h=600&fit=crop&crop=focalpoint&auto=format"
+              itemProp="image"
+              property="og:image"
+            />
+          </HelmetWrapper>,
+          <header>
+            <h1
+              itemProp="headeline"
+            >
+              foo
+            </h1>
+            <time />
+          </header>,
+          <div
+            className="wrapper"
+          >
+            <div
+              className="content"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
+              }
+            />
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <meta
+                content="undefined"
+                name="twitter:description"
+                property="og:description"
+              />,
+              <link
+                href="undefined"
+                itemProp="url"
+                rel="canonical"
+              />,
+              <meta
+                content="undefined"
+                name="twitter:url"
+                property="og:url"
+              />,
+              <meta
+                content="foo"
+                name="twitter:title"
+                property="og:title"
+              />,
+              <meta
+                content="https://yowainwright.imgix.net/w-logo-twitter.jpg?w=600&h=335&fit=crop&crop=focalpoint&auto=format"
+                itemProp="image"
+                name="twitter:image"
+              />,
+              <meta
+                content="https://yowainwright.imgix.net/w-logo-fb.jpg?w=1200&h=600&fit=crop&crop=focalpoint&auto=format"
+                itemProp="image"
+                property="og:image"
+              />,
+            ],
+            "defer": true,
+            "encodeSpecialCharacters": true,
+            "title": "foo | Jeffry.in",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "content": "undefined",
+                "name": "twitter:description",
+                "property": "og:description",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "meta",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "href": "undefined",
+                "itemProp": "url",
+                "rel": "canonical",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "link",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "content": "undefined",
+                "name": "twitter:url",
+                "property": "og:url",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "meta",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "content": "foo",
+                "name": "twitter:title",
+                "property": "og:title",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "meta",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "content": "https://yowainwright.imgix.net/w-logo-twitter.jpg?w=600&h=335&fit=crop&crop=focalpoint&auto=format",
+                "itemProp": "image",
+                "name": "twitter:image",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "meta",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "content": "https://yowainwright.imgix.net/w-logo-fb.jpg?w=1200&h=600&fit=crop&crop=focalpoint&auto=format",
+                "itemProp": "image",
+                "property": "og:image",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "meta",
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1
+                itemProp="headeline"
+              >
+                foo
+              </h1>,
+              <time />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "foo",
+                "itemProp": "headeline",
+              },
+              "ref": null,
+              "rendered": "foo",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "time",
+            },
+          ],
+          "type": "header",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="content"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
+              }
+            />,
+            "className": "wrapper",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "content",
+              "dangerouslySetInnerHTML": Object {
+                "__html": undefined,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
