@@ -58,12 +58,12 @@
     "url": "git+https://github.com/yowainwright/yowainwright.github.io"
   },
   "scripts": {
-    "dev": "gatsby develop --ignore __tests__",
-    "eslint": "./node_modules/.bin/eslint --ext .js,.jsx --fix --ignore-pattern public . --fix",
-    "eslint:ci": "./node_modules/.bin/eslint --ext .js,.jsx --fix --ignore-pattern public",
+    "dev": "gatsby develop",
+    "eslint": "eslint . --ext .js,.jsx --fix --ignore-pattern public",
+    "eslint:ci": "eslint --ext .js,.jsx --ignore-pattern public",
     "test": "jest",
-    "develop": "gatsby develop --ignore __tests__",
-    "build": "gatsby build --ignore __tests__",
+    "develop": "gatsby develop",
+    "build": "gatsby build",
     "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public && cp -rf ./assets ./public",
     "deploy": "npm run pre-deploy && gatsby build && gh-pages -d public --branch master",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
