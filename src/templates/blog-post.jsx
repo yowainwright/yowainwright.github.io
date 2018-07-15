@@ -16,7 +16,7 @@ class BlogPostTemplate extends Component {
   //   })
   // }
 
-  generateDate() {
+  generateDate = () => {
     if (this.post.frontmatter.path === '/about/') return
     return (<time>{this.post.frontmatter.date}</time>)
   }

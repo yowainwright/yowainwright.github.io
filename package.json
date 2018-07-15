@@ -34,9 +34,15 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.1.2",
+    "babel-jest": "^23.2.0",
     "babel-preset-env": "^1.6.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-preact": "^0.2.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint-plugin-react": "^7.3.0",
     "gh-pages": "^1.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.2.0",
     "prettier": "^1.5.3",
     "prismjs": "^1.8.1",
     "prop-types": "^15.6.0",
@@ -54,13 +60,41 @@
   },
   "scripts": {
     "dev": "gatsby develop",
-    "eslint": "./node_modules/.bin/eslint --ext .js,.jsx --fix --ignore-pattern public . --fix",
-    "eslint:ci": "./node_modules/.bin/eslint --ext .js,.jsx --fix --ignore-pattern public",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint . --ext .js,.jsx --fix",
+    "eslint:ci": "eslint --ext .js,.jsx",
+    "test": "jest",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public && cp -rf ./assets ./public",
     "deploy": "npm run pre-deploy && gatsby build && gh-pages -d public --branch master",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+  },
+  "jest": {
+    "transform": {
+      ".(js|jsx)": "babel-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx|js)$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/.cache/",
+      "/src/styles/"
+    ],
+    "moduleFileExtensions": [
+      "jsx",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    },
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "html"
+    ],
+    "setupFiles": [
+      "./jest-setup.js"
+    ]
   }
 }

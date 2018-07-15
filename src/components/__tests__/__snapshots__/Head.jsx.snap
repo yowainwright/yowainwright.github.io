@@ -1,0 +1,563 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Head component renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Head />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <meta
+          content="index,follow"
+          name="robots"
+        />,
+        <meta
+          content="en_US"
+          property="og:locale"
+        />,
+        <link
+          href="https://jeffry.in/assets/favicon.ico"
+          rel="icon"
+        />,
+        <link
+          href="https://yowainwright.imgix.net/w.png"
+          itemProp="logo"
+          rel="apple-touch-icon"
+        />,
+        <meta
+          content="jeffry, wainwright, jeffry wainwright, code, programmer, artist, athlete, developer, engineer"
+          name="keywords"
+        />,
+        <meta
+          content="#ffffcc"
+          name="theme-color"
+        />,
+        <link
+          href="https://yowainwright.imgix.net/manifest.json"
+          rel="manifest"
+        />,
+        <meta
+          content="summary_large_image"
+          name="twitter:card"
+        />,
+        <meta
+          content="@yowainwright"
+          name="twitter:site"
+        />,
+        <meta
+          content="@yowainwright"
+          name="twitter:creator"
+        />,
+        <meta
+          content="Jeffry.in"
+          property="og:site_name"
+        />,
+        <meta
+          content="1200"
+          property="og:image:width"
+        />,
+        <meta
+          content="600"
+          property="og:image:height"
+        />,
+        <meta
+          content="cXTq9c3NhBvHJsPXxzWAYAqbB8PRUKUxemU8mykg_vs"
+          name="google-site-verification"
+        />,
+        <script
+          src="https://www.googletagmanager.com/gtag/js?id=UA-73077309-1"
+        />,
+        <script>
+          window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-73077309-1');
+        </script>,
+      ],
+      "defer": true,
+      "encodeSpecialCharacters": true,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "content": "index,follow",
+          "name": "robots",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "meta",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "content": "en_US",
+          "property": "og:locale",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "meta",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "href": "https://jeffry.in/assets/favicon.ico",
+          "rel": "icon",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "link",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "href": "https://yowainwright.imgix.net/w.png",
+          "itemProp": "logo",
+          "rel": "apple-touch-icon",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "link",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "content": "jeffry, wainwright, jeffry wainwright, code, programmer, artist, athlete, developer, engineer",
+          "name": "keywords",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "meta",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "content": "#ffffcc",
+          "name": "theme-color",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "meta",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "href": "https://yowainwright.imgix.net/manifest.json",
+          "rel": "manifest",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "link",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "content": "summary_large_image",
+          "name": "twitter:card",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "meta",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "content": "@yowainwright",
+          "name": "twitter:site",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "meta",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "content": "@yowainwright",
+          "name": "twitter:creator",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "meta",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "content": "Jeffry.in",
+          "property": "og:site_name",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "meta",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "content": "1200",
+          "property": "og:image:width",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "meta",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "content": "600",
+          "property": "og:image:height",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "meta",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "content": "cXTq9c3NhBvHJsPXxzWAYAqbB8PRUKUxemU8mykg_vs",
+          "name": "google-site-verification",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "meta",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "src": "https://www.googletagmanager.com/gtag/js?id=UA-73077309-1",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "script",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-73077309-1');",
+        },
+        "ref": null,
+        "rendered": "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-73077309-1');",
+        "type": "script",
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <meta
+            content="index,follow"
+            name="robots"
+          />,
+          <meta
+            content="en_US"
+            property="og:locale"
+          />,
+          <link
+            href="https://jeffry.in/assets/favicon.ico"
+            rel="icon"
+          />,
+          <link
+            href="https://yowainwright.imgix.net/w.png"
+            itemProp="logo"
+            rel="apple-touch-icon"
+          />,
+          <meta
+            content="jeffry, wainwright, jeffry wainwright, code, programmer, artist, athlete, developer, engineer"
+            name="keywords"
+          />,
+          <meta
+            content="#ffffcc"
+            name="theme-color"
+          />,
+          <link
+            href="https://yowainwright.imgix.net/manifest.json"
+            rel="manifest"
+          />,
+          <meta
+            content="summary_large_image"
+            name="twitter:card"
+          />,
+          <meta
+            content="@yowainwright"
+            name="twitter:site"
+          />,
+          <meta
+            content="@yowainwright"
+            name="twitter:creator"
+          />,
+          <meta
+            content="Jeffry.in"
+            property="og:site_name"
+          />,
+          <meta
+            content="1200"
+            property="og:image:width"
+          />,
+          <meta
+            content="600"
+            property="og:image:height"
+          />,
+          <meta
+            content="cXTq9c3NhBvHJsPXxzWAYAqbB8PRUKUxemU8mykg_vs"
+            name="google-site-verification"
+          />,
+          <script
+            src="https://www.googletagmanager.com/gtag/js?id=UA-73077309-1"
+          />,
+          <script>
+            window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-73077309-1');
+          </script>,
+        ],
+        "defer": true,
+        "encodeSpecialCharacters": true,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "content": "index,follow",
+            "name": "robots",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "meta",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "content": "en_US",
+            "property": "og:locale",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "meta",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "href": "https://jeffry.in/assets/favicon.ico",
+            "rel": "icon",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "link",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "href": "https://yowainwright.imgix.net/w.png",
+            "itemProp": "logo",
+            "rel": "apple-touch-icon",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "link",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "content": "jeffry, wainwright, jeffry wainwright, code, programmer, artist, athlete, developer, engineer",
+            "name": "keywords",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "meta",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "content": "#ffffcc",
+            "name": "theme-color",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "meta",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "href": "https://yowainwright.imgix.net/manifest.json",
+            "rel": "manifest",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "link",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "content": "summary_large_image",
+            "name": "twitter:card",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "meta",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "content": "@yowainwright",
+            "name": "twitter:site",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "meta",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "content": "@yowainwright",
+            "name": "twitter:creator",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "meta",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "content": "Jeffry.in",
+            "property": "og:site_name",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "meta",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "content": "1200",
+            "property": "og:image:width",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "meta",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "content": "600",
+            "property": "og:image:height",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "meta",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "content": "cXTq9c3NhBvHJsPXxzWAYAqbB8PRUKUxemU8mykg_vs",
+            "name": "google-site-verification",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "meta",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "src": "https://www.googletagmanager.com/gtag/js?id=UA-73077309-1",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "script",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-73077309-1');",
+          },
+          "ref": null,
+          "rendered": "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-73077309-1');",
+          "type": "script",
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": PreactAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;

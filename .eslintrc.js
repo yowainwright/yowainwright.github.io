@@ -16,7 +16,11 @@ module.exports = {
     },
     "globals": {
       "__dirname": true,
-      "graphql": true
+      "describe": true,
+      "expect": true,
+      "graphql": true,
+      "it": true,
+      "shallow": true,
     },
     "rules": {
         "indent": [
