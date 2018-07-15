@@ -3491,6 +3491,18 @@ envinfo@^5.8.1:
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-5.10.0.tgz#503a9774ae15b93ea68bdfae2ccd6306624ea6df"
 
+enzyme-adapter-preact@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/enzyme-adapter-preact/-/enzyme-adapter-preact-0.2.0.tgz#5d982d07d62db1d1ebe462a86776c4ba3955b0b3"
+  dependencies:
+    enzyme-adapter-utils "^1.3.0"
+    object.values "^1.0.4"
+    preact-compat "^3.18.0"
+    preact-render-to-string "^3.7.0"
+    proptypes "^1.1.0"
+    react "^16.2.0"
+    react-test-renderer "^16.2.0"
+
 enzyme-adapter-react-16@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.1.1.tgz#a8f4278b47e082fbca14f5bfb1ee50ee650717b4"
@@ -9473,7 +9485,7 @@ potrace@^2.1.1:
   dependencies:
     jimp "^0.2.24"
 
-preact-compat@^3.17.0:
+preact-compat@^3.17.0, preact-compat@^3.18.0:
   version "3.18.0"
   resolved "https://registry.yarnpkg.com/preact-compat/-/preact-compat-3.18.0.tgz#ca430cc1f67193fb9feaf7c510832957b2ebe701"
   dependencies:
@@ -9486,6 +9498,12 @@ preact-compat@^3.17.0:
 preact-render-to-string@^3.6.0:
   version "3.6.3"
   resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-3.6.3.tgz#481d0d5bdac9192d3347557437d5cd00aa312043"
+  dependencies:
+    pretty-format "^3.5.1"
+
+preact-render-to-string@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-3.7.0.tgz#7db4177454bc01395e0d01d6ac07bc5e838e31ee"
   dependencies:
     pretty-format "^3.5.1"
 
@@ -9650,6 +9668,10 @@ proper-lockfile@^1.1.2:
 property-information@^3.0.0, property-information@^3.1.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/property-information/-/property-information-3.2.0.tgz#fd1483c8fbac61808f5fe359e7693a1f48a58331"
+
+proptypes@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/proptypes/-/proptypes-1.1.0.tgz#78b3828a5aa6bb1308939e0de3c6044dfd4bd239"
 
 proxy-addr@~1.1.4:
   version "1.1.4"
@@ -10089,7 +10111,7 @@ react-style-proptype@^3.0.0:
   dependencies:
     prop-types "^15.5.4"
 
-react-test-renderer@^16.0.0-0:
+react-test-renderer@^16.0.0-0, react-test-renderer@^16.2.0:
   version "16.4.1"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.4.1.tgz#f2fb30c2c7b517db6e5b10ed20bb6b0a7ccd8d70"
   dependencies:
@@ -10162,6 +10184,15 @@ react@^15.6.0:
 react@^16.0.0:
   version "16.3.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.3.2.tgz#fdc8420398533a1e58872f59091b272ce2f91ea9"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
+
+react@^16.2.0:
+  version "16.4.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.4.1.tgz#de51ba5764b5dbcd1f9079037b862bd26b82fe32"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
