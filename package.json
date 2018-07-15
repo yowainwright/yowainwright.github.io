@@ -40,6 +40,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint-plugin-react": "^7.3.0",
     "gh-pages": "^1.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^23.2.0",
     "prettier": "^1.5.3",
     "prismjs": "^1.8.1",
@@ -57,12 +58,12 @@
     "url": "git+https://github.com/yowainwright/yowainwright.github.io"
   },
   "scripts": {
-    "dev": "gatsby develop",
+    "dev": "gatsby develop --ignore __tests__",
     "eslint": "./node_modules/.bin/eslint --ext .js,.jsx --fix --ignore-pattern public . --fix",
     "eslint:ci": "./node_modules/.bin/eslint --ext .js,.jsx --fix --ignore-pattern public",
     "test": "jest",
-    "develop": "gatsby develop",
-    "build": "gatsby build",
+    "develop": "gatsby develop --ignore __tests__",
+    "build": "gatsby build --ignore __tests__",
     "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public && cp -rf ./assets ./public",
     "deploy": "npm run pre-deploy && gatsby build && gh-pages -d public --branch master",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
@@ -74,12 +75,17 @@
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx|js)$",
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/.cache/"
+      "/.cache/",
+      "/src/styles/"
     ],
     "moduleFileExtensions": [
       "jsx",
       "js"
     ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    },
     "collectCoverage": true,
     "coverageReporters": [
       "lcov",

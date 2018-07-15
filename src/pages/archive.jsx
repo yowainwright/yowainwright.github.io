@@ -15,6 +15,7 @@ class Archive extends Component {
     super(props)
     this.description = 'A full list of blog posts written by Jeffry Wainwright, a human person who enjoys building software, open source, being outside, and trying to live life with purpose.'
     this.posts = get(this, 'props.data.allMarkdownRemark.edges')
+    console.log(this.posts)
     this.title = 'Archive | Jeffry.in'
   }
 
