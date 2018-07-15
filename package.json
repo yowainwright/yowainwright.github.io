@@ -59,8 +59,8 @@
   },
   "scripts": {
     "dev": "gatsby develop",
-    "eslint": "eslint . --ext .js,.jsx --fix --ignore-pattern public",
-    "eslint:ci": "eslint --ext .js,.jsx --ignore-pattern public",
+    "eslint": "eslint . --ext .js,.jsx --fix",
+    "eslint:ci": "eslint --ext .js,.jsx",
     "test": "jest",
     "develop": "gatsby develop",
     "build": "gatsby build",
