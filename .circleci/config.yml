@@ -23,6 +23,6 @@ jobs:
     steps:
       - checkout
       - restore_cache: *restore_cache
-      - run: yarn
-      - run: yarn test
+      - run: npm i
+      - run: npm test
       - save_cache: *save_cache
