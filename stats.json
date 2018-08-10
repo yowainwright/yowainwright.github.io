@@ -81,8 +81,8 @@
       "path---javascript-software-mid-2017-855ff4eccf4c6ae6489c.js.map"
     ],
     "component---src-pages-archive-jsx": [
-      "component---src-pages-archive-jsx-b7a87766feb500c79781.js",
-      "component---src-pages-archive-jsx-b7a87766feb500c79781.js.map"
+      "component---src-pages-archive-jsx-6af21ebb800f7d2be0a1.js",
+      "component---src-pages-archive-jsx-6af21ebb800f7d2be0a1.js.map"
     ],
     "path---making-a-js-plugin": [
       "path---making-a-js-plugin-cbc77aa799b284c70f86.js",
@@ -103,12 +103,6 @@
     "path---week-34-17": [
       "path---week-34-17-a03024382c3867754f9b.js",
       "path---week-34-17-a03024382c3867754f9b.js.map"
-    ],
-    "cms": [
-      "cms-8c47fce7fcd5b7932f5f.js",
-      "cms.css",
-      "cms-8c47fce7fcd5b7932f5f.js.map",
-      "cms.css.map"
     ],
     "path---week-20-17": [
       "path---week-20-17-d966023214d304cefc08.js",
@@ -171,8 +165,8 @@
       "path---js-closure-e28082b2c02b57a5d9a9.js.map"
     ],
     "path---index": [
-      "path---index-f0421a94c3c6671924cc.js",
-      "path---index-f0421a94c3c6671924cc.js.map"
+      "path---index-c9dc9dab44494eb08bd5.js",
+      "path---index-c9dc9dab44494eb08bd5.js.map"
     ],
     "path---week-18-17": [
       "path---week-18-17-f77e01f829cd5cd15019.js",
@@ -203,8 +197,8 @@
       "path---frontend-prototype-configuration-f796eb72a06266862d2b.js.map"
     ],
     "commons": [
-      "commons-e56669638807264b500f.js",
-      "commons-e56669638807264b500f.js.map"
+      "commons-d65f7993b79807f1110f.js",
+      "commons-d65f7993b79807f1110f.js.map"
     ],
     "path---getting-setup-with-ts": [
       "path---getting-setup-with-ts-843076e12199c81fdd9a.js",
@@ -279,8 +273,8 @@
       "path---find-running-processes-cffeada2f1b1b0e71901.js.map"
     ],
     "component---src-pages-index-jsx": [
-      "component---src-pages-index-jsx-b96bb57b6699fbc687e2.js",
-      "component---src-pages-index-jsx-b96bb57b6699fbc687e2.js.map"
+      "component---src-pages-index-jsx-7fae6d798fd7f94e0881.js",
+      "component---src-pages-index-jsx-7fae6d798fd7f94e0881.js.map"
     ],
     "path---week-7-17": [
       "path---week-7-17-10dd393f5cea39e112d6.js",
@@ -291,14 +285,14 @@
       "path---arrow-functions-cont-d88f0004b619ab1068b7.js.map"
     ],
     "app": [
-      "app-ad4d9c19726b722a24e4.js",
+      "app-aa5569600f4753a8f643.js",
       "build-js-styles.css",
-      "app-ad4d9c19726b722a24e4.js.map",
+      "app-aa5569600f4753a8f643.js.map",
       "build-js-styles.css.map"
     ],
     "path---archive": [
-      "path---archive-5a301fba803d54786a90.js",
-      "path---archive-5a301fba803d54786a90.js.map"
+      "path---archive-2a9d7248bb230e32c66e.js",
+      "path---archive-2a9d7248bb230e32c66e.js.map"
     ],
     "path---week-10-17": [
       "path---week-10-17-47134b6635d935855877.js",
@@ -345,8 +339,8 @@
       "path---creating-aliases-67299dd2a501b164ed9f.js.map"
     ],
     "path---about": [
-      "path---about-1f89c067fc7a3a6c801a.js",
-      "path---about-1f89c067fc7a3a6c801a.js.map"
+      "path---about-af1e79c8f6855262d37b.js",
+      "path---about-af1e79c8f6855262d37b.js.map"
     ],
     "path---node-meetup-debugging-with-yunong-xiao": [
       "path---node-meetup-debugging-with-yunong-xiao-d7fb3a27fb3e3cc1bc7f.js",
