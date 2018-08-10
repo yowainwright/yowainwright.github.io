@@ -9,7 +9,7 @@ meta: About Jeff Wainwright, yowainwright on the internet
 
 I'm software engineer at [Dollar Shave Club](https://www.dollarshaveclub.com/). I write software because I'm passionate about making things, learning and contributing to society. Software allows me to do those things everyday. Unrelated to software, I enjoy [riding bikes](https://www.strava.com/athletes/722335), [running](https://www.strava.com/athletes/722335), and surfing.
 
-The profile handle "yowainwright" is derived from conversations I had with my dad in his woodshop growing up. I would sit on a workbench and tell him about my dreams for the future which were always very lofty. He would respond to my enthusiasm at key moments by pumping is fist in a winning gesture and say in a deep tone—yoooo wainwright! Not being a typical quick-learner or athlete, his words encouraged me to move forward. I think I still carry motivation from his support.  
+The profile handle "yowainwright" is derived from conversations I had with my dad in his woodshop growing up. I would sit on a workbench and tell him about my dreams for the future which were always very lofty. He would respond to my enthusiasm at key moments by pumping is fist in a winning gesture and say in a deep tone—yoooo wainwright! Not being a typical quick-learner or athlete, his words encouraged me to move forward. I think I still carry motivation from his support.
 
 <br>
 
@@ -28,6 +28,10 @@ The profile handle "yowainwright" is derived from conversations I had with my da
 
 -  **[Stickybits: an alternative to position: sticky polyfills](https://css-tricks.com/stickybits-alternative-position-sticky-polyfills/)** - CSS Tricks
 -  **[Code Review Etiquette](https://css-tricks.com/code-review-etiquette/)** - CSS Tricks
+
+## Talks
+
+-  **[Developer CI Benefits](https://github.com/yowainwright/developer-ci-benefits)** - [JS.LA](https://js.la/), July 26, 2018
 
 <br>
 
