@@ -12,7 +12,6 @@
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-google-analytics": "^1.0.4",
     "gatsby-plugin-manifest": "^1.0.5",
-    "gatsby-plugin-netlify-cms": "^2.0.1",
     "gatsby-plugin-offline": "^1.0.4",
     "gatsby-plugin-preact": "^1.0.3",
     "gatsby-plugin-react-helmet": "^2.0.3",
@@ -28,7 +27,6 @@
     "gatsby-transformer-remark": "^1.7.2",
     "gatsby-transformer-sharp": "^1.6.1",
     "lodash": "^4.17.4",
-    "netlify-cms": "^2.0.0",
     "react-responsive-grid": "^0.3.4",
     "redux-devtools-extension": "^2.13.2"
   },
