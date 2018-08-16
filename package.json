@@ -36,7 +36,7 @@
     "babel-preset-env": "^1.6.1",
     "enzyme": "3.4.2",
     "enzyme-adapter-preact": "0.2.0",
-    "enzyme-adapter-react-16": "1.1.1",
+    "enzyme-adapter-react-16": "1.2.0",
     "eslint-plugin-react": "^7.3.0",
     "gh-pages": "^1.2.0",
     "identity-obj-proxy": "^3.0.0",
