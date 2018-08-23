@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
@@ -11,7 +10,7 @@ import Helmet from 'react-helmet'
 */
 
 class Archive extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.description = 'A full list of blog posts written by Jeffry Wainwright, a human person who enjoys building software, open source, being outside, and trying to live life with purpose.'
     this.posts = get(this, 'props.data.allMarkdownRemark.edges')
@@ -20,9 +19,9 @@ class Archive extends Component {
 
   generatePost = (i, title, date, path) => {
     return (
-      <article key={i} className="post--headline">
+      <article key={i} className='post--headline'>
         <header>
-          <h2 className="post__title--headline"><Link to={path}>{title}</Link></h2>
+          <h2 className='post__title--headline'><Link to={path}>{title}</Link></h2>
           <time>{date}</time>
         </header>
         <hr />
@@ -46,27 +45,23 @@ class Archive extends Component {
     return postItems
   }
 
-  render() {
+  render () {
     return (
-      <main className="main">
+      <main className='main'>
         <Helmet title={this.title}>
-          <meta name="twitter:description" property="og:description" content={`${this.description}`} />
-          <link rel="canonical" href="https://jeffry.in/archive/" itemProp="url" />
-          <meta name="twitter:url" property="og:url" content="https://jeffry.in/archive/" />
-          <meta name="twitter:title" property="og:title" content={`${this.title}`} />
-          <meta name="twitter:image" content="https://yowainwright.imgix.net/w-logo-twitter.jpg?w=600&h=335&fit=crop&crop=focalpoint&auto=format" itemProp="image" />
-          <meta property="og:image" content="https://yowainwright.imgix.net/w-logo-fb.jpg?w=1200&h=600&fit=crop&crop=focalpoint&auto=format" itemProp="image" />
+          <meta name='twitter:description' property='og:description' content={`${this.description}`} />
+          <link rel='canonical' href='https://jeffry.in/archive/' itemProp='url' />
+          <meta name='twitter:url' property='og:url' content='https://jeffry.in/archive/' />
+          <meta name='twitter:title' property='og:title' content={`${this.title}`} />
+          <meta name='twitter:image' content='https://yowainwright.imgix.net/w-logo-twitter.jpg?w=600&h=335&fit=crop&crop=focalpoint&auto=format' itemProp='image' />
+          <meta property='og:image' content='https://yowainwright.imgix.net/w-logo-fb.jpg?w=1200&h=600&fit=crop&crop=focalpoint&auto=format' itemProp='image' />
         </Helmet>
-        <div className="main__grid">
+        <div className='main__grid'>
           {this.generatePosts()}
         </div>
       </main>
     )
   }
-}
-
-Archive.propTypes = {
-  route: PropTypes.object,
 }
 
 export default Archive

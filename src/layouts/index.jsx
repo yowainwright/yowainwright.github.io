@@ -14,12 +14,12 @@ import '../styles/main.scss'
 require('prismjs/themes/prism.css')
 
 class Template extends Component {
-  render() {
+  render () {
     const {
-      children
+      children,
     } = this.props
     return (
-      <div className="gatsby-container">
+      <div className='gatsby-container'>
         <Head />
         <Header />
         {children()}
@@ -36,9 +36,6 @@ class Template extends Component {
 */
 Template.propTypes = {
   children: PropTypes.func,
-  location: PropTypes.object,
-  route: PropTypes.object,
 }
 
 export default Template
-

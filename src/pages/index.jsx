@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
@@ -11,7 +10,7 @@ import Helmet from 'react-helmet'
 */
 
 class BlogIndex extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.title = 'Jeffry.in'
     this.description = 'Jeffry.in is the blog of Jeffry Wainwright, an engineer living in California.'
@@ -26,8 +25,8 @@ class BlogIndex extends Component {
   */
   generatePostHeader = (title, path, date) => {
     return (
-      <header className="post__header">
-        <h2 className="post__title"><Link to={path}>{title}</Link></h2>
+      <header className='post__header'>
+        <h2 className='post__title'><Link to={path}>{title}</Link></h2>
         <time>{date}</time>
       </header>
     )
@@ -42,9 +41,9 @@ class BlogIndex extends Component {
   generatePostFigure = (image, path) => {
     if (typeof image === 'undefined') return ''
     return (
-      <figure itemType="http://schema.org/ImageObject">
+      <figure itemType='http://schema.org/ImageObject'>
         <Link to={path}>
-          <img src={`${image}?w=800&&fit=crop&crop=focalpoint&auto=format`} itemProp="contentURL" />
+          <img src={`${image}?w=800&&fit=crop&crop=focalpoint&auto=format`} itemProp='contentURL' alt='Post Figure' />
         </Link>
       </figure>
     )
@@ -77,7 +76,7 @@ class BlogIndex extends Component {
 
       // build postItems [array]
       postItems.push(
-        <article key={i} className="post--article">
+        <article key={i} className='post--article'>
           {header}
           {figure}
           <p>{description} <Link to={path}>[...]</Link></p>
@@ -89,26 +88,21 @@ class BlogIndex extends Component {
     return postItems
   }
 
-  render() {
-
+  render () {
     return (
-      <main className="main">
+      <main className='main'>
         <Helmet title={this.title}>
-          <meta name="twitter:description" property="og:description" content={`${this.description}`} />
-          <link rel="canonical" href="https://jeffry.in" itemProp="url" />
-          <meta name="twitter:url" property="og:url" content="https://jeffry.in" />
-          <meta name="twitter:title" property="og:title" content={`${this.title}`} />
-          <meta name="twitter:image" content="https://yowainwright.imgix.net/w-logo-twitter.jpg?w=600&h=335&fit=crop&crop=focalpoint&auto=format" itemProp="image" />
-          <meta property="og:image" content="https://yowainwright.imgix.net/w-logo-fb.jpg?w=1200&h=600&fit=crop&crop=focalpoint&auto=format" itemProp="image" />
+          <meta name='twitter:description' property='og:description' content={`${this.description}`} />
+          <link rel='canonical' href='https://jeffry.in' itemProp='url' />
+          <meta name='twitter:url' property='og:url' content='https://jeffry.in' />
+          <meta name='twitter:title' property='og:title' content={`${this.title}`} />
+          <meta name='twitter:image' content='https://yowainwright.imgix.net/w-logo-twitter.jpg?w=600&h=335&fit=crop&crop=focalpoint&auto=format' itemProp='image' />
+          <meta property='og:image' content='https://yowainwright.imgix.net/w-logo-fb.jpg?w=1200&h=600&fit=crop&crop=focalpoint&auto=format' itemProp='image' />
         </Helmet>
         {this.generatePosts()}
       </main>
     )
   }
-}
-
-BlogIndex.propTypes = {
-  route: PropTypes.object,
 }
 
 export default BlogIndex
