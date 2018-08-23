@@ -140,7 +140,10 @@ iframe {
   display: block;
   margin-bottom: $spacing-unit;
   margin-top: $spacing-unit;
-  max-width: 100%;
+  max-width: calc(100% - 2rem);
+  @include media-query($width-small) {
+    max-width: 100%;
+  }
 }
 
 time {
