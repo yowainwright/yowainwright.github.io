@@ -12,12 +12,12 @@ categories:
 - code
 ---
 
-Although navigations stuck to the top of browser windows are sometimes scrutinized, their relavance on webpages cannot easily be overlooked. Recently, I was challenged to make some sticky items that were fairly complex so I decided to write a plugin that would work for me & my use cases called [Sticky Bits](https://github.com/yowainwright/sticky-bits).
+Although navigations stuck to the top of browser windows are sometimes scrutinized, their relevance on webpages cannot easily be overlooked. Recently, I was challenged to make some sticky items that were fairly complex so I decided to write a plugin that would work for me & my use cases called [Sticky Bits](https://github.com/yowainwright/sticky-bits).
 {: .first-paragraph}
 
 > `*position: fixed` is a css rule for sticky navigation which positions `html elements` at a fixed point on the page.
 
-Sticky Navigation in my purview became more relavant with an implemenation of [scrollspy](http://v4-alpha.getbootstrap.com/components/scrollspy/) by bootstrap years ago. It seemed that providing users with visual queues became expected by users or by companies to provide location & extra navigation to users on webpages. `Triggers` that set a navigation's position to stick & change vary throughout many web experiences so I'm only going to focus on a few things that I've seen.
+Sticky Navigation in my purview became more relevant with an implementation of [scrollspy](http://v4-alpha.getbootstrap.com/components/scrollspy/) by bootstrap years ago. It seemed that providing users with visual queues became expected by users or by companies to provide location & extra navigation to users on webpages. `Triggers` that set a navigation's position to stick & change vary throughout many web experiences so I'm only going to focus on a few things that I've seen.
 
 ### Browser sticky navigation
 {: #device-fixed-position }
@@ -46,7 +46,7 @@ Sticky Navigation in my purview became more relavant with an implemenation of [s
 	</a>
 </figure>
 
-*Scrolled distance queue navigation:* This is when a navigation is set to fixed & has some sort of visual queue that lets a user know how far they've scrolled. This is often done by returning a scrolled distance relative to a total window scroll. This is done by first storing scroll in a variable & thend returning it out of a function.
+*Scrolled distance queue navigation:* This is when a navigation is set to fixed & has some sort of visual queue that lets a user know how far they've scrolled. This is often done by returning a scrolled distance relative to a total window scroll. This is done by first storing scroll in a variable & then returning it out of a function.
 
 <figure>
 	<a href="http://www.hollywoodreporter.com/features/beverly-hills-1-billion-vineyard-819299">
@@ -83,7 +83,7 @@ Device sticky items are [very undependable](http://bradfrost.com/blog/mobile/fix
 
 It seems that fixed position was more supported by IOS a few years ago but support has lagged as Apple has defined fixed positioning as [different because of an unchangeable size for a browser window](https://developer.apple.com/library/ios/technotes/tn2010/tn2262/_index.html#//apple_ref/doc/uid/DTS40009577-CH1-SAFARI_ON_IPAD_READINESS_CHECKLIST-4__MODIFY_CODE_THAT_RELIES_ON_CSS_FIXED_POSITIONING). [More...](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html)
 
-It was after trying very hard to come up with a solition for fixed position support that I decided to see if making `absolute positioning` work like fixed position could be a solution. It was then that I came on to this [post](https://coderwall.com/p/8rz_7g/how-to-emulate-position-fixed-using-absolute-positioning) which uses css to essentially hijack window scrolling from the window so that elements positioned absolutely can behave in a way similarly to what we'd expect with fixed position.
+It was after trying very hard to come up with a solution for fixed position support that I decided to see if making `absolute positioning` work like fixed position could be a solution. It was then that I came on to this [post](https://coderwall.com/p/8rz_7g/how-to-emulate-position-fixed-using-absolute-positioning) which uses css to essentially hijack window scrolling from the window so that elements positioned absolutely can behave in a way similarly to what we'd expect with fixed position.
 
 ```css
 	html {

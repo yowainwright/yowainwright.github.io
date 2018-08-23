@@ -58,7 +58,7 @@ Passion is an important motivator for improving at things. Even passion when it 
 
 <figure>
 <blockquote>Feedback that is most useful to a person is often critical in nature if the person receiving the critique is engaged.</blockquote>
-<figcaption><strong>Note:</strong> the person receiving the information <strong>must</strong> be ingaged to the critique.</figcaption>
+<figcaption><strong>Note:</strong> the person receiving the information <strong>must</strong> be engaged to the critique.</figcaption>
 </figure>
 
 #### Imagine this comment when stated with exaggerated physical movement, more excited vocal tone, and higher volume
@@ -69,7 +69,7 @@ may affect page load speed or even certain tracking metrics
 that could be caused by new race conditions!
 ```
 
-#### Then, imagine a similar comment, even more terse but stated with a calm demeanor, slower delivery, and a normal vocal volume—followed by a question even
+#### Then, imagine a similar comment, even more terse but stated with a calm demeanour, slower delivery, and a normal vocal volume—followed by a question even
 
 ```md
 There are 8 web fonts used in this mock. 

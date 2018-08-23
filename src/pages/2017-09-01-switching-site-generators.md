@@ -155,4 +155,4 @@ The Gatsby interface also makes adding plugins very easy as well. Once, I unders
 
 ## Initial Observations after changing to Gatsby
 
-With all of the features that I was hoping to provide customers when switching site generators, I think Gatsby fulfills those features. Gatsby also compiles pretty fast compared to Jekyll after some of the new features I added to provide a better experience for my customers. There are still features to add and bugs to fix, but I'm now able to build new posts faster than what I could with Jekyll before switching.
+With all of the features that I was hoping to provide customers when switching site generators, I think Gatsby fulfils those features. Gatsby also compiles pretty fast compared to Jekyll after some of the new features I added to provide a better experience for my customers. There are still features to add and bugs to fix, but I'm now able to build new posts faster than what I could with Jekyll before switching.

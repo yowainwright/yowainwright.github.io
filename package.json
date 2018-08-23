@@ -24,7 +24,9 @@
     "gatsby-remark-smartypants": "1.4.3",
     "gatsby-source-filesystem": "1.5.38",
     "gatsby-transformer-remark": "1.7.2",
-    "gatsby-transformer-sharp": "1.6.1"
+    "gatsby-transformer-sharp": "1.6.1",
+    "stylelint": "^9.5.0",
+    "stylelint-config-dollarshaveclub": "^1.0.3"
   },
   "devDependencies": {
     "babel-eslint": "8.1.2",
@@ -60,15 +62,19 @@
     "url": "git+https://github.com/yowainwright/yowainwright.github.io"
   },
   "scripts": {
+    "build": "gatsby build",
+    "deploy": "npm run pre-deploy && gatsby build && gh-pages -d public --branch master",
     "dev": "gatsby develop",
+    "develop": "gatsby develop",
     "eslint": "eslint . --ext .js,.jsx --fix",
     "eslint:ci": "eslint --ext .js,.jsx",
+    "grammar": "write-good *.md --no-passive",
+    "lint": "npm run eslint && npm run markdownlint && npm run spelling",
+    "markdownlint": "markdownlint *.md",
+    "spelling": "mdspell '**/*.md' '!**/node_modules/**/*.md' --ignore-numbers",
+    "spelling:ci": "mdspell '**/*.md' '!**/node_modules/**/*.md' --ignore-numbers --report",
     "test": "jest --no-cache",
-    "develop": "gatsby develop",
-    "build": "gatsby build",
-    "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public && cp -rf ./assets ./public",
-    "deploy": "npm run pre-deploy && gatsby build && gh-pages -d public --branch master",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public && cp -rf ./assets ./public"
   },
   "jest": {
     "testURL": "https://localhost/",

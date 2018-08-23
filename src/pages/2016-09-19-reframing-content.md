@@ -99,7 +99,7 @@ if (window.$) {
 
 ```
 
-Add a check to the top of the plugin which allows us to select the element to reframe with jquery _or_ plain js (Kodos to [Jacob Kelley](http://jakiestfu.com/) here).
+Add a check to the top of the plugin which allows us to select the element to reframe with jquery _or_ plain js (Kudos to [Jacob Kelley](http://jakiestfu.com/) here).
 
 ```javascript
 
@@ -123,7 +123,7 @@ reframe('selector');
 
 ## To Dos
 
-Currently, I'm playing with the idea of removing the default padding of the ratio (56.25%) that's in the `css` because it is overwritten everytime the plugin is called.
+Currently, I'm playing with the idea of removing the default padding of the ratio (56.25%) that's in the `css` because it is overwritten every time the plugin is called.
 Also, I think I will be adding a docs folder for using the plugin & specific use cases that might come up.
 
 ## Summary

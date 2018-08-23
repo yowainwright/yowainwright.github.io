@@ -109,7 +109,7 @@ In this method, a container element plays no role in setting the width of conten
 	}
 ```
 
-Finally, my perferred approach is to set the margins of properties only once & resetting the preferred width of elements based on the viewport size. I do this with calc. It works great. So for a mobile view I have the width set to `calc(100% - 2rem)` which tells the browser make this element 100% of the viewport width with a margin of 1 on either side. You'll find in this approach that the content is always centered & that elements with of 100% can be centered as well.
+Finally, my preferred approach is to set the margins of properties only once & resetting the preferred width of elements based on the viewport size. I do this with calc. It works great. So for a mobile view I have the width set to `calc(100% - 2rem)` which tells the browser make this element 100% of the viewport width with a margin of 1 on either side. You'll find in this approach that the content is always centered & that elements with of 100% can be centered as well.
 
 I hope you've found this post to be informative. Please comment below if you disagree, feel I could've been more clear or have other opinions. 
 
