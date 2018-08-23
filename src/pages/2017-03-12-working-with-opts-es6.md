@@ -19,7 +19,7 @@ Open source plugin code can become confusing. After writing a few open source pl
 
 ## What are options?
 
-> Options, in JavaScript, are arguements passed in a function to replace default properties values.
+> Options, in JavaScript, are arguments passed in a function to replace default properties values.
 
 Options, in JavaScript, are arguments passed in a function to replace default properties values. In example, sometimes a plugin will have a default CSS class that it is associated with. Plugins will often allow users to change this default CSS class. 
 

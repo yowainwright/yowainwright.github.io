@@ -16,7 +16,7 @@ categories:
 
 Remembering the first time I saw [William Kentridge](//en.wikipedia.org/wiki/William_Kentridge): it was in Chicago and I drove down from Madison, Madison Wisconsin with my girlfriend. I was around 21. I'm 35 now. I threw a temper tantrum while trying to find a place to park in the magnificent mile area.
 
-After parking, I remember looking into girlfriend's big green eyes right after we got out of the car. She was looking at me so empathically. "I'm going to dump you in a few months" she was probably thinking. She was just waiting for right exit. It's not that I didn't have good qualities then. I was full of charisma and passion but my passion was usually about art or skateboarding and _I could be selfish_ in general. However, this moment at the MCA, seeing Kentridge's work for the first time, was a moment in which my passion for art allowed me to be open to a beautiful world outside of me.
+After parking, I remember looking into girlfriend's big green eyes right after we got out of the car. She was looking at me so empathetically. "I'm going to dump you in a few months" she was probably thinking. She was just waiting for right exit. It's not that I didn't have good qualities then. I was full of charisma and passion but my passion was usually about art or skateboarding and _I could be selfish_ in general. However, this moment at the MCA, seeing Kentridge's work for the first time, was a moment in which my passion for art allowed me to be open to a beautiful world outside of me.
 
 > "I'm going to dump you in a few months" she was probably thinking still waiting for right exit.
 
@@ -42,9 +42,9 @@ After getting dinner, we went back to Madison. It was business as usual, studyin
 
 My parents where diplomats and stationed in Albania at that time. When finals and the semester was over, I went and visited them in Tirana. I liked Albania. It has amazing fruit. The people were friendly to me and didn't seem to be bothered by the fact that I was _a character_.
 
-One day, while in Albania, I went with a group of hikers down by the sea. There were fisherman fishing with dynamite at the beach we were hiking on. I got a call from my girlfriend on my Nokia Cell Phone (remember: 2000/2001). "Do you have time to talk?", she asked. "Of course.", I said; dynamite explosions happening in the background. "I've met someone; someone else", she said, "I don't want to be with you anymore.". At that moment, a dynamite explosion happened. Fish and fish guts flew into the air. I could hear the fisherman boys' glee as they giggled near by. "I understand.", I said to my girlfriend on the phone.
+One day, while in Albania, I went with a group of hikers down by the sea. There were fisherman fishing with dynamite at the beach we were hiking on. I got a call from my girlfriend on my Nokia Cell Phone (remember: 2000/2001). "Do you have time to talk?", she asked. "Of course.", I said; dynamite explosions happening in the background. "I've met someone; someone else", she said, "I don't want to be with you any more.". At that moment, a dynamite explosion happened. Fish and fish guts flew into the air. I could hear the fisherman boys' glee as they giggled near by. "I understand.", I said to my girlfriend on the phone.
 
->"I don't want to be with you anymore.". At that moment, a dynamite explosion happened. Fish and fish guts flew into the air.
+>"I don't want to be with you any more.". At that moment, a dynamite explosion happened. Fish and fish guts flew into the air.
 
 We, Emily (my girlfriend of that time) and I, talked a few times after that and not about us really. The conversations were more along the lines of: "Can I get this back?". There was never much closure and there didn't have to be. We were very different and I'd been a selfish boyfriend for the most part. I think fondly of moments I spent with her and I smile when I think of my first time seeing William Kentridge and getting dumped to the sound of fish being blown up with dynamite in the background (not about the fish being blown up specifically - I'm not into that).
 

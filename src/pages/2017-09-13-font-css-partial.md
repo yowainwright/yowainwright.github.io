@@ -62,7 +62,7 @@ After general font styles are declared, css is written to modify them efficientl
 
 Write CSS as done above is purposeful. All styles are clearly nested within the `.text` block. This process provided the sense of cascade without causing the cascade to suffer as a result. Each selector compiles to 1 CSS class. 
 
-The compiles CSS looks like this (un-minified)
+The compiles CSS looks like this (unminified)
 
 ```sass
 .text {

@@ -79,7 +79,7 @@ Code itself is less complex and very modular. The steps to publish that code the
 
 <h2 id="configuration">Front end configuration notes</h2>
 
-Specific configuration for production-ready products is in important. However, when prototyping, configuration should be fast and easy so developers can focus on the tool they are trying to prototype for. When developers prototype, the tool that is focused on first is usually the view layer. The developer will decide to build a [React App](https://facebook.github.io/react/) and use [create-react-app](https://github.com/facebookincubator/create-react-app) or a similar **creat-app** generator for [Vue](https://vuejs.org/) or something similar. App generator products are great for speed, seeing how a Framework's eco system _can_ work, and getting an understanding of how a Framework's view layer works. However, when developers must stray away from the **exact** app generator, it can be difficult and a ton of involved rewriting. To avoid this, developers can install JavaScript tooling minimally as will be demonstrated below.
+Specific configuration for production-ready products is in important. However, when prototyping, configuration should be fast and easy so developers can focus on the tool they are trying to prototype for. When developers prototype, the tool that is focused on first is usually the view layer. The developer will decide to build a [React App](https://facebook.github.io/react/) and use [create-react-app](https://github.com/facebookincubator/create-react-app) or a similar **create-app** generator for [Vue](https://vuejs.org/) or something similar. App generator products are great for speed, seeing how a Framework's eco system _can_ work, and getting an understanding of how a Framework's view layer works. However, when developers must stray away from the **exact** app generator, it can be difficult and a ton of involved rewriting. To avoid this, developers can install JavaScript tooling minimally as will be demonstrated below.
 
 <figure>
   <img src="https://yowainwright.imgix.net/configuration/quick-configuration.png" alt="Quick Configuration" />
@@ -88,7 +88,7 @@ Specific configuration for production-ready products is in important. However, w
 
 <figure>
   <img src="https://yowainwright.imgix.net/configuration/configuration-problem.png" alt="Configuration Prototype" />
-  <figcaption>The illustation above visually points out what can/will start to happen when developers must stay from `create app tools`</figcaption>
+  <figcaption>The illustration above visually points out what can/will start to happen when developers must stay from `create app tools`</figcaption>
 </figure> 
 
 ### Simple configuration for prototyping
