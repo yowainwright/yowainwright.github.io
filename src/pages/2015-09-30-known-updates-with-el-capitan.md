@@ -17,7 +17,7 @@ Recently, I upgraded to El Capitan. Suddenly my local websites using vagrant wer
 Below are a short list of things that helped me get back up & running again. Hope it helps you too.
 
 -  Vagrant
-[Quickguide](https://davidturner.name/setting-up-vagrant-in-os-x-10-11-el-capitan/)
+[Quick guide](https://davidturner.name/setting-up-vagrant-in-os-x-10-11-el-capitan/)
 
 ^ Follow the instructions in the link provided
 

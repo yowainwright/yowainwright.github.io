@@ -39,7 +39,7 @@ After watching [ES6 for Everyone](//es6.io/) by [Wes Bos](//wesbos.com/) I learn
 
 ###  Template Tagging 
 
-Template tagging makes template strings more dynyamic. 
+Template tagging makes template strings more dynamic. 
 
 The example below iterates over a string and an undefined number of values (using the [spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) operator) within a string until the the string is a static value.
 

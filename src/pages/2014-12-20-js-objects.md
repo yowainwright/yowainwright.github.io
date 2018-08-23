@@ -70,7 +70,7 @@ From the last example above, we can see that writing out all of those objects li
 
 After seeing a basic Javascript Object & seeing where it can fail & where it can become very repetitious we can begin to understand why more complex objects are more important.
 1. We should always try to keep our code [DRY](//code.tutsplus.com/tutorials/3-key-software-principles-you-must-understand--net-25161) (not repeating).
-2. We should try to not have our code be re-writable.
+2. We should try to not have our code be rewritable.
 
 Prototype Chains, deal with the first issue - keep things DRY.
 
@@ -82,7 +82,7 @@ Prototype Chains, deal with the first issue - keep things DRY.
 
 The **Object Prototype** has various helper functions that are inherited from Object. What this means is, built into the browser, JS has methods that are automatically attached to an object when it is created.
 
-The **Object Constructor** is not the _Object Prototype_. An _Object constructor_ is the object that the an instance of an Object was instansiated from; basically the object constructor is GOD to the an instance of an object.
+The **Object Constructor** is not the _Object Prototype_. An _Object constructor_ is the object that the an instance of an Object was instantiated from; basically the object constructor is GOD to the an instance of an object.
 
 **array prototype** has various helper functions & is associated with an array
 - delegates to the object prototype
@@ -104,9 +104,9 @@ console.log(van.color, van.back);
 
 View it [live](//codepen.io/yowainwright/pen/1665f351bf708ff50d0d797a086bfe3d).
 
-In the example above we create a static object and then copy it using **Object.create()**. That Object has access to helper functions, or methods, that are part of the Javascript Prototype. When an Object Prototype is created the instance of that creation is that Object's Object Constructor. The Object Constructor points to what instansiated that Object.
+In the example above we create a static object and then copy it using **Object.create()**. That Object has access to helper functions, or methods, that are part of the Javascript Prototype. When an Object Prototype is created the instance of that creation is that Object's Object Constructor. The Object Constructor points to what instantiated that Object.
 
-That's confusing so here's an example to demonstate.
+That's confusing so here's an example to demonstrate.
 
 ```javascript
 var AConstructor = function(name) {
@@ -186,7 +186,7 @@ AClass.methods = {
 -  The example above demonstrates how to add a method to a class without duplicating the method within the execution context every times a new instance is created.
 -  **Note**: we could use extends to extend the methods of the _AClass (from the example above)_ or a _Class_ but this is not provided natively in JavaScript.
 
-## 5. Prototypal Classes
+## 5. Prototyped Classes
 
 Prototypal Classes can be used instead of _extends_ or (from the last example above) _obj.methods = AClass.methods;_ to store all methods of a _class_.
 

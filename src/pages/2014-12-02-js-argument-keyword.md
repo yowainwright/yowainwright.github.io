@@ -28,7 +28,7 @@ passArguments(1, 2, 3, 4, 5);
 
 Live [Code](//codepen.io/yowainwright/pen/2f64d380b74302b396927d297828cd3a)
 
-For the program that I was working on today, the program takes the first argument of the function `passArguments` as stores it in a variable set as category. Then it loops through the other argemuents & strong them in the logs array.
+For the program that I was working on today, the program takes the first argument of the function `passArguments` as stores it in a variable set as category. Then it loops through the other arguments & strong them in the logs array.
 
 ```javascript
 var passArguments = function() {
@@ -44,7 +44,7 @@ passArguments('Categories', '1', '2', '3', '4', '5');
 
 Live [Code](//codepen.io/yowainwright/pen/6b24e79b8dcd00668619acd396dd4b46)
 
-While my boss & I were going over the program, he wrote out the code similarily to how a browser compiles it.
+While my boss & I were going over the program, he wrote out the code similarly to how a browser compiles it.
 
 ```javascript
 arguments = ['ga', 'info a', 'info b', 'info c']

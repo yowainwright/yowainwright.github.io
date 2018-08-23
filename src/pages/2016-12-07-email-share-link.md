@@ -20,7 +20,7 @@ On desktop devices, there was no issue.
 After going through various debugging techniques, I noticed 2 things that may help other developers out:
 
 -  Make sure that there is no target attribute on the email share link. This is what initiates alerts on mobile devices.
--  When debugging errors with email share links on Device Simulators, remember that similators like the IOS Simulator don't have email clients installed initially.
+-  When debugging errors with email share links on Device Simulators, remember that simulators like the IOS Simulator don't have email clients installed initially.
 
 Here's a code sample of something that works:
 

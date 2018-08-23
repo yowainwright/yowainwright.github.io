@@ -21,11 +21,11 @@ I felt community in that moment at White Rock that I hadn't felt in years.
 	<img src="https://yowainwright.imgix.net/white-rock-lake/brett-riding.jpg" alt="Brett Riding" />
 </figure>
 
-When I was young, traveling between my parent's homes, I would visit family around lakes in Wisconsin. My older cousins would ride boats & water ski. As 1 of the younger cousins, I would swim within the shallow parts around docks. We (other younger cousins as I) would sometimes get in canoes & look for crawfish, turtles & frogs. At night, we would try to catch fireflies.
+When I was young, travelling between my parent's homes, I would visit family around lakes in Wisconsin. My older cousins would ride boats & water ski. As 1 of the younger cousins, I would swim within the shallow parts around docks. We (other younger cousins as I) would sometimes get in canoes & look for crayfish, turtles & frogs. At night, we would try to catch fireflies.
 
-Life seemed very simple. It seemed like a small place by the water was every family's goal. If 1 family didn't have much - they'd just stay with another family by a lake on the weekend. It felt like community - american community. I don't know if that community exists as much anymore. I know it doesn't for me. I felt very proud & content.
+Life seemed very simple. It seemed like a small place by the water was every family's goal. If 1 family didn't have much - they'd just stay with another family by a lake on the weekend. It felt like community - American community. I don't know if that community exists as much any more. I know it doesn't for me. I felt very proud & content.
 
->It felt like community - American community. I don't know if that community exists as much anymore (?).
+>It felt like community - American community. I don't know if that community exists as much any more (?).
 
 <figure>
 	<img src="https://yowainwright.imgix.net/white-rock-lake/me-riding.jpg" alt="Me Riding" />

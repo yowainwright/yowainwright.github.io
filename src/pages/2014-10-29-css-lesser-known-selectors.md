@@ -62,7 +62,7 @@ a[href$="#else"] {
 ```
 
 In the example above the first `<a>`, or anchor tag would have a blue background & the second `<a>` would have no background.
-This can be useful if your looking to select an something in a script library like [jQuery](http://jquery.com) where the begin of the classname is a standard naming convention.
+This can be useful if your looking to select an something in a script library like [jQuery](http://jquery.com) where the begin of the class name is a standard naming convention.
 
 ## Contains (string)
 

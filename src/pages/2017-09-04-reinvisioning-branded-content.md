@@ -25,7 +25,7 @@ Branded content is not new conceptually. We were tasked with figuring out how to
 
 We spent time, refining outlook and answering questions that would have to last for a long period to come. What would be our design style? Could we create something that would allow the experience of each article feel like its own? How could we ensure that our content seemed like the good read it was/is and not like _just branded content_?
 
-After about six months of prototyping and developing designs, we came to a few conclusions. We should have a simple palette of mainly blacks, greys, and whites to let imagery and articles stand out. We should be everything modularly so that we can more quickly add features. For the CMS for editing, we went with Wordpress so that writer would work with something that most were used to. The front end itself was separated using [Wordpresses API](https://wordpress.org/plugins/rest-api/). 
+After about six months of prototyping and developing designs, we came to a few conclusions. We should have a simple palette of mainly blacks, greys, and whites to let imagery and articles stand out. We should be everything modularly so that we can more quickly add features. For the CMS for editing, we went with Wordpress so that writer would work with something that most were used to. The front end itself was separated using [Wordpress's API](https://wordpress.org/plugins/rest-api/). 
 
 ## The site must be fast
 

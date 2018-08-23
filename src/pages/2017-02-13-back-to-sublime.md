@@ -27,7 +27,7 @@ Beyond that, I found Atom to be slow and a memory hog. I've heard the debate tha
 
 After a few months of feeling like I wasn't as productive with Atom, I decided to switch back to Sublime. I started re-learning my quick keys and then looking into some of the features that I liked about Atom—to see if I could add them with a plugin in Sublime.
 
-## Making Sublime as beauitful as Atom
+## Making Sublime as beautiful as Atom
 
 I love Atom's out of the box beauty. I've found that it only takes a few minutes to get Sublime to take on the features I enjoy.
 
@@ -39,7 +39,7 @@ I love Atom's out of the box beauty. I've found that it only takes a few minutes
 
 ## Adding things I liked from Atom to Sublime
 
--  For adding file icons, and an awesome them I went to the sublime package manager and downloaded them. I recommend the [material theme](https://github.com/equinusocio/material-theme) b/c I it transitions between regular and italic fonts and has a nice sweet of supporting features—linke icons for files.
+-  For adding file icons, and an awesome them I went to the sublime package manager and downloaded them. I recommend the [material theme](https://github.com/equinusocio/material-theme) b/c I it transitions between regular and italic fonts and has a nice sweet of supporting features—like icons for files.
 - Sublime Text > Preferences > Package Control
 
 -  For adding a new app icons, I went [here](https://github.com/YabataDesign/sublime-text-icon) and followed the steps
@@ -47,7 +47,7 @@ I love Atom's out of the box beauty. I've found that it only takes a few minutes
   -  open /Applications/Sublime\ Text.app/Contents/Resources/
   -  replace Sublime Text.icns
   -  right click on the Sublime Text App > select 'get info'
-  -  drag the downloaded 'Sublime Text.icns' over the deafult icon in the top left corner
+  -  drag the downloaded 'Sublime Text.icns' over the default icon in the top left corner
 -  For changing the font, first I downloaded a font, [m-2m](http://www.fontspace.com/m-fonts/m-2m). Then I updated my Sublime Settings.
   -  download and install the font
   -  Sublime Text (nav) > Preferences > Settings 

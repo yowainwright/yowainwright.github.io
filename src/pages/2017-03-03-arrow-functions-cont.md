@@ -16,7 +16,7 @@ categories:
 
 Note post: this short post continued from my 1st [Arrow Functions Post](https://jeffry.in/arrow-functions/) after trying out some more things with Arrow Functions with [Dan Benson](https://www.linkedin.com/in/dansbenson/).
 
-Arrow Functions can be even simplier (sometimes)! 💪 In the example below, the parans `()` around arguments are not needed so there ommitted as are the mustaches `{}` around the returned function.
+Arrow Functions can be even simpler (sometimes)! 💪 In the example below, the params `()` around arguments are not needed so there omitted as are the mustaches `{}` around the returned function.
 
 ```javascript
 
