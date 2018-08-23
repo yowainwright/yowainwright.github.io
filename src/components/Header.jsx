@@ -6,7 +6,7 @@ import React, { Component } from 'react'
   The Header Component is the navigation and top part of the site across all pages/routes
 */
 class Header extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.name = 'site-nav'
   }
@@ -16,7 +16,7 @@ class Header extends Component {
     ----
     Abstract navItems out to a config
   */
-  generateNav(name) {
+  generateNav (name) {
     const nav = []
 
     // [array] of {object} nav items
@@ -60,9 +60,9 @@ class Header extends Component {
     return nav
   }
 
-  render() {
+  render () {
     return (
-      <nav id={`${this.name}`} className={`${this.name}`} role="navigation"  itemType="http://schema.org/SiteNavigationElement">
+      <nav id={`${this.name}`} className={`${this.name}`} role='navigation' itemType='http://schema.org/SiteNavigationElement'>
         <ol className={`${this.name}__items`}>
           {this.generateNav(this.name)}
         </ol>

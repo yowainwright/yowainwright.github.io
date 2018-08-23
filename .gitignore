@@ -7,5 +7,5 @@ public
 gatsby-blog
 coverage/
 package-lock.json
-
+yarn-error.log
 
