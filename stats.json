@@ -1,36 +1,36 @@
 {
   "assetsByChunkName": {
     "path---week-3-17": [
-      "path---week-3-17-b6c4fc015ca2ac274207.js",
-      "path---week-3-17-b6c4fc015ca2ac274207.js.map"
+      "path---week-3-17-bc9d83db193f035678ac.js",
+      "path---week-3-17-bc9d83db193f035678ac.js.map"
     ],
     "path---week-35-17": [
       "path---week-35-17-efc974831e3c6280900b.js",
       "path---week-35-17-efc974831e3c6280900b.js.map"
     ],
     "path---losing-a-friend": [
-      "path---losing-a-friend-9c5f115f984c568e1b9c.js",
-      "path---losing-a-friend-9c5f115f984c568e1b9c.js.map"
+      "path---losing-a-friend-3387fdbac8e0c56b9e4d.js",
+      "path---losing-a-friend-3387fdbac8e0c56b9e4d.js.map"
     ],
     "path---html-is-easy": [
       "path---html-is-easy-0a8d9e061091fa784f72.js",
       "path---html-is-easy-0a8d9e061091fa784f72.js.map"
     ],
     "path---week-13-17": [
-      "path---week-13-17-ba0e759fb391a2951e78.js",
-      "path---week-13-17-ba0e759fb391a2951e78.js.map"
+      "path---week-13-17-4f2a1bcc41807f5d675b.js",
+      "path---week-13-17-4f2a1bcc41807f5d675b.js.map"
     ],
     "path---week-6-17": [
-      "path---week-6-17-928c7ad3cd76d99b558d.js",
-      "path---week-6-17-928c7ad3cd76d99b558d.js.map"
+      "path---week-6-17-214f5c1982f76809e224.js",
+      "path---week-6-17-214f5c1982f76809e224.js.map"
     ],
     "path---white-rock-lake": [
-      "path---white-rock-lake-5db07fc94b280b09ab70.js",
-      "path---white-rock-lake-5db07fc94b280b09ab70.js.map"
+      "path---white-rock-lake-6490e5de7dd99a527495.js",
+      "path---white-rock-lake-6490e5de7dd99a527495.js.map"
     ],
     "path---week-1-17": [
-      "path---week-1-17-b96698b6a68626733439.js",
-      "path---week-1-17-b96698b6a68626733439.js.map"
+      "path---week-1-17-0cfd018743c64a65dd58.js",
+      "path---week-1-17-0cfd018743c64a65dd58.js.map"
     ],
     "path---normalize-css-or-not": [
       "path---normalize-css-or-not-b67ad94ba61617135da5.js",
@@ -41,28 +41,28 @@
       "path---week-14-17-0a7c3da73fabde019503.js.map"
     ],
     "path---week-19-17": [
-      "path---week-19-17-ef2ac5d56ea580a42b4d.js",
-      "path---week-19-17-ef2ac5d56ea580a42b4d.js.map"
+      "path---week-19-17-e530b5842438cae5fdb5.js",
+      "path---week-19-17-e530b5842438cae5fdb5.js.map"
     ],
     "path---week-4-17": [
-      "path---week-4-17-f7ac0d7993357ff4738d.js",
-      "path---week-4-17-f7ac0d7993357ff4738d.js.map"
+      "path---week-4-17-2ff80d719f08b35edebb.js",
+      "path---week-4-17-2ff80d719f08b35edebb.js.map"
     ],
     "path---week-9-17": [
-      "path---week-9-17-ae295f295c690606bab4.js",
-      "path---week-9-17-ae295f295c690606bab4.js.map"
+      "path---week-9-17-0e00322a142d1020f82e.js",
+      "path---week-9-17-0e00322a142d1020f82e.js.map"
     ],
     "path---destructing-function-opts": [
-      "path---destructing-function-opts-6e9d56b0b743daaa5a81.js",
-      "path---destructing-function-opts-6e9d56b0b743daaa5a81.js.map"
+      "path---destructing-function-opts-3551fcbd68e1cdf3430a.js",
+      "path---destructing-function-opts-3551fcbd68e1cdf3430a.js.map"
     ],
     "path---switching-site-generators": [
-      "path---switching-site-generators-af9477ef162ac750c7d9.js",
-      "path---switching-site-generators-af9477ef162ac750c7d9.js.map"
+      "path---switching-site-generators-28765f4d4212b7c56af9.js",
+      "path---switching-site-generators-28765f4d4212b7c56af9.js.map"
     ],
     "path---css-pretty-widths-with-calc": [
-      "path---css-pretty-widths-with-calc-b1df4712c633b01f7894.js",
-      "path---css-pretty-widths-with-calc-b1df4712c633b01f7894.js.map"
+      "path---css-pretty-widths-with-calc-cf23d5e8cba891c906a4.js",
+      "path---css-pretty-widths-with-calc-cf23d5e8cba891c906a4.js.map"
     ],
     "path---week-17-17": [
       "path---week-17-17-a67836027f1c018c8359.js",
@@ -85,8 +85,8 @@
       "component---src-pages-archive-jsx-24bbc06b4d7afbbe1c94.js.map"
     ],
     "path---making-a-js-plugin": [
-      "path---making-a-js-plugin-cbc77aa799b284c70f86.js",
-      "path---making-a-js-plugin-cbc77aa799b284c70f86.js.map"
+      "path---making-a-js-plugin-023fa3ea08227f586fa7.js",
+      "path---making-a-js-plugin-023fa3ea08227f586fa7.js.map"
     ],
     "component---src-layouts-index-jsx": [
       "component---src-layouts-index-jsx-713cb8fe9bf0c54bf583.js",
@@ -117,8 +117,8 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---week-2-17": [
-      "path---week-2-17-0d5c46185619b48a6e8e.js",
-      "path---week-2-17-0d5c46185619b48a6e8e.js.map"
+      "path---week-2-17-60c02ac79823e28a5696.js",
+      "path---week-2-17-60c02ac79823e28a5696.js.map"
     ],
     "path---happy-birthday": [
       "path---happy-birthday-6becbd2b18d150c1997f.js",
@@ -129,32 +129,32 @@
       "path---sinon-fake-server-methods-bfe8ce02714384e53784.js.map"
     ],
     "path---email-share-link": [
-      "path---email-share-link-51512e5248904bfc5ee5.js",
-      "path---email-share-link-51512e5248904bfc5ee5.js.map"
+      "path---email-share-link-583a564953739482aa29.js",
+      "path---email-share-link-583a564953739482aa29.js.map"
     ],
     "path---css-font-partial": [
-      "path---css-font-partial-4a6fd5dc44d78fd5bc81.js",
-      "path---css-font-partial-4a6fd5dc44d78fd5bc81.js.map"
+      "path---css-font-partial-b46d28d85b11b4e8542d.js",
+      "path---css-font-partial-b46d28d85b11b4e8542d.js.map"
     ],
     "path---week-5-17": [
-      "path---week-5-17-53a613beff94a8688e5e.js",
-      "path---week-5-17-53a613beff94a8688e5e.js.map"
+      "path---week-5-17-1669c7611b2fd19613ac.js",
+      "path---week-5-17-1669c7611b2fd19613ac.js.map"
     ],
     "path---switching-back-to-sublime": [
-      "path---switching-back-to-sublime-b18f6b05058f117e68b2.js",
-      "path---switching-back-to-sublime-b18f6b05058f117e68b2.js.map"
+      "path---switching-back-to-sublime-23a4cd266586566261dc.js",
+      "path---switching-back-to-sublime-23a4cd266586566261dc.js.map"
     ],
     "path---art-lived": [
-      "path---art-lived-227ceee75c9bb1047edb.js",
-      "path---art-lived-227ceee75c9bb1047edb.js.map"
+      "path---art-lived-6c69870bdb2be8f05ecc.js",
+      "path---art-lived-6c69870bdb2be8f05ecc.js.map"
     ],
     "path---js-scope": [
-      "path---js-scope-1c560c521a874e50a42f.js",
-      "path---js-scope-1c560c521a874e50a42f.js.map"
+      "path---js-scope-5e7f22d8c2dc6fa04c7a.js",
+      "path---js-scope-5e7f22d8c2dc6fa04c7a.js.map"
     ],
     "path---device-sticky-bits-on-scroll": [
-      "path---device-sticky-bits-on-scroll-558d66fd305f37d2daa8.js",
-      "path---device-sticky-bits-on-scroll-558d66fd305f37d2daa8.js.map"
+      "path---device-sticky-bits-on-scroll-380d64f6bb0a313664d1.js",
+      "path---device-sticky-bits-on-scroll-380d64f6bb0a313664d1.js.map"
     ],
     "path---week-15-17": [
       "path---week-15-17-f65d5f5a06b362976003.js",
@@ -165,24 +165,24 @@
       "path---js-closure-02c5bcc7eb98877f7d48.js.map"
     ],
     "path---index": [
-      "path---index-f0421a94c3c6671924cc.js",
-      "path---index-f0421a94c3c6671924cc.js.map"
+      "path---index-964bea00aa0398c2b79c.js",
+      "path---index-964bea00aa0398c2b79c.js.map"
     ],
     "path---week-18-17": [
       "path---week-18-17-f77e01f829cd5cd15019.js",
       "path---week-18-17-f77e01f829cd5cd15019.js.map"
     ],
     "path---glendora-mountain-road": [
-      "path---glendora-mountain-road-6b399ad31e7b80daaf11.js",
-      "path---glendora-mountain-road-6b399ad31e7b80daaf11.js.map"
+      "path---glendora-mountain-road-1b35a9ea5990e2d00954.js",
+      "path---glendora-mountain-road-1b35a9ea5990e2d00954.js.map"
     ],
     "path---js-objects": [
-      "path---js-objects-37141c291cbfa87ba3ba.js",
-      "path---js-objects-37141c291cbfa87ba3ba.js.map"
+      "path---js-objects-24916af8ce19aceb6968.js",
+      "path---js-objects-24916af8ce19aceb6968.js.map"
     ],
     "path---week-8-17": [
-      "path---week-8-17-8bb733f9e09d470b085c.js",
-      "path---week-8-17-8bb733f9e09d470b085c.js.map"
+      "path---week-8-17-e36b663a0b50e9fd319a.js",
+      "path---week-8-17-e36b663a0b50e9fd319a.js.map"
     ],
     "path---node-conf-vancouver-17": [
       "path---node-conf-vancouver-17-f94b2acbb76252f67537.js",
@@ -193,8 +193,8 @@
       "path---youre-an-ortiz-d1ddb7588a6286dda15f.js.map"
     ],
     "path---frontend-prototype-configuration": [
-      "path---frontend-prototype-configuration-f796eb72a06266862d2b.js",
-      "path---frontend-prototype-configuration-f796eb72a06266862d2b.js.map"
+      "path---frontend-prototype-configuration-f02635a511bf8b8af33e.js",
+      "path---frontend-prototype-configuration-f02635a511bf8b8af33e.js.map"
     ],
     "commons": [
       "commons-55160e0bc7559186f2f2.js",
@@ -205,12 +205,12 @@
       "path---getting-setup-with-ts-036b306709e612bbe50e.js.map"
     ],
     "path---known-updates-with-el-capitan-os": [
-      "path---known-updates-with-el-capitan-os-2019a11280b2f4faf138.js",
-      "path---known-updates-with-el-capitan-os-2019a11280b2f4faf138.js.map"
+      "path---known-updates-with-el-capitan-os-5ca25fba3f362f1ab1b2.js",
+      "path---known-updates-with-el-capitan-os-5ca25fba3f362f1ab1b2.js.map"
     ],
     "path---css-less-known-selectors": [
-      "path---css-less-known-selectors-67268ad5d57505bddda6.js",
-      "path---css-less-known-selectors-67268ad5d57505bddda6.js.map"
+      "path---css-less-known-selectors-6c37eecb2eb12fb39197.js",
+      "path---css-less-known-selectors-6c37eecb2eb12fb39197.js.map"
     ],
     "path---git-tag-update": [
       "path---git-tag-update-613f30e7d55cb49b2f03.js",
@@ -229,8 +229,8 @@
       "path---week-16-17-54b6749f8d8d66fd1a0c.js.map"
     ],
     "path---js-private-information": [
-      "path---js-private-information-dc3414a7fb586e7cb5d2.js",
-      "path---js-private-information-dc3414a7fb586e7cb5d2.js.map"
+      "path---js-private-information-3f999f76504358d84757.js",
+      "path---js-private-information-3f999f76504358d84757.js.map"
     ],
     "path---formula-for-commits": [
       "path---formula-for-commits-9da15e907840f2cbeb8e.js",
@@ -245,16 +245,16 @@
       "path---debugging-gatsby-d1d78474320ee89943b2.js.map"
     ],
     "path---branded-content": [
-      "path---branded-content-5fadf6bb9ea5904f10f9.js",
-      "path---branded-content-5fadf6bb9ea5904f10f9.js.map"
+      "path---branded-content-467c7898a71a352a46f2.js",
+      "path---branded-content-467c7898a71a352a46f2.js.map"
     ],
     "path---things-change-william-kentridge": [
-      "path---things-change-william-kentridge-af4d5a0236d729c47aa8.js",
-      "path---things-change-william-kentridge-af4d5a0236d729c47aa8.js.map"
+      "path---things-change-william-kentridge-0d2704b66b86e80b614b.js",
+      "path---things-change-william-kentridge-0d2704b66b86e80b614b.js.map"
     ],
     "path---week-12-17": [
-      "path---week-12-17-5a154cfd8630b01ba92a.js",
-      "path---week-12-17-5a154cfd8630b01ba92a.js.map"
+      "path---week-12-17-99075a8bd8c89495ca8a.js",
+      "path---week-12-17-99075a8bd8c89495ca8a.js.map"
     ],
     "path---week-11-17": [
       "path---week-11-17-bc53a796aacbf2f83e36.js",
@@ -277,42 +277,42 @@
       "component---src-pages-index-jsx-fec32a1d842a4bccd99e.js.map"
     ],
     "path---week-7-17": [
-      "path---week-7-17-10dd393f5cea39e112d6.js",
-      "path---week-7-17-10dd393f5cea39e112d6.js.map"
+      "path---week-7-17-919529a5efc023dd994f.js",
+      "path---week-7-17-919529a5efc023dd994f.js.map"
     ],
     "path---arrow-functions-cont": [
-      "path---arrow-functions-cont-d88f0004b619ab1068b7.js",
-      "path---arrow-functions-cont-d88f0004b619ab1068b7.js.map"
+      "path---arrow-functions-cont-14a5f8063a8628c61dfd.js",
+      "path---arrow-functions-cont-14a5f8063a8628c61dfd.js.map"
     ],
     "app": [
-      "app-0c7fe719980a3aefaa78.js",
+      "app-c9e0c1cfc95dcd2b145e.js",
       "build-js-styles.css",
-      "app-0c7fe719980a3aefaa78.js.map",
+      "app-c9e0c1cfc95dcd2b145e.js.map",
       "build-js-styles.css.map"
     ],
     "path---archive": [
-      "path---archive-5a301fba803d54786a90.js",
-      "path---archive-5a301fba803d54786a90.js.map"
+      "path---archive-368757b2541279cc9548.js",
+      "path---archive-368757b2541279cc9548.js.map"
     ],
     "path---week-10-17": [
       "path---week-10-17-47134b6635d935855877.js",
       "path---week-10-17-47134b6635d935855877.js.map"
     ],
     "path---reframing-content": [
-      "path---reframing-content-d00805d7804b8d43461c.js",
-      "path---reframing-content-d00805d7804b8d43461c.js.map"
+      "path---reframing-content-345f726ef02ae8c2c6c8.js",
+      "path---reframing-content-345f726ef02ae8c2c6c8.js.map"
     ],
     "path---kramdown-syntax-cheatsheet": [
       "path---kramdown-syntax-cheatsheet-eaee2a52885cbd44492c.js",
       "path---kramdown-syntax-cheatsheet-eaee2a52885cbd44492c.js.map"
     ],
     "path---arrow-functions": [
-      "path---arrow-functions-50ddbf2c3e46a7e9cb15.js",
-      "path---arrow-functions-50ddbf2c3e46a7e9cb15.js.map"
+      "path---arrow-functions-2b5a2aeb33e887a767b0.js",
+      "path---arrow-functions-2b5a2aeb33e887a767b0.js.map"
     ],
     "path---js-argument-key-word": [
-      "path---js-argument-key-word-0aec0a1181c03bae20bd.js",
-      "path---js-argument-key-word-0aec0a1181c03bae20bd.js.map"
+      "path---js-argument-key-word-0d4dcfb905c992a4c5ce.js",
+      "path---js-argument-key-word-0d4dcfb905c992a4c5ce.js.map"
     ],
     "path---punch-setup": [
       "path---punch-setup-633539a7c1984094b53f.js",
@@ -327,12 +327,12 @@
       "path---turning-37-9257fb433ce0903c2d20.js.map"
     ],
     "path---code-review-etiquette": [
-      "path---code-review-etiquette-2a5b498d1de8f3bd91c4.js",
-      "path---code-review-etiquette-2a5b498d1de8f3bd91c4.js.map"
+      "path---code-review-etiquette-c0106884c66b243fec4e.js",
+      "path---code-review-etiquette-c0106884c66b243fec4e.js.map"
     ],
     "path---glide-carousel": [
-      "path---glide-carousel-3c167ce207013e28c211.js",
-      "path---glide-carousel-3c167ce207013e28c211.js.map"
+      "path---glide-carousel-67c983ef95c0d455c2d9.js",
+      "path---glide-carousel-67c983ef95c0d455c2d9.js.map"
     ],
     "path---creating-aliases": [
       "path---creating-aliases-67299dd2a501b164ed9f.js",
@@ -343,8 +343,8 @@
       "path---about-2f88437cd59172e746c4.js.map"
     ],
     "path---node-meetup-debugging-with-yunong-xiao": [
-      "path---node-meetup-debugging-with-yunong-xiao-d7fb3a27fb3e3cc1bc7f.js",
-      "path---node-meetup-debugging-with-yunong-xiao-d7fb3a27fb3e3cc1bc7f.js.map"
+      "path---node-meetup-debugging-with-yunong-xiao-6c9c8734c949f8078d39.js",
+      "path---node-meetup-debugging-with-yunong-xiao-6c9c8734c949f8078d39.js.map"
     ]
   }
 }
