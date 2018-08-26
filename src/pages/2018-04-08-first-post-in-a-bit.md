@@ -35,11 +35,11 @@ Here's why I stopped writing posts: last August, I realized that the respect I h
 
 I had felt for a while when writing posts last year that my posts were like whispers in the wind. It was tough to realize that. I had fantasized since childhood that someday my dedication would matter to a wider audience.  I somewhat secretly hoped that the invisibility I felt in reality, was a case of circumstance. I fantasized that through effort in my passions that I would find a clan where my ideas would matter. That fantasy motivated me but I realized I needed to let it go.
 
-It was disheartening to think that I might never have a clan and that my journey (writen about in paragraphs above) to loving myself did not lead me to more friendship, love, fame, or riches. However, it felt good to know myself and begin to love myself. It felt good to know that I am who I want to be!
+It was disheartening to think that I might never have a clan and that my journey (written about in paragraphs above) to loving myself did not lead me to more friendship, love, fame, or riches. However, it felt good to know myself and begin to love myself. It felt good to know that I am who I want to be!
 
 ## Well, why am I writing this post now
 
-After accepting that posts I was writing may not ever help find a clan or reach a wider audience, I decided to find excitement and passion in others' writing, videos, and work. I worked hard to listen more and find beauty and knowledge in other peoples words. Months went by without writing posts. I was able to maintain excitement about my passions and have acceptance about my lack of clan. I think that was another phase of loving myself—loving myself in loniliness.
+After accepting that posts I was writing may not ever help find a clan or reach a wider audience, I decided to find excitement and passion in others' writing, videos, and work. I worked hard to listen more and find beauty and knowledge in other peoples words. Months went by without writing posts. I was able to maintain excitement about my passions and have acceptance about my lack of clan. I think that was another phase of loving myself—loving myself in loneliness.
 
 I realized over the last year that by not writing my own posts, I lost my perspective for how I feel about what I'm passionate about when I stopped posting. My perspective helps me to learn, maintain timelines for my memories, and retain what I've learned! So, I am posting again! My goal is to keep my posts a little longer than a tweet with information about my life and/or my learnings. That's it! That's how I found meaning in my meaningless.
 

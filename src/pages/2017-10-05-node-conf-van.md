@@ -24,7 +24,7 @@ Listed below are very high level quickly typed notes that were written during ta
 
 ### Compiler JS Notes (V8)
 
-[V8](https://en.wikipedia.org/wiki/Chrome_V8) is a JavaScript Compiler for the Chrome Browser that compiles JavaScript to Machine Code that is run in the browser. Previously, V8 was built to compile JavaScript strictly for the chrome browser which meant that open source projects like Node that were dependent on V8 ran into issues with V8 updated. Ofter time there was more acknowledgement and support but ultimately, Node support did not affect V8 Chrome timelines. Now, that has changed. Node is a first class citizen of V8. This means that V8 updates must fully support Node to be released.
+[V8](https://en.wikipedia.org/wiki/Chrome_V8) is a JavaScript Compiler for the Chrome Browser that compiles JavaScript to Machine Code that is run in the browser. Previously, V8 was built to compile JavaScript strictly for the chrome browser which meant that open source projects like Node that were dependent on V8 ran into issues with V8 updated. After time there was more acknowledgement and support but ultimately, Node support did not affect V8 Chrome timelines. Now, that has changed. Node is a first class citizen of V8. This means that V8 updates must fully support Node to be released.
 
 There was more than 1 talk about V8.
 
@@ -81,14 +81,14 @@ Notes from [Nwokedi Idika](https://twitter.com/nwokedi?lang=en)'s [talk](http://
 
 #### NPM Security Updates
 
-[NPM](https://www.npmjs.com/)'s rapid growth has lead to learnings in both security and popularity suppport. NPM has been dealing with security problems in such areas as fake packages that perform malicious jobs. NPM is dealing with these issues in both their CLI and in there ability to search for malicious packages.
+[NPM](https://www.npmjs.com/)'s rapid growth has lead to learnings in both security and popularity support. NPM has been dealing with security problems in such areas as fake packages that perform malicious jobs. NPM is dealing with these issues in both their CLI and in there ability to search for malicious packages.
 
 ----
 
 #### NPM has recently added new tooling to their CLI for more security
 Notes from [C J Silverio](https://github.com/ceejbot)'s' [talk](http://events.linuxfoundation.org/events/node-interactive/program/agenda)
 
-NPM's new sercurity cli arguments
+NPM's new security cli arguments
 
 -  `npm token`
    -  `--read-only`
@@ -115,7 +115,7 @@ The node event loop was discussed in regards to debugging and speed.
 
 -  CPU problems
    -  timeouts
-   -  fstimeouts
+   -  timeouts
    -  large JSON
    -  deeply needed templates
    -  monitor node event loop
@@ -134,9 +134,9 @@ JavaScript is now releases new versions yearly. Several talks discussed new Java
 -  [es6 computed property names](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 -  [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 -  [promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
--  [imutability](https://www.sitepoint.com/immutability-javascript/)
+-  [immutability](https://www.sitepoint.com/immutability-javascript/)
 
-#### Building node for ludicrious speed
+#### Building node for ludicrous speed
 
 Making web pages fast is always an important topic.
 
@@ -150,7 +150,7 @@ Making web pages fast is always an important topic.
 
 ---
 
-# Imcomplete!
+# Incomplete!
 
 #### Keynote topics
 
@@ -169,7 +169,7 @@ Making web pages fast is always an important topic.
    -  Workers
      -  Standard API
    -  HTTP/2
-     -  support is happenning
+     -  support is happening
 
 ### Serverless
 
@@ -228,12 +228,12 @@ Making web pages fast is always an important topic.
 -  How people deal with Regular Expressions
 -  Dealing white spaces with Regular Expressions
 -  Where did Regular Expressions come from?
-   -  Regular expressiong came in the 1950s
+   -  Regular expressions came in the 1950s
 -  common
    -  a|b (grouping)
    -  ? 0 or 1
    -  \* 1 or more
--  Chomsky higherarchy of grammars
+-  Chomsky hierarchy of grammars
    -  recursively enumerable
    -  type-0 grammar
       -  every computer is type-O grammar
