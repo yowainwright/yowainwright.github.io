@@ -42,42 +42,42 @@ module.exports = {
         'background_color': '#FFFFFF',
         'icons': [
           {
-            'src': 'https://yowainwright.imgix.net/icon-72x72.png',
+            'src': '/assets/icon-72x72.png',
             'sizes': '72x72',
             'type': 'image/png'
           },
           {
-            'src': 'https://yowainwright.imgix.net/icon-96x96.png',
+            'src': '/assets/icon-96x96.png',
             'sizes': '96x96',
             'type': 'image/png'
           },
           {
-            'src': 'https://yowainwright.imgix.net/icon-128x128.png',
+            'src': '/assets/icon-128x128.png',
             'sizes': '128x128',
             'type': 'image/png'
           },
           {
-            'src': 'https://yowainwright.imgix.net/icon-144x144.png',
+            'src': '/assets/icon-144x144.png',
             'sizes': '144x144',
             'type': 'image/png'
           },
           {
-            'src': 'https://yowainwright.imgix.net/icon-152x152.png',
+            'src': '/assets/icon-152x152.png',
             'sizes': '152x152',
             'type': 'image/png'
           },
           {
-            'src': 'https://yowainwright.imgix.net/icon-192x192.png',
+            'src': '/assets/icon-192x192.png',
             'sizes': '192x192',
             'type': 'image/png'
           },
           {
-            'src': 'https://yowainwright.imgix.net/icon-384x384.png',
+            'src': '/assets/icon-384x384.png',
             'sizes': '384x384',
             'type': 'image/png'
           },
           {
-            'src': 'https://yowainwright.imgix.net/icon-512x512.png',
+            'src': '/assets/icon-512x512.png',
             'sizes': '512x512',
             'type': 'image/png'
           }

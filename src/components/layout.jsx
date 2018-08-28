@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Head from '../components/Head'
 import Header from '../components/Header'
@@ -13,21 +13,14 @@ import '../styles/main.scss'
 
 require('prismjs/themes/prism.css')
 
-class Template extends Component {
-  render () {
-    const {
-      children,
-    } = this.props
-    return (
-      <div className='gatsby-container'>
-        <Head />
-        <Header />
-        {children()}
-        <Footer />
-      </div>
-    )
-  }
-}
+const Template = ({ children }) => (
+  <div className='gatsby-container'>
+    <Head />
+    <Header />
+    {children}
+    <Footer />
+  </div>
+)
 
 /*
   TODO
@@ -35,7 +28,7 @@ class Template extends Component {
   document children, location and route in the Gatsby context
 */
 Template.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.object,
 }
 
 export default Template

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
 
 class BlogPostTemplate extends Component {
   constructor (props) {
@@ -25,23 +27,25 @@ class BlogPostTemplate extends Component {
     const post = this.post
 
     return (
-      <article>
-        <Helmet title={`${post.frontmatter.title} | Jeffry.in`}>
-          <meta name='twitter:description' property='og:description' content={`${post.frontmatter.meta}`} />
-          <link rel='canonical' href={`${post.frontmatter.path}`} itemProp='url' />
-          <meta name='twitter:url' property='og:url' content={`${post.frontmatter.path}`} />
-          <meta name='twitter:title' property='og:title' content={`${post.frontmatter.title}`} />
-          <meta name='twitter:image' content={`${post.frontmatter.featured_image || 'https://yowainwright.imgix.net/w-logo-twitter.jpg'}?w=600&h=335&fit=crop&crop=focalpoint&auto=format`} itemProp='image' />
-          <meta property='og:image' content={`${post.frontmatter.featured_image || 'https://yowainwright.imgix.net/w-logo-fb.jpg'}?w=1200&h=600&fit=crop&crop=focalpoint&auto=format`} itemProp='image' />
-        </Helmet>
-        <header>
-          <h1 itemProp='headeline'>{post.frontmatter.title}</h1>
-          {this.generateDate()}
-        </header>
-        <div className='wrapper'>
-          <div className='content' dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div>
-      </article>
+      <Layout>
+        <article>
+          <Helmet title={`${post.frontmatter.title} | Jeffry.in`}>
+            <meta name='twitter:description' property='og:description' content={`${post.frontmatter.meta}`} />
+            <link rel='canonical' href={`${post.frontmatter.path}`} itemProp='url' />
+            <meta name='twitter:url' property='og:url' content={`${post.frontmatter.path}`} />
+            <meta name='twitter:title' property='og:title' content={`${post.frontmatter.title}`} />
+            <meta name='twitter:image' content={`${post.frontmatter.featured_image || 'https://yowainwright.imgix.net/w-logo-twitter.jpg'}?w=600&h=335&fit=crop&crop=focalpoint&auto=format`} itemProp='image' />
+            <meta property='og:image' content={`${post.frontmatter.featured_image || 'https://yowainwright.imgix.net/w-logo-fb.jpg'}?w=1200&h=600&fit=crop&crop=focalpoint&auto=format`} itemProp='image' />
+          </Helmet>
+          <header>
+            <h1 itemProp='headeline'>{post.frontmatter.title}</h1>
+            {this.generateDate()}
+          </header>
+          <div className='wrapper'>
+            <div className='content' dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
+        </article>
+      </Layout>
     )
   }
 }

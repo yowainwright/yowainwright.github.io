@@ -11,7 +11,7 @@ categories:
 - story
 ---
 
-The Engineering Team at Dollar Shave Club is pretty excited about [TypeScript](https://github.com/Microsoft/TypeScript). I'm excited too. When I started writing this post, I was not familar with TypeScript beyond conversations and TypeScript's [getting started tutorials](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html). In this post, I documented getting a TypeScript repository setup to compile, lint, and test in TypeScript. While writing this post, I built a [Linked List](https://github.com/yowainwright/datastructures-ts/tree/master/packages/linked-list) in TypeScript.
+The Engineering Team at Dollar Shave Club is pretty excited about [TypeScript](https://github.com/Microsoft/TypeScript). I'm excited too. When I started writing this post, I was not familiar with TypeScript beyond conversations and TypeScript's [getting started tutorials](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html). In this post, I documented getting a TypeScript repository setup to compile, lint, and test in TypeScript. While writing this post, I built a [Linked List](https://github.com/yowainwright/datastructures-ts/tree/master/packages/linked-list) in TypeScript.
 
 ## Tool Decisions
 
@@ -108,14 +108,14 @@ Listed below are general comment examples for [TypeDocs](https://github.com/Type
 
 ## Problems I had getting started with TypeScript
 
-I knew there were benefits to be had because some of my team had taken on TypeScript full on. That stated, I did have some frustations getting setup. I don't know if I would have pushed through the few hours of frustration for myself had I not had teammate support. I'd like to think I would have.
+I knew there were benefits to be had because some of my team had taken on TypeScript full on. That stated, I did have some frustrations getting setup. I don't know if I would have pushed through the few hours of frustration for myself had I not had teammate support. I'd like to think I would have.
 
 ### Here are some problems I had getting started
 
 Listed below are problems I had getting started with TypeScript:
 
 - I had problems reading the TypeScript messages in VSCode
-- I had errors issues with imports in my tests (I spent a lot of time being frustated here)
+- I had errors issues with imports in my tests (I spent a lot of time being frustrated here)
 - Sometimes I have to reference VSCode after I've made minor changes to see if errors are actual errors
 
 ### Here are some problems with solutions
@@ -374,4 +374,4 @@ The solutions above are/were provided by me. I'm am newer to TypeScript. Use wit
 
 ## Conclusion: Why I will be using Types as much as possible
 
-I'm not a rocket scientist—far from it. When writing code, I want feedback as quickly as possible as much as possible. After learning how continuous integration, linting and test driven development could help me improve, wanting more support from tools like TypeScript is a no brainer. TypeScript, I've found has not only helped me define Types but it also helps me break down code—making it simplier.
+I'm not a rocket scientist—far from it. When writing code, I want feedback as quickly as possible as much as possible. After learning how continuous integration, linting and test driven development could help me improve, wanting more support from tools like TypeScript is a no brainer. TypeScript, I've found has not only helped me define Types but it also helps me break down code—making it simpler.
