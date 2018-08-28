@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import { graphql } from 'gatsby'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
 
 /*
   Archive 📚
@@ -47,19 +49,21 @@ class Archive extends Component {
 
   render () {
     return (
-      <main className='main'>
-        <Helmet title={this.title}>
-          <meta name='twitter:description' property='og:description' content={`${this.description}`} />
-          <link rel='canonical' href='https://jeffry.in/archive/' itemProp='url' />
-          <meta name='twitter:url' property='og:url' content='https://jeffry.in/archive/' />
-          <meta name='twitter:title' property='og:title' content={`${this.title}`} />
-          <meta name='twitter:image' content='https://yowainwright.imgix.net/w-logo-twitter.jpg?w=600&h=335&fit=crop&crop=focalpoint&auto=format' itemProp='image' />
-          <meta property='og:image' content='https://yowainwright.imgix.net/w-logo-fb.jpg?w=1200&h=600&fit=crop&crop=focalpoint&auto=format' itemProp='image' />
-        </Helmet>
-        <div className='main__grid'>
-          {this.generatePosts()}
-        </div>
-      </main>
+      <Layout>
+        <main className='main'>
+          <Helmet title={this.title}>
+            <meta name='twitter:description' property='og:description' content={`${this.description}`} />
+            <link rel='canonical' href='https://jeffry.in/archive/' itemProp='url' />
+            <meta name='twitter:url' property='og:url' content='https://jeffry.in/archive/' />
+            <meta name='twitter:title' property='og:title' content={`${this.title}`} />
+            <meta name='twitter:image' content='https://yowainwright.imgix.net/w-logo-twitter.jpg?w=600&h=335&fit=crop&crop=focalpoint&auto=format' itemProp='image' />
+            <meta property='og:image' content='https://yowainwright.imgix.net/w-logo-fb.jpg?w=1200&h=600&fit=crop&crop=focalpoint&auto=format' itemProp='image' />
+          </Helmet>
+          <div className='main__grid'>
+            {this.generatePosts()}
+          </div>
+        </main>
+      </Layout>
     )
   }
 }
