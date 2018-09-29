@@ -41,8 +41,16 @@ Difficult communication is very important. I have never met someone good in diff
 
 ### Speaking softly
 
+Speaking softly is great for communication. It makes people feel comfortable. It naturally brings people closer because they have to get closer to listen. Being a passionate person, I have become very aware that a large part of communicate is not what is said but how it is said. Controlling pitch and voice inflection are very hard. Speaking softly is an easier thing to do on the fly. Especially when communicating about things with passion or intensity.
+
 ### Keeping communications short
+
+Keeping communications short allows others to contribute their ideas and also, ensure that they understond you. This goes against natural inclination when trying to communicate about complex things but giving listeners the opportunity to digest information or ask for clarification will lead to much more understanding for them of what you've said.
 
 ### Owning emotions
 
+Even when we have a bad day, we have to communicate with others. We all wish that we could generally hide our emotions but people have instincts. They'll often times know something is not right. They may think that it has to do with them when it has to do with you. Letting them know that you're having a bad day but you want to talk with them allows then to not read into your verbal queues.
+
 ## Conclusions
+
+Communication is tough! For people that it comes naturally to, it is very powerful. Others will gravitate towards them.
