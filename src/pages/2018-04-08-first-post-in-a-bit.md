@@ -11,7 +11,7 @@ categories:
 - story
 ---
 
-I stopped posting on this blog in September last year, 2017. It was an easy decision to make then. There were specific reasons I stopped positing, but at the time I couldn't articulate them. In this post, I'm going to articulate why I stopped posting—but first I'll share a little bit about my history because it is related to why I stopped posting.
+I stopped posting on this blog in September last year, 2017. It was an easy decision to make then. There were specific reasons I stopped posting, but at the time I couldn't articulate them. In this post, I'm going to articulate why I stopped posting—but first I'll share a little bit about my history because it is related to why I stopped posting.
 
 ![Image taken at Malaga Cove, in Palos Verdes](https://yowainwright.imgix.net/first-post-in-a-bit/cool-waters.jpg)
 
