@@ -11,21 +11,23 @@ categories:
 - story
 ---
 
-Verbal expression and psychical expression can be very different. This can alter the reception of communications.
+Verbal communication and psychical communication can be very different. This can alter the reception of communications.
 
 > Is simple terms, if a person angrily yells, "Have a good day!", there is a probability that the reception of that comment will not be received as, "Thanks! I will have a good day.".
 
-I think about how verbal communications are received by others a lot because I want to be a better communicator. This post documents things I've noticed in communication that alter the perception of conversations. My observations are natural. I'm not expert in communication—more like the opposite.
+I think about how verbal communication and psychical communication are received by others a lot because I want to be a better communicator. This post documents things I've noticed in human expression that alter the perception of conversations. My observations are natural. I'm not expert in communication—more like the opposite. I often walk away from situations thinking, "I didn't do a good job with my expressions. What could I have done better?".
 
 ---
 
 ## Making others feel good in basic communication
 
-There are simple communications that people can do to make others feel good—smiling, telling  a joke, listening. To me, writing that—it seems obvious. It is not! A joke can be misunderstood. Someone has to talk to you for you to listen. Even a smile can be misunderstood in the wrong context. When I think about it, what's the simplest way to make someone feel good? I'm not sure. It's nuanced. Below, I'm going to break down basic things I have observed with both poor and good commmunication. There is no data to support my thoughts. My observations are my own.
+There are simple communications that people can do to make others feel good—smiling, telling  jokes, listening. To me, writing that—it seems obvious. It is not! A joke can be misunderstood. Someone has to talk to you for you to listen. Even a smile can be misunderstood in the wrong context. When I think about it, what's the simplest way to make someone feel good? I'm not sure. It's nuanced. Below, I'm going to break down things I have observed with both poor and good human expression. There is no data to support my thoughts. My observations are my own.
 
 ### Smiling
 
-When I was younger, I that a smile always make someone feel good. Maybe it did—when I was younger. Now, I'm older. If I smile at someone I don't know, my smile may be received as an intent to engage. Engaging someone in unwanted communication is negative. I've found that smiling at others is received positively when the opportunity of further engagement is low. Meaning that if I smile at someone as they are leaving in a car, there is high chance that the smile will be received positively.
+When I was younger, I thought that smiles always make someone feel good. Maybe they did—when I was younger. Now, I'm older. In simple communication like passing by someone, if I smile at them, my smile may be received as an intent to engage. Engaging someone in unwanted communication is negative. I've found that smiling at others is received positively in simple communication when the opportunity of further engagement is low. Meaning that if I smile at someone as they are leaving in a car, there is high chance that the smile will be received positively.
+
+Alternatively, if I smile at someone and walk towards them, how a smile will be received is much more unkown.At that point, it is very much on how the persom perceives and receives the smile. This scenerio is now complex and beyond simple expression. A much simplier why to smile at someone and have it guaranteed to be received negatively is to smile when they're upset or negative. It could even be speculated that to a upset person, expressions of being upset one's self could be perceived more positively than smiling.
 
 ### Jokes
 
