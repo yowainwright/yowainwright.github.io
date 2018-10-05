@@ -19,7 +19,7 @@
       "@babel/preset-react",
       {
         "useBuiltIns": true,
-        "pragma": "React.createElement",
+        "pragma": "React.createElement"
       }
     ]
   ],
@@ -27,7 +27,7 @@
     [
       "@babel/plugin-proposal-class-properties",
       {
-        "loose": true,
+        "loose": true
       }
     ],
     "@babel/plugin-syntax-dynamic-import",
@@ -36,7 +36,7 @@
       "@babel/plugin-transform-runtime",
       {
         "helpers": true,
-        "regenerator": true,
+        "regenerator": true
       }
     ]
   ],
