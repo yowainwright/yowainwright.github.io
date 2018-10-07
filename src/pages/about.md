@@ -39,15 +39,14 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 
 <br>
 
-<p align="center">Email me at <a href="mailto:yowainwright@gmail.com">yowainwright@gmail.com</a> or reach out on socially.</p>
-<p align="center">
-  <a href="https://github.com/yowainwright"><strong>Github</strong></a>&nbsp;&nbsp;
-  <a href="https://instagram.com/yowainwright"><strong>Instagram</strong></a>&nbsp;&nbsp;
-  <a href="https://twitter.com/yowainwright"><strong>Twitter</strong></a>&nbsp;&nbsp;
-  <a href="https://medium.com/@yowainwright"><strong>Medium</strong></a>&nbsp;&nbsp;
-  <a href="http://ratherbe.in"><strong>Tumblr</strong></a>&nbsp;&nbsp;
-  <a href="https://www.strava.com/athletes/722335"><strong>Strava</strong></a>&nbsp;&nbsp;
-  <a href="https://www.linkedin.com/in/jeffrywainwright/"><strong>LinkedIn</strong></a>&nbsp;&nbsp;
+<p align="center">Email me at <a href="mailto:yowainwright@gmail.com"><strong>yowainwright@gmail.com</strong></a> or connect with me. I'm on
+  <a href="https://github.com/yowainwright"><strong>Github</strong></a>,
+  <a href="https://instagram.com/yowainwright"><strong>Instagram</strong></a>,
+  <a href="https://twitter.com/yowainwright"><strong>Twitter</strong></a>,
+  <a href="https://medium.com/@yowainwright"><strong>Medium</strong></a>,
+  <a href="http://ratherbe.in"><strong>Tumblr</strong></a>,
+  <a href="https://www.strava.com/athletes/722335"><strong>Strava</strong></a>, and
+  <a href="https://www.linkedin.com/in/jeffrywainwright/"><strong>LinkedIn</strong></a>.
 </p>
 
 <br>
