@@ -1,5 +1,5 @@
 ---
-title: TypeScript Init—Getting A Test Driven TypeScript Repository Setup For Noobs
+title: TypeScript Init—Getting A Test Driven TypeScript Repository Setup
 date: "2018-05-02"
 layout: post
 readNext: "/"
@@ -11,7 +11,7 @@ categories:
 - story
 ---
 
-The Engineering Team at Dollar Shave Club is pretty excited about [TypeScript](https://github.com/Microsoft/TypeScript). I'm excited too. When I started writing this post, I was not familiar with TypeScript beyond conversations and TypeScript's [getting started tutorials](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html). In this post, I documented getting a TypeScript repository setup to compile, lint, and test in TypeScript. While writing this post, I built a [Linked List](https://github.com/yowainwright/datastructures-ts/tree/master/packages/linked-list) in TypeScript.
+The Engineering Team at Dollar Shave Club is excited about [TypeScript](https://github.com/Microsoft/TypeScript). I'm excited too. When I started writing this post, I was not familiar with TypeScript beyond conversations and TypeScript's [getting started tutorials](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html). In this post, I documented getting a TypeScript repository setup to compile, lint, and test TypeScript. While writing this post, I built a [Linked List](https://github.com/yowainwright/datastructures-ts/tree/master/packages/linked-list) in TypeScript.
 
 ## Tool Decisions
 
@@ -23,12 +23,12 @@ In the table below I broke down the tools I tried to build my first Test Drive D
 |---|---|---|---|
 | Build | Rollup | TypeScript (TSC) | Rollup worked with minimal effort. I am user TSC because it means 1 less layer of abstraction. |
 | Type Checker | TypeScript | TypeScript | TypeScript works well. The feedback in VS Code is immediate and offers clear messaging. |
-| Testing | TS-Jest | TS-Jest | I was concerned about using TS-Jest because the documentation is not very clear for me starting out...but somehow it worked. I'm familiar with Jest so that was good. |
+| Testing | TS-Jest | TS-Jest | I was concerned about using TS-Jest because the documentation between it and Jest seemed confusing but it worked. I'm familiar with Jest so the switch was easy |
 | Linting | TS-Lint | TS-Lint | TS-Lint works well in VS Code. As far as the CLI, I'm still not clear if TS-Lint is working. |
 
 ### Why I used TypeScript's Compiler?
 
-I initially setup TypeScript with Rollup. Rollup was compiling fine. It seemed like another layer of abstraction. To simplify the amount of configuration,  I decided to use TypeScript's compiler.
+I initially setup TypeScript with Rollup. Rollup was compiling fine. It seemed like another layer of abstraction. To simplify the amount of configuration, I decided to use TypeScript's compiler.
 
 ### TS compiler options
 
@@ -44,7 +44,7 @@ The Dollar Shave Club team uses [Jest](https://facebook.github.io/jest/) for uni
 
 For linting, I used [TS-Lint](https://palantir.github.io/tslint/) which extends [ESLint](https://eslint.org/). This took little time. I imported TS-Lint, added some configuration and a npm script—that was it. From there I was getting TypeScript Linting Feedback.
 
-I added [TypeDocs](https://github.com/TypeStrong/typedoc) so that I could make sure to document what the heck I was doing.
+I added [JSDocs](http://usejsdoc.org/) so that I could make sure to document what the heck I was doing.
 
 ### Setting up tests with TS Jest
 
@@ -85,15 +85,15 @@ test('Jest is working, Node is imported', () => {
 
 ```
 
-### TypeDocs
+### JSDocs
 
-Listed below are general comment examples for [TypeDocs](https://github.com/TypeStrong/typedoc)
+Listed below are general comment examples for [JSDocs](http://usejsdoc.org/)
 
 ```javascript
 
   ...
   /**
-   * @param value value
+   * @param {value} value
    * adds a new node to the beginning of the linkedList
    */
   addFirstNode (value: T) {
@@ -116,7 +116,7 @@ Listed below are problems I had getting started with TypeScript:
 
 - I had problems reading the TypeScript messages in VSCode
 - I had errors issues with imports in my tests (I spent a lot of time being frustrated here)
-- Sometimes I have to reference VSCode after I've made minor changes to see if errors are actual errors
+- Sometimes I have to refresh VSCode after I've made minor changes to see if errors are actual errors
 
 ### Here are some problems with solutions
 
@@ -126,6 +126,8 @@ My tests globals are undefined and TypeScript barks at that.
 
 declare function test (msg: string, test: Function)
 declare function expect (result: any)
+
+// or create a setupJest.js file
 
 ```
 
@@ -141,29 +143,33 @@ declare function expect (result: any)
 
 {
   "compilerOptions": {
-    "outDir": ".",
-    "target": "es6",
+    "outDir": "dist/components",
+    "module": "commonjs",
+    "target": "es5",
     "lib": [
       "es6",
       "es2016.array.include",
       "es2017",
       "dom"
     ],
+    "declaration": true,
+    "allowJs": false,
     "sourceMap": true,
-    "allowJs": true,
-    "rootDir": ".",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "strictNullChecks": true
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "types": [
+      "jest",
+      "node"
+    ]
   },
   "exclude": [
-    "coverage",
-    "node_modules",
-    "**/__tests__/*"
+    "**/__tests__/",
+    "**/*.js"
+  ],
+  "include": [
+    "**/*.ts"
   ]
 }
 
@@ -186,8 +192,7 @@ declare function expect (result: any)
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(ts?)$",
     "moduleFileExtensions": [
-      "ts",
-      "js"
+      "ts"
     ]
   },
 
@@ -221,7 +226,7 @@ declare function expect (result: any)
  ...
  "scripts": {
     "build": "npm run build:ts",
-    "build:ts": "tsc -p tsconfig.json",
+    "build:ts": "tsc",
   ...
 
 ```
@@ -336,23 +341,9 @@ export namespace StickyBits {
       "dom"
     ],
     "sourceMap": true,
-    "declaration": true,
     "allowJs": true,
     "rootDir": ".",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "strictNullChecks": true
-  },
-  "exclude": [
-    "**/*.js",
-    "coverage",
-    "node_modules",
-    "**/__tests__/*"
-  ]
+  }
 }
 
 ```
