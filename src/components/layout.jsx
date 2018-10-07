@@ -28,7 +28,7 @@ const Template = ({ children }) => (
   document children, location and route in the Gatsby context
 */
 Template.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.node,
 }
 
 export default Template

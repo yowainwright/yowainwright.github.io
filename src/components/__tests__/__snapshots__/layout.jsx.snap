@@ -65,6 +65,7 @@ exports[`Template component renders correctly 1`] = `
       </li>
     </ol>
   </nav>
+  <div />
   <footer
     className="site-footer"
     itemType="http://schema.org/WPFooter"

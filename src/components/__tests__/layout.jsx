@@ -4,7 +4,8 @@ import Template from '../layout'
 
 describe('Template component', () => {
   it('renders correctly', () => {
-    const rendered = renderer.create(<Template children={() => null} />).toJSON() // eslint-disable-line
+    const node = <div />
+    const rendered = renderer.create(<Template children={node} />).toJSON() // eslint-disable-line
 
     expect(rendered).toMatchSnapshot()
   })

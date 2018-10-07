@@ -106,7 +106,8 @@
     },
     "testPathIgnorePatterns": [
       "node_modules",
-      ".cache"
+      ".cache",
+      "__snapshots__"
     ],
     "transformIgnorePatterns": [
       "node_modules/(?!(gatsby)/)"
