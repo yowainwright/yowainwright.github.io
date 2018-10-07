@@ -27,7 +27,7 @@ There are simple communications that people can do to make others feel good—sm
 
 When I was younger, I thought that smiles always make someone feel good. Maybe they did—when I was younger. Now, I'm older. In simple communication like passing by someone, if I smile at them, my smile may be received as an intent to engage. Engaging someone in unwanted communication is negative. I've found that smiling at others is received positively in simple communication when the opportunity of further engagement is low. Meaning that if I smile at someone as they are leaving in a car, there is high chance that the smile will be received positively.
 
-Alternatively, if I smile at someone and walk towards them, how a smile will be received is much more unkown.At that point, it is very much on how the persom perceives and receives the smile. This scenerio is now complex and beyond simple expression. A much simplier why to smile at someone and have it guaranteed to be received negatively is to smile when they're upset or negative. It could even be speculated that to a upset person, expressions of being upset one's self could be perceived more positively than smiling.
+Alternatively, if I smile at someone and walk towards them, how a smile will be received is much more unknown. At that point, it is very much on how the person perceives and receives the smile. This scenario is now complex and beyond simple expression. A much simpler why to smile at someone and have it guaranteed to be received negatively is to smile when they're upset or negative. It could even be speculated that to a upset person, expressions of being upset one's self could be perceived more positively than smiling.
 
 ### Jokes
 
@@ -47,7 +47,7 @@ Speaking softly is great for communication. It makes people feel comfortable. It
 
 ### Keeping communications short
 
-Keeping communications short allows others to contribute their ideas and also, ensure that they understond you. This goes against natural inclination when trying to communicate about complex things but giving listeners the opportunity to digest information or ask for clarification will lead to much more understanding for them of what you've said.
+Keeping communications short allows others to contribute their ideas and also, ensure that they understood you. This goes against natural inclination when trying to communicate about complex things but giving listeners the opportunity to digest information or ask for clarification will lead to much more understanding for them of what you've said.
 
 ### Owning emotions
 
