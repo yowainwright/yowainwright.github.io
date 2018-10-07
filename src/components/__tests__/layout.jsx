@@ -1,9 +1,10 @@
 import React from 'react'
-import Template from '..'
+import renderer from 'react-test-renderer'
+import Template from '../layout'
 
 describe('Template component', () => {
   it('renders correctly', () => {
-    const rendered = shallow(<Template children={() => null} />) // eslint-disable-line
+    const rendered = renderer.create(<Template children={() => null} />).toJSON() // eslint-disable-line
 
     expect(rendered).toMatchSnapshot()
   })
