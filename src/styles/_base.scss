@@ -236,14 +236,13 @@ code {
   border: 1px solid lightgray;
   background-color: $color-grey-lightest;
   color: mediumvioletred;
-  font-size: 1.2rem;
+  font-size: .8rem;
   padding: .075rem 0;
   text-shadow: 1px 1px white;
   pre & {
     background-color: initial;
     border: 0;
     border-radius: 0;
-    font-size: 1rem;
     line-height: 1.6;
     text-shadow: none;
   }
