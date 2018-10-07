@@ -12,7 +12,7 @@ categories:
 - os
 ---
 
-[Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are used for establishing versions of products. They usually use [Semver Versioning](http://semver.org/). 
+[Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are used for establishing versions of products. They usually use [Semver Versioning](http://semver.org/).
 
 Because tags often specify specific changes in code, sometimes updates need to be added to specific tags. This update can be made in a few simple steps.
 
@@ -28,5 +28,5 @@ Delete tag
 git push origin :refs/tags/[tag version]
 ```
 
-Finally, re-create the tag by following your initial steps for setting up git tags. 
+Finally, re-create the tag by following your initial steps for setting up git tags.
 
