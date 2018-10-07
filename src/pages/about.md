@@ -1,5 +1,5 @@
 ---
-title: About me, Jeff Wainwright, a SoCal based software engineer and surfer
+title: About me, Jeff Wainwright, a software engineer and surfer
 date: "2017-07-28"
 layout: post
 readNext: "/"
