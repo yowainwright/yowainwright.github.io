@@ -4,14 +4,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-
-/*
-  Archive 📚
-  ---
-  renders all posts without images
-*/
-
-class Archive extends Component {
+export default class Archive extends Component {
   constructor (props) {
     super(props)
     this.description = 'A full list of blog posts written by Jeffry Wainwright, a human person who enjoys building software, open source, being outside, and trying to live life with purpose.'
@@ -68,14 +61,6 @@ class Archive extends Component {
   }
 }
 
-export default Archive
-
-/*
-  Graphql
-  ----
-  exports data for pages and posts
-  TODO: this probably should not live here
-*/
 export const pageQuery = graphql`
   query ArchiveQuery {
     site {

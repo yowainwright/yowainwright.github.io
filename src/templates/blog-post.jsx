@@ -4,19 +4,11 @@ import get from 'lodash/get'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
-class BlogPostTemplate extends Component {
+export default class BlogPostTemplate extends Component {
   constructor (props) {
     super(props)
     this.post = get(this, 'props.data.markdownRemark')
   }
-
-  // generateCategories() {
-  //   const categories = this.post.categories
-  //   if (!categories || categories.length === 0) return
-  //   return categories.forEach(category => {
-  //     (<Link to={`/category/${category}``} className='category')
-  //   })
-  // }
 
   generateDate = () => {
     if (this.post.frontmatter.path === '/about/') return
@@ -49,8 +41,6 @@ class BlogPostTemplate extends Component {
     )
   }
 }
-
-export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
