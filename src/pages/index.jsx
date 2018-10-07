@@ -4,14 +4,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-
-/*
-  BlogIndex 📚
-  ---
-  renders a blog roll of 10 posts
-*/
-
-class BlogIndex extends Component {
+export default class BlogIndex extends Component {
   constructor (props) {
     super(props)
     this.title = 'Jeffry.in'
@@ -19,12 +12,6 @@ class BlogIndex extends Component {
     this.posts = get(this, 'props.data.allMarkdownRemark.edges')
   }
 
-  /*
-    generatePostHeader
-    ----
-    generates a postItems post header
-
-  */
   generatePostHeader = (title, path, date) => {
     return (
       <header className='post__header'>
@@ -34,12 +21,6 @@ class BlogIndex extends Component {
     )
   }
 
-  /*
-    generatePostFigure
-    ----
-    generates a postItems post figure if defined
-
-  */
   generatePostFigure = (image, path) => {
     if (typeof image === 'undefined') return ''
     return (
@@ -51,24 +32,15 @@ class BlogIndex extends Component {
     )
   }
 
-  /*
-    generatePosts
-    ----
-    generates 10 post max
-
-  */
   generatePosts = () => {
     const postItems = []
     this.posts.forEach((post, i) => {
       if (i > 11) return
 
-      // define mandatory post data
       const pNode = post.node
       const path = get(post, 'node.frontmatter.path') || pNode.path
-      // return based on mandatory data
       if (path === '/404/' || path === '/about' || path === '/about/') return
 
-      // define post data
       const title = get(post, 'node.frontmatter.title') || pNode.title
       const date = get(post, 'node.frontmatter.date') || pNode.date
       const description = get(post, 'node.frontmatter.meta') || pNode.meta
@@ -76,7 +48,6 @@ class BlogIndex extends Component {
       const header = this.generatePostHeader(title, path, date)
       const figure = this.generatePostFigure(image, path)
 
-      // build postItems [array]
       postItems.push(
         <article key={i} className='post--article'>
           {header}
@@ -110,14 +81,6 @@ class BlogIndex extends Component {
   }
 }
 
-export default BlogIndex
-
-/*
-  Graphql
-  ----
-  exports data for pages and posts
-  TODO: this probably should not live here
-*/
 export const pageQuery = graphql`
   query IndexQuery {
     site {

@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
   ----
   The Header Component is the navigation and top part of the site across all pages/routes
 */
-class Head extends Component {
+export default class Head extends Component {
   constructor (props) {
     super(props)
     this.gtmInlineScript = 'window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag(\'js\', new Date());gtag(\'config\', \'UA-73077309-1\');'
@@ -34,5 +34,3 @@ class Head extends Component {
     )
   }
 }
-
-export default Head

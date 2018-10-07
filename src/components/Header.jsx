@@ -1,11 +1,5 @@
 import React, { Component } from 'react'
-
-/*
-  Header 👤
-  ----
-  The Header Component is the navigation and top part of the site across all pages/routes
-*/
-class Header extends Component {
+export default class Header extends Component {
   constructor (props) {
     super(props)
     this.name = 'site-nav'
@@ -70,5 +64,3 @@ class Header extends Component {
     )
   }
 }
-
-export default Header

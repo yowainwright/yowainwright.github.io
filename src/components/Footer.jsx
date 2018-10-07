@@ -1,14 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 
-/*
-  Footer (site footer) 👣
-  ----
-  contains footer information
-  - inherits gatsby link
-  - takes in a year
-*/
-class Footer extends Component {
+export default class Footer extends Component {
   constructor (props) {
     super(props)
     this.name = 'site-footer'
@@ -24,5 +17,3 @@ class Footer extends Component {
     )
   }
 }
-
-export default Footer
