@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BlogPost component renders correctly 1`] = `
+exports[`Template component renders correctly 1`] = `
 <div
   className="gatsby-container"
 >
@@ -65,28 +65,7 @@ exports[`BlogPost component renders correctly 1`] = `
       </li>
     </ol>
   </nav>
-  <article>
-    <header>
-      <h1
-        itemProp="headeline"
-      >
-        foo
-      </h1>
-      <time />
-    </header>
-    <div
-      className="wrapper"
-    >
-      <div
-        className="content"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": undefined,
-          }
-        }
-      />
-    </div>
-  </article>
+  <div />
   <footer
     className="site-footer"
     itemType="http://schema.org/WPFooter"

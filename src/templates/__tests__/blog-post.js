@@ -1,4 +1,5 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
 import BlogPost from '../blog-post'
 
 describe('BlogPost component', () => {
@@ -10,7 +11,7 @@ describe('BlogPost component', () => {
         },
       },
     }
-    const rendered = shallow(<BlogPost data={data} />)
+    const rendered = renderer.create(<BlogPost data={data} />).toJSON()
 
     expect(rendered).toMatchSnapshot()
   })

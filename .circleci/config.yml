@@ -12,6 +12,6 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: npm install
-      - run: npm run eslint:ci
-      - run: npm test
+      - run: yarn
+      - run: yarn eslint:ci
+      - run: yarn test

@@ -9,6 +9,7 @@ module.exports = {
     "describe": true,
     "expect": true,
     "graphql": true,
+    "jest": true,
     "it": true,
     "shallow": true,
   },
