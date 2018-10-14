@@ -1,20 +1,9 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 export default class Header extends Component {
-  constructor (props) {
-    super(props)
-    this.name = 'site-nav'
-  }
-
-  /*
-    TODO
-    ----
-    Abstract navItems out to a config
-  */
-  generateNav (name) {
-    const nav = []
-
-    // [array] of {object} nav items
-    const navItems = [
+  static defaultProps = {
+    componentName: 'site-nav',
+    navItems: [
       {
         alias: 'home',
         name: 'Jeffry.in',
@@ -40,27 +29,36 @@ export default class Header extends Component {
         name: 'About',
         path: '/about/',
       },
-    ]
-
-    // build the nav list
-    navItems.map((item, i) => {
-      nav.push(
-        <li key={i} className={`${name}__item ${name}__item--${item.alias}`}>
-          <a className={`${name}__link ${name}__link--${item.alias}`} href={item.path}>{item.name}</a>
-        </li>
-      )
-    })
-
-    return nav
+    ],
   }
 
   render () {
+    const { componentName, navItems } = this.props
     return (
-      <nav id={`${this.name}`} className={`${this.name}`} role='navigation' itemType='http://schema.org/SiteNavigationElement'>
-        <ol className={`${this.name}__items`}>
-          {this.generateNav(this.name)}
+      <nav id={componentName} className={componentName} role='navigation' itemType='http://schema.org/SiteNavigationElement'>
+        <ol className={`${componentName}__items`}>
+          {navItems.map(({ alias, name, path }, i) => {
+            return (
+              <li
+                key={i}
+                className={`${componentName}__item ${componentName}__item--${alias}`}
+              >
+                <a
+                  className={`${componentName}__link ${componentName}__link--${alias}`}
+                  href={path}
+                >
+                  {name}
+                </a>
+              </li>
+            )
+          })}
         </ol>
       </nav>
     )
   }
+}
+
+Header.propTypes = {
+  componentName: PropTypes.string.isRequired,
+  navItems: PropTypes.array.isRequired,
 }
