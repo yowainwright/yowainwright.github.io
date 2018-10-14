@@ -45,6 +45,7 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.0",
     "babel-plugin-macros": "^2.4.2",
+    "conventional-changelog-cli": "^2.0.5",
     "eslint": "5.0.1",
     "eslint-config-dollarshaveclub": "3.1.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
@@ -77,7 +78,12 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "deploy": "npm run pre-deploy && gatsby build && gh-pages -d public --branch master",
+    "chore:delete-branch": "if git show-ref --quiet refs/heads/chore-changelog; then git branch -D chore-changelog; fi",
+    "chore:branch": "git checkout -b chore-changelog",
+    "chore:changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "chore:pr": "git add . && git commit -m '[chore] updates changelog' --no-verify && git push origin chore-changelog -f",
+    "chore": "npm run chore:delete-branch && npm run chore:branch && npm run chore:changelog && npm run chore:pr",
+    "deploy": "npm run pre-deploy && gatsby build && gh-pages -d public --branch master && npm run post-deploy",
     "dev": "gatsby develop",
     "develop": "gatsby develop",
     "eslint": "eslint . --ext .js,.jsx --fix",
@@ -88,7 +94,8 @@
     "spelling": "mdspell '**/*.md' '!**/node_modules/**/*.md' --ignore-numbers",
     "spelling:ci": "mdspell '**/*.md' '!**/node_modules/**/*.md' --ignore-numbers --report",
     "test": "jest",
-    "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public && cp -rf ./assets ./public"
+    "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public && cp -rf ./assets ./public",
+     "post-deploy": "git tag $npm_package_version && git push origin --tags && npm run chore"
   },
   "jest": {
     "transform": {
