@@ -26,7 +26,7 @@
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
-    "node-sass": "4.9.3",
+    "node-sass": "4.9.4",
     "react": "16.4.2",
     "react-dom": "16.4.2",
     "react-typography": "0.16.13",
