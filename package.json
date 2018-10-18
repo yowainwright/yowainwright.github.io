@@ -31,7 +31,7 @@
     "react-dom": "16.4.2",
     "react-typography": "0.16.13",
     "typography": "0.16.17",
-    "webpack": "4.17.1"
+    "webpack": "4.21.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
