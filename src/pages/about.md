@@ -18,20 +18,21 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 
 ## Large Open Source Initiatives
 
--  **[ES Check](https://github.com/dollarshaveclub/es-check):** Checks the version of ES in JavaScript files with simple shell commands
--  **[StickyBits](https://github.com/dollarshaveclub/stickybits):** Stickybits is a lightweight (<2KB) alternative to position: sticky polyfills
--  **[Scrolldir](https://github.com/dollarshaveclub/scrolldir):** y-axis scroll direction without jitter
--  **[Shave](https://github.com/dollarshaveclub/shave):** a minimal JavaScript Plugin for Truncated text
--  **[Reframe.js](https://github.com/dollarshaveclub/reframe.js):** a minimal JavaScript Plugin for reframing html elements so they're an intrinsic ratio of the original—great for embeds
+- **[ES Check](https://github.com/dollarshaveclub/es-check):** Checks the version of ES in JavaScript files with simple shell commands
+- **[StickyBits](https://github.com/dollarshaveclub/stickybits):** Stickybits is a lightweight (<2KB) alternative to position: sticky polyfills
+- **[Scrolldir](https://github.com/dollarshaveclub/scrolldir):** y-axis scroll direction without jitter
+- **[Shave](https://github.com/dollarshaveclub/shave):** a minimal JavaScript Plugin for Truncated text
+- **[Reframe.js](https://github.com/dollarshaveclub/reframe.js):** a minimal JavaScript Plugin for reframing html elements so they're an intrinsic ratio of the original—great for embeds
 
 ## Larger Publications
 
--  **[Stickybits: an alternative to position: sticky polyfills](https://css-tricks.com/stickybits-alternative-position-sticky-polyfills/)** - CSS Tricks
--  **[Code Review Etiquette](https://css-tricks.com/code-review-etiquette/)** - CSS Tricks
+- **[Stickybits: an alternative to position: sticky polyfills](https://css-tricks.com/stickybits-alternative-position-sticky-polyfills/)** - CSS Tricks
+- **[Code Review Etiquette](https://css-tricks.com/code-review-etiquette/)** - CSS Tricks
+- **[Continuous Integration: The What, Why and How](https://css-tricks.com/continuous-integration-the-what-why-and-how/)** - CSS Tricks
 
 ## Talks and Presentations
 
--  **[Developer CI Benefits](https://github.com/yowainwright/developer-ci-benefits)** - [JS.LA](https://js.la/), July 26, 2018
+- **[Developer CI Benefits](https://github.com/yowainwright/developer-ci-benefits)** - [JS.LA](https://js.la/), July 26, 2018
 
 <br>
 
