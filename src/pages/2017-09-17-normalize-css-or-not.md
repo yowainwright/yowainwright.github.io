@@ -15,16 +15,6 @@ Normalizing CSS has been part of building front-end product for years. The last 
 
 [CSS Normalization](https://necolas.github.io/normalize.css/) is a concept of defining CSS property values so that a web pages styles behave and look consistent across web browsers, like Internet Explorer, Firefox, Safari, and Chrome **before** adding styles to the CSS. that gained moment back in 2012 by [Nicolas Gallagher](https://twitter.com/necolas) and [Jon Neal](https://twitter.com/jon_neal).
 
-<figure>
-
-  <img src="https://yowainwright.imgix.net/normalize/normalize-post.jpg?w=1000&h=800&fit=crop&crop=focalpoint&auto=format" alt="Normalize Illustration" width="1000" />
-
- <figcaption>
-  The pseudo CSS code illustration above displays how Normalization CSS can be used to ensure your CSS remains the same across browsers which can lead to multiple overrides. Or, when encountering an issue between browsers, one CSS style can be added elsewhere—avoiding multiple overrides in the Cascade from Normalization.
-</figcaption>
-
-</figure>
-
 ## What does this do for web projects?
 
 - makes basic element styles the same across web browsers before more styles are added.
