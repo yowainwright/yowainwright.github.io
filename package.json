@@ -1,7 +1,7 @@
 {
   "name": "Jeffry.in",
   "description": "Jeffry.in, Jeff Wainwright's blog",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
   "bugs": {
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
@@ -34,12 +34,13 @@
     "webpack": "4.24.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
+    "@babel/core": "^7.1.5",
     "@babel/helper-plugin-utils": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-optional-chaining": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-0",
     "babel-jest": "^23.6.0",
@@ -98,7 +99,7 @@
     "spelling:ci": "mdspell '**/*.md' '!**/node_modules/**/*.md' --ignore-numbers --report",
     "test": "jest",
     "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public && cp -rf ./assets ./public",
-     "post-deploy": "git tag $npm_package_version && git push origin --tags && npm run chore"
+    "post-deploy": "git tag $npm_package_version && git push origin --tags && npm run chore"
   },
   "jest": {
     "transform": {
