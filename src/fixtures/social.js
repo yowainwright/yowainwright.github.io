@@ -63,13 +63,12 @@ export const socialItems = [
     alias: 'youtube',
     name: 'YouTube',
     path: 'https://www.youtube.com/user/yowainwright',
-    leve;: 'user',
+    level: 'user',
   },
-   {
-     alias: 'vsco',
-     name: 'VSCO',
-     path: 'https://vsco.co/yowainwright/images/1',
-     leve;: 'user',
-   },
-
+  {
+    alias: 'vsco',
+    name: 'VSCO',
+    path: 'https://vsco.co/yowainwright/images/1',
+    level: 'user',
+  },
 ]
