@@ -1,7 +1,7 @@
 {
   "name": "Jeffry.in",
   "description": "Jeffry.in, Jeff Wainwright's blog",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
   "bugs": {
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
@@ -27,8 +27,8 @@
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
     "node-sass": "4.10.0",
-    "react": "16.6.0",
-    "react-dom": "16.6.0",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
     "react-typography": "0.16.13",
     "typography": "0.16.17",
     "webpack": "4.24.0"
@@ -60,7 +60,7 @@
     "prop-types": "15.6.2",
     "react-helmet": "5.2.0",
     "react-responsive-grid": "0.3.4",
-    "react-test-renderer": "^16.5.2",
+    "react-test-renderer": "16.6.3",
     "regenerator-runtime": "^0.12.1",
     "stylelint": "^9.5.0",
     "stylelint-config-dollarshaveclub": "1.0.3",

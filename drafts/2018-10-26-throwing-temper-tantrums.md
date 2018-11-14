@@ -4,7 +4,7 @@ date: "2018-10-26"
 layout: post
 readNext: "/"
 path: "/throwing-temper-tantrums/"
-meta: Throwing temper tantrums—Why does it feel so good?
+meta: Throwing temper tantrums—Why does it feel so good? This post is something I wrote while laughing at myself for throwing a silly temper tantrum and getting caught.
 featured_image: null
 categories:
 - note
