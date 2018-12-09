@@ -1,5 +1,5 @@
 ---
-title: Moments Between Words—Emotional Sentiment In Basic Communication and Observations of Simple Ways To Make Others Feel Good
+title: Moments Between Words—Simple Communication and Observations of Quick Ways To Make Others Feel Good Or Not
 date: "2018-06-17"
 layout: post
 readNext: "/"
@@ -11,15 +11,11 @@ categories:
 - story
 ---
 
-What information is received in basic commmunication is often very different than intended based on psychical communication. Body language and vocal pitch can make similar information be received differently.
+What information is received in basic human commmunication is often very different than intended based on psychical communication. Body language, vocal pitch, and other things can make similar information be received differently.
 
 > In example, if a person angrily yells, "Have a good day!", there is a probability that the reception of that comment will not be received as, "Thanks! I will have a good day.".
 
-----
-
 I think about how verbal communication and psychical communication are received by others because I want to be a better communicator. This post documents things I've noticed in human expression that alter the perception of conversations. My observations are natural. I'm not expert in communication—more like the opposite. I often walk away from situations thinking, "I didn't do a good job with my expressions. What could I have done better?".
-
-----
 
 ## Making others feel good in basic communication
 
@@ -35,19 +31,23 @@ Alternatively, if I smile at someone and walk towards them, how a smile will be 
 
 Jokes are an important ways to engage in conversation. They convey a connection to the joke receiver. Jokes require that the audience is listening but unlike smiles, they can lead to engaging in conversation—even if they're not understood. The key to joke telling, beyond a joke, is positive body language. Positive body language is laughing with your body. I'm not an expert at laughing with my body. Most plainly, laughing is a good start.
 
-Similarly to smiling, telling jokes to someone who is not trying to engage in conversation or is upset can lead to a very different reception of the joke.
+Similarly to smiling, telling jokes to someone who is not trying to engage in conversation or is upsetting and can lead to a much different reception of the joke between the teller and receiver.
 
 ### Listening
 
-Listening is a great way to become closer to someone. In order to listen to someone they must want to communicate with you. A friend of mine had a joke when we were in college. He would shout to girls, while drinking, "What's your story?". It was funny to listeners because it was clear, that they would not want to tell him their story. The concept is still interesting to me now because I wonder when being an engaged listener becomes a positive thing. It seems clear that someone has to be aware of you to want to share their story with you. In order to be an engaged listener, people must be actively ready to talk. It often takes time and prior conversation to make someone want to be in active communication where you can listen. I'm not clear on the power of engaging and listening. I love how great it feels to be in an engaged conversation of "story sharing" but I don't know how to get there.
+Listening is a great way to become closer to someone. In order to listen to someone they must want to communicate with you. A friend of mine had a joke when we were in college. He would shout to girls, while drinking, "What's your story?". It was funny to all listeners generally because it was clear, that they would not want to tell him their story (and he didn't engage after).
+
+The concept of the joke my friend told is still interesting to me now because I wonder when being an engaged listener becomes a positive thing. It seems clear that someone has to be aware of you to want to share their story with you. In order to be an engaged listener, people must be actively ready to talk. It often takes time and prior conversation to make someone want to be in active communication where you can listen. I'm not clear on the power of engaging and listening. I love how great it feels to be in an engaged conversation of "story sharing" but I don't know how to get there.
 
 ## Being received well in difficult communication
 
-Difficult communication is very important. I have never met someone good in difficult communication and not in a position of power. It is a rare skill, and from observation, difficult communication seems easier than listening, joking, and making others feel good but it is not. This is something I view as a flaw with humanity. Difficult communication is difficult, not because humans don't see problems. Humans are great at seeing opportunities for improvement! Difficult communication is difficult because of the emotions that most people feel when delivering difficult communication. So, often people that are talented at difficult communication have less emotion than others might have. To me, this means that when providing difficult communication, being concise and as calm as possible is key.
+Difficult communication is very important. I have never met someone who is good in difficult communication and not in a position of power. It is a rare skill, and from observation, difficult communication seems easier than listening, joking, and making others feel good but it is not.
+
+The ability to have difficult communication is something I view as a flaw with humanity. Difficult communication is difficult, not because humans don't see problems. Humans are great at seeing opportunities for improvement! Difficult communication is difficult because of the emotions that most people feel when delivering difficult communication. So, often people that are talented at difficult communication have less emotion than others might have. To me, this means that when providing difficult communication, being concise and as calm as possible is key.
 
 ### Speaking softly
 
-Speaking softly is great for communication. It makes people feel comfortable. It naturally brings people closer because they have to get closer to listen. Being a passionate person, I have become aware that a large part of communicatation is not what is said but how it is said. Controlling pitch and voice inflection is hard. Speaking softly is an easier thing to do on the fly; especialy when communicating with passion or intensity.
+Speaking softly is great for communication. It makes people feel comfortable. It naturally brings people closer because they have to get closer to listen. Being a passionate person, I have become aware that a large part of communication is not what is said but how it is said. Controlling pitch and voice inflection is hard. Speaking softly is an easier thing to do on the fly; especialy when communicating with passion or intensity.
 
 ### Keeping communications short
 
@@ -55,7 +55,7 @@ Keeping communications short allows others to contribute their ideas and also, e
 
 ### Owning emotions
 
-Even when we have a bad day, we have to communicate with others. We all wish that we could generally hide our emotions but people have instincts. They'll often times know something is not right. They may think that it has to do with them when it has to do with you. Letting them know that you're having a bad day but you want to talk with them allows then to not read into your verbal queues.
+Even when we have a bad day, we have to communicate with others. I think we all wish that we could hide our emotions but people have instincts. They'll often times know something is not right. They may think that it has to do with them when it has to do with you. Letting them know that you're having a bad day but you want to talk with them allows then to not read into your verbal queues.
 
 ## Conclusions
 
