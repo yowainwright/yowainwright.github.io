@@ -26,7 +26,7 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c628c17c27418a9880f2.js"
+    "url": "webpack-runtime-41383d70c1ba572ed738.js"
   },
   {
     "url": "app-bf8d58e79350f125c9e2.js"
@@ -36,27 +36,55 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "f2a5ca7b60e0021a9d4cb354d60b0153"
+    "revision": "6b2ff6189a58c642b3b490bb6ffb68e2"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "dae0b524b3e602842367711cf469b43f"
+    "revision": "0647b5c61ef6c9186c9999d99be93d2f"
   },
   {
     "url": "0.714e789c58edc4d97d4f.css"
   },
   {
-    "url": "component---src-pages-index-jsx.447afb9821705fabad67.css"
+    "url": "component---src-pages-index-jsx.15d4689245d30221b5e4.css"
   },
   {
-    "url": "component---src-pages-index-jsx-5f1fe1534bcd56c3b23c.js"
+    "url": "google-fonts/s/notoserif/v6/ga6Iaw1J5X9T9RW6j9bNfFcWaA.woff2",
+    "revision": "f7fb9922ab0013f0ee2f11ca54ed6b88"
+  },
+  {
+    "url": "google-fonts/s/notoseriftc/v1/XLY9IZb5bJNDGYxLBibeHZ0BvvMpXX5MTw.woff2",
+    "revision": "c1cece1a4145a234bf5d95fb3a2349fc"
+  },
+  {
+    "url": "google-fonts/s/notoseriftc/v1/XLYgIZb5bJNDGYxLBibeHZ0BtnAOSA.woff2",
+    "revision": "f7296b651f59c9470cbc98fe8a796a74"
+  },
+  {
+    "url": "google-fonts/s/oswald/v16/TK3hWkUHHAIjg75-6hwTus9C.woff2",
+    "revision": "541a863959122f29c9961095cdcbb5c2"
+  },
+  {
+    "url": "google-fonts/s/oswald/v16/TK3iWkUHHAIjg752GT8G.woff2",
+    "revision": "f15aa285863274b4f6ed578caa76565e"
+  },
+  {
+    "url": "google-fonts/s/playfairdisplay/v13/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+    "revision": "203179d16cd511feb9d8691f27926c3b"
+  },
+  {
+    "url": "google-fonts/s/playfairdisplay/v13/nuFlD-vYSZviVYUb_rj3ij__anPXBb__lW4e5g.woff2",
+    "revision": "4679353199d23f37e5aceb461a374027"
+  },
+  {
+    "url": "component---src-pages-index-jsx-43401c94b7b505f11e55.js"
   },
   {
     "url": "0-e4d6f948d9fa2fe0c67f.js"
   },
   {
-    "url": "static/d/775/path---index-6a9-MdA2KDOsJorWd9nKDQESsiRMLqc.json",
-    "revision": "dff6faeadf7f01a6b50def348bd852bf"
+    "url": "static/d/983/path---index-6a9-NF6VUst2dBX0ZYhYkxD0m2IZY.json",
+    "revision": "7cf18374148dbbb2cb5eae7db593a007"
   },
   {
     "url": "static/d/520/path---offline-plugin-app-shell-fallback-a-30-c5a-NZuapzHg3X9TaN1iIixfv1W23E.json",
