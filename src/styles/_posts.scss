@@ -72,6 +72,11 @@
       font-size: 1rem;
     }
   }
+  &__link {
+    &--read-more {
+      font-weight: bold;
+    }
+  }
 }
 
 // main grid

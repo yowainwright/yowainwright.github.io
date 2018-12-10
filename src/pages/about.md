@@ -13,7 +13,7 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 
 <br>
 
----
+----
 
 
 ## Large Open Source Initiatives
@@ -24,11 +24,19 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 - **[Shave](https://github.com/dollarshaveclub/shave):** a minimal JavaScript Plugin for Truncated text
 - **[Reframe.js](https://github.com/dollarshaveclub/reframe.js):** a minimal JavaScript Plugin for reframing html elements so they're an intrinsic ratio of the original—great for embeds
 
+<br>
+
+----
+
 ## Larger Publications
 
 - **[Stickybits: an alternative to position: sticky polyfills](https://css-tricks.com/stickybits-alternative-position-sticky-polyfills/)** - CSS Tricks
 - **[Code Review Etiquette](https://css-tricks.com/code-review-etiquette/)** - CSS Tricks
 - **[Continuous Integration: The What, Why and How](https://css-tricks.com/continuous-integration-the-what-why-and-how/)** - CSS Tricks
+
+<br>
+
+----
 
 ## Talks and Presentations
 
@@ -36,7 +44,7 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 
 <br>
 
----
+----
 
 <br>
 

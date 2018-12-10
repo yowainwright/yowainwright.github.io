@@ -52,7 +52,7 @@ export default class BlogIndex extends Component {
         <article key={i} className='post--article'>
           {header}
           {figure}
-          <p>{description} <Link to={path}>[...]</Link></p>
+          <p>{description} <Link className='post__link--read-more' to={path}>[...]</Link></p>
           <hr />
         </article>
       )
