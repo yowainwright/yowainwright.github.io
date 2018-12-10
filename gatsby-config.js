@@ -87,5 +87,20 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      options: {
+        fonts: [
+          {
+            family: 'Playfair Display',
+            variants: ['400', '900']
+          },
+          {
+            family: 'Oswald',
+            variants: ['500', ]
+          },
+        ],
+      },
+    },
   ],
 }

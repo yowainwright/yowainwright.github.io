@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 
-/*
-  Header 👤
-  ----
-  The Header Component is the navigation and top part of the site across all pages/routes
-*/
 export default class Head extends Component {
   constructor (props) {
     super(props)
@@ -28,6 +23,7 @@ export default class Head extends Component {
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='600' />
         <meta name='google-site-verification' content='cXTq9c3NhBvHJsPXxzWAYAqbB8PRUKUxemU8mykg_vs' />
+
         <script src='https://www.googletagmanager.com/gtag/js?id=UA-73077309-1' />
         <script>{this.gtmInlineScript}</script>
       </Helmet>

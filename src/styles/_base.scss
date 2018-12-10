@@ -1,5 +1,3 @@
-// fonts
-@import url('https://fonts.googleapis.com/css?family=Rokkitt:300|Oswald:500');
 html,
 body {
   margin: 0;
@@ -20,7 +18,7 @@ h4,
 h5,
 h6 {
   font-family: $font-family-headline;
-  font-weight: 500;
+  font-weight: 900;
 }
 
 h2,
@@ -45,53 +43,68 @@ h3 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.1rem;
   margin: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
   @include media-query($width-small) {
+    font-size: 2.5rem;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  @include media-query($width-medium) {
     font-size: 5rem;
     margin-top: 4.5rem;
     max-width: 60rem;
   }
 }
 
+h2 {
+  font-size: 1.25rem;
+  @include media-query($width-small) {
+    font-size: 2.5rem;
+  }
+}
+
 h2,
 h3 {
   .content & {
+    font-family: $font-family-default;
     font-size: 1.5rem;
+    font-weight: 900;
     margin: 3rem auto;
+    @include media-query($width-small) {
+      font-size: 2.5rem;
+    }
   }
 }
 
 p,
 li {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 300;
-  line-height: 2.5;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   max-width: calc(100% - #{$spacing-unit-large});
   @include media-query($width-small) {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     max-width: $width-reader;
   }
 }
 
-p {
-  line-height: 2;
-}
-
 li {
+  line-height: 1.6;
   margin-bottom: $spacing-unit-small;
 }
 
-li,
-li p {
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-  margin-top: 1.5rem;
+p {
+  line-height: 1.75;
+  li & {
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
 }
 
 a {
@@ -108,16 +121,29 @@ a {
       text-decoration-line: none;
     }
   }
+  h2 &,
+  &.post__link--read-more {
+    &:hover {
+      background: $color-yellow-light;
+      text-decoration-line: none;
+    }
+  }
 }
 
 blockquote {
-  border-left: 4px solid lightgray;
-  padding: $spacing-unit-small $spacing-unit;
   @include media-query($width-small) {
     max-width: $width-reader;
   }
   p {
-    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 900;
+    line-height: 1.7;
+    margin: 1rem 0;
+    @include media-query($width-small) {
+      font-size: 1.5rem;
+      line-height: 1.9;
+      margin: 2rem 0;
+    }
   }
 }
 
