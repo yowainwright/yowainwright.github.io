@@ -43,7 +43,7 @@ h3 {
 }
 
 h1 {
-  font-size: 1.1rem;
+  font-size: 1.75rem;
   margin: 0;
   margin-bottom: 1rem;
   text-align: center;
@@ -60,7 +60,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   @include media-query($width-small) {
     font-size: 2.5rem;
   }
@@ -182,11 +182,12 @@ time {
   position: relative;
   text-align: center;
   @include media-query($width-small) {
+    font-size: .7rem;
     margin: 2rem 0;
   }
   &:after,
   &:before {
-    color: lightgray;
+    color: #000;
     content: '—';
     display: inline-block;
     font-size: 1rem;
@@ -247,8 +248,9 @@ time {
 }
 
 header {
-  margin-top: $spacing-unit;
+  margin-top: 2rem;
   @include media-query($width-small) {
+    margin-top: 0;
     max-width: none;
   }
 }
