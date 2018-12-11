@@ -1,3 +1,8 @@
+## [1.0.16](https://github.com/yowainwright/yowainwright.github.io/compare/1.0.15...1.0.16) (2018-12-11)
+
+
+
+
 ## [1.0.14](https://github.com/yowainwright/yowainwright.github.io/compare/1.0.13...1.0.14) (2018-12-11)
 
 
