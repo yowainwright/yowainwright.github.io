@@ -5,9 +5,9 @@ layout: post
 readNext: "/"
 path: "/labor-day-week/"
 meta: This year I, Jeff Wainwright, spent Labor Day in Dallas with friends.
-featured_image:  "https://yowainwright.imgix.net/labor-day/brett-riding.jpg"
+featured_image:  "https://yowainwright.imgix.net/labor-day/brett-ashley.jpg"
 categories:
-- javascript
+- story
 ---
 
 This past week, I went to Dallas to visit Brett and Ashley Pitt—close friends of mine. I've known them for about 4 years and we've done some incredible stuff together during our friendship. Also, Dallas is a great place to visit from Los Angeles because it inexpensive to go to, really accessible on Bicycles, and has a great bustling downtown with good food.
