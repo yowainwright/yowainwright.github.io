@@ -1,5 +1,5 @@
 ---
-title: Moments Between Words—Simple Communication and Observations of Quick Ways To Make Others Feel Good Or Not
+title: Moments Between Words—Simple Communication and Observations of Quick Ways To Make Others Feel Good
 date: "2018-06-17"
 layout: post
 readNext: "/"
