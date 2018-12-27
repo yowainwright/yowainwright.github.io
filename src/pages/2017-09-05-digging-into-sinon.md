@@ -10,27 +10,28 @@ categories:
 - javascript
 ---
 
-[Sinon](http://sinonjs.org/) is a powerful library used for stubbing functions, methods, xhr calls, and servers in JavaScript. The library and concept have confused me several times. I've found defining the interface to be challenging. Often, I realize that if the interface is challenging me, I need to rethink it. 
+[Sinon](http://sinonjs.org/) is a powerful library used for stubbing functions, methods, xhr calls, and servers in JavaScript. The library and concept have confused me several times. I've found defining the interface to be challenging. Often, I realize that if the interface is challenging me, I need to rethink it.
 
 In this post, I will explain a bit of Sinon for context and then dig into faking a server with Sinon.
 
 ---
 
--  Stubbing, in JavaScript, is the act of making a dummy function that acts like a real JavaScript Interface allowing the stubber to fully test the thing they're testing. In example, if your testing a method that gets `.user()` information
-
--  Interface, in regards to this post, is the way information is passed, changed, published between methods and functions. If information interface is not optimal, tests should be able to show that.
+- Stubbing, in JavaScript, is the act of making a dummy function that acts like a real JavaScript Interface allowing the stubber to fully test the thing they're testing. In example, if your testing a method that gets `.user()` information
+- Interface, in regards to this post, is the way information is passed, changed, published between methods and functions. If information interface is not optimal, tests should be able to show that.
 
 #### For this post, here's a stub example
 
 ```javascript
+
 let server
 // then later in code a value is assigned to the variable
 server = sinon.fakeServer.create()
+
 ```
 
 ## Why would developers stub a server?
 
-Engineers stub servers so that they can make fake requests to stubbed servers. The benefit of doing this is that the engineer doesn't need a real server and because they're not dependent on a real server, they can focus on testing whatever their code does that needs a server to test it. 
+Engineers stub servers so that they can make fake requests to stubbed servers. The benefit of doing this is that the engineer doesn't need a real server and because they're not dependent on a real server, they can focus on testing whatever their code does that needs a server to test it.
 
 ## A specific example
 
@@ -75,12 +76,12 @@ For the code example above, there is an interface that expects to get informatio
 
 ## How to stub a server with Sinon
 
-In the example above: 
--  The xhr request waits for a load event. 
--  If the response in above a 400, that means there is an error with the response, and the console should warn developers. 
--  If the response is not above a 400, the request will receive a `{object}` with a `status`. 
--  In a callback function, the xhr request will return the object `{info}`. 
--  If there is an `error` instead of a load event, another warning should be added to the console. 
+In the example above:
+- The xhr request waits for a load event.
+- If the response in above a 400, that means there is an error with the response, and the console should warn developers.
+- If the response is not above a 400, the request will receive a `{object}` with a `status`.
+- In a callback function, the xhr request will return the object `{info}`.
+- If there is an `error` instead of a load event, another warning should be added to the console.
 
 No, that there is an example and a bullet list of what's happening, Sinon can be used to stub a fake server so we can mock the scenarios of the function.
 
@@ -197,6 +198,6 @@ it('provides null defaults with `user` request error', function () {
 
 ## Conclusion
 
-This post has described how to use Sinon's Fake Server to fully test an interface for an XHR request. XHR Requests can be mocked by Sinon easily with a general understanding of Sinon. After setting up a Mock that works for a product, similar tests can be copied and reused elsewhere. This is why Sinon's Fake Server is a powerful tool. 
+This post has described how to use Sinon's Fake Server to fully test an interface for an XHR request. XHR Requests can be mocked by Sinon easily with a general understanding of Sinon. After setting up a Mock that works for a product, similar tests can be copied and reused elsewhere. This is why Sinon's Fake Server is a powerful tool.
 
 Please use Sinon and [Sinon's Fake Server](http://sinonjs.org/releases/v2.1.0/fake-xhr-and-server/). Let [me](/issue) know if this post can be improved or if it helped.
