@@ -11,9 +11,9 @@ categories:
 - story
 ---
 
-What information is received in basic human commmunication is often very different than intended based on psychical communication. Body language, vocal pitch, and other things can make similar information be received differently.
-
 ![Moments between words](https://yowainwright.imgix.net/moments-between-words/moments-between-words.svg?auto=format)
+
+What information is received in basic human commmunication is often very different than intended based on psychical communication. Body language, vocal pitch, and other things can make similar information be received differently.
 
 > In example, if a person angrily yells, "Have a good day!", there is a probability that the reception of that comment will not be received as, "Thanks! I will have a good day.".
 
