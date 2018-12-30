@@ -13,6 +13,8 @@ categories:
 
 What information is received in basic human commmunication is often very different than intended based on psychical communication. Body language, vocal pitch, and other things can make similar information be received differently.
 
+![Moments between words](https://yowainwright.imgix.net/moments-between-words/moments-between-words.svg?auto=format)
+
 > In example, if a person angrily yells, "Have a good day!", there is a probability that the reception of that comment will not be received as, "Thanks! I will have a good day.".
 
 I think about how verbal communication and psychical communication are received by others because I want to be a better communicator. This post documents things I've noticed in human expression that alter the perception of conversations. My observations are natural. I'm not expert in communication—more like the opposite. I often walk away from situations thinking, "I didn't do a good job with my expressions. What could I have done better?".
