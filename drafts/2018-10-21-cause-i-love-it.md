@@ -22,3 +22,5 @@ I've read articles about the reality of "just doing it" and the [harsh truth](ht
 ## Some people just do it despite there being no ryhme-or-reason
 
 Isn't it cool that despite not having any skill, people "just do it"? To me, this is so cool. People are generally terrible at something but deep down inside, their says, "Not stopping me. I'm gonna do this shit way more!". We (humans) gripe about taxes which take a few hours and most any of us can do. Yet, we find something that we love, are terrible, and frustrates us—and still do it A LOT.
+
+
