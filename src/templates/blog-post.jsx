@@ -55,6 +55,7 @@ export const pageQuery = graphql`
       frontmatter {
         featured_image
         meta
+        social_image
         title
         date(formatString: "MMMM DD, YYYY")
         path
