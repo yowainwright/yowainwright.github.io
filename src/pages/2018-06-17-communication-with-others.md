@@ -6,7 +6,7 @@ readNext: "/"
 path: "/making-others-feel-good-with-basics/"
 meta: This post observes how different communication can be from intent to reception. It focuses on observations on simple comunications.
 featured_image: null
-social_image: "https://yowainwright.imgix.net/first-post-in-a-bit/cool-waters.jpg"
+social_image: "https://yowainwright.imgix.net/moments-between-words/moments-between-words.jpg"
 categories:
 - note
 - story
