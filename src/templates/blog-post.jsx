@@ -17,7 +17,6 @@ export default class BlogPostTemplate extends Component {
 
   render () {
     const post = this.post
-
     return (
       <Layout>
         <article>
@@ -26,8 +25,8 @@ export default class BlogPostTemplate extends Component {
             <link rel='canonical' href={`${post.frontmatter.path}`} itemProp='url' />
             <meta name='twitter:url' property='og:url' content={`${post.frontmatter.path}`} />
             <meta name='twitter:title' property='og:title' content={`${post.frontmatter.title}`} />
-            <meta name='twitter:image' content={`${post.frontmatter.featured_image || 'https://yowainwright.imgix.net/w-logo-twitter.jpg'}?w=600&h=335&fit=crop&crop=focalpoint&auto=format`} itemProp='image' />
-            <meta property='og:image' content={`${post.frontmatter.featured_image || 'https://yowainwright.imgix.net/w-logo-fb.jpg'}?w=1200&h=600&fit=crop&crop=focalpoint&auto=format`} itemProp='image' />
+            <meta name='twitter:image' content={`${post.frontmatter.featured_image || post.frontmatter.social_image || 'https://yowainwright.imgix.net/w-logo-twitter.jpg'}?w=600&h=335&fit=crop&crop=focalpoint&auto=format`} itemProp='image' />
+            <meta property='og:image' content={`${post.frontmatter.featured_image || post.frontmatter.social_image || 'https://yowainwright.imgix.net/w-logo-fb.jpg'}?w=1200&h=600&fit=crop&crop=focalpoint&auto=format`} itemProp='image' />
           </Helmet>
           <header>
             <h1 itemProp='headeline'>{post.frontmatter.title}</h1>
