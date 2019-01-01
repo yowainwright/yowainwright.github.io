@@ -12,8 +12,6 @@ categories:
 - story
 ---
 
-![Moments between words](https://yowainwright.imgix.net/moments-between-words/moments-between-words.svg?auto=format)
-
 What information is received in basic human commmunication is often very different than intended based on psychical communication. Body language, vocal pitch, and other psychical gestures can make similar information be received differently.
 
 > In example, if a person angrily yells, "Have a good day!", there is a probability that the reception of that comment will not be received as, "Thanks! I will have a good day.".
@@ -63,3 +61,5 @@ Even when we have a bad day, we have to communicate with others. I think we all 
 ## Conclusions
 
 Communication is tough! For people that it comes naturally to, it is powerful tool. Others will gravitate towards them. People like feedback, positive and negative. Being able to deliver information in ways that can be received by others more positively and closer to the communication intent will lead to closer relationships.
+
+![Moments between words](https://yowainwright.imgix.net/moments-between-words/moments-between-words.svg?auto=format)
