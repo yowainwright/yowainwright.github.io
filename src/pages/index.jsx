@@ -70,8 +70,6 @@ export default class BlogIndex extends Component {
             <link rel='canonical' href='https://jeffry.in' itemProp='url' />
             <meta name='twitter:url' property='og:url' content='https://jeffry.in' />
             <meta name='twitter:title' property='og:title' content={`${this.title}`} />
-            <meta name='twitter:image' content='https://yowainwright.imgix.net/w-logo-twitter.jpg?w=600&h=335&fit=crop&crop=focalpoint&auto=format' itemProp='image' />
-            <meta property='og:image' content='https://yowainwright.imgix.net/w-logo-fb.jpg?w=1200&h=600&fit=crop&crop=focalpoint&auto=format' itemProp='image' />
           </Helmet>
           <hr />
           {this.generatePosts()}
