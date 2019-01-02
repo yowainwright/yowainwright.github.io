@@ -83,7 +83,7 @@ exports[`Template component renders correctly 1`] = `
         style={Object {}}
       >
         jeffry.in 
-        2018
+        2019
       </a>
     </p>
   </footer>

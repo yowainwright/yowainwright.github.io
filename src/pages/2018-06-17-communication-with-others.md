@@ -60,6 +60,6 @@ Even when we have a bad day, we have to communicate with others. I think we all 
 
 ## Conclusions
 
-Communication is tough! For people that it comes naturally to, it is powerful tool. Others will gravitate towards them. People like feedback, positive and negative. Being able to deliver information in ways that can be received by others more positively and closer to the communication intent will lead to closer relationships.
-
 ![Moments between words](https://yowainwright.imgix.net/moments-between-words/moments-between-words.svg?auto=format)
+
+Communication is tough! For people that it comes naturally to, it is powerful tool. Others will gravitate towards them. People like feedback, positive and negative. Being able to deliver information in ways that can be received by others more positively and closer to the communication intent will lead to closer relationships.
