@@ -11,9 +11,15 @@ categories:
 - story
 ---
 
-Commercially, "just doing it" is clear approach for chasing dreams and ideas. If a person has an dream, they should go for it! If a person has an idea, it should become a reality! There is little argument about _going for your dreams_ or _making ideas reality_. Furthermore, through marketing commerce, reality is personified that with effort (more effort than everyone else), **your** dreams and ideas can happen! Reality is a way more harsh. Not every dream comes true and not every idea is good one. The universe seems to rejects ideas and dreams every chance it can get. This article is not about the harsh truth of chasing dreams or that you **indeed** can chase your dreams and they will come true. No, this article is about people doing things even though it is very clear what they're doing won't make dreams come true or ideas a reality.
+Commercially, "just doing it" is clear approach for chasing dreams and ideas. If a person has an dream, they should go for it! If a person has an idea, it should become a reality! There is little argument about "going for your dreams" or "making ideas reality".
 
-![Michael Jordan dunking on someone; found on Google—hope for more detail](https://yowainwright.imgix.net/cuz-i-love-it/jordan-dunking.jpg)
+Furthermore, through marketing commerce, reality is personified that with effort (more effort than everyone else), your dreams and ideas can happen! Reality is a way more harsh. Not every dream comes true and not every idea is good one. The universe seems to rejects ideas and dreams every chance it can get.
+
+This article is not about the harsh truth of chasing dreams or that you indeed can chase your dreams and they will come true. No, this article is about people doing things even though it is clear what they're doing won't make dreams come true or ideas a reality.
+
+![Michael Jordan dunking on someone; found on Google—hope for more detail](https://yowainwright.imgix.net/cuz-i-love-it/jordan-dunking.jpg?w=800&&fit=crop&crop=focalpoint&auto=format)
+
+Image found via google, please provide a reference if it's an issue. Or I will gladly take it down.
 
 ## Some people "just do it" despite there being no ryhme-or-reason
 
@@ -29,10 +35,12 @@ Taking a brief look back at us humans as children, When we (humans) are young, w
 
 ## The comparision of self
 
-When we're doing things that we're generally terrible at
+When we're doing things that we're generally terrible at, it is easy to focus on others to really dig into our ego. Something about how it hurts feels like we want to do it way more. This point will also be followed up on in this articles conclusion. Another common saying related
 
 ## The enlightenment of doing something for joy
 
-Isn't it cool that despite not having any skill, people "just do it"? To me, this is **so cool**. People are generally terrible at something but deep down inside, their that says, "Not stopping me. I'm gonna do this shit **way** more!". We (humans) gripe about taxes which take a few hours and most any of us can do. Yet, we find something that we love, are terrible, and frustrates us—and still do it **a lot**.
+Isn't it cool that despite not having any skill, people "just do it"? To me, this is so cool. People are generally terrible at something but deep down inside, their that says, "Not stopping me. I'm gonna do this shit way more!". We (humans) gripe about taxes which take a few hours and most any of us can do. Yet, we find something that we love, are terrible, and frustrates us—and still do it a lot.
 
-![Person missing basketball shot and hitting dog](https://media.giphy.com/media/eerGTVL76LuS1Nkzuv/giphy.gif)
+![Person missing basketball shot and hitting dog](https://media.giphy.com/media/eerGTVL76LuS1Nkzuv/giphy.gif?w=800&&fit=crop&crop=focalpoint&auto=format)
+
+Image from [ViralHog](https://giphy.com/viralhog)
