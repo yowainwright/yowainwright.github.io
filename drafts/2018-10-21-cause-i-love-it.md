@@ -11,15 +11,21 @@ categories:
 - story
 ---
 
-Commercially, "just doing it" is clear approach for chasing dreams and ideas. If a person has an dream, they should go for it! If a person has an idea, it should become a reality! There is little argument about "going for your dreams" or "making ideas reality".
+Commercially, "just doing it" is a clear approach for chasing dreams and ideas. If a person has an dream, they should go for it! If a person has an idea, it should become a reality! There is little argument about "going for your dreams" or "making ideas reality".
 
-Furthermore, through marketing commerce, reality is personified that with effort (more effort than everyone else), your dreams and ideas can happen! Reality is a way more harsh. Not every dream comes true and not every idea is good one. The universe seems to rejects ideas and dreams every chance it can get.
+Through marketing commerce, reality is personified that with effort (more effort than everyone else), your dreams and ideas can happen! Reality is a way more harsh. Not every dream comes true and not every idea is good. The universe rejects ideas and dreams every chance it can get.
 
-This article is not about the harsh truth of chasing dreams or that you indeed can chase your dreams and they will come true. No, this article is about people doing things even though it is clear what they're doing won't make dreams come true or ideas a reality.
+----
+
+Society glorifies those that soar above the rest. Viewing photos of Michael Jordan is a great way to reflect on this. In many Michael Jordon photos, he iconically soars through the air towards the net. Often other players are in the background and foreground in states of bewilderment and discomfort. Yet, they're there. Playing their hearts out just to add to the Michael Jordan experience.
 
 ![Michael Jordan dunking on someone; found on Google—hope for more detail](https://yowainwright.imgix.net/cuz-i-love-it/jordan-dunking.jpg?w=800&&fit=crop&crop=focalpoint&auto=format)
 
 Image found via google, please provide a reference if it's an issue. Or I will gladly take it down.
+
+----
+
+This article is not about the harsh truth of chasing dreams or that you indeed can chase your dreams and they will come true. No. This article is about people doing things even though it is clear what they're doing won't make dreams come true or ideas a reality.
 
 ## Some people "just do it" despite there being no ryhme-or-reason
 
