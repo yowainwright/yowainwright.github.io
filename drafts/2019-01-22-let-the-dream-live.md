@@ -11,13 +11,13 @@ categories:
 - story
 ---
 
-When we care about someone, it can be challenging to nuture goals and listen to dreams. There is a difference between goals and dreams to me. A goal has plan broken down into specific action items. Each action item is doable making the goal attainable. A dream is emotionally based. The are no doable action items. It is unrealistic in its current state. A dream can become a goal with nuturing and planned action items but in it's initial state it is not. This is important thing to consider with our close relationships because the way that we respond to each thought type should be different. Nurturing the dreams and goals of people we care about is beneficial. Challenging goals can be help achieve goals while challenging dreams can be stiffeling.
+When we care about someone, it can be challenging to nurture goals and listen to dreams. Goals and dreams are different to me. A goal has plan broken down into specific action items. Each action item is doable making the goal attainable. A dream is emotionally based. The are no doable action items, et. A dream is unrealistic in its current state. A dream can become a goal with nurturing and developing planned action items but is not initially. This is important to consider in relations with people we are close to because the way that we respond to each thought type, dreams or goals, should be different. Nurturing the dreams and goals of people we care about is beneficial. Challenging goals can be help achieve goals while challenging dreams can be stifling.
 
 ## Crushing My High School Girlfriend's Dreams
 
-In high school, I remember listening to my girlfriend tell me about her dreams for the future. She dreamed that was going to live in Europe, be a writer and artist. She dreamed that she was act in plays. Hearing her dreams made me sad then. These dreams made me sad because she probably could have done all of those things (she was annoyingly talented) and none of her dreams included a future I was live in. I couldn't just go to Europe on a whim. How could we afford to live? What about my dream to live in a Mansion outside of Chicago? More clearly, she didn't even consider me in her dreams which in that moment signified that she could envision an end to our relationship.
+In high school, I remember listening to my girlfriend tell me about her dreams for the future. She dreamed she was going to live in Europe, be a writer and artist. She dreamed that she would also act in plays. Hearing her dreams made me sad because deep down I knew she could do all of those things (she was annoyingly talented) and none of her dreams included me. Imagining myself in her dreams—I couldn't go to Europe on a whim. How could we afford to live? What about my dreams? More directly, her dreams didn't include me.
 
-I retorted with dream-crushing pragmatism towards what she had told me. I brought up how quiet she was. I asked her how should would afford to live in Europe and be a writer/artist. I followed up with where I stood in this whole fairytale dream. I wasn't considered once, dammit! I recall her face after my comments. She clenched her lips. She'd been silenced. She didn't say anything else about her dreams to me after that moment.
+I retorted with dream-crushing pragmatism towards what she had told me. I brought up how quiet she was, "How can you act on stay when you can barely talk in front of a class of peers?". I asked her how should would afford to live in Europe and be a writer/artist. I followed up with where I stood in this whole fairytale dream—"I wasn't considered once!". I recall her face after my comments. She clenched her lips. She'd been silenced. She didn't say anything else about her dreams to me after that moment. I'd cut into her dreams and I'd blocked her from sharing ideas that probably made her happy—her dreams.
 
 ## Synopsis
 
@@ -35,7 +35,7 @@ Dreams may not be unrealistic forever but they are until action items are provid
 
 Goals often start out as dreams. With specific actionable items, goals can be achieved. Once a goal is a goal and not a dream, challenging and critiquing them can provide benefit to a goal's success.
 
-@TODO goal scenerio
+In adult life, goals often exist in work environments. Work environments often require established goals. Goals start with ideas. Ideas (goals) are broken down in action items that help measure goal progress and success. When trying to achieve a goal at work, ideas that can challenge and spead
 
 The benefit of challenging goals versus pain that can be felt by challenging dreams is important for relationship growth and individual happiness.
 
