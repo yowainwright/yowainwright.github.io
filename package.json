@@ -32,7 +32,7 @@
     "react-dom": "16.7.0",
     "react-typography": "0.16.18",
     "typography": "0.16.18",
-    "webpack": "4.29.0"
+    "webpack": "4.29.1"
   },
   "devDependencies": {
     "@babel/core": "^7.1.5",
