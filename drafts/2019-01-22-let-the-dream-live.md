@@ -11,7 +11,7 @@ categories:
 - story
 ---
 
-When we care about someone, it can be challenging to nurture goals and listen to dreams. Goals and dreams are different to me. A goal has plan broken down into specific action items. Each action item is doable making the goal attainable. A dream is emotionally based. The are no doable action items, et. A dream is unrealistic in its current state. A dream can become a goal with nurturing and developing planned action items but is not initially. This is important to consider in relations with people we are close to because the way that we respond to each thought type, dreams or goals, should be different. Nurturing the dreams and goals of people we care about is beneficial. Challenging goals can be help achieve goals while challenging dreams can be stifling.
+When humans care about someone, it can be challenging to nurture goals and listen to dreams. Goals and dreams are different. A goal has a plan broken down into specific action items. Each action item is doable making the goal attainable. A dream is emotionally based. The are no doable action items, et. A dream is unrealistic in its current state. A dream can become a goal with nurturing and developing planned action items but is not initially. This is important to consider in relations with people we are close to because the way that we respond to each thought type, dreams or goals, should be different. Nurturing the dreams and goals of people we care about is beneficial. Challenging goals can be help achieve goals while challenging dreams can be stifling.
 
 ## Crushing My High School Girlfriend's Dreams
 
@@ -21,13 +21,13 @@ I retorted with dream-crushing pragmatism towards what she had told me. I brough
 
 ## Synopsis
 
-Dreams and goals are differing thought types. They arey closely related but different. Goals are broken down with action items. Dreams are ideas without action items. When a person communicates an dream, it should be listened to and encouraged. Dreams offer people an outlet from the structure and demand of everyday life. When a person communicates goal, questioning it's action items can help greatly in achieving success. Others may see flaws or opportunities for improvement. The subtle difference between dreams and goals are subjects of much human unhappiness in their most important relationships.
+Dreams and goals are differing thought types. They are closely related but different! Goals are broken down with action items. Dreams are ideas without action items. When a person communicates a dream, it should be listened to and encouraged. Dreams offer people an outlet from the structure and demand of everyday life. When a person communicates goal, questioning it's action items can help greatly in achieving success. Others may see flaws or opportunities for improvement in goals. The subtle difference between dreams and goals are subjects of much unhappiness to humans in their most important relationships.
 
 ## Dreams (Daydreams) Are Important to Human Happiness
 
-Everyday life can seem mundane living in our own skin every day. Dreams assist in allowing us to escape our everyday life. We explore ideas, places, and things that are not realistic in the moment.
+Everyday life is mundane living in our own skin every day! Dreams assist in allowing us to escape our everyday life. We explore ideas, places, and things that are not realistic in the moment.
 
-An example of a common dream pattern happens when adults go into unionship and begin considering growing a family. These thoughts demand serious consideration. Unsurprisingly with the stress these changes and the sacrafices involved, dreams that seem directly opposed to these changes come up. It would be hard to go into building a family without considering the freedom of singularity so dreaming about another path seems obvious.
+An example of a common dream pattern happens when adults are in unionship and begin considering growing a family. These thoughts demand serious consideration. Unsurprisingly with the stress these changes and the sacrafices involve, dreams that seem directly opposed to these changes come up. It would be hard to go into building a family without considering the freedom of singularity so dreaming about another path is natural.
 
 Dreams may not be unrealistic forever but they are until action items are provided to make them achievable, they're feelings that make us feel good or different than reality.
 
@@ -35,7 +35,7 @@ Dreams may not be unrealistic forever but they are until action items are provid
 
 Goals often start out as dreams. With specific actionable items, goals can be achieved. Once a goal is a goal and not a dream, challenging and critiquing them can provide benefit to a goal's success.
 
-In adult life, goals often exist in work environments. Work environments often require established goals. Goals start with ideas. Ideas (goals) are broken down in action items that help measure goal progress and success. When trying to achieve a goal at work, ideas that can challenge and spead
+In adult life, goals often exist in work environments. Work environments often require established goals. Goals start with ideas. Ideas (goals) are broken down in action items that help measure a goal's progress and success. When trying to achieve a goal at work, ideas that can challenge and spead the process are greately encouraged.
 
 The benefit of challenging goals versus pain that can be felt by challenging dreams is important for relationship growth and individual happiness.
 
