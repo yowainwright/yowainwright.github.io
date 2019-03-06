@@ -29,7 +29,7 @@
     "gatsby-transformer-sharp": "next",
     "node-sass": "4.11.0",
     "react": "16.8.4",
-    "react-dom": "16.8.0",
+    "react-dom": "16.8.4",
     "react-typography": "0.16.18",
     "typography": "0.16.18",
     "webpack": "4.29.6"
