@@ -61,7 +61,7 @@
     "prop-types": "15.7.0",
     "react-helmet": "5.2.0",
     "react-responsive-grid": "0.3.4",
-    "react-test-renderer": "16.8.0",
+    "react-test-renderer": "16.8.4",
     "regenerator-runtime": "^0.13.0",
     "stylelint": "^9.5.0",
     "stylelint-config-dollarshaveclub": "1.0.3",
