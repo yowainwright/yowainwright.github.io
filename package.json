@@ -30,7 +30,7 @@
     "node-sass": "4.11.0",
     "react": "16.8.4",
     "react-dom": "16.8.4",
-    "react-typography": "0.16.18",
+    "react-typography": "0.16.19",
     "typography": "0.16.18",
     "webpack": "4.29.6"
   },
