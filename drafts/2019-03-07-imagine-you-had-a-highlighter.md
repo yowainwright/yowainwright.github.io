@@ -21,6 +21,16 @@ For a long time, I've subtly been aware that often what I'm trying to convey is 
 
 ## If I had a spoken word highlighter, I'd say it once and highlight the good s**t
 
+Constantly f**king up while trying to say what I want to say has caused me to hurt relationships that I care about about topics that I care about—like my feelings. If I had a spoken word highlighter, I'd say what I felt once and highlight the good s\*\*t. I'd then ask if what I had highlighted made sense and ask how the listener interpreted what I'd said. If they did, we could move on.
+
+Upon coming up with this idea, I realized I don't have a spoken word highlighter but I can ask the question or clarify what I'd like the listener to receive as highlighted.
+
+> "Thanks for what you've told me. If you had written down what you just said, what would you highlight with a highlighter?".
+
+With this concept speakers and listeners can now take on the ability to clarify important statements—a truly important thing for feeling listened to and understandings.
+
 ## Other spoken word helpful concents
+
+The concept of the highlighter is not the only grammatical tool that can be useful in verbal conversation. Asking the order of a list of items or directions can be key to understanding importance. Describing conversation change with saying new paragraph could clarify a change in conversation.
 
 ## Conclusion, healing from the problem of saying too much
