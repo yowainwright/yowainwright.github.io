@@ -31,7 +31,7 @@
     "react": "16.8.4",
     "react-dom": "16.8.4",
     "react-typography": "0.16.19",
-    "typography": "0.16.18",
+    "typography": "0.16.19",
     "webpack": "4.29.6"
   },
   "devDependencies": {
