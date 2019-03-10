@@ -41,11 +41,11 @@ The benefit of challenging goals versus pain that can be felt by challenging dre
 
 ## Misreading A Goal Or Dream
 
-In my example with my high school girlfriend, I was invisioning her dreams as goals—realistic plans that didn't include me. I attacked them with realism which probably hurt her and the relationship. This is a common thing that happens when humans listen to people they care about say something that seems life altering. Comments like, "I want to travel the world!" or "I want to quit my job and live off the land!" can mess with listener's mind if they take the comments seriously. Some people do travel the world, but most don't do it all at once and definitely without a fair amount of plaining first, hopefully. Same with quiting jobs and living off the land. There are people that do that, but, hopefully, not without a lot of planning and foresight.  
+In my example with my high school girlfriend, I was invisioning her dreams as goals—realistic plans that didn't include me. I attacked them with realism which probably hurt her and the relationship. This is a common thing that happens when humans listen to people they care about say something that seems life altering. Comments like, "I want to travel the world!" or "I want to quit my job and live off the land!" can mess with listener's mind if they take the comments seriously. Some people do travel the world, but most don't do it all at once and definitely without a fair amount of plaining first, hopefully. Same with quiting jobs and living off the land. There are people that do that, but, hopefully, not without a lot of planning and foresight.
 
 ## Conclusion
 
-It is important when listening to people we care about that they feel open. Feeling open and listened to is very important for people to be able to love and share. This is why understanding the subtle but important difference between a goal and a dream is important in human's close relationships. When a person a human is close to shares a dream, probably all that is needed is to listen. If it is clear that the person is beginning to plan out a dream, therefore turn it into a goal—that is the time to offer feedback and insight. In both scenerios truly listening is very important. 
+It is important when listening to people we care about that they feel open. Feeling open and listened to is very important for people to be able to love and share. This is why understanding the subtle but important difference between a goal and a dream is important in human's close relationships. When a person a human is close to shares a dream, probably all that is needed is to listen. If it is clear that the person is beginning to plan out a dream, therefore turn it into a goal—that is the time to offer feedback and insight. In both scenerios truly listening is very important.
 
-
+![Let dreams live](https://yowainwright.imgix.net/let-dreams-live/sharing.svg?auto=format)
 
