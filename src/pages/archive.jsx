@@ -70,7 +70,7 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMMM DD, YY")
             path
             meta
             title
