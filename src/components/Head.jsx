@@ -11,8 +11,8 @@ export default class Head extends Component {
       <Helmet>
         <meta name='robots' content='index,follow' />
         <meta property='og:locale' content='en_US' />
-        <link href='https://jeffry.in/assets/favicon.ico' rel='icon' />
-        <link href='https://yowainwright.imgix.net/w.png' rel='apple-touch-icon' itemProp='logo' />
+        <link href='https://jeffry.in/assets/favicon.png' rel='icon' />
+        <link href='https://yowainwright.imgix.net/apple-icon-120x120.png' rel='apple-touch-icon' itemProp='logo' />
         <meta name='keywords' content='jeffry, wainwright, jeffry wainwright, code, programmer, artist, athlete, developer, engineer' />
         <meta name='theme-color' content='#ffffcc' />
         <link rel='manifest' href='https://yowainwright.imgix.net/manifest.json' />
