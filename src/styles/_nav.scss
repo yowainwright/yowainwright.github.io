@@ -1,11 +1,13 @@
 $site-nav-height: $spacing-unit * 94 / 16;
 $site-nav-post-images: $spacing-unit * 52 / 16;
 $nav-height: 6rem;
+
 // nav
 .site-nav {
   position: relative;
   margin: 2rem auto;
   max-width: calc(100% - 2rem);
+
   &:after {
     border-bottom: 3px solid $color-grey-lightest;
     content: ' ';
@@ -14,9 +16,11 @@ $nav-height: 6rem;
     top: 3rem;
     width: 100%;
   }
+
   @include media-query($width-medium) {
     margin: 6rem auto;
   }
+
   &__link {
     display: block;
     height: $nav-height;
@@ -27,13 +31,15 @@ $nav-height: 6rem;
     line-height: $nav-height;
     text-align: center;
     text-transform: uppercase;
+
     &--home {
       background-color: blue;
       border-radius: 100%;
-      color: white;
+      color: $color-pink;
       padding: 0 1rem;
     }
   }
+
   &__items {
     display: flex;
     justify-content: space-around;
@@ -41,6 +47,7 @@ $nav-height: 6rem;
     padding: 0;
     position: relative;
   }
+
   &__item {
     background-color: white;
     list-style-type: none;
@@ -48,12 +55,15 @@ $nav-height: 6rem;
     padding: 0 .5rem;
     position: relative;
     z-index: 2;
+
     @include media-query($width-small) {
       padding: 0 1rem;
     }
+
     &--github,
     &--twitter {
       display: none;
+
       @include media-query($width-small) {
         display: list-item;
       }

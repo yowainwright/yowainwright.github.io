@@ -30,6 +30,7 @@ ol {
 ul,
 ol {
   margin-top: $spacing-unit;
+
   li>p {
     margin-bottom: 0;
   }
@@ -47,11 +48,13 @@ h1 {
   margin: 0;
   margin-bottom: 1rem;
   text-align: center;
+
   @include media-query($width-small) {
     font-size: 2.5rem;
     margin: 0;
     margin-bottom: 2rem;
   }
+
   @include media-query($width-medium) {
     font-size: 5rem;
     margin-top: 4.5rem;
@@ -61,6 +64,7 @@ h1 {
 
 h2 {
   font-size: 1.4rem;
+
   @include media-query($width-small) {
     font-size: 2.5rem;
   }
@@ -73,6 +77,7 @@ h3 {
     font-size: 1.5rem;
     font-weight: 900;
     margin: 3rem auto;
+
     @include media-query($width-small) {
       font-size: 2.5rem;
     }
@@ -87,6 +92,7 @@ li {
   margin-right: auto;
   margin-top: 0;
   max-width: calc(100% - #{$spacing-unit-large});
+
   @include media-query($width-small) {
     font-size: 1.5rem;
     max-width: $width-reader;
@@ -100,6 +106,7 @@ li {
 
 p {
   line-height: 1.75;
+
   li & {
     line-height: 1;
     margin-bottom: 1.5rem;
@@ -112,19 +119,23 @@ a {
   text-decoration: none;
   text-decoration-line: none;
   text-decoration-color: $color-grey-lightest;
+
   .content & {
     text-decoration-line: underline;
   }
+
   &:hover {
     text-decoration-line: underline;
+
     .content & {
       text-decoration-line: none;
     }
   }
+
   h2 &,
   &.post__link--read-more {
     &:hover {
-      background: $color-yellow-light;
+      background: $color-pink;
       text-decoration-line: none;
     }
   }
@@ -134,11 +145,13 @@ blockquote {
   @include media-query($width-small) {
     max-width: $width-reader;
   }
+
   p {
     font-size: 1.1rem;
     font-weight: 900;
     line-height: 1.7;
     margin: 1rem 0;
+
     @include media-query($width-small) {
       font-size: 1.5rem;
       line-height: 1.9;
@@ -167,6 +180,7 @@ iframe {
   margin-bottom: $spacing-unit;
   margin-top: $spacing-unit;
   max-width: calc(100% - 2rem);
+
   @include media-query($width-small) {
     max-width: 100%;
   }
@@ -181,10 +195,12 @@ time {
   margin: 1rem 0;
   position: relative;
   text-align: center;
+
   @include media-query($width-small) {
     font-size: .7rem;
     margin: 2rem 0;
   }
+
   &:after,
   &:before {
     color: #000;
@@ -192,9 +208,11 @@ time {
     display: inline-block;
     font-size: 1rem;
   }
+
   &:after {
     padding-left: .25rem;
   }
+
   &:before {
     padding-right: .25rem;
   }
@@ -220,6 +238,7 @@ hr,
 .gatsby-highlight,
 .content h2 {
   max-width: calc(100% - #{$spacing-unit-large});
+
   @include media-query($width-small) {
     max-width: $width-reader;
   }
@@ -249,6 +268,7 @@ time {
 
 header {
   margin-top: 2rem;
+
   @include media-query($width-small) {
     margin-top: 0;
     max-width: none;
@@ -267,6 +287,7 @@ code {
   font-size: .8rem;
   padding: .075rem 0;
   text-shadow: 1px 1px white;
+
   pre & {
     background-color: initial;
     border: 0;
@@ -292,6 +313,7 @@ main {
 .header__description {
   border-bottom: 1px solid lightgray;
   padding: 1.5rem 0;
+
   @include media-query($width-small) {
     border-bottom: 0;
     padding-bottom: 0;
@@ -300,6 +322,7 @@ main {
 
 .gatsby-highlight {
   margin: 0 auto;
+
   pre[class*="language-"] {
     border: 0;
     border-radius: .25rem;
@@ -314,6 +337,7 @@ table {
   display: block;
   max-width: calc(100vw - 2rem);
   overflow-x: scroll;
+
   @include media-query($width-small) {
     display: table;
     max-width: 43.75rem; // 700px
