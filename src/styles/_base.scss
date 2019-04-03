@@ -133,6 +133,7 @@ a {
   }
 
   h2 &,
+  &.post--full-link,
   &.post__link--read-more {
     &:hover {
       background: $color-pink;

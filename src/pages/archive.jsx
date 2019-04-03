@@ -14,13 +14,14 @@ export default class Archive extends Component {
 
   generatePost = (i, title, date, path) => {
     return (
-      <article key={i} className='post--headline'>
-        <header>
-          <h2 className='post__title--headline'><Link to={path}>{title}</Link></h2>
-          <time>{date}</time>
-        </header>
-        <hr />
-      </article>
+      <Link key={i} to={path} className='post--full-link'>
+        <article className='post--headline'>
+          <header>
+            <h2 className='post__title--headline'>{title}</h2>
+            <time>{date}</time>
+          </header>
+        </article>
+      </Link>
     )
   }
 
