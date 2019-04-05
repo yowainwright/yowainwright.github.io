@@ -16,7 +16,7 @@ Listening is tough. Even when listening closely, information received by a liste
 <figure class='break-three-dots'>&middot; &middot; &middot;</figure>
 <figure class='highlighter-post'>
   <p class='highlighter-post__text'>
-    Imagine there was a highlighter pen that could highlight spoken words. With this highlighter, speakers could highlight what was most important part of what they were saying. How many relationships could be saved? How much closer could we be to people we care about? How many more great business ideas could be carried out? In reflection, there are many conversations where I think, "If I only had a highlighter to highlight spoken words, this coversation would have gone much differently.". Instead, I tend to ramble on, hoping that something I say conveys my intent.
+    Imagine there was a highlighter pen that could highlight spoken words. With this highlighter, speakers could highlight what was most important part of what they were saying. How many relationships could be saved? How much closer could we be to people we care about? How many more great business ideas could be carried out? In reflection, there are many conversations where I think, "If I only had a highlighter to highlight spoken words, this conversation would have gone much differently.". Instead, I tend to ramble on, hoping that something I say conveys my intent.
   </p>
 </figure>
 <figure class='break-three-dots'>&middot; &middot; &middot;</figure>
