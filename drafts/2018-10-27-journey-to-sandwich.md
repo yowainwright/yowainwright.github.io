@@ -19,4 +19,4 @@ I assume it is better to question inadequacy with a full belly in a safe communi
 
 I think about my luck often. I go to nice grocery market many mornings to get food or a breakfast sandwich. I envision the journey of those who serve me egg sandwiches at 7am. Did they sleep in a house with tons of people just to afford to call LA home? Did they get up at 3am to drive hours to my community to listen to people in my complain? Did they listen to gun shots, travel in fear of violence to them? What do they do when they’re sick? What journeys led them to my egg sandwich?
 
-It’s funny, maybe rediculous even; while I get my sandwich how happy many that serve me seem and how sad I feel. There is no purpose to my opportunity. I’m avarage and I’m alone—with an amazing egg sandwich. I could hope that I had some purpose but I know enough that I’m not special.
+It’s funny, maybe ridiculous even; while I get my sandwich how happy many that serve me seem and how sad I feel. There is no purpose to my opportunity. I’m average and I’m alone—with an amazing egg sandwich. I could hope that I had some purpose but I know enough that I’m not special.
