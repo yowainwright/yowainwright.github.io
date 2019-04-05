@@ -13,11 +13,13 @@ categories:
 
 Listening is tough. Even when listening closely, information received by a listener is often different from what is meant to be conveyed by the speaker. Furthermore, what is perceived to be the most important information by the listener can be very different from what the speaker feels is most important. People misinterpret verbal communication all of the time! Being a part of these misunderstandings has led me to reflect ways improve this problem. I've grown fond of the idea of a highlighter pen that could highlight spoken words.
 
-----
-
-Imagine there was a highlighter pen that could highlight spoken words. With this highlighter, speakers could highlight what was most important they were saying. How many relationships could be saved? How much closer could we be to people we care about? How many more great business ideas could be carried out? In reflection, there are many conversations where I think, "If I only had a highlighter to highlight spoken words, this coversation would have gone much differently.". Instead, I tend to ramble on, hoping that something I say conveys my intent.
-
-----
+<figure class='break-three-dots'>&middot; &middot; &middot;</figure>
+<figure class='highlighter-post'>
+  <p class='highlighter-post__text'>
+    Imagine there was a highlighter pen that could highlight spoken words. With this highlighter, speakers could highlight what was most important part of what they were saying. How many relationships could be saved? How much closer could we be to people we care about? How many more great business ideas could be carried out? In reflection, there are many conversations where I think, "If I only had a highlighter to highlight spoken words, this coversation would have gone much differently.". Instead, I tend to ramble on, hoping that something I say conveys my intent.
+  </p>
+</figure>
+<figure class='break-three-dots'>&middot; &middot; &middot;</figure>
 
 ## Rambling on trying to convey my particular intent is a risky game I love to play, apparently
 
@@ -25,7 +27,7 @@ For a long time I've subtly been aware that often what I'm trying to convey verb
 
 ## If I had a spoken word highlighter, I'd say it once and highlight the good s**t
 
-F**king up while trying to say what I want to say has caused me to hurt relationships I care about while trying to convey how I feel about topics I care about—like my feelings. If I had a spoken word highlighter, I'd say what I felt once and highlight the good s\*\*t. I'd then ask if what I had highlighted made sense and ask how the listener interpreted what I'd said. If they did, we could move on to other important topics, like how they feel.
+F\*\*king up while trying to say what I want to say has caused me to hurt relationships I care about while trying to convey how I feel about topics I care about—like my feelings. If I had a spoken word highlighter, I'd say what I felt once and highlight the good s\*\*t. I'd then ask if what I had highlighted made sense and ask how the listener interpreted what I'd said. If they did, we could move on to other important topics, like how they feel.
 
 Upon coming up with this idea, I realized I don't have a spoken word highlighter but I can ask the question or clarify what I'd like the listener to receive as highlighted.
 
