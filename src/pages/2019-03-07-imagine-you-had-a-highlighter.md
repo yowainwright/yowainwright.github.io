@@ -35,7 +35,7 @@ Upon coming up with this idea, I realized I don't have a spoken word highlighter
 
 With this concept speakers and listeners now take on the ability to clarify important statements.
 
-## Other spoken word helpful concents
+## Other spoken word helpful concepts
 
 The concept of the highlighter is not the only grammatical tool that can be useful in verbal conversation. Suggesting that someone state a list of requests or directions with an ordered (numbered) list could help ensure that listeners understand an order. Even describing conversation change with saying "new paragraph" could clarify a change in conversation. Thinking about how we can better share communication by verbally acknowledging grammatical tools can be a useful tool for communication.
 
