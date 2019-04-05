@@ -16,7 +16,7 @@ Listening is tough. Even when listening closely, information received by a liste
 <figure class='break-three-dots'>&middot; &middot; &middot;</figure>
 <figure class='highlighter-post'>
   <p class='highlighter-post__text'>
-    Imagine there was a highlighter pen that could highlight spoken words. With this highlighter, speakers could highlight what was most important part of what they were saying. How many relationships could be saved? How much closer could we be to people we care about? How many more great business ideas could be carried out? In reflection, there are many conversations where I think, "If I only had a highlighter to highlight spoken words, this coversation would have gone much differently.". Instead, I tend to ramble on, hoping that something I say conveys my intent.
+    Imagine there was a highlighter pen that could highlight spoken words. With this highlighter, speakers could highlight what was most important part of what they were saying. How many relationships could be saved? How much closer could we be to people we care about? How many more great business ideas could be carried out? In reflection, there are many conversations where I think, "If I only had a highlighter to highlight spoken words, this conversation would have gone much differently.". Instead, I tend to ramble on, hoping that something I say conveys my intent.
   </p>
 </figure>
 <figure class='break-three-dots'>&middot; &middot; &middot;</figure>
@@ -35,7 +35,7 @@ Upon coming up with this idea, I realized I don't have a spoken word highlighter
 
 With this concept speakers and listeners now take on the ability to clarify important statements.
 
-## Other spoken word helpful concents
+## Other spoken word helpful concepts
 
 The concept of the highlighter is not the only grammatical tool that can be useful in verbal conversation. Suggesting that someone state a list of requests or directions with an ordered (numbered) list could help ensure that listeners understand an order. Even describing conversation change with saying "new paragraph" could clarify a change in conversation. Thinking about how we can better share communication by verbally acknowledging grammatical tools can be a useful tool for communication.
 
