@@ -59,7 +59,7 @@
     "markdownlint-cli": "^0.15.0",
     "prismjs": "1.16.0",
     "prop-types": "15.7.0",
-    "react-helmet": "5.2.0",
+    "react-helmet": "5.2.1",
     "react-responsive-grid": "0.3.4",
     "react-test-renderer": "16.8.6",
     "regenerator-runtime": "^0.13.0",
