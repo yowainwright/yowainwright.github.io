@@ -41,25 +41,3 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 ## Talks and Presentations
 
 - **[Developer CI Benefits](https://github.com/yowainwright/developer-ci-benefits)** - [JS.LA](https://js.la/), July 26, 2018
-
-<br>
-
-----
-
-<br>
-
-<p align="center">Email me at <a href="mailto:yowainwright@gmail.com"><strong>yowainwright@gmail.com</strong></a> or connect with me. I'm on
-  <a href="https://github.com/yowainwright"><strong>Github</strong></a>,
-  <a href="https://instagram.com/yowainwright"><strong>Instagram</strong></a>,
-  <a href="https://twitter.com/yowainwright"><strong>Twitter</strong></a>,
-  <a href="https://medium.com/@yowainwright"><strong>Medium</strong></a>,
-  <a href="http://ratherbe.in"><strong>Tumblr</strong></a>,
-  <a href="https://www.strava.com/athletes/722335"><strong>Strava</strong></a>, and
-  <a href="https://www.linkedin.com/in/jeffrywainwright/"><strong>LinkedIn</strong></a>.
-</p>
-
-<br>
-
-<figure class="figure--center">
-  <img class="media--circular" src="https://yowainwright.imgix.net/portraits/me-smiling.jpg?w=100&h=100&fit=crop&auto=format" alt="Me smiling with a beard" />
-</figure>
