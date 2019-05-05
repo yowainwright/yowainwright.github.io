@@ -13,6 +13,8 @@ categories:
 
 Listening is tough. Even when listening closely, information received by a listener is often different from what is meant to be conveyed by the speaker. Furthermore, what is perceived to be the most important information by the listener can be very different from what the speaker feels is most important. People misinterpret verbal communication all of the time! Being a part of these misunderstandings has led me to reflect on ways improve this problem. I've grown fond of the idea of a highlighter pen that could highlight spoken words.
 
+![What if there was a highlighter for spoken word?](https://yowainwright.imgix.net/highlighter/highlighter.svg?auto=format)
+
 <figure class='break-three-dots'>&middot; &middot; &middot;</figure>
 <figure class='highlighter-post'>
   <p class='highlighter-post__text'>
