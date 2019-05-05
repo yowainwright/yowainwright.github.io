@@ -1,3 +1,8 @@
+## [1.0.44](https://github.com/yowainwright/yowainwright.github.io/compare/1.0.43...1.0.44) (2019-05-05)
+
+
+
+
 ## [1.0.30](https://github.com/yowainwright/yowainwright.github.io/compare/1.0.29...1.0.30) (2019-02-23)
 
 
