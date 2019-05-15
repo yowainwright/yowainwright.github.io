@@ -137,7 +137,13 @@ a {
   &.post__link--read-more {
     &:hover {
       background: $color-pink;
+      color: #00f;
       text-decoration-line: none;
+
+      time:after,
+      time:before {
+        color: #00f;
+      }
     }
   }
 }
