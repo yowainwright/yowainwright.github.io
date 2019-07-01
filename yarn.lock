@@ -16442,10 +16442,10 @@ webpack-stats-plugin@^0.1.5:
   resolved "https://registry.yarnpkg.com/webpack-stats-plugin/-/webpack-stats-plugin-0.1.5.tgz#29e5f12ebfd53158d31d656a113ac1f7b86179d9"
   integrity sha1-KeXxLr/VMVjTHWVqETrB97hhedk=
 
-webpack@4.35.0:
-  version "4.35.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.35.0.tgz#ad3f0f8190876328806ccb7a36f3ce6e764b8378"
-  integrity sha512-M5hL3qpVvtr8d4YaJANbAQBc4uT01G33eDpl/psRTBCfjxFTihdhin1NtAKB1ruDwzeVdcsHHV3NX+QsAgOosw==
+webpack@4.35.1:
+  version "4.35.1"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.35.1.tgz#283db392f404f6151b37983ea6735d4efb741590"
+  integrity sha512-puA74WM8fLUsunK14fCw0iCg0EgLeC4hdDzDeuVe+hvvt48rfi0dE0eoIYWKBmYS67AM3u9F5DMWgu57dTEnrQ==
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"
