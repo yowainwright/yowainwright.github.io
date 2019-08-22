@@ -26,27 +26,27 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-ff80374b076130d8577c.js"
+    "url": "webpack-runtime-89021404ce8ec56a4fe2.js"
   },
   {
-    "url": "app-89dd4108875fa7acc8d2.js"
+    "url": "app-09707b34dc8d8c9da0e7.js"
   },
   {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-5f3c85f6480ccece123e.js"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-ddbafa6d363b8004af38.js"
   },
   {
     "url": "index.html",
-    "revision": "a392af060a63e4ae8ac4ee7ae3ca6a1e"
+    "revision": "94a5a8c5160a3631c0298a7a85295b08"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "f2a28d7873827f9b46a7d5df7d58921b"
+    "revision": "5442298582f88f8b295fb37f2385837b"
   },
   {
     "url": "0.2f2933dc343b474e635f.css"
   },
   {
-    "url": "component---src-pages-index-jsx.0dcab5eba37927994ac1.css"
+    "url": "component---src-pages-index-jsx.c658796057851eca7013.css"
   },
   {
     "url": "google-fonts/s/notoserif/v6/ga6Iaw1J5X9T9RW6j9bNfFcWaA.woff2",
@@ -89,14 +89,22 @@ self.__precacheManifest = [
     "revision": "18cc8f34bd972a20d01df12408aeb0a0"
   },
   {
-    "url": "component---src-pages-index-jsx-33b2e607d1ccabda1302.js"
+    "url": "google-fonts/s/playfairdisplay/v15/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+    "revision": "496b0ee7c32c16da8c6289fa8aae5268"
   },
   {
-    "url": "0-9325af5faacca355e605.js"
+    "url": "google-fonts/s/playfairdisplay/v15/nuFlD-vYSZviVYUb_rj3ij__anPXBb__lW4e5g.woff2",
+    "revision": "18cc8f34bd972a20d01df12408aeb0a0"
   },
   {
-    "url": "static/d/642/path---index-6a9-4mqOjUAFxB9GT78FETmsWXteUY.json",
-    "revision": "c4d073f963ec57c97e8c9a5e992eb877"
+    "url": "component---src-pages-index-jsx-06b79c087964f825557e.js"
+  },
+  {
+    "url": "0-6c2ed1d2da2c26bc9b00.js"
+  },
+  {
+    "url": "static/d/552/path---index-6a9-qx1uACEUubxacdStnzfWvsLHS4.json",
+    "revision": "25567acc083fe0285e982135599f925e"
   },
   {
     "url": "static/d/520/path---offline-plugin-app-shell-fallback-a-30-c5a-NZuapzHg3X9TaN1iIixfv1W23E.json",
