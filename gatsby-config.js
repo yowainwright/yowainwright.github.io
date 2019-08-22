@@ -97,7 +97,7 @@ module.exports = {
           },
           {
             family: 'Oswald',
-            variants: ['500', ]
+            variants: ['500']
           },
         ],
       },
