@@ -80,11 +80,11 @@ exports[`Footer component renders correctly 1`] = `
       .
     </p>
     <figure
-      class="figure--center"
+      className="figure--center"
     >
       <img
         alt="Me smiling with a beard"
-        class="media--circular"
+        className="media--circular"
         src="https://yowainwright.imgix.net/portraits/me-smiling.jpg?w=100&h=100&fit=crop&auto=format"
       />
     </figure>
