@@ -1,3 +1,13 @@
+## [1.0.50](https://github.com/yowainwright/yowainwright.github.io/compare/1.0.49...1.0.50) (2019-08-23)
+
+
+
+
+## [1.0.49](https://github.com/yowainwright/yowainwright.github.io/compare/1.0.48...1.0.49) (2019-08-22)
+
+
+
+
 ## [1.0.48](https://github.com/yowainwright/yowainwright.github.io/compare/1.0.47...1.0.48) (2019-08-22)
 
 
