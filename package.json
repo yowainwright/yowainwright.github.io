@@ -47,7 +47,7 @@
     "babel-loader": "^8.0.0",
     "babel-plugin-macros": "^2.4.2",
     "conventional-changelog-cli": "^2.0.5",
-    "eslint": "6.3.0",
+    "eslint": "6.4.0",
     "eslint-config-dollarshaveclub": "3.1.1",
     "eslint-plugin-jsx-a11y": "6.2.2",
     "eslint-plugin-react": "7.14.3",
@@ -62,7 +62,7 @@
     "react-responsive-grid": "0.3.4",
     "react-test-renderer": "16.9.0",
     "regenerator-runtime": "^0.13.0",
-    "stylelint": "^10.0.0",
+    "stylelint": "^11.0.0",
     "stylelint-config-dollarshaveclub": "7.0.0",
     "typescript": "^3.1.1",
     "write-good": "1.0.2"
