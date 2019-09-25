@@ -16,7 +16,7 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 ----
 
 
-## Large Open Source Initiatives
+## Open Source Initiatives
 
 - **[ES Check](https://github.com/dollarshaveclub/es-check):** Checks the version of ES in JavaScript files with simple shell commands
 - **[StickyBits](https://github.com/dollarshaveclub/stickybits):** Stickybits is a lightweight (<2KB) alternative to position: sticky polyfills
@@ -28,7 +28,7 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 
 ----
 
-## Larger Publications
+## Publications
 
 - **[Stickybits: an alternative to position: sticky polyfills](https://css-tricks.com/stickybits-alternative-position-sticky-polyfills/)** - CSS Tricks
 - **[Code Review Etiquette](https://css-tricks.com/code-review-etiquette/)** - CSS Tricks
@@ -41,3 +41,12 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 ## Talks and Presentations
 
 - **[Developer CI Benefits](https://github.com/yowainwright/developer-ci-benefits)** - [JS.LA](https://js.la/), July 26, 2018
+
+<br>
+
+----
+
+## Content Featuring Me
+
+- **[Surfers On How They Deal With a Blue Wave That's More Like a Ripple](https://melmagazine.com/en-us/story/election-2018-blue-wave-surfers)** - by [Andrew Fiouzi](https://melmagazine.com/en-us/story/author/andrew-fiouzi) for [Mel Magazine](https://melmagazine.com)
+- **[Dollar Shave Club Body Wipes](https://www.dollarshaveclub.com/our-products/deodorant-and-wipes/)** - Brand and Product Model
