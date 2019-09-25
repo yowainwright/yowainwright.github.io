@@ -42,6 +42,10 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 
 - **[Developer CI Benefits](https://github.com/yowainwright/developer-ci-benefits)** - [JS.LA](https://js.la/), July 26, 2018
 
+<br>
+
+----
+
 ## Content Featuring Me
 
 - **[Surfers On How They Deal With a Blue Wave That's More Like a Ripple](https://melmagazine.com/en-us/story/election-2018-blue-wave-surfers)** - by [Andrew Fiouzi](https://melmagazine.com/en-us/story/author/andrew-fiouzi) for [Mel Magazine](https://melmagazine.com)
