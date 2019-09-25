@@ -16,7 +16,7 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 ----
 
 
-## Large Open Source Initiatives
+## Open Source Initiatives
 
 - **[ES Check](https://github.com/dollarshaveclub/es-check):** Checks the version of ES in JavaScript files with simple shell commands
 - **[StickyBits](https://github.com/dollarshaveclub/stickybits):** Stickybits is a lightweight (<2KB) alternative to position: sticky polyfills
