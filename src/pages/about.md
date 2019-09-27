@@ -48,5 +48,6 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 
 ## Content Featuring Me
 
+- **[The Beanie Guys Keep It Cool in the Wet, Hot Los Angeles Summer](https://melmagazine.com/en-us/story/la-beanie-guys-keeping-it-cool)** [Andrew Fiouzi](https://melmagazine.com/en-us/story/author/andrew-fiouzi) for [Mel Magazine](https://melmagazine.com)
 - **[Surfers On How They Deal With a Blue Wave That's More Like a Ripple](https://melmagazine.com/en-us/story/election-2018-blue-wave-surfers)** - by [Andrew Fiouzi](https://melmagazine.com/en-us/story/author/andrew-fiouzi) for [Mel Magazine](https://melmagazine.com)
 - **[Dollar Shave Club Body Wipes](https://www.dollarshaveclub.com/our-products/deodorant-and-wipes/)** - Brand and Product Model
