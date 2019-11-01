@@ -15,8 +15,6 @@ Malaga Cove in Palos Verdes, California is a great spot to catch the sunset. The
 
 ![Malaga Cove from a Southern looking perspective](https://yowainwright.imgix.net/ships-coming-in/malaga-cove-looking-south.jpg?auto=format)
 
----
-
 ## Waiting for ships to come in
 
 Wearing old jeans, a flannel, and a formula one race car hat, he stood against the sun facing the shadows looking out to sea towards the Santa Monica Mountains miles away. He's jaw hung, fully rested and creating a look of contemplation. It appeared he was waiting for his ships to come in.
