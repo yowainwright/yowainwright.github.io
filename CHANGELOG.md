@@ -1,3 +1,13 @@
+## [1.1.3](https://github.com/yowainwright/yowainwright.github.io/compare/1.1.1...1.1.3) (2019-11-03)
+
+
+
+
+## [1.1.1](https://github.com/yowainwright/yowainwright.github.io/compare/1.1.0...1.1.1) (2019-10-31)
+
+
+
+
 # [1.1.0](https://github.com/yowainwright/yowainwright.github.io/compare/1.0.52...1.1.0) (2019-10-31)
 
 
