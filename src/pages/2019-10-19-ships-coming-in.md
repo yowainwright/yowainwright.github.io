@@ -21,4 +21,7 @@ Wearing old jeans, a flannel, and a formula one race car hat, he stood against t
 
 ![Waiting for ships to come in](https://yowainwright.imgix.net/ships-coming-in/ships-coming-in.jpg?auto=format)
 
+
 ...Based on his hat, I'm thinking they're race cars ships.
+
+![Detail, waiting for ships to come in](https://yowainwright.imgix.net/ships-coming-in/detail-ships-coming-in.jpg?auto=format)
