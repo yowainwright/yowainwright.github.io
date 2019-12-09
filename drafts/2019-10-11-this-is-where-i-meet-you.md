@@ -1,5 +1,5 @@
 ---
-title: This Is Where I Meet You: Stepping Into My Truth And Setting Myself Free
+title: This Is Where I Meet You, Connection My Emotions and Thoughts
 date: "2019-10-11"
 layout: post
 readNext: "/"
@@ -11,7 +11,31 @@ categories:
 - story
 ---
 
-We, humans, all have a journey. We have moments that form who we are. Recent studies even show that our journey and reactions happen before we're even [born](). We're instinctual—not just as humans but as ancestors, like of our parents.  This post won't dig into ancestral instincts. However, ancestral instincts are relevant to this post. One parent and myself share a similar ancestral instinct. We both naturally take on a victim mentality. This victim mentality has put me in a space of abuse and my reaction to abuse has paved the way for how I react to people I'm close to and sometimes people I'm not even close to. "This is where I will meet you.", it may seem like a boundary for me but it is not. It's a truth that I've lived with for most of my life. Over the past year, I've stepped out of falling into a victim mentality by beginning claim what I want and where I will meet people I'm in contact with. For parts of this post, I will write non-specifically to focus on my truth with not directly involving others. 
+This past year I began connecting my emotional and logical thoughts. For this article, emotional thoughts are feelings that come from the body. 
+Emotional thoughts often have psychical presence, are instinctual, and connected to the nervous system. Logical thoughts are constructed ideas that can easily be communicated and understood by others. I may write more about emotional and logical thoughts in another article. This article is about my journey connecting with my emotions and re-connecting to parts of myself I didn’t know I had. After realizing I’d been detached from my emotions and the effect detachment had on my body’s performance and reactions, I knew I couldn’t accept old patterns. I’m writing this post to clarify I how got to be the person I am and ...
 
----
+> Emotional thoughts often have psychical presence, are instinctual, and connected to the nervous system.
+> 
+> Logical thoughts are well constructed ideas that can easily be communicated and understood by others.
+
+----
+
+I’m going to be your step father
+
+I remember meeting my step father for breakfast in a Perkins in Rapid City, South Dakota. We met for breakfast. 
+At the time, my soon-to-be step father was based in San Fransisco. After giving his name, he said, “I’m going to be your Step Father”. 
+I felt afraid by the abruptness of his comment. He gave me a green t-shirt with yellow lettering 
+
+Secret moments, passing down trauma
+
+----
+
+* Introduction 
+    * Protective Self
+* I’m going to be your step father
+    * Awesome things about Bob
+* Secret moments, passing down trauma
+* I am bad, secret moments alone
+* Friendship and love leading to awakening
+* 
 
