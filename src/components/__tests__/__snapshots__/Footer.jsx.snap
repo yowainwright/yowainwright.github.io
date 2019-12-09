@@ -55,14 +55,6 @@ exports[`Footer component renders correctly 1`] = `
       </a>
       , 
       <a
-        href="http://ratherbe.in"
-      >
-        <strong>
-          Tumblr
-        </strong>
-      </a>
-      , 
-      <a
         href="https://www.strava.com/athletes/722335"
       >
         <strong>
