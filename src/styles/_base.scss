@@ -117,34 +117,8 @@ p {
 a {
   color: black;
   text-decoration: none;
-  text-decoration-line: none;
-  text-decoration-color: $color-grey-lightest;
-
-  .content & {
-    text-decoration-line: underline;
-  }
-
   &:hover {
     text-decoration-line: underline;
-
-    .content & {
-      text-decoration-line: none;
-    }
-  }
-
-  h2 &,
-  &.post--full-link,
-  &.post__link--read-more {
-    &:hover {
-      background: $color-pink;
-      color: #00f;
-      text-decoration-line: none;
-
-      time:after,
-      time:before {
-        color: #00f;
-      }
-    }
   }
 }
 

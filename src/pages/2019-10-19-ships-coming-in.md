@@ -19,9 +19,6 @@ Malaga Cove in Palos Verdes, California is a great spot to catch the sunset. The
 
 Wearing old jeans, a flannel, and a formula one race car hat, he stood against the sun facing the shadows looking out to sea towards the Santa Monica Mountains miles away. He's jaw hung, fully rested and creating a look of contemplation. It appeared he was waiting for his ships to come in.
 
-![Waiting for ships to come in](https://yowainwright.imgix.net/ships-coming-in/ships-coming-in.jpg?auto=format)
-
+![Detail, waiting for ships to come in](https://yowainwright.imgix.net/ships-coming-in/detail-ships-coming-in.jpg?auto=format)
 
 ...Based on his hat, I'm thinking they're race cars ships.
-
-![Detail, waiting for ships to come in](https://yowainwright.imgix.net/ships-coming-in/detail-ships-coming-in.jpg?auto=format)
