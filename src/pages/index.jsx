@@ -12,16 +12,8 @@ export const PostHeader = ({ title, path, date }) => (
   </header>
 )
 
-export const PostFigure = ({ image, path }) => image ? (
-    <figure itemType='http://schema.org/ImageObject'>
-      <Link to={path}>
-        <img src={`${image}?w=800&&fit=crop&crop=focalpoint&auto=format`} itemProp='contentURL' alt='Post Figure' />
-      </Link>
-    </figure>
-  ) : null
-
 export const Posts = ({ posts }) => posts.map((post, i) => {
-  if (i > 11) return
+  if (i > 5) return
 
   const pNode = post.node
   const path = get(post, 'node.frontmatter.path') || pNode.path
@@ -35,7 +27,6 @@ export const Posts = ({ posts }) => posts.map((post, i) => {
   return (
     <article key={i} className='post--article'>
       <PostHeader title={title} path={path} date={date} />
-      <PostFigure image={image} path={path} />
       <p>{description} <Link className='post__link--read-more' to={path}>[...]</Link></p>
       <hr />
     </article>
@@ -56,7 +47,6 @@ export default class BlogIndex extends Component {
             <meta name='twitter:url' property='og:url' content='https://jeffry.in' />
             <meta name='twitter:title' property='og:title' content={title} />
           </Helmet>
-          <hr />
           <Posts posts={posts} />
         </main>
       </Layout>

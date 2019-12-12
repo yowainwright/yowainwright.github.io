@@ -5,47 +5,49 @@ $nav-height: 6rem;
 // nav
 .site-nav {
   position: relative;
-  margin: 2rem auto;
+  margin: 3rem auto;
   max-width: calc(100% - 2rem);
 
   &:after {
-    border-bottom: 3px solid $color-grey-lightest;
-    content: ' ';
-    left: 0;
-    position: absolute;
-    top: 3rem;
-    width: 100%;
+    @include media-query($width-small) {
+      border-bottom: 3px solid $color-grey-lightest;
+      content: ' ';
+      left: 0;
+      position: absolute;
+      top: 3rem;
+      width: 100%;
+    }
   }
 
   @include media-query($width-medium) {
-    margin: 6rem auto;
+    margin: 7rem auto;
   }
 
   &__link {
-    display: block;
-    height: $nav-height;
-    font-family: $font-family-nav;
-    font-size: .85rem;
-    font-weight: 500;
-    letter-spacing: .1rem;
-    line-height: $nav-height;
+    font-size: 1rem;
+    font-weight: 900;
     text-align: center;
-    text-transform: uppercase;
-
+    @include media-query($width-small) {
+      display: block;
+      height: $nav-height;
+      line-height: $nav-height;
+    }
     &--home {
-      background-color: blue;
-      border-radius: 100%;
-      color: $color-pink;
-      padding: 0 1rem;
+      font-size: 2rem;
+      @include media-query($width-medium) {
+        font-size: 2.75rem;
+      }
     }
   }
 
   &__items {
-    display: flex;
-    justify-content: space-around;
     max-width: $width-medium;
     padding: 0;
     position: relative;
+    @include media-query($width-small) {
+      display: flex;
+      justify-content: space-around;
+    }
   }
 
   &__item {
