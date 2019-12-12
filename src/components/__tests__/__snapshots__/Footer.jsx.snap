@@ -13,7 +13,7 @@ exports[`Footer component renders correctly 1`] = `
       align="center"
       className="site-footer__body"
     >
-      This webpage contains my online thoughts. I'm 
+      My online thoughts. I'm 
       <a
         href="https://jeffry.in/about"
       >
