@@ -2,6 +2,9 @@
   &--full-link {
     border-bottom: 1px solid lightgray;
     display: block;
+    &:hover {
+      background-color: $color-pink;
+    }
   }
 
   &--article {

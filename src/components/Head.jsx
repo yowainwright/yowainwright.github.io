@@ -9,7 +9,7 @@ export default () => (
     <meta property='og:locale' content='en_US' />
     <link href='https://jeffry.in/assets/favicon.png' rel='icon' />
     <link href='https://yowainwright.imgix.net/apple-icon-120x120.png' rel='apple-touch-icon' itemProp='logo' />
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display:400,900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900&display=swap" rel="stylesheet" />
     <meta name='keywords' content='jeffry, wainwright, jeffry wainwright, code, programmer, artist, athlete, developer, engineer' />
     <meta name='theme-color' content='#ffffcc' />
     <link rel='manifest' href='https://yowainwright.imgix.net/manifest.json' />
