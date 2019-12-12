@@ -1,12 +1,13 @@
 .site-footer {
-  margin: 2rem 0;
+  background-color: #000;
+  color: #fff;
+  margin: 6rem 0 0;
   text-align: center;
 
   &__wrapper {
-    // border-top: 1px solid lightgray;
     margin-left: auto;
     margin-right: auto;
-    padding: 3rem 0;
+    padding: 5rem 0 3rem;
 
     @include media-query($width-medium) {
       max-width: $width-default;
@@ -17,7 +18,7 @@
     display: inline-block;
     font-size: 2rem;
     font-weight: 900;
-    padding: 1rem;
+    padding-top: 1rem;
   }
 
   &__link {
@@ -26,5 +27,9 @@
 
   &__date {
     padding-left: $spacing-unit-small;
+  }
+
+  a {
+    color: #fff;
   }
 }
