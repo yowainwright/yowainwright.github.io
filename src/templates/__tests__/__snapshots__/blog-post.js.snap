@@ -10,60 +10,64 @@ exports[`BlogPost component renders correctly 1`] = `
     itemType="http://schema.org/SiteNavigationElement"
     role="navigation"
   >
-    <ol
-      className="site-nav__items"
+    <div
+      className="site-nav__container"
     >
-      <li
-        className="site-nav__item site-nav__item--home"
+      <div
+        className="site-nav__main-item"
       >
         <a
-          className="site-nav__link site-nav__link--home"
+          className="site-nav__main-item-link"
           href="/"
         >
           Jeffry.in
         </a>
-      </li>
-      <li
-        className="site-nav__item site-nav__item--github"
+      </div>
+      <ol
+        className="site-nav__items"
       >
-        <a
-          className="site-nav__link site-nav__link--github"
-          href="https://github.com/yowainwright"
+        <li
+          className="site-nav__item site-nav__item--github"
         >
-          Github
-        </a>
-      </li>
-      <li
-        className="site-nav__item site-nav__item--twitter"
-      >
-        <a
-          className="site-nav__link site-nav__link--twitter"
-          href="https://twitter.com/yowainwright"
+          <a
+            className="site-nav__link site-nav__link--github"
+            href="https://github.com/yowainwright"
+          >
+            Github
+          </a>
+        </li>
+        <li
+          className="site-nav__item site-nav__item--twitter"
         >
-          Twitter
-        </a>
-      </li>
-      <li
-        className="site-nav__item site-nav__item--archive"
-      >
-        <a
-          className="site-nav__link site-nav__link--archive"
-          href="/archive/"
+          <a
+            className="site-nav__link site-nav__link--twitter"
+            href="https://twitter.com/yowainwright"
+          >
+            Twitter
+          </a>
+        </li>
+        <li
+          className="site-nav__item site-nav__item--archive"
         >
-          Archive
-        </a>
-      </li>
-      <li
-        className="site-nav__item site-nav__item--about"
-      >
-        <a
-          className="site-nav__link site-nav__link--about"
-          href="/about/"
+          <a
+            className="site-nav__link site-nav__link--archive"
+            href="/archive/"
+          >
+            Archive
+          </a>
+        </li>
+        <li
+          className="site-nav__item site-nav__item--about"
         >
-          About
-        </a>
-      </li>
-    </ol>
+          <a
+            className="site-nav__link site-nav__link--about"
+            href="/about/"
+          >
+            About
+          </a>
+        </li>
+      </ol>
+    </div>
   </nav>
   <article>
     <header>

@@ -5,22 +5,20 @@ export default class Header extends Component {
     componentName: 'site-nav',
     navItems: [
       {
-        alias: 'home',
-        name: 'Jeffry.in',
-        path: '/',
-      },
-      {
         alias: 'github',
+        inApp: false,
         name: 'Github',
         path: 'https://github.com/yowainwright',
       },
       {
         alias: 'twitter',
+        inApp: false,
         name: 'Twitter',
         path: 'https://twitter.com/yowainwright',
       },
       {
         alias: 'archive',
+        inApp: true,
         name: 'Archive',
         path: '/archive/',
       },
@@ -36,23 +34,28 @@ export default class Header extends Component {
     const { componentName, navItems } = this.props
     return (
       <nav id={componentName} className={componentName} role='navigation' itemType='http://schema.org/SiteNavigationElement'>
-        <ol className={`${componentName}__items`}>
-          {navItems.map(({ alias, name, path }, i) => {
-            return (
-              <li
-                key={i}
-                className={`${componentName}__item ${componentName}__item--${alias}`}
-              >
-                <a
-                  className={`${componentName}__link ${componentName}__link--${alias}`}
-                  href={path}
+        <div className={`${componentName}__container`}>
+          <div className={`${componentName}__main-item`}>
+            <a href="/" className={`${componentName}__main-item-link`}>Jeffry.in</a>
+          </div>
+          <ol className={`${componentName}__items`}>
+            {navItems.map(({ alias, name, path }, i) => {
+              return (
+                <li
+                  key={i}
+                  className={`${componentName}__item ${componentName}__item--${alias}`}
                 >
-                  {name}
-                </a>
-              </li>
-            )
-          })}
-        </ol>
+                  <a
+                    className={`${componentName}__link ${componentName}__link--${alias}`}
+                    href={path}
+                  >
+                    {name}
+                  </a>
+                </li>
+              )
+            })}
+          </ol>
+        </div>
       </nav>
     )
   }
