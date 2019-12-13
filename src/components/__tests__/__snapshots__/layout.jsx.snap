@@ -70,15 +70,15 @@ exports[`Template component renders correctly 1`] = `
             Jeffry Wainwright
           </strong>
         </a>
-        —a software engineer, artist, runner, and surfer living in Los Angeles. Email me at 
-        <a
-          href="mailto:yowainwright@gmail.com"
-        >
-          <strong>
-            yowainwright@gmail.com
-          </strong>
-        </a>
-         or connect with me. I'm on 
+        —a software engineer, artist, runner, and surfer living in Los Angeles. 
+        <strong>
+          <a
+            href="mailto:yowainwright@gmail.com"
+          >
+            Email me
+          </a>
+        </strong>
+         or reach out on 
         <a
           href="https://github.com/yowainwright"
         >
@@ -86,7 +86,7 @@ exports[`Template component renders correctly 1`] = `
             Github
           </strong>
         </a>
-         , 
+        , 
         <a
           href="https://instagram.com/yowainwright"
         >
@@ -110,7 +110,7 @@ exports[`Template component renders correctly 1`] = `
             Strava
           </strong>
         </a>
-        , and 
+        , or 
         <a
           href="https://www.linkedin.com/in/jeffrywainwright/"
         >
