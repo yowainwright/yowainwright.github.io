@@ -27,23 +27,13 @@ exports[`Template component renders correctly 1`] = `
         className="site-nav__items"
       >
         <li
-          className="site-nav__item site-nav__item--github"
+          className="site-nav__item site-nav__item--about"
         >
           <a
-            className="site-nav__link site-nav__link--github"
-            href="https://github.com/yowainwright"
+            className="site-nav__link site-nav__link--about"
+            href="/about/"
           >
-            Github
-          </a>
-        </li>
-        <li
-          className="site-nav__item site-nav__item--twitter"
-        >
-          <a
-            className="site-nav__link site-nav__link--twitter"
-            href="https://twitter.com/yowainwright"
-          >
-            Twitter
+            About
           </a>
         </li>
         <li
@@ -54,16 +44,6 @@ exports[`Template component renders correctly 1`] = `
             href="/archive/"
           >
             Archive
-          </a>
-        </li>
-        <li
-          className="site-nav__item site-nav__item--about"
-        >
-          <a
-            className="site-nav__link site-nav__link--about"
-            href="/about/"
-          >
-            About
           </a>
         </li>
       </ol>

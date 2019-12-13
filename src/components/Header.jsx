@@ -5,27 +5,15 @@ export default class Header extends Component {
     componentName: 'site-nav',
     navItems: [
       {
-        alias: 'github',
-        inApp: false,
-        name: 'Github',
-        path: 'https://github.com/yowainwright',
-      },
-      {
-        alias: 'twitter',
-        inApp: false,
-        name: 'Twitter',
-        path: 'https://twitter.com/yowainwright',
+        alias: 'about',
+        name: 'About',
+        path: '/about/',
       },
       {
         alias: 'archive',
         inApp: true,
         name: 'Archive',
         path: '/archive/',
-      },
-      {
-        alias: 'about',
-        name: 'About',
-        path: '/about/',
       },
     ],
   }
