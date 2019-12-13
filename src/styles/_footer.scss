@@ -1,8 +1,12 @@
 .site-footer {
   background-color: #000;
   color: #fff;
-  margin: 6rem 0 0;
+  margin: 10rem 0 0;
   text-align: center;
+
+  @include media-query($width-small) {
+    margin-top: 15rem;
+  }
 
   &__wrapper {
     margin-left: auto;

@@ -13,8 +13,6 @@ categories:
 
 Malaga Cove in Palos Verdes, California is a great spot to catch the sunset. The cove itself sits a few hundred feet below the cliffs above. The terrain is mainly shrubs but there are a few larger trees which decorate the landscape. The sea floor of the cove is rocky. During a Southern Swell, waves hit the most Western point of the cove creating relaxed waves from a long ways out. At sunset, it's a place were families, couples, and sometimes dreamers watch the sunset on the cliffs above the cove. The sunset highlights the Santa Monica Mountains in Malibu which live about twenty miles away. This past Sunday, I watched the sunset there. One onlooker in particular stood out.
 
-![Malaga Cove from a Southern looking perspective](https://yowainwright.imgix.net/ships-coming-in/malaga-cove-looking-south.jpg?auto=format)
-
 ## Waiting for ships to come in
 
 Wearing old jeans, a flannel, and a formula one race car hat, he stood against the sun facing the shadows looking out to sea towards the Santa Monica Mountains miles away. He's jaw hung, fully rested and creating a look of contemplation. It appeared he was waiting for his ships to come in.
