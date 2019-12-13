@@ -1,8 +1,8 @@
 .site-footer {
-  background-color: #000;
-  color: #fff;
-  margin: 10rem 0 0;
+  border-top: 1px solid #000;
+  margin: 10rem auto 0;
   text-align: center;
+  max-width: calc(100% - 2rem);
 
   @include media-query($width-small) {
     margin-top: 15rem;
@@ -31,9 +31,5 @@
 
   &__date {
     padding-left: $spacing-unit-small;
-  }
-
-  a {
-    color: #fff;
   }
 }
