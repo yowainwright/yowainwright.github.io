@@ -14,13 +14,13 @@ exports[`Footer component renders correctly 1`] = `
       className="site-footer__body"
     >
       My online thoughts. I'm 
-      <a
-        href="https://jeffry.in/about"
+      <Link
+        to="/about"
       >
         <strong>
           Jeffry Wainwright
         </strong>
-      </a>
+      </Link>
       —a software engineer, artist, runner, and surfer living in Los Angeles. 
       <strong>
         <a
@@ -83,17 +83,13 @@ exports[`Footer component renders correctly 1`] = `
     <p
       className="site-footer__content"
     >
-      <a
-        aria-current="page"
+      <Link
         className="site-footer__link"
-        href="/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        style={Object {}}
+        to="/"
       >
         jeffry.in 
         2019
-      </a>
+      </Link>
     </p>
   </div>
 </footer>

@@ -16,12 +16,12 @@ exports[`Template component renders correctly 1`] = `
       <div
         className="site-nav__main-item"
       >
-        <a
+        <Link
           className="site-nav__main-item-link"
-          href="/"
+          to="/"
         >
           Jeffry.in
-        </a>
+        </Link>
       </div>
       <ol
         className="site-nav__items"
@@ -29,22 +29,22 @@ exports[`Template component renders correctly 1`] = `
         <li
           className="site-nav__item site-nav__item--about"
         >
-          <a
+          <Link
             className="site-nav__link site-nav__link--about"
-            href="/about/"
+            to="/about/"
           >
             About
-          </a>
+          </Link>
         </li>
         <li
           className="site-nav__item site-nav__item--archive"
         >
-          <a
+          <Link
             className="site-nav__link site-nav__link--archive"
-            href="/archive/"
+            to="/archive/"
           >
             Archive
-          </a>
+          </Link>
         </li>
       </ol>
     </div>
@@ -63,13 +63,13 @@ exports[`Template component renders correctly 1`] = `
         className="site-footer__body"
       >
         My online thoughts. I'm 
-        <a
-          href="https://jeffry.in/about"
+        <Link
+          to="/about"
         >
           <strong>
             Jeffry Wainwright
           </strong>
-        </a>
+        </Link>
         —a software engineer, artist, runner, and surfer living in Los Angeles. 
         <strong>
           <a
@@ -132,17 +132,13 @@ exports[`Template component renders correctly 1`] = `
       <p
         className="site-footer__content"
       >
-        <a
-          aria-current="page"
+        <Link
           className="site-footer__link"
-          href="/"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          style={Object {}}
+          to="/"
         >
           jeffry.in 
           2019
-        </a>
+        </Link>
       </p>
     </div>
   </footer>
