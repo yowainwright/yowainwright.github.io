@@ -1,8 +1,8 @@
 .site-footer {
-  border-top: 1px solid #000;
+  background: #000;
+  color: #fff;
   margin: 10rem auto 0;
   text-align: center;
-  max-width: calc(100% - 2rem);
 
   @include media-query($width-small) {
     margin-top: 15rem;
@@ -11,10 +11,11 @@
   &__wrapper {
     margin-left: auto;
     margin-right: auto;
+    max-width: calc(100% - 2rem);
     padding: 5rem 0 3rem;
-
     @include media-query($width-medium) {
       max-width: $width-default;
+      padding-top: 10rem;
     }
   }
 
@@ -26,10 +27,15 @@
   }
 
   &__link {
+    color: #fff;
     text-decoration: none;
   }
 
   &__date {
     padding-left: $spacing-unit-small;
+  }
+
+  a {
+    color: #fff;
   }
 }
