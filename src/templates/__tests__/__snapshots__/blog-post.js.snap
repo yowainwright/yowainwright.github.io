@@ -50,13 +50,17 @@ exports[`BlogPost component renders correctly 1`] = `
     </div>
   </nav>
   <article>
-    <header>
+    <header
+      className="post__header"
+    >
       <h1
         itemProp="headeline"
       >
         foo
       </h1>
-      <time />
+      <time
+        className="post__time"
+      />
     </header>
     <div
       className="wrapper"

@@ -40,14 +40,17 @@ h1,
 h2,
 h3 {
   line-height: 1.25;
-  text-align: center;
+
+  .post__header &,
+  .content & {
+    text-align: center;
+  }
 }
 
 h1 {
   font-size: 1.75rem;
   margin: 0;
   margin-bottom: 1rem;
-  text-align: center;
 
   @include media-query($width-small) {
     font-size: 2.5rem;
@@ -91,11 +94,9 @@ li {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
-  max-width: calc(100% - #{$spacing-unit-large});
 
   @include media-query($width-small) {
     font-size: 1.5rem;
-    max-width: $width-reader;
   }
 }
 
@@ -175,49 +176,51 @@ time {
   letter-spacing: .2rem;
   margin: 1rem 0;
   position: relative;
-  text-align: center;
 
   @include media-query($width-small) {
     font-size: .7rem;
     margin: 2rem 0;
   }
 
-  &:after,
-  &:before {
-    color: #000;
-    content: '—';
-    display: inline-block;
-    font-size: 1rem;
-  }
+  &.post__time {
+    text-align: center;
 
-  &:after {
-    padding-left: .25rem;
-  }
+    &:after,
+    &:before {
+      color: #000;
+      content: '—';
+      display: inline-block;
+      font-size: 1rem;
+    }
 
-  &:before {
-    padding-right: .25rem;
+    &:after {
+      padding-left: .25rem;
+    }
+
+    &:before {
+      padding-right: .25rem;
+    }
   }
 }
 
 // element max-widths
-hr,
 h3,
 h4,
 h5,
 h6,
-p,
 ul,
 ol,
 header,
-time,
 blockquote,
 pre,
 iframe,
 code,
 table,
-hr,
 .gatsby-highlight,
-.content h2 {
+.content h2,
+.content p,
+.content time,
+.content hr {
   max-width: calc(100% - #{$spacing-unit-large});
 
   @include media-query($width-small) {

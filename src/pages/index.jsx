@@ -6,8 +6,8 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 
 export const PostHeader = ({ title, path, date }) => (
-  <header className='post__header'>
-    <h2 className='post__title'><Link to={path}>{title}</Link></h2>
+  <header>
+    <h2><Link to={path}>{title}</Link></h2>
     <time>{date}</time>
   </header>
 )
