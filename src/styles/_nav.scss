@@ -77,9 +77,9 @@ $nav-height: 4rem;
   }
 
   &__main-item-symbol {
-    background: blue;
+    background: $color-pink;
     border-radius: 100%;
-    color: $color-pink;
+    color: #000;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.75rem;
     height: 3rem;
