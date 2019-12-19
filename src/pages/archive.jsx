@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
-import { Link } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import { SquarePost } from '../components/post/square'
 export default class Archive extends Component {
   constructor (props) {
     super(props)
@@ -12,34 +12,6 @@ export default class Archive extends Component {
     this.title = 'Archive | Jeffry.in'
   }
 
-  generatePost = (i, title, date, path) => {
-    return (
-      <Link key={i} to={path} className='post--full-link'>
-        <article className='post--headline'>
-          <header>
-            <h2 className='post__title--headline'>{title}</h2>
-            <time>{date}</time>
-          </header>
-        </article>
-      </Link>
-    )
-  }
-
-  generatePosts = () => {
-    const postItems = []
-    this.posts.forEach((post, i) => {
-      const pNode = post.node
-      const path = get(post, 'node.frontmatter.path') || pNode.path
-      if (path === '/404/' || path === '/about' || path === '/about/') return
-      const title = get(post, 'node.frontmatter.title') || pNode.title
-      const date = get(post, 'node.frontmatter.date') || pNode.date
-      postItems.push(
-        this.generatePost(i, title, date, path)
-      )
-    })
-
-    return postItems
-  }
 
   render () {
     return (
@@ -51,8 +23,15 @@ export default class Archive extends Component {
             <meta name='twitter:url' property='og:url' content='https://jeffry.in/archive/' />
             <meta name='twitter:title' property='og:title' content={`${this.title}`} />
           </Helmet>
-          <div className='main__grid'>
-            {this.generatePosts()}
+          <div className='posts--squares'>
+            {this.posts.map((post, i) => {
+              const pNode = post.node
+              const path = get(post, 'node.frontmatter.path') || pNode.path
+              if (path === '/404/' || path === '/about' || path === '/about/') return
+              const title = get(post, 'node.frontmatter.title') || pNode.title
+              const date = get(post, 'node.frontmatter.date') || pNode.date
+              return <SquarePost date={date} path={path} title={title} />
+            })}
           </div>
         </main>
       </Layout>
