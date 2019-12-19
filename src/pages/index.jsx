@@ -1,36 +1,15 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
-import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import { BasicPost } from '../components/post/basic'
 
-export const PostHeader = ({ title, path, date }) => (
-  <header>
-    <h2><Link to={path}>{title}</Link></h2>
-    <time>{date}</time>
-  </header>
-)
-
-export const Posts = ({ posts }) => posts.map((post, i) => {
+export const PostsRow = ({ posts }) => posts.map(({ node: { frontmatter } }, i) => {
   if (i > 7) return
-
-  const pNode = post.node
-  const path = get(post, 'node.frontmatter.path') || pNode.path
-  if (path === '/404/' || path === '/about' || path === '/about/') return
-
-  const title = get(post, 'node.frontmatter.title') || pNode.title
-  const date = get(post, 'node.frontmatter.date') || pNode.date
-  const description = get(post, 'node.frontmatter.meta') || pNode.meta
-  const image = get(post, 'node.frontmatter.featured_image') || post.node.featured_image
-
-  return (
-    <article key={i} className='post--article'>
-      <PostHeader title={title} path={path} date={date} />
-      <p>{description} <Link className='post__link--read-more' to={path}>[...]</Link></p>
-      <hr />
-    </article>
-  )
+  const { date, meta, path, title } = frontmatter
+  if (['/404/', '/about', '/about/'].includes(path)) return
+  return (<BasicPost key={i} date={date} description={meta} path={path} title={title} />)
 })
 
 export default class BlogIndex extends Component {
@@ -47,7 +26,9 @@ export default class BlogIndex extends Component {
             <meta name='twitter:url' property='og:url' content='https://jeffry.in' />
             <meta name='twitter:title' property='og:title' content={title} />
           </Helmet>
-          <Posts posts={posts} />
+          <div className='posts--basic'>
+            <PostsRow posts={posts} />
+          </div>
         </main>
       </Layout>
     )
