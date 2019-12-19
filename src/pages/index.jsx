@@ -13,7 +13,7 @@ export const PostHeader = ({ title, path, date }) => (
 )
 
 export const Posts = ({ posts }) => posts.map((post, i) => {
-  if (i > 5) return
+  if (i > 7) return
 
   const pNode = post.node
   const path = get(post, 'node.frontmatter.path') || pNode.path
