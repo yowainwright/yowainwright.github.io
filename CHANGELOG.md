@@ -1,3 +1,8 @@
+# [1.6.0](https://github.com/yowainwright/yowainwright.github.io/compare/1.5.0...1.6.0) (2019-12-19)
+
+
+
+
 # [1.5.0](https://github.com/yowainwright/yowainwright.github.io/compare/1.4.4...1.5.0) (2019-12-19)
 
 
