@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 export default class Header extends Component {
   static defaultProps = {
     componentName: 'site-nav',
@@ -23,9 +24,12 @@ export default class Header extends Component {
     return (
       <nav id={componentName} className={componentName} role='navigation' itemType='http://schema.org/SiteNavigationElement'>
         <div className={`${componentName}__container`}>
-          <div className={`${componentName}__main-item`}>
-            <a href="/" className={`${componentName}__main-item-link`}>Jeffry.in</a>
-          </div>
+          <Link to="/" className={`${componentName}__main-item-link`}>
+            <div className={`${componentName}__main-item`}>
+              <h3 className={`${componentName}__main-item-symbol`}>j</h3>
+              <h2 className={`${componentName}__main-item-title`}>Jeffry.in</h2>
+            </div>
+          </Link>
           <ol className={`${componentName}__items`}>
             {navItems.map(({ alias, name, path }, i) => {
               return (
@@ -33,12 +37,12 @@ export default class Header extends Component {
                   key={i}
                   className={`${componentName}__item ${componentName}__item--${alias}`}
                 >
-                  <a
+                  <Link
                     className={`${componentName}__link ${componentName}__link--${alias}`}
-                    href={path}
+                    to={path}
                   >
                     {name}
-                  </a>
+                  </Link>
                 </li>
               )
             })}

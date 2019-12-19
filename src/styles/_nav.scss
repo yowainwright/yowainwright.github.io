@@ -2,27 +2,39 @@ $site-nav-height: $spacing-unit * 94 / 16;
 $site-nav-post-images: $spacing-unit * 52 / 16;
 $nav-height: 4rem;
 
-// nav
 .site-nav {
+  background:#fff;
+  border-bottom: 1px solid $color-grey-lighter;
   height: $nav-height;
-  position: relative;
-  margin: 3rem auto 7rem;
+  padding-bottom: 5.5rem;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  @include media-query($width-small) {
+    border-bottom-width: 0;
+    padding-bottom: 10rem;
+    padding-top: 5rem;
+    position: relative;
+  }
 
   @include media-query($width-medium) {
-    margin: 10rem auto 15rem;
-    max-width: calc(100% - 2rem);
+    padding: 10rem 0 15rem;
   }
 
   &:after {
-    border-bottom: 2px solid #000;
-    content: ' ';
-    left: 0;
-    position: absolute;
-    top: 2.75rem;
-    width: 100%;
     @include media-query($width-small) {
-      border-width: 1px;
-      top: 3rem;
+      border-bottom: 1px solid #000;
+      content: ' ';
+      left: 0;
+      position: absolute;
+      width: 100%;
+      top: 8rem;
+    }
+
+    @include media-query($width-medium) {
+      top: 13rem;
     }
   }
 
@@ -31,31 +43,76 @@ $nav-height: 4rem;
     flex-direction: row;
   }
 
+  &__main-item-link {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   &__main-item {
     align-self: flex-start;
-    font-size: 1.75rem;
+    background: #fff;
+    display: flex;
     font-weight: 900;
-    padding: 1rem 1rem 0;
+    margin-left: 1rem;
+    padding-top: 1rem;
+    position: relative;
+    z-index: 2;
     @include media-query($width-small) {
-      font-size: 2.75rem;
-      margin-left: 1rem;
       padding-top: .5rem;
     }
   }
 
+  &__main-item-title,
   &__main-item,
-  &__items {
+  &__item {
     height: $nav-height;
   }
 
-  &__main-item,
+
+  &__main-item-title,
   &__item {
-    background-color: #fff;
+    background: #fff;
     z-index: 2;
+  }
+
+  &__main-item-symbol {
+    background: blue;
+    border-radius: 100%;
+    color: $color-pink;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75rem;
+    height: 3rem;
+    margin: 0 1rem 0 0;
+    padding: .35rem 0 0 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 3rem;
+
+    @include media-query($width-small) {
+      font-size: 2.5rem;
+      height: $nav-height;
+      margin: 0 1rem;
+      width: $nav-height;
+    }
+  }
+
+  &__main-item-title {
+    font-size: 1.5rem;
+    margin: .5rem 0 0 0;
+    padding: 0;
+    @include media-query($width-small) {
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
   }
 
   &__link {
     font-size: 1rem;
+  }
+
+  &__main-item-title,
+  &__link {
     font-weight: 900;
   }
 
@@ -71,9 +128,14 @@ $nav-height: 4rem;
 
   &__item {
     list-style-type: none;
-    margin: 0 1rem;
+    margin: 0;
     padding: 0 .75rem;
     position: relative;
+
+    @include media-query($width-small) {
+      margin: 0 1rem;
+      padding: 0 .75rem;
+    }
 
     &--github,
     &--twitter {

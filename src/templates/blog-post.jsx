@@ -12,7 +12,7 @@ export default class BlogPostTemplate extends Component {
 
   generateDate = () => {
     if (this.post.frontmatter.path === '/about/') return
-    return (<time>{this.post.frontmatter.date}</time>)
+    return (<time className="post__time">{this.post.frontmatter.date}</time>)
   }
 
   render () {
@@ -26,7 +26,7 @@ export default class BlogPostTemplate extends Component {
             <meta name='twitter:url' property='og:url' content={`${post.frontmatter.path}`} />
             <meta name='twitter:title' property='og:title' content={`${post.frontmatter.title}`} />
           </Helmet>
-          <header>
+          <header className="post__header">
             <h1 itemProp='headeline'>{post.frontmatter.title}</h1>
             {this.generateDate()}
           </header>

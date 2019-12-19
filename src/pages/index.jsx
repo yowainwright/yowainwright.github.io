@@ -6,14 +6,14 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 
 export const PostHeader = ({ title, path, date }) => (
-  <header className='post__header'>
-    <h2 className='post__title'><Link to={path}>{title}</Link></h2>
+  <header>
+    <h2><Link to={path}>{title}</Link></h2>
     <time>{date}</time>
   </header>
 )
 
 export const Posts = ({ posts }) => posts.map((post, i) => {
-  if (i > 5) return
+  if (i > 7) return
 
   const pNode = post.node
   const path = get(post, 'node.frontmatter.path') || pNode.path
