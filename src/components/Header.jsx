@@ -24,9 +24,12 @@ export default class Header extends Component {
     return (
       <nav id={componentName} className={componentName} role='navigation' itemType='http://schema.org/SiteNavigationElement'>
         <div className={`${componentName}__container`}>
-          <div className={`${componentName}__main-item`}>
-            <Link to="/" className={`${componentName}__main-item-link`}>Jeffry.in</Link>
-          </div>
+          <Link to="/" className={`${componentName}__main-item-link`}>
+            <div className={`${componentName}__main-item`}>
+              <h3 className={`${componentName}__main-item-symbol`}>j</h3>
+              <h2 className={`${componentName}__main-item-title`}>Jeffry.in</h2>
+            </div>
+          </Link>
           <ol className={`${componentName}__items`}>
             {navItems.map(({ alias, name, path }, i) => {
               return (

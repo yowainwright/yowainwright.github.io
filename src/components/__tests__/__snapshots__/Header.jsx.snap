@@ -10,16 +10,25 @@ exports[`Header component renders correctly 1`] = `
   <div
     className="site-nav__container"
   >
-    <div
-      className="site-nav__main-item"
+    <Link
+      className="site-nav__main-item-link"
+      to="/"
     >
-      <Link
-        className="site-nav__main-item-link"
-        to="/"
+      <div
+        className="site-nav__main-item"
       >
-        Jeffry.in
-      </Link>
-    </div>
+        <h3
+          className="site-nav__main-item-symbol"
+        >
+          j
+        </h3>
+        <h2
+          className="site-nav__main-item-title"
+        >
+          Jeffry.in
+        </h2>
+      </div>
+    </Link>
     <ol
       className="site-nav__items"
     >
