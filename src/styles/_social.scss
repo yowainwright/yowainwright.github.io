@@ -1,0 +1,42 @@
+.social-nav {
+  background: #000;
+
+  a {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7rem;
+    text-transform: uppercase;
+  }
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+
+  @include media-query($width-small) {
+    max-width: calc(100% - 2rem);
+  }
+
+  @include media-query($width-medium) {
+    max-width: 80%;
+  }
+
+  &__item {
+    height: 1.75rem;
+    line-height: .8;
+    margin: 0;
+    padding: 0 .2rem;
+
+    &--hidden {
+      display: none;
+
+      @include media-query($width-small) {
+        display: block;
+      }
+    }
+  }
+}

@@ -33,7 +33,7 @@ export const socialItems = [
     alias: 'tumblr',
     name: 'Tumblr',
     path: 'http://ratherbe.in',
-    small: true,
+    small: false,
   },
   {
     alias: 'strava',
