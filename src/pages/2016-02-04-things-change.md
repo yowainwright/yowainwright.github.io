@@ -9,6 +9,7 @@ meta: It's amazing the way things change. I, Jeff Wainwright, discuss myself and
 show_image: true
 note: no-featured-image
 featured_image: https://yowainwright.imgix.net/things-change/man.jpg
+post_index: 13
 categories:
 - art
 - story

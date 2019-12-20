@@ -7,6 +7,7 @@ path: "/making-a-js-plugin/"
 meta: Moments writing JavaScript Plugins
 share_image: "https://yowainwright.imgix.net/icons/icons/js.jpg"
 featured_image: null
+post_index: 33
 categories:
 - code
 - javascript

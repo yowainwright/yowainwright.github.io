@@ -8,6 +8,7 @@ meta: This post summarizes my notes on template strings and template tagging aft
   watching Wes Bos's ES6 For Everyone
 share_image: "https://yowainwright.imgix.net/icons/js.jpg"
 featured_image: null
+post_index: 11
 categories:
 - code
 - javascript

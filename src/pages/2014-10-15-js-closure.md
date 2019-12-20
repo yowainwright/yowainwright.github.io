@@ -10,6 +10,10 @@ categories:
 - javascript
 share_image: "https://yowainwright.imgix.net/icons/js.jpg"
 featured_image: null
+post_index: 6
+categories:
+- javascript
+- code
 ---
 
 Javascript Closures are bundles of code or inner functions that have access to outer functions & variables. IT IS THAT SIMPLE! But, understanding why they’re so important quickly become pretty complex.

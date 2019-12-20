@@ -8,6 +8,7 @@ meta: Rant post  about potential gains from understanding and being more thought
   when writing html.
 share_image: "https://yowainwright.imgix.net/icons/os.jpg"
 featured_image: null
+post_index: 19
 categories:
 - html
 - code

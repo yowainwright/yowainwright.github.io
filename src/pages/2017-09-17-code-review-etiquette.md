@@ -6,6 +6,7 @@ readNext: "/"
 path: "/code-review-etiquette/"
 meta: Code Review Etiquette is an important for code quality, engineer happiness, and engineer growth—but is never talked about?
 featured_image: null
+post_index: 55
 categories:
 - note
 - story

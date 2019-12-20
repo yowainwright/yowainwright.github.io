@@ -7,6 +7,7 @@ path: "/creating-aliases/"
 meta: Creating Aliases on a Mac is an easy thing to do & can save a lot of time
 share_image: "https://yowainwright.imgix.net/icons/os.jpg"
 featured_image: null
+post_index: 14
 categories:
 - code
 - terminal

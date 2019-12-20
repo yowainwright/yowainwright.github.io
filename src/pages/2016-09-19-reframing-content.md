@@ -8,6 +8,7 @@ meta: Reframing content, one of the most important things to present well on a c
   site is embedded content.
 share_image: "https://yowainwright.imgix.net/reframing-content/aspect-ratio.jpg"
 featured_image: null
+post_index: 18
 categories:
 - code
 - js

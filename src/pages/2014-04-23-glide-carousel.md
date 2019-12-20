@@ -5,6 +5,7 @@ layout: post
 readNext: "/"
 path: "/glide-carousel/"
 meta: This is a demo on how to use the Glide Carousel with Semantic UI
+post_index: 4
 categories:
 - javascript
 - code

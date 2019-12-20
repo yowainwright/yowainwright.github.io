@@ -5,6 +5,7 @@ layout: post
 readNext: "/"
 path: "/about/"
 meta: About Jeff Wainwright, yowainwright on the internet
+post_index: null
 ---
 
 I'm a software engineer at [Dollar Shave Club](https://www.dollarshaveclub.com/). I write software because I'm passionate about making things, learning, and contributing to society. Software allows me to do those things everyday. Unrelated to software, I enjoy [riding bikes](https://www.strava.com/athletes/722335), [running](https://www.strava.com/athletes/722335), and surfing.
