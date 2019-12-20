@@ -165,88 +165,197 @@ exports[`Template component renders correctly 1`] = `
     <div
       className="site-footer__wrapper"
     >
-      <p
-        align="center"
-        className="site-footer__body"
+      <div
+        className="site-footer__col"
       >
-        My online thoughts. I'm 
-        <Link
-          to="/about"
+        <p
+          className="site-footer__body"
         >
-          <strong>
-            Jeffry Wainwright
-          </strong>
-        </Link>
-        —a software engineer, artist, runner, and surfer living in Los Angeles. 
-        <strong>
-          <a
-            href="mailto:yowainwright@gmail.com"
+          My online thoughts. I'm 
+          <Link
+            to="/about"
           >
-            Email me
+            <strong>
+              Jeffry Wainwright
+            </strong>
+          </Link>
+          —a software engineer, artist, runner, and surfer living in Los Angeles. 
+          <strong>
+            <a
+              href="mailto:yowainwright@gmail.com"
+            >
+              Email me
+            </a>
+          </strong>
+           or reach out on 
+          <a
+            href="https://github.com/yowainwright"
+          >
+            <strong>
+              Github
+            </strong>
           </a>
-        </strong>
-         or reach out on 
-        <a
-          href="https://github.com/yowainwright"
-        >
-          <strong>
-            Github
-          </strong>
-        </a>
-        , 
-        <a
-          href="https://instagram.com/yowainwright"
-        >
-          <strong>
-            Instagram
-          </strong>
-        </a>
-        , 
-        <a
-          href="https://twitter.com/yowainwright"
-        >
-          <strong>
-            Twitter
-          </strong>
-        </a>
-        , 
-        <a
-          href="https://www.strava.com/athletes/722335"
-        >
-          <strong>
-            Strava
-          </strong>
-        </a>
-        , or 
-        <a
-          href="https://www.linkedin.com/in/jeffrywainwright/"
-        >
-          <strong>
-            LinkedIn
-          </strong>
-        </a>
-        .
-      </p>
-      <figure
-        className="figure--center"
+          , 
+          <a
+            href="https://instagram.com/yowainwright"
+          >
+            <strong>
+              Instagram
+            </strong>
+          </a>
+          , 
+          <a
+            href="https://twitter.com/yowainwright"
+          >
+            <strong>
+              Twitter
+            </strong>
+          </a>
+          , 
+          <a
+            href="https://www.strava.com/athletes/722335"
+          >
+            <strong>
+              Strava
+            </strong>
+          </a>
+          , or 
+          <a
+            href="https://www.linkedin.com/in/jeffrywainwright/"
+          >
+            <strong>
+              LinkedIn
+            </strong>
+          </a>
+          .
+        </p>
+      </div>
+      <div
+        className="site-footer__col"
       >
-        <img
-          alt="Me smiling with a beard"
-          className="media--circular"
-          src="https://yowainwright.imgix.net/portraits/me-smiling.jpg?w=100&h=100&fit=crop&auto=format"
-        />
-      </figure>
-      <p
-        className="site-footer__content"
-      >
-        <Link
-          className="site-footer__link"
-          to="/"
+        <nav
+          className="social-footer"
         >
-          jeffry.in 
-          2019
-        </Link>
-      </p>
+          <ul
+            className="social-list"
+          >
+            <li
+              className="social-list__item social-list__item--showing"
+            >
+              <a
+                className="social-list__link"
+                href="https://github.com/yowainwright"
+              >
+                Github
+              </a>
+            </li>
+            <li
+              className="social-list__item social-list__item--showing"
+            >
+              <a
+                className="social-list__link"
+                href="https://twitter.com/yowainwright"
+              >
+                Twitter
+              </a>
+            </li>
+            <li
+              className="social-list__item social-list__item--hidden"
+            >
+              <a
+                className="social-list__link"
+                href="https://www.npmjs.com/~yowainwright"
+              >
+                NPMJS
+              </a>
+            </li>
+            <li
+              className="social-list__item social-list__item--showing"
+            >
+              <a
+                className="social-list__link"
+                href="https://instagram.com/yowainwright"
+              >
+                Instragram
+              </a>
+            </li>
+            <li
+              className="social-list__item social-list__item--hidden"
+            >
+              <a
+                className="social-list__link"
+                href="https://medium.com/@yowainwright"
+              >
+                Medium
+              </a>
+            </li>
+            <li
+              className="social-list__item social-list__item--hidden"
+            >
+              <a
+                className="social-list__link"
+                href="http://ratherbe.in"
+              >
+                Tumblr
+              </a>
+            </li>
+            <li
+              className="social-list__item social-list__item--hidden"
+            >
+              <a
+                className="social-list__link"
+                href="https://www.strava.com/athletes/722335"
+              >
+                Strava
+              </a>
+            </li>
+            <li
+              className="social-list__item social-list__item--showing"
+            >
+              <a
+                className="social-list__link"
+                href="https://www.linkedin.com/in/jeffrywainwright/"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li
+              className="social-list__item social-list__item--hidden"
+            >
+              <a
+                className="social-list__link"
+                href="https://open.spotify.com/user/127322575?si=6zrJlJX9RcaOk5mp-iJnJg"
+              >
+                Spotify
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        className="site-footer__col"
+      >
+        <figure
+          className="figure--center"
+        >
+          <img
+            alt="Me smiling with a beard"
+            className="media--circular"
+            src="https://yowainwright.imgix.net/portraits/me-smiling.jpg?w=100&h=100&fit=crop&auto=format"
+          />
+        </figure>
+        <p
+          className="site-footer__content"
+        >
+          <Link
+            className="site-footer__link"
+            to="/"
+          >
+            jeffry.in 
+            2019
+          </Link>
+        </p>
+      </div>
     </div>
   </footer>
 </div>

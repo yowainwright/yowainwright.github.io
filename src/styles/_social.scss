@@ -10,26 +10,36 @@
 }
 
 .social-list {
-  display: flex;
-  justify-content: space-between;
   list-style-type: none;
-  margin: 0 auto;
   padding: 0;
-  width: 100%;
 
-  @include media-query($width-small) {
-    max-width: calc(100% - 2rem);
+  .social-nav & {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+
+    @include media-query($width-small) {
+      max-width: calc(100% - 2rem);
+    }
+
+    @include media-query($width-medium) {
+      max-width: 80%;
+    }
   }
 
-  @include media-query($width-medium) {
-    max-width: 80%;
+  .social-footer & {
+    display: none;
   }
 
   &__item {
-    height: 1.75rem;
-    line-height: .8;
     margin: 0;
-    padding: 0 .2rem;
+
+    .social-nav & {
+      height: 1.75rem;
+      line-height: .8;
+      padding: 0 .2rem;
+    }
 
     &--hidden {
       display: none;
