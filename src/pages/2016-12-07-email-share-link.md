@@ -7,6 +7,7 @@ path: "/email-share-link/"
 meta: Email share links are often disregarded as simple but there are a few challenges
   to be aware of
 featured_image: null
+post_index: 20
 categories:
 - code
 - javascript
