@@ -5,9 +5,6 @@ layout: post
 readNext: "/"
 path: "/js-closure/"
 meta: Understanding Javascript Closure & what it does
-categories:
-- code
-- javascript
 share_image: "https://yowainwright.imgix.net/icons/js.jpg"
 featured_image: null
 post_index: 6
