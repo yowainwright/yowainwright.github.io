@@ -6,6 +6,7 @@ readNext: "/"
 path: "/ships-coming-in/"
 meta: Malaga Cove in Palos Verdes, California is a great spot to catch the sunset. At sunset, it's a place were families, couples, and sometimes dreamers go to watch the sunset. At sunset on Sunday, I watched one particular person stare longly against the sunset. It appeared they were waiting for their ships to come in. 
 featured_image: null
+post_index: 64
 categories:
 - note
 - story

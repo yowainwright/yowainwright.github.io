@@ -6,6 +6,7 @@ readNext: "/"
 path: "/sinon-fake-server-methods/"
 meta: Digging into Sinon Fake Server Methods and how to use them.
 featured_image: null
+post_index: 50
 categories:
 - javascript
 ---

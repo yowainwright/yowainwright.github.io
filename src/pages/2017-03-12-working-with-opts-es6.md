@@ -8,6 +8,7 @@ meta: This post explains how to use ES6 function destructuring for more readable
   Plugin Options.
 share_image: https://yowainwright.imgix.net/icons/js.jpg
 featured_image: null
+post_index: 35
 categories:
 - html
 - code

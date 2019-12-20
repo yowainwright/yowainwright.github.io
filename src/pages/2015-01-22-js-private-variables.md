@@ -7,6 +7,7 @@ path: "/js-private-information/"
 meta: Creating a private information in JavaScript to be used in future functions
 share_image: "https://yowainwright.imgix.net/icons/js.jpg"
 featured_image: null
+post_index: 10
 categories:
 - code
 - javascript

@@ -8,6 +8,7 @@ meta: This post reviews some things about arrow functions that I learned from We
   Bos's ES6 for everyone.
 share_image: "https://yowainwright.imgix.net/icons/js.jpg"
 featured_image: null
+post_index: 21
 categories:
 - html
 - code

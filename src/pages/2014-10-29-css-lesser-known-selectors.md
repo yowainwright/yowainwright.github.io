@@ -7,6 +7,10 @@ path: "/css-less-known-selectors/"
 meta: Less known CSS selectors, aka attribute selectors
 share_image: "https://yowainwright.imgix.net/icons/sass.jpg"
 featured_image: null
+post_index: 7
+categories:
+- css
+- code
 ---
 
 Having written CSS & SASS for years & using [BEM](//csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) it's a rarity that I find the need to use some of the selectors I'll list below but, every once in a while a situation comes up where I'm so thankful that they're there.

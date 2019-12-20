@@ -6,6 +6,7 @@ readNext: "/"
 path: "/if-i-had-a-highlighter/"
 meta: This post discusses how hard it for listeners to fully understand what a speaker is communicating. Misinterpretation happens often. What verbal tools can be used to improve interpretation? Perhaps, imagining a spoken word highlighter pen so that speakers could highlight their key points could help.
 featured_image: null
+post_index: 63
 categories:
 - note
 - story

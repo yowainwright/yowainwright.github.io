@@ -6,6 +6,7 @@ readNext: "/"
 path: "/first-post-in-a-bit/"
 meta: I stopped posting on this blog in September last year, 2017. It was an easy decision to make then. There were specific reasons I stopped, but I couldn't articulate them.
 featured_image: "https://yowainwright.imgix.net/first-post-in-a-bit/cool-waters.jpg"
+post_index: 59
 categories:
 - note
 - story

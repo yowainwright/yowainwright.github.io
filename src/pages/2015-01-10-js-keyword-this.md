@@ -8,6 +8,7 @@ meta: This post goes into Javascript's keyword this, how it is defined & why it 
   misunderstood
 share_image: "https://yowainwright.imgix.net/icons/js.jpg"
 featured_image: null
+post_index: 9
 categories:
 - javascript
 - code

@@ -6,6 +6,7 @@ readNext: "/"
 path: "/let-the-dream-live/"
 meta: "Pragmatism has often told me that dreams cannot become real unless they're followed by an actionable plan. I've share this logic with friends when they tell me an unrealistic dream and to my surprise, 'thanks' was not the typical response. Responses tended to be negative. Dreams are often just that, dreams. Let then live if they make others happy."
 featured_image: null
+post_index: 62
 categories:
 - note
 - story

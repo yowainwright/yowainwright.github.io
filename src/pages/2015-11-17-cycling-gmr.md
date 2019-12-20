@@ -6,6 +6,7 @@ readNext: "/"
 path: "/glendora-mountain-road/"
 meta: Glendora Mountain Road is a road cycling paradise
 featured_image: "https://yowainwright.imgix.net/gmr/gmr.jpg"
+post_index: 12
 categories:
 - travel
 ---

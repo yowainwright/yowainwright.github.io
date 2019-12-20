@@ -7,6 +7,7 @@ path: "/happy-birthday/"
 show_image: true
 meta: A post which creates letters with the body that spell out Happy Birthday!
 featured_image: "https://yowainwright.imgix.net/hb/hb.jpg"
+post_index: 5
 categories:
 - story
 - projects
