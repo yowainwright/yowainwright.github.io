@@ -5,6 +5,104 @@ exports[`BlogPost component renders correctly 1`] = `
   className="gatsby-container"
 >
   <nav
+    className="social-nav"
+  >
+    <ul
+      className="social-list"
+    >
+      <li
+        className="social-list__item social-list__item--showing"
+      >
+        <a
+          className="social-list__link"
+          href="https://github.com/yowainwright"
+        >
+          Github
+        </a>
+      </li>
+      <li
+        className="social-list__item social-list__item--showing"
+      >
+        <a
+          className="social-list__link"
+          href="https://twitter.com/yowainwright"
+        >
+          Twitter
+        </a>
+      </li>
+      <li
+        className="social-list__item social-list__item--hidden"
+      >
+        <a
+          className="social-list__link"
+          href="https://www.npmjs.com/~yowainwright"
+        >
+          NPMJS
+        </a>
+      </li>
+      <li
+        className="social-list__item social-list__item--showing"
+      >
+        <a
+          className="social-list__link"
+          href="https://instagram.com/yowainwright"
+        >
+          Instragram
+        </a>
+      </li>
+      <li
+        className="social-list__item social-list__item--hidden"
+      >
+        <a
+          className="social-list__link"
+          href="https://medium.com/@yowainwright"
+        >
+          Medium
+        </a>
+      </li>
+      <li
+        className="social-list__item social-list__item--hidden"
+      >
+        <a
+          className="social-list__link"
+          href="http://ratherbe.in"
+        >
+          Tumblr
+        </a>
+      </li>
+      <li
+        className="social-list__item social-list__item--hidden"
+      >
+        <a
+          className="social-list__link"
+          href="https://www.strava.com/athletes/722335"
+        >
+          Strava
+        </a>
+      </li>
+      <li
+        className="social-list__item social-list__item--showing"
+      >
+        <a
+          className="social-list__link"
+          href="https://www.linkedin.com/in/jeffrywainwright/"
+        >
+          LinkedIn
+        </a>
+      </li>
+      <li
+        className="social-list__item social-list__item--hidden"
+      >
+        <a
+          className="social-list__link"
+          href="https://open.spotify.com/user/127322575?si=6zrJlJX9RcaOk5mp-iJnJg"
+        >
+          Spotify
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <nav
     className="site-nav"
     id="site-nav"
     itemType="http://schema.org/SiteNavigationElement"
