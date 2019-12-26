@@ -2,8 +2,10 @@
 module.exports = {
   pathPrefix: '/yowainwright.github.io',
   siteMetadata: {
-    title: 'Jeffry.in',
     author: 'Jeff Wainwright',
+    description: 'Visuals and words of Jeffry Wainwright, a software engineer and surfer in Los Angeles',
+    title: 'Jeffry.in',
+    siteUrl: 'https://www.jeffry.in',
   },
   plugins: [
     {
@@ -87,5 +89,6 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-plugin-feed',
   ],
 }
