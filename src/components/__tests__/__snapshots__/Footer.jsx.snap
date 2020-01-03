@@ -196,7 +196,7 @@ exports[`Footer component renders correctly 1`] = `
           to="/"
         >
           jeffry.in 
-          2019
+          2020
         </Link>
       </p>
     </div>
