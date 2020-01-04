@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import { ShareList } from '../components/ShareList'
 
 export default class BlogPostTemplate extends Component {
   constructor (props) {
@@ -33,6 +34,11 @@ export default class BlogPostTemplate extends Component {
           <div className='wrapper'>
             <div className='content' dangerouslySetInnerHTML={{ __html: post.html }} />
           </div>
+          <footer className="post__footer">
+            <h3 className="post__footer-title">{post.frontmatter.title}</h3>
+            <p className="post__meta">{post.frontmatter.meta}</p>
+            <ShareList name="blog-bottom" path={post.frontmatter.path} title={post.frontmatter.title} />
+          </footer>
         </article>
       </Layout>
     )

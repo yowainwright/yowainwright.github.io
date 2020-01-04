@@ -111,6 +111,27 @@
       font-weight: bold;
     }
   }
+
+  &__footer {
+    border-top: 1px solid $color-grey-lighter;
+    max-width: calc(100% - 2rem);
+    margin: 5rem auto 0;
+    padding-top: 2rem;
+    @include media-query($width-small) {
+      max-width: $width-reader;
+    }
+  }
+
+  &__footer-title {
+    @include media-query($width-small) {
+      padding: 0 1rem;
+    }
+  }
+
+  &__meta {
+    font-size: .85rem;
+    padding: 1rem;
+  }
 }
 
 .posts {
