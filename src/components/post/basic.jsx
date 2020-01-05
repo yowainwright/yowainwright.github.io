@@ -1,6 +1,7 @@
 import React from 'react'
 import { PostHeader } from './header'
 import { Link } from 'gatsby'
+import { ShareList } from '../ShareList'
 
 export const BasicPost = ({ date, description, path, title }) => (
   <article className='post--article'>
@@ -9,6 +10,7 @@ export const BasicPost = ({ date, description, path, title }) => (
       {description}{' '}
       <Link className='post__link--read-more' to={path}>[...]</Link>
     </p>
+    <ShareList name="blog-bottom" path={path} title={title} />
     <hr />
   </article>
 )
