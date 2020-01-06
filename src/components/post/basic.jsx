@@ -8,7 +8,7 @@ export const BasicPost = ({ date, description, path, title }) => (
     <PostHeader title={title} path={path} date={date} />
     <p>
       {description}{' '}
-      <Link className='post__link--read-more' to={path}>[...]</Link>
+      <Link className='post__link--read-more' to={path}>&rarr;</Link>
     </p>
     <ShareList name="blog-bottom" path={path} title={title} />
     <hr />
