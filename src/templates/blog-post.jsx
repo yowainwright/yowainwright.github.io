@@ -6,38 +6,28 @@ import Layout from '../components/layout'
 import { ShareList } from '../components/ShareList'
 
 export default class BlogPostTemplate extends Component {
-  constructor (props) {
-    super(props)
-    this.post = get(this, 'props.data.markdownRemark')
-  }
-
-  generateDate = () => {
-    if (this.post.frontmatter.path === '/about/') return
-    return (<time className="post__time">{this.post.frontmatter.date}</time>)
-  }
-
   render () {
-    const post = this.post
+    const { html, frontmatter: { date, meta, path, title } } = get(this, 'props.data.markdownRemark')
     return (
       <Layout>
         <article>
-          <Helmet title={`${post.frontmatter.title} | Jeffry.in`}>
-            <meta name='twitter:description' property='og:description' content={`${post.frontmatter.meta}`} />
-            <link rel='canonical' href={`${post.frontmatter.path}`} itemProp='url' />
-            <meta name='twitter:url' property='og:url' content={`${post.frontmatter.path}`} />
-            <meta name='twitter:title' property='og:title' content={`${post.frontmatter.title}`} />
+          <Helmet title={`${title} | Jeffry.in`}>
+            <meta name='twitter:description' property='og:description' content={`${meta}`} />
+            <link rel='canonical' href={`${path}`} itemProp='url' />
+            <meta name='twitter:url' property='og:url' content={`${path}`} />
+            <meta name='twitter:title' property='og:title' content={`${title}`} />
           </Helmet>
           <header className="post__header">
-            <h1 itemProp='headeline'>{post.frontmatter.title}</h1>
-            {this.generateDate()}
+            <h1 itemProp='headeline'>{title}</h1>
+            {path !== '/about/' && (<time className="post__time">{date}</time>)}
           </header>
           <div className='wrapper'>
-            <div className='content' dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div className='content' dangerouslySetInnerHTML={{ __html: html }} />
           </div>
           <footer className="post__footer">
-            <h3 className="post__footer-title">{post.frontmatter.title}</h3>
-            <p className="post__meta">{post.frontmatter.meta}</p>
-            <ShareList name="blog-bottom" path={post.frontmatter.path} title={post.frontmatter.title} />
+            <h3 className="post__footer-title">{title}</h3>
+            <p className="post__meta">{meta}</p>
+            <ShareList name="blog-bottom" path={path} title={title} />
           </footer>
         </article>
       </Layout>

@@ -24,7 +24,7 @@
     }
 
     @include media-query($width-medium) {
-      max-width: 80%;
+      max-width: calc(100% - 4rem);
     }
   }
 

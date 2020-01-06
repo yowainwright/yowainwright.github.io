@@ -64,8 +64,6 @@ $nav-size-large: 4rem;
       padding-top: .5rem;
     }
   }
-
-  &__main-item-title,
   &__main-item,
   &__item {
     height: $nav-size;
@@ -76,7 +74,6 @@ $nav-size-large: 4rem;
   }
 
 
-  &__main-item-title,
   &__item {
     background: #fff;
     z-index: 2;
@@ -104,22 +101,14 @@ $nav-size-large: 4rem;
   }
 
   &__main-item-title {
-    font-size: 1.1rem;
-    line-height: 2.5;
-    margin: .25rem 0 0 0;
-    padding: 0;
-    @include media-query($width-small) {
-      line-height: 3.5;
-      margin: .5rem 1rem 0 0;
-    }
+    font-size: .2rem;
+    height: 0;
+    visibility: hidden;
+    width: 0;
   }
 
   &__link {
     font-size: 1rem;
-  }
-
-  &__main-item-title,
-  &__link {
     font-weight: 900;
   }
 
