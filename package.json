@@ -1,7 +1,7 @@
 {
   "name": "Jeffry.in",
   "description": "Jeffry.in, Jeff Wainwright's blog",
-  "version": "1.12.0",
+  "version": "1.12.1",
   "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
   "bugs": {
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
@@ -12,7 +12,6 @@
     "gatsby-link": "next",
     "gatsby-plugin-google-analytics": "next",
     "gatsby-plugin-manifest": "next",
-    "gatsby-plugin-netlify-cms": "^4.1.34",
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-preact": "next",
     "gatsby-plugin-react-helmet": "next",
@@ -27,7 +26,6 @@
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
-    "netlify-cms-app": "^2.10.1",
     "node-sass": "4.13.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
