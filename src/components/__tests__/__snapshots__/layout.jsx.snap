@@ -100,6 +100,16 @@ exports[`Template component renders correctly 1`] = `
           Spotify
         </a>
       </li>
+      <li
+        className="social-list__item social-list__item--showing"
+      >
+        <a
+          className="social-list__link"
+          href="/rss.xml"
+        >
+          RSS
+        </a>
+      </li>
     </ul>
   </nav>
   <nav
@@ -327,6 +337,16 @@ exports[`Template component renders correctly 1`] = `
                 href="https://open.spotify.com/user/127322575?si=6zrJlJX9RcaOk5mp-iJnJg"
               >
                 Spotify
+              </a>
+            </li>
+            <li
+              className="social-list__item social-list__item--showing"
+            >
+              <a
+                className="social-list__link"
+                href="/rss.xml"
+              >
+                RSS
               </a>
             </li>
           </ul>
