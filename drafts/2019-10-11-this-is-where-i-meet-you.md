@@ -12,21 +12,19 @@ categories:
 ---
 
 This past year I began connecting my emotional and logical thoughts. For this article, emotional thoughts are feelings that come from the body. 
-Emotional thoughts often have psychical presence, are instinctual, and connected to the nervous system. Logical thoughts are constructed ideas that can easily be communicated and understood by others. I may write more about emotional and logical thoughts in another article. This article is about my journey connecting with my emotions and re-connecting to parts of myself I didn’t know I had. After realizing I’d been detached from my emotions and the effect detachment had on my body’s performance and reactions, I knew I couldn’t accept old patterns. I’m writing this post to clarify I how got to be the person I am and ...
+Emotional thoughts often have psychical presence, are instinctual, and connected to the nervous system. Logical thoughts are constructed ideas that can easily be communicated and understood by others. I may write more about emotional and logical thoughts in another article. This article is about my journey connecting with my emotions and connecting to myself. Realizing I was detached from emotions and the effect detachment had on my body’s performance and reactions, I could no longer accept old patterns. I’m writing this post to clarify I how I became detached from my emotions ...
 
 > Emotional thoughts often have psychical presence, are instinctual, and connected to the nervous system.
 > 
 > Logical thoughts are well constructed ideas that can easily be communicated and understood by others.
 
-----
-
-I’m going to be your step father
+## I’m going to be your step father
 
 I remember meeting my step father for breakfast in a Perkins in Rapid City, South Dakota. We met for breakfast. 
 At the time, my soon-to-be step father was based in San Fransisco. After giving his name, he said, “I’m going to be your Step Father”. 
 I felt afraid by the abruptness of his comment. He gave me a green t-shirt with yellow lettering 
 
-Secret moments, passing down trauma
+## Secret moments, passing down trauma
 
 ----
 

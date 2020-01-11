@@ -53,4 +53,10 @@ export const socialItems = [
     path: 'https://open.spotify.com/user/127322575?si=6zrJlJX9RcaOk5mp-iJnJg',
     small: false,
   },
+  {
+    alias: 'rss',
+    name: 'RSS',
+    path: '/rss.xml',
+    small: true,
+  },
 ]
