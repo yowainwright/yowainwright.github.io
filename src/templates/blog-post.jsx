@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
+import { remarkForm } from 'gatsby-tinacms-remark'
 import get from 'lodash/get'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { ShareList } from '../components/ShareList'
 
-export default class BlogPostTemplate extends Component {
+class BlogPostTemplate extends Component {
   render () {
+    console.log('props:', this.props)
     const { html, frontmatter: { date, meta, path, title } } = get(this, 'props.data.markdownRemark')
     return (
       <Layout>
@@ -35,6 +37,8 @@ export default class BlogPostTemplate extends Component {
   }
 }
 
+export default remarkForm(BlogPostTemplate)
+
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     site {
@@ -54,6 +58,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
       }
+      ...TinaRemark
     }
   }
 `
