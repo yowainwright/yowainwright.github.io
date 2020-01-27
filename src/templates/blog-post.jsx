@@ -6,7 +6,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { ShareList } from '../components/ShareList'
 
-class BlogPostTemplate extends Component {
+export class BlogPostTemplate extends Component {
   render () {
     console.log('props:', this.props)
     const { html, frontmatter: { date, meta, path, title } } = get(this, 'props.data.markdownRemark')
