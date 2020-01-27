@@ -1,3 +1,8 @@
+## [1.12.5](https://github.com/yowainwright/yowainwright.github.io/compare/1.12.4...1.12.5) (2020-01-27)
+
+
+
+
 ## [1.12.4](https://github.com/yowainwright/yowainwright.github.io/compare/1.12.3...1.12.4) (2020-01-11)
 
 
