@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import BlogPost from '../blog-post'
+import { BlogPostTemplate } from '../blog-post'
 
 describe('BlogPost component', () => {
   it('renders correctly', () => {
@@ -11,7 +11,7 @@ describe('BlogPost component', () => {
         },
       },
     }
-    const rendered = renderer.create(<BlogPost data={data} />).toJSON()
+    const rendered = renderer.create(<BlogPostTemplate data={data} />).toJSON()
 
     expect(rendered).toMatchSnapshot()
   })
