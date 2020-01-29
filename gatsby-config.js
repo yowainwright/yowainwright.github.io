@@ -1,4 +1,6 @@
 /* eslint-disable */
+const { NODE_ENV } = process.env
+
 module.exports = {
   pathPrefix: '/yowainwright.github.io',
   siteMetadata: {
@@ -23,7 +25,7 @@ module.exports = {
           'gatsby-tinacms-remark',
         ],
         sidebar: {
-          hidden: production.env.NODE_ENV === 'production',
+          hidden: NODE_ENV === 'production',
         },
       },
     },
