@@ -1,7 +1,7 @@
 {
   "name": "Jeffry.in",
   "description": "Jeffry.in, Jeff Wainwright's blog",
-  "version": "1.13.2",
+  "version": "1.13.3",
   "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
   "bugs": {
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
@@ -92,9 +92,9 @@
     "chore:pr": "git add . && git commit -m '[chore] updates changelog' --no-verify && git push origin chore-changelog -f",
     "chore:setup-changelog": "git checkout develop && git pull",
     "chore": "npm run chore:delete-changelog-branch && npm run chore:branch && npm run chore:changelog && npm run chore:pr && npm run chore:setup-next-work",
-    "deploy": "npm run pre-deploy && gatsby build && gh-pages -d public --branch master && npm run post-deploy",
+    "deploy": "npm run pre-deploy && NODE_ENV=production gatsby build && gh-pages -d public --branch master && npm run post-deploy",
     "dev": "gatsby develop",
-    "develop": "gatsby develop",
+    "develop": "NODE_ENV=development gatsby develop",
     "eslint": "eslint . --ext .js,.jsx --fix",
     "eslint:ci": "eslint --ext .js,.jsx",
     "grammar": "write-good *.md --no-passive",
