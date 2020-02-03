@@ -164,7 +164,6 @@ iframe {
   margin-right: auto;
   margin-top: $spacing-unit;
   max-width: calc(100% - 2rem);
-  width:100%;
   @include media-query($width-small) {
     max-width: 100%;
   }

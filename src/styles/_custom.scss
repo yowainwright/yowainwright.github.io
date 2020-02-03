@@ -12,12 +12,12 @@
 
   &__text {
     margin: 0 auto;
-    max-width: calc(100vw - 2rem);
+    max-width: calc(100vw - 2rem) !important;
     padding: 1rem;
 
     @include media-query($width-medium) {
       font-size: 2.5rem;
-      max-width: calc(100vw - 6rem);
+      max-width: calc(100vw - 6rem) !important;
       padding: 3rem 1rem;
     }
   }
