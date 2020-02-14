@@ -1,4 +1,9 @@
-// vertically center
+@mixin media-query($width) {
+  @media screen and (min-width: $width) {
+      @content;
+  }
+}
+
 @mixin vertical-align($position: relative) {
   position: $position;
   top: 50%;
@@ -6,9 +11,7 @@
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
 }
-// Example usage: @include vertical-align;
 
-// horizontally align
 @mixin horizontal-align($position: relative) {
   position: $position;
   left: 50%;
@@ -16,10 +19,7 @@
   -ms-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
 }
-// Example usage: @include horizontal-align;
 
-
-// middle align (vertically & horizontally center)
 @mixin middle-align($position: absolute) {
   left: 50%;
   position: $position;
@@ -28,4 +28,3 @@
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
 }
-// Example usage: @include middle-align;
