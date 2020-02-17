@@ -51,36 +51,6 @@ exports[`BlogPost component renders correctly 1`] = `
         </a>
       </li>
       <li
-        className="social-list__item social-list__item--hidden"
-      >
-        <a
-          className="social-list__link"
-          href="https://medium.com/@yowainwright"
-        >
-          Medium
-        </a>
-      </li>
-      <li
-        className="social-list__item social-list__item--hidden"
-      >
-        <a
-          className="social-list__link"
-          href="http://ratherbe.in"
-        >
-          Tumblr
-        </a>
-      </li>
-      <li
-        className="social-list__item social-list__item--hidden"
-      >
-        <a
-          className="social-list__link"
-          href="https://www.strava.com/athletes/722335"
-        >
-          Strava
-        </a>
-      </li>
-      <li
         className="social-list__item social-list__item--showing"
       >
         <a
@@ -88,16 +58,6 @@ exports[`BlogPost component renders correctly 1`] = `
           href="https://www.linkedin.com/in/jeffrywainwright/"
         >
           LinkedIn
-        </a>
-      </li>
-      <li
-        className="social-list__item social-list__item--hidden"
-      >
-        <a
-          className="social-list__link"
-          href="https://open.spotify.com/user/127322575?si=6zrJlJX9RcaOk5mp-iJnJg"
-        >
-          Spotify
         </a>
       </li>
       <li
@@ -355,36 +315,6 @@ exports[`BlogPost component renders correctly 1`] = `
               </a>
             </li>
             <li
-              className="social-list__item social-list__item--hidden"
-            >
-              <a
-                className="social-list__link"
-                href="https://medium.com/@yowainwright"
-              >
-                Medium
-              </a>
-            </li>
-            <li
-              className="social-list__item social-list__item--hidden"
-            >
-              <a
-                className="social-list__link"
-                href="http://ratherbe.in"
-              >
-                Tumblr
-              </a>
-            </li>
-            <li
-              className="social-list__item social-list__item--hidden"
-            >
-              <a
-                className="social-list__link"
-                href="https://www.strava.com/athletes/722335"
-              >
-                Strava
-              </a>
-            </li>
-            <li
               className="social-list__item social-list__item--showing"
             >
               <a
@@ -392,16 +322,6 @@ exports[`BlogPost component renders correctly 1`] = `
                 href="https://www.linkedin.com/in/jeffrywainwright/"
               >
                 LinkedIn
-              </a>
-            </li>
-            <li
-              className="social-list__item social-list__item--hidden"
-            >
-              <a
-                className="social-list__link"
-                href="https://open.spotify.com/user/127322575?si=6zrJlJX9RcaOk5mp-iJnJg"
-              >
-                Spotify
               </a>
             </li>
             <li
