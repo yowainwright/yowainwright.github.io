@@ -60,7 +60,6 @@ h1 {
 
   @include media-query($width-medium) {
     font-size: 5rem;
-    margin-top: 4.5rem;
     max-width: 60rem;
   }
 }

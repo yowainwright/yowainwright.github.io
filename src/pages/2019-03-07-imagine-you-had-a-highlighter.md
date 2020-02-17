@@ -1,28 +1,28 @@
 ---
-title: Listening to what is most important to others is hard. What if there was a highlighter for spoken words?
-date: "2019-03-07"
+title: >-
+  Listening to what is most important to others is hard. What if there was a
+  highlighter for spoken words?
+date: '2019-03-07'
 layout: post
-readNext: "/"
-path: "/if-i-had-a-highlighter/"
-meta: This post discusses how hard it for listeners to fully understand what a speaker is communicating. Misinterpretation happens often. What verbal tools can be used to improve interpretation? Perhaps, imagining a spoken word highlighter pen so that speakers could highlight their key points could help.
+readNext: /
+path: /if-i-had-a-highlighter/
+meta: >-
+  This post discusses how hard it for listeners to fully understand what a
+  speaker is communicating. Misinterpretation happens often. What verbal tools
+  can be used to improve interpretation? Perhaps, imagining a spoken word
+  highlighter pen so that speakers could highlight their key points could help.
 featured_image: null
 post_index: 63
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 Listening is tough. Even when listening closely, information received by a listener is often different from what is meant to be conveyed by the speaker. Furthermore, what is perceived to be the most important information by the listener can be very different from what the speaker feels is most important. People misinterpret verbal communication all of the time! Being a part of these misunderstandings has led me to reflect on ways improve this problem. I've grown fond of the idea of a highlighter pen that could highlight spoken words.
 
-![What if there was a highlighter for spoken word?](https://yowainwright.imgix.net/highlighter/highlighter.svg?auto=format)
+## Imagine there was a highlighter pen that could highlight spoken words
 
-<figure class='break-three-dots'>&middot; &middot; &middot;</figure>
-<figure class='highlighter-post'>
-  <p class='highlighter-post__text'>
-    Imagine there was a highlighter pen that could highlight spoken words. With this highlighter, speakers could highlight what was most important part of what they were saying. How many relationships could be saved? How much closer could we be to people we care about? How many more great business ideas could be carried out? In reflection, there are many conversations where I think, "If I only had a highlighter to highlight spoken words, this conversation would have gone much differently.". Instead, I tend to ramble on, hoping that something I say conveys my intent.
-  </p>
-</figure>
-<figure class='break-three-dots'>&middot; &middot; &middot;</figure>
+Imagine there was a highlighter pen that could highlight spoken words. With this highlighter, speakers could highlight what was most important part of what they were saying. How many relationships could be saved? How much closer could we be to people we care about? How many more great business ideas could be carried out? In reflection, there are many conversations where I think, "If I only had a highlighter to highlight spoken words, this conversation would have gone much differently.". Instead, I tend to ramble on, hoping that something I say conveys my intent.
 
 ## Rambling on trying to convey my particular intent is a risky game I love to play, apparently
 

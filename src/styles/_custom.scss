@@ -8,7 +8,9 @@
 }
 
 .highlighter-post {
-  background: $color-pink;
+  &--text {
+    background: $color-pink;
+  }
 
   &__text {
     margin: 0 auto;
@@ -19,6 +21,20 @@
       font-size: 2.5rem;
       max-width: calc(100vw - 6rem);
       padding: 3rem 1rem;
+    }
+  }
+
+  .highlighter-post__text {
+    max-width: calc(100vw - 2rem);
+    @include media-query($width-medium) {
+      max-width: calc(100vw - 6rem);
+    }
+  }
+
+  .highlighter-post__image {
+    max-width: calc(100vw - 2rem);
+    @include media-query($width-medium) {
+      max-width: 46rem;
     }
   }
 }

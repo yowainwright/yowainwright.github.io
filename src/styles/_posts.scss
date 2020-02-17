@@ -118,19 +118,25 @@
     margin: 5rem auto 0;
     padding-top: 2rem;
     @include media-query($width-small) {
-      max-width: $width-reader;
+      max-width: $width-reader + 4;
+      padding: 1rem 2rem;
     }
   }
 
   &__footer-title {
     @include media-query($width-small) {
-      padding: 0 1rem;
+      font-size: 2rem;
+      max-width: none;
     }
   }
 
   &__meta {
     font-size: .85rem;
     padding: 1rem;
+    @include media-query($width-small) {
+      font-size: 1rem;
+      padding: 0;
+    }
   }
 }
 

@@ -7,7 +7,6 @@ $nav-size-large: 4rem;
   background:#fff;
   border-bottom: 1px solid $color-grey-lighter;
   height: $nav-size-large;
-  padding-bottom: $nav-size-large;
   margin: 0 auto;
   position: sticky;
   top: 0;
@@ -22,7 +21,7 @@ $nav-size-large: 4rem;
   }
 
   @include media-query($width-medium) {
-    padding: 10rem 0 15rem;
+    padding: 10rem 0;
   }
 
   &:after {
@@ -80,23 +79,24 @@ $nav-size-large: 4rem;
   }
 
   &__main-item-symbol {
-    background: $color-pink;
     border: 2px solid black;
     border-radius: 100%;
     color: #000;
     font-family: serif;
     font-size: 1.75rem;
-    height: 3rem;
-    margin: .25rem 1rem 0 0;
+    height: 2.5rem;
+    margin: .2rem 1rem 0 0;
     padding: .35rem 0 0 0;
     text-align: center;
     text-transform: uppercase;
-    width: $nav-size-large;
+    width: 3.75rem;
 
     @include media-query($width-small) {
       font-size: 2.5rem;
       height: $nav-size-large;
+      line-height: 1.5;
       margin: .5rem 1rem 0;
+      padding: 0;
       width: $nav-size-large;
     }
   }
