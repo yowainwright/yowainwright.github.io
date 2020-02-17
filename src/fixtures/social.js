@@ -24,6 +24,22 @@ export const socialItems = [
     small: true,
   },
   {
+    alias: 'linkedin',
+    name: 'LinkedIn',
+    path: 'https://www.linkedin.com/in/jeffrywainwright/',
+    small: true,
+  },
+  {
+    alias: 'rss',
+    name: 'RSS',
+    path: '/rss.xml',
+    small: true,
+  },
+]
+
+const socialItemsExtended = [
+  ...socialItems,
+  {
     alias: 'medium',
     name: 'Medium',
     path: 'https://medium.com/@yowainwright',
@@ -42,21 +58,9 @@ export const socialItems = [
     small: false,
   },
   {
-    alias: 'linkedin',
-    name: 'LinkedIn',
-    path: 'https://www.linkedin.com/in/jeffrywainwright/',
-    small: true,
-  },
-  {
     alias: 'spotify',
     name: 'Spotify',
     path: 'https://open.spotify.com/user/127322575?si=6zrJlJX9RcaOk5mp-iJnJg',
     small: false,
-  },
-  {
-    alias: 'rss',
-    name: 'RSS',
-    path: '/rss.xml',
-    small: true,
   },
 ]

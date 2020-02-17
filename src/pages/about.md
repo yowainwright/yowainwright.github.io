@@ -1,10 +1,13 @@
 ---
-title: About me, Jeff Wainwright, a software engineer and surfer in Los Angeles
-date: "2017-07-28"
+title: 'About me, Jeff Wainwright, a software engineer and surfer in Los Angeles'
+date: '2017-07-28'
 layout: post
-readNext: "/"
-path: "/about/"
-meta: About Jeff Wainwright, yowainwright on the internet
+readNext: /
+path: /about/
+meta: >-
+  This is the About page of, me, Jeff Wainwright, "yowainwright" on the
+  internet. I'm a software engineer, artist, and person who enjoys athletics,
+  living in Los Angeles.
 post_index: null
 ---
 

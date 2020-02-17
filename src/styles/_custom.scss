@@ -6,19 +6,3 @@
     font-size: 4rem;
   }
 }
-
-.highlighter-post {
-  background: $color-pink;
-
-  &__text {
-    margin: 0 auto;
-    max-width: calc(100vw - 2rem);
-    padding: 1rem;
-
-    @include media-query($width-medium) {
-      font-size: 2.5rem;
-      max-width: calc(100vw - 6rem);
-      padding: 3rem 1rem;
-    }
-  }
-}
