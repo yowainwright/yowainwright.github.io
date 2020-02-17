@@ -118,8 +118,8 @@
     margin: 5rem auto 0;
     padding-top: 2rem;
     @include media-query($width-small) {
-      max-width: $width-reader + 4;
-      padding: 1rem 2rem;
+      max-width: $width-reader + 6;
+      padding: 1rem 2.5rem;
     }
   }
 
