@@ -128,13 +128,13 @@ blockquote {
   }
 
   p {
-    font-size: 1.1rem;
+    font-family: sans-serif;
+    font-style: italic;
     font-weight: 900;
     line-height: 1.7;
     margin: 1rem 0;
 
     @include media-query($width-small) {
-      font-size: 1.5rem;
       line-height: 1.9;
       margin: 2rem 0;
     }
@@ -262,6 +262,7 @@ header {
 hr {
   border: 0;
   border-top: 1px solid lightgray;
+  margin-bottom: 2rem;
 }
 
 code {
