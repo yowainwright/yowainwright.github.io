@@ -29,7 +29,7 @@
     "gatsby-tinacms-remark": "^0.6.4",
     "gatsby-transformer-remark": "2.6.48",
     "gatsby-transformer-sharp": "2.3.13",
-    "node-sass": "4.13.0",
+    "node-sass": "4.13.1",
     "react": "16.13.0",
     "react-dom": "16.13.0",
     "react-typography": "0.16.19",
