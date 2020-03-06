@@ -1347,12 +1347,11 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@tinacms/api-git@^0.5.3":
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/@tinacms/api-git/-/api-git-0.5.3.tgz#f4225e1f9db20e4b5240e120bf85296ddbfb4a72"
-  integrity sha512-XYjKiJ6zbIeLEV7w9ae+aJ1vZpTNEsYLW9MFAUSothHFZMXLLtlJfovBfvCnvh92YqN3jxvsFfOKKJaCv+ws0w==
+"@tinacms/api-git@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@tinacms/api-git/-/api-git-0.6.0.tgz#15d833cca41e25e9790d348cade2df637d86c6b6"
+  integrity sha512-nPOy8mZNRGfGekFjl7JaGMIzuHHLi+iueGS02q1QtWzCvKIf6JBu99RhM14B88ZkjQte0nzGd/XHM9qy91EwcA==
   dependencies:
-    "@types/multer" "^1.3.10"
     atob "2.1.2"
     cors "^2.8.5"
     express "^4.17.1"
@@ -1415,10 +1414,10 @@
     final-form "^4.18.2"
     final-form-arrays "^3.0.1"
 
-"@tinacms/git-client@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@tinacms/git-client/-/git-client-0.4.1.tgz#f6b870944ba7aec9a7829061a297804e95478f70"
-  integrity sha512-DIQj7oaB0xFjBfo52obVljbFP7+Vjgr6CICXiBBbL53f18sVzWy2OITLyQEaSv0uuNva/Z53dm+Uy+fNpkyopA==
+"@tinacms/git-client@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@tinacms/git-client/-/git-client-0.5.0.tgz#866cdb7e86f8be4e9bfd0f7ca2aadf1fefd137fd"
+  integrity sha512-odnCWbbeT//nm6Dzc5OODS5lgrEgoI/9eMrn5rYL2JBhj1LJX5oORj6DnzaCkYHRWowLrIAqyhbim4tNgGDjww==
 
 "@tinacms/icons@^0.4.0":
   version "0.4.0"
@@ -1580,13 +1579,6 @@
   version "0.3.29"
   resolved "https://registry.yarnpkg.com/@types/mkdirp/-/mkdirp-0.3.29.tgz#7f2ad7ec55f914482fc9b1ec4bb1ae6028d46066"
   integrity sha1-fyrX7FX5FEgvybHsS7GuYCjUYGY=
-
-"@types/multer@^1.3.10":
-  version "1.3.10"
-  resolved "https://registry.yarnpkg.com/@types/multer/-/multer-1.3.10.tgz#d7afbd916f688fceb4460320e62a8ad1ab3e3cad"
-  integrity sha512-3hECfz+W0ix/LvPanp87mjO3kOyDnJYTpY9y7gdBxXnYXqEcj21pD0lW7KEUFFr8CHrDF5Mhh7o241KLEXDRoQ==
-  dependencies:
-    "@types/express" "*"
 
 "@types/node@*":
   version "13.1.6"
@@ -7008,25 +7000,13 @@ gatsby-telemetry@^1.1.47:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-tinacms-git@^0.2.17:
-  version "0.2.17"
-  resolved "https://registry.yarnpkg.com/gatsby-tinacms-git/-/gatsby-tinacms-git-0.2.17.tgz#54c7f7577abe2d2c31002c62101343e4f216161b"
-  integrity sha512-9//xWzUgBSsjdfv93ZwF8xJQbI4THGypz8HMtxM+4ZqVkJF9X0EuaS8hkYCvAu8CkJsARCUS3esu42TP/lTu3g==
+gatsby-tinacms-git@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-tinacms-git/-/gatsby-tinacms-git-0.3.0.tgz#636e07a9e9b28dc088e2a726a4e8fd034441d974"
+  integrity sha512-KyUGS+E7vLKl1VpTIwvYRHeuVovYba7u7/uHE8EU/QkIsFbbAcEpz7B5hjURYI3tVVzTk2lOYVx+LGFi0uHu9w==
   dependencies:
-    "@tinacms/api-git" "^0.5.3"
-    "@tinacms/core" "^0.6.1"
-    "@tinacms/git-client" "^0.4.1"
-    "@types/cors" "^2.8.5"
-    "@types/express" "^4.17.0"
-    "@types/js-yaml" "^3.12.1"
-    "@types/lodash.throttle" "^4.1.6"
-    cors "^2.8.5"
-    express "^4.17.1"
-    gatsby-plugin-tinacms "^0.1.20"
-    js-yaml "^3.13.1"
-    lodash.throttle "^4.1.1"
-    simple-git "1.124.0"
-    tinacms "^0.11.3"
+    "@tinacms/api-git" "^0.6.0"
+    "@tinacms/git-client" "^0.5.0"
 
 gatsby-tinacms-remark@^0.6.4:
   version "0.6.4"
@@ -14672,13 +14652,6 @@ simple-get@^3.0.3, simple-get@^3.1.0:
     decompress-response "^4.2.0"
     once "^1.3.1"
     simple-concat "^1.0.0"
-
-simple-git@1.124.0:
-  version "1.124.0"
-  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-1.124.0.tgz#10a73cc1af303832b5c11720d4256e134fba35ca"
-  integrity sha512-ks9mBoO4ODQy/xGLC8Cc+YDvj/hho/IKgPhi6h5LI/sA+YUdHc3v0DEoHzM29VmulubpGCxMJUSFmyXNsjNMEA==
-  dependencies:
-    debug "^4.0.1"
 
 simple-git@1.126.0:
   version "1.126.0"
