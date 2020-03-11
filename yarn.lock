@@ -1346,10 +1346,10 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@tinacms/api-git@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@tinacms/api-git/-/api-git-0.6.0.tgz#15d833cca41e25e9790d348cade2df637d86c6b6"
-  integrity sha512-nPOy8mZNRGfGekFjl7JaGMIzuHHLi+iueGS02q1QtWzCvKIf6JBu99RhM14B88ZkjQte0nzGd/XHM9qy91EwcA==
+"@tinacms/api-git@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@tinacms/api-git/-/api-git-0.7.0.tgz#0690f928db02d413a3154dfabc7bfa8f2a8c8ca0"
+  integrity sha512-yrQ72E9PiTO58TD9TYUVHelgUdTGQGa4hBJBUkVeQnjuwGtwQ7+x3kSryaiDvW9BWOrM1nGAMMmD0Tp6ff9xpg==
   dependencies:
     atob "2.1.2"
     cors "^2.8.5"
@@ -1413,10 +1413,10 @@
     final-form "^4.18.2"
     final-form-arrays "^3.0.1"
 
-"@tinacms/git-client@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@tinacms/git-client/-/git-client-0.5.0.tgz#866cdb7e86f8be4e9bfd0f7ca2aadf1fefd137fd"
-  integrity sha512-odnCWbbeT//nm6Dzc5OODS5lgrEgoI/9eMrn5rYL2JBhj1LJX5oORj6DnzaCkYHRWowLrIAqyhbim4tNgGDjww==
+"@tinacms/git-client@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@tinacms/git-client/-/git-client-0.6.0.tgz#de8f937f1a6c4f9f48d5fc54b5ed9e193bef9fad"
+  integrity sha512-2cg8cLneNGuqtqGxIdL/nIvkRw82ovJrGWJYM5vAyHtTo5FBBLF03uF+IZ/Zor70M4Wmo9N6w5/CS/YEwzejMg==
 
 "@tinacms/icons@^0.4.0":
   version "0.4.0"
@@ -7028,13 +7028,13 @@ gatsby-telemetry@^1.1.51:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-tinacms-git@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-tinacms-git/-/gatsby-tinacms-git-0.3.0.tgz#636e07a9e9b28dc088e2a726a4e8fd034441d974"
-  integrity sha512-KyUGS+E7vLKl1VpTIwvYRHeuVovYba7u7/uHE8EU/QkIsFbbAcEpz7B5hjURYI3tVVzTk2lOYVx+LGFi0uHu9w==
+gatsby-tinacms-git@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/gatsby-tinacms-git/-/gatsby-tinacms-git-0.4.0.tgz#2d9bf132e58a708ab4808f0c56e84f9f9c2b657c"
+  integrity sha512-Bl73ujS6w228UhaROBg7Svz8W8mmKQSaRfpG1eCIFR+Orq1EhT2DvW4vyGwJ25VEnlVSejPKZhJyT5YbZF13bA==
   dependencies:
-    "@tinacms/api-git" "^0.6.0"
-    "@tinacms/git-client" "^0.5.0"
+    "@tinacms/api-git" "^0.7.0"
+    "@tinacms/git-client" "^0.6.0"
 
 gatsby-tinacms-remark@^0.7.5:
   version "0.7.5"
