@@ -7,7 +7,7 @@
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
   },
   "dependencies": {
-    "gatsby": "2.19.48",
+    "gatsby": "2.19.49",
     "gatsby-codemods": "1.2.0",
     "gatsby-link": "2.3.0",
     "gatsby-plugin-google-analytics": "2.2.0",
@@ -30,8 +30,8 @@
     "gatsby-transformer-remark": "2.7.0",
     "gatsby-transformer-sharp": "2.4.1",
     "node-sass": "4.13.1",
-    "react": "16.13.0",
-    "react-dom": "16.13.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "react-typography": "0.16.19",
     "styled-components": "^5.0.1",
     "typography": "0.16.19",
