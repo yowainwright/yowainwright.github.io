@@ -7,7 +7,7 @@
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
   },
   "dependencies": {
-    "gatsby": "2.19.49",
+    "gatsby": "2.20.2",
     "gatsby-codemods": "1.1.25",
     "gatsby-link": "2.2.31",
     "gatsby-plugin-google-analytics": "2.1.38",
