@@ -3,7 +3,7 @@ name: Conflicts
 on:
   push:
     branches:
-      - master
+      - develop
 jobs:
   triage:
     runs-on: ubuntu-latest
