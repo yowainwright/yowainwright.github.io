@@ -14,3 +14,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: rm -rf yarn.lock
       - run: yarn 
+      - run: git commit -am 'fix lock conflict'
+      - run: git push origin -f
