@@ -7,7 +7,7 @@
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
   },
   "dependencies": {
-    "gatsby": "2.20.7",
+    "gatsby": "2.20.8",
     "gatsby-codemods": "1.2.1",
     "gatsby-link": "2.3.1",
     "gatsby-plugin-google-analytics": "2.2.2",
@@ -28,7 +28,7 @@
     "gatsby-tinacms-git": "^0.4.2",
     "gatsby-tinacms-remark": "^0.7.8",
     "gatsby-transformer-remark": "2.7.1",
-    "gatsby-transformer-sharp": "2.4.2",
+    "gatsby-transformer-sharp": "2.4.3",
     "node-sass": "4.13.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
