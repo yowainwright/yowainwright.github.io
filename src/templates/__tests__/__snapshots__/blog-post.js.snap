@@ -104,20 +104,20 @@ exports[`BlogPost component renders correctly 1`] = `
         className="site-nav__items"
       >
         <li
-          className="site-nav__item site-nav__item--about"
+          className="About__item About__item--about"
         >
           <Link
-            className="site-nav__link site-nav__link--about"
+            className="About__link About__link--about"
             to="/about/"
           >
             About
           </Link>
         </li>
         <li
-          className="site-nav__item site-nav__item--archive"
+          className="Archive__item Archive__item--archive"
         >
           <Link
-            className="site-nav__link site-nav__link--archive"
+            className="Archive__link Archive__link--archive"
             to="/archive/"
           >
             Archive
@@ -206,7 +206,8 @@ exports[`BlogPost component renders correctly 1`] = `
         <p
           className="site-footer__body"
         >
-          My online thoughts. I'm 
+          My online thoughts. I'm
+           
           <Link
             to="/about"
           >
@@ -214,7 +215,8 @@ exports[`BlogPost component renders correctly 1`] = `
               Jeffry Wainwright
             </strong>
           </Link>
-          —a software engineer, artist, runner, and surfer living in Los Angeles. 
+          —a software engineer, artist, runner, and surfer living in Los Angeles.
+           
           <strong>
             <a
               href="mailto:yowainwright@gmail.com"
@@ -222,7 +224,9 @@ exports[`BlogPost component renders correctly 1`] = `
               Email me
             </a>
           </strong>
-           or reach out on 
+           
+          or reach out on
+           
           <a
             href="https://github.com/yowainwright"
           >
@@ -230,7 +234,8 @@ exports[`BlogPost component renders correctly 1`] = `
               Github
             </strong>
           </a>
-          , 
+          ,
+           
           <a
             href="https://instagram.com/yowainwright"
           >
@@ -238,7 +243,8 @@ exports[`BlogPost component renders correctly 1`] = `
               Instagram
             </strong>
           </a>
-          , 
+          ,
+           
           <a
             href="https://twitter.com/yowainwright"
           >
@@ -246,7 +252,8 @@ exports[`BlogPost component renders correctly 1`] = `
               Twitter
             </strong>
           </a>
-          , 
+          ,
+           
           <a
             href="https://www.strava.com/athletes/722335"
           >
@@ -254,7 +261,8 @@ exports[`BlogPost component renders correctly 1`] = `
               Strava
             </strong>
           </a>
-          , or 
+          , or
+           
           <a
             href="https://www.linkedin.com/in/jeffrywainwright/"
           >
