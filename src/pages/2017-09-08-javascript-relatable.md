@@ -1,13 +1,13 @@
 ---
-title: "JavaScript is relatable"
-date: "2017-09-08"
+title: 'JavaScript is relatable'
+date: '2017-09-08'
 layout: post
-readNext: "/"
-path: "/JS-is-relatable/"
-meta: "JavaScript is for the people because it is relatable and usable."
+readNext: '/'
+path: '/JS-is-relatable/'
+meta: 'JavaScript is for the people because it is relatable and usable.'
 post_index: 51
 categories:
-- javascript
+  - javascript
 ---
 
 JavaScript fatigue real because **JavaScript is relatable**. That's why so much is happening with it! I remember this always. I hope others do too. JavaScript has become the most used programming language because it is relatable! It was written in a [week](https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript) and delivered to a browser as a prototype. It is often looked down on. Despite its status, it is used everywhere for many different things. JavaScript is a programming language that can be understood in sentiment, starting out, and in very complex applications because it is relatable.
@@ -29,7 +29,6 @@ JavaScript is scrappy and it has been for most of its life span so far. It was a
 // crack open your console (on a mac)
 // cmd + opt + j
 alert('You are writing JavaScript')
-
 ```
 
 #### JS write a bookmarklet to do stuff in your chrome browser
@@ -42,7 +41,6 @@ javascript: alert('You are writing JavaScript')
 // click the new bookmark on any page
 ```
 
-
 ## JavaScript has a low level of entry
 
 JavaScript, when learning about computers goes right along with learning `HTML` and `CSS`. It can still be added right to web pages within a `<script>` tag. It is easy to read about all of the other things—tooling and frameworks and feel like those things need to create a valid web page, but they're not. This is such a cool thing. With just HTML, CSS, and JavaScript—which is what generally people view all computer information on inspiring technology can be made.
@@ -51,11 +49,12 @@ JavaScript, when learning about computers goes right along with learning `HTML` 
 
 ```html
 <body>
-<script>
-  alert('You are writing JavaScript')
-</script>
+  <script>
+    alert('You are writing JavaScript')
+  </script>
 </body>
 ```
+
 ## JavaScript is for anything
 
 Now that JavaScript is established and something that is easy to get started with, why does the barrier to entry seem so high? JavaScript seems to have a high barrier to entry because of what people are doing with it currently. Currently, JavaScript is used for everything—even HTML and CSS. This means that when JavaScript is compiled into HTML and CSS. When JavaScript is used for everything, it is a lot more complex.
