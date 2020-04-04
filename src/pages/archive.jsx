@@ -37,6 +37,8 @@ export const Archive = props => {
   )
 }
 
+export default Archive
+
 export const pageQuery = graphql`
   query ArchiveQuery {
     site {
