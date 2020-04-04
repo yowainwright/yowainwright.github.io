@@ -104,20 +104,20 @@ exports[`BlogPost component renders correctly 1`] = `
         className="site-nav__items"
       >
         <li
-          className="About__item About__item--about"
+          className="site-nav__item site-nav__item--about"
         >
           <Link
-            className="About__link About__link--about"
+            className="site-nav__link site-nav__link--about"
             to="/about/"
           >
             About
           </Link>
         </li>
         <li
-          className="Archive__item Archive__item--archive"
+          className="site-nav__item site-nav__item--archive"
         >
           <Link
-            className="Archive__link Archive__link--archive"
+            className="site-nav__link site-nav__link--archive"
             to="/archive/"
           >
             Archive
