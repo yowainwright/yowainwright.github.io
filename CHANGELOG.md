@@ -1,3 +1,45 @@
+# [1.14.0](https://github.com/yowainwright/yowainwright.github.io/compare/1.13.6...1.14.0) (2020-04-04)
+
+
+### fix
+
+* fixes nav (#433) ([e7c92bc](https://github.com/yowainwright/yowainwright.github.io/commit/e7c92bc173ab9cd74de91ba541f9aae9c57996a6)), closes [#433](https://github.com/yowainwright/yowainwright.github.io/issues/433)
+* package.json & yarn.lock to reduce vulnerabilities (#410) ([09b6caf](https://github.com/yowainwright/yowainwright.github.io/commit/09b6caf686ac632e925961ce7bda4dbdf9e67233)), closes [#410](https://github.com/yowainwright/yowainwright.github.io/issues/410)
+* style tweaks (#434) ([f5468de](https://github.com/yowainwright/yowainwright.github.io/commit/f5468de0eaaf21dbfc339dd164d2762af4a5c648)), closes [#434](https://github.com/yowainwright/yowainwright.github.io/issues/434)
+* updates the block quote (#393) ([a7db4ff](https://github.com/yowainwright/yowainwright.github.io/commit/a7db4ff64d560c9b1e129d813ce442e69f46cf4e)), closes [#393](https://github.com/yowainwright/yowainwright.github.io/issues/393)
+* upgrade gatsby from 2.19.48 to 2.19.49 (#416) ([d7a11e8](https://github.com/yowainwright/yowainwright.github.io/commit/d7a11e8fb174e0e621fa69d67a2a4a6b811aeabd)), closes [#416](https://github.com/yowainwright/yowainwright.github.io/issues/416)
+* upgrade gatsby from 2.20.8 to 2.20.9 (#430) ([7456b0d](https://github.com/yowainwright/yowainwright.github.io/commit/7456b0d0df6a2528a99a6527e0af137db2c3290b)), closes [#430](https://github.com/yowainwright/yowainwright.github.io/issues/430)
+* upgrade gatsby from 2.20.9 to 2.20.10 (#431) ([756559d](https://github.com/yowainwright/yowainwright.github.io/commit/756559d42bb08bfda52e958a00c1e566f256cc1f)), closes [#431](https://github.com/yowainwright/yowainwright.github.io/issues/431)
+* upgrade gatsby-plugin-tinacms from 0.1.28 to 0.1.29 (#420) ([923d3e4](https://github.com/yowainwright/yowainwright.github.io/commit/923d3e4a80df87df4d67ac4a856d45ae99184980)), closes [#420](https://github.com/yowainwright/yowainwright.github.io/issues/420)
+* upgrade gatsby-plugin-tinacms from 0.1.29 to 0.1.31 (#427) ([8604b53](https://github.com/yowainwright/yowainwright.github.io/commit/8604b534d6d4b2678e8ff9cf9869b2cf189bfd7c)), closes [#427](https://github.com/yowainwright/yowainwright.github.io/issues/427)
+* upgrade gatsby-tinacms-git from 0.2.17 to 0.3.0 (#400) ([24bab34](https://github.com/yowainwright/yowainwright.github.io/commit/24bab347a2aac6a7e95f598fe42e031dcbfe511e)), closes [#400](https://github.com/yowainwright/yowainwright.github.io/issues/400)
+* upgrade gatsby-tinacms-git from 0.3.0 to 0.4.0 (#405) ([7ff4c81](https://github.com/yowainwright/yowainwright.github.io/commit/7ff4c816fe8810d3f28c755e1082f57f7f645086)), closes [#405](https://github.com/yowainwright/yowainwright.github.io/issues/405)
+* upgrade gatsby-tinacms-git from 0.4.0 to 0.4.1 (#412) ([2d23f68](https://github.com/yowainwright/yowainwright.github.io/commit/2d23f68c15f907709e3fafd8142ca6202259ab6a)), closes [#412](https://github.com/yowainwright/yowainwright.github.io/issues/412)
+* upgrade gatsby-tinacms-git from 0.4.1 to 0.4.2 (#421) ([84ad19e](https://github.com/yowainwright/yowainwright.github.io/commit/84ad19ea80c314ab43661a2231f0aa2490d5adfc)), closes [#421](https://github.com/yowainwright/yowainwright.github.io/issues/421)
+* upgrade gatsby-tinacms-git from 0.4.3 to 0.4.5 (#428) ([6967a61](https://github.com/yowainwright/yowainwright.github.io/commit/6967a6110ef7ed8346643a477a369930162e622d)), closes [#428](https://github.com/yowainwright/yowainwright.github.io/issues/428)
+* upgrade gatsby-tinacms-remark from 0.6.4 to 0.7.5 (#398) ([d72d736](https://github.com/yowainwright/yowainwright.github.io/commit/d72d736b8021a0e3001e27c64fc06d1e5c1fafab)), closes [#398](https://github.com/yowainwright/yowainwright.github.io/issues/398)
+* upgrade gatsby-tinacms-remark from 0.7.5 to 0.7.6 (#407) ([4781d68](https://github.com/yowainwright/yowainwright.github.io/commit/4781d68b5a15ee460425a607dfc8a8ef851d0431)), closes [#407](https://github.com/yowainwright/yowainwright.github.io/issues/407)
+* upgrade gatsby-tinacms-remark from 0.7.6 to 0.7.8 (#419) ([e155de4](https://github.com/yowainwright/yowainwright.github.io/commit/e155de45c3a9d37e1e0bcb9246d7a7b308413d83)), closes [#419](https://github.com/yowainwright/yowainwright.github.io/issues/419)
+* upgrade gatsby-tinacms-remark from 0.7.9 to 0.7.11 (#429) ([8aa72e6](https://github.com/yowainwright/yowainwright.github.io/commit/8aa72e6a24eda33b1368849cae1144bc3106f7c1)), closes [#429](https://github.com/yowainwright/yowainwright.github.io/issues/429)
+* upgrade multiple dependencies with Snyk (#397) ([9215cda](https://github.com/yowainwright/yowainwright.github.io/commit/9215cdaf3bafdfabec589063fa06718a2360cf77)), closes [#397](https://github.com/yowainwright/yowainwright.github.io/issues/397)
+* upgrade multiple dependencies with Snyk (#403) ([ea23a86](https://github.com/yowainwright/yowainwright.github.io/commit/ea23a866029b6e7148848309b53fdfee67953b81)), closes [#403](https://github.com/yowainwright/yowainwright.github.io/issues/403)
+* upgrade multiple dependencies with Snyk (#406) ([34c77a8](https://github.com/yowainwright/yowainwright.github.io/commit/34c77a8496f592345948d88da4e7aa1c98341a39)), closes [#406](https://github.com/yowainwright/yowainwright.github.io/issues/406)
+* upgrade multiple dependencies with Snyk (#408) ([6c64ed9](https://github.com/yowainwright/yowainwright.github.io/commit/6c64ed9e794b90734864d0e4df58d6a31b9166da)), closes [#408](https://github.com/yowainwright/yowainwright.github.io/issues/408)
+* upgrade multiple dependencies with Snyk (#409) ([31db5c2](https://github.com/yowainwright/yowainwright.github.io/commit/31db5c26e335b9bf21c110bbbd178149395758bf)), closes [#409](https://github.com/yowainwright/yowainwright.github.io/issues/409)
+* upgrade multiple dependencies with Snyk (#411) ([c979070](https://github.com/yowainwright/yowainwright.github.io/commit/c979070c5e867b96db31b0a77c3e411532d470ca)), closes [#411](https://github.com/yowainwright/yowainwright.github.io/issues/411)
+* upgrade multiple dependencies with Snyk (#414) ([c6bb6cf](https://github.com/yowainwright/yowainwright.github.io/commit/c6bb6cfc9d88fdd3696ef50632080bd5ed172b82)), closes [#414](https://github.com/yowainwright/yowainwright.github.io/issues/414)
+* upgrade multiple dependencies with Snyk (#415) ([2c0fda7](https://github.com/yowainwright/yowainwright.github.io/commit/2c0fda77664d56298f6dcc71559a748c3c86b76f)), closes [#415](https://github.com/yowainwright/yowainwright.github.io/issues/415)
+* upgrade multiple dependencies with Snyk (#417) ([8c5c039](https://github.com/yowainwright/yowainwright.github.io/commit/8c5c039e33eb1d97ed934d664f0535a2cb46707d)), closes [#417](https://github.com/yowainwright/yowainwright.github.io/issues/417)
+* upgrade multiple dependencies with Snyk (#422) ([6d60a1d](https://github.com/yowainwright/yowainwright.github.io/commit/6d60a1d6de404541acf2151e3f88cc968edb9b39)), closes [#422](https://github.com/yowainwright/yowainwright.github.io/issues/422)
+* upgrade multiple dependencies with Snyk (#424) ([3f3f5db](https://github.com/yowainwright/yowainwright.github.io/commit/3f3f5db8dd8aa53061d8e42162cf71e9d77f14c5)), closes [#424](https://github.com/yowainwright/yowainwright.github.io/issues/424)
+* upgrade multiple dependencies with Snyk (#425) ([e4ccc98](https://github.com/yowainwright/yowainwright.github.io/commit/e4ccc982bc06fe8d0ef48395316f4136d2893ca6)), closes [#425](https://github.com/yowainwright/yowainwright.github.io/issues/425)
+* upgrade multiple dependencies with Snyk (#426) ([b9ad460](https://github.com/yowainwright/yowainwright.github.io/commit/b9ad46086825550cc7da2aef0218beb9539b4462)), closes [#426](https://github.com/yowainwright/yowainwright.github.io/issues/426)
+* upgrade node-sass from 4.13.0 to 4.13.1 (#402) ([b037ce7](https://github.com/yowainwright/yowainwright.github.io/commit/b037ce7530c6d61f71d4d71dd248e5f4e5acdb09)), closes [#402](https://github.com/yowainwright/yowainwright.github.io/issues/402)
+* upgrade styled-components from 5.0.0 to 5.0.1 (#401) ([51faebe](https://github.com/yowainwright/yowainwright.github.io/commit/51faebeb0706aa4248c63a00c62e3e2e38fff2f2)), closes [#401](https://github.com/yowainwright/yowainwright.github.io/issues/401)
+* upgrade webpack from 4.42.0 to 4.42.1 (#423) ([531d985](https://github.com/yowainwright/yowainwright.github.io/commit/531d985f8742d8141170df828c1467d176191feb)), closes [#423](https://github.com/yowainwright/yowainwright.github.io/issues/423)
+
+
+
 ## [1.13.6](https://github.com/yowainwright/yowainwright.github.io/compare/1.13.5...1.13.6) (2020-02-17)
 
 
