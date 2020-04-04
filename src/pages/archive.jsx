@@ -1,12 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import { SquarePost } from '../components/post/square'
 
 export const Archive = props => {
-  const posts = get(this, 'props.data.allMarkdownRemark.edges')
+  const posts = props.data.allMarkdownRemark.edges
   const title = 'Archive | Jeffry.in'
 
   return (
@@ -24,11 +23,8 @@ export const Archive = props => {
         </Helmet>
         <div className='posts--squares'>
           {posts.map((post, i) => {
-            const pNode = post.node
-            const path = get(post, 'node.frontmatter.path') || pNode.path
+            const { date, path, title } = post.node.frontmatter
             if (path === '/404/' || path === '/about' || path === '/about/') return null
-            const title = get(post, 'node.frontmatter.title') || pNode.title
-            const date = get(post, 'node.frontmatter.date') || pNode.date
             return <SquarePost date={date} path={path} title={title} key={i} />
           })}
         </div>

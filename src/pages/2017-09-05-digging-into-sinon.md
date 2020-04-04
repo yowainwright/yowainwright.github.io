@@ -1,14 +1,14 @@
 ---
 title: Digging into Sinon Fake Server Methods
-date: "2017-09-05"
+date: '2017-09-05'
 layout: post
-readNext: "/"
-path: "/sinon-fake-server-methods/"
+readNext: '/'
+path: '/sinon-fake-server-methods/'
 meta: Digging into Sinon Fake Server Methods and how to use them.
 featured_image: null
 post_index: 50
 categories:
-- javascript
+  - javascript
 ---
 
 [Sinon](http://sinonjs.org/) is a powerful library used for stubbing functions, methods, xhr calls, and servers in JavaScript. The library and concept have confused me several times. I've found defining the interface to be challenging. Often, I realize that if the interface is challenging me, I need to rethink it.
@@ -23,11 +23,9 @@ In this post, I will explain a bit of Sinon for context and then dig into faking
 #### For this post, here's a stub example
 
 ```javascript
-
 let server
 // then later in code a value is assigned to the variable
 server = sinon.fakeServer.create()
-
 ```
 
 ## Why would developers stub a server?
@@ -78,6 +76,7 @@ For the code example above, there is an interface that expects to get informatio
 ## How to stub a server with Sinon
 
 In the example above:
+
 - The xhr request waits for a load event.
 - If the response in above a 400, that means there is an error with the response, and the console should warn developers.
 - If the response is not above a 400, the request will receive a `{object}` with a `status`.
@@ -90,15 +89,13 @@ To do this, first, a stub server must be created.
 
 ```javascript
 server = sinon.fakeServer.create()
-
 ```
 
 It is beneficial to mock a successful API response
 
 ```javascript
 // fake api
-  const resp = '{"info": "stuff"}'
-
+const resp = '{"info": "stuff"}'
 ```
 
 Next, describe what the fake server should response with. This is done with a method provided by Sinon and arguments.
@@ -131,15 +128,15 @@ server.respondWith(url, resp)
 
 Now that this post has gone through stubbing a Sinon server, it will go into how the stub can be used to test the three things that the example function above will require.
 
--  Test a successful response
--  Test a failed response
--  Test a errant response
+- Test a successful response
+- Test a failed response
+- Test a errant response
 
 ### Testing a successful response
 
 ```javascript
 // this post reference Mocha testing
-it('provides `user` information with request success', function (done) {
+it('provides `user` information with request success', function(done) {
   // the done argument along with this.timeout acts waits for a response for 100ms
   this.timeout(100)
   // create the fake Sinon server
@@ -182,19 +179,19 @@ it('provides `user` information with request success', () => {
 ### Testing an errant response
 
 ```javascript
-it('provides null defaults with `user` request error', function () {
-    // invoke server immediately to enforce error response
-    server = sinon.fakeServer.create({ respondImmediately: true })
-    server.respondWith('/test', resp, [404, {}, ''])
-    getUser(url, function info(user) {
-      // define null user interface
-      expect(user).to.be.an('Object')
-      expect(user.accountStatus).to.be.null
-      expect(user.loginState).to.be.null
-      expect(user.memberType).to.be.null
-      expect(user.userID).to.be.null
-    })
+it('provides null defaults with `user` request error', function() {
+  // invoke server immediately to enforce error response
+  server = sinon.fakeServer.create({ respondImmediately: true })
+  server.respondWith('/test', resp, [404, {}, ''])
+  getUser(url, function info(user) {
+    // define null user interface
+    expect(user).to.be.an('Object')
+    expect(user.accountStatus).to.be.null
+    expect(user.loginState).to.be.null
+    expect(user.memberType).to.be.null
+    expect(user.userID).to.be.null
   })
+})
 ```
 
 ## Conclusion
