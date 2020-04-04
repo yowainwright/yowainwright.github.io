@@ -1,6 +1,6 @@
 ---
-title: "Watching the sunset from Malaga Cove, waiting for ships to come in"
-date: "2019-10-19"
+title: 'Watching the sunset from Malaga Cove, waiting for ships to come in'
+date: '2019-10-19'
 layout: post
 readNext: /
 path: /ships-coming-in/

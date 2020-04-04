@@ -1,62 +1,61 @@
-import React, { FunctionComponent } from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-
+import React from "react";
+import { Link } from "gatsby";
 
 const navData = {
-  componentName: 'site-nav',
+  name: "site-nav",
   navItems: [
     {
-      alias: 'about',
-      name: 'About',
-      path: '/about/',
+      alias: "about",
+      name: "About",
+      path: "/about/"
     },
     {
-      alias: 'archive',
+      alias: "archive",
       inApp: true,
-      name: 'Archive',
-      path: '/archive/',
-    },
-  ],
-}
+      name: "Archive",
+      path: "/archive/"
+    }
+  ]
+};
 
-export const Hamburger = () => (<button className="nav-button nav-button--hamburger">☰</button>)
+/**
+ * @todo export const Hamburger = () => (<button className="nav-button nav-button--hamburger">☰</button>)
+ */
 
-export const NavList = ({ componentName, navItems }) => (
-<ol className={`${componentName}__items`}>
-{navItems.map(({ alias, name, path }, i) => {
-  return (
-    <li
-      key={i}
-      className={`${componentName}__item ${componentName}__item--${alias}`}
-    >
-      <Link
-        className={`${componentName}__link ${componentName}__link--${alias}`}
-        to={path}
-      >
-        {name}
-      </Link>
-    </li>
-  )
-})}
-</ol>
-)
+export const NavList = ({ name, navItems }) => (
+  <ol className={`${name}__items`}>
+    {navItems.map(({ alias, name, path }, i) => {
+      return (
+        <li key={i} className={`${name}__item ${name}__item--${alias}`}>
+          <Link className={`${name}__link ${name}__link--${alias}`} to={path}>
+            {name}
+          </Link>
+        </li>
+      );
+    })}
+  </ol>
+);
 
 const Header = () => {
-  const { componentName, navItems } = navData
+  const { name, navItems } = navData;
   return (
-    <nav id={componentName} className={componentName} role='navigation' itemType='http://schema.org/SiteNavigationElement'>
-      <div className={`${componentName}__container`}>
-        <Link to="/" className={`${componentName}__main-item-link`}>
-          <div className={`${componentName}__main-item`}>
-            <h3 className={`${componentName}__main-item-symbol`}>j</h3>
-            <h2 className={`${componentName}__main-item-title`}>Jeffry.in</h2>
+    <nav
+      id={name}
+      className={name}
+      role="navigation"
+      itemType="http://schema.org/SiteNavigationElement"
+    >
+      <div className={`${name}__container`}>
+        <Link to="/" className={`${name}__main-item-link`}>
+          <div className={`${name}__main-item`}>
+            <h3 className={`${name}__main-item-symbol`}>j</h3>
+            <h2 className={`${name}__main-item-title`}>Jeffry.in</h2>
           </div>
         </Link>
-        <NavList componentName={componentName} navItems={navItems} />
+        <NavList name={name} navItems={navItems} />
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

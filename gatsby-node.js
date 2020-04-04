@@ -1,4 +1,5 @@
 const path = require('path')
+
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -19,12 +20,12 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  Array.from(result.data.allMarkdownRemark.edges, edge => {
+  Array.from(result.data.allMarkdownRemark.edges, edge =>
     createPage({
       path: edge.node.frontmatter.path,
       component: blogPost,
-    })
-  })
+    }),
+  )
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

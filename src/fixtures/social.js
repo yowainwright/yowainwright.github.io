@@ -37,7 +37,8 @@ export const socialItems = [
   },
 ]
 
-const socialItemsExtended = [
+/**
+ * const socialItemsExtended = [
   ...socialItems,
   {
     alias: 'medium',
@@ -64,3 +65,4 @@ const socialItemsExtended = [
     small: false,
   },
 ]
+ */

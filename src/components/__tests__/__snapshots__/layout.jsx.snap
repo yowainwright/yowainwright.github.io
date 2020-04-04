@@ -104,20 +104,20 @@ exports[`Template component renders correctly 1`] = `
         className="site-nav__items"
       >
         <li
-          className="site-nav__item site-nav__item--about"
+          className="About__item About__item--about"
         >
           <Link
-            className="site-nav__link site-nav__link--about"
+            className="About__link About__link--about"
             to="/about/"
           >
             About
           </Link>
         </li>
         <li
-          className="site-nav__item site-nav__item--archive"
+          className="Archive__item Archive__item--archive"
         >
           <Link
-            className="site-nav__link site-nav__link--archive"
+            className="Archive__link Archive__link--archive"
             to="/archive/"
           >
             Archive
