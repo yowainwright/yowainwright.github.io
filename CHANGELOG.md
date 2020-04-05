@@ -1,3 +1,12 @@
+# [1.15.0](https://github.com/yowainwright/yowainwright.github.io/compare/1.14.0...1.15.0) (2020-04-05)
+
+
+### init
+
+* init 404 page (#436) ([c89a641](https://github.com/yowainwright/yowainwright.github.io/commit/c89a64191de7e3cb76c37a289b34816d4c6316e8)), closes [#436](https://github.com/yowainwright/yowainwright.github.io/issues/436)
+
+
+
 # [1.14.0](https://github.com/yowainwright/yowainwright.github.io/compare/1.13.6...1.14.0) (2020-04-04)
 
 
