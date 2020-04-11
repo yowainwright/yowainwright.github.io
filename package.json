@@ -33,7 +33,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-typography": "0.16.19",
-    "styled-components": "^5.0.1",
+    "styled-components": "^5.1.0",
     "typography": "0.16.19",
     "webpack": "4.42.1"
   },
