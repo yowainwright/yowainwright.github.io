@@ -1,10 +1,41 @@
-# Jeffry.in
+# Jeffry\.in 🥤
 
 [![CodeFactor](https://www.codefactor.io/repository/github/yowainwright/yowainwright.github.io/badge)](https://www.codefactor.io/repository/github/yowainwright/yowainwright.github.io)
 [![DeepScan grade](https://deepscan.io/api/teams/8416/projects/10577/branches/148587/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=8416&pid=10577&bid=148587)
 
 ---
 
-[Jeffry.in](https://jeffry.in) is website of me, Jeff Wainwright. I'm a software engineer at Currency. Formally, I've worked at/on [Dollar Shave Club](https://www.dollarshaveclub.com/), [Billboard](https://www.billboard.com/), [The Hollywood Reporter](https://www.hollywoodreporter.com/), [California Psychics](https://www.californiapsychics.com/), and [Nasdaq](https://www.nasdaq.com/).
+> **[Jeffry\.in](https://jeffry.in)** is my (Jeff Wainwright's) webpage.
 
-Connect with me on [Github](https://github.com/yowainwright), [Twitter](https://twitter.com/yowainwright), [Instagram](https://www.instagram.com/yowainwright/), or [Tumbler](http://ratherbe.in/). ✋
+## About
+
+I'm a software engineer at [Currency](https://www.gocurrency.com/).
+
+Formally, I've worked at/on [Dollar Shave Club](https://www.dollarshaveclub.com/), [Billboard](https://www.billboard.com/), [The Hollywood Reporter](https://www.hollywoodreporter.com/), [California Psychics](https://www.californiapsychics.com/), and [Nasdaq](https://www.nasdaq.com/).
+
+## Work
+
+Currently, I'm creating cross app tools to make building new frontend apps easier at Currency. Currency's products aim to give our customers great integrations for providing/getting financing for certain loan types.
+
+## Fun
+
+Outside of work, I support and work on several open source projects.
+
+Currently (4.13.20), I'm actively working on:
+
+- **[Common Utilities](https://github.com/yowainwright/common-utilities):** Common javascript utility functions
+- **[DataStructures](https://github.com/yowainwright/datastructures):** TypeScript Data Structures
+- **[Heartly](https://github.com/heartly/heartly):** Tools for friendlier coding
+- **[MacRustle](https://github.com/yowainwright/macrustle):** Setup instructions "rustled up" for coding on a Mac
+
+Other projects I wrote/support:
+
+- **[ES Check](https://github.com/dollarshaveclub/es-check):** Checks the version of ES in JavaScript files with shell commands
+- **[StickyBits](https://github.com/dollarshaveclub/stickybits):** Stickybits is an alternative to position: sticky polyfills
+- **[Scrolldir](https://github.com/dollarshaveclub/scrolldir):** y-axis scroll direction without jitter
+- **[Shave](https://github.com/dollarshaveclub/shave):** a minimal JavaScript Plugin for Truncated text
+- **[Reframe.js](https://github.com/dollarshaveclub/reframe.js):** a JavaScript Plugin for reframing html elements so they're an intrinsic ratio of the original—great for embeds
+
+---
+
+Connect with me on [Github](https://github.com/yowainwright), [Twitter](https://twitter.com/yowainwright), [Instagram](https://www.instagram.com/yowainwright/), or [Tumbler](http://ratherbe.in/).
