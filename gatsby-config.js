@@ -10,6 +10,8 @@ module.exports = {
     siteUrl: 'https://www.jeffry.in',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -98,8 +100,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     'gatsby-plugin-feed',
+    'gatsby-plugin-typescript',
   ],
 }
