@@ -9,13 +9,19 @@
 
 ## About
 
-I'm a software engineer at [Currency](https://www.gocurrency.com/).
-
-Formally, I've worked at/on [Dollar Shave Club](https://www.dollarshaveclub.com/), [Billboard](https://www.billboard.com/), [The Hollywood Reporter](https://www.hollywoodreporter.com/), [California Psychics](https://www.californiapsychics.com/), and [Nasdaq](https://www.nasdaq.com/).
+I'm a software engineer at [Currency](https://www.gocurrency.com/). I was born in South Dakota but grew internationally. I enjoy [art](https://www.instagram.com/porkypaints/), [music](https://open.spotify.com/user/127322575?si=6zrJlJX9RcaOk5mp-iJnJg), [running](https://www.strava.com/athletes/722335), and [surfing](https://www.instagram.com/yowainwright/).
 
 ## Work
 
-Currently, I'm creating cross app tools to make building new frontend apps easier at Currency. Currency's products aim to give our customers great integrations for providing/getting financing for certain loan types.
+Currently, I'm creating cross app tools to make building new frontend apps easier at Currency using Lerna, React, and TypeScript. Currency's products aim to give our customers great integrations for providing/getting financing for certain loan types.
+
+Formally, I've worked at/on:
+
+- **[Dollar Shave Club](https://www.dollarshaveclub.com/):** Led building [dynamic landing pages](https://www.dollarshaveclub.com/join/shave-set) with Contentful and React
+- **[Billboard](https://www.billboard.com/):** Built frontend of Headless CMS using Backbone and jQuery
+- **[The Hollywood Reporter](https://www.hollywoodreporter.com/):** Same as Billboard
+- **[California Psychics](https://www.californiapsychics.com/):** Built responsive UI using jQuery and CSS
+- **[Nasdaq](https://www.nasdaq.com/):** Built UI using jQuery and CSS
 
 ## Fun
 
