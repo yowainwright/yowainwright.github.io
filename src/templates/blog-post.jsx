@@ -21,7 +21,7 @@ export const BlogPostTemplate = (props) => {
         </Helmet>
         <header className='post__header'>
           <h1 itemProp='headeline'>{title}</h1>
-          {['/about/', '/styleguide/'].includes(path) && <time className='post__time'>{date}</time>}
+          {!['/about/', '/styleguide/'].includes(path) && <time className='post__time'>{date}</time>}
         </header>
         <div className='wrapper'>
           <div className='content' dangerouslySetInnerHTML={{ __html: html }} />
