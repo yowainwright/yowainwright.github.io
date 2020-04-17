@@ -1,6 +1,5 @@
 module.exports = {
   extends: [
-    'dollarshaveclub/react',
     'plugin:jsx-a11y/recommended',
     // 'plugin:jsx-a11y/strict'
   ],
