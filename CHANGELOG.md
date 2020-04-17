@@ -1,3 +1,12 @@
+## [1.16.1](https://github.com/yowainwright/yowainwright.github.io/compare/1.16.0...1.16.1) (2020-04-17)
+
+
+### fix
+
+* updates the blog template for the about page (#461) ([7d1b1e3](https://github.com/yowainwright/yowainwright.github.io/commit/7d1b1e3529d7e733d729500c272a0139ddc16da3)), closes [#461](https://github.com/yowainwright/yowainwright.github.io/issues/461)
+
+
+
 # [1.16.0](https://github.com/yowainwright/yowainwright.github.io/compare/1.15.1...1.16.0) (2020-04-17)
 
 
