@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const copyToClipboard = str => {
+export const copyToClipboard = (str) => {
   const el = document.createElement('textarea')
   el.value = str
   document.body.appendChild(el)

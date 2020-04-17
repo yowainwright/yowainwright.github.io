@@ -135,9 +135,6 @@ exports[`BlogPost component renders correctly 1`] = `
       >
         foo
       </h1>
-      <time
-        className="post__time"
-      />
     </header>
     <div
       className="wrapper"

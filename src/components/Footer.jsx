@@ -4,12 +4,12 @@ import { SocialFooter } from './SocialFooter'
 
 const name = 'site-footer'
 const year = new Date().getFullYear()
-export default () => (
+const Footer = () => (
   <footer className={`${name}`} role='contentinfo' itemType='http://schema.org/WPFooter'>
     <div className={`${name}__wrapper`}>
       <div className={`${name}__col`}>
         <p className={`${name}__body`}>
-          My online thoughts. I'm{' '}
+          My online thoughts. I&apos;m{' '}
           <Link to='/about'>
             <strong>Jeffry Wainwright</strong>
           </Link>
@@ -60,3 +60,5 @@ export default () => (
     </div>
   </footer>
 )
+
+export default Footer
