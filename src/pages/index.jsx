@@ -8,7 +8,7 @@ export const PostsRow = ({ posts }) =>
   posts.map(({ node: { frontmatter } }, i) => {
     if (i > 7) return
     const { date, meta, path, title } = frontmatter
-    if (['/404/', '/about', '/about/'].includes(path)) return
+    if (['/404/', '/about', '/about/', '/styleguide/'].includes(path)) return
     return <BasicPost key={i} date={date} description={meta} path={path} title={title} />
   })
 
