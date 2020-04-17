@@ -74,13 +74,4 @@ This is normal text
 
 _This is italic_
 
-~~This is strikethrough~~
-
 ---
-
-<!--
-## Posts
-
-## Navigations
-
-## Social -->
