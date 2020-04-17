@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 const gtmInlineScript =
   "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-73077309-1');"
 
-export default () => (
+const Header = () => (
   <Helmet>
     <meta name='robots' content='index,follow' />
     <meta property='og:locale' content='en_US' />
@@ -32,3 +32,5 @@ export default () => (
     <script>{gtmInlineScript}</script>
   </Helmet>
 )
+
+export default Header

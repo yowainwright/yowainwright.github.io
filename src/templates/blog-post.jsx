@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { ShareList } from '../components/ShareList'
 
-export const BlogPostTemplate = props => {
+export const BlogPostTemplate = (props) => {
   const {
     html,
     frontmatter: { date, meta, path, title },

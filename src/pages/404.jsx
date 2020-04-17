@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 
-export const FourZeroFour = props => {
+export const FourZeroFour = (props) => {
   const title = '404 | Jeffry.in'
 
   return (
@@ -19,8 +19,8 @@ export const FourZeroFour = props => {
           <meta name='twitter:title' property='og:title' content={`${title}`} />
         </Helmet>
         <h1>404</h1>
-        <p>Somehow, you've reached the 404 page of Jeffry.in.</p>
-        <p>It's probably not your fault but that doesn't fix the problem. </p>
+        <p>Somehow, you&apos;ve reached the 404 page of Jeffry.in.</p>
+        <p>It&apos;s probably not your fault but that doesn&apos;t fix the problem. </p>
         <p>Use the navigation above to help you find your way.</p>
       </main>
     </Layout>

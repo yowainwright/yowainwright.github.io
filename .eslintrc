@@ -1,0 +1,16 @@
+{
+  "extends": "@heartly/eslint-config",
+  "globals": {
+    "__dirname": true,
+    "describe": true,
+    "expect": true,
+    "graphql": true,
+    "jest": true,
+    "it": true,
+    "shallow": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": [0],
+    "react/prop-types": [0]
+  }
+}

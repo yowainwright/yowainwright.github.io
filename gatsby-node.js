@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  Array.from(result.data.allMarkdownRemark.edges, edge =>
+  Array.from(result.data.allMarkdownRemark.edges, (edge) =>
     createPage({
       path: edge.node.frontmatter.path,
       component: blogPost,

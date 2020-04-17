@@ -12,7 +12,7 @@ export const PostsRow = ({ posts }) =>
     return <BasicPost key={i} date={date} description={meta} path={path} title={title} />
   })
 
-export const BlogIndex = props => {
+export const BlogIndex = (props) => {
   const posts = props.data.allMarkdownRemark.edges
   const title = 'Jeffry.in'
   const description = 'Jeffry.in is the blog of Jeffry Wainwright, an engineer living in California.'
