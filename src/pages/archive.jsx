@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import { SquarePost } from '../components/post/square'
 
-export const Archive = props => {
+export const Archive = (props) => {
   const posts = props.data.allMarkdownRemark.edges
   const title = 'Archive | Jeffry.in'
 
