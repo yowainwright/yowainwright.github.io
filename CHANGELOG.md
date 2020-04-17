@@ -1,3 +1,42 @@
+# [1.16.0](https://github.com/yowainwright/yowainwright.github.io/compare/1.15.1...1.16.0) (2020-04-17)
+
+
+### fix
+
+* adds work section to README (#455) ([e7432d9](https://github.com/yowainwright/yowainwright.github.io/commit/e7432d916f50af812e1b57ce3d99c430e00f24c1)), closes [#455](https://github.com/yowainwright/yowainwright.github.io/issues/455)
+* fixes build + styleguide (#458) ([21be737](https://github.com/yowainwright/yowainwright.github.io/commit/21be737863cee429ccddd06f6efc0107da454611)), closes [#458](https://github.com/yowainwright/yowainwright.github.io/issues/458)
+* fixes README text updates (#453) ([6da1040](https://github.com/yowainwright/yowainwright.github.io/commit/6da1040240325e6eeb957c8d9e239838ca95a109)), closes [#453](https://github.com/yowainwright/yowainwright.github.io/issues/453)
+* updates linting (#459) ([a21331b](https://github.com/yowainwright/yowainwright.github.io/commit/a21331babf368ab38c652422bdf165f59cffcb08)), closes [#459](https://github.com/yowainwright/yowainwright.github.io/issues/459)
+* upgrade gatsby from 2.20.12 to 2.20.13 (#447) ([2e8c43a](https://github.com/yowainwright/yowainwright.github.io/commit/2e8c43abf14214080f2cb21675483ba0cfa3b401)), closes [#447](https://github.com/yowainwright/yowainwright.github.io/issues/447)
+* upgrade gatsby from 2.20.13 to 2.20.14 (#449) ([71b7bfe](https://github.com/yowainwright/yowainwright.github.io/commit/71b7bfe4f05db16eb103b654fa6c6e1a909c7ab8)), closes [#449](https://github.com/yowainwright/yowainwright.github.io/issues/449)
+* upgrade gatsby from 2.20.14 to 2.20.15 (#450) ([e78845c](https://github.com/yowainwright/yowainwright.github.io/commit/e78845c4250a9c9ebc749e07a50b23d813c44c4f)), closes [#450](https://github.com/yowainwright/yowainwright.github.io/issues/450)
+* upgrade gatsby from 2.20.17 to 2.20.18 (#454) ([b5c6803](https://github.com/yowainwright/yowainwright.github.io/commit/b5c680340d3e9228a3ca536f0425dbe8fc4d6e05)), closes [#454](https://github.com/yowainwright/yowainwright.github.io/issues/454)
+* upgrade gatsby from 2.20.18 to 2.20.20 (#456) ([d4515a9](https://github.com/yowainwright/yowainwright.github.io/commit/d4515a9d2e173806a31cfc20cd63ac059ba150d2)), closes [#456](https://github.com/yowainwright/yowainwright.github.io/issues/456)
+* upgrade gatsby-plugin-tinacms from 0.1.31 to 0.1.33 (#446) ([dfeb6f8](https://github.com/yowainwright/yowainwright.github.io/commit/dfeb6f818233fb3834aa774aaf493a1e558dde54)), closes [#446](https://github.com/yowainwright/yowainwright.github.io/issues/446)
+* upgrade gatsby-tinacms-git from 0.4.5 to 0.4.7 (#444) ([33b506e](https://github.com/yowainwright/yowainwright.github.io/commit/33b506e0eaae8fe0ac8793e7ed692a36a692eaf5)), closes [#444](https://github.com/yowainwright/yowainwright.github.io/issues/444)
+* upgrade gatsby-tinacms-remark from 0.7.11 to 0.7.13 (#445) ([2e50933](https://github.com/yowainwright/yowainwright.github.io/commit/2e509334979499e849133ff49ab8913de9a6adfb)), closes [#445](https://github.com/yowainwright/yowainwright.github.io/issues/445)
+* upgrade multiple dependencies with Snyk (#443) ([afcb5df](https://github.com/yowainwright/yowainwright.github.io/commit/afcb5df6fab364d39c573dfa60ea45acaed5bf50)), closes [#443](https://github.com/yowainwright/yowainwright.github.io/issues/443)
+* upgrade multiple dependencies with Snyk (#451) ([428d685](https://github.com/yowainwright/yowainwright.github.io/commit/428d685f6fccdd8acb8abff54b77ce5b9cd81c5d)), closes [#451](https://github.com/yowainwright/yowainwright.github.io/issues/451)
+* upgrade styled-components from 5.0.1 to 5.1.0 (#448) ([2a99268](https://github.com/yowainwright/yowainwright.github.io/commit/2a99268a9ed8dd44b553f0142f5bfaf1599ada86)), closes [#448](https://github.com/yowainwright/yowainwright.github.io/issues/448)
+
+
+
+## [1.15.1](https://github.com/yowainwright/yowainwright.github.io/compare/1.15.0...1.15.1) (2020-04-06)
+
+
+### feat
+
+* adds badges (#437) ([a3513a2](https://github.com/yowainwright/yowainwright.github.io/commit/a3513a2bd7ab697c7a51e24dc62cdcfa3ea9a5b4)), closes [#437](https://github.com/yowainwright/yowainwright.github.io/issues/437)
+* adds photos (#438) ([9888090](https://github.com/yowainwright/yowainwright.github.io/commit/9888090499dc05ed77c246f3968c79e98681f647)), closes [#438](https://github.com/yowainwright/yowainwright.github.io/issues/438)
+
+### fix
+
+* build issues (#442) ([a124832](https://github.com/yowainwright/yowainwright.github.io/commit/a124832be0e222642e51ee4185fcba05ad2da945)), closes [#442](https://github.com/yowainwright/yowainwright.github.io/issues/442)
+* updates config; updates images (#441) ([4e85d79](https://github.com/yowainwright/yowainwright.github.io/commit/4e85d79236168e12a3590be42048267bdf0d112d)), closes [#441](https://github.com/yowainwright/yowainwright.github.io/issues/441)
+* upgrade multiple dependencies with Snyk (#440) ([42f5582](https://github.com/yowainwright/yowainwright.github.io/commit/42f5582ed1d410b883284b392b82506e1f7e8519)), closes [#440](https://github.com/yowainwright/yowainwright.github.io/issues/440)
+
+
+
 # [1.15.0](https://github.com/yowainwright/yowainwright.github.io/compare/1.14.0...1.15.0) (2020-04-05)
 
 
