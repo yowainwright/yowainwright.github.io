@@ -69,7 +69,7 @@
     "markdownlint-cli": "0.22.0",
     "prettier": "2.0.4",
     "prismjs": "1.19.0",
-    "prop-types": "15.7.0",
+    "prop-types": "15.7.2",
     "react-helmet": "5.2.1",
     "react-responsive-grid": "0.3.4",
     "react-test-renderer": "16.13.0",
