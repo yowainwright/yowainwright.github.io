@@ -1,3 +1,17 @@
+## [1.16.2](https://github.com/yowainwright/yowainwright.github.io/compare/1.16.1...1.16.2) (2020-04-27)
+
+
+### fix
+
+* adds yarn.lock (#505) ([bd1dad3](https://github.com/yowainwright/yowainwright.github.io/commit/bd1dad356741ade7903b56936eefe5dba17bd125)), closes [#505](https://github.com/yowainwright/yowainwright.github.io/issues/505)
+* move current moment post (#507) ([cbe875d](https://github.com/yowainwright/yowainwright.github.io/commit/cbe875dbbe3cd534ccb4452d124882a266fbac17)), closes [#507](https://github.com/yowainwright/yowainwright.github.io/issues/507)
+* update yarn.lock (#504) ([57a9280](https://github.com/yowainwright/yowainwright.github.io/commit/57a92806f0de7b94289941755e446d609d711f57)), closes [#504](https://github.com/yowainwright/yowainwright.github.io/issues/504)
+* updates `package-lock.json` (#506) ([6a103e2](https://github.com/yowainwright/yowainwright.github.io/commit/6a103e2cff5bb39b404a3a927cf0fe7b7d5ed004)), closes [#506](https://github.com/yowainwright/yowainwright.github.io/issues/506)
+* updates styles (#503) ([292ab37](https://github.com/yowainwright/yowainwright.github.io/commit/292ab37bfd60b676aa0a017665f2021934dd73be)), closes [#503](https://github.com/yowainwright/yowainwright.github.io/issues/503)
+* upgrade gatsby from 2.20.24 to 2.20.25 (#475) ([0e0f20a](https://github.com/yowainwright/yowainwright.github.io/commit/0e0f20a2b198273b8628ffc199031cd6299416a8)), closes [#475](https://github.com/yowainwright/yowainwright.github.io/issues/475)
+
+
+
 ## [1.16.1](https://github.com/yowainwright/yowainwright.github.io/compare/1.16.0...1.16.1) (2020-04-17)
 
 
