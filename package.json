@@ -10,7 +10,7 @@
     "gatsby": "2.21.9",
     "gatsby-codemods": "1.2.3",
     "gatsby-link": "2.3.4",
-    "gatsby-plugin-google-analytics": "2.2.5",
+    "gatsby-plugin-google-analytics": "2.3.0",
     "gatsby-plugin-manifest": "2.3.6",
     "gatsby-plugin-offline": "3.1.4",
     "gatsby-plugin-preact": "3.3.0",
