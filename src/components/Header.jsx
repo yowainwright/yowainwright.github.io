@@ -1,24 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const navData = {
-  componentName: 'site-nav',
-  navItems: [
-    {
-      alias: 'about',
-      name: 'About',
-      path: '/about/',
-    },
-    {
-      alias: 'archive',
-      inApp: true,
-      name: 'Archive',
-      path: '/archive/',
-    },
-  ],
-}
-
-export const Hamburger = () => <button className='nav-button nav-button--hamburger'>☰</button>
+export const Hamburger = ({ icon = '☰' }) => <button className='nav-button nav-button--hamburger'>{icon}</button>
 
 export const NavList = ({ componentName, navItems }) => (
   <ol className={`${componentName}__items`}>
@@ -34,8 +17,22 @@ export const NavList = ({ componentName, navItems }) => (
   </ol>
 )
 
-const Header = () => {
-  const { componentName, navItems } = navData
+export const Header = ({
+  componentName = 'site-nav',
+  navItems = [
+    {
+      alias: 'about',
+      name: 'About',
+      path: '/about/',
+    },
+    {
+      alias: 'archive',
+      inApp: true,
+      name: 'Archive',
+      path: '/archive/',
+    },
+  ],
+}) => {
   return (
     <nav
       id={componentName}
