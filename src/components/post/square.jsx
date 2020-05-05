@@ -13,3 +13,5 @@ export const SquarePost = ({ title, date, path }) => {
     </Link>
   )
 }
+
+export default SquarePost
