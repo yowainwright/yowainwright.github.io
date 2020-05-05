@@ -55,7 +55,7 @@
     "babel-jest": "25.4.0",
     "babel-loader": "8.1.0",
     "babel-plugin-macros": "2.8.0",
-    "commitizen": "4.0.4",
+    "commitizen": "4.1.2",
     "conventional-changelog-cli": "2.0.31",
     "eslint": "6.8.0",
     "gatsby-cli": "2.12.6",
