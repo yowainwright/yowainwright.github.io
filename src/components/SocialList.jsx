@@ -1,9 +1,9 @@
 import React from 'react'
 import { socialItems } from '../fixtures/social'
 
-export const SocialList = () => (
+export const SocialList = ({ items = socialItems }) => (
   <ul className='social-list'>
-    {socialItems.map(({ name, path, small }, i) => (
+    {items.map(({ name, path, small }, i) => (
       <li key={i} className={`social-list__item social-list__item--${small ? 'showing' : 'hidden'}`}>
         <a href={path} className='social-list__link'>
           {name}
@@ -12,3 +12,5 @@ export const SocialList = () => (
     ))}
   </ul>
 )
+
+export default SocialList

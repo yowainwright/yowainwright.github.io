@@ -9,3 +9,5 @@ export const PostHeader = ({ title, path, date }) => (
     <time>{date}</time>
   </header>
 )
+
+export default PostHeader

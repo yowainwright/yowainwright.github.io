@@ -2,9 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { SocialFooter } from './SocialFooter'
 
-const name = 'site-footer'
-const year = new Date().getFullYear()
-const Footer = () => (
+export const Footer = ({ name = 'site-footer', year = new Date().getFullYear() }) => (
   <footer className={`${name}`} role='contentinfo' itemType='http://schema.org/WPFooter'>
     <div className={`${name}__wrapper`}>
       <div className={`${name}__col`}>

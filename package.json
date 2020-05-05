@@ -1,7 +1,7 @@
 {
   "name": "Jeffry.in",
   "description": "Jeffry.in, Jeff Wainwright's blog",
-  "version": "1.16.2",
+  "version": "1.17.0",
   "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
   "bugs": {
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
@@ -101,7 +101,7 @@
     "chore": "yarn chore:delete-changelog-branch && yarn chore:branch && yarn chore:changelog && yarn chore:pr && yarn chore:setup-next-work",
     "deploy": "yarn pre-deploy && NODE_ENV=production gatsby build && gh-pages -d public --branch master && yarn post-deploy",
     "dev": "gatsby develop",
-    "develop": "NODE_ENV=development gatsby develop",
+    "develop": "GATSBY_GRAPHQL_IDE=playground NODE_ENV=development gatsby develop",
     "eslint": "eslint . --ext .js,.jsx --fix",
     "eslint:ci": "eslint --ext .js,.jsx",
     "grammar": "write-good src/pages/*.md --no-passive",
