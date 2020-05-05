@@ -1,5 +1,5 @@
 import React from 'react'
-import { PostHeader } from './header'
+import PostHeader from './header'
 import { Link } from 'gatsby'
 import { ShareList } from '../ShareList'
 
@@ -16,3 +16,5 @@ export const BasicPost = ({ date, description, path, title }) => (
     <hr />
   </article>
 )
+
+export default BasicPost

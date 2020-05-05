@@ -9,8 +9,7 @@ export const copyToClipboard = (str) => {
   document.body.removeChild(el)
 }
 
-export const ShareList = ({ name = null, path, title }) => {
-  const url = `https://jeffry.in${path}`
+export const ShareList = ({ name = null, path, title, url = `https://jeffry.in${path}` }) => {
   const cleanedTitle = encodeURIComponent(title)
   return (
     <nav className={`share-list${name ? ` share-list--${name}` : ''}`}>
@@ -35,3 +34,5 @@ export const ShareList = ({ name = null, path, title }) => {
     </nav>
   )
 }
+
+export default ShareList
