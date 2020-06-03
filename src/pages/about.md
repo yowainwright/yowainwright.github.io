@@ -11,14 +11,13 @@ meta: >-
 post_index: null
 ---
 
-I'm a software engineer at [Dollar Shave Club](https://www.dollarshaveclub.com/). I write software because I'm passionate about making things, learning, and contributing to society. Software allows me to do those things everyday. Unrelated to software, I enjoy [riding bikes](https://www.strava.com/athletes/722335), [running](https://www.strava.com/athletes/722335), and surfing.
+I'm a software engineer at [Currency](https://www.gocurrency.com/). Formally, I wrote a lot of open source while at [Dollar Shave Club](https://www.dollarshaveclub.com/). I write software because I'm passionate about making things, learning, and contributing to society. Software allows me to do those things everyday. Unrelated to software, I enjoy painting, [running](https://www.strava.com/athletes/722335), and surfing.
 
 The profile handle "yowainwright" is derived from conversations I had growing up while talking with my dad in his wood shop. I would sit on a workbench and tell him about my dreams which were always lofty. He would respond to my enthusiasm at key moments by pumping is fist in a winning gesture and say in a deep tone, "yoooo Wainwright!". Not being a typical quick-learner or athlete, his encouragement motivates me to continue to persue my dreams.
 
 <br>
 
-----
-
+---
 
 ## Open Source Initiatives
 
@@ -30,7 +29,7 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 
 <br>
 
-----
+---
 
 ## Publications
 
@@ -40,7 +39,7 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 
 <br>
 
-----
+---
 
 ## Talks and Presentations
 
@@ -48,10 +47,10 @@ The profile handle "yowainwright" is derived from conversations I had growing up
 
 <br>
 
-----
+---
 
 ## Content Featuring Me
 
 - **[The Beanie Guys Keep It Cool in the Wet, Hot Los Angeles Summer](https://melmagazine.com/en-us/story/la-beanie-guys-keeping-it-cool)** [Andrew Fiouzi](https://melmagazine.com/en-us/story/author/andrew-fiouzi) for [Mel Magazine](https://melmagazine.com)
 - **[Surfers On How They Deal With a Blue Wave That's More Like a Ripple](https://melmagazine.com/en-us/story/election-2018-blue-wave-surfers)** - by [Andrew Fiouzi](https://melmagazine.com/en-us/story/author/andrew-fiouzi) for [Mel Magazine](https://melmagazine.com)
-- **[Dollar Shave Club Body Wipes](https://www.dollarshaveclub.com/our-products/deodorant-and-wipes/)** - Brand and Product Model
+- **[Dollar Shave Club Body Wipes](https://www.dollarshaveclub.com/product/deodorant-wipes-bergamotwhitemusk)** - Brand and Product Model
