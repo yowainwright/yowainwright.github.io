@@ -58,7 +58,7 @@
     "commitizen": "4.1.2",
     "conventional-changelog-cli": "2.0.31",
     "eslint": "6.8.0",
-    "gatsby-cli": "2.12.6",
+    "gatsby-cli": "2.12.45",
     "gatsby-plugin-feed": "2.4.4",
     "gh-pages": "3.0.0",
     "husky": "4.2.5",
