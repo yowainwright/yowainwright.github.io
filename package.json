@@ -27,7 +27,7 @@
     "gatsby-remark-smartypants": "2.2.3",
     "gatsby-source-filesystem": "2.3.23",
     "gatsby-tinacms-git": "0.4.9",
-    "gatsby-tinacms-remark": "0.7.13",
+    "gatsby-tinacms-remark": "0.25.0",
     "gatsby-transformer-remark": "2.7.4",
     "gatsby-transformer-sharp": "2.5.11",
     "node-sass": "4.14.1",
