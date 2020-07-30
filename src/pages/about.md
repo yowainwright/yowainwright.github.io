@@ -11,9 +11,7 @@ meta: >-
 post_index: null
 ---
 
-I'm a software engineer at [Currency](https://www.gocurrency.com/). Formally, I wrote a lot of open source while at [Dollar Shave Club](https://www.dollarshaveclub.com/). I write software because I'm passionate about making things, learning, and contributing to society. Software allows me to do those things everyday. Unrelated to software, I enjoy painting, [running](https://www.strava.com/athletes/722335), and surfing.
-
-The profile handle "yowainwright" is derived from conversations I had growing up while talking with my dad in his wood shop. I would sit on a workbench and tell him about my dreams which were always lofty. He would respond to my enthusiasm at key moments by pumping is fist in a winning gesture and say in a deep tone, "yoooo Wainwright!". Not being a typical quick-learner or athlete, his encouragement motivates me to continue to persue my dreams.
+I'm a software engineer at [Currency](https://www.gocurrency.com/). Formerly, I wrote a lot of open source while at [Dollar Shave Club](https://www.dollarshaveclub.com/). I write software because I'm passionate about making things, learning, and contributing to society. Software allows me to do those things everyday. Unrelated to software, I enjoy painting, [running](https://www.strava.com/athletes/722335), and surfing.
 
 <br>
 
