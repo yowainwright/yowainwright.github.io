@@ -11,7 +11,7 @@ meta: >-
 post_index: null
 ---
 
-I'm a software engineer at [Currency](https://www.gocurrency.com/). Formerly, I wrote a lot of open source while at [Dollar Shave Club](https://www.dollarshaveclub.com/). I write software because I'm passionate about making things, learning, and contributing to society. Software allows me to do those things everyday. Unrelated to software, I enjoy painting, [running](https://www.strava.com/athletes/722335), and surfing.
+Hi! I'm a software engineer at [Currency](https://www.gocurrency.com/). Formerly, I wrote a lot of open source while at [Dollar Shave Club](https://www.dollarshaveclub.com/). I write software because I'm passionate about making things, learning, and contributing to society. Software allows me to do those things everyday. Unrelated to software, I enjoy painting, [running](https://www.strava.com/athletes/722335), and surfing.
 
 <br>
 
