@@ -4,7 +4,7 @@ date: '2017-09-01'
 layout: post
 readNext: '/'
 path: '/switching-site-generators/'
-meta: Switching Site Generators, hiccups in between, and why I switched to Gatsby
+meta: 'Switching Site Generators, hiccups in between, and why I switched to Gatsby'
 featured_image: null
 post_index: 48
 categories:

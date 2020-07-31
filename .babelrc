@@ -6,12 +6,10 @@
         "loose": true,
         "modules": false,
         "useBuiltIns": "usage",
+        "corejs": 3,
         "shippedProposals": true,
         "targets": {
-          "browsers": [
-            ">0.25%",
-            "not dead"
-          ]
+          "browsers": [">0.25%", "not dead"]
         }
       }
     ],
