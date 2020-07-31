@@ -20,15 +20,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-tinacms',
-      options: {
-        plugins: ['gatsby-tinacms-git', 'gatsby-tinacms-remark'],
-        sidebar: {
-          hidden: NODE_ENV === 'production',
-        },
-      },
-    },
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [

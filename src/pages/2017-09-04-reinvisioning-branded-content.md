@@ -4,7 +4,7 @@ date: '2017-09-04'
 layout: post
 readNext: '/'
 path: '/branded-content/'
-meta: Reenvisioningg branded content at Dollar Shave Club.
+meta: 'Reenvisioning branded content at Dollar Shave Club.'
 featured_image: null
 post_index: 49
 categories:

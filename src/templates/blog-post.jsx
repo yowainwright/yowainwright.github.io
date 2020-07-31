@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { remarkForm } from 'gatsby-tinacms-remark'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { ShareList } from '../components/ShareList'
@@ -37,7 +36,7 @@ export const BlogPostTemplate = ({
   </Layout>
 )
 
-export default remarkForm(BlogPostTemplate)
+export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
@@ -58,7 +57,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
       }
-      ...TinaRemark
     }
   }
 `
