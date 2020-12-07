@@ -1,10 +1,8 @@
 .social-nav {
-  background: #000;
-
+  border-bottom: 1px solid #ccc;
   a {
-    color: #fff;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: .7rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
   }
 }
@@ -37,8 +35,8 @@
 
     .social-nav & {
       height: 1.75rem;
-      line-height: .8;
-      padding: 0 .2rem;
+      line-height: 0.8;
+      padding: 0 0.2rem;
     }
 
     &--hidden {
