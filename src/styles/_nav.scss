@@ -4,7 +4,7 @@ $nav-size: 3rem;
 $nav-size-large: 4rem;
 
 .site-nav {
-  background:#fff;
+  background: #fff;
   border-bottom: 1px solid $color-grey-lighter;
   height: $nav-size-large;
   margin: 0 auto;
@@ -42,6 +42,8 @@ $nav-size-large: 4rem;
   &__container {
     display: flex;
     flex-direction: row;
+    max-width: 80rem;
+    margin: 0 auto;
   }
 
   &__main-item-link {
@@ -56,11 +58,11 @@ $nav-size-large: 4rem;
     display: flex;
     font-weight: 900;
     margin-left: 1rem;
-    padding-top: .25rem;
+    padding-top: 0.25rem;
     position: relative;
     z-index: 2;
     @include media-query($width-small) {
-      padding-top: .5rem;
+      padding-top: 0.5rem;
     }
   }
   &__main-item,
@@ -72,21 +74,20 @@ $nav-size-large: 4rem;
     }
   }
 
-
   &__item {
     background: #fff;
     z-index: 2;
   }
 
   &__main-item-symbol {
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 100%;
     color: #000;
-    font-family: serif;
+    font-family: sans-serif;
     font-size: 1.75rem;
     height: 2.5rem;
-    margin: .2rem 1rem 0 0;
-    padding: .35rem 0 0 0;
+    margin: 0.2rem 1rem 0 0;
+    padding: 0.35rem 0 0 0;
     text-align: center;
     text-transform: uppercase;
     width: 3.75rem;
@@ -95,20 +96,21 @@ $nav-size-large: 4rem;
       font-size: 2.5rem;
       height: $nav-size-large;
       line-height: 1.5;
-      margin: .5rem 1rem 0;
+      margin: 0.5rem 1rem 0;
       padding: 0;
       width: $nav-size-large;
     }
   }
 
   &__main-item-title {
-    font-size: .2rem;
+    font-size: 0.2rem;
     height: 0;
     visibility: hidden;
     width: 0;
   }
 
   &__link {
+    font-family: sans-serif;
     font-size: 1rem;
     font-weight: 900;
   }
@@ -117,9 +119,9 @@ $nav-size-large: 4rem;
     align-self: flex-end;
     display: flex;
     justify-content: space-around;
-    margin: .25rem 0 0 auto;
+    margin: 0.25rem 0 0 auto;
     max-width: $width-medium;
-    padding: .5rem 0 0 0;
+    padding: 0.5rem 0 0 0;
     position: relative;
 
     @include media-query($width-small) {
@@ -130,12 +132,12 @@ $nav-size-large: 4rem;
   &__item {
     list-style-type: none;
     margin: 0;
-    padding: 0 .75rem;
+    padding: 0 0.75rem;
     position: relative;
 
     @include media-query($width-small) {
       margin: 0 1rem;
-      padding: 0 .75rem;
+      padding: 0 0.75rem;
     }
 
     &--github,
