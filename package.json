@@ -30,7 +30,7 @@
     "gatsby-transformer-remark": "2.9.2",
     "gatsby-transformer-sharp": "2.5.15",
     "node-sass": "4.14.1",
-    "react": "16.13.1",
+    "react": "16.14.0",
     "react-dom": "16.13.1",
     "react-dropzone": "^11.0.2",
     "react-final-form": "^6.5.2",
