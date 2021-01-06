@@ -59,7 +59,7 @@
     "conventional-changelog-cli": "2.1.1",
     "eslint": "^7.15.0",
     "gatsby-cli": "2.16.2",
-    "gatsby-plugin-feed": "2.5.14",
+    "gatsby-plugin-feed": "2.11.0",
     "gh-pages": "3.0.0",
     "husky": "4.3.5",
     "identity-obj-proxy": "3.0.0",
