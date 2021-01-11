@@ -138,153 +138,8 @@ exports[`Template component renders correctly 1`] = `
       <div
         className="site-footer__col"
       >
-        <p
-          className="site-footer__body"
-        >
-          My online thoughts. I'm
-           
-          <Link
-            to="/about"
-          >
-            <strong>
-              Jeffry Wainwright
-            </strong>
-          </Link>
-          —a software engineer, artist, runner, and surfer living in Los Angeles.
-           
-          <strong>
-            <a
-              href="mailto:yowainwright@gmail.com"
-            >
-              Email me
-            </a>
-          </strong>
-           
-          or reach out on
-           
-          <a
-            href="https://github.com/yowainwright"
-          >
-            <strong>
-              Github
-            </strong>
-          </a>
-          ,
-           
-          <a
-            href="https://instagram.com/yowainwright"
-          >
-            <strong>
-              Instagram
-            </strong>
-          </a>
-          ,
-           
-          <a
-            href="https://twitter.com/yowainwright"
-          >
-            <strong>
-              Twitter
-            </strong>
-          </a>
-          ,
-           
-          <a
-            href="https://www.strava.com/athletes/722335"
-          >
-            <strong>
-              Strava
-            </strong>
-          </a>
-          , or
-           
-          <a
-            href="https://www.linkedin.com/in/jeffrywainwright/"
-          >
-            <strong>
-              LinkedIn
-            </strong>
-          </a>
-          .
-        </p>
-      </div>
-      <div
-        className="site-footer__col"
-      >
-        <nav
-          className="social-footer"
-        >
-          <ul
-            className="social-list"
-          >
-            <li
-              className="social-list__item social-list__item--showing"
-            >
-              <a
-                className="social-list__link"
-                href="https://github.com/yowainwright"
-              >
-                Github
-              </a>
-            </li>
-            <li
-              className="social-list__item social-list__item--showing"
-            >
-              <a
-                className="social-list__link"
-                href="https://twitter.com/yowainwright"
-              >
-                Twitter
-              </a>
-            </li>
-            <li
-              className="social-list__item social-list__item--hidden"
-            >
-              <a
-                className="social-list__link"
-                href="https://www.npmjs.com/~yowainwright"
-              >
-                NPMJS
-              </a>
-            </li>
-            <li
-              className="social-list__item social-list__item--showing"
-            >
-              <a
-                className="social-list__link"
-                href="https://instagram.com/yowainwright"
-              >
-                Instragram
-              </a>
-            </li>
-            <li
-              className="social-list__item social-list__item--showing"
-            >
-              <a
-                className="social-list__link"
-                href="https://www.linkedin.com/in/jeffrywainwright/"
-              >
-                LinkedIn
-              </a>
-            </li>
-            <li
-              className="social-list__item social-list__item--showing"
-            >
-              <a
-                className="social-list__link"
-                href="/rss.xml"
-              >
-                RSS
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div
-        className="site-footer__col"
-      >
         <figure
-          className="figure--center"
+          className="figure--center site-footer__figure"
         >
           <img
             alt="Me smiling with a beard"
@@ -300,7 +155,7 @@ exports[`Template component renders correctly 1`] = `
             to="/"
           >
             jeffry.in 
-            2020
+            2021
           </Link>
         </p>
       </div>

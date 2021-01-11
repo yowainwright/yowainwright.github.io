@@ -48,7 +48,7 @@
       margin-bottom: 0;
     }
 
-    img+hr {
+    img + hr {
       margin-top: 4rem;
     }
   }
@@ -86,7 +86,6 @@
   }
 
   &__title {
-
     &--full,
     &--headline {
       margin-bottom: 0;
@@ -113,7 +112,7 @@
   }
 
   &__footer {
-    border: 1px solid $color-grey-lighter;
+    border: 1px solid #f2f2f2;
     max-width: calc(100% - 2rem);
     margin: 5rem auto 0;
     padding-top: 2rem;
@@ -125,16 +124,13 @@
 
   &__footer-title {
     @include media-query($width-small) {
-      font-size: 2rem;
       max-width: none;
     }
   }
 
   &__meta {
-    font-size: .85rem;
     padding: 1rem;
     @include media-query($width-small) {
-      font-size: 1rem;
       padding: 0;
     }
   }
@@ -172,7 +168,7 @@
     }
 
     h2 {
-      font-size: .9rem;
+      font-size: 0.9rem;
 
       @include media-query($width-small) {
         font-size: 1.5rem;

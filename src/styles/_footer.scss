@@ -1,21 +1,13 @@
 .site-footer {
-  background: #000;
-  color: #fff;
-  margin: 10rem auto 0;
   text-align: center;
-
-  @include media-query($width-small) {
-    margin-top: 15rem;
-  }
-
   &__wrapper {
     margin-left: auto;
     margin-right: auto;
     max-width: calc(100% - 2rem);
-    padding: 5rem 0 3rem;
+    padding: 2rem 0 1rem;
     @include media-query($width-medium) {
       max-width: $width-default;
-      padding-top: 10rem;
+      padding: 2rem 0;
     }
   }
 
@@ -26,16 +18,11 @@
     padding-top: 1rem;
   }
 
-  &__link {
-    color: #fff;
-    text-decoration: none;
+  &__figure {
+    margin: 1rem 0;
   }
 
   &__date {
     padding-left: $spacing-unit-small;
-  }
-
-  a {
-    color: #fff;
   }
 }
