@@ -13,7 +13,6 @@ export const BasicPost = ({ date, description, path, title }) => (
       </Link>
     </p>
     <ShareList name='blog-bottom' path={path} title={title} />
-    <hr />
   </article>
 )
 
