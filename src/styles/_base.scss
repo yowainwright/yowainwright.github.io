@@ -221,7 +221,7 @@ table,
 .content p,
 .content time,
 .content hr {
-  max-width: calc(100% - #{$spacing-unit-large});
+  max-width: calc(100% - 4rem);
 
   @include media-query($width-small) {
     max-width: $width-reader;

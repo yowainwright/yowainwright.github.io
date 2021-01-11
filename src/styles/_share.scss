@@ -7,7 +7,7 @@
   &__button {
     background: 0;
     border: 0;
-    color: #52c30e;
+    color: #0000ff;
     margin: 0;
 
     &:hover {
@@ -34,7 +34,10 @@
   &--blog-bottom {
     border-top: 1px solid $color-grey-lightest;
     margin: 2rem auto 0;
-
+    max-width: calc(100% - 4rem);
+    @include media-query($width-medium) {
+      max-width: 100%;
+    }
     .post--article {
       border-bottom: 1px solid $color-grey-lightest;
     }
