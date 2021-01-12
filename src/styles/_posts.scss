@@ -123,8 +123,12 @@
   }
 
   &__footer-title {
+    color: #282094;
+    font-size: 1.5rem;
+    max-width: calc(100% - 2rem);
     @include media-query($width-small) {
       max-width: none;
+      font-size: 2rem;
     }
   }
 

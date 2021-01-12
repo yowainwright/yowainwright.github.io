@@ -42,11 +42,13 @@ h3 {
 
   .post__header &,
   .content & {
+    color: #282094;
     text-align: center;
   }
 }
 
 h1 {
+  color: #282094;
   font-size: 1.75rem;
   margin: 0;
   margin-bottom: 1rem;
@@ -158,6 +160,7 @@ figcaption {
 img,
 iframe {
   display: block;
+  filter: grayscale(1);
   margin-bottom: $spacing-unit;
   margin-left: auto;
   margin-right: auto;
@@ -169,6 +172,7 @@ iframe {
 }
 
 time {
+  color: #282094;
   display: block;
   font-family: sans-serif;
   font-size: 0.6rem;
@@ -187,7 +191,7 @@ time {
 
     &:after,
     &:before {
-      color: #000;
+      color: #282094;
       content: '—';
       display: inline-block;
       font-size: 1rem;
@@ -334,7 +338,9 @@ th {
 }
 
 th {
-  padding: 0.5rem;
+  background: #f3f2fd;
+  color: #282094;
+  padding: 0.75rem 0.5rem;
 }
 
 td {
