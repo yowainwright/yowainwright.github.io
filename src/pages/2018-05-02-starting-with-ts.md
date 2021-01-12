@@ -1,15 +1,15 @@
 ---
 title: TypeScript Init—Getting A Test Driven TypeScript Repository Setup
-date: "2018-05-02"
+date: '2018-05-02'
 layout: post
-readNext: "/"
-path: "/getting-setup-with-ts/"
+readNext: '/'
+path: '/getting-setup-with-ts/'
 meta: This post documents getting setup with TypeScript—just beyond the Gettings Started TypeScript Tutorials. In this Post I will go through setting up a Test Driven TypeScript project.
 featured_image: null
 post_index: 60
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 The Engineering Team at Dollar Shave Club is excited about [TypeScript](https://github.com/Microsoft/TypeScript). I'm excited too. When I started writing this post, I was not familiar with TypeScript beyond conversations and TypeScript's [getting started tutorials](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html). In this post, I documented getting a TypeScript repository setup to compile, lint, and test TypeScript. While writing this post, I built a [Linked List](https://github.com/yowainwright/datastructures-ts/tree/master/packages/linked-list) in TypeScript.
@@ -20,12 +20,12 @@ For this TypeScript exercise, I tried to use the same tools I'd use to build a p
 
 In the table below I broke down the tools I tried to build my first Test Drive Development TypeScript repository.
 
-|Category| Initial | Final | Reason |
-|---|---|---|---|
-| Build | Rollup | TypeScript (TSC) | Rollup worked with minimal effort. I am user TSC because it means 1 less layer of abstraction. |
-| Type Checker | TypeScript | TypeScript | TypeScript works well. The feedback in VS Code is immediate and offers clear messaging. |
-| Testing | TS-Jest | TS-Jest | I was concerned about using TS-Jest because the documentation between it and Jest seemed confusing but it worked. I'm familiar with Jest so the switch was easy |
-| Linting | TS-Lint | TS-Lint | TS-Lint works well in VS Code. As far as the CLI, I'm still not clear if TS-Lint is working. |
+| Category     | Initial    | Final            | Reason                                                                                                                                                          |
+| ------------ | ---------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Build        | Rollup     | TypeScript (TSC) | Rollup worked with minimal effort. I am user TSC because it means 1 less layer of abstraction.                                                                  |
+| Type Checker | TypeScript | TypeScript       | TypeScript works well. The feedback in VS Code is immediate and offers clear messaging.                                                                         |
+| Testing      | TS-Jest    | TS-Jest          | I was concerned about using TS-Jest because the documentation between it and Jest seemed confusing but it worked. I'm familiar with Jest so the switch was easy |
+| Linting      | TS-Lint    | TS-Lint          | TS-Lint works well in VS Code. As far as the CLI, I'm still not clear if TS-Lint is working.                                                                    |
 
 ### Why I used TypeScript's Compiler?
 
@@ -51,28 +51,24 @@ I added [JSDocs](http://usejsdoc.org/) so that I could make sure to document wha
 
 Listed below are steps to get [ts-jest](https://github.com/kulshekhar/ts-jest) up and running:
 
-**Tests are working and I'm still alive**
+### Tests are working and I'm still alive
 
 ```javascript
-
 import { Node } from '../Node'
 expect(1).toBe(1)
-
 ```
 
-**Files are importing correctly**
+### Files are importing correctly
 
 ```javascript
-
 import { Node } from '../Node'
 
 test('Jest is working, Node is imported', () => {
   expect(typeof Node).toBe('function')
 })
-
 ```
 
-**Define the testing interface**
+### Define the testing interface
 
 ```javascript
 declare function test (msg: string, test: Function)
@@ -132,27 +128,21 @@ declare function expect (result: any)
 
 ```
 
-**I can't read VSCode errors.**
+### I can't read VSCode errors.
 
 > Try running TSlint => the messaging is similar. The usage of node's [chalk](https://github.com/chalk/chalk) in the commandline can help highlight issues.
 
-**How do I "tsconfig.json"?**
+### How do I "tsconfig.json"?
 
 > Try something like this:
 
 ```json
-
 {
   "compilerOptions": {
     "outDir": "dist/components",
     "module": "commonjs",
     "target": "es5",
-    "lib": [
-      "es6",
-      "es2016.array.include",
-      "es2017",
-      "dom"
-    ],
+    "lib": ["es6", "es2016.array.include", "es2017", "dom"],
     "declaration": true,
     "allowJs": false,
     "sourceMap": true,
@@ -160,23 +150,14 @@ declare function expect (result: any)
     "moduleResolution": "node",
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
-    "types": [
-      "jest",
-      "node"
-    ]
+    "types": ["jest", "node"]
   },
-  "exclude": [
-    "**/__tests__/",
-    "**/*.js"
-  ],
-  "include": [
-    "**/*.ts"
-  ]
+  "exclude": ["**/__tests__/", "**/*.js"],
+  "include": ["**/*.ts"]
 }
-
 ```
 
-**How do I "tsconfig.jest.json"?**
+### How do I "tsconfig.jest.json"?
 
 > Try something like this:
 
@@ -199,28 +180,20 @@ declare function expect (result: any)
 
 ```
 
-**How do I [ts lint](https://github.com/palantir/tslint)?**
+### How do I [ts lint](https://github.com/palantir/tslint)?
 
 ```json
-
 {
-  "extends": [
-    "tslint-config-dollarshaveclub"
-  ],
+  "extends": ["tslint-config-dollarshaveclub"],
   "rules": {
     "no-unnecessary-type-assertion": false,
     "trailing-comma": false,
-    "semicolon": [
-      true,
-      "never"
-    ]
+    "semicolon": [true, "never"]
   }
 }
-
-
 ```
 
-**How do I compile my ts?**
+### How do I compile my ts?
 
 ```json
 
@@ -232,7 +205,7 @@ declare function expect (result: any)
 
 ```
 
-**I do React. What does TS with React look like?**
+### I do React. What does TS with React look like?
 
 ```javascript
 
@@ -293,7 +266,7 @@ export default BreadcrumbsSmall
 
 ```
 
-**I want to export/import Plain Old JavaScript. Can I do that?**
+### I want to export/import Plain Old JavaScript. Can I do that?
 
 ```javascript
 
@@ -323,33 +296,26 @@ export namespace StickyBits {
 
 ```
 
-**I want to work on a project that imports and exports TS or JS**
+### I want to work on a project that imports and exports TS or JS
 
 > Try something like this:
 
-**tsconfig.json**
+### tsconfig.json
 
 ```json
-
 {
   "compilerOptions": {
     "outDir": ".",
     "target": "exnext",
-    "lib": [
-      "es6",
-      "es2016.array.include",
-      "es2017",
-      "dom"
-    ],
+    "lib": ["es6", "es2016.array.include", "es2017", "dom"],
     "sourceMap": true,
     "allowJs": true,
-    "rootDir": ".",
+    "rootDir": "."
   }
 }
-
 ```
 
-**package.json**
+### package.json
 
 ```json
 
