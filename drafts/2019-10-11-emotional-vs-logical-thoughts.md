@@ -12,7 +12,7 @@ categories:
   - philosophy
 ---
 
-This past year I began connecting my emotional and logical thoughts. New awareness led me to believe my body and nervous system actually react and respond faster than my mind, alone, can construct a logical thought. While, logical thoughts are thoughts within my mind. Emotional thoughts have the power of actually being psychically felt.
+This past year I began connecting my emotional and logical thoughts. New [information](https://www.brainpickings.org/2016/06/20/the-body-keeps-the-score-van-der-kolk/) led me to believe my body and nervous system actually react and respond faster than my mind, alone, can construct a logical thought. While, logical thoughts are thoughts within my mind. Emotional thoughts have the power of actually being psychically felt.
 
 Emotional thoughts often have psychical presence, are instinctual, and connected to the nervous system. Logical thoughts are constructed ideas that can easily be communicated and understood by others. Realizing I was detached from emotions and the effect detachment had on my body’s performance and reactions, I could no longer accept old patterns. I’m writing this post to clarify I how I became detached from my emotions ...
 
