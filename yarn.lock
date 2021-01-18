@@ -8764,7 +8764,7 @@ gatsby-source-filesystem@2.9.0:
     valid-url "^1.0.9"
     xstate "^4.14.0"
 
-gatsby-telemetry@^1.8.0, gatsby-telemetry@^1.8.1:
+gatsby-telemetry@^1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.8.1.tgz#c9fefb0a16d437c9ddb4722fd92909c390bf0c4e"
   integrity sha512-Az+2rArUf2Qxef6dOxYIo6SadRSFHWCckZGThiedwWguvjz4WLF4G4d7k1q/6BvzIu+tk/SrH+/fQ/Un6WOXPQ==
@@ -8824,10 +8824,10 @@ gatsby-transformer-sharp@2.10.0:
     semver "^7.3.4"
     sharp "^0.27.0"
 
-gatsby@^2.30.2:
-  version "2.30.2"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.30.2.tgz#e3dba172457aadd4d02e2510bea3dca1e7e673de"
-  integrity sha512-ioJnAFTyq2BoNL6BECXx6ZWyLY3yu7ZrmT2T4PSFhef8MQeeflL4lbdom3tv3J4R4YQO0bY4vV5yGlxgQtQfBw==
+gatsby@^2.30.3:
+  version "2.30.3"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.30.3.tgz#1877682760533ff1ec802c9a7d9695ac0958139f"
+  integrity sha512-xoyKDND/LKVpxmoURFUdis48dwa/MyLm8XGmHVx3SssYUGMO+YhH+5zeVxUhf9TVYccCvaa5px39X/lF+TiXFg==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/core" "^7.12.3"
