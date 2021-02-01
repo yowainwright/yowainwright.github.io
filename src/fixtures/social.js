@@ -12,12 +12,6 @@ export const socialItems = [
     small: true,
   },
   {
-    alias: 'npm',
-    name: 'NPMJS',
-    path: 'https://www.npmjs.com/~yowainwright',
-    small: false,
-  },
-  {
     alias: 'instagram',
     name: 'Instragram',
     path: 'https://instagram.com/yowainwright',
@@ -27,12 +21,6 @@ export const socialItems = [
     alias: 'linkedin',
     name: 'LinkedIn',
     path: 'https://www.linkedin.com/in/jeffrywainwright/',
-    small: true,
-  },
-  {
-    alias: 'rss',
-    name: 'RSS',
-    path: '/rss.xml',
     small: true,
   },
 ]

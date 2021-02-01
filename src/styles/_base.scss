@@ -49,7 +49,7 @@ h3 {
 
 h1 {
   color: #282094;
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin: 0;
   margin-bottom: 1rem;
 
@@ -66,7 +66,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 
   @include media-query($width-small) {
     font-size: 2.5rem;
@@ -132,6 +132,16 @@ blockquote {
     font-style: italic;
     line-height: 1.7;
     margin: 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    &:before {
+      color: #282094;
+      content: '“';
+      font-size: 4rem;
+      position: absolute;
+      top: -2rem;
+      left: -1rem;
+    }
 
     @include media-query($width-small) {
       line-height: 1.9;
@@ -270,12 +280,12 @@ hr {
 }
 
 code {
-  border: 1px solid lightgray;
-  background-color: $color-grey-lightest;
-  color: mediumvioletred;
-  font-size: 0.8rem;
-  padding: 0.075rem 0;
-  text-shadow: 1px 1px white;
+  border: 1px solid #d3d3d3;
+  // background-color: $color-grey-lightest !important;
+  color: mediumvioletred !important;
+  font-size: 1.1rem !important;
+  padding: 0.075rem 0 !important;
+  text-shadow: 1px 1px white !important;
 
   pre & {
     background-color: initial;
