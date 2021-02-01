@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-export const Hamburger = ({ icon = '☰' }) => <button className='nav-button nav-button--hamburger'>{icon}</button>
-
 export const NavList = ({ componentName, navItems }) => (
   <ol className={`${componentName}__items`}>
     {navItems.map(({ alias, name, path }, i) => {
@@ -27,7 +25,6 @@ export const Header = ({
     },
     {
       alias: 'archive',
-      inApp: true,
       name: 'Archive',
       path: '/archive/',
     },
