@@ -1,5 +1,4 @@
 .social-nav {
-  background: #f7e7f6;
   border-top:4px solid #3b7dea;
 
   a {
@@ -23,10 +22,6 @@
     @include media-query($width-medium) {
       max-width: calc(100% - 4rem);
     }
-  }
-
-  .social-footer & {
-    display: none;
   }
 
   &__item {
