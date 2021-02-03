@@ -8406,10 +8406,10 @@ gatsby-cli@2.18.0, gatsby-cli@^2.17.1:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^2.1.0"
 
-gatsby-codemods@1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-1.8.0.tgz#2fe10da837a2a2a8dd0496df9c6a8b12d1cff318"
-  integrity sha512-Bshg9x9rq+zB6lKI52QunM26ZUPxmHJMIHKCaOXW+MxAIchJxsV6IIddgaTLX5YTomc22Kh1gtj51gCMXRl9Yw==
+gatsby-codemods@1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-1.10.0.tgz#150df1bf09ceccd765a34f49fb54b2ee25af8855"
+  integrity sha512-Xl+1tiED4csl7NwQDsRbtE3k752BV3dMIBAaH1ABj7Ss4Tv709W4C+eR8TXAgdX6pvxOqgd40Y/T5lKwKsBiHw==
   dependencies:
     "@babel/core" "^7.12.3"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
@@ -8715,10 +8715,10 @@ gatsby-remark-prismjs@3.12.0:
     parse-numeric-range "^0.0.2"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-responsive-iframe@2.9.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-2.9.0.tgz#496bcfed343200297da8e06236f03952e1d3b57f"
-  integrity sha512-okzvQ+r3JfqcW2vKc2lx1sRCCmv6SYOQ+vEB/8WO5BO46botTRJlWHn1feCg1wQXljTqiM1THfALVb2ORFS5Pw==
+gatsby-remark-responsive-iframe@2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-2.11.0.tgz#c5b68f06324138a31f85fdb5da5503ab812b5446"
+  integrity sha512-qqrYfUb4+9VhndBeEaKrhiyyKIReAK4BHL3/8ZCtFDem5ZQQd5pUdgYhExRLcoGxzwJrqVxI6+dtT/RoXLqC/g==
   dependencies:
     "@babel/runtime" "^7.12.5"
     cheerio "^1.0.0-rc.3"
