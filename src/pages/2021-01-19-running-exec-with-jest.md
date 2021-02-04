@@ -19,7 +19,7 @@ This post is a quick summary of running [Node](https://nodejs.org/en/) [script e
 
 When writing tests for a Command Line Interface ([CLI](https://en.wikipedia.org/wiki/Command-line_interface)), I googled for a clear path to writing CLI test in Jest and didn't find much! To some writing CLI tests may be obvious and therefore no pattern needs to be reviewed or copied. Good for you! However, for me at least, I like to be able to read about a common pattern that works and copy that pattern. This makes code and converations about code easier! This sentitment is turning into a whole other can-of-worms. So how about some code, shall we? That **is** why you're here, I assume. 
 
-#### A sample test to copy
+## A sample test to copy
 
 ```typescript
 import fs from 'fs'
@@ -59,9 +59,11 @@ Hopefully this summary supports you in getting started writing script execution 
 
 In the summary below, how I setup a CLI to be written in TypeScript and tested using Jest is described.
 
-### Installation
+## Installation
 
 First install the necessary dependencies. For my project, I'm using [Sade](https://github.com/lukeed/sade) by [Luke Edwards](https://github.com/lukeed) for my CLI. 
+
+## Install Commands
 
 ```sh
 # install a new node version, node 14+ hopefully
@@ -73,14 +75,13 @@ yarn add sade -S
 yarn add ts-node typescript jest ts-jest @types/node @types/jest @types/sade -D
 ```
 
-### Configuration setup
+## Configuration setup
 
 The configurations below a generalized for clarity (hopefully)!
 
+## Package.json
+
 ```json
-/** 
-  * package.json key properties
-  */
 "bin": {
 
   "<someScript>": "./dist/index.js"
@@ -117,10 +118,9 @@ The configurations below a generalized for clarity (hopefully)!
 }
 ```
 
+## Tsconfig.json
+
 ```json
-/** 
-  * tsconfig.json key properties
-  */
 {
   "compilerOptions": {
     "allowJs": false,
