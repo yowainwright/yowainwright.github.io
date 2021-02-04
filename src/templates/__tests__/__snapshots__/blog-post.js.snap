@@ -31,16 +31,6 @@ exports[`BlogPost component renders correctly 1`] = `
         </a>
       </li>
       <li
-        className="social-list__item social-list__item--hidden"
-      >
-        <a
-          className="social-list__link"
-          href="https://www.npmjs.com/~yowainwright"
-        >
-          NPMJS
-        </a>
-      </li>
-      <li
         className="social-list__item social-list__item--showing"
       >
         <a
@@ -58,16 +48,6 @@ exports[`BlogPost component renders correctly 1`] = `
           href="https://www.linkedin.com/in/jeffrywainwright/"
         >
           LinkedIn
-        </a>
-      </li>
-      <li
-        className="social-list__item social-list__item--showing"
-      >
-        <a
-          className="social-list__link"
-          href="/rss.xml"
-        >
-          RSS
         </a>
       </li>
     </ul>
