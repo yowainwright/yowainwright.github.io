@@ -74,7 +74,7 @@
     "react-responsive-grid": "0.3.4",
     "react-test-renderer": "16.14.0",
     "regenerator-runtime": "0.13.7",
-    "stylelint": "13.9.0",
+    "stylelint": "13.10.0",
     "stylelint-config-dollarshaveclub": "8.0.0",
     "typescript": "4.1.5",
     "write-good": "1.0.6"
