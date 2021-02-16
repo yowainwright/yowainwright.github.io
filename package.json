@@ -57,7 +57,7 @@
     "babel-plugin-macros": "3.0.1",
     "commitizen": "4.2.3",
     "conventional-changelog-cli": "2.1.1",
-    "eslint": "^7.18.0",
+    "eslint": "^7.20.0",
     "gatsby-cli": "2.19.1",
     "gatsby-plugin-feed": "2.13.0",
     "gh-pages": "3.0.0",
