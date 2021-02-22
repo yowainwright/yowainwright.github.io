@@ -7,7 +7,7 @@
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
   },
   "dependencies": {
-    "@babel/core": "^7.12.16",
+    "@babel/core": "^7.12.17",
     "core-js": "^3.9.0",
     "gatsby": "^2.32.3",
     "gatsby-codemods": "1.10.0",
