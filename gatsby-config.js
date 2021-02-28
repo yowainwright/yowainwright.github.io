@@ -90,7 +90,5 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-feed',
-    'gatsby-plugin-typescript',
   ],
 }
