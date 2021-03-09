@@ -37,7 +37,7 @@
     "react-typography": "0.16.19",
     "styled-components": "5.2.1",
     "typography": "0.16.19",
-    "webpack": "5.24.0"
+    "webpack": "5.24.4"
   },
   "devDependencies": {
     "@babel/helper-plugin-utils": "7.12.13",
