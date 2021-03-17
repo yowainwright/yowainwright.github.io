@@ -541,14 +541,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
 
-"@babel/plugin-syntax-jsx@^7.12.1":
-  version "7.12.1"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.12.1.tgz#9d9d357cc818aa7ae7935917c1257f67677a0926"
-  integrity sha512-1yRi7yAtB0ETgxdY9ti/p2TivUxJkTdhu/ZbF9MshVGqOx1TdB3b7xCXs49Fupgg50N45KcAsRP/ZqWjs9SRjg==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.10.4"
-
-"@babel/plugin-syntax-jsx@^7.12.13":
+"@babel/plugin-syntax-jsx@^7.12.1", "@babel/plugin-syntax-jsx@^7.12.13":
   version "7.12.13"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.12.13.tgz#044fb81ebad6698fe62c478875575bcbb9b70f15"
   integrity sha512-d4HM23Q1K7oq/SLNmG6mRt85l2csmQ0cHRaxRXjKW0YFdEXqlZ5kzFQKH5Uc3rDJECgu+yCRgPkG04Mm98R/1g==
@@ -8464,10 +8457,10 @@ gatsby-cli@^2.19.2:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^2.1.0"
 
-gatsby-codemods@1.10.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-1.10.0.tgz#150df1bf09ceccd765a34f49fb54b2ee25af8855"
-  integrity sha512-Xl+1tiED4csl7NwQDsRbtE3k752BV3dMIBAaH1ABj7Ss4Tv709W4C+eR8TXAgdX6pvxOqgd40Y/T5lKwKsBiHw==
+gatsby-codemods@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-2.1.0.tgz#7e0b380b317ee4f50a9bbebb0eb4f03fd9f09f4e"
+  integrity sha512-49/H/Kzy1XcMofaUoM0mgh4eiIVA2341kfEwf/B/1leyQmt6T83RZ5YVkz894KgdWUHQ0nUA9XytjxvXv2LyBg==
   dependencies:
     "@babel/core" "^7.12.3"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
@@ -8475,7 +8468,7 @@ gatsby-codemods@1.10.0:
     "@babel/plugin-syntax-typescript" "^7.12.1"
     "@babel/runtime" "^7.12.5"
     execa "^5.0.0"
-    graphql "^14.7.0"
+    graphql "^15.5.0"
     jscodeshift "^0.11.0"
     recast "^0.20.4"
 
@@ -9717,12 +9710,17 @@ graphql-type-json@^0.3.2:
   resolved "https://registry.yarnpkg.com/graphql-type-json/-/graphql-type-json-0.3.2.tgz#f53a851dbfe07bd1c8157d24150064baab41e115"
   integrity sha512-J+vjof74oMlCWXSvt0DOf2APEdZOCdubEvGDUAlqH//VBYcOYsGgRW7Xzorr44LvkjiuvecWc8fChxuZZbChtg==
 
-graphql@^14.6.0, graphql@^14.7.0:
+graphql@^14.6.0:
   version "14.7.0"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.7.0.tgz#7fa79a80a69be4a31c27dda824dc04dac2035a72"
   integrity sha512-l0xWZpoPKpppFzMfvVyFmp9vLN7w/ZZJPefUicMCepfJeQ8sMcztloGYY9DfjVPo6tIUDzU5Hw3MUbIjj9AVVA==
   dependencies:
     iterall "^1.2.2"
+
+graphql@^15.5.0:
+  version "15.5.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.5.0.tgz#39d19494dbe69d1ea719915b578bf920344a69d5"
+  integrity sha512-OmaM7y0kaK31NKG31q4YbD2beNYa6jBBKtMFT6gLYJljHLJr42IqJ8KX08u3Li/0ifzTU5HjmoOOrwa5BRLeDA==
 
 gray-matter@^4.0.2:
   version "4.0.2"
