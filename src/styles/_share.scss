@@ -1,8 +1,18 @@
-.share-list {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
+.share {
+  padding: 1rem 0;
+
+  &__nav {
+    border-top: 1px solid #000;
+  }
+
+  &__button,
+  &__link {
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 0.6rem;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
 
   &__button {
     background: 0;
@@ -13,33 +23,6 @@
     &:hover {
       cursor: pointer;
       text-decoration: underline;
-    }
-  }
-
-  &__button,
-  &__link {
-    font-family: sans-serif;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-  }
-
-  &--blog-bottom,
-  &--blog-top {
-    .share-list__button,
-    .share-list__link {
-      padding: 1rem;
-    }
-  }
-
-  &--blog-bottom {
-    border-top: 1px solid $color-grey-lightest;
-    margin: 2rem auto 0;
-    max-width: calc(100% - 4rem);
-    @include media-query($width-medium) {
-      max-width: 100%;
-    }
-    .post--article {
-      border-bottom: 1px solid $color-grey-lightest;
     }
   }
 }

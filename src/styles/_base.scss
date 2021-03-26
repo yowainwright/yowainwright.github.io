@@ -10,16 +10,6 @@ body {
   text-size-adjust: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-family-headline;
-  font-weight: 900;
-}
-
 h2,
 ul,
 ol {
@@ -38,17 +28,10 @@ ol {
 h1,
 h2,
 h3 {
-  line-height: 1.25;
-
-  .post__header &,
-  .content & {
-    color: #282094;
-    text-align: center;
-  }
+  line-height: 1.1;
 }
 
 h1 {
-  color: #282094;
   font-size: 2rem;
   margin: 0;
   margin-bottom: 1rem;
@@ -61,7 +44,6 @@ h1 {
 
   @include media-query($width-medium) {
     font-size: 5rem;
-    max-width: 60rem;
   }
 }
 
@@ -89,15 +71,12 @@ h3 {
 
 p,
 li {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 300;
+  letter-spacing: 0.025rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
-
-  @include media-query($width-small) {
-    font-size: 1.5rem;
-  }
 }
 
 li {
@@ -106,7 +85,7 @@ li {
 }
 
 p {
-  line-height: 1.75;
+  line-height: 1.8;
 
   li & {
     line-height: 1;
@@ -135,7 +114,7 @@ blockquote {
     padding-left: 1.5rem;
     position: relative;
     &:before {
-      color: #282094;
+      color: #000;
       content: '“';
       font-size: 4rem;
       position: absolute;
@@ -182,93 +161,13 @@ iframe {
 }
 
 time {
-  color: #282094;
   display: block;
-  font-family: sans-serif;
   font-size: 0.6rem;
   font-weight: bold;
-  letter-spacing: 0.2rem;
-  margin: 1rem 0;
+  letter-spacing: 0.15rem;
+  margin-bottom: 1rem;
   position: relative;
-
-  @include media-query($width-small) {
-    font-size: 0.7rem;
-    margin: 2rem 0;
-  }
-
-  &.post__time {
-    text-align: center;
-
-    &:after,
-    &:before {
-      color: #282094;
-      content: '—';
-      display: inline-block;
-      font-size: 1rem;
-    }
-
-    &:after {
-      padding-left: 0.25rem;
-    }
-
-    &:before {
-      padding-right: 0.25rem;
-    }
-  }
-}
-
-// element max-widths
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-header,
-blockquote,
-iframe,
-code,
-table,
-.content h2,
-.content p,
-.content time,
-.content hr {
-  max-width: calc(100% - 4rem);
-
-  @include media-query($width-small) {
-    max-width: $width-reader;
-  }
-}
-
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-header,
-img,
-iframe,
-code,
-pre,
-blockquote,
-table,
-time {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-header {
-  margin-top: 2rem;
-
-  @include media-query($width-small) {
-    margin-top: 0;
-    max-width: none;
-  }
+  text-transform: uppercase;
 }
 
 hr {
@@ -315,25 +214,7 @@ main {
   }
 }
 
-.gatsby-highlight {
-  margin: 2rem auto;
-
-  pre[class*='language-'] {
-    border: 0;
-    box-shadow: none;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.5rem;
-    @include media-query($width-small) {
-      border-radius: 0.5rem;
-    }
-  }
-
-  @include media-query($width-small) {
-    max-width: 45rem;
-  }
-}
-
+// table styles, here and below
 table {
   border-collapse: collapse;
   display: block;
@@ -368,5 +249,25 @@ tr {
     tbody & {
       background-color: #f9f9f9;
     }
+  }
+}
+
+// code styles
+.gatsby-highlight {
+  margin: 2rem auto;
+
+  pre[class*='language-'] {
+    border: 0;
+    box-shadow: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem;
+    @include media-query($width-small) {
+      border-radius: 0.5rem;
+    }
+  }
+
+  @include media-query($width-small) {
+    max-width: 45rem;
   }
 }

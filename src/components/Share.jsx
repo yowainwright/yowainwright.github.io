@@ -9,30 +9,31 @@ export const copyToClipboard = (str) => {
   document.body.removeChild(el)
 }
 
-export const ShareList = ({ name = null, path, title, url = `https://jeffry.in${path}` }) => {
+export const Share = ({ name = null, path, title, url = `https://jeffry.in${path}` }) => {
   const cleanedTitle = encodeURIComponent(title)
   return (
-    <nav className={`share-list${name ? ` share-list--${name}` : ''}`}>
-      <button className='share-list__button' onClick={() => copyToClipboard(url)}>
+    <section className="share">
+      <h3 className="share__title">Share!</h3>
+    <nav className='share__nav'>
+      <button className='share__button' onClick={() => copyToClipboard(url)}>
         Copy Link
       </button>
-      <a className='share-list__link share-list__link--facebook' href={`https://www.facebook.com/sharer.php?u=${url}`}>
+      <a className='share__link share__link--facebook' href={`https://www.facebook.com/sharer.php?u=${url}`}>
         Facebook
       </a>
       <a
-        className='share-list__link share-list__link--twitter'
+        className='share__link share__link--twitter'
         href={`https://twitter.com/intent/tweet?url=${url}&text=${cleanedTitle}&via=@yowainwright`}
       >
         Twitter
       </a>
       <a
-        className='share-list__link share-list__link--reddit'
+        className='share__link share__link--reddit'
         href={`https://reddit.com/submit?url=${url}&title=${cleanedTitle}`}
       >
         Reddit
       </a>
     </nav>
+    </section>
   )
 }
-
-export default ShareList
