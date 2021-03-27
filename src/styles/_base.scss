@@ -279,6 +279,10 @@ tr {
     }
   }
 
+  &--aside {
+    margin-bottom: 2rem;
+  }
+
   &--squiggles {
     height: 2rem;
     overflow: hidden;
@@ -303,7 +307,7 @@ tr {
     }
 
     &:after {
-      background-position: 0px -1.2rem;
+      background-position: 0 -1.2rem;
       left: -0.95rem;
       top: 1.2rem;
       width: 110%;
