@@ -26,6 +26,9 @@ export default function BlogIndex({
           <meta name='twitter:url' property='og:url' content='https://jeffry.in' />
           <meta name='twitter:title' property='og:title' content={title} />
         </Helmet>
+         <section className="intro">
+           <h1 className='intro__title'>I used to stand for something but now it is just because someone stole my chair. <span className='intro__pictogram'><strong></strong></span></h1>
+         </section>
         <div className='posts--basic'>
           <PostsRow posts={data.allMarkdownRemark.edges} />
         </div>

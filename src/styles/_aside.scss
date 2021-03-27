@@ -1,0 +1,69 @@
+.aside {
+  &__header {
+    padding: 1rem 2.5rem 0;
+  }
+
+  &__meta {
+    border: 4px solid #000;
+    border-radius: 2rem;
+    max-width: calc(100% - 2rem);
+    margin: 4rem auto 1rem;
+
+    @include media-query($width-small) {
+      margin: 0;
+      max-width: $width-reader + 6;
+    }
+  }
+
+  &__title {
+    color: #000;
+    font-size: 1.5rem;
+    max-width: calc(100% - 2rem);
+    @include media-query($width-small) {
+      max-width: none;
+      font-size: 2rem;
+    }
+  }
+
+  &__content {
+    padding: 1rem;
+    @include media-query($width-small) {
+      padding: 0;
+    }
+  }
+
+  &__line {
+    border: 0;
+    &--squiggles {
+      height: 2rem;
+      overflow: hidden;
+      margin: 0 0 2rem 0;
+      position: relative;
+
+      &:after,
+      &:before {
+        background: radial-gradient(
+          1rem,
+          transparent,
+          transparent 0.25rem,
+          black 0.25rem,
+          black 0.625rem,
+          transparent 0.6875rem
+        );
+        background-size: 1.9rem 2.5rem;
+        content: ' ';
+        height: 1.2rem;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+
+      &:after {
+        background-position: 0px -1.2rem;
+        left: -0.95rem;
+        top: 1.2rem;
+        width: 110%;
+      }
+    }
+  }
+}

@@ -5,5 +5,4 @@ export const SocialFooter = () => (
   <nav className='social-footer'>
     <SocialList />
   </nav>
-);
-
+)

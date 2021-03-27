@@ -2,3 +2,8 @@ public/*
 coverage/*
 package.json
 *.md
+.eslintrc.js
+gatsby-config.js
+gatsby-node.js
+loadershim.js
+

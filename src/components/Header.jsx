@@ -16,7 +16,6 @@ export const NavList = ({ componentName, navItems }) => (
 )
 
 export const Header = ({
-  componentName = 'site-nav',
   navItems = [
     {
       alias: 'about',
@@ -31,22 +30,21 @@ export const Header = ({
   ],
 }) => {
   return (
-    <nav
-      id={componentName}
-      className={componentName}
-      role='navigation'
-      itemType='http://schema.org/SiteNavigationElement'
-    >
-      <div className={`${componentName}__container`}>
-        <Link to='/' className={`${componentName}__main-item-link`}>
-          <div className={`${componentName}__main-item`}>
-            <h3 className={`${componentName}__main-item-symbol`}>j</h3>
-            <h2 className={`${componentName}__main-item-title`}>Jeffry.in</h2>
-          </div>
-        </Link>
-        <NavList componentName={componentName} navItems={navItems} />
-      </div>
-    </nav>
+    <>
+      <nav
+        id='site-nav'
+        className='site-nav'
+        role='navigation'
+        itemType='http://schema.org/SiteNavigationElement'
+      >
+        <section className='site-nav__container'>
+          <Link to='/' className='logo'>
+            <h3 className='logo__title'>j</h3>
+          </Link>
+          <NavList componentName='site-nav' navItems={navItems} />
+        </section>
+      </nav>
+    </>
   )
 }
 

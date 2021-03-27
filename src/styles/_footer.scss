@@ -1,8 +1,8 @@
 .site-footer {
   &__wrapper {
+    align-items: start;
     column-gap: 3rem;
     display: grid;
-    font-family: 'diglu-Medium', sans-serif;
     grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
     max-width: calc(100% - 2rem);
@@ -16,14 +16,18 @@
     }
   }
 
+  &__address {
+    font-style: normal;
+  }
+
   &__col {
     display: grid;
 
     &--self {
       grid-column: span 2;
-      max-width: 50rem;
       @include media-query($width-medium) {
         grid-column: auto;
+        max-width: 50rem;
       }
     }
   }
@@ -32,9 +36,13 @@
     font-size: 1.8rem;
     margin: 1rem auto;
 
+    &--last,
+    &--self {
+      text-align: center;
+    }
+
     &--last {
       max-width: 100%;
-      text-align: center;
       width: calc(100% - 2rem);
     }
 
@@ -42,17 +50,22 @@
       font-size: 2.5rem;
       margin: 0;
       text-align: left;
-      &--last {
-        margin-top: 3rem;
+
+      &--last,
+      &--self {
         text-align: center;
       }
-      &--self {
-        text-align: right;
+
+      &--last {
+        margin: 3rem auto 0;
       }
     }
 
     @include media-query($width-medium) {
       margin-bottom: 3rem;
+      &--self {
+        text-align: right;
+      }
     }
   }
 
@@ -63,22 +76,17 @@
     padding: 0;
   }
 
-  &__items {
-    list-style: none;
-  }
-
-  &__item {
-    font-style: normal;
-  }
-
   &__image {
     border: 8px solid #000;
     filter: none;
+    margin: 1rem auto;
+    max-width: 15rem;
 
     @include media-query($width-medium) {
       float: right;
-      margin: 0;
-      margin-left: 1rem;
+      max-width: 10rem;
+      margin: 0 0 0 1rem;
+      width: 25%;
     }
   }
 
@@ -87,7 +95,7 @@
     font-size: 1.2rem;
     letter-spacing: 0.025rem;
     margin: 0 auto 2rem;
-    max-width: 20rem;
+    max-width: 70%;
     padding: 0;
     text-align: center;
     width: 100%;
@@ -100,9 +108,6 @@
   &__content {
     margin: 0;
     padding: 0;
-  }
-
-  &__date {
   }
 }
 

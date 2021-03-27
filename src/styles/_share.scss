@@ -1,17 +1,30 @@
 .share {
   padding: 1rem 0;
 
+  &__title {
+    background: white;
+    border: 4px solid black;
+    display: inline-block;
+    font-size: 0.6rem;
+    left: 2rem;
+    letter-spacing: 0.15rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    position: relative;
+    text-transform: uppercase;
+    top: 1rem;
+  }
+
   &__nav {
-    border-top: 1px solid #000;
+    border-top: 4px solid #000;
+    padding: 2rem;
   }
 
   &__button,
   &__link {
     display: inline-block;
-    font-family: sans-serif;
-    font-size: 0.6rem;
-    padding: 1rem;
-    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 1rem 1rem 0 0;
   }
 
   &__button {

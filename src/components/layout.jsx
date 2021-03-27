@@ -6,8 +6,6 @@ import { SocialNav } from './SocialNav'
 
 import '../styles/main.scss'
 
-import 'prismjs/themes/prism.css'
-
 export const Template = ({ children }) => (
   <div className='gatsby-container'>
     <Head />

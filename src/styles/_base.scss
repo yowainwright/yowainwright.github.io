@@ -99,12 +99,14 @@ a {
   &:hover {
     text-decoration-line: underline;
   }
+
+  &:visited {
+    color: rgb(9, 9, 241);
+  }
 }
 
 blockquote {
-  @include media-query($width-small) {
-    max-width: $width-reader;
-  }
+  margin: 0;
 
   p {
     font-family: sans-serif;
@@ -124,40 +126,28 @@ blockquote {
 
     @include media-query($width-small) {
       line-height: 1.9;
-      margin: 2rem 0;
+      margin: 3rem 0;
     }
   }
 }
 
 figure {
-  margin: 3rem auto;
+  margin: 3rem -1rem;
   @include media-query($width-small) {
-    margin: 5rem auto;
+    margin: 3rem 0;
   }
 }
 
 figcaption {
-  border-bottom: 1px solid $color-grey-lighter;
-  border-top: 1px solid $color-grey-lighter;
-  margin: 3rem auto;
   max-width: calc(100vw - 2rem);
-  padding: 1rem 0;
-  text-align: center;
-  width: $width-reader;
+  padding: 1rem 0 0;
 }
 
 img,
 iframe {
   display: block;
-  filter: grayscale(1);
-  margin-bottom: $spacing-unit;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: $spacing-unit;
-  max-width: calc(100% - 2rem);
-  @include media-query($width-small) {
-    max-width: 100%;
-  }
+  max-width: 100%;
+  width: 100%;
 }
 
 time {
@@ -174,23 +164,6 @@ hr {
   border: 0;
   border-top: 1px solid lightgray;
   margin-bottom: 2rem;
-}
-
-code {
-  border: 1px solid #d3d3d3;
-  // background-color: $color-grey-lightest !important;
-  color: mediumvioletred !important;
-  font-size: 1.1rem !important;
-  padding: 0.075rem 0 !important;
-  text-shadow: 1px 1px white !important;
-
-  pre & {
-    background-color: initial;
-    border: 0;
-    border-radius: 0;
-    line-height: 1.6;
-    text-shadow: none;
-  }
 }
 
 ul,
@@ -252,22 +225,56 @@ tr {
   }
 }
 
-// code styles
-.gatsby-highlight {
-  margin: 2rem auto;
-
-  pre[class*='language-'] {
-    border: 0;
-    box-shadow: none;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.5rem;
-    @include media-query($width-small) {
-      border-radius: 0.5rem;
-    }
-  }
+.intro {
+  margin: 3rem auto;
+  max-width: calc(100% - 2rem);
 
   @include media-query($width-small) {
-    max-width: 45rem;
+    max-width: 80%;
+  }
+
+  &__pictogram {
+    height: 2.5rem;
+    margin-left: 2rem;
+    position: relative;
+    width: 2.5rem;
+
+    @include media-query($width-medium) {
+      height: 5rem;
+      margin-left: 4rem;
+      width: 5rem;
+    }
+
+    strong {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      margin: -1.75rem 0 0 -1.75rem;
+      animation: spin 3s linear infinite;
+
+      @include media-query($width-medium) {
+        height: 5rem;
+        margin: -2.5rem 0 0 -2.5rem;
+        width: 5rem;
+      }
+    }
+  }
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }

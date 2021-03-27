@@ -65,7 +65,7 @@ First install the necessary dependencies. For my project, I'm using [Sade](https
 
 ## Install Commands
 
-```sh
+```bash
 # install a new node version, node 14+ hopefully
 nvm i 
 # yarn is expected, npm can be used, 
@@ -83,23 +83,11 @@ The configurations below a generalized for clarity (hopefully)!
 
 ```json
 "bin": {
-
   "<someScript>": "./dist/index.js"
 },
 "scripts": {
   "build": "tsc",
   "test": "jest --maxWorkers=4 --collectCoverage=true --testTimeout=10000"
-},
-"depenencies": {
-  "sade": "^1.7.4"
-},
-"devDependencies": {
-  "@types/jest": "^26.0.4",
-  "@types/node": "^14.14.11",
-  "@types/sade": "^1.7.2",
-  "jest": "^26.6.3",
-  "ts-jest": "^25.2.1",
-  "ts-node": "^9.1.1"
 },
 "jest": {
   "name": "<someScript>",
