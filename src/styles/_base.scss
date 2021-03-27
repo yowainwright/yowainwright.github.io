@@ -27,11 +27,13 @@ ol {
 
 h1,
 h2,
-h3 {
+h3,
+.intro__title {
   line-height: 1.1;
 }
 
-h1 {
+h1,
+.intro__title {
   font-size: 2rem;
   margin: 0;
   margin-bottom: 1rem;
@@ -225,41 +227,116 @@ tr {
   }
 }
 
+// @todo these styles are repeated and can be improved!
+
 .intro {
   margin: 3rem auto;
   max-width: calc(100% - 2rem);
 
   @include media-query($width-small) {
+    margin-top: 0;
     max-width: 80%;
+    &--archive-bottom {
+      margin-top: 3rem;
+    }
   }
 
-  &__pictogram {
-    height: 2.5rem;
-    margin-left: 2rem;
+  &__description {
+    font-size: 1.2rem;
+    font-weight: normal;
+    line-height: 1.8;
+    width: 70%;
+
+    @include media-query($width-medium) {
+      width: 50%;
+    }
+  }
+}
+
+.line {
+  border: 0;
+  margin-bottom: 0;
+
+  &--40 {
+    max-width: 40%;
+  }
+
+  &--intro {
+    margin-left: 0;
+  }
+
+  &--footer {
+    margin-left: 1rem;
+    @include media-query($width-small) {
+      margin-left: 10%;
+    }
+  }
+
+  &--squiggles {
+    height: 2rem;
+    overflow: hidden;
     position: relative;
-    width: 2.5rem;
+
+    &:after,
+    &:before {
+      background: radial-gradient(
+        1rem,
+        transparent,
+        transparent 0.25rem,
+        black 0.25rem,
+        black 0.625rem,
+        transparent 0.6875rem
+      );
+      background-size: 1.9rem 2.5rem;
+      content: ' ';
+      height: 1.2rem;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    &:after {
+      background-position: 0px -1.2rem;
+      left: -0.95rem;
+      top: 1.2rem;
+      width: 110%;
+    }
+  }
+}
+
+.character {
+  display: inline-block;
+  height: 2.5rem;
+  position: relative;
+  width: 2.5rem;
+
+  @include media-query($width-medium) {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3rem;
+    height: 3rem;
+    margin: -1.5rem 0 0 -1.5rem;
+    animation: spin 3s linear infinite;
 
     @include media-query($width-medium) {
       height: 5rem;
-      margin-left: 4rem;
+      margin: -2.5rem 0 0 -2.5rem;
       width: 5rem;
     }
+  }
 
-    strong {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 2.5rem;
-      height: 2.5rem;
-      margin: -1.75rem 0 0 -1.75rem;
-      animation: spin 3s linear infinite;
-
-      @include media-query($width-medium) {
-        height: 5rem;
-        margin: -2.5rem 0 0 -2.5rem;
-        width: 5rem;
-      }
-    }
+  &__item {
+    font-style: normal;
+    line-height: 1;
   }
 }
 @-moz-keyframes spin {

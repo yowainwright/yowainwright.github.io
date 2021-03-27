@@ -27,7 +27,9 @@ export default function BlogIndex({
           <meta name='twitter:title' property='og:title' content={title} />
         </Helmet>
          <section className="intro">
-           <h1 className='intro__title'>I used to stand for something but now it is just because someone stole my chair. <span className='intro__pictogram'><strong></strong></span></h1>
+           <p className='intro__title'>I used to stand for something but now it is just because someone stole my chair. <span className='character'><strong className='character__container'><i className='character__item'></i></strong></span></p>
+           <h1 className='intro__description'>Somehow, you`ve reached the webpage of Jeffry Wainwright, a software engineer living in Los Angeles.</h1>
+           <hr className="line line--squiggles line--40 line--intro"></hr>
          </section>
         <div className='posts--basic'>
           <PostsRow posts={data.allMarkdownRemark.edges} />

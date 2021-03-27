@@ -33,7 +33,7 @@ export default function BlogPostTemplate({
             <div className='aside__meta'>
               <header className='aside__header'>
                 <h3 className='aside__title'>{title}</h3>
-                <hr className='aside__line aside__line--squiggles' />
+                <hr className='line line--squiggles' />
                 <p className='aside__content'>{meta}</p>
               </header>
               <Share name='blog-bottom' path={path} title={title} />
