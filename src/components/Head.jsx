@@ -9,10 +9,6 @@ export const Header = ({
     <meta property='og:locale' content='en_US' />
     <link href='https://jeffry.in/assets/favicon.png' rel='icon' />
     <link href='https://yowainwright.imgix.net/apple-icon-120x120.png' rel='apple-touch-icon' itemProp='logo' />
-    <link
-      href='https://fonts.googleapis.com/css2?family=Gotu&family=Playfair+Display:wght@400;900&display=swap'
-      rel='stylesheet'
-    />
     <meta
       name='keywords'
       content='jeffry, wainwright, jeffry wainwright, code, programmer, artist, athlete, developer, engineer'

@@ -6,12 +6,10 @@
   &__meta {
     border: 4px solid #000;
     border-radius: 2rem;
-    max-width: calc(100% - 2rem);
     margin: 4rem auto 1rem;
 
     @include media-query($width-small) {
       margin: 0;
-      max-width: $width-reader + 6;
     }
   }
 
