@@ -101,31 +101,6 @@
     "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public && cp -rf ./assets ./public",
     "post-deploy": "git tag $npm_package_version && git push origin --tags"
   },
-  "jest": {
-    "transform": {
-      "^.+\\.jsx?$": "<rootDir>/jest-preprocess.js"
-    },
-    "testRegex": "/.*(__tests__\\/.*)|(.*(test|spec))\\.jsx?$",
-    "moduleNameMapper": {
-      ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
-      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
-    },
-    "testPathIgnorePatterns": [
-      "node_modules",
-      ".cache",
-      "__snapshots__"
-    ],
-    "transformIgnorePatterns": [
-      "node_modules/(?!(gatsby)/)"
-    ],
-    "globals": {
-      "__PATH_PREFIX__": ""
-    },
-    "testURL": "http://localhost",
-    "setupFiles": [
-      "<rootDir>/loadershim.js"
-    ]
-  },
   "config": {
     "commitizen": {
       "path": "node_modules/@commitlint/prompt"
@@ -155,9 +130,6 @@
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,md}": [
       "yarn lint"
-    ],
-    "*.{ts,tsx}": [
-      "jest"
     ]
   }
 }
