@@ -28,7 +28,7 @@ Engineering Manager / _February 2020-present_
 - We're currently working on internationalization and few other features I'm excited to announce! 
 - Our tech stack is Node on the backend and React on the frontend using TypeScript in both environments.
 
-<br>
+---
 
 ## Dollar Shave Club
 
@@ -40,6 +40,8 @@ Frontend Software Engineer / _March 2016-February 2020_
 - Architected a headless CMS for Dollar Shave Club's Original Content using JavaScript, Sass, Handlebars, CodeIgniter, and WordPress
 - While working at Dollar Shave Club, I was key in our Engineering Marketing Strategy writing several popular open-source projects: Reframe.js, Scrolldir, Shave, StickyBits, ES Check, Read more about my open source work below. 
 
+---
+
 ## Hollywood Reporter & Billboard
 
 Frontend Software Engineer / _May 2014-March 2016_
@@ -48,22 +50,23 @@ Frontend Software Engineer / _May 2014-March 2016_
 - Built a modular frontend system which worked consistently for both The Hollywood Reporter and Billboard using Backbone, Node, Sass and JavaScript leading to a 200% increase in developer productivity
 - The efforts above lead to a 2015 Webby Honoree for Billboard & The Hollywood Reporter Website Magazine, and the 2015 best website at the 8th annual National Arts & Entertainment Journalism Awards
 
-\* More work history available upon request or on [Linked In](). 
+\* More work history available upon request or on [LinkedIn](https://www.linkedin.com/in/jeffrywainwright/). 
 
 ---
 
 ### Education
 
-- **University of Wisconsin—Madison** / 1993-2003
-  - Bachelors of Science in Art
-- **Illinois Institute of Art** / 2006-2009
-  - Bachelors of Art in Visual Communication
-- **American University** / 2000
-  - Summer Program
-- **School of the Art Institute of Chicago** / 1998
-  - Pre-college programe
+University of Wisconsin—Madison / _1993-2003_
+- Bachelors of Science in Art
 
-<br>
+Illinois Institute of Art / _2006-2009_
+- Bachelors of Art in Visual Communication
+
+American University / _2000_
+- Summer Program
+
+School of the Art Institute of Chicago / _1998_
+- Pre-college programe
 
 ---
 
@@ -75,8 +78,6 @@ Frontend Software Engineer / _May 2014-March 2016_
 - **[Shave](https://github.com/dollarshaveclub/shave):** a minimal JavaScript Plugin for Truncated text
 - **[Reframe.js](https://github.com/dollarshaveclub/reframe.js):** a minimal JavaScript Plugin for reframing html elements so they're an intrinsic ratio of the original—great for embeds
 
-<br>
-
 ---
 
 ### Publications
@@ -85,16 +86,17 @@ Frontend Software Engineer / _May 2014-March 2016_
 - **[Code Review Etiquette](https://css-tricks.com/code-review-etiquette/)** - CSS Tricks
 - **[Continuous Integration: The What, Why and How](https://css-tricks.com/continuous-integration-the-what-why-and-how/)** - CSS Tricks
 
-<br>
-
 ---
 
 ### Talks and Presentations
 
 - **[Developer CI Benefits](https://github.com/yowainwright/developer-ci-benefits)** - [JS.LA](https://js.la/), July 26, 2018
 
-<br>
-
 ---
 
+### Resume
+
+[Word Doc](/files/jeffry-wainwright-resume-03-30-21.docx) | [PDF](/files/jeffry-wainwright-resume-03-30-21.pdf) | [TXT](/files/jeffry-wainwright-04-01-21.txt)
+
+---
 ## Fin! 
