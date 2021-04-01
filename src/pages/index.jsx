@@ -6,7 +6,7 @@ import { BasicPost } from '../components/post/basic'
 
 function PostsRow({ posts }) {
   return posts.map(({ node: { frontmatter: { date, meta, path, title } } }, i) =>
-    !(i > 7) && !['/404/', '/about', '/about/', '/styleguide/'].includes(path) ? (
+    !(i > 7) && !['/404/', '/about', '/about/', '/styleguide/', '/resume', '/resume/'].includes(path) ? (
       <BasicPost key={i} date={date} description={meta} path={path} title={title} />
     ) : null,
   )
