@@ -15,7 +15,7 @@
   @include media-query($width-small) {
     border-bottom-width: 0;
     height: 5rem;
-    padding: 5rem 0;
+    margin: 3rem 0 5rem;
     position: relative;
   }
 
@@ -44,7 +44,7 @@
     }
 
     @include media-query($width-medium) {
-      margin: 0 auto 0 2%;
+      margin: 0 5%;
     }
 
     @include media-query($width-large) {
@@ -66,6 +66,11 @@
     @include media-query($width-small) {
       border-right: 4px solid #000;
       height: 4rem;
+    }
+    &--resume {
+      @include media-query($width-medium) {
+        display: none;
+      }
     }
   }
 

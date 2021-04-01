@@ -102,7 +102,7 @@ You need to learn about [functional programming](http://www.cs.utah.edu/~germain
 
 #### The comment below provides a comment then a pseudo code suggestion
 
-```javascipt
+```javascript
 /* 
   return early like this 🏁
 */

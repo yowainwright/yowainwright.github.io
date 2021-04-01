@@ -386,6 +386,16 @@ tr {
     max-width: 80%;
   }
 
+  &--resume-link {
+    display: none;
+    @include media-query($width-medium) {
+      display: block;
+      margin-top: 2rem;
+      max-width: 90%;
+      height: 3.5rem;
+    }
+  }
+
   &--intro {
     margin-top: 2rem;
     @include media-query($width-small) {
@@ -418,5 +428,19 @@ tr {
       top: 3rem;
       width: 100%;
     }
+  }
+}
+
+.link {
+  &--resume {
+    background: #000;
+    border-radius: 0.5rem;
+    color: #fff;
+    display: block;
+    padding: 1rem 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 7rem;
   }
 }
