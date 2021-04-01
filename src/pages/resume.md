@@ -96,7 +96,7 @@ School of the Art Institute of Chicago / _1998_
 
 ### Resume
 
-[Word Doc](/files/jeffry-wainwright-resume-03-30-21.docx) | [PDF](/files/jeffry-wainwright-resume-03-30-21.pdf) | [TXT](/files/jeffry-wainwright-04-01-21.txt)
+[Word Doc](https://github.com/yowainwright/yowainwright.github.io/files/6246283/jeffry-wainwright-resume-03-30-21.docx) | [PDF](https://github.com/yowainwright/yowainwright.github.io/files/6246284/jeffry-wainwright-resume-03-30-21.pdf) | [TXT](https://github.com/yowainwright/yowainwright.github.io/files/6246282/jeffry-wainwright-04-01-21.txt)
 
 ---
 ## Fin! 
