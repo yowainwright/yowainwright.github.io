@@ -1,4 +1,6 @@
 .aside {
+  position: relative;
+
   &__header {
     padding: 1rem 2.5rem 0;
   }
@@ -10,6 +12,8 @@
 
     @include media-query($width-small) {
       margin: 0;
+      position: sticky;
+      top: 1rem;
     }
   }
 

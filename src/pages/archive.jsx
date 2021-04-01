@@ -26,7 +26,7 @@ export default function Archive({ data, title = 'Archive | Jeffry.in' }) {
         <div className='posts--squares'>
           {data.allMarkdownRemark.edges.map((post, i) => {
             const { date, path, title } = post.node.frontmatter
-            if (path === '/404/' || path === '/about' || path === '/about/') return null
+            if (['/404/', '/about', '/about/', '/styleguide/', '/resume', '/resume/'].includes(path)) return null
             return <SquarePost date={date} path={path} title={title} key={i} />
           })}
         </div>

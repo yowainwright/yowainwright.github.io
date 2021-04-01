@@ -322,8 +322,10 @@ tr {
   width: 2.5rem;
 
   @include media-query($width-medium) {
-    height: 5rem;
-    width: 5rem;
+    height: 4.2rem;
+    margin-left: -0.5rem;
+    top: 0.2rem;
+    width: 4.2rem;
   }
 
   &__container {
@@ -335,19 +337,27 @@ tr {
     left: 50%;
     width: 3rem;
     height: 3rem;
-    margin: -1.5rem 0 0 -1.5rem;
     animation: spin 3s linear infinite;
 
     @include media-query($width-medium) {
-      height: 5rem;
-      margin: -2.5rem 0 0 -2.5rem;
-      width: 5rem;
+      top: -0.15rem;
+      left: 0;
+      height: 4.4rem;
+      width: 4.2rem;
     }
   }
 
   &__item {
+    display: block;
     font-style: normal;
     line-height: 1;
+    position: absolute;
+    @include media-query($width-medium) {
+      font-size: 4rem;
+      height: 4.7rem;
+      left: -0.5rem;
+      width: 4.8rem;
+    }
   }
 }
 @-moz-keyframes spin {
