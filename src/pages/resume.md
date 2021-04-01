@@ -1,5 +1,5 @@
 ---
-title: 'Resume, the resume of Jeff Wainwright, a software engineer and surfer in Los Angeles'
+title: 'Resume: the resume of Jeff Wainwright, a software engineer and surfer in Los Angeles'
 date: '2021-03-31'
 layout: post
 readNext: /
