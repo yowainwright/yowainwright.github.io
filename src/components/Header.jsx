@@ -27,6 +27,11 @@ export const Header = ({
       name: 'Archive',
       path: '/archive/',
     },
+    {
+      alias: 'resume',
+      name: 'Resume',
+      path: '/resume/'
+    }
   ],
 }) => {
   return (
