@@ -56,17 +56,10 @@ Frontend Software Engineer / _May 2014-March 2016_
 
 ### Education
 
-University of Wisconsin—Madison / _1993-2003_
-- Bachelors of Science in Art
-
-Illinois Institute of Art / _2006-2009_
-- Bachelors of Art in Visual Communication
-
-American University / _2000_
-- Summer Program
-
-School of the Art Institute of Chicago / _1998_
-- Pre-college programe
+- University of Wisconsin—Madison / _1993-2003_, Bachelors of Science in Art
+- Illinois Institute of Art / _2006-2009_, Bachelors of Art in Visual Communication
+- American University / _2000_, Summer Program
+- School of the Art Institute of Chicago / _1998_, Pre-college program
 
 ---
 
