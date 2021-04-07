@@ -37,7 +37,7 @@
     "react-typography": "0.16.19",
     "styled-components": "5.2.3",
     "typography": "0.16.19",
-    "webpack": "5.26.0"
+    "webpack": "5.30.0"
   },
   "devDependencies": {
     "@babel/helper-builder-react-jsx-experimental": "^7.12.11",
@@ -48,7 +48,7 @@
     "@babel/plugin-transform-runtime": "7.13.10",
     "@babel/preset-env": "7.13.12",
     "@babel/preset-react": "7.13.13",
-    "@commitlint/cli": "12.0.1",
+    "@commitlint/cli": "12.1.1",
     "@commitlint/config-conventional": "12.1.1",
     "@commitlint/prompt": "12.0.1",
     "babel-core": "7.0.0-bridge.0",
