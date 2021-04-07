@@ -37,7 +37,7 @@
     "react-typography": "0.16.19",
     "styled-components": "5.2.3",
     "typography": "0.16.19",
-    "webpack": "5.26.0"
+    "webpack": "5.30.0"
   },
   "devDependencies": {
     "@babel/helper-builder-react-jsx-experimental": "^7.12.11",
