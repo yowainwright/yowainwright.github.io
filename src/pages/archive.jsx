@@ -19,7 +19,7 @@ export default function Archive({ data, title = 'Archive | Jeffry.in' }) {
           <meta name='twitter:title' property='og:title' content={`${title}`} />
         </Helmet>
          <section className="intro">
-           <p className='intro__title'>Welcome to Jeffry.in`s article archive. I`ve been written for a while so enjoy scrolling!</p>
+           <p className='intro__title'>Welcome to Jeffry.in`s article archive. I`ve been writing for a while so enjoy scrolling!</p>
            <h1 className='intro__description'>Jeffry.in`s article archives: writings, posts and pictures from years ago to now.</h1>
            <hr className="line line--squiggles line--40 line--intro"></hr>
          </section>
