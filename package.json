@@ -16,7 +16,7 @@
     "gatsby-plugin-manifest": "2.12.1",
     "gatsby-plugin-offline": "3.10.2",
     "gatsby-plugin-preact": "3.3.0",
-    "gatsby-plugin-prettier-eslint": "^1.0.4",
+    "gatsby-plugin-prettier-eslint": "^1.0.5",
     "gatsby-plugin-react-helmet": "3.10.0",
     "gatsby-plugin-sass": "2.8.0",
     "gatsby-plugin-sharp": "2.14.3",

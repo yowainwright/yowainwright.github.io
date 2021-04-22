@@ -8132,10 +8132,10 @@ gatsby-plugin-preact@3.3.0:
   dependencies:
     "@babel/runtime" "^7.9.2"
 
-gatsby-plugin-prettier-eslint@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-prettier-eslint/-/gatsby-plugin-prettier-eslint-1.0.4.tgz#01d3e42b34c2cdc5c6cf8c2c28b6eef609ba4a48"
-  integrity sha512-mCPQ0q++x5ffbcrg6lWZuhjDie/Tn67KPfeyYtoYk0K77SHI3z/QvBjwK2UojWA+uzbyKzS5WebLYd/wYq21/w==
+gatsby-plugin-prettier-eslint@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-prettier-eslint/-/gatsby-plugin-prettier-eslint-1.0.5.tgz#62910a3ec85e887bc166f9021b7692e47b93c90e"
+  integrity sha512-Y0lknRW0dhKULEZJye+1gFG7pqPXS0PamssHICGA6O3jHcj0y5dWG5kbbsT2BSh3vxqlotIulssshnf7MqSAdA==
   dependencies:
     "@babel/runtime" "^7.8.7"
     chokidar "^3.3.1"
