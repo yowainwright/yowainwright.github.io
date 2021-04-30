@@ -75,6 +75,7 @@
 
   &__image {
     border: 4px solid #000;
+    height: auto;
     width: calc(6rem - 8px);
   }
 
@@ -82,6 +83,7 @@
     border: 0;
     font-size: 1.2rem;
     letter-spacing: 0.025rem;
+    max-width: 25rem;
     padding: 0;
     width: 100%;
   }

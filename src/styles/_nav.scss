@@ -94,7 +94,10 @@
 
   &__link {
     font-size: 1.2rem;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+    @include media-query($width-medium) {
+      padding: 0 1rem;
+    }
   }
 }
 
