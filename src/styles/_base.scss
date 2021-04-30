@@ -406,12 +406,6 @@ tr {
     }
   }
 
-  &--posts {
-    @include media-query($width-small) {
-      margin: 3rem auto;
-    }
-  }
-
   &__title {
     color: white;
     background: #000;

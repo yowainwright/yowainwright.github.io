@@ -21,7 +21,6 @@ export default function Archive({ data, title = 'Archive | Jeffry.in' }) {
          <section className="intro">
            <p className='intro__title'>Welcome to Jeffry.in`s article archive. I`ve been writing for a while so enjoy scrolling!</p>
            <h1 className='intro__description'>Jeffry.in`s article archives: writings, posts and pictures from years ago to now.</h1>
-           <hr className="line line--squiggles line--40 line--intro"></hr>
          </section>
         <div className='posts--squares'>
           {data.allMarkdownRemark.edges.map((post, i) => {
@@ -30,10 +29,6 @@ export default function Archive({ data, title = 'Archive | Jeffry.in' }) {
             return <SquarePost date={date} path={path} title={title} key={i} />
           })}
         </div>
-         <section className="intro intro--archives-bottom">
-           <p className='intro__title'>Finito! </p>
-           <p className='intro__general'>That`s it for content! Hope you found what you were looking for.</p>
-         </section>
       </main>
     </Layout>
   )

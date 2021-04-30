@@ -5,7 +5,6 @@ import { SocialFooter } from './SocialFooter'
 
 export const Footer = () => (
   <footer className='site-footer' role='contentinfo' itemType='http://schema.org/WPFooter'>
-    <hr className="line line--squiggles line--40 line--footer"></hr>
     <section className='site-footer__wrapper site-footer__wrapper--main'>
       <article className='site-footer__col site-footer__col--contact'>
         <h3 className='site-footer__title'>
