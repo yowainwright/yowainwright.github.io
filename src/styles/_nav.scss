@@ -1,6 +1,7 @@
 .site-nav {
   background: #fff;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 4px solid #000;
+  box-shadow: 0 2px 5px 1px #d9d9d9;
   margin: 0 auto;
   padding: 1rem;
   position: sticky;
@@ -8,6 +9,7 @@
   z-index: 3;
 
   @include media-query($width-small) {
+    box-shadow: none;
     padding: 0;
     position: relative;
   }
@@ -23,33 +25,14 @@
     height: 10rem;
   }
 
-  &:after {
-    @include media-query($width-small) {
-      border-bottom: 4px solid #000;
-      content: ' ';
-      left: 0;
-      position: absolute;
-      width: 100%;
-      top: 50%;
-    }
-  }
-
   &__container {
     display: flex;
     max-width: calc(100vw - 2rem);
     position: relative;
 
     @include media-query($width-small) {
-      margin: 0 auto;
-    }
-
-    @include media-query($width-medium) {
-      margin: 0 5%;
-    }
-
-    @include media-query($width-large) {
-      margin: 0 auto;
       max-width: 90%;
+      margin: 0 auto;
     }
   }
 
@@ -64,13 +47,9 @@
     margin: 0;
     padding: 0;
     @include media-query($width-small) {
-      border-right: 4px solid #000;
-      height: 4rem;
-    }
-    &--resume {
-      @include media-query($width-medium) {
-        display: none;
-      }
+      border-bottom: 4px solid #000;
+      height: 2.5rem;
+      margin-left: 3rem;
     }
   }
 
@@ -84,10 +63,13 @@
     right: 0;
 
     @include media-query($width-small) {
+      left: 5rem;
+      right: auto;
       top: 0.5rem;
     }
 
     @include media-query($width-medium) {
+      left: 10rem;
       top: 3rem;
     }
   }
@@ -96,7 +78,7 @@
     font-size: 1.2rem;
     padding: 0 0.5rem;
     @include media-query($width-medium) {
-      padding: 0 1rem;
+      padding: 0;
     }
   }
 }

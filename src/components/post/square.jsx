@@ -3,14 +3,14 @@ import { Link } from 'gatsby'
 
 export const SquarePost = ({ title, date, path }) => {
   return (
-    <Link to={path} className='post--full-link post__link--square'>
       <article className='post--headline post'>
         <header>
+          <Link to={path} className='post--full-link post__link--square'>
           <h2 className='post__title--headline'>{title}</h2>
+          </Link>
           <time>{date}</time>
         </header>
       </article>
-    </Link>
   )
 }
 

@@ -91,5 +91,3 @@ Frontend Software Engineer / _May 2014-March 2016_
 
 [Word Doc](https://github.com/yowainwright/yowainwright.github.io/files/6246283/jeffry-wainwright-resume-03-30-21.docx) | [PDF](https://github.com/yowainwright/yowainwright.github.io/files/6246284/jeffry-wainwright-resume-03-30-21.pdf) | [TXT](https://github.com/yowainwright/yowainwright.github.io/files/6246282/jeffry-wainwright-04-01-21.txt)
 
----
-## Fin! 
