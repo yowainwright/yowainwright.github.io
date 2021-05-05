@@ -9,7 +9,7 @@
   "dependencies": {
     "@babel/core": "^7.13.14",
     "core-js": "^3.10.1",
-    "gatsby": "^2.32.12",
+    "gatsby": "^2.32.13",
     "gatsby-codemods": "2.4.0",
     "gatsby-link": "2.11.0",
     "gatsby-plugin-google-analytics": "3.4.0",
