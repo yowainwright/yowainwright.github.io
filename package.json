@@ -34,7 +34,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-dropzone": "^11.3.2",
-    "react-typography": "0.16.19",
+    "react-typography": "0.16.20",
     "styled-components": "5.2.3",
     "typography": "0.16.19",
     "webpack": "5.33.2"
