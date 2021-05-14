@@ -30,6 +30,7 @@
   }
 
   &--headline {
+    border-bottom: 1px solid #000;
     padding-bottom: 1rem;
     @include media-query($width-small) {
       padding-bottom: 0;
@@ -106,20 +107,15 @@
   }
 
   &--squares {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: calc(100% - 2rem);
-
     @include media-query($width-small) {
       display: grid;
       grid-column-gap: 2rem;
       grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
-      max-width: none;
     }
 
     @include media-query($width-medium) {
-      grid-template-columns: calc(33.3% - 1rem) calc(33.3% - 1rem) calc(33.3% - 1rem);
-      max-width: none;
+      grid-template-columns: calc(33.3% - 2rem) calc(33.3% - 2rem) calc(33.3% - 2rem);
+      grid-column-gap: 3rem;
     }
 
     h2 {

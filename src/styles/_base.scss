@@ -246,9 +246,12 @@ tr {
   }
 
   &__description {
+    background: #f9f9f9;
+    border-radius: 2rem;
     font-size: 1.2rem;
     font-weight: normal;
     line-height: 1.8;
+    padding: 1.5rem 2.5rem;
     width: 70%;
 
     @include media-query($width-medium) {
