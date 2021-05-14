@@ -30,8 +30,7 @@ export default function BlogIndex({
            <p className='intro__title'>I used to stand for something but now it is just because someone stole my chair. <span className='character'><strong className='character__container'><i className='character__item'></i></strong></span></p>
            <h1 className='intro__description'>Somehow, you`ve reached the webpage of Jeffry Wainwright, a software engineer living in Los Angeles.</h1>
          </section>
-
-        <section className=' section section--posts'>
+        <section className='section section--posts'>
           <h3 className='section__title'>Latest Articles</h3>
           <div className='posts--basic'>
           <PostsRow posts={data.allMarkdownRemark.edges} />
