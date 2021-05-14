@@ -2,8 +2,8 @@
   padding: 1rem 0;
 
   &__title {
-    background: white;
-    border: 4px solid black;
+    background: #fdf862;
+    border: 1px solid #000;
     display: inline-block;
     font-size: 0.6rem;
     left: 2rem;
@@ -30,7 +30,8 @@
   &__button {
     background: 0;
     border: 0;
-    color: #0000ff;
+    color: #000;
+    font-family: $font-family-default;
     margin: 0;
 
     &:hover {

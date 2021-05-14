@@ -3,9 +3,17 @@
     display: grid;
 
     @include media-query($width-medium) {
-      column-gap: 2rem;
-      grid-template-columns: calc(65% - 1rem) calc(35% - 1rem);
+      column-gap: 4rem;
+      grid-template-columns: calc(65% - 2rem) calc(35% - 2rem);
     }
+  }
+
+  &__header {
+    padding-bottom: 2rem;
+  }
+
+  &__time {
+    margin-bottom: 0;
   }
 
   &__article {
@@ -106,7 +114,12 @@
       display: grid;
       grid-column-gap: 2rem;
       grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
-      max-width: 80%;
+      max-width: none;
+    }
+
+    @include media-query($width-medium) {
+      grid-template-columns: calc(33.3% - 1rem) calc(33.3% - 1rem) calc(33.3% - 1rem);
+      max-width: none;
     }
 
     h2 {

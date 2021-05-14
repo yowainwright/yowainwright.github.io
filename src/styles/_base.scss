@@ -97,13 +97,14 @@ p {
 }
 
 a {
+  color: #000;
   text-decoration: none;
   &:hover {
     text-decoration-line: underline;
   }
 
   &:visited {
-    color: rgb(9, 9, 241);
+    color: #000;
   }
 }
 
