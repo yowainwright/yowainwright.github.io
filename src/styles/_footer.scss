@@ -2,20 +2,31 @@
   padding-top: 4rem;
   &__wrapper {
     border-top: 4px solid #000;
+    display: grid;
     margin: 0 auto;
     max-width: calc(100% - 2rem);
-    padding: 4rem 0;
 
     @include media-query($width-small) {
-      align-items: start;
-      column-gap: 3rem;
-      display: grid;
-      grid-template-columns: auto 10rem auto;
       max-width: 80%;
     }
 
-    @include media-query($width-small) {
-      grid-template-columns: 17rem 10rem auto;
+    &--main {
+      padding: 4rem 0;
+      column-gap: 1rem;
+
+      @include media-query($width-small) {
+        align-items: start;
+        column-gap: 3rem;
+        grid-template-columns: auto 10rem auto;
+      }
+
+      @include media-query($width-small) {
+        grid-template-columns: 17rem 10rem auto;
+      }
+    }
+
+    &--last {
+      grid-template-columns: 15.5rem auto;
     }
   }
 
@@ -32,9 +43,12 @@
     }
 
     &--self {
+      border-top: 1px solid #000;
       grid-column: span 2;
       padding-bottom: 0;
+      padding-top: 2rem;
       @include media-query($width-medium) {
+        border-top: none;
         grid-column: auto;
         padding-top: 0;
       }
@@ -51,14 +65,10 @@
     }
 
     &--last {
-      border-top: 4px solid #000;
-      padding: 1rem 0;
-      margin: 0 auto;
-      max-width: calc(100% - 2rem);
-      @include media-query($width-small) {
-        max-width: 80%;
-        padding-top: 3rem;
-      }
+      background-color: #f9f9f9;
+      border-radius: 2rem 2rem 0 0;
+      padding: 1.5rem 2.5rem;
+      margin: 4rem 0 0;
     }
   }
 

@@ -47,9 +47,11 @@ export const Footer = () => (
         </figure>
       </article>
     </section>
+    <section className='site-footer__wrapper site-footer__wrapper--last'>
     <h3 className='site-footer__title site-footer__title--last'>
       <Link className='site-footer__link' to='/'>jeffry.in</Link>, {new Date().getFullYear()}{' '}<span className='site-footer__symbol site-footer__symbol--lightning'></span>
     </h3>
+    </section>
   </footer>
 )
 
