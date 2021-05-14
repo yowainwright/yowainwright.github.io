@@ -47,8 +47,6 @@
     margin: 0;
     padding: 0;
     @include media-query($width-small) {
-      border-bottom: 4px solid #000;
-      height: 2.5rem;
       margin-left: 3rem;
     }
   }
