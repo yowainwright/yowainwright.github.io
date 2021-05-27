@@ -660,14 +660,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.12.13"
 
-"@babel/plugin-syntax-typescript@^7.12.1":
-  version "7.12.1"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.12.1.tgz#460ba9d77077653803c3dd2e673f76d66b4029e5"
-  integrity sha512-UZNEcCY+4Dp9yYRCAHrHDU+9ZXLYaY9MgBXSRLkB9WjYFRR6quJBumfVrEkUxrePPBwFcpWfNKXqVRQQtm7mMA==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.10.4"
-
-"@babel/plugin-syntax-typescript@^7.7.2":
+"@babel/plugin-syntax-typescript@^7.12.1", "@babel/plugin-syntax-typescript@^7.7.2":
   version "7.12.13"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.12.13.tgz#9dff111ca64154cef0f4dc52cf843d9f12ce4474"
   integrity sha512-cHP3u1JiUiG2LFDKbXnwVad81GvfyIOmCD6HIEId6ojrY0Drfy2q1jw7BwN7dE84+kTnBjLkXoL3IEy/3JPu2w==
@@ -8208,10 +8201,10 @@ gatsby-cli@^2.19.3:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^2.1.0"
 
-gatsby-codemods@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-2.4.0.tgz#44ef6d031ff690e645ea50f43eb6bee3041590bf"
-  integrity sha512-sEHnsaB1Pn+YZ7EJisxTHG3cPgU6IhMKFTzVH5ARPvraIQYC5dsNLe+IGdA8Ubly6If3us2l1cqE9oazASborg==
+gatsby-codemods@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-2.6.0.tgz#32059bc52135ac4529003990353c46543497c709"
+  integrity sha512-hPulEk1ISGeSo3CY17ax+pnHdkL8AYmjuci50jbulRp7Job4KZYSqSPfsGUaTVmEDpHTY16f4VOGEO+afl5gWQ==
   dependencies:
     "@babel/core" "^7.12.3"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
