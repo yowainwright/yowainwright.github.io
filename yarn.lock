@@ -8346,10 +8346,10 @@ gatsby-plugin-preact@3.3.0:
   dependencies:
     "@babel/runtime" "^7.9.2"
 
-gatsby-plugin-prettier-eslint@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-prettier-eslint/-/gatsby-plugin-prettier-eslint-1.0.4.tgz#01d3e42b34c2cdc5c6cf8c2c28b6eef609ba4a48"
-  integrity sha512-mCPQ0q++x5ffbcrg6lWZuhjDie/Tn67KPfeyYtoYk0K77SHI3z/QvBjwK2UojWA+uzbyKzS5WebLYd/wYq21/w==
+gatsby-plugin-prettier-eslint@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-prettier-eslint/-/gatsby-plugin-prettier-eslint-1.0.6.tgz#5672e5371cb3ceae089d152e665364d9fabb8977"
+  integrity sha512-M9FCWizeGdB1U4Jcas8rvIa/jwKiJGK84C6hnRr6FKCsM66HlCL7qfverhi1GNISmuCToxCuvjbkKypzRkLuHA==
   dependencies:
     "@babel/runtime" "^7.8.7"
     chokidar "^3.3.1"
@@ -14346,12 +14346,7 @@ physical-cpu-count@^2.0.0:
   resolved "https://registry.yarnpkg.com/physical-cpu-count/-/physical-cpu-count-2.0.0.tgz#18de2f97e4bf7a9551ad7511942b5496f7aba660"
   integrity sha1-GN4vl+S/epVRrXURlCtUlverpmA=
 
-picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.2.tgz#21f333e9b6b8eaff02468f5146ea406d345f4dad"
-  integrity sha512-q0M/9eZHzmr0AulXyPwNfZjtwZ/RBZlbN3K3CErVrk50T2ASYI7Bye0EvekFY3IP1Nt2DHu0re+V2ZHIpMkuWg==
-
-picomatch@^2.2.3:
+picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.2, picomatch@^2.2.3:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.3.tgz#465547f359ccc206d3c48e46a1bcb89bf7ee619d"
   integrity sha512-KpELjfwcCDUb9PeigTs2mBJzXUPzAuP2oPcA989He8Rte0+YUAjw1JVedDhuTKPkHjSYzMN3npC9luThGYEKdg==
