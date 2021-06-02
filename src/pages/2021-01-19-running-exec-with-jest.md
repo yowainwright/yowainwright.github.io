@@ -6,7 +6,7 @@ readNext: '/'
 path: '/jest-exec-test/'
 meta: This post is a quick summary of running node script execution tests with Jest.
 featured_image: null
-post_type: story
+post_type: technical
 categories:
   - code
   - typescript
