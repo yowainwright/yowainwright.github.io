@@ -17,7 +17,7 @@ This post is a quick summary of running [Node](https://nodejs.org/en/) [script e
 
 ## Why This Post Is Written
 
-When writing tests for a Command Line Interface ([CLI](https://en.wikipedia.org/wiki/Command-line_interface)), I googled for a clear path to writing CLI test in Jest and didn't find much! To some writing CLI tests may be obvious and therefore no pattern needs to be reviewed or copied. Good for you! However, for me at least, I like to be able to read about a common pattern that works and copy that pattern. This makes code and converations about code easier! This sentitment is turning into a whole other can-of-worms. So how about some code, shall we? That **is** why you're here, I assume. 
+When writing tests for a Command Line Interface ([CLI](https://en.wikipedia.org/wiki/Command-line_interface)), I googled for a clear path to writing CLI test in Jest and didn't find much! To some writing CLI tests may be obvious and therefore no pattern needs to be reviewed or copied. Good for you! However, for me at least, I like to be able to read about a common pattern that works and copy that pattern. This makes code and conversations about code easier! This sentiment is turning into a whole other can-of-worms. So how about some code, shall we? That **is** why you're here, I assume. 
 
 ## A sample test to copy
 
