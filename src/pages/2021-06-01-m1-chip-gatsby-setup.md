@@ -4,7 +4,7 @@ date: '2021-06-01'
 layout: post
 readNext: '/'
 path: '/m1-chip-gatsby-setup/'
-meta: .
+meta: A post providing context into setting up a M1 Mac for Gatsby development and 1 happy path to get up and running with Gatsby on a M1 Mac fast!
 featured_image: null
 post_type: technical
 categories:
