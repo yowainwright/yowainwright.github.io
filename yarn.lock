@@ -7870,12 +7870,12 @@ gatsby-plugin-feed@2.13.1:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
-gatsby-plugin-google-analytics@3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-3.6.0.tgz#5b4826044cc626eb56783ceec5e7eabe3ff8ee37"
-  integrity sha512-yd7MwPJNuGLFtZk+O1WZiHM8YKsIfAg7CLKW+nd5AikNQFO3aFI4h2irqQ9s3O2M1ZS0gQdB50jqwscpQLv6+g==
+gatsby-plugin-google-analytics@3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-3.7.0.tgz#4f52ddf88ae0bb759147b56d607f878c4d3ab8ac"
+  integrity sha512-dvw3t9pcCDnsQ6UaIY6VIigjG56qv0TCeoST2tNtgKfvxXGOhKiO0R34Sey8322BL6HlAeoStx62324pswoa/A==
   dependencies:
-    "@babel/runtime" "^7.12.5"
+    "@babel/runtime" "^7.14.0"
     minimatch "3.0.4"
 
 gatsby-plugin-manifest@2.12.1:
@@ -7934,12 +7934,12 @@ gatsby-plugin-prettier-eslint@^1.0.6:
     lodash.mergewith "^4.6.2"
     picomatch "^2.2.2"
 
-gatsby-plugin-react-helmet@4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-4.6.0.tgz#71d80e3916c34cf2acda4639813e08a54352b28f"
-  integrity sha512-+OR34N+H3vZcSN4e4dEyk6tR6NBBP8gINWztDw6/b3sXVJM0hfHRCpbBtgtJGclyjaxAdwbtfos1geKh3AvDHA==
+gatsby-plugin-react-helmet@4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-4.7.0.tgz#eff483612507a6d481415ba5af94e7e6bb5db89e"
+  integrity sha512-xZLijT/nDtkxi3Yv8TwptOXVWKCAS+xjdOAfkvzU/J/gbnavVWejiipxSS3+X8tmQXSMf+ARMSWWCcH0XVMXKw==
   dependencies:
-    "@babel/runtime" "^7.12.5"
+    "@babel/runtime" "^7.14.0"
 
 gatsby-plugin-sass@3.2.0:
   version "3.2.0"
