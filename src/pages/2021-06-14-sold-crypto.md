@@ -4,7 +4,7 @@ date: '2021-06-14'
 layout: post
 readNext: '/'
 path: '/sold-my-crypto/'
-meta: "TODO"
+meta: "In this article, I, Jeff Wainwright, explore my decision to sell my crypto currency."
 featured_image: null
 post_type: technical
 categories:
