@@ -38,7 +38,7 @@
     "sass": "1.35.1",
     "styled-components": "5.3.0",
     "typography": "0.16.21",
-    "webpack": "5.40.0"
+    "webpack": "5.41.0"
   },
   "devDependencies": {
     "@babel/helper-builder-react-jsx-experimental": "^7.12.11",
