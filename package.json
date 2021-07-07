@@ -10,7 +10,7 @@
     "@babel/core": "^7.14.6",
     "core-js": "^3.15.2",
     "gatsby": "^2.32.13",
-    "gatsby-codemods": "2.8.0",
+    "gatsby-codemods": "2.9.0",
     "gatsby-link": "2.11.0",
     "gatsby-plugin-google-analytics": "3.8.0",
     "gatsby-plugin-manifest": "2.12.1",
@@ -38,7 +38,7 @@
     "sass": "1.35.1",
     "styled-components": "5.3.0",
     "typography": "0.16.21",
-    "webpack": "5.42.1"
+    "webpack": "5.43.0"
   },
   "devDependencies": {
     "@babel/helper-builder-react-jsx-experimental": "^7.12.11",
