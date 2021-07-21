@@ -7304,16 +7304,16 @@ gatsby-cli@3.10.0, gatsby-cli@^3.9.0:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^2.1.0"
 
-gatsby-codemods@2.9.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-2.9.0.tgz#8ef5d44475442216b7f711f9c6e9424e23eee1dc"
-  integrity sha512-MikniAku/0qRyeO6SYlAUTf2L4IDJ6Hs4MAs8MXkzDVFErW8ViMiavhxKhoMUq/71nFBFG+WiOoxpQyI52P7hA==
+gatsby-codemods@2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-2.10.0.tgz#1d6530f91e71b85c78b2ab550c962a52dde91c98"
+  integrity sha512-jkDxeCpRHf6vSAY2jnIkPXdLGqLBTpQKBH4azE2KaFkm/L1et4kheELVnIeZvDqKt6l1N7riS6KsUDRePp1nJw==
   dependencies:
-    "@babel/core" "^7.14.0"
+    "@babel/core" "^7.14.6"
     "@babel/plugin-proposal-class-properties" "^7.14.0"
     "@babel/plugin-syntax-jsx" "^7.14.0"
     "@babel/plugin-syntax-typescript" "^7.14.0"
-    "@babel/runtime" "^7.14.0"
+    "@babel/runtime" "^7.14.6"
     execa "^5.1.1"
     graphql "^15.5.0"
     jscodeshift "^0.12.0"
