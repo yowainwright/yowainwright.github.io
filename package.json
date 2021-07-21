@@ -14,7 +14,7 @@
     "gatsby-link": "2.11.0",
     "gatsby-plugin-google-analytics": "3.10.0",
     "gatsby-plugin-manifest": "3.9.0",
-    "gatsby-plugin-offline": "4.9.0",
+    "gatsby-plugin-offline": "4.10.0",
     "gatsby-plugin-preact": "3.3.0",
     "gatsby-plugin-prettier-eslint": "^1.0.6",
     "gatsby-plugin-react-helmet": "4.9.0",
