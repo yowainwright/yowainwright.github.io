@@ -5,10 +5,18 @@ import Layout from '../components/layout'
 import { BasicPost } from '../components/post/basic'
 
 function PostsRow({ posts }) {
-  return posts.map(({ node: { frontmatter: { date, meta, path, title } } }, i) =>
-    !(i > 7) && !['/404/', '/about', '/about/', '/styleguide/', '/resume', '/resume/'].includes(path) ? (
-      <BasicPost key={i} date={date} description={meta} path={path} title={title} />
-    ) : null,
+  return posts.map(
+    (
+      {
+        node: {
+          frontmatter: { date, meta, path, title },
+        },
+      },
+      i,
+    ) =>
+      !(i > 7) && !['/404/', '/about', '/about/', '/styleguide/', '/resume', '/resume/'].includes(path) ? (
+        <BasicPost key={i} date={date} description={meta} path={path} title={title} />
+      ) : null,
   )
 }
 
@@ -26,14 +34,20 @@ export default function BlogIndex({
           <meta name='twitter:url' property='og:url' content='https://jeffry.in' />
           <meta name='twitter:title' property='og:title' content={title} />
         </Helmet>
-         <section className="section section--intro intro">
-           <p className='intro__title'>I used to stand for something but now it is just because someone stole my chair. <span className='character'><strong className='character__container'><i className='character__item'></i></strong></span></p>
-           <h1 className='intro__description'>Somehow, you`ve reached the webpage of Jeffry Wainwright, a software engineer living in Los Angeles.</h1>
-         </section>
+        <section className='section section--intro intro'>
+          <h1 className='intro__title'>
+            I used to stand for something but now it is just because someone stole my chair.{' '}
+            <span className='character'>
+              <strong className='character__container'>
+                <i className='character__item'></i>
+              </strong>
+            </span>
+          </h1>
+        </section>
         <section className='section section--posts'>
           <h3 className='section__title'>Latest Articles</h3>
           <div className='posts--basic'>
-          <PostsRow posts={data.allMarkdownRemark.edges} />
+            <PostsRow posts={data.allMarkdownRemark.edges} />
           </div>
         </section>
       </main>

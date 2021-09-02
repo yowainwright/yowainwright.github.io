@@ -18,12 +18,13 @@ export default function Archive({ data, title = 'Archive | Jeffry.in' }) {
           <meta name='twitter:url' property='og:url' content='https://jeffry.in/archive/' />
           <meta name='twitter:title' property='og:title' content={`${title}`} />
         </Helmet>
-        <section className="intro">
-          <p className='intro__title'>Welcome to Jeffry.in`s article archive. I`ve been writing for a while so enjoy scrolling!</p>
-          <h1 className='intro__description'>Jeffry.in`s article archives: writings, posts and pictures from years ago to now.</h1>
+        <section className='intro'>
+          <h1 className='intro__title'>
+            Jeffry.in article archive: I have been writing for a while so enjoy scrolling!
+          </h1>
         </section>
         <section className='section section--posts'>
-          <h3 className='section__title'>Latest Articles</h3>
+          <h3 className='section__title'>Article Archive</h3>
           <div className='posts--squares'>
             {data.allMarkdownRemark.edges.map((post, i) => {
               const { date, path, title } = post.node.frontmatter
