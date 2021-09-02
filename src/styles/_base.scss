@@ -172,7 +172,7 @@ time {
 
 hr {
   border: 0;
-  border-top: 1px solid lightgray;
+  border-top: 1px solid #000;
   margin-bottom: 2rem;
 }
 
@@ -188,7 +188,7 @@ main {
 }
 
 .header__description {
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #000;
   padding: 1.5rem 0;
 
   @include media-query($width-small) {
@@ -427,7 +427,7 @@ tr {
     font-family: sans-serif;
     font-size: 0.6rem;
     letter-spacing: 0.15rem;
-    margin: 3rem 0 2rem;
+    margin: 1rem 0;
     padding: 0.5rem;
     text-transform: uppercase;
 
@@ -436,7 +436,7 @@ tr {
       content: ' ';
       left: 0;
       position: absolute;
-      top: 3rem;
+      top: 1rem;
       width: 100%;
     }
   }

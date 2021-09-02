@@ -25,7 +25,7 @@ export default function BlogPostTemplate({
           <h1 className='post__title' itemProp='headeline'>
             {title}
           </h1>
-          {!['/about/', '/styleguide/'].includes(path) && <time className='post__time'>{date}</time>}
+          {!['/about/', '/styleguide/', '/resume/'].includes(path) && <time className='post__time'>{date}</time>}
         </header>
         <section className='post__section'>
           <div className='post__content' dangerouslySetInnerHTML={{ __html: html }} />
