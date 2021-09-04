@@ -7408,13 +7408,13 @@ gatsby-recipes@^0.24.0:
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
 
-gatsby-remark-copy-linked-files@4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-4.7.0.tgz#bc8bf2f071004c4d04cb3236f664ba1410b44e7b"
-  integrity sha512-khIrSFmOy8ZWL8VmVTPeTFnoqopRGWkDGSXGRBt3qb5+2xqD7FiYYaikNhMlM77UJp3JzX6lY/RZ5Hw9nevy3A==
+gatsby-remark-copy-linked-files@4.10.0:
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-4.10.0.tgz#a5bc6df9b092d8a14f74f0d88098f63f97828e51"
+  integrity sha512-NaMMExnjnebrRty9poDXu57cdxU13GMoR2OAASriFzw9xJuvqJug+kyUdBxuZ71AQ+LOnyXNJjFGXiz4RVwCQQ==
   dependencies:
-    "@babel/runtime" "^7.14.6"
-    cheerio "^1.0.0-rc.9"
+    "@babel/runtime" "^7.14.8"
+    cheerio "^1.0.0-rc.10"
     fs-extra "^8.1.0"
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
