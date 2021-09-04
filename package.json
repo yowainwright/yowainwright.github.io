@@ -10,7 +10,7 @@
     "@babel/core": "^7.14.8",
     "core-js": "^3.15.2",
     "gatsby": "^3.10.1",
-    "gatsby-codemods": "2.10.0",
+    "gatsby-codemods": "2.13.0",
     "gatsby-link": "2.11.0",
     "gatsby-plugin-google-analytics": "3.10.0",
     "gatsby-plugin-manifest": "3.10.0",
