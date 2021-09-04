@@ -4256,7 +4256,7 @@ cheerio-select@^1.5.0:
     domhandler "^4.2.0"
     domutils "^2.7.0"
 
-cheerio@^1.0.0-rc.3, cheerio@^1.0.0-rc.9:
+cheerio@^1.0.0-rc.10, cheerio@^1.0.0-rc.3, cheerio@^1.0.0-rc.9:
   version "1.0.0-rc.10"
   resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.10.tgz#2ba3dcdfcc26e7956fc1f440e61d51c643379f3e"
   integrity sha512-g0J0q/O6mW8z5zxQ3A8E8J1hUgp4SMOvEoW/x84OwyHKe/Zccz83PVT4y5Crcr530FV6NgmKI1qvGTKVl9XXVw==
@@ -7202,20 +7202,20 @@ gatsby-cli@3.13.0, gatsby-cli@^3.13.0:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^2.1.0"
 
-gatsby-codemods@2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-2.10.0.tgz#1d6530f91e71b85c78b2ab550c962a52dde91c98"
-  integrity sha512-jkDxeCpRHf6vSAY2jnIkPXdLGqLBTpQKBH4azE2KaFkm/L1et4kheELVnIeZvDqKt6l1N7riS6KsUDRePp1nJw==
+gatsby-codemods@2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-2.13.0.tgz#a4f2b205b9441896622e90cc1a0ac668d453b504"
+  integrity sha512-cFrDRca3WivZpcwAGz+oFHcXp88nZoMhZH1XmHCWynkqzRGEvNIjChJyMmyNHPxrfKcDqgY8Xey/4XKKi6dtEA==
   dependencies:
-    "@babel/core" "^7.14.6"
+    "@babel/core" "^7.14.8"
     "@babel/plugin-proposal-class-properties" "^7.14.0"
     "@babel/plugin-syntax-jsx" "^7.14.0"
     "@babel/plugin-syntax-typescript" "^7.14.0"
-    "@babel/runtime" "^7.14.6"
+    "@babel/runtime" "^7.14.8"
     execa "^5.1.1"
-    graphql "^15.5.0"
+    graphql "^15.5.1"
     jscodeshift "^0.12.0"
-    recast "^0.20.4"
+    recast "^0.20.5"
 
 gatsby-core-utils@^1.10.1:
   version "1.10.1"
@@ -7562,13 +7562,13 @@ gatsby-remark-prismjs@5.10.0:
     parse-numeric-range "^1.2.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-responsive-iframe@4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-4.7.0.tgz#16b11186219a8ec42dcf204beaee843fb3d71545"
-  integrity sha512-kGOnzXL2Ivx6lQbyUZlYjZgEI4PeiseyxdtbAWu0gANdGNHI42KBdXkoG3bpb9mk/yQ95DddiYDgGUQ0dxzEzw==
+gatsby-remark-responsive-iframe@4.10.0:
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-4.10.0.tgz#f6ed029b867834132cf6eebbf7029c93ca089641"
+  integrity sha512-Z8VD88n2U+G9hNXkP+fJu9rd778bHEN0UfPjamtEaNQ01jrO9BxJW/J7bJd/9fJXuANRKJd0qQn1Y9RMZJDQ3A==
   dependencies:
-    "@babel/runtime" "^7.14.6"
-    cheerio "^1.0.0-rc.9"
+    "@babel/runtime" "^7.14.8"
+    cheerio "^1.0.0-rc.10"
     common-tags "^1.8.0"
     lodash "^4.17.21"
     unist-util-visit "^2.0.3"
@@ -8385,7 +8385,7 @@ graphql-ws@^4.4.1:
   resolved "https://registry.yarnpkg.com/graphql-ws/-/graphql-ws-4.9.0.tgz#5cfd8bb490b35e86583d8322f5d5d099c26e365c"
   integrity sha512-sHkK9+lUm20/BGawNEWNtVAeJzhZeBg21VmvmLoT5NdGVeZWv5PdIhkcayQIAgjSyyQ17WMKmbDijIPG2On+Ag==
 
-graphql@^15.4.0, graphql@^15.5.0:
+graphql@^15.4.0, graphql@^15.5.1:
   version "15.5.2"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.5.2.tgz#efa19f8f2bf1a48eb7d5c85bf17e144ba8bb0480"
   integrity sha512-dZjLPWNQqYv0dqV2RNbiFed0LtSp6yd4jchsDGnuhDKa9OQHJYCfovaOEvY91w9gqbYO7Se9LKDTl3xxYva/3w==
@@ -13731,7 +13731,7 @@ readline2@^1.0.1:
     is-fullwidth-code-point "^1.0.0"
     mute-stream "0.0.5"
 
-recast@^0.20.4:
+recast@^0.20.4, recast@^0.20.5:
   version "0.20.5"
   resolved "https://registry.yarnpkg.com/recast/-/recast-0.20.5.tgz#8e2c6c96827a1b339c634dd232957d230553ceae"
   integrity sha512-E5qICoPoNL4yU0H0NoBDntNB0Q5oMSNh9usFctYniLBluTthi3RsQVBXIJNbApOlvSwW/RGxIuokPcAc59J5fQ==
