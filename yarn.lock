@@ -57,17 +57,17 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/core@>=7.2.2", "@babel/core@>=7.9.0", "@babel/core@^7.1.0", "@babel/core@^7.13.16", "@babel/core@^7.14.6", "@babel/core@^7.14.8", "@babel/core@^7.7.2", "@babel/core@^7.7.5":
-  version "7.15.4"
-  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.15.4.tgz#a70d06c58ae1fce39c23f8efd79f9d5eb8b2f397"
-  integrity sha512-Lkcv9I4a8bgUI8LJOLM6IKv6hnz1KOju6KM1lceqVMKlKKqNRopYd2Pc9MgIurqvMJ6BooemrnJz8jlIiQIpsA==
+"@babel/core@>=7.2.2", "@babel/core@>=7.9.0", "@babel/core@^7.1.0", "@babel/core@^7.13.16", "@babel/core@^7.14.6", "@babel/core@^7.14.8", "@babel/core@^7.15.5", "@babel/core@^7.7.2", "@babel/core@^7.7.5":
+  version "7.15.5"
+  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.15.5.tgz#f8ed9ace730722544609f90c9bb49162dc3bf5b9"
+  integrity sha512-pYgXxiwAgQpgM1bNkZsDEq85f0ggXMA5L7c+o3tskGMh2BunCI9QUwB9Z4jpvXUOuMdyGKiGKQiRe11VS6Jzvg==
   dependencies:
     "@babel/code-frame" "^7.14.5"
     "@babel/generator" "^7.15.4"
     "@babel/helper-compilation-targets" "^7.15.4"
     "@babel/helper-module-transforms" "^7.15.4"
     "@babel/helpers" "^7.15.4"
-    "@babel/parser" "^7.15.4"
+    "@babel/parser" "^7.15.5"
     "@babel/template" "^7.15.4"
     "@babel/traverse" "^7.15.4"
     "@babel/types" "^7.15.4"
@@ -317,10 +317,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.10.5", "@babel/parser@^7.13.16", "@babel/parser@^7.14.9", "@babel/parser@^7.15.4", "@babel/parser@^7.7.2":
-  version "7.15.4"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.15.4.tgz#02f2931b822512d3aad17d475ae83da74a255a84"
-  integrity sha512-xmzz+7fRpjrvDUj+GV7zfz/R3gSK2cOxGlazaXooxspCr539cbTXJKvBJzSVI2pPhcRGquoOtaIkKCsHQUiO3w==
+"@babel/parser@^7.1.0", "@babel/parser@^7.10.5", "@babel/parser@^7.13.16", "@babel/parser@^7.14.9", "@babel/parser@^7.15.4", "@babel/parser@^7.15.5", "@babel/parser@^7.7.2":
+  version "7.15.5"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.15.5.tgz#d33a58ca69facc05b26adfe4abebfed56c1c2dac"
+  integrity sha512-2hQstc6I7T6tQsWzlboMh3SgMRPaS4H6H7cPQsJkdzTzEGqQrpLDsE2BGASU5sBPoEQyHzeqU6C8uKbFeEk6sg==
 
 "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@^7.15.4":
   version "7.15.4"
@@ -7447,12 +7447,12 @@ gatsby-remark-responsive-iframe@4.10.0:
     lodash "^4.17.21"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-smartypants@4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-4.7.0.tgz#01bbe4dfa233121e510163a504202c0fd3b092fe"
-  integrity sha512-tC6Wa4cKHwiWV5no0u70xX8U896p8SA2RPj4pFM334UQu/A6wBF9ATMih3vtOXhNnZINpKQ0O/pNVPy5oKo41w==
+gatsby-remark-smartypants@4.10.0:
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-4.10.0.tgz#c74c703166ab5a8f688c650b70ccaca54c1b748c"
+  integrity sha512-RglCG5oaGrLksmBXaX3ORAU4aMPPCww5yGJE4WWNh2wMFjFySQ6D6PR1VdLiWA7gIWFjRqR3DXWkNOOi1I7Sbw==
   dependencies:
-    "@babel/runtime" "^7.14.6"
+    "@babel/runtime" "^7.14.8"
     retext "^7.0.1"
     retext-smartypants "^4.0.0"
     unist-util-visit "^2.0.3"
