@@ -7311,12 +7311,12 @@ gatsby-plugin-typescript@^3.13.0:
     "@babel/runtime" "^7.14.8"
     babel-plugin-remove-graphql-queries "^3.13.0"
 
-gatsby-plugin-typography@3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-3.10.0.tgz#36e101e5c2b0ed26c6cfd436d7c03a9bb61f30b1"
-  integrity sha512-RdGuMQ/9QTnIkJS9SmgmcHc5YPVxf6hXOmgW8RkHw7m7hpjmCjV5oLMZDKfTn9Vb3iFWJg9mYmIob0bru98BRQ==
+gatsby-plugin-typography@3.13.0:
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-3.13.0.tgz#ac66ed37ad1948d3c83f2cbd1bf2aaefca52101e"
+  integrity sha512-sIo8HtEtFp79H59Ydc0BU6ReQ5IhQUCYvApZ1K3Z1efXWVkJ6Se2jJAntk3brstrkSQQAt9Ena5O+HBvZsBkJw==
   dependencies:
-    "@babel/runtime" "^7.14.6"
+    "@babel/runtime" "^7.14.8"
 
 gatsby-plugin-utils@^1.10.0, gatsby-plugin-utils@^1.13.0:
   version "1.13.0"
@@ -7447,12 +7447,12 @@ gatsby-remark-responsive-iframe@4.10.0:
     lodash "^4.17.21"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-smartypants@4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-4.7.0.tgz#01bbe4dfa233121e510163a504202c0fd3b092fe"
-  integrity sha512-tC6Wa4cKHwiWV5no0u70xX8U896p8SA2RPj4pFM334UQu/A6wBF9ATMih3vtOXhNnZINpKQ0O/pNVPy5oKo41w==
+gatsby-remark-smartypants@4.10.0:
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-4.10.0.tgz#c74c703166ab5a8f688c650b70ccaca54c1b748c"
+  integrity sha512-RglCG5oaGrLksmBXaX3ORAU4aMPPCww5yGJE4WWNh2wMFjFySQ6D6PR1VdLiWA7gIWFjRqR3DXWkNOOi1I7Sbw==
   dependencies:
-    "@babel/runtime" "^7.14.6"
+    "@babel/runtime" "^7.14.8"
     retext "^7.0.1"
     retext-smartypants "^4.0.0"
     unist-util-visit "^2.0.3"
