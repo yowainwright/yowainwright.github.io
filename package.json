@@ -35,7 +35,7 @@
     "react-dropzone": "^11.3.4",
     "react-typography": "0.16.20",
     "sass": "1.39.0",
-    "sharp": "^0.29.0",
+    "sharp": "^0.29.1",
     "styled-components": "5.3.1",
     "typography": "0.16.21",
     "webpack": "5.52.0"
