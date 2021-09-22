@@ -1710,10 +1710,10 @@
     jest-haste-map "^27.2.0"
     jest-runtime "^27.2.0"
 
-"@jest/transform@^27.2.0":
-  version "27.2.0"
-  resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-27.2.0.tgz#e7e6e49d2591792db2385c33cdbb4379d407068d"
-  integrity sha512-Q8Q/8xXIZYllk1AF7Ou5sV3egOZsdY/Wlv09CSbcexBRcC1Qt6lVZ7jRFAZtbHsEEzvOCyFEC4PcrwKwyjXtCg==
+"@jest/transform@^27.2.0", "@jest/transform@^27.2.1":
+  version "27.2.1"
+  resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-27.2.1.tgz#743443adb84b3b7419951fc702515ce20ba6285e"
+  integrity sha512-xmB5vh81KK8DiiCMtI5vI59mP+GggNmc9BiN+fg4mKdQHV369+WuZc1Lq2xWFCOCsRPHt24D9h7Idp4YaMB1Ww==
   dependencies:
     "@babel/core" "^7.1.0"
     "@jest/types" "^27.1.1"
@@ -3313,12 +3313,12 @@ babel-extract-comments@^1.0.0:
   dependencies:
     babylon "^6.18.0"
 
-babel-jest@27.2.0, babel-jest@^27.2.0:
-  version "27.2.0"
-  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-27.2.0.tgz#c0f129a81f1197028aeb4447acbc04564c8bfc52"
-  integrity sha512-bS2p+KGGVVmWXBa8+i6SO/xzpiz2Q/2LnqLbQknPKefWXVZ67YIjA4iXup/jMOEZplga9PpWn+wrdb3UdDwRaA==
+babel-jest@27.2.1, babel-jest@^27.2.0:
+  version "27.2.1"
+  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-27.2.1.tgz#48edfa5cf8d59ab293da94321a369ccc7b67a4b1"
+  integrity sha512-kkaekSJHew1zfDW3cA2QiSBPg4uiLpiW0OwJKqFv0r2/mFgym/IBn7hxPntL6FvS66G/ROh+lz4pRiCJAH1/UQ==
   dependencies:
-    "@jest/transform" "^27.2.0"
+    "@jest/transform" "^27.2.1"
     "@jest/types" "^27.1.1"
     "@types/babel__core" "^7.1.14"
     babel-plugin-istanbul "^6.0.0"
@@ -4156,7 +4156,7 @@ cheerio@^1.0.0-rc.10, cheerio@^1.0.0-rc.3:
     parse5-htmlparser2-tree-adapter "^6.0.1"
     tslib "^2.2.0"
 
-"chokidar@>=3.0.0 <4.0.0", chokidar@^3.3.1, chokidar@^3.4.2, chokidar@^3.4.3, chokidar@^3.5.1:
+"chokidar@>=3.0.0 <4.0.0", chokidar@^3.3.1, chokidar@^3.4.2, chokidar@^3.5.1, chokidar@^3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.2.tgz#dba3976fcadb016f66fd365021d91600d01c1e75"
   integrity sha512-ekGhOnNVPgT77r4K/U3GDhu+FQ2S8TnK/s2KbIGXi0SZWuwkZ2QNyfWdZW+TVfn84DpEP7rLeCt2UI6bJ8GwbQ==
@@ -6586,10 +6586,10 @@ fastest-levenshtein@^1.0.12:
   resolved "https://registry.yarnpkg.com/fastest-levenshtein/-/fastest-levenshtein-1.0.12.tgz#9990f7d3a88cc5a9ffd1f1745745251700d497e2"
   integrity sha512-On2N+BpYJ15xIC974QNVuYGMOlEVt4s0EOI3wwMqOmK1fdDY+FN/zltPV8vosq4ad4c/gJ1KHScUn/6AWIgiow==
 
-fastq@^1.10.0, fastq@^1.6.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.12.0.tgz#ed7b6ab5d62393fb2cc591c853652a5c318bf794"
-  integrity sha512-VNX0QkHK3RsXVKr9KrlUv/FoTa0NdbYoHHl7uXHv2rzyHSlxjdNAKug2twd9luJxpcyNeAgf5iPPMutJO67Dfg==
+fastq@^1.10.0, fastq@^1.11.1, fastq@^1.6.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.13.0.tgz#616760f88a7526bdfc596b7cab8c18938c36b98c"
+  integrity sha512-YpkpUnK8od0o1hmeSc7UUs/eB/vIPWJYjKck2QKIzAf71Vm1AAQ3EbuZB3g2JIy+pg+ERD0vqI79KyZiB2e2Nw==
   dependencies:
     reusify "^1.0.4"
 
@@ -6680,7 +6680,7 @@ file-type@^12.0.0:
   resolved "https://registry.yarnpkg.com/file-type/-/file-type-12.4.2.tgz#a344ea5664a1d01447ee7fb1b635f72feb6169d9"
   integrity sha512-UssQP5ZgIOKelfsaB5CuGAL+Y+q7EmONuiwF3N5HAH0t27rvrttgi6Ra9k/+DVaY9UF6+ybxu5pOXLUdA8N7Vg==
 
-file-type@^16.0.0, file-type@^16.5.3:
+file-type@^16.5.3:
   version "16.5.3"
   resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.5.3.tgz#474b7e88c74724046abb505e9b8ed4db30c4fc06"
   integrity sha512-uVsl7iFhHSOY4bEONLlTK47iAHtNsFHWP5YE4xJfZ4rnX7S1Q3wce09XgqSC7E/xh8Ncv/be1lNoyprlUH/x6A==
@@ -7439,12 +7439,12 @@ gatsby-remark-prismjs@5.10.0:
     parse-numeric-range "^1.2.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-responsive-iframe@4.10.0:
-  version "4.10.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-4.10.0.tgz#f6ed029b867834132cf6eebbf7029c93ca089641"
-  integrity sha512-Z8VD88n2U+G9hNXkP+fJu9rd778bHEN0UfPjamtEaNQ01jrO9BxJW/J7bJd/9fJXuANRKJd0qQn1Y9RMZJDQ3A==
+gatsby-remark-responsive-iframe@4.11.0:
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-4.11.0.tgz#fc4f14043dca829735b189095358c12a2a4185e7"
+  integrity sha512-b4Nl9wOzRIjxRUHSkwKDczsKvSF5l8FcUf37Mbnecx+eTzfvQtMccIG87C488C5FTBsOh44jjokhR9QwqnWkww==
   dependencies:
-    "@babel/runtime" "^7.14.8"
+    "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
     common-tags "^1.8.0"
     lodash "^4.17.21"
@@ -7460,17 +7460,17 @@ gatsby-remark-smartypants@4.11.0:
     retext-smartypants "^4.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-source-filesystem@3.13.0:
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.13.0.tgz#0c1ec7a02c692d36ab93e033661da1aa52cb6711"
-  integrity sha512-SR0OFKunE4OtsZ0E7kpX6kipQcbrw3jTfROuhqD6EJPM5hkTxeEI/6I2r/bUo4ZS1rpwrEYd3UF89Q0YdAhLqQ==
+gatsby-source-filesystem@3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.14.0.tgz#ae2b930091a932b33270cb9cc2d9caaf0abc1742"
+  integrity sha512-Gg5GGxiWXhjapWMYdXOGk7zp+ajYowS+xNmaDUkL1gH+IQLvE18XbvKh00B/HiFaHm4azJfS2QRrRI/mPTZX+w==
   dependencies:
-    "@babel/runtime" "^7.14.8"
-    better-queue "^3.8.10"
-    chokidar "^3.4.3"
-    file-type "^16.0.0"
-    fs-extra "^8.1.0"
-    gatsby-core-utils "^2.13.0"
+    "@babel/runtime" "^7.15.4"
+    chokidar "^3.5.2"
+    fastq "^1.11.1"
+    file-type "^16.5.3"
+    fs-extra "^10.0.0"
+    gatsby-core-utils "^2.14.0"
     got "^9.6.0"
     md5-file "^5.0.0"
     mime "^2.5.2"
