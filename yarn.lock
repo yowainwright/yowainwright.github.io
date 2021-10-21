@@ -7161,10 +7161,10 @@ gatsby-cli@3.14.2, gatsby-cli@^3.14.2:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^2.1.0"
 
-gatsby-codemods@2.14.0:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-2.14.0.tgz#676f6fa2874e655ffc8883c8fd84ec2b07f5c477"
-  integrity sha512-wLyi488bmR2gMVwonX6XSUsTkzae3OA0ip+REkjpxX4PSMMWTd/pvpSBqa/WT5KUyQ3eGYTxG7NJPoBdCOLGLA==
+gatsby-codemods@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-3.0.0.tgz#cf7df4aa8128168af05fa52fe926519918547389"
+  integrity sha512-Y/miZYpdt9idIQp9ETl9aiW3AjNukn+bw8ntFkiRyUFvoP02leQ/rWmKTpg4gmT5sw2vD36v/ChMdxx/4FE0Ig==
   dependencies:
     "@babel/core" "^7.15.5"
     "@babel/plugin-proposal-class-properties" "^7.14.0"
