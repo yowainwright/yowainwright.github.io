@@ -54,7 +54,7 @@
     "@commitlint/prompt": "13.2.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "27.3.1",
-    "babel-loader": "8.2.2",
+    "babel-loader": "8.2.3",
     "babel-plugin-macros": "3.1.0",
     "commitizen": "4.2.4",
     "conventional-changelog-cli": "2.1.1",
