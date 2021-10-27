@@ -34,7 +34,7 @@
     "react-dom": "17.0.2",
     "react-dropzone": "^11.4.2",
     "react-typography": "0.16.20",
-    "sass": "1.43.3",
+    "sass": "1.43.4",
     "sharp": "^0.29.2",
     "styled-components": "5.3.3",
     "typography": "0.16.21",
@@ -72,7 +72,7 @@
     "prismjs": "1.25.0",
     "react-helmet": "6.1.0",
     "regenerator-runtime": "0.13.9",
-    "stylelint": "14.0.0",
+    "stylelint": "14.0.1",
     "stylelint-config-dollarshaveclub": "8.0.0",
     "typescript": "4.4.4",
     "write-good": "1.0.8"
