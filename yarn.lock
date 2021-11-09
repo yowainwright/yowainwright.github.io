@@ -5061,10 +5061,10 @@ create-gatsby@^1.14.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-create-gatsby@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/create-gatsby/-/create-gatsby-2.1.0.tgz#849308e23cf83aab1df416a706cefab37d0718e8"
-  integrity sha512-tGBabM9/jUPfHvJ5NyLdLtfGlq5OFpkMgxn+yVYAXyFTf/PqdZ+TauG+YAxAUaVGcP3/BmP64IJLANspJrsWRQ==
+create-gatsby@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/create-gatsby/-/create-gatsby-2.1.1.tgz#cf20e89ac5e828c82f9891fb9c4f2e34c89a99f4"
+  integrity sha512-TyTrJD5Wa2WTa5PVY3ng1aIo7vqyR3rmQJuGRNPNeRZIfrYBrMGILWIh8TV+pofTKiZsRhPPMmHlpDD62tqPcw==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
@@ -7220,10 +7220,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-cli@4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-4.1.0.tgz#6e0e3ed5a7abc2f8499fd7c7ab43fab56703d0bd"
-  integrity sha512-OTXkUHYdv8af4rQm4AJy6fnKyGNVLol3h3vfFESa7+h/7xgXHdO/2lQukMfvvzkTIPhqbvSqab/thd3xJhgKGw==
+gatsby-cli@4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-4.1.1.tgz#fa78ab8c5a5cd30adcebb4ea95c013735ab43f31"
+  integrity sha512-uPLu+PcqcoV8lk+1PPte/mP7I8wAM/5oE11mnPzKoGw2UeEgNdMnyjWqQITTeIZ0lvmD+3KITasWzsulnI2geg==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/runtime" "^7.15.4"
@@ -7235,7 +7235,7 @@ gatsby-cli@4.1.0:
     common-tags "^1.8.0"
     configstore "^5.0.1"
     convert-hrtime "^3.0.0"
-    create-gatsby "^2.1.0"
+    create-gatsby "^2.1.1"
     envinfo "^7.8.1"
     execa "^5.1.1"
     fs-exists-cached "^1.0.0"
