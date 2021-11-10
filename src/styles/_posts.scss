@@ -31,10 +31,20 @@
 
   &--headline {
     border-bottom: 1px solid #000;
-    padding-bottom: 1rem;
+    border-left: 4px solid #000;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+
     @include media-query($width-small) {
-      padding-bottom: 0;
+      margin-bottom: 0;
+      padding-right: 0;
     }
+
+    @include media-query($width-medium) {
+      border-bottom: 0;
+      border-left-width: 1px;
+    }
+
     time {
       margin-top: 0.5rem;
     }
@@ -108,14 +118,14 @@
 
   &--squares {
     @include media-query($width-small) {
+      padding-top: 1rem;
       display: grid;
-      grid-column-gap: 2rem;
-      grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
+      grid-gap: 2rem;
+      grid-template-columns: auto auto;
     }
 
     @include media-query($width-medium) {
-      grid-template-columns: calc(33.3% - 2rem) calc(33.3% - 2rem) calc(33.3% - 2rem);
-      grid-column-gap: 3rem;
+      grid-template-columns: auto auto auto;
     }
 
     h2 {

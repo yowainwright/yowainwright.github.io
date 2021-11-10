@@ -2,10 +2,10 @@
   padding: 1rem 0;
 
   &__title {
-    background: #fdf862;
+    background: #fff;
     border: 1px solid #000;
     display: inline-block;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     left: 2rem;
     letter-spacing: 0.15rem;
     margin: 0;
@@ -23,8 +23,10 @@
   &__button,
   &__link {
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 0.65rem;
     padding: 1rem 1rem 0 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
   }
 
   &__button {
@@ -37,6 +39,12 @@
     &:hover {
       cursor: pointer;
       text-decoration: underline;
+    }
+  }
+
+  &__link {
+    &:last-of-type {
+      padding-right: 0;
     }
   }
 }
