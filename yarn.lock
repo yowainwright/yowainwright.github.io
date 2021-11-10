@@ -7706,10 +7706,28 @@ gatsby-recipes@^1.1.0:
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
 
+<<<<<<< HEAD
+gatsby-remark-autolink-headers@^4.4.1:
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-4.10.0.tgz#a03c0534b7652401d2e8e1855b99803be52e7389"
+  integrity sha512-i5Xis1Ews/aYoYMjSUmzzYC7ZAgQUzNwumwW40QSMrPJmSuWK6oOHLsI5uCZmm8IAffeG78UQ7JAkCp+phlu/g==
+  dependencies:
+    "@babel/runtime" "^7.14.8"
+    github-slugger "^1.3.0"
+    lodash "^4.17.21"
+    mdast-util-to-string "^2.0.0"
+    unist-util-visit "^2.0.3"
+
+gatsby-remark-copy-linked-files@4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-4.7.0.tgz#bc8bf2f071004c4d04cb3236f664ba1410b44e7b"
+  integrity sha512-khIrSFmOy8ZWL8VmVTPeTFnoqopRGWkDGSXGRBt3qb5+2xqD7FiYYaikNhMlM77UJp3JzX6lY/RZ5Hw9nevy3A==
+=======
 gatsby-remark-copy-linked-files@4.11.0:
   version "4.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-4.11.0.tgz#3596b218d4c025931989a4629ec005443cb42dd1"
   integrity sha512-24VI4ZM7767b+2x/J5Ww7yzeTJhVtGCJOQGjH2NZgEAw4ryBoZLJ2WwHiVwBD03+JSMPKGutQxus95jkLmMD4w==
+>>>>>>> develop
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
@@ -8246,7 +8264,7 @@ github-from-package@0.0.0:
   resolved "https://registry.yarnpkg.com/github-from-package/-/github-from-package-0.0.0.tgz#97fb5d96bfde8973313f20e8288ef9a167fa64ce"
   integrity sha1-l/tdlr/eiXMxPyDoKI75oWf6ZM4=
 
-github-slugger@^1.2.1:
+github-slugger@^1.2.1, github-slugger@^1.3.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/github-slugger/-/github-slugger-1.4.0.tgz#206eb96cdb22ee56fdc53a28d5a302338463444e"
   integrity sha512-w0dzqw/nt51xMVmlaV1+JRzN+oCa1KfcgGEWhxUG16wbdA+Xnt/yoFO8Z8x/V82ZcZ0wy6ln9QDup5avbhiDhQ==
