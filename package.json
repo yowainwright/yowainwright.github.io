@@ -61,7 +61,7 @@
     "conventional-changelog-cli": "2.1.1",
     "eslint": "^7.31.0",
     "eslint-plugin-react": "^7.26.1",
-    "gatsby-cli": "4.1.1",
+    "gatsby-cli": "4.1.2",
     "gatsby-plugin-feed": "3.14.0",
     "gh-pages": "3.2.3",
     "husky": "^7.0.4",
