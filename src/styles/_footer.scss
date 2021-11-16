@@ -10,6 +10,10 @@
       max-width: 80%;
     }
 
+    @include media-query($width-medium) {
+      max-width: 70%;
+    }
+
     &--main {
       padding: 4rem 0;
       column-gap: 1rem;

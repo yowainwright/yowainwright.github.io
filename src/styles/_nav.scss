@@ -34,6 +34,10 @@
       max-width: 90%;
       margin: 0 auto;
     }
+
+    @include media-query($width-small) {
+      max-width: 80%;
+    }
   }
 
   &__item {

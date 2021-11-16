@@ -172,7 +172,7 @@ time {
 
 hr {
   border: 0;
-  border-top: 1px solid #000;
+  border-top: 4px solid #000;
   margin-bottom: 2rem;
 }
 
@@ -250,6 +250,9 @@ tr {
     &--archives-bottom {
       margin-top: 3rem;
     }
+  }
+  @include media-query($width-medium) {
+    max-width: 70%;
   }
 
   &__description {
@@ -401,6 +404,10 @@ tr {
 
   @include media-query($width-small) {
     max-width: 80%;
+  }
+
+  @include media-query($width-medium) {
+    max-width: 70%;
   }
 
   &--resume-link {
