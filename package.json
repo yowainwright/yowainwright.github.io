@@ -52,7 +52,7 @@
     "@babel/preset-react": "7.16.0",
     "@commitlint/cli": "15.0.0",
     "@commitlint/config-conventional": "15.0.0",
-    "@commitlint/prompt": "14.1.0",
+    "@commitlint/prompt": "15.0.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "27.3.1",
     "babel-loader": "8.2.3",
