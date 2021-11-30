@@ -2,7 +2,23 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import { SquarePost } from '../components/post/square'
+import { BasicPost } from '../components/post/basic'
+
+function PostsRow({ posts }) {
+  return posts.map(
+    (
+      {
+        node: {
+          frontmatter: { date, meta, path, title },
+        },
+      },
+      i,
+    ) =>
+      !['/404/', '/about', '/about/', '/styleguide/', '/resume', '/resume/'].includes(path) ? (
+        <BasicPost key={i} date={date} description={meta} path={path} title={title} />
+      ) : null,
+  )
+}
 
 export default function Archive({ data, title = 'Archive | Jeffry.in' }) {
   return (
@@ -19,18 +35,11 @@ export default function Archive({ data, title = 'Archive | Jeffry.in' }) {
           <meta name='twitter:title' property='og:title' content={`${title}`} />
         </Helmet>
         <section className='intro'>
-          <h1 className='intro__title'>
-            Jeffry.in article archive: I have been writing for a while so enjoy scrolling!
-          </h1>
+          <h1 className='intro__title'>Article archive: I have been writing for a while. Enjoy scrolling!</h1>
         </section>
         <section className='section section--posts'>
-          <h3 className='section__title'>Article Archive</h3>
-          <div className='posts--squares'>
-            {data.allMarkdownRemark.edges.map((post, i) => {
-              const { date, path, title } = post.node.frontmatter
-              if (['/404/', '/about', '/about/', '/styleguide/', '/resume', '/resume/'].includes(path)) return null
-              return <SquarePost date={date} path={path} title={title} key={i} />
-            })}
+          <div className='posts--basic'>
+            <PostsRow posts={data.allMarkdownRemark.edges} />
           </div>
         </section>
       </main>

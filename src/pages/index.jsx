@@ -45,7 +45,6 @@ export default function BlogIndex({
           </h1>
         </section>
         <section className='section section--posts'>
-          <h3 className='section__title'>Latest Articles</h3>
           <div className='posts--basic'>
             <PostsRow posts={data.allMarkdownRemark.edges} />
           </div>
