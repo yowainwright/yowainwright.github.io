@@ -97,6 +97,9 @@ p {
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
   }
+  & + hr {
+    margin-bottom: 0;
+  }
 }
 
 a {
@@ -175,8 +178,10 @@ time {
 
 hr {
   border: 0;
-  border-top: 4px solid #000;
-  margin-bottom: 2rem;
+  border-top: 1px solid #999;
+  margin-bottom: 0;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 ul,
