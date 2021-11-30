@@ -24,7 +24,7 @@
         grid-template-columns: auto 10rem auto;
       }
 
-      @include media-query($width-small) {
+      @include media-query($width-medium) {
         grid-template-columns: 17rem 10rem auto;
       }
     }
@@ -42,7 +42,7 @@
     display: grid;
     padding-bottom: 2rem;
 
-    @include media-query($width-small) {
+    @include media-query($width-medium) {
       padding-bottom: 0;
     }
 

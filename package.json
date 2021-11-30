@@ -1,7 +1,7 @@
 {
   "name": "Jeffry.in",
   "description": "Jeffry.in, Jeff Wainwright's blog",
-  "version": "2.3.4",
+  "version": "2.4.0",
   "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
   "bugs": {
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
@@ -35,7 +35,7 @@
     "react-dom": "17.0.2",
     "react-dropzone": "^11.4.2",
     "react-typography": "0.16.20",
-    "sass": "1.43.5",
+    "sass": "1.44.0",
     "sharp": "^0.29.3",
     "styled-components": "5.3.3",
     "typography": "0.16.21",

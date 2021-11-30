@@ -29,7 +29,7 @@ h1,
 h2,
 h3,
 .intro__title {
-  line-height: 1.1;
+  line-height: 1.3;
 }
 
 h1,
@@ -49,11 +49,14 @@ h1,
   }
 }
 
-h2 {
-  font-size: 1.8rem;
+.intro__title {
+  margin-bottom: 2rem;
+}
 
+h2 {
+  font-size: 1.5rem;
   @include media-query($width-small) {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -421,30 +424,9 @@ tr {
   }
 
   &--intro {
-    margin-top: 2rem;
+    margin-top: 4rem;
     @include media-query($width-small) {
       margin-top: 0;
-    }
-  }
-
-  &__title {
-    color: white;
-    background: #000;
-    display: inline-block;
-    font-family: sans-serif;
-    font-size: 0.6rem;
-    letter-spacing: 0.15rem;
-    margin: 1rem 0;
-    padding: 0.5rem;
-    text-transform: uppercase;
-
-    &:after {
-      border-top: 4px solid #000;
-      content: ' ';
-      left: 0;
-      position: absolute;
-      top: 1rem;
-      width: 100%;
     }
   }
 }
