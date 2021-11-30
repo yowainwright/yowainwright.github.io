@@ -11,28 +11,33 @@ meta: >-
 post_index: null
 ---
 
-As a Senior Software Engineer, I specialize in frontend applications and build pipelines. Since stepping into Software Engineering Management, my focus is code re-usability and standards. I aim to keep products simple and tested—except for the “special sauce” that makes a great product exceptional. I seek roles where I can be a team’s momentum multiplier while building products that make businesses happy and customers even happier.
-
-<br>
+As a Software Engineer and Engineering manager, I specialize in getting applications built! I love working with engineers, product and design to keep products simple and tested—except for the “special sauce” that makes a great product exceptional.
 
 ---
 
 ### Work History
 
+## Komodo Health
+Senior Software Engineer 
+<time>June 2021-Present</time>
+
+- Built a low code app for generating healthcare patient reports using React, Formik, HighCharts, and Python
+- Implemented a UI library for Komodo Health with Bit using TypeScript, React, and MDX 
+
 ## Currency
 
-Engineering Manager / _February 2020-present_
+Engineering Manager
+<time>February 2020-May 2021</time>
 
 - Architected a payment platform allowing our vendors' customers to purchase large-cost items online using credit, check, or financing! 
 - Led the effort of building a monorepo that supports both frontend and backend ecosystems so our team can collaborate more closely and release code more safely.
 - We're currently working on internationalization and few other features I'm excited to announce! 
 - Our tech stack is Node on the backend and React on the frontend using TypeScript in both environments.
 
----
-
 ## Dollar Shave Club
 
-Frontend Software Engineer / _March 2016-February 2020_
+Frontend Software Engineer
+<time>March 2016-February 2020</time>
 
 - Led the Dynamic Landing Page engineering effort, supporting internationalization and easy marketing updates using TypeScript, React, Node, and Contentful
 - Contributed to Dollar Shave Club's CI/CD pipeline using Circle CI and Node, released es-check, and did a talk at JS.LA about CI/CD 
@@ -40,11 +45,10 @@ Frontend Software Engineer / _March 2016-February 2020_
 - Architected a headless CMS for Dollar Shave Club's Original Content using JavaScript, Sass, Handlebars, CodeIgniter, and WordPress
 - While working at Dollar Shave Club, I was key in our Engineering Marketing Strategy writing several popular open-source projects: Reframe.js, Scrolldir, Shave, StickyBits, ES Check, Read more about my open source work below. 
 
----
-
 ## Hollywood Reporter & Billboard
 
-Frontend Software Engineer / _May 2014-March 2016_
+Frontend Software Engineer
+<time>May 2014-March 2016</time>
 
 - Developed the future of UX for The Hollywood Reporter and Billboard leading to 15% readership growth and 13% decrease in bounce rate
 - Built a modular frontend system which worked consistently for both The Hollywood Reporter and Billboard using Backbone, Node, Sass and JavaScript leading to a 200% increase in developer productivity

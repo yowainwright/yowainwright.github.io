@@ -13,8 +13,6 @@ post_index: null
 
 Hi! I'm a software engineer at [Currency](https://www.gocurrency.com/). Formerly, I wrote a lot of open source while at [Dollar Shave Club](https://www.dollarshaveclub.com/). I write software because I'm passionate about making things, learning, and contributing to society. Software allows me to do those things everyday. Unrelated to software, I enjoy painting, [running](https://www.strava.com/athletes/722335), and surfing.
 
-<br>
-
 ---
 
 ## Open Source Initiatives
@@ -25,8 +23,6 @@ Hi! I'm a software engineer at [Currency](https://www.gocurrency.com/). Formerly
 - **[Shave](https://github.com/dollarshaveclub/shave):** a minimal JavaScript Plugin for Truncated text
 - **[Reframe.js](https://github.com/dollarshaveclub/reframe.js):** a minimal JavaScript Plugin for reframing html elements so they're an intrinsic ratio of the original—great for embeds
 
-<br>
-
 ---
 
 ## Publications
@@ -35,15 +31,11 @@ Hi! I'm a software engineer at [Currency](https://www.gocurrency.com/). Formerly
 - **[Code Review Etiquette](https://css-tricks.com/code-review-etiquette/)** - CSS Tricks
 - **[Continuous Integration: The What, Why and How](https://css-tricks.com/continuous-integration-the-what-why-and-how/)** - CSS Tricks
 
-<br>
-
 ---
 
 ## Talks and Presentations
 
 - **[Developer CI Benefits](https://github.com/yowainwright/developer-ci-benefits)** - [JS.LA](https://js.la/), July 26, 2018
-
-<br>
 
 ---
 
