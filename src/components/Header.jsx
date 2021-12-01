@@ -30,18 +30,13 @@ export const Header = ({
     {
       alias: 'resume',
       name: 'Resume',
-      path: '/resume/'
-    }
+      path: '/resume/',
+    },
   ],
 }) => {
   return (
     <>
-      <nav
-        id='site-nav'
-        className='site-nav'
-        role='navigation'
-        itemType='http://schema.org/SiteNavigationElement'
-      >
+      <nav id='site-nav' className='site-nav' role='navigation' itemType='http://schema.org/SiteNavigationElement'>
         <section className='site-nav__container'>
           <Link to='/' className='logo'>
             <h3 className='logo__title'>j</h3>

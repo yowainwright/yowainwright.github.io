@@ -103,14 +103,13 @@ p {
 }
 
 a {
-  color: #000;
   text-decoration: none;
   &:hover {
     text-decoration-line: underline;
   }
 
   &:visited {
-    color: #000;
+    color: #0000ff;
   }
 
   .post__content & {

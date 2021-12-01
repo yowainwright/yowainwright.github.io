@@ -9,6 +9,9 @@ export const Header = ({
     <meta property='og:locale' content='en_US' />
     <link href='https://jeffry.in/assets/favicon.png' rel='icon' />
     <link href='https://yowainwright.imgix.net/apple-icon-120x120.png' rel='apple-touch-icon' itemProp='logo' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
+    <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet' />
     <meta
       name='keywords'
       content='jeffry, wainwright, jeffry wainwright, code, programmer, artist, athlete, developer, engineer'
