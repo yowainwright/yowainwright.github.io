@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function copyToClipboard (str) {
+export function copyToClipboard(str) {
   const el = document.createElement('textarea')
   el.value = str
   document.body.appendChild(el)
@@ -9,17 +9,17 @@ export function copyToClipboard (str) {
   document.body.removeChild(el)
 }
 
-export function Share ({ path, title, url = 'https://jeffry.in' }) {
-  const shareUrl = path && url ? url + '/' + path : url;
-  const cleanedTitle = encodeURIComponent(title);
+export function Share({ path, title, url = 'https://jeffry.in' }) {
+  const shareUrl = path && url ? url + '/' + path : url
+  const cleanedTitle = encodeURIComponent(title)
 
   function onBtnClick() {
-    copyToClipboard(url);
+    copyToClipboard(url)
   }
 
   return (
     <section className='share'>
-      <h3 className='share__title'>Sharing is caring! </h3>
+      <h3 className='share__title'>Sharing is caring! 💘</h3>
       <nav className='share__nav'>
         <button className='share__button' onClick={onBtnClick}>
           Copy Link

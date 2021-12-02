@@ -1,5 +1,5 @@
 ---
-title: 'Resume: the resume of Jeff Wainwright, a software engineer and surfer in Los Angeles'
+title: 'Resume: the resume of Jeff Wainwright, a software engineer and surfer in Los Angeles 🏄🏾‍♂️'
 date: '2021-03-31'
 layout: post
 readNext: /
@@ -17,14 +17,20 @@ As a Software Engineer and Engineering manager, I specialize in getting applicat
 
 ### Work History
 
-## Komodo Health
+## [GoodRx](https://www.goodrx.com/)
+Senior Security Software Engineer 
+<time>December 2021-Present</time>
+
+- Building security solutions for GoodRx frontend content delivery
+
+## [Komodo Health](https://www.komodohealth.com/)
 Senior Software Engineer 
-<time>June 2021-Present</time>
+<time>June 2021-December 2021</time>
 
 - Built a low code app for generating healthcare patient reports using React, Formik, HighCharts, and Python
 - Implemented a UI library for Komodo Health with Bit using TypeScript, React, and MDX 
 
-## Currency
+## [Currency](https://www.gocurrency.com/)
 
 Engineering Manager
 <time>February 2020-May 2021</time>
@@ -34,7 +40,7 @@ Engineering Manager
 - We're currently working on internationalization and few other features I'm excited to announce! 
 - Our tech stack is Node on the backend and React on the frontend using TypeScript in both environments.
 
-## Dollar Shave Club
+## [Dollar Shave Club](https://www.dollarshaveclub.com/)
 
 Frontend Software Engineer
 <time>March 2016-February 2020</time>
@@ -45,7 +51,7 @@ Frontend Software Engineer
 - Architected a headless CMS for Dollar Shave Club's Original Content using JavaScript, Sass, Handlebars, CodeIgniter, and WordPress
 - While working at Dollar Shave Club, I was key in our Engineering Marketing Strategy writing several popular open-source projects: Reframe.js, Scrolldir, Shave, StickyBits, ES Check, Read more about my open source work below. 
 
-## Hollywood Reporter & Billboard
+## [Hollywood Reporter](https://www.hollywoodreporter.com)/[Billboard](https://www.billboard.com/)
 
 Frontend Software Engineer
 <time>May 2014-March 2016</time>
@@ -54,16 +60,16 @@ Frontend Software Engineer
 - Built a modular frontend system which worked consistently for both The Hollywood Reporter and Billboard using Backbone, Node, Sass and JavaScript leading to a 200% increase in developer productivity
 - The efforts above lead to a 2015 Webby Honoree for Billboard & The Hollywood Reporter Website Magazine, and the 2015 best website at the 8th annual National Arts & Entertainment Journalism Awards
 
-\* More work history available upon request or on [LinkedIn](https://www.linkedin.com/in/jeffrywainwright/). 
+\* More work history available upon request or on **[LinkedIn](https://www.linkedin.com/in/jeffrywainwright/)**. 
 
 ---
 
 ### Education
 
-- University of Wisconsin—Madison / _1993-2003_, Bachelors of Science in Art
+- **[University of Wisconsin—Madison](https://www.wisc.edu/):**  _1993-2003_, Bachelors of Science in Art
 - Illinois Institute of Art / _2006-2009_, Bachelors of Art in Visual Communication
-- American University / _2000_, Summer Program
-- School of the Art Institute of Chicago / _1998_, Pre-college program
+- **[American University](https://www.american.edu/):** _2000_, Summer Program
+- **[School of the Art Institute of Chicago](https://www.saic.edu/):** _1998_, Pre-college program
 
 ---
 
@@ -93,5 +99,5 @@ Frontend Software Engineer
 
 ### Resume
 
-[Word Doc](https://github.com/yowainwright/yowainwright.github.io/files/6246283/jeffry-wainwright-resume-03-30-21.docx) | [PDF](https://github.com/yowainwright/yowainwright.github.io/files/6246284/jeffry-wainwright-resume-03-30-21.pdf) | [TXT](https://github.com/yowainwright/yowainwright.github.io/files/6246282/jeffry-wainwright-04-01-21.txt)
+**[Word Doc](https://github.com/yowainwright/yowainwright.github.io/files/6246283/jeffry-wainwright-resume-03-30-21.docx)** | **[PDF](https://github.com/yowainwright/yowainwright.github.io/files/6246284/jeffry-wainwright-resume-03-30-21.pdf)** | **[TXT](https://github.com/yowainwright/yowainwright.github.io/files/6246282/jeffry-wainwright-04-01-21.txt)**
 
