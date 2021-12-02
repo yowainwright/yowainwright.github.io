@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+/* eslint-disable react/no-unknown-property */
 
 export const Header = ({
   gtmInlineScript = "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-73077309-1');",
@@ -10,7 +11,7 @@ export const Header = ({
     <link href='https://jeffry.in/assets/favicon.png' rel='icon' />
     <link href='https://yowainwright.imgix.net/apple-icon-120x120.png' rel='apple-touch-icon' itemProp='logo' />
     <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin={true} />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin></link>
     <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet' />
     <meta
       name='keywords'
