@@ -23,10 +23,9 @@
   &__button,
   &__link {
     display: inline-block;
-    font-size: 0.65rem;
-    padding: 1rem 1rem 0 0;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 0.75rem 0 0;
   }
 
   &__button {

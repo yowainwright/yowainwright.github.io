@@ -20,12 +20,12 @@ My life is better now in _almost_ every way except for one—my psychical health
 ## Ailment: Tired Legs
 
 I've always been a fitness enthusiast. 
-I'm an avid runner, surfer, and I do other cardio and kalastenic exercises—like cycling and lifting weights to keep my body fit.
+I'm an avid runner, surfer, and I do other cardio and calisthenic exercises—like cycling and lifting weights to keep my body fit.
 To give this some context, pre-covid I would go to the gym around 3 times a week, run 20-30 miles a week and surf 4-6 times a week. Not the most for an active person in Los Angeles but I felt good!
 
-Once Los Angeles first quarantine hit, the gyms where closed and surfers weren't supposed to surf at the beaches—so I didn't. This meant I could run and I did. I upped my miles per week from 20-30 to 40-60. Initially, I felt okay (considering a padandic with unknown consequences had hit), and was keeping my body in the best shape I could considering the situation. Besides running a lot, I was working on my bed or placing my laptop on my dresser along with a $10 Ikea chair. 
+Once Los Angeles first quarantine hit, the gyms where closed and surfers weren't supposed to surf at the beaches—so I didn't. This meant I could run and I did. I upped my miles per week from 20-30 to 40-60. Initially, I felt okay (considering a pandemic with unknown consequences had hit), and was keeping my body in the best shape I could considering the situation. Besides running a lot, I was working on my bed or placing my laptop on my dresser along with a $10 Ikea chair. 
 
-After a few months of Covid, it became clear that there was no quick end in sight. Personally, upping my running miles from 20-30 miles per week to 60+ at my peek had taken a toll on my legs. They were always feeling tired. My running pace was gettin slower and slower. Besides my legs, my back and body has begun to have weird pains from all of my awkward contorsions to work on my bed or make-shift desk. With the help of my girlfriend, now wife I began to make changes to better accommodate my new Covid desk life. 
+After a few months of Covid, it became clear that there was no quick end in sight. Personally, upping my running miles from 20-30 miles per week to 60+ at my peek had taken a toll on my legs. They were always feeling tired. My running pace was getting slower and slower. Besides my legs, my back and body has begun to have weird pains from all of my awkward contortions to work on my bed or make-shift desk. With the help of my girlfriend, now wife I began to make changes to better accommodate my new Covid desk life. 
 
 ## Tools for Tired Legs
 

@@ -36,7 +36,7 @@ export default function BlogIndex({
         </Helmet>
         <section className='section section--intro intro'>
           <h1 className='intro__title'>
-            I used to stand for something but now it is just because someone stole my chair. 🥺{' '}
+            I used to stand for something but now it is just because someone stole my chair. 💺{' '}
           </h1>
         </section>
         <section className='section section--posts'>
