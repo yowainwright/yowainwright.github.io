@@ -10,7 +10,7 @@ export const Header = ({
     <link href='https://jeffry.in/assets/favicon.png' rel='icon' />
     <link href='https://yowainwright.imgix.net/apple-icon-120x120.png' rel='apple-touch-icon' itemProp='logo' />
     <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin={true} />
     <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet' />
     <meta
       name='keywords'
