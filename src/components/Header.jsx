@@ -30,7 +30,7 @@ export function Icon({ isDarkMode }) {
 }
 
 export const DarkmodeToggle = () => {
-  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? true : false
+  const prefersDarkMode = window && window.matchMedia('(prefers-color-scheme: dark)').matches ? true : false
   const [isLoaded, setIsLoaded] = useState(false)
   const [isDarkMode, seIsDarkMode] = useState(prefersDarkMode)
 
