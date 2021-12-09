@@ -29,8 +29,13 @@ export function Icon({ isDarkMode }) {
   return <Moon />
 }
 
+export const isLoadingDarkmode = () => {
+  if (typeof window === 'undefined') return false
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? true : false
+}
+
 export const DarkmodeToggle = () => {
-  const prefersDarkMode = window && window.matchMedia('(prefers-color-scheme: dark)').matches ? true : false
+  const prefersDarkMode = isLoadingDarkmode()
   const [isLoaded, setIsLoaded] = useState(false)
   const [isDarkMode, seIsDarkMode] = useState(prefersDarkMode)
 
