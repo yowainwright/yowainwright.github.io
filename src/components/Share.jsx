@@ -10,11 +10,11 @@ export function copyToClipboard(str) {
 }
 
 export function Share({ path, title, url = 'https://jeffry.in' }) {
-  const shareUrl = path && url ? url + '/' + path : url
+  const shareUrl = path && url ? `${url}${path}` : url
   const cleanedTitle = encodeURIComponent(title)
 
   function onBtnClick() {
-    copyToClipboard(url)
+    copyToClipboard(shareUrl)
   }
 
   return (

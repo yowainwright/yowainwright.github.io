@@ -3,7 +3,7 @@
 
   &__title {
     background: #fff;
-    border: 1px solid #000;
+    border: 1px solid #999;
     display: inline-block;
     font-size: 0.65rem;
     left: 2rem;
@@ -13,6 +13,10 @@
     position: relative;
     text-transform: uppercase;
     top: 1rem;
+
+    .js-is-darkmode & {
+      background-color: #162447;
+    }
   }
 
   &__nav {
@@ -34,6 +38,10 @@
     color: #0000ff;
     font-family: $font-family-default;
     margin: 0;
+
+    .js-is-darkmode & {
+      color: #e43f5a;
+    }
 
     &:hover {
       cursor: pointer;
