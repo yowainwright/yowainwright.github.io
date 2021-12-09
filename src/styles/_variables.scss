@@ -34,4 +34,5 @@ $width-reader: $width-default;
 $width-large: 75rem !default;
 $width-medium: 62rem !default;
 $width-small: 48rem !default;
+$width-x-small: 30rem !default;
 $calc-max-width: calc(#{$width-default} - 2rem);

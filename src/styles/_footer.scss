@@ -2,9 +2,12 @@
   padding-top: 4rem;
   &__wrapper {
     border-top: 1px solid #999;
-    display: grid;
     margin: 0 auto;
     max-width: calc(100% - 2rem);
+
+    @include media-query($width-x-small) {
+      display: grid;
+    }
 
     @include media-query($width-small) {
       max-width: 80%;
