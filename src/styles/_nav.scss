@@ -7,6 +7,10 @@
   top: 0;
   z-index: 3;
 
+  .js-is-darkmode & {
+    background-color: #162447;
+  }
+
   @include media-query($width-small) {
     box-shadow: none;
     padding: 0;
@@ -16,7 +20,7 @@
   @include media-query($width-small) {
     border-bottom-width: 0;
     height: 5rem;
-    margin: 3rem 0 5rem;
+    padding: 3rem 0 5rem;
     position: relative;
   }
 
@@ -26,8 +30,10 @@
 
   &__container {
     display: flex;
+    justify-content: space-between;
     max-width: calc(100vw - 2rem);
     position: relative;
+    width: 100%;
 
     @include media-query($width-small) {
       max-width: 90%;
@@ -49,29 +55,43 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+    .js-is-darkmode & {
+      background-color: #162447;
+    }
+
     @include media-query($width-small) {
       margin-left: 3rem;
     }
   }
 
   &__items {
-    align-self: flex-end;
     display: flex;
     justify-content: space-around;
     margin: 0;
     padding: 0;
-    position: absolute;
-    right: 0;
+  }
+
+  &__toggle {
+    align-self: flex-end;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    height: 3rem;
+    outline: none;
+    width: 3rem;
+
+    .js-is-darkmode & {
+      fill: #fff;
+    }
 
     @include media-query($width-small) {
-      left: 5rem;
-      right: auto;
-      top: 1.2rem;
+      height: 5rem;
     }
 
     @include media-query($width-medium) {
-      left: 11rem;
-      top: 3.75rem;
+      height: 10rem;
     }
   }
 
@@ -80,6 +100,10 @@
     font-size: 1rem;
     padding: 0 0.25rem;
 
+    .js-is-darkmode & {
+      color: #f1bbd5 !important;
+    }
+
     @include media-query($width-small) {
       padding: 0 1rem;
     }
@@ -87,6 +111,23 @@
     @include media-query($width-medium) {
       font-size: 1.2rem;
       padding: 0;
+    }
+  }
+
+  &__links-wrapper {
+    align-items: center;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+
+    @include media-query($width-small) {
+      height: 5rem;
+      width: calc(100% - 5rem);
+    }
+
+    @include media-query($width-medium) {
+      height: 10rem;
+      width: calc(100% - 10rem);
     }
   }
 }
@@ -102,6 +143,10 @@
   width: 3rem;
   z-index: 2;
 
+  .js-is-darkmode & {
+    border-color: #fff;
+  }
+
   @include media-query($width-small) {
     border-width: 7px;
     height: 5rem;
@@ -116,6 +161,7 @@
 
   &__title {
     font-size: 2rem;
+    margin: 0;
     text-align: center;
     text-transform: uppercase;
 

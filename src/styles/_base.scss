@@ -8,6 +8,10 @@ body {
   font-family: $font-family-default;
   line-height: 1.5;
   text-size-adjust: 100%;
+  &.js-is-darkmode {
+    background-color: #162447;
+    color: #fff;
+  }
 }
 
 h2,
@@ -104,12 +108,20 @@ p {
 
 a {
   text-decoration: none;
+
+  .js-is-darkmode & {
+    color: #e43f5a;
+  }
+
   &:hover {
     text-decoration-line: underline;
   }
 
   &:visited {
     color: #0000ff;
+    .js-is-darkmode & {
+      color: #e43f5a;
+    }
   }
 
   .post__content & {
