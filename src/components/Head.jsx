@@ -5,7 +5,11 @@ import Helmet from 'react-helmet'
 export const Header = ({
   gtmInlineScript = "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-73077309-1');",
 }) => (
-  <Helmet>
+  <Helmet
+    htmlAttributes={{
+      lang: 'en',
+    }}
+  >
     <meta name='robots' content='index,follow' />
     <meta property='og:locale' content='en_US' />
     <link href='https://jeffry.in/assets/favicon.png' rel='icon' />
@@ -19,6 +23,8 @@ export const Header = ({
     />
     <meta name='theme-color' content='#ffffcc' />
     <link rel='manifest' href='https://yowainwright.imgix.net/manifest.json' />
+    <meta name='description' content='Jeffry.in is the blog of Jeffry Wainwright, an engineer living in California.' />
+    <meta name='twitter:card' content='summary_large_image' />
     <meta name='twitter:card' content='summary_large_image' />
     <meta name='twitter:site' content='@yowainwright' />
     <meta name='twitter:creator' content='@yowainwright' />

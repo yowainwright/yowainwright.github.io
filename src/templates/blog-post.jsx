@@ -16,6 +16,7 @@ export default function BlogPostTemplate({
     <Layout>
       <article className='post__article'>
         <Helmet title={`${title} | Jeffry.in`}>
+          <meta name='description' content={`${meta}`} />
           <meta name='twitter:description' property='og:description' content={`${meta}`} />
           <link rel='canonical' href={`${path}`} itemProp='url' />
           <meta name='twitter:url' property='og:url' content={`${path}`} />
