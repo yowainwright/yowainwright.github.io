@@ -121,22 +121,4 @@
       }
     }
   }
-
-  &--squares {
-    @include media-query($width-small) {
-      padding-top: 1rem;
-      display: grid;
-      grid-gap: 2rem;
-      grid-template-columns: auto auto;
-    }
-
-    @include media-query($width-medium) {
-      grid-template-columns: auto auto auto;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-  }
 }

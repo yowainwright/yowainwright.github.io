@@ -1,12 +1,3 @@
-.break-three-dots {
-  font-size: 2rem;
-  text-align: center;
-
-  @include media-query($width-medium) {
-    font-size: 4rem;
-  }
-}
-
 .main {
   &--404 {
     text-align: center;
