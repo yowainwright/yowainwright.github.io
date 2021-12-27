@@ -149,6 +149,9 @@ blockquote {
       position: absolute;
       top: -2rem;
       left: -1rem;
+      .js-is-darkmode & {
+        color: #fff;
+      }
     }
 
     @include media-query($width-small) {
@@ -159,7 +162,7 @@ blockquote {
 }
 
 figure {
-  margin: 3rem -1rem;
+  margin: 3rem -1.25rem;
   @include media-query($width-small) {
     margin: 3rem 0;
   }
