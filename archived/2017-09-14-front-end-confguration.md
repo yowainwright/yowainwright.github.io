@@ -4,8 +4,7 @@ date: "2017-09-14"
 layout: post
 readNext: "/"
 path: "/frontend-prototype-configuration/"
-meta: This posts digs into front end configuration for the purposes of prototyping.
-featured_image: "https://yowainwright.imgix.net/configuration/prototype-configuration-cropped.jpg"
+meta: 'This posts digs into front end configuration for the purposes of prototyping.'
 categories:
 - javascript
 ---

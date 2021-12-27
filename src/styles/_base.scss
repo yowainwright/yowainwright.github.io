@@ -149,6 +149,9 @@ blockquote {
       position: absolute;
       top: -2rem;
       left: -1rem;
+      .js-is-darkmode & {
+        color: #fff;
+      }
     }
 
     @include media-query($width-small) {
@@ -159,7 +162,7 @@ blockquote {
 }
 
 figure {
-  margin: 3rem -1rem;
+  margin: 3rem -1.25rem;
   @include media-query($width-small) {
     margin: 3rem 0;
   }
@@ -254,168 +257,6 @@ tr {
   }
 }
 
-// @todo these styles are repeated and can be improved!
-
-.intro {
-  margin: 3rem auto;
-  max-width: calc(100% - 2rem);
-  &--archives-bottom {
-    margin-bottom: 0;
-  }
-
-  @include media-query($width-small) {
-    margin-top: 0;
-    max-width: 80%;
-    &--archives-bottom {
-      margin-top: 3rem;
-    }
-  }
-  @include media-query($width-medium) {
-    max-width: 70%;
-  }
-
-  &__description {
-    background: #f9f9f9;
-    border-radius: 0 2rem 2rem 0;
-    font-size: 1.2rem;
-    font-weight: normal;
-    line-height: 1.8;
-    margin-top: 3rem;
-    padding: 1.5rem 1rem;
-    width: 70%;
-
-    @include media-query($width-medium) {
-      margin-top: 0;
-      padding: 1.5rem 2.5rem;
-      width: 50%;
-    }
-  }
-
-  &__general {
-    margin-bottom: 0;
-  }
-}
-
-.line {
-  border: 0;
-  margin-bottom: 0;
-
-  &--40 {
-    max-width: 40%;
-  }
-
-  &--intro {
-    margin-left: 0;
-  }
-
-  &--footer {
-    margin-left: 1rem;
-    @include media-query($width-small) {
-      margin-left: 10%;
-    }
-  }
-
-  &--aside {
-    margin-bottom: 2rem;
-  }
-
-  &--squiggles {
-    height: 2rem;
-    overflow: hidden;
-    position: relative;
-
-    &:after,
-    &:before {
-      background: radial-gradient(
-        1rem,
-        transparent,
-        transparent 0.25rem,
-        black 0.25rem,
-        black 0.625rem,
-        transparent 0.6875rem
-      );
-      background-size: 1.9rem 2.5rem;
-      content: ' ';
-      height: 1.2rem;
-      left: 0;
-      position: absolute;
-      width: 100%;
-    }
-
-    &:after {
-      background-position: 0 -1.2rem;
-      left: -0.95rem;
-      top: 1.2rem;
-      width: 110%;
-    }
-  }
-}
-
-.character {
-  display: inline-block;
-  height: 2.5rem;
-  position: relative;
-  width: 2.5rem;
-
-  @include media-query($width-medium) {
-    height: 4.2rem;
-    margin-left: -0.5rem;
-    top: 0.2rem;
-    width: 4.2rem;
-  }
-
-  &__container {
-    animation: spin 3s linear infinite;
-    display: flex;
-    flex-direction: column;
-    height: 2.5rem;
-    justify-content: center;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 2.5rem;
-
-    @include media-query($width-medium) {
-      left: 0;
-      height: 4.4rem;
-      top: -0.15rem;
-      width: 4.2rem;
-    }
-  }
-
-  &__item {
-    display: block;
-    font-style: normal;
-    height: 2.5rem;
-    line-height: 1;
-    position: absolute;
-    width: 2.5rem;
-
-    @include media-query($width-medium) {
-      font-size: 4rem;
-      height: 4.7rem;
-      left: -0.5rem;
-      width: 4.8rem;
-    }
-  }
-}
-@-moz-keyframes spin {
-  100% {
-    -moz-transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
 .section {
   margin: 0 auto;
   max-width: calc(100% - 2rem);
@@ -428,35 +269,10 @@ tr {
   @include media-query($width-medium) {
     max-width: 70%;
   }
-
-  &--resume-link {
-    display: none;
-    @include media-query($width-medium) {
-      display: block;
-      margin-top: 2rem;
-      max-width: 90%;
-      height: 3.5rem;
-    }
-  }
-
   &--intro {
     margin-top: 4rem;
     @include media-query($width-small) {
       margin-top: 0;
     }
-  }
-}
-
-.link {
-  &--resume {
-    background: #000;
-    border-radius: 0.5rem;
-    color: #fff !important;
-    display: block;
-    padding: 1rem 0;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    width: 7rem;
   }
 }

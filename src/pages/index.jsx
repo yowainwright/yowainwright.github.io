@@ -14,7 +14,7 @@ function PostsRow({ posts }) {
       },
       i,
     ) =>
-      !(i > 7) && !['/404/', '/about', '/about/', '/styleguide/', '/resume', '/resume/'].includes(path) ? (
+      !(i > 7) && !['/404/', '/about', '/about/', '/resume', '/resume/'].includes(path) ? (
         <BasicPost key={i} date={date} description={meta} path={path} title={title} />
       ) : null,
   )
@@ -34,10 +34,8 @@ export default function BlogIndex({
           <meta name='twitter:url' property='og:url' content='https://jeffry.in' />
           <meta name='twitter:title' property='og:title' content={title} />
         </Helmet>
-        <section className='section section--intro intro'>
-          <h1 className='intro__title'>
-            I used to stand for something but now it is just because someone stole my chair. 💺{' '}
-          </h1>
+        <section className='section section--intro'>
+          <h1>I used to stand for something but now it is just because someone stole my chair. 💺 </h1>
         </section>
         <section className='section section--posts'>
           <div className='posts--basic'>

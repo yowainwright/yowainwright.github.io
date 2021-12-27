@@ -2,49 +2,7 @@
   list-style-type: none;
   padding: 0;
 
-  .social-nav & {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: calc(100% - 2rem);
-    width: 100%;
-
-    @include media-query($width-medium) {
-      justify-content: initial;
-    }
-    @include media-query($width-large) {
-      max-width: 90%;
-    }
-  }
-
   &__item {
     margin: 0;
-
-    .social-nav & {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 1.75rem;
-      line-height: 0.8;
-      padding: 0 0.2rem;
-      @include media-query($width-small) {
-        padding: 0 1rem;
-      }
-    }
   }
-
-  &__link {
-    .social-nav & {
-      color: white;
-      font-family: sans-serif;
-      font-size: 0.6rem;
-      font-weight: bold;
-      letter-spacing: 0.15rem;
-      text-transform: uppercase;
-    }
-  }
-}
-
-.social-nav {
-  background-color: #000;
 }

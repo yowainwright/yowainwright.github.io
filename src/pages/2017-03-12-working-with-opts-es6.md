@@ -16,7 +16,6 @@ categories:
 ---
 
 Open source plugin code can become confusing. After writing a few open source plugins, I've realized that readability is very important to get help and make code better. One area where readability becomes confusing is options code. In this short post, I will go over options code in JavaScript Plugins and how it can be improved. 
-{: .first-paragraph}
 
 ## What are options?
 

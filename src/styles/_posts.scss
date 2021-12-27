@@ -29,7 +29,7 @@
   }
 
   &__content {
-    max-width: calc(100vw - 2rem);
+    max-width: calc(100vw - 3rem);
   }
 
   &--headline {
@@ -119,24 +119,6 @@
       p {
         margin-bottom: 0;
       }
-    }
-  }
-
-  &--squares {
-    @include media-query($width-small) {
-      padding-top: 1rem;
-      display: grid;
-      grid-gap: 2rem;
-      grid-template-columns: auto auto;
-    }
-
-    @include media-query($width-medium) {
-      grid-template-columns: auto auto auto;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      line-height: 1.6;
     }
   }
 }
