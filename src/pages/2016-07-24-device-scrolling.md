@@ -14,7 +14,6 @@ categories:
 ---
 
 Although navigations stuck to the top of browser windows are sometimes scrutinized, their relevance on webpages cannot easily be overlooked. Recently, I was challenged to make some sticky items that were fairly complex so I decided to write a plugin that would work for me & my use cases called [Sticky Bits](https://github.com/yowainwright/sticky-bits).
-{: .first-paragraph}
 
 > `*position: fixed` is a css rule for sticky navigation which positions `html elements` at a fixed point on the page.
 
