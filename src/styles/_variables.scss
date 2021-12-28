@@ -3,36 +3,13 @@ $font-family-default: 'Roboto', serif;
 $font-family-headline: serif;
 $font-size-default: 1rem !default;
 
-// color palette
-// ----
-// link: https://toolness.github.io/accessible-color-matrix/?n=white&n=&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=FFF7DC&v=DA334B&v=B6A763&v=1C304A&v=000000
-// ----
-// new colors
-$color-white: #fff;
-$color-yellow: #fff7dc;
-$color-red: #da334b;
-$color-gold: #b6a763;
-$color-navy: #1c304a;
-$color-black: #000;
-
-// old colors
-$color-grey: #828282;
-$color-grey-light: #aaa;
-$color-grey-lighter: #ccc;
-$color-grey-lightest: #f2f2f2;
-$color-yellow-light: $color-yellow;
-$color-pink: #f7e7f6;
-
-$conversion-number: 16;
 // spacing
 $spacing-unit: 1rem !default;
 $spacing-unit-small: 0.5rem !default;
 $spacing-unit-large: 2rem;
+
 // queries
 $width-default: 35rem !default;
-$width-reader: $width-default;
-$width-large: 75rem !default;
 $width-medium: 62rem !default;
 $width-small: 48rem !default;
 $width-x-small: 30rem !default;
-$calc-max-width: calc(#{$width-default} - 2rem);
