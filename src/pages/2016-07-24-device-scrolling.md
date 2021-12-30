@@ -20,7 +20,6 @@ Although navigations stuck to the top of browser windows are sometimes scrutiniz
 Sticky Navigation in my purview became more relevant with an implementation of [scrollspy](http://v4-alpha.getbootstrap.com/components/scrollspy/) by bootstrap years ago. It seemed that providing users with visual queues became expected by users or by companies to provide location & extra navigation to users on webpages. `Triggers` that set a navigation's position to stick & change vary throughout many web experiences so I'm only going to focus on a few things that I've seen.
 
 ### Browser sticky navigation
-{: #device-fixed-position }
 
 *Sticky navigation:* This is when a navigation is sticky to the top of a webpage from the start. This is typically done when setting an element to `position: fixed` & then either setting adding a `margin-top` to the next sibling element that is equal to the height of the fixed navigation or adding an `element` that wraps the sticky nav & then has a height that is set to the height of the fixed navigation.
 
