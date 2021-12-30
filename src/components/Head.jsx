@@ -10,7 +10,7 @@ export const Header = () => (
   >
     <meta name='robots' content='index,follow' />
     <meta property='og:locale' content='en_US' />
-    <link href='https://yowainwright.imgix.net/assets/favicon.png' rel='icon' />
+    <link href='https://yowainwright.imgix.net/favicon.png' rel='icon' />
     <link href='https://yowainwright.imgix.net/apple-icon-120x120.png' rel='apple-touch-icon' itemProp='logo' />
     <link rel='preconnect' href='https://fonts.googleapis.com' />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin></link>
