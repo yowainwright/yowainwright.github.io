@@ -31,8 +31,8 @@ export const Header = () => (
     <meta property='og:image:height' content='600' />
     <meta name='google-site-verification' content='cXTq9c3NhBvHJsPXxzWAYAqbB8PRUKUxemU8mykg_vs' />
 
-    {/* <script src='https://www.googletagmanager.com/gtag/js?id=UA-73077309-1' defer />
-    <script src='https://yowainwright.imgix.net/data-layer.js' defer /> */}
+    <script src='https://www.googletagmanager.com/gtag/js?id=UA-73077309-1' defer />
+    <script src='https://yowainwright.imgix.net/data-layer.js' defer />
   </Helmet>
 )
 

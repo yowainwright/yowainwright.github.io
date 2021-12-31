@@ -261,6 +261,7 @@ tr {
   margin: 0 auto;
   max-width: calc(100% - 2rem);
   position: relative;
+  width: 100%;
 
   @include media-query($width-small) {
     max-width: 80%;

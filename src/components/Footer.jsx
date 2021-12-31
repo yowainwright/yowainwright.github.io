@@ -24,9 +24,9 @@ export const Footer = () => (
         <figure className='site-footer__figure'>
           <img
             className='media--circular site-footer__image'
-            src='https://yowainwright.imgix.net/portraits/me-smiling.jpg?w=500&h=500&fit=crop&auto=format'
+            src='https://yowainwright.imgix.net/portraits/me-smiling.jpg?w=150&h=150&fit=crop&auto=format'
             height='100%'
-            width='auto'
+            width='100%'
             alt='Me smiling with a beard'
           />
           <figcaption className='site-footer__caption'>
