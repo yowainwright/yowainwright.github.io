@@ -105,6 +105,9 @@
     "prepare": "husky install",
     "test": "yarn lint"
   },
+  "resolutions": {
+    "postcss": "^8.2.13"
+  },
   "config": {
     "commitizen": {
       "path": "node_modules/@commitlint/prompt"
