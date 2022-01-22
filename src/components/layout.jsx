@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useReducer, useState } from 'react'
+import React, { createContext, useEffect, useReducer } from 'react'
 import Head from './Head'
 import Header from './Header'
 import Footer from './Footer'
@@ -15,27 +15,28 @@ export function isLoadingDarkmode() {
 
 export const initialState = {
   isDarkMode: false,
+  isLoaded: false,
 }
 
 export function reducer(state, { payload, type }) {
+  console.log({ state })
   switch (type) {
     case 'SET_IS_DARKMODE':
       return { ...state, isDarkMode: payload }
+    case 'SET_IS_LOADED':
+      return { ...state, isLoaded: payload }
     default:
       return state
   }
 }
 
-export const Template = ({ children, initialState = {} }) => {
-  const [isLoaded, setIsLoaded] = useState(false)
+export const Template = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
   useEffect(() => {
-    if (!isLoaded) {
-      console.log('here')
-      dispatch({ type: 'SET_IS_DARKMODE', payload: isLoadingDarkmode() })
-      setIsLoaded(true)
-    }
-  }, [isLoaded, setIsLoaded])
+    if (state.isLoaded) return
+    dispatch({ type: 'SET_IS_LOADED', payload: true })
+    dispatch({ type: 'SET_IS_DARKMODE', payload: isLoadingDarkmode() })
+  }, [state.isLoaded])
 
   useEffect(() => {
     const body = document.querySelector('body')
