@@ -63,7 +63,7 @@ JavaScript has the ability to be used for everything does not mean that great th
 
 #### JS do some server stuff
 
-```shell
+```bashell
 # crack open a shell (on a mac )
 # lines below assumes homebrew is not installed and neither is node
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" &&
