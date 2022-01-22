@@ -1,57 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'gatsby'
 import { Moon } from './svg/Moon'
 import { Sun } from './svg/Sun'
+import { navItems } from '../fixtures/navigation'
+import { DispatchStore, GlobalState } from './layout'
 
-export const navItems = [
-  {
-    alias: 'about',
-    name: 'About',
-    path: '/about/',
-  },
-  {
-    alias: 'archive',
-    name: 'Archive',
-    path: '/archive/',
-  },
-  {
-    alias: 'resume',
-    name: 'Resume',
-    path: '/resume/',
-  },
-]
+export const Icon = ({ isDarkMode }) => (isDarkMode ? <Sun /> : <Moon />)
 
-export function Icon({ isDarkMode }) {
-  if (isDarkMode) {
-    return <Sun />
-  }
-
-  return <Moon />
-}
-
-export const isLoadingDarkmode = () => {
-  if (typeof window === 'undefined') return false
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? true : false
-}
-
-export const DarkmodeToggle = () => {
-  const prefersDarkMode = isLoadingDarkmode()
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isDarkMode, seIsDarkMode] = useState(prefersDarkMode)
-
-  useEffect(() => {
-    if (!isLoaded) {
-      setIsLoaded(true)
-      if (prefersDarkMode) {
-        document.body.classList.add('js-is-darkmode')
-      }
-    }
-  }, [isLoaded, setIsLoaded])
-
+export function DarkmodeToggle() {
+  const { isDarkMode } = useContext(GlobalState)
+  const dispatch = useContext(DispatchStore)
   function handleToggle() {
-    const body = document.querySelector('body')
-    body.classList.toggle('js-is-darkmode')
-    seIsDarkMode(!isDarkMode)
+    dispatch({ type: 'SET_IS_DARKMODE', payload: !isDarkMode })
   }
 
   return (
@@ -61,22 +21,26 @@ export const DarkmodeToggle = () => {
   )
 }
 
-export const NavList = ({ componentName, navItems }) => (
-  <ol className={`${componentName}__items`}>
-    {navItems.map(({ alias, name, path }, i) => {
-      return (
-        <li key={i} className={`${componentName}__item ${componentName}__item--${alias}`}>
-          <Link className={`${componentName}__link ${componentName}__link--${alias}`} to={path}>
-            {name}
-          </Link>
-        </li>
-      )
-    })}
-  </ol>
+export const NavItem = ({ alias, componentName, name, path }) => (
+  <li className={`${componentName}__item ${componentName}__item--${alias}`}>
+    <Link className={`${componentName}__link ${componentName}__link--${alias}`} to={path}>
+      {name}
+    </Link>
+  </li>
 )
 
-export const Header = () => (
-  <>
+export function NavList({ componentName, navItems }) {
+  return (
+    <ul className={`${componentName}__items`}>
+      {navItems.map(({ alias, name, path }, i) => (
+        <NavItem key={i} alias={alias} componentName={componentName} name={name} path={path} />
+      ))}
+    </ul>
+  )
+}
+
+export function Header() {
+  return (
     <nav id='site-nav' className='site-nav' role='navigation' itemType='http://schema.org/SiteNavigationElement'>
       <section className='site-nav__container'>
         <Link to='/' className='logo'>
@@ -88,7 +52,7 @@ export const Header = () => (
         </div>
       </section>
     </nav>
-  </>
-)
+  )
+}
 
 export default Header
