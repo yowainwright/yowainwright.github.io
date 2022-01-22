@@ -23,7 +23,7 @@ This means that the program is designed to be run in a terminal application and 
 
 ## Parts of a CLI program
 
-CLI programs generally contain 1 to 4 parts or keyword/phrases/acronyms to defined how the program is to be executed. 
+CLI programs generally contain 1 to 4 parts or keyword/phrases/acronyms to define how the program is to be executed. 
 
 1. The `name` of the program
 2. The `arguments` the program takes
@@ -39,7 +39,7 @@ CLI programs generally contain 1 to 4 parts or keyword/phrases/acronyms to defin
 
 CLI programs always have a name! By entering in only a cli program's name, if a CLI is defined, it should execute some response.
 
-```sh
+```bash
 $ <cli-name>
 # ie => npm
 # logs a list of npm commands
@@ -49,7 +49,7 @@ $ <cli-name>
 
 Arguments are key words passed into a CLI program to define how the CLI program should be run. Arguments are a required parameters.
 
-```sh
+```bash
 $ <cli-name> <cli-argument>
 # ie => npm init
 # prompts to setup a `package.json` file
@@ -59,13 +59,13 @@ $ <cli-name> <cli-argument>
 
 Options are optional arguments that can be passed into a CLI program. Options are optional parameters.
 
-```sh
+```bash
 $ <cli-name> <cli-argument> --<option> <optional-option-input>
 # ie => npm install --save-dev lodash
 # installs lodash as a dev dependency
 ```
 
-```sh
+```bash
 $ <cli-name> <cli-argument> --<option>
 # ie => npm install --frozen-lockfile
 # installs the frozen lockfile
@@ -103,21 +103,21 @@ While writing this blog post, I realized there were some subtle nuances I should
 
 In example, with npm:
 
-```sh
+```bash
 $ npm install
 # installs all dependencies
 ```
 
 While
 
-```sh
+```bash
 $ npm install lodash --save-dev
 # installs lodash as a dev dependency
 ```
 
 But 
 
-```sh
+```bash
 $ npm install lodash
 # only installs all previously installed dependencies
 ```

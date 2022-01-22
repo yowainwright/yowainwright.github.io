@@ -22,7 +22,7 @@ This post will troubleshoot minor issues I had setting up [Gatsby](https://www.g
 
 After cloning a Gatsby repo, I attempted the setting Gatsby development to write this post as I'd done before. 
 
-```sh
+```bash
 nvm i && yarn && yarn develop
 ```
 
@@ -47,7 +47,7 @@ After setting up Homebrew, formulas must be installed for Sharp or other package
 
 Specificallly, I believe I had to install [Vips](https://formulae.brew.sh/formula/vips):
 
-```sh
+```bash
 brew install node vips
 ```
 
@@ -57,7 +57,7 @@ After installing the necessary Homebrew formulas for Sharp to work, I needed to 
 
 To clear my Gatsby app, I ran:
 
-```sh
+```bash
 rimraf node_modules .cache public
 # or if you don't have rimraf globally installed
 rm -rf node_modules .cache public
@@ -65,7 +65,7 @@ rm -rf node_modules .cache public
 
 And then re-installed:
 
-```sh
+```bash
 yarn
 # or via npm
 npm i
@@ -75,7 +75,7 @@ pnpm i
 
 And then re-built my Gatsby app:
 
-```sh
+```bash
 yarn start
 ```
 

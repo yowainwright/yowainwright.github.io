@@ -1,8 +1,8 @@
 export const navItems = [
   {
-    alias: 'home',
-    name: 'Jeffry.in',
-    path: '/',
+    alias: 'resume',
+    name: 'Resume',
+    path: '/resume/',
   },
   {
     alias: 'archive',
