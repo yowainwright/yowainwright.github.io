@@ -27,21 +27,24 @@ I think of a CLI as short sentence of intructions written to be easy for a compu
 
 ## Parts of a CLI
 
-CLIs generally contain 1 to 3 parts or keyword/phrases/acronyms to define how the program is to be executed. 
+CLIs generally contain 2 to 4 parts or keyword/phrases/acronyms to define how the program is to be executed. At the bare minimum, there's the CLI command and the action the command runs.
+
+CLI commands generally consist of 3 parts.
 
 1. The `name` of the CLI
 2. THe `arguments` it takes
 3. The `options` it takes
 
-### Actions 
-
-Additionally, **actions** are functions that get invoked when the CLI runs. Actions take in CLI `arguments` and/or `options` as function arguments.
-
+This is what it looks like to run a CLI command
 
 ```bash
 <name> <argument> --<option> <optional-option-input> --<option>
 # note: if an option is passed in without an option input, it will be interpreted as a boolean
 ```
+
+The invisible but most important parts of CLI are the actions. CLI actions are functions that get invoked when a CLI command runs. Actions take in CLI command `arguments` and/or `options` as function arguments. 
+
+Let's explore the parts of a CLI more below!
 
 ## Name
 
