@@ -16,6 +16,8 @@ Many people that have done semi-technical computer work have seen, used, or made
 
 This post goes into the basics of most CLI programs (CLIs) I've seen. I decided to write this post after realizing that thinking about the basics of a CLI has helped me use and make them more effectively. 
 
+---
+
 ## Definition of a CLI program
 
 By definition, a CLI (Command Line Interface) is a program designed to run from a command line. 
@@ -25,12 +27,16 @@ I think of a CLI as short sentence of intructions written to be easy for a compu
 
 ## Parts of a CLI
 
-CLIs generally contain 1 to 4 parts or keyword/phrases/acronyms to define how the program is to be executed. 
+CLIs generally contain 1 to 3 parts or keyword/phrases/acronyms to define how the program is to be executed. 
 
 1. The `name` of the CLI
 2. THe `arguments` it takes
 3. The `options` it takes
-4. The `actions` it executes
+
+### Actions 
+
+Additionally, **actions** are functions that get invoked when the CLI runs. Actions take in CLI `arguments` and/or `options` as function arguments.
+
 
 ```bash
 <name> <argument> --<option> <optional-option-input> --<option>
@@ -80,7 +86,15 @@ Actions consist of the code that is executed when a CLI is run. Actions are gene
 Here's an example of CLI with its action above it:
 
 ```typescript
-**
+!/usr/bin/env node
+// ^ Used to specify how the file is to be executed
+
+const { program } = require("commander");
+const { version } = require("../package.json");
+const { script } = require("./script");
+import { Options } from "./types";
+
+/**
  * action
  * @param {Options} options
  */
