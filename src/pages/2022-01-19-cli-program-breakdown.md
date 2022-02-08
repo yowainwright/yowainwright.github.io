@@ -1,10 +1,10 @@
 ---
-title: Understanding the basics parts of a CLI program
+title: Understanding the basics parts of a CLI command
 date: '2022-01-19'
 layout: post
 readNext: '/'
 path: '/cli-program-basic-parts/'
-meta: "This brief article digs into the basics of most CLI programs including a summary of the program's name, arguments, options, and actions."
+meta: "This brief article digs into the basics of most CLI commands including a summary of the commands's name, arguments, options, and actions."
 featured_image: null
 post_type: technical
 categories:
@@ -12,24 +12,26 @@ categories:
   - javascript
 ---
 
-Many people that have done semi-technical computer work have seen, used, or made a CLI program. 
+Many people that have done semi-technical computer work have seen, used, or made a CLI command.
 
-This post goes into the basics of most CLI programs (CLIs) I've seen. I decided to write this post after realizing that thinking about the basics of a CLI has helped me use and make them more effectively. 
+This post goes into the basics of most CLI commands.
+I decided to write this post after realizing that thinking about the basics of a CLI command has helped me use and make them more effectively.
 
 ---
 
 ## Definition of a CLI program
 
-By definition, a CLI (Command Line Interface) is a program designed to run from a command line. 
-This means that the program is designed to be run in a terminal application and not in a web browser or GUI (graphical user interface) application.
+By definition, a CLI (Command Line Interface) command is a program designed to run from a command line.
+This means that the command is designed to be run in a terminal application and not in a web browser or GUI (graphical user interface) application.
 
-I think of a CLI as short sentence of intructions written to be easy for a computer to understand but still readable for humans too. 
+I think of a CLI as short sentence of intructions written to be easy for a computer to understand but still readable for humans too.
 
-## Parts of a CLI
+## Parts of a CLI Command
 
-CLIs generally contain 2 to 4 parts or keyword/phrases/acronyms to define how the program is to be executed. At the bare minimum, there's the CLI command and the action the command runs.
+CLIs use keyword/phrases/acronyms to define how the command is to be executed.
+At the bare minimum, there's the CLI command name and the action the command runs.
 
-CLI commands generally consist of 3 parts.
+CLI commands mainly consist of 3 parts.
 
 1. The `name` of the CLI
 2. THe `arguments` it takes
@@ -42,13 +44,15 @@ This is what it looks like to run a CLI command
 # note: if an option is passed in without an option input, it will be interpreted as a boolean
 ```
 
-The invisible but most important parts of CLI are the actions. CLI actions are functions that get invoked when a CLI command runs. Actions take in CLI command `arguments` and/or `options` as function arguments. 
+The invisible but most important part of a CLI command is its action.
+The CLI command action is a function that get invoked when a CLI command is executed.
+Actions take in CLI command `arguments` and/or `options` as function arguments.
 
-Let's explore the parts of a CLI more below!
+Let's explore the parts of a CLI command more below!
 
 ## Name
 
-CLIs always have a name! By entering in only a CLI's name, if a CLI is defined, it should execute.
+CLI commands always have a name! By entering in only a CLI's name, if a CLI is defined, it should execute.
 
 ```bash
 $ <cli-name>
@@ -58,7 +62,8 @@ $ <cli-name>
 
 ## Arguments
 
-Arguments are keywords passed into a CLI to define how the CLI should be run. Arguments are required parameters.
+Arguments are keywords passed into a CLI to define how the CLI should be run.
+Arguments are required parameters.
 
 ```bash
 $ <cli-name> <cli-argument>
@@ -68,7 +73,8 @@ $ <cli-name> <cli-argument>
 
 ## Options
 
-Options are optional arguments that can be passed into a CLI. Options are optional parameters.
+Options are optional arguments that can be passed into a CLI.
+Options are optional parameters.
 
 ```bash
 $ <cli-name> <cli-argument> --<option> <optional-option-input>
@@ -84,9 +90,10 @@ $ <cli-name> <cli-argument> --<option>
 
 ## Actions
 
-Actions consist of the code that is executed when a CLI is run. Actions are generally functions which take in the CLIs arguments and options which define how the CLI should be run.
+Actions consist of the code that is executed when a CLI is run.
+Actions are functions which take in the CLIs arguments and options which define how the CLI should be run.
 
-Here's an example of CLI with its action above it:
+Here's an example of CLI command with its action above it:
 
 ```typescript
 !/usr/bin/env node
@@ -116,9 +123,9 @@ program
   .parse(process.argv);
 ```
 
-## Some nuances of CLIs
+## Some nuances of CLI commands
 
-While writing this blog post, I realized there were some subtle nuances that might be useful to clarify regarding CLI arguments. 
+While writing this blog post, I realized there were some subtle nuances that might be useful to clarify regarding CLI command arguments.
 
 In example, with popular npm CLI:
 
@@ -134,23 +141,27 @@ $ npm install lodash --save-dev
 # installs lodash as a dev dependency
 ```
 
-But 
+But
 
 ```bash
 $ npm install lodash
-# only installs all previously installed dependencies
+# only installs all previously installed dependencies (not lodash!)
 ```
 
-Because it doesn't have the `--save-dev` or `--save` modifier to declare where the dependencies should be installed!
+This is because the command above doesn't have the `--save-dev` or `--save` boolean argument to declare where the `lodash` dependency should be installed!
+The CLI command, therefore, reads to the computer what it can read—aka `npm install`!
 
-This is _really_ confusing but the general principle remains the same. 
+This is _really_ confusing but the general principle remains the same.
 
 ## Final thoughts
 
-Taking the time to understand the basic parts of CLIs can be a powerful tool for anything technical. I imagine that anything done with code, has CLI tools to optimize it's use at some level. By being able to write and leverage CLIs users can traverse across any technical landscape and/or program language quickly and easily with the basic capability CLIs provide. 
+Taking the time to understand the basic parts of a CLI command is powerful thing keep in mind.
+Most things done with code are accompanied by CLI commands to optimize their use.
+By being able to leverage and understand CLI commands, users can traverse across many technical landscapes and programming language.
 
 ---
 
-I've written several CLIs for various jobs. This is my most used open source CLI, [es-check](https://www.npmjs.com/package/es-check). I still have a lot to learn so please reach out if you observe something I've written is incorrect or could be communicated better.
+I've written several CLIs for various jobs. My most used open source CLI is [es-check](https://www.npmjs.com/package/es-check).
+I still have a lot to learn so please reach out if you observe something I've written that could be improved.
 
 Happy Hacking!
