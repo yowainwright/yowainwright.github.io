@@ -60,7 +60,7 @@ Object.fromEntries(cookies); // { key1: 'value1', key2: 'value2' }
 
 ## Cookie Updates (Nuance 2)
 
-Hint, a Cookie can not be updated. It can only be re-written!
+Hint, a Cookie cannot be updated. It can only be re-written!
 The good news is that because a cookie is only a string containing a key and value separated by a `=`, it is easy to find a replace with code.
 
 Lets see this in in action!
@@ -98,7 +98,7 @@ document.cookie; // '<key1>=<value1>;'
 ### Code Observation
 
 - Don't worry about creating a cookie string with attributes and not being able to filter it among cookies and attributes!
-- Do worry about writing tech spec which account for expires to only be re-written, not updated!
+- Do worry about writing tech spec which accounts for expires to only be re-written, not updated!
 - Remember cookie keys are are unique, in that if you assign a cookie with the same key, it will overwrite the other cookie!
 
 ## Final thoughts
