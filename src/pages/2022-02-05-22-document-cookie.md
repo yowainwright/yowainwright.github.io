@@ -1,5 +1,5 @@
 ---
-title: Document Cookies Are a Useful Used Tool With an Simple API With Some Nunaces
+title: Document Cookies Are a Useful Tool With A Simple API With Some Nunaces
 date: '2022-02-05'
 layout: post
 readNext: '/'
