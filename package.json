@@ -36,7 +36,7 @@
     "react-dropzone": "^12.0.2",
     "react-typography": "0.16.20",
     "sass": "1.49.7",
-    "sharp": "^0.30.0",
+    "sharp": "^0.30.1",
     "styled-components": "5.3.3",
     "typography": "0.16.21",
     "webpack": "5.68.0"
@@ -52,7 +52,7 @@
     "@babel/preset-react": "7.16.7",
     "@commitlint/cli": "16.1.0",
     "@commitlint/config-conventional": "16.0.0",
-    "@commitlint/prompt": "16.1.0",
+    "@commitlint/prompt": "16.2.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "27.5.1",
     "babel-loader": "8.2.3",
@@ -72,7 +72,7 @@
     "prismjs": "1.26.0",
     "react-helmet": "6.1.0",
     "regenerator-runtime": "0.13.9",
-    "stylelint": "14.4.0",
+    "stylelint": "14.5.0",
     "stylelint-config-dollarshaveclub": "8.0.0",
     "write-good": "1.0.8"
   },
