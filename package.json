@@ -1,7 +1,7 @@
 {
   "name": "Jeffry.in",
   "description": "Jeffry.in, Jeff Wainwright's blog",
-  "version": "2.9.1",
+  "version": "2.10.0",
   "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
   "bugs": {
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
@@ -52,7 +52,7 @@
     "@babel/preset-react": "7.16.7",
     "@commitlint/cli": "16.1.0",
     "@commitlint/config-conventional": "16.2.1",
-    "@commitlint/prompt": "16.1.0",
+    "@commitlint/prompt": "16.2.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "27.5.1",
     "babel-loader": "8.2.3",
