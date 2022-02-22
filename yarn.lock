@@ -7061,10 +7061,10 @@ gatsby-cli@^3.14.2:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^2.1.0"
 
-gatsby-codemods@3.7.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-3.7.0.tgz#f2627278eb76226a6f36d2edd47beba70b046571"
-  integrity sha512-PNE/7e4RlnWOdUVjTv3xp0sftNfPcLuIa4toOFrkS3WnycwQ9BTOJZGl2QdPJJm14NDaIMapp6ZoIkcwSyU6pA==
+gatsby-codemods@3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-3.8.0.tgz#722ab8c341d935d2d7c6780665e3cf429585daff"
+  integrity sha512-Rv/cYwLa3rK8qWBXGT6oDVCqCB/1CYvlrKBMyifxBAIlH8VyUPNMyp/zxO+XrRrrQvVznlXMAWa1qk9JwULN/Q==
   dependencies:
     "@babel/core" "^7.15.5"
     "@babel/plugin-proposal-class-properties" "^7.14.0"
@@ -7407,10 +7407,10 @@ gatsby-remark-autolink-headers@^4.4.1:
     mdast-util-to-string "^2.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-copy-linked-files@5.7.0:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.7.0.tgz#3a79f4f42d2c552e5c7cc13af22c7dc02d9869cb"
-  integrity sha512-6I7EQCeJBHO9El9PPIAFeWckbW7E5vt/oHEh4FGu/ZtOdUaaBQS8Xmm4zrX2bsoz0S+aWqqi76QPOWM48HVYWQ==
+gatsby-remark-copy-linked-files@5.8.0:
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.8.0.tgz#0f224fd9070c4f49814ae2ef7cbbc33c41415223"
+  integrity sha512-Xy4dDt+m6pzmYedEXNu3jkJ8PnT1yQ3QcMazyhmUDtGJ1k9PLIweQhcKcxoEwgMNBSlwTlQTqibADAu1eDhEVw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
