@@ -87,16 +87,38 @@ Snyk takes more control over dependency management and than Dependabot. It's ign
 
 I feel although Dependabot requires manual `dependabot.yml` updates, specifying ignores to specific dependencies that are causing errors is much clearer DevX. Being able to control cron jobs is useful too—so the repository isn't bombarded with pull requests all of the time. Snyks CLI is useful. Being able to search for dependency issues is great but the weirdness of setting up `ignores`: copying the Snyk specific error id and manually adding a time immediately takes away from the Snyk CLI.
 
-## Update Post Writing Most of this Article
+## Update—After Writing Most of this Article
 
 After writing most of this article, I downloaded the Snyk VSCode Extension. The Snyk VSCode extension doesn't disappoint. It provides the same feedback as Snyk's CLI, but via dialogue messages in a `package.json` file. It takes a bit for the `package.json` file to display the dialogues but once they're displayed, they're very useful.
 
 ## Conclusions
 
-Snyk provides useful interfaces for discovering security issues. I perceive Snyk's approach to require more context into it's software than what I'd like. All of it's issues are pinned to Snyk issues.
+Snyk provides useful interfaces for discovering security issues. I perceive Snyk's approach to require more context into _it's_ software than what I'd like. All of the issues it finds are pinned to Snyk issues.
+
+In example, this is how Snyk writes it's security issues
+
+```txt
+SNYK-JS-BROWSERSLIST-1090194
+```
 
 Dependabot provides ways to update dependencies. It provides updates or the ability to ignore updates based on the repository's dependencies—no need to have context into another interface—like Snyk.
 
-I prefer Dependabot's approach because it requires less context.
+```yml
+ignore:
+  - dependency-name: eslint
+    versions:
+    - 7.32.0
+```
 
-However, when considering how I work and how I update security vulnerabilities. Snyk's CLI and VSCode Plugin give me a way to make updates without needing to be aware of Github at all. All of this to write, both tools are cool but I find Dependabot's devX to be a bit better.
+I prefer Dependabot's approach because it requires less context and it's context relates specifically to the dependency used in the effected repository.
+
+However, when considering how I work and how I update security vulnerabilities, Snyk's CLI and VSCode Plugin give me a way to make updates without needing to be aware of Github at all which does assist me in keep my work off the browser and in the code.
+
+All of this to write, both tools are cool but I find Dependabot's devX to be a bit better. If Snyk's issues weren't specific to it's software, my opinion on which tool (Snyk or Dependabot) to choose for my personal projects would be harder to make.
+
+---
+
+Please keep in mind, I'm just a user! I use both tools everyday. I love that Snyk is pushing security forward.
+Please reach out if you have suggestions or to communicate something I'm wrong about in this post!
+
+Happy Hacking!
