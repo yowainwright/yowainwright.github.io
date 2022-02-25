@@ -13,23 +13,23 @@ categories:
   - security
 ---
 
-Snyk and Dependabot are dependency management tools. At an initial glance, they do the same thing. They both submit pull requests to updates a repository's dependencies. For this article, I will focus on each tool's config file and how the fit into a developers workflow and developer experience (DevX). More specifically, I will focus on the `ignore` section of their config files.
+Snyk and Dependabot are dependency management tools. At an initial glance, they do the same thing. They both submit pull requests to update a repository's dependencies. For this article, I will focus on each tool's config file and how the config file fits into developer workflow and developer experience (DevX). More specifically, I will focus on the `ignore` section of each dependency management tool's config file.
 
 ---
 
-**Quick note:** I use and like both Snyk and Dependabot. My perspective of the products is my opinion. I am happy to learn where I'm wrong and don't feel like a power user. However, I do use both tools everyday.
+**Quick note:** I use and like both Snyk and Dependabot. My perspective on each of the products is my opinion. I am happy to learn where I'm wrong and don't feel like a power user. However, I do use both tools everyday.
 
 ---
 
 ## Context
 
-Developer workflow and DevX are a key part of security and maintenance. If a developer enjoys the DevX of some code or coding tools, they'll be loyal to it and make it do things no one ever expected—see JavaScript for reference (yes, a joke). However, if a developer doesn't enjoy the DevX of some code or coding tool, they'll look for reasons and ways not to use it. DevX is key to explaining why I feel Dependabot's `dependabot.yml` is optimal to the `.snyk` file.
+Developer workflow and DevX are key parts of security and code maintenance. If a developer enjoys the DevX of some code or coding tools, they'll be loyal to it and make it do things no one ever expected—see JavaScript for reference (yes, a joke). However, if a developer doesn't enjoy the DevX of some code or coding tool, they'll look for reasons _and ways_ not to use it. DevX is key to explaining why I feel Dependabot's `dependabot.yml` is optimal to the `.snyk` file right now.
 
-It could be said that the `dependabot.yml` and `.snyk` files are so different they're not comparable. I don't disagree. However, for both config files, I use one feature specifically for security or saving time. The `ignore` sections! The `ignore` section of both config file types is used to specify to the tool, Snyk or Dependabot, modules of code to `ignore`—in example, an `ignore` has a list readable to the tool to not install a certain version of Lodash.
+It could be said that the `dependabot.yml` and `.snyk` files are so different they're not comparable. I don't disagree. However, for both config files, I use one feature specifically for security and saving time. The `ignore` sections! The `ignore` section of both config file types is used to specify to the tool (Snyk or Dependabot) modules of code to `ignore`.
 
 ## Snyk Ignore
 
-The `.snyk` `ignore` key is used along with the Snyk CLI. Ignores are used to ignore dependencies with anticipated security issues. This can be useful for a few reasons. First, `ignores` allow users to ignore dependencies that can't currently be updated. This can be useful when needing to do major updates to support a dependency's updates—think major version updates.  Second, `ignores` can help avoid Snyk misread security issues. For example, Snyk's CLI ignores Classic Yarn's (Yarn 1's) `resolutions` object within a `package.json` when assessing dependency security issues (2.15.22).
+The `.snyk` ignore key is used along with the Snyk CLI. Ignores are used to ignore dependencies with anticipated security issues. This can be useful for a few reasons. First, `ignores` allow users to ignore dependencies that can't currently be updated. This can be useful when needing to do major updates to support a dependency's updates—think major version updates.  Second, `ignores` can help avoid Snyk misread security issues. For example, Snyk's CLI ignores Classic Yarn's (Yarn 1's) `resolutions` object within a `package.json` when assessing dependency security issues (2.15.22).
 
 In the section below, there are a few code snippets to go along with my comments.
 ### Snyk CLI
@@ -59,7 +59,7 @@ If there is already a `.snyk` file, the new ignore is appended to the existing f
 
 ## Dependabot Ignore
 
-Dependabot doesn't have a CLI. Dependency updates are done using [cron jobs](https://en.wikipedia.org/wiki/Cron). Cron jobs can be set to run at specific times and intervals which are easily configurable via the `dependabot.yml` file. To edit ignores just update the `dependabot.yml` file. Ignores are specific dependency. You can supply specific version or you can  key off of a semver range.
+Dependabot doesn't have a CLI. Dependency updates are done using [cron jobs](https://en.wikipedia.org/wiki/Cron). Cron jobs can be set to run at specific times and intervals which are easily configurable via the `dependabot.yml` file. To edit dependabot ignores just update the `dependabot.yml` file. Ignores are specific dependency. You can supply a specific version of a dependency or you can key off of a semver range of versions.
 
 ```yaml
 version: 2
@@ -77,7 +77,7 @@ updates:
         update-types: ["version-update:semver-patch"]
 ```
 
-**Note:** in the `yaml` example above, dependencies are specified, versions are set, and an `update-types` is set to insure that dependencies are installed within a [patch]() version release of the specified dependency.
+**Note:** in the `yaml` example above, dependencies are specified, versions are set, and an `update-types` is set to insure that dependencies are installed within a patch version release of the specified dependency.
 
 ## Comparisons
 
