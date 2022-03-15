@@ -30,7 +30,7 @@ document.cookie = '<key>=<value>;';
 Reading cookies is very simple as well.
 
 ```javascript
-const cookies = new UrlSearchParams(document.cookie);
+const cookies = new UrlSearchParams(document.cookie.replaceAll('; ', '&'));
 cookies.get('<key>');
 ```
 
@@ -84,8 +84,23 @@ cookies.set('<key>', '<value>');
 - Cookies are separated by a `;` with the `cookies` string
 
 ---
+## Adding Multiple Cookies (Nuance 3)
 
-## Multiple Cookies (Nuance 3)
+When retrieving cookies, executing `console.log(document.cookie)`  will print all of the cookies on the document as key value pairs. In that same space, it isn’t far fetched to think multiple cookies could be added the same way—`document.cookie='foo=bar; biz=baz;'`. However, that could will only assign the first cookie.
+
+To add multiple cookies, each cookie must be added in a separate `document.cookie` assignment like the code block below.
+
+```javascript
+  [{ key: 'foo', value: 'bar' }, { key: 'biz', value: 'baz' }].forEach(({ key, value }) => document.cookie = `${key}=${value};`);
+  document.cookie; // 'foo=bar; biz=baz;'
+```
+
+### Code Observation
+
+- Add cookies one at a time with the `document.cookie="<key>=<value>;"` assignment
+- Read cookies all at the same time by logging `document.cookie`
+- Each cookie must be added by assigning a key value pair to `document.cookie`
+## Reading Multiple Added Cookies (Nuance 4)
 
 When assigning a cookie, attributes are added with the same value as the key and value pair `=`, and `;`.
 Weirdly, when retrieving cookies, each cookie represented by a key and value pair is also seperated by a `=`, and a `;`.
@@ -100,6 +115,25 @@ document.cookie; // '<key1>=<value1>;'
 - Don't worry about creating a cookie string with attributes and not being able to filter it among cookies and attributes!
 - Do worry about writing tech spec which accounts for expires to only be re-written, not updated!
 - Remember cookie keys are are unique, in that if you assign a cookie with the same key, it will overwrite the other cookie!
+## Deleting Cookies (Nuance 5)
+
+Deleting cookies is more complicated than expected. In order to delete the cookie, it must be assigned to no value as well as have its `Max-age` set to `-1`. It looks like this `document.cookie="foo=; Max-age=-1;";` . There is much discussion on Stackoverflow and the internet on the best way to delete cookies. Often the use of the setting the `expires` attribute to a date in the past is mentioned. However, defining a historical date seems more complex that setting a the Max-age to `-1`.
+
+```javascript
+  document.cookie = 'foo=bar;'; // foo=bar
+  document.cookie = 'foo=; Max-age=-1;'; // empty
+```
+
+### Code Observation
+
+- Delete cookies by assigning the cookie value to nothing and setting the Max-age or expires
+- `Max-age` looks like a cleaner way to delete cookies vs `expires`
+- Deleting cookies is can only be done 1 at a time, just like adding cookies
+
+### Browser Observations
+
+- If you only set the cookie value to empty (`document.cookie = "foo=;";`) (and don't set a Max-age or expires), the cookie will still display in the browser, but without value
+- If you set the cookie value to empty and set the max-age to -1, the cookie will not display in the browser and will be deleted completely (`document.cookie = "foo=;max-age=-1;";`)
 
 ## Final thoughts
 
