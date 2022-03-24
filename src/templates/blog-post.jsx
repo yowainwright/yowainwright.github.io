@@ -1,4 +1,5 @@
 import React from 'react'
+import { Giscus } from '@giscus/react';
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import { Share } from '../components/Share'
@@ -27,7 +28,21 @@ export default function BlogPostTemplate({
         {!['/about/', '/styleguide/', '/resume/'].includes(path) && <time className='post__time'>{date}</time>}
       </header>
       <section className='post__section'>
+        <div className='post__container'>
         <div className='post__content' dangerouslySetInnerHTML={{ __html: html }} />
+        <div className='post__giscus'>
+          <Giscus
+            repo="yowainwright/yowainwright.github.io"
+            repoId="MDEwOlJlcG9zaXRvcnkxNzA5MTY4Mg=="
+            category="General"
+            categoryId="DIC_kwDOAQTMYs4COQJE"
+            mapping="pathname"
+            reactionsEnabled="1"
+            emitMetadata="0"
+            theme="light"
+          />
+        </div>
+        </div>
         <aside className='aside'>
           <div className='aside__meta'>
             <header className='aside__header'>

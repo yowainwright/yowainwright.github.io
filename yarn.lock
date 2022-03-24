@@ -1423,6 +1423,11 @@
     querystring "^0.2.0"
     strip-ansi "^6.0.0"
 
+"@giscus/react@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@giscus/react/-/react-1.1.2.tgz#c97f06aab1272c0fbe567c69ebffe3bad7206e7a"
+  integrity sha512-htSAAiTtoHTRE8GqSSkWmT+Iq7LJhtqSmr+HjEC1cXlNd1WeLVZXjnuiIj7+L8DOUnAdfh+1FClN304FVxIcsQ==
+
 "@graphql-tools/batch-execute@^7.1.2":
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/@graphql-tools/batch-execute/-/batch-execute-7.1.2.tgz#35ba09a1e0f80f34f1ce111d23c40f039d4403a0"
