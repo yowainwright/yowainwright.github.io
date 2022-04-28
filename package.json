@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.17.9",
-    "core-js": "^3.22.2",
+    "core-js": "^3.22.3",
     "gatsby": "^3.14.6",
     "gatsby-codemods": "3.13.0",
     "gatsby-link": "2.11.0",
@@ -50,7 +50,7 @@
     "@babel/plugin-transform-runtime": "7.17.0",
     "@babel/preset-env": "7.16.11",
     "@babel/preset-react": "7.16.7",
-    "@commitlint/cli": "16.2.3",
+    "@commitlint/cli": "16.2.4",
     "@commitlint/config-conventional": "16.2.1",
     "@commitlint/prompt": "16.2.4",
     "@giscus/react": "^2.0.3",
