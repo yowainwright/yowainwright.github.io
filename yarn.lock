@@ -7006,10 +7006,10 @@ fs-extra@8.1.0, fs-extra@^8.1.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.0.tgz#9ff61b655dde53fb34a82df84bb214ce802e17c1"
-  integrity sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==
+fs-extra@^10.0.0, fs-extra@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.1.0.tgz#02873cfbc4084dde127eaa5f9905eef2325d1abf"
+  integrity sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==
   dependencies:
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
@@ -7155,10 +7155,10 @@ gatsby-cli@^3.14.2:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^2.1.0"
 
-gatsby-codemods@3.13.0:
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-3.13.0.tgz#f9eedc16b992d5354ea11e2e5987fa8bfcc8e366"
-  integrity sha512-72OHTViZz47ahA1Hl5ETz5knyibhHTXHVOMUsLVWp/SRO7tRiBq6WgnkOesVd4OO2aYXpMZ/a6nVQutM/4tBcQ==
+gatsby-codemods@3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-3.14.0.tgz#eeb1cf33a7c0c4fe551e6c70267fba58378cea8e"
+  integrity sha512-3ztAZp7YRn6wBxDDMM/tllUbtPMfB/3iEcfsF1q57Qckb6wsUIhEtaD8aC8NrZ9WPrs3rDMACVoTYZCycxNrdw==
   dependencies:
     "@babel/core" "^7.15.5"
     "@babel/plugin-proposal-class-properties" "^7.14.0"
@@ -7504,14 +7504,14 @@ gatsby-remark-autolink-headers@^4.4.1:
     mdast-util-to-string "^2.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-copy-linked-files@5.13.0:
-  version "5.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.13.0.tgz#29322176d09cbff4a9b6b7b1698f01be1bc6ccac"
-  integrity sha512-aN5zMF+4LCbZJR+AQCjfy2iUQ9CakcDUoDbOyXR0fbZt7IDo/XulTtrQBg1hMnJVVr55JkTORNBNz7Rh7/5htw==
+gatsby-remark-copy-linked-files@5.14.0:
+  version "5.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.14.0.tgz#340fcb73bd9d9321bbc55d7424ef63cab5c799fb"
+  integrity sha512-qZGAaziKtjNVohW3rWtfVZ4H6/6UonTCTM1du5cIL/VGhgnOQBsBoxgSEpD0gC7oH2TvJAFYh6CHixdjFkIkZQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
-    fs-extra "^10.0.0"
+    fs-extra "^10.1.0"
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
     path-is-inside "^1.0.2"
