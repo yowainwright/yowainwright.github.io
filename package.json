@@ -7,7 +7,7 @@
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
   },
   "dependencies": {
-    "@babel/core": "^7.17.10",
+    "@babel/core": "^7.18.2",
     "core-js": "^3.22.7",
     "gatsby": "^3.14.6",
     "gatsby-codemods": "3.15.0",
@@ -35,8 +35,8 @@
     "react-dom": "17.0.2",
     "react-dropzone": "^14.2.1",
     "react-typography": "0.16.20",
-    "sass": "1.51.0",
-    "sharp": "^0.30.4",
+    "sass": "1.52.1",
+    "sharp": "^0.30.5",
     "styled-components": "5.3.5",
     "typography": "0.16.21",
     "webpack": "5.72.1"
@@ -52,7 +52,7 @@
     "@babel/preset-react": "7.16.7",
     "@commitlint/cli": "17.0.1",
     "@commitlint/config-conventional": "17.0.0",
-    "@commitlint/prompt": "16.2.4",
+    "@commitlint/prompt": "17.0.0",
     "@giscus/react": "^2.0.5",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "28.1.0",
