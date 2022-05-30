@@ -36,7 +36,7 @@
     "react-dropzone": "^14.2.1",
     "react-typography": "0.16.20",
     "sass": "1.52.1",
-    "sharp": "^0.30.4",
+    "sharp": "^0.30.6",
     "styled-components": "5.3.5",
     "typography": "0.16.21",
     "webpack": "5.72.1"
@@ -73,7 +73,7 @@
     "prismjs": "1.28.0",
     "react-helmet": "6.1.0",
     "regenerator-runtime": "0.13.9",
-    "stylelint": "14.8.2",
+    "stylelint": "14.8.5",
     "stylelint-config-dollarshaveclub": "8.0.0",
     "write-good": "1.0.8"
   },
