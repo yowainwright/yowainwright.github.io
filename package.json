@@ -39,7 +39,7 @@
     "sharp": "^0.30.6",
     "styled-components": "5.3.5",
     "typography": "0.16.21",
-    "webpack": "5.72.1"
+    "webpack": "5.73.0"
   },
   "devDependencies": {
     "@babel/helper-builder-react-jsx-experimental": "^7.12.11",
