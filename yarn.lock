@@ -635,14 +635,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
 
-"@babel/plugin-syntax-jsx@^7.14.0":
-  version "7.16.7"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.16.7.tgz#50b6571d13f764266a113d77c82b4a6508bbe665"
-  integrity sha512-Esxmk7YjA8QysKeT3VhTXvF6y77f/a91SIs4pWb4H2eWGQkCKFgQaG6hdoEVZtGsrAcb2K5BW66XsOErD4WU3Q==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.16.7"
-
-"@babel/plugin-syntax-jsx@^7.17.12":
+"@babel/plugin-syntax-jsx@^7.14.0", "@babel/plugin-syntax-jsx@^7.17.12":
   version "7.17.12"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.17.12.tgz#834035b45061983a491f60096f61a2e7c5674a47"
   integrity sha512-spyY3E3AURfxh/RHtjx5j6hs8am5NbUBGfcZ2vB3uShSpZdQyXSf5rR5Mk76vbtlAZOelyVQ71Fg0x9SG4fsog==
@@ -7245,10 +7238,10 @@ gatsby-cli@^3.14.2:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^2.1.0"
 
-gatsby-codemods@3.15.0:
-  version "3.15.0"
-  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-3.15.0.tgz#6de3d893d637aec95bbfea52ca4df30fa748844f"
-  integrity sha512-B/EzsE4L2zskSk9DwvfRv/cCTncA1VO3Blt2oP28kpeq6RvMgZwIE0qINL5ZIoIuJogm2+PjU1woLpwtWFIjBQ==
+gatsby-codemods@3.16.0:
+  version "3.16.0"
+  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-3.16.0.tgz#ef2738c9238184e831b82effef45fcb355b18f2f"
+  integrity sha512-GlPRaISsCBQc4iGYy0BbojO3e9cdR05mT4+sHfh6xungfETiCB1FLsrSdlrj8tY83vr2kDseA/z57j1GKrDe+w==
   dependencies:
     "@babel/core" "^7.15.5"
     "@babel/plugin-proposal-class-properties" "^7.14.0"
@@ -7370,10 +7363,10 @@ gatsby-plugin-feed@3.14.0:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
-gatsby-plugin-google-analytics@4.15.0:
-  version "4.15.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-4.15.0.tgz#37def2b5bb00f39d4e4fe543c1a9e8c3b2e68b6d"
-  integrity sha512-aR+Jr6Zmco/PQv9iUbHmQc+Ghur4rVT8WBqB6+zcvs5sBtjCGnHTBsDiTg29jhfTPJLJ9xd3pPVG4Q7077kUuA==
+gatsby-plugin-google-analytics@4.16.0:
+  version "4.16.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-4.16.0.tgz#ceb57927e3950f472b1714f76bec72df74301554"
+  integrity sha512-K1F9XOjfmcpJgny20CX+2XW3beINK06eM36ya8Pec7RlRM96zIU0FFkPxD7/KaunhQd4N64ECsHyp1L7LAu/Og==
   dependencies:
     "@babel/runtime" "^7.15.4"
     minimatch "3.0.4"
@@ -7594,10 +7587,10 @@ gatsby-remark-autolink-headers@^4.4.1:
     mdast-util-to-string "^2.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-copy-linked-files@5.15.0:
-  version "5.15.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.15.0.tgz#6db8aca5243b252685fe8e5c313c32bcad6cf17b"
-  integrity sha512-sZsCUDbx9445SbCdql71QNVWLCXhQSNIE6VU8GxmpL6mbBtYlDNB/vu2aReJOrsqmWiKKcK134hGti16dv4fPw==
+gatsby-remark-copy-linked-files@5.16.0:
+  version "5.16.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.16.0.tgz#436b87f28a73c601137d8c72e566d6728e0c4191"
+  integrity sha512-feDjwvzKgYSIzIn6zkMygI4MhFB0GmW4XH/0y36CIO4P5YeIsz4ZEoq+WR5iAX17ry+m2bf/M8Eg2rtKJAwsmg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
