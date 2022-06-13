@@ -1,5 +1,5 @@
 import React from 'react'
-import { Giscus } from '@giscus/react';
+import Giscus from '@giscus/react';
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import { Share } from '../components/Share'
