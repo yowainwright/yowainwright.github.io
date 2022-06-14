@@ -7898,10 +7898,10 @@ gatsby-plugin-prettier-eslint@^1.0.6:
     lodash.mergewith "^4.6.2"
     picomatch "^2.2.2"
 
-gatsby-plugin-react-helmet@4.14.0:
-  version "4.14.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-4.14.0.tgz#69fe0bd90d65356a0aa144d4e8d75d2559638514"
-  integrity sha512-IpLC0mWRNP+E0ezDBXHciVATW+mv2MCvCP3lEYtFQ8mfcm3K//MpeynouNQSPCXn9cH7fr5w0Y355Wl5w1kw1A==
+gatsby-plugin-react-helmet@5.16.0:
+  version "5.16.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-5.16.0.tgz#a0c2c1acdda9e6ebed749a7e22fdf2d6f59950ef"
+  integrity sha512-+XrxxLnDuLupyRRNgXxWC3UlkhHMD5e98Sq+8yX92q2zOIr7MH7xax5WppcGb7L0leChMxR93v47jjVDtNAPGA==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
