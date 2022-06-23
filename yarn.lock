@@ -7716,10 +7716,10 @@ gatsby-cli@^4.17.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-codemods@3.16.0:
-  version "3.16.0"
-  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-3.16.0.tgz#ef2738c9238184e831b82effef45fcb355b18f2f"
-  integrity sha512-GlPRaISsCBQc4iGYy0BbojO3e9cdR05mT4+sHfh6xungfETiCB1FLsrSdlrj8tY83vr2kDseA/z57j1GKrDe+w==
+gatsby-codemods@3.17.0:
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-3.17.0.tgz#5863d339c65055dbc57ef13b3c62c5f5c938f9b6"
+  integrity sha512-mmQTbAYFQKvwSNdgLEzCLKKNqRKVUqdNT+lbVYAyAgPARjaM1dSXllNKh5qGRuZsnhWOHGRdAfgZ5lIa1MWG/w==
   dependencies:
     "@babel/core" "^7.15.5"
     "@babel/plugin-proposal-class-properties" "^7.14.0"
@@ -8063,10 +8063,10 @@ gatsby-remark-images@3.11.1:
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
-gatsby-remark-prismjs@5.11.0:
-  version "5.11.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-5.11.0.tgz#ca823b7b5def06a5b4d33e8d8e2e1126451f6b3f"
-  integrity sha512-WrS074GqW0st5chlYxTrFxLZLjAubWvNdw23DYW8qcaAfnH527hmgEDQgynjVnkSxhxbhnhTqT5MYWBdTBLk5A==
+gatsby-remark-prismjs@6.17.0:
+  version "6.17.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-6.17.0.tgz#b00109d4b90e9ccff5069b2d30e7ac0253882717"
+  integrity sha512-Q9VY2A644oVbsQpG0SaEJHTlHA0SlLaxC4h1dMHa1SjdLySjBNqqeUrXcmL8OceoOaP1z+QWvON++bdMILow5w==
   dependencies:
     "@babel/runtime" "^7.15.4"
     parse-numeric-range "^1.2.0"
