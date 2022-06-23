@@ -5683,13 +5683,6 @@ cosmiconfig@^7, cosmiconfig@^7.0.0, cosmiconfig@^7.0.1:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
-create-gatsby@^2.16.0:
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/create-gatsby/-/create-gatsby-2.16.0.tgz#a123fa24f24eb590dd0b50f41578cb56bed6fea7"
-  integrity sha512-X/4fu+C8qBtfI9JTnnhI+zBFwe2V7uC27XEnA/9GbCp507xuiqkO6MuUJGDxdhe0cDBub+KD+3TLQ94XaXiJpg==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-
 create-gatsby@^2.17.0:
   version "2.17.0"
   resolved "https://registry.yarnpkg.com/create-gatsby/-/create-gatsby-2.17.0.tgz#00d42bfca9ca548957fcd88ea4f7a297a8b02fd8"
@@ -7616,57 +7609,7 @@ functions-have-names@^1.2.2:
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.3.tgz#0404fe4ee2ba2f607f0e0ec3c80bae994133b834"
   integrity sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==
 
-gatsby-cli@4.16.0:
-  version "4.16.0"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-4.16.0.tgz#2342b1a791831f4111bad1c4c893d24e3d8ee3d3"
-  integrity sha512-VBQK46y5ZFKNQT4rCH134Du//y2hrxf7NXPB4WN+WzzplwtSo6wmU7cG1rPZWVNDCwZcJ1fpJCVIgKA62zAivw==
-  dependencies:
-    "@babel/code-frame" "^7.14.0"
-    "@babel/core" "^7.15.5"
-    "@babel/generator" "^7.16.8"
-    "@babel/helper-plugin-utils" "^7.16.7"
-    "@babel/preset-typescript" "^7.16.7"
-    "@babel/runtime" "^7.15.4"
-    "@babel/template" "^7.16.7"
-    "@babel/types" "^7.16.8"
-    "@jridgewell/trace-mapping" "^0.3.13"
-    "@types/common-tags" "^1.8.1"
-    better-opn "^2.1.1"
-    boxen "^5.1.2"
-    chalk "^4.1.2"
-    clipboardy "^2.3.0"
-    common-tags "^1.8.2"
-    configstore "^5.0.1"
-    convert-hrtime "^3.0.0"
-    create-gatsby "^2.16.0"
-    envinfo "^7.8.1"
-    execa "^5.1.1"
-    fs-exists-cached "^1.0.0"
-    fs-extra "^10.1.0"
-    gatsby-core-utils "^3.16.0"
-    gatsby-telemetry "^3.16.0"
-    hosted-git-info "^3.0.8"
-    is-valid-path "^0.1.1"
-    joi "^17.4.2"
-    lodash "^4.17.21"
-    meant "^1.0.3"
-    node-fetch "^2.6.6"
-    opentracing "^0.14.5"
-    pretty-error "^2.1.2"
-    progress "^2.0.3"
-    prompts "^2.4.2"
-    redux "4.1.2"
-    resolve-cwd "^3.0.0"
-    semver "^7.3.7"
-    signal-exit "^3.0.6"
-    stack-trace "^0.0.10"
-    strip-ansi "^6.0.1"
-    update-notifier "^5.1.0"
-    yargs "^15.4.1"
-    yoga-layout-prebuilt "^1.10.0"
-    yurnalist "^2.1.0"
-
-gatsby-cli@^4.17.0:
+gatsby-cli@4.17.0, gatsby-cli@^4.17.0:
   version "4.17.0"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-4.17.0.tgz#38bd743cf24c0b9bf20d097479809c0aee4faf03"
   integrity sha512-x1oxUVSWYEDxYl8sNTDTakMnCYKIbjwIAfGBhp1v3wK8WvqKz2+ICho6vvd2rXSkGGbwAg/gJ5g4/p78WOdRLw==
