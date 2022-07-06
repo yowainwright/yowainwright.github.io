@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.18.5",
-    "core-js": "^3.23.2",
+    "core-js": "^3.23.3",
     "gatsby": "^4.17.1",
     "gatsby-codemods": "3.17.0",
     "gatsby-link": "2.11.0",
