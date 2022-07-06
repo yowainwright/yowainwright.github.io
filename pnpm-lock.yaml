@@ -22,6 +22,7 @@ specifiers:
   '@commitlint/cli': 17.0.2
   '@commitlint/config-conventional': 17.0.3
   '@commitlint/prompt': 17.0.0
+  '@gatsbyjs/reach-router': ^1.3.7
   '@giscus/react': ^2.0.6
   anser: ^2.1.1
   babel-core: 7.0.0-bridge.0
@@ -44,7 +45,7 @@ specifiers:
   gatsby-plugin-feed: 4.17.0
   gatsby-plugin-google-analytics: 4.17.0
   gatsby-plugin-manifest: 4.17.0
-  gatsby-plugin-offline: 5.17.0
+  gatsby-plugin-offline: 5.18.0
   gatsby-plugin-preact: 6.17.0
   gatsby-plugin-prettier-eslint: ^1.0.6
   gatsby-plugin-react-helmet: 5.17.0
@@ -55,7 +56,7 @@ specifiers:
   gatsby-react-router-scroll: ^5.18.0
   gatsby-remark-autolink-headers: ^5.17.0
   gatsby-remark-copy-linked-files: 5.17.0
-  gatsby-remark-images: 6.17.0
+  gatsby-remark-images: 6.18.0
   gatsby-remark-prismjs: 6.17.0
   gatsby-remark-responsive-iframe: 5.17.0
   gatsby-remark-smartypants: 5.17.0
@@ -94,6 +95,7 @@ specifiers:
 
 dependencies:
   '@babel/core': 7.18.6
+  '@gatsbyjs/reach-router': 1.3.7_sfoxds7t5ydpegc3knd667wn6m
   anser: 2.1.1
   core-js: 3.23.3
   css.escape: 1.5.1
@@ -105,7 +107,7 @@ dependencies:
   gatsby-link: 2.11.0_pwckoet67ool4kozvfcfu7xmha
   gatsby-plugin-google-analytics: 4.17.0_dqwfvzjwcco3pdacpatefxzi7u
   gatsby-plugin-manifest: 4.17.0_gatsby@4.18.0
-  gatsby-plugin-offline: 5.17.0_dqwfvzjwcco3pdacpatefxzi7u
+  gatsby-plugin-offline: 5.18.0_dqwfvzjwcco3pdacpatefxzi7u
   gatsby-plugin-preact: 6.17.0_kfevlkjgcxaz4b4gtgpqb5iasa
   gatsby-plugin-prettier-eslint: 1.0.6_xbureflpme3ojsqoan3oqvd7jy
   gatsby-plugin-react-helmet: 5.17.0_n5kxgkvqn5sgvqst4l2dybui5q
@@ -116,7 +118,7 @@ dependencies:
   gatsby-react-router-scroll: 5.18.0_h6bduluijregplyki7jqq7jlni
   gatsby-remark-autolink-headers: 5.18.0_dqwfvzjwcco3pdacpatefxzi7u
   gatsby-remark-copy-linked-files: 5.17.0_gatsby@4.18.0
-  gatsby-remark-images: 6.17.0_shqc5fk3usggouvolasm2orv4a
+  gatsby-remark-images: 6.18.0_shqc5fk3usggouvolasm2orv4a
   gatsby-remark-prismjs: 6.17.0_swjwqpvptntvcgg6siolapaxj4
   gatsby-remark-responsive-iframe: 5.17.0_gatsby@4.18.0
   gatsby-remark-smartypants: 5.17.0_gatsby@4.18.0
@@ -7942,8 +7944,8 @@ packages:
       sharp: 0.30.7
     dev: false
 
-  /gatsby-plugin-offline/5.17.0_dqwfvzjwcco3pdacpatefxzi7u:
-    resolution: {integrity: sha512-4sGpLkjOrv/b6E9FI6TqAX92D47PGbgCubqQTTV7c4zcEIjq9MA86VzNRV/sU8Jys+9Az0kBOIA8e7NEckyvXQ==}
+  /gatsby-plugin-offline/5.18.0_dqwfvzjwcco3pdacpatefxzi7u:
+    resolution: {integrity: sha512-PfbAwEwfozkbAxtPVxUwYkvX47IsWpOJUlutn6wl7hj7VLHfegxDg3RZtc0trbDpj39wVtcLDdM8fu4schm3EA==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       gatsby: ^4.0.0-next
@@ -8205,8 +8207,8 @@ packages:
       - supports-color
     dev: false
 
-  /gatsby-remark-images/6.17.0_shqc5fk3usggouvolasm2orv4a:
-    resolution: {integrity: sha512-pjUBNCfKT8mo1mXztHlxB5OYGSUUr8snTKvBOlKkDQUpQmyDp9BKTYcTMdhlrGqJEpkmMjFpXQSJPSxoTqw+7A==}
+  /gatsby-remark-images/6.18.0_shqc5fk3usggouvolasm2orv4a:
+    resolution: {integrity: sha512-xFLFbHerjdhyIl1iCa5IlMecUoz5HYkvN80rSkCDOZPDXz9AvqrWcoG5KIFP1hgiYh1nZC1CSzd9qNr5yGrXsw==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       gatsby: ^4.0.0-next
