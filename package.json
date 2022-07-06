@@ -103,20 +103,20 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "deploy": "yarn pre-deploy && NODE_ENV=production gatsby build && gh-pages -d public --branch master && yarn post-deploy",
+    "deploy": "pnpm pre-deploy && NODE_ENV=production gatsby build && gh-pages -d public --branch master && pnpm post-deploy",
     "dev": "gatsby develop",
     "develop": "GATSBY_GRAPHQL_IDE=playground NODE_ENV=development gatsby develop",
     "eslint": "eslint . --ext .js,.jsx --fix",
     "eslint:ci": "eslint --ext .js,.jsx",
     "grammar": "write-good src/pages/*.md --no-passive",
-    "lint": "yarn eslint",
+    "lint": "pnpm eslint",
     "spelling": "mdspell '**/*.md' '!**/node_modules/**/*.md' --ignore-numbers",
     "spelling:ci": "mdspell '**/*.md' '!**/node_modules/**/*.md' --ignore-numbers --report",
-    "start": "yarn && yarn develop",
+    "start": "pnpm install && pnpm develop",
     "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public && cp -rf ./assets ./public",
     "post-deploy": "git tag $npm_package_version && git push origin --tags",
     "prepare": "husky install",
-    "test": "yarn lint"
+    "test": "pnpm lint"
   },
   "resolutions": {
     "ansi-html": "^0.0.8",
