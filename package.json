@@ -87,7 +87,7 @@
     "prismjs": "1.28.0",
     "react-helmet": "6.1.0",
     "regenerator-runtime": "0.13.9",
-    "stylelint": "14.9.1",
+    "stylelint": "14.10.0",
     "stylelint-config-dollarshaveclub": "8.0.0",
     "write-good": "1.0.8"
   },
