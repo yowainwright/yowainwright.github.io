@@ -29,7 +29,7 @@
     "gatsby-plugin-typography": "4.20.0",
     "gatsby-react-router-scroll": "^5.18.0",
     "gatsby-remark-autolink-headers": "^5.17.0",
-    "gatsby-remark-copy-linked-files": "5.20.0",
+    "gatsby-remark-copy-linked-files": "5.21.0",
     "gatsby-remark-images": "6.20.0",
     "gatsby-remark-prismjs": "6.20.0",
     "gatsby-remark-responsive-iframe": "5.20.0",
