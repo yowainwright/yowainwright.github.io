@@ -18,7 +18,7 @@
     "gatsby-codemods": "3.20.0",
     "gatsby-legacy-polyfills": "^2.18.0",
     "gatsby-link": "4.20.0",
-    "gatsby-plugin-google-analytics": "4.20.0",
+    "gatsby-plugin-google-analytics": "4.21.0",
     "gatsby-plugin-manifest": "4.20.0",
     "gatsby-plugin-offline": "5.20.0",
     "gatsby-plugin-preact": "6.20.0",
