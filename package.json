@@ -114,7 +114,6 @@
     "spelling:ci": "mdspell '**/*.md' '!**/node_modules/**/*.md' --ignore-numbers --report",
     "start": "pnpm install && pnpm develop",
     "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public && cp -rf ./assets ./public",
-    "post-deploy": "git tag $npm_package_version && git push origin --tags",
     "prepare": "husky install",
     "test": "pnpm lint"
   },
