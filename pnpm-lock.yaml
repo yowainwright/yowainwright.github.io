@@ -38,17 +38,17 @@ specifiers:
   eslint-plugin-react: ^7.30.1
   event-source-polyfill: ^1.0.26
   gatsby: ^4.18.0
-  gatsby-cli: 4.20.0
+  gatsby-cli: 4.21.0
   gatsby-codemods: 3.20.0
   gatsby-legacy-polyfills: ^2.18.0
   gatsby-link: 4.20.0
   gatsby-plugin-feed: 4.20.0
-  gatsby-plugin-google-analytics: 4.20.0
+  gatsby-plugin-google-analytics: 4.21.0
   gatsby-plugin-manifest: 4.20.0
   gatsby-plugin-offline: 5.20.0
   gatsby-plugin-preact: 6.20.0
   gatsby-plugin-react-helmet: 5.21.0
-  gatsby-plugin-sass: 5.20.0
+  gatsby-plugin-sass: 5.21.0
   gatsby-plugin-sharp: ^4.17.0
   gatsby-plugin-typescript: 4.20.0
   gatsby-plugin-typography: 4.20.0
@@ -57,7 +57,7 @@ specifiers:
   gatsby-remark-copy-linked-files: 5.20.0
   gatsby-remark-images: 6.21.0
   gatsby-remark-prismjs: 6.20.0
-  gatsby-remark-responsive-iframe: 5.20.0
+  gatsby-remark-responsive-iframe: 5.21.0
   gatsby-remark-smartypants: 5.21.0
   gatsby-script: ^1.3.0
   gatsby-source-filesystem: 4.20.0
@@ -81,7 +81,7 @@ specifiers:
   react-helmet: 6.1.0
   react-typography: 0.16.20
   regenerator-runtime: 0.13.9
-  sass: 1.54.4
+  sass: 1.54.5
   shallow-compare: ^1.2.2
   sharp: ^0.30.6
   stack-trace: 1.0.0-pre1
@@ -104,12 +104,12 @@ dependencies:
   gatsby-codemods: 3.20.0_@babel+preset-env@7.18.10
   gatsby-legacy-polyfills: 2.18.0
   gatsby-link: 4.20.0_h6bduluijregplyki7jqq7jlni
-  gatsby-plugin-google-analytics: 4.20.0_dqwfvzjwcco3pdacpatefxzi7u
+  gatsby-plugin-google-analytics: 4.21.0_dqwfvzjwcco3pdacpatefxzi7u
   gatsby-plugin-manifest: 4.20.0_tzjx2kdymeyq2nuvvufyku64ii
   gatsby-plugin-offline: 5.20.0_dqwfvzjwcco3pdacpatefxzi7u
   gatsby-plugin-preact: 6.20.0_zowuufw3jl6oxevagzsntvqghy
   gatsby-plugin-react-helmet: 5.21.0_n5kxgkvqn5sgvqst4l2dybui5q
-  gatsby-plugin-sass: 5.20.0_is6723cfriuzgvqzlsafidczjm
+  gatsby-plugin-sass: 5.21.0_6fn7hqnhgll6n57ynbktimqqwi
   gatsby-plugin-sharp: 4.18.0_tzjx2kdymeyq2nuvvufyku64ii
   gatsby-plugin-typescript: 4.20.0_gatsby@4.18.0
   gatsby-plugin-typography: 4.20.0_l4wzc25da72qqoeaxzqwvpbd2a
@@ -118,7 +118,7 @@ dependencies:
   gatsby-remark-copy-linked-files: 5.20.0_gatsby@4.18.0
   gatsby-remark-images: 6.21.0_shqc5fk3usggouvolasm2orv4a
   gatsby-remark-prismjs: 6.20.0_swjwqpvptntvcgg6siolapaxj4
-  gatsby-remark-responsive-iframe: 5.20.0_gatsby@4.18.0
+  gatsby-remark-responsive-iframe: 5.21.0_gatsby@4.18.0
   gatsby-remark-smartypants: 5.21.0_gatsby@4.18.0
   gatsby-script: 1.3.0_sfoxds7t5ydpegc3knd667wn6m
   gatsby-source-filesystem: 4.20.0_gatsby@4.18.0
@@ -133,7 +133,7 @@ dependencies:
   react-dom: 17.0.2_react@17.0.2
   react-dropzone: 14.2.2_react@17.0.2
   react-typography: 0.16.20_react@17.0.2
-  sass: 1.54.4
+  sass: 1.54.5
   shallow-compare: 1.2.2
   sharp: 0.30.7
   stack-trace: 1.0.0-pre1
@@ -162,7 +162,7 @@ devDependencies:
   conventional-changelog-cli: 2.2.2
   eslint: 8.22.0
   eslint-plugin-react: 7.30.1_eslint@8.22.0
-  gatsby-cli: 4.20.0
+  gatsby-cli: 4.21.0
   gatsby-plugin-feed: 4.20.0_nmaukuuevrfukilgcf4he7taey
   gh-pages: 4.0.0
   husky: 8.0.1
@@ -395,21 +395,21 @@ packages:
     resolution: {integrity: sha512-0mWMxV1aC97dhjCah5U5Ua7668r5ZmSC2DLfH2EZnf9c3/dHZKiFa5pRLMH5tjSl471tY6496ZWk/kjNONBxhw==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/template': 7.18.6
-      '@babel/types': 7.18.7
+      '@babel/template': 7.18.10
+      '@babel/types': 7.18.10
 
   /@babel/helper-function-name/7.18.9:
     resolution: {integrity: sha512-fJgWlZt7nxGksJS9a0XdSaI4XvpExnNIgRP+rVefWh5U7BL8pPuir6SJUmFKRfjWQ51OtWSzwOxhaH/EBWWc0A==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/template': 7.18.6
+      '@babel/template': 7.18.10
       '@babel/types': 7.18.10
 
   /@babel/helper-hoist-variables/7.18.6:
     resolution: {integrity: sha512-UlJQPkFqFULIcyW5sbzgbkxn2FKRgwWiRexcuaR8RNJRy8+LLveqPjwZV/bwrLZCN0eUHD/x8D0heK1ozuoo6Q==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/types': 7.18.7
+      '@babel/types': 7.18.10
 
   /@babel/helper-member-expression-to-functions/7.18.6:
     resolution: {integrity: sha512-CeHxqwwipekotzPDUuJOfIMtcIHBuc7WAzLmTYWctVigqS5RktNMQ5bEwQSuGewzYnCtTWa3BARXeiLxDTv+Ng==}
@@ -453,7 +453,7 @@ packages:
       '@babel/helper-simple-access': 7.18.6
       '@babel/helper-split-export-declaration': 7.18.6
       '@babel/helper-validator-identifier': 7.18.6
-      '@babel/template': 7.18.6
+      '@babel/template': 7.18.10
       '@babel/traverse': 7.18.11
       '@babel/types': 7.18.10
     transitivePeerDependencies:
@@ -525,7 +525,7 @@ packages:
     resolution: {integrity: sha512-iNpIgTgyAvDQpDj76POqg+YEt8fPxx3yaNBg3S30dxNKm2SWfYhD0TGrK/Eu9wHpUW63VQU894TsTg+GLbUa1g==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/types': 7.18.7
+      '@babel/types': 7.18.10
 
   /@babel/helper-skip-transparent-expression-wrappers/7.18.9:
     resolution: {integrity: sha512-imytd2gHi3cJPsybLRbmFrF7u5BIEuI2cNheyKi3/iOBC63kNn3q8Crn2xVuESli0aM4KYsyEqKyS7lFL8YVtw==}
@@ -537,7 +537,7 @@ packages:
     resolution: {integrity: sha512-bde1etTx6ZyTmobl9LLMMQsaizFVZrquTEHOqKeQESMKo4PlObf+8+JA25ZsIpZhT/WEd39+vOdLXAFG/nELpA==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/types': 7.18.7
+      '@babel/types': 7.18.10
 
   /@babel/helper-string-parser/7.18.10:
     resolution: {integrity: sha512-XtIfWmeNY3i4t7t4D2t02q50HvqHybPqW2ki1kosnvWCwuCMeo81Jf0gwr85jy/neUdg5XDdeFE/80DXiO+njw==}
@@ -567,7 +567,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/helper-function-name': 7.18.9
-      '@babel/template': 7.18.6
+      '@babel/template': 7.18.10
       '@babel/traverse': 7.18.11
       '@babel/types': 7.18.10
     transitivePeerDependencies:
@@ -3477,7 +3477,7 @@ packages:
   /@types/babel__template/7.4.1:
     resolution: {integrity: sha512-azBFKemX6kMg5Io+/rdGT0dkGreboUVR0Cdm3fz9QJWpaQGJRQXl7C+6hOTCZcMll7KFyEQpgbYI2lHdsS4U7g==}
     dependencies:
-      '@babel/parser': 7.18.6
+      '@babel/parser': 7.18.11
       '@babel/types': 7.18.10
     dev: true
 
@@ -4465,7 +4465,7 @@ packages:
     resolution: {integrity: sha512-Ys3tUKAmfnkRUpPdpa98eYrAR0nV+sSFUZZEGuQ2EbFd1y4SOLtD5QDNHAq+bb9a+bbXvYQC4b+ID/THIMcU6Q==}
     engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
     dependencies:
-      '@babel/template': 7.18.6
+      '@babel/template': 7.18.10
       '@babel/types': 7.18.10
       '@types/babel__core': 7.1.19
       '@types/babel__traverse': 7.17.1
@@ -7867,19 +7867,19 @@ packages:
   /functions-have-names/1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
 
-  /gatsby-cli/4.20.0:
-    resolution: {integrity: sha512-PinzwqJOf27MGxhc8kqNplCYIYKpXF1dgYMXH0cEQVJVS9VsRKioW8bugvbxiTio9zqn58yyAUF41xVPnc3Yyg==}
+  /gatsby-cli/4.21.0:
+    resolution: {integrity: sha512-8Z6EiKW2IX1NlzYd3T4aSx5hE+dAgieOKRYWFASQqW/cJAO0MmAHHXOjVQarFhRPj4mCBhCgmWYnLj4kxWPQ9Q==}
     engines: {node: '>=14.15.0'}
     hasBin: true
     requiresBuild: true
     dependencies:
       '@babel/code-frame': 7.18.6
       '@babel/core': 7.18.6
-      '@babel/generator': 7.18.7
+      '@babel/generator': 7.18.12
       '@babel/helper-plugin-utils': 7.18.9
       '@babel/preset-typescript': 7.18.6_@babel+core@7.18.6
       '@babel/runtime': 7.18.6
-      '@babel/template': 7.18.6
+      '@babel/template': 7.18.10
       '@babel/types': 7.18.10
       '@jridgewell/trace-mapping': 0.3.14
       '@types/common-tags': 1.8.1
@@ -8080,8 +8080,8 @@ packages:
       - graphql
     dev: true
 
-  /gatsby-plugin-google-analytics/4.20.0_dqwfvzjwcco3pdacpatefxzi7u:
-    resolution: {integrity: sha512-AKcj+KkGM1CqKLpc6ZWq2uxe8w5tGuJOYcAZ+uBO/9UNoXpqTs/g8TrB5KCFs7muEWohq5tL+CjCYekvf1/wtw==}
+  /gatsby-plugin-google-analytics/4.21.0_dqwfvzjwcco3pdacpatefxzi7u:
+    resolution: {integrity: sha512-T32lbQ/fKIUo0LzIxxBp4pGQphm6aSycc09X5NOnTARqGw9eOR+H/PeljeTORWbtScvYopQQAa16xHWeTgQaEQ==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       gatsby: ^4.0.0-next
@@ -8186,8 +8186,8 @@ packages:
       react-helmet: 6.1.0_react@17.0.2
     dev: false
 
-  /gatsby-plugin-sass/5.20.0_is6723cfriuzgvqzlsafidczjm:
-    resolution: {integrity: sha512-vsuWavfPONvPqHbmvoVRdyzNDKZ3jZVmm7fVc6pNBoV2nak/UIW9PnOah9T5bPu+htGB15Gp1uoA7sHCih9BcQ==}
+  /gatsby-plugin-sass/5.21.0_6fn7hqnhgll6n57ynbktimqqwi:
+    resolution: {integrity: sha512-cx3CW76wWY/628sHetZCJSAK+L/5y2rrOizLbvfd2Qk7AWqpECkA951BMIYleblxu0az8tjxuaabbt0TERvA6A==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       gatsby: ^4.0.0-next
@@ -8196,8 +8196,8 @@ packages:
       '@babel/runtime': 7.18.6
       gatsby: 4.18.0_3q3lejn2mxlfe35bcqijfv4hfu
       resolve-url-loader: 3.1.4
-      sass: 1.54.4
-      sass-loader: 10.3.0_sass@1.54.4+webpack@5.74.0
+      sass: 1.54.5
+      sass-loader: 10.3.0_sass@1.54.5+webpack@5.74.0
     transitivePeerDependencies:
       - fibers
       - node-sass
@@ -8400,8 +8400,8 @@ packages:
       unist-util-visit: 2.0.3
     dev: false
 
-  /gatsby-remark-responsive-iframe/5.20.0_gatsby@4.18.0:
-    resolution: {integrity: sha512-Z0nMN4TBYLM8K9dB4m+zGfSCUW6NXdvPD18aa3nhFzQ4Geg1qTKwyC5re2QF9EZgNw1Uox6/7wWC2SkQALz+8Q==}
+  /gatsby-remark-responsive-iframe/5.21.0_gatsby@4.18.0:
+    resolution: {integrity: sha512-pFkCg/cc4zNfRv6CEc5rkNfzYGxGxJsPgEZI5whFBaQ4gI+SSrBkQujRrcpuwarTLkeqjynw5OgMT2VzxyX9GA==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       gatsby: ^4.0.0-next
@@ -8666,7 +8666,7 @@ packages:
       find-cache-dir: 3.3.2
       fs-exists-cached: 1.0.0
       fs-extra: 10.1.0
-      gatsby-cli: 4.20.0
+      gatsby-cli: 4.21.0
       gatsby-core-utils: 3.18.0
       gatsby-graphiql-explorer: 2.18.0
       gatsby-legacy-polyfills: 2.18.0
@@ -10278,7 +10278,7 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       '@babel/core': 7.18.6
-      '@babel/parser': 7.18.6
+      '@babel/parser': 7.18.11
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.0
       semver: 6.3.0
@@ -13957,7 +13957,7 @@ packages:
       postcss: 8.4.14
     dev: false
 
-  /sass-loader/10.3.0_sass@1.54.4+webpack@5.74.0:
+  /sass-loader/10.3.0_sass@1.54.5+webpack@5.74.0:
     resolution: {integrity: sha512-H2cLgK0PiH+5KsdSzw41uqx1ph7OP68+bK03JliezXjvSgKfddHyD7biCJge8ygHSEH0zo9sO8Jf6BN5sKs/Ig==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -13976,14 +13976,14 @@ packages:
       klona: 2.0.5
       loader-utils: 2.0.2
       neo-async: 2.6.2
-      sass: 1.54.4
+      sass: 1.54.5
       schema-utils: 3.1.1
       semver: 7.3.7
       webpack: 5.74.0
     dev: false
 
-  /sass/1.54.4:
-    resolution: {integrity: sha512-3tmF16yvnBwtlPrNBHw/H907j8MlOX8aTBnlNX1yrKx24RKcJGPyLhFUwkoKBKesR3unP93/2z14Ll8NicwQUA==}
+  /sass/1.54.5:
+    resolution: {integrity: sha512-p7DTOzxkUPa/63FU0R3KApkRHwcVZYC0PLnLm5iyZACyp15qSi32x7zVUhRdABAATmkALqgGrjCJAcWvobmhHw==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
