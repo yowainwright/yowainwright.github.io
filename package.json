@@ -25,7 +25,7 @@
     "gatsby-plugin-react-helmet": "5.21.0",
     "gatsby-plugin-sass": "5.21.0",
     "gatsby-plugin-sharp": "^4.17.0",
-    "gatsby-plugin-typescript": "4.20.0",
+    "gatsby-plugin-typescript": "4.21.0",
     "gatsby-plugin-typography": "4.21.0",
     "gatsby-react-router-scroll": "^5.18.0",
     "gatsby-remark-autolink-headers": "^5.17.0",
