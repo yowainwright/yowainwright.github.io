@@ -51,7 +51,7 @@
     "shallow-compare": "^1.2.2",
     "sharp": "^0.31.0",
     "stack-trace": "1.0.0-pre1",
-    "styled-components": "5.3.5",
+    "styled-components": "5.3.6",
     "typography": "0.16.21",
     "webpack": "5.74.0"
   },
