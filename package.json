@@ -47,7 +47,7 @@
     "react-dom": "17.0.2",
     "react-dropzone": "^14.2.1",
     "react-typography": "0.16.20",
-    "sass": "1.55.0",
+    "sass": "1.56.0",
     "shallow-compare": "^1.2.2",
     "sharp": "^0.31.0",
     "stack-trace": "1.0.0-pre1",
