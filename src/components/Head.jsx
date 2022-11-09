@@ -22,10 +22,6 @@ export const Header = () => (
     <meta name='theme-color' content='#007cf0' />
     <link rel='manifest' href='https://yowainwright.imgix.net/manifest.json' />
     <meta name='description' content='Jeffry.in is the blog of Jeffry Wainwright, an engineer living in California.' />
-    <meta name='twitter:card' content='summary_large_image' />
-    <meta name='twitter:card' content='summary_large_image' />
-    <meta name='twitter:site' content='@yowainwright' />
-    <meta name='twitter:creator' content='@yowainwright' />
     <meta property='og:site_name' content='Jeffry.in' />
     <meta property='og:image:width' content='1200' />
     <meta property='og:image:height' content='600' />

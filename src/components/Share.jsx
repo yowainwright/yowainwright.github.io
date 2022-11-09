@@ -9,9 +9,8 @@ export function copyToClipboard(str) {
   document.body.removeChild(el)
 }
 
-export function Share({ path, title, url = 'https://jeffry.in' }) {
+export function Share({ path, url = 'https://jeffry.in' }) {
   const shareUrl = path && url ? `${url}${path}` : url
-  const cleanedTitle = encodeURIComponent(title)
 
   function onBtnClick() {
     copyToClipboard(shareUrl)
@@ -24,21 +23,6 @@ export function Share({ path, title, url = 'https://jeffry.in' }) {
         <button className='share__button' onClick={onBtnClick}>
           Copy Link
         </button>
-        <a className='share__link share__link--facebook' href={`https://www.facebook.com/sharer.php?u=${shareUrl}}`}>
-          Facebook
-        </a>
-        <a
-          className='share__link share__link--twitter'
-          href={`https://twitter.com/intent/tweet?url=${shareUrl}}&text=${cleanedTitle}&via=@yowainwright`}
-        >
-          Twitter
-        </a>
-        <a
-          className='share__link share__link--reddit'
-          href={`https://reddit.com/submit?url=${shareUrl}}&title=${cleanedTitle}`}
-        >
-          Reddit
-        </a>
       </nav>
     </section>
   )
