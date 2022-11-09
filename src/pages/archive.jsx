@@ -24,13 +24,12 @@ export default function Archive({ data, title = 'Archive | Jeffry.in' }) {
     <main className='main'>
       <Helmet title={title}>
         <meta
-          name='twitter:description'
           property='og:description'
           content='A full list of blog posts written by Jeffry Wainwright, a human person who enjoys building software, open source, being outside, and trying to live life with purpose.'
         />
         <link rel='canonical' href='https://jeffry.in/archive/' itemProp='url' />
-        <meta name='twitter:url' property='og:url' content='https://jeffry.in/archive/' />
-        <meta name='twitter:title' property='og:title' content={`${title}`} />
+        <meta property='og:url' content='https://jeffry.in/archive/' />
+        <meta property='og:title' content={`${title}`} />
       </Helmet>
       <section className='section section--intro'>
         <h1>Article archive: I have been writing for a while. Enjoy scrolling! 📚</h1>

@@ -41,9 +41,3 @@ Other projects I wrote/support:
 - **[Scrolldir](https://github.com/dollarshaveclub/scrolldir):** y-axis scroll direction without jitter
 - **[Shave](https://github.com/dollarshaveclub/shave):** a minimal JavaScript Plugin for Truncated text
 - **[Reframe.js](https://github.com/dollarshaveclub/reframe.js):** a JavaScript Plugin for reframing html elements so they're an intrinsic ratio of the original—great for embeds
-
----
-
-Connect with me on [Github](https://github.com/yowainwright), [Twitter](https://twitter.com/yowainwright), [Instagram](https://www.instagram.com/yowainwright/), or [Tumbler](http://ratherbe.in/).
-
-

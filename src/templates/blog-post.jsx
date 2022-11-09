@@ -16,10 +16,10 @@ export default function BlogPostTemplate({
     <article className='post__article'>
       <Helmet title={`${title} | Jeffry.in`}>
         <meta name='description' content={`${meta}`} />
-        <meta name='twitter:description' property='og:description' content={`${meta}`} />
+        <meta property='og:description' content={`${meta}`} />
         <link rel='canonical' href={`${path}`} itemProp='url' />
-        <meta name='twitter:url' property='og:url' content={`${path}`} />
-        <meta name='twitter:title' property='og:title' content={`${title}`} />
+        <meta property='og:url' content={`${path}`} />
+        <meta property='og:title' content={`${title}`} />
       </Helmet>
       <header className='post__header'>
         <h1 className='post__title' itemProp='headeline'>

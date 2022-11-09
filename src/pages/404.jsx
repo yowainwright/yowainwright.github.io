@@ -17,10 +17,10 @@ export default function FourZeroFour({
   return (
     <main className='main main--404'>
       <Helmet title={metaTitle}>
-        <meta name='twitter:description' property='og:description' content={metaContent} />
+        <meta property='og:description' content={metaContent} />
         <link rel='canonical' href={path} itemProp='url' />
-        <meta name='twitter:url' property='og:url' content={path} />
-        <meta name='twitter:title' property='og:title' content={metaTitle} />
+        <meta property='og:url' content={path} />
+        <meta property='og:title' content={metaTitle} />
       </Helmet>
       <h1>{title}</h1>
       {Text}
