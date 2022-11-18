@@ -84,7 +84,7 @@
     "prettier": "2.7.1",
     "prismjs": "1.29.0",
     "react-helmet": "6.1.0",
-    "regenerator-runtime": "0.13.10"
+    "regenerator-runtime": "0.13.11"
   },
   "homepage": "https://github.com/yowainwright/yowainwright.github.io#readme",
   "keywords": [
