@@ -2,7 +2,7 @@
   &__section {
     display: grid;
 
-    @include media-query($width-medium) {
+    @media screen and (min-width:$width-medium) {
       column-gap: 4rem;
       grid-template-columns: calc(65% - 2rem) calc(35% - 2rem);
     }
@@ -19,11 +19,11 @@
   &__article {
     margin: 3rem auto 0;
     max-width: calc(100% - 2rem);
-    @include media-query($width-small) {
+    @media screen and (min-width:$width-small) {
       margin: 0 auto;
       max-width: 80%;
     }
-    @include media-query($width-medium) {
+    @media screen and (min-width:$width-medium) {
       max-width: 70%;
     }
   }
@@ -35,7 +35,7 @@
   &--headline {
     margin-bottom: 2rem;
 
-    @include media-query($width-small) {
+    @media screen and (min-width:$width-small) {
       margin-bottom: 0;
     }
 
@@ -48,7 +48,7 @@
     margin: 4rem auto;
 
     &:first-of-type {
-      @include media-query($width-small) {
+      @media screen and (min-width:$width-small) {
         margin-top: 8rem;
       }
     }
@@ -60,13 +60,13 @@
         font-weight: 500;
       }
 
-      @include media-query($width-small) {
+      @media screen and (min-width:$width-small) {
         max-width: $width-default;
       }
     }
 
     hr {
-      @include media-query($width-small) {
+      @media screen and (min-width:$width-small) {
         margin-top: 3rem;
       }
     }
@@ -89,7 +89,7 @@
     &--full {
       font-size: 1.5rem;
 
-      @include media-query($width-small) {
+      @media screen and (min-width:$width-small) {
         margin-bottom: $spacing-unit-small;
       }
     }
@@ -113,7 +113,7 @@
       }
     }
 
-    @include media-query($width-small) {
+    @media screen and (min-width:$width-small) {
       grid-template-columns: calc(50% - 1.25rem) calc(50% - 1.25rem);
       grid-gap: 2.5rem;
       p {
