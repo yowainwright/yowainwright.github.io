@@ -81,6 +81,7 @@
     "husky": "^8.0.1",
     "identity-obj-proxy": "3.0.0",
     "lint-staged": "^13.0.1",
+    "pastoralist": "^1.1.11",
     "prettier": "2.7.1",
     "prismjs": "1.29.0",
     "react-helmet": "6.1.0",
@@ -107,6 +108,7 @@
     "start": "pnpm install && pnpm develop",
     "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public && cp -rf ./assets ./public",
     "prepare": "husky install",
+    "postinstall": "pastoralist",
     "test": "pnpm lint"
   },
   "resolutions": {
