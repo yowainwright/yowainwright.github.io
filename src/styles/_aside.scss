@@ -10,7 +10,7 @@
     border-radius: 2rem;
     margin: 4rem auto 1rem;
 
-    @include media-query($width-small) {
+    @media screen and (min-width:$width-small) {
       margin: 0;
       position: sticky;
       top: 1rem;
@@ -21,14 +21,14 @@
     font-size: 1.2rem;
     line-height: 1.8;
     max-width: calc(100% - 2rem);
-    @include media-query($width-small) {
+    @media screen and (min-width:$width-small) {
       max-width: none;
     }
   }
 
   &__content {
     padding: 1rem;
-    @include media-query($width-small) {
+    @media screen and (min-width:$width-small) {
       padding: 0;
     }
   }

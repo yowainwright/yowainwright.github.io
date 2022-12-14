@@ -5,15 +5,15 @@
     margin: 0 auto;
     max-width: calc(100% - 2rem);
 
-    @include media-query($width-x-small) {
+    @media screen and (min-width:$width-x-small) {
       display: grid;
     }
 
-    @include media-query($width-small) {
+    @media screen and (min-width:$width-small) {
       max-width: 80%;
     }
 
-    @include media-query($width-medium) {
+    @media screen and (min-width:$width-medium) {
       max-width: 70%;
     }
 
@@ -21,13 +21,13 @@
       padding: 4rem 0;
       column-gap: 1rem;
 
-      @include media-query($width-small) {
+      @media screen and (min-width:$width-small) {
         align-items: start;
         column-gap: 3rem;
         grid-template-columns: auto 10rem auto;
       }
 
-      @include media-query($width-medium) {
+      @media screen and (min-width:$width-medium) {
         grid-template-columns: 17rem 10rem auto;
       }
     }
@@ -45,7 +45,7 @@
     display: grid;
     padding-bottom: 2rem;
 
-    @include media-query($width-medium) {
+    @media screen and (min-width:$width-medium) {
       padding-bottom: 0;
     }
 
@@ -54,7 +54,7 @@
       grid-column: span 2;
       padding-bottom: 0;
       padding-top: 2rem;
-      @include media-query($width-medium) {
+      @media screen and (min-width:$width-medium) {
         border-top: none;
         grid-column: auto;
         padding-top: 0;
@@ -67,7 +67,7 @@
     text-align: left;
     margin: 0 0 1rem;
 
-    @include media-query($width-small) {
+    @media screen and (min-width:$width-small) {
       margin-bottom: 3rem;
     }
 
@@ -118,7 +118,7 @@
       display: inline-block;
       font-size: 1.2rem;
       margin-right: 1rem;
-      @include media-query($width-small) {
+      @media screen and (min-width:$width-small) {
         display: block;
         margin-right: 0;
       }
