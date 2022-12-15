@@ -71,6 +71,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-loader": "9.1.0",
     "babel-plugin-macros": "3.1.0",
+    "codependence": "^0.2.6",
     "commitizen": "4.2.5",
     "conventional-changelog-cli": "2.2.2",
     "eslint": "^8.19.0",
@@ -109,7 +110,8 @@
     "pre-deploy": "cp CNAME public; cp *.html public; cp README.md public && cp -rf ./assets ./public",
     "prepare": "husky install",
     "postinstall": "pastoralist",
-    "test": "pnpm lint"
+    "test": "pnpm lint",
+    "update": "codependence --update"
   },
   "resolutions": {
     "ansi-html": "^0.0.8",
