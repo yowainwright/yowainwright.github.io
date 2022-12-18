@@ -54,7 +54,7 @@ If that’s the case, the rest of this doc isn’t for you! Otherwise, **read on
 
 ### \*_Personal Intel Mac command journey:_
 
-- I found, when trying to install different Python versions using Pyenv, that it was getting more complex as I worked on more projects. I found myself searching stackoverflow, pyenv issues, and various popular Python package issue which told me to run Intel Mac commands or to add various flags to commands, like , to get the command to run correctly.
+- I found, when trying to install different Python versions using Pyenv, that it was getting more complex as I worked on more projects. I found myself searching stackoverflow, pyenv issues, and various popular Python package issue which told me to run Intel Mac commands or to add various flags to commands to get them to run correctly.
 - Although, I initially found some worthwhile learnings debugging why clang didn't work with a certain flag, this time was mainly trying commands I found versus working on projects.
 
 ---
