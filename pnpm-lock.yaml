@@ -3,7 +3,6 @@ lockfileVersion: 5.4
 overrides:
   ansi-html: ^0.0.8
   ansi-regex: ^3.0.1
-  async: ^3.2.4
   cross-fetch: ^3.1.5
   minimist: ^1.2.6
   multer: 1.4.5-lts.1
@@ -4254,8 +4253,18 @@ packages:
   /async-retry-ng/2.0.1:
     resolution: {integrity: sha512-iitlc2murdQ3/A5Re3CcplQBEf7vOmFrFQ6RFn3+/+zZUyIHYkZnnEziMSa6YIb2Bs2EJEPZWReTxjHqvQbDbw==}
 
+  /async/1.5.2:
+    resolution: {integrity: sha512-nSVgobk4rv61R9PUSDtYt7mPVB2olxNR5RWJcAsH676/ef11bUZwvu7+RGYrYauVdDPcO519v68wRhXQtxsV9w==}
+
+  /async/2.6.4:
+    resolution: {integrity: sha512-mzo5dfJYwAn29PeiJ0zvwTo04zj8HDJj0Mn8TD7sno7q12prdbnasKJHhkm2c1LgrhlJ0teaea8860oxi51mGA==}
+    dependencies:
+      lodash: 4.17.21
+    dev: true
+
   /async/3.2.4:
     resolution: {integrity: sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==}
+    dev: false
 
   /asynckit/0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
@@ -4774,7 +4783,7 @@ packages:
   /cache-manager/2.11.1:
     resolution: {integrity: sha512-XhUuc9eYwkzpK89iNewFwtvcDYMUsvtwzHeyEOPJna/WsVsXcrzsA1ft2M0QqPNunEzLhNCYPo05tEfG+YuNow==}
     dependencies:
-      async: 3.2.4
+      async: 1.5.2
       lodash.clonedeep: 4.5.0
       lru-cache: 4.0.0
 
@@ -8591,7 +8600,7 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      async: 3.2.4
+      async: 2.6.4
       commander: 2.20.3
       email-addresses: 3.1.0
       filenamify: 4.3.0
