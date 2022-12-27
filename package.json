@@ -116,10 +116,8 @@
   "resolutions": {
     "ansi-html": "^0.0.8",
     "ansi-regex": "^3.0.1",
-    "async": "^3.2.4",
     "cross-fetch": "^3.1.5",
     "minimist": "^1.2.6",
-    "multer": "1.4.5-lts.1",
     "postcss": "^8.2.13"
   },
   "config": {
@@ -152,5 +150,14 @@
     "*.{ts,tsx,js,jsx,json,md}": [
       "pnpm lint"
     ]
+  },
+  "pastoralist": {
+    "appendix": {
+      "multer@1.4.5-lts.1": {
+        "dependents": {
+          "gatsby": "4.18.0"
+        }
+      }
+    }
   }
 }
