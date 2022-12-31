@@ -1,10 +1,10 @@
 ---
-title: "Build Your Own Dependabot in 5 minutes"
+title: "Quick Tutorial: Build A Basic Dependency Manager Like Dependabot In 5 Minutes"
 date: '2022-12-23'
 layout: post
 readNext: '/'
 path: '/build-your-own-dependabot/'
-meta: "This document goes over building your own dependabot for JavaScript ot Typescript using package managers and Github actions."
+meta: "This document goes over building the basics of your own dependency manager, like dependabot, for JavaScript ot Typescript using package managers and Github actions."
 featured_image: null
 post_type: technical
 categories:
