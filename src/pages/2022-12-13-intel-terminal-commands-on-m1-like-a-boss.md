@@ -1,5 +1,5 @@
 ---
-title: "Run Intel Mac Terminal Commands On Your M1 Mac Like A Boss In 5 Minutes Or Less"
+title: "Quick Tutorial: Run Intel Mac Cmds On Your M1 Mac Like a Boss In 5 Minutes"
 date: '2022-12-13'
 layout: post
 readNext: '/'
