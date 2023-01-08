@@ -3,7 +3,7 @@ import Giscus from '@giscus/react';
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import { Share } from '../components/Share'
-import { GlobalState } from '../context/GlobalContext'
+import { GlobalState } from '../components/layout'
 
 export default function BlogPostTemplate({
   data: {
