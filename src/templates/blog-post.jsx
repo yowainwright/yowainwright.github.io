@@ -13,7 +13,7 @@ export default function BlogPostTemplate({
     },
   },
 }) {
-  const { isDarkMode } = useContext(GlobalState)
+  const state = useContext(GlobalState)
   return (
     <article className='post__article'>
       <Helmet title={`${title} | Jeffry.in`}>
@@ -38,7 +38,7 @@ export default function BlogPostTemplate({
             repoId="MDEwOlJlcG9zaXRvcnkxNzA5MTY4Mg=="
             category="General"
             categoryId="DIC_kwDOAQTMYs4COQJE"
-            data-theme={isDarkMode ? 'dark' : 'light'}
+            data-theme={state?.isDarkMode ? 'dark' : 'light'}
             mapping="pathname"
             reactionsEnabled="1"
             emitMetadata="0"

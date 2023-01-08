@@ -19,7 +19,6 @@ export const initialState = {
 }
 
 export function reducer(state, { payload, type }) {
-  console.log({ state })
   switch (type) {
     case 'SET_IS_DARKMODE':
       return { ...state, isDarkMode: payload }
