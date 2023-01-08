@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Giscus from '@giscus/react';
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import { Share } from '../components/Share'
+import { GlobalState } from '../components/layout'
 
 export default function BlogPostTemplate({
   data: {
@@ -12,6 +13,7 @@ export default function BlogPostTemplate({
     },
   },
 }) {
+  const state = useContext(GlobalState)
   return (
     <article className='post__article'>
       <Helmet title={`${title} | Jeffry.in`}>
@@ -36,6 +38,7 @@ export default function BlogPostTemplate({
             repoId="MDEwOlJlcG9zaXRvcnkxNzA5MTY4Mg=="
             category="General"
             categoryId="DIC_kwDOAQTMYs4COQJE"
+            data-theme={state?.isDarkMode ? 'dark' : 'light'}
             mapping="pathname"
             reactionsEnabled="1"
             emitMetadata="0"
