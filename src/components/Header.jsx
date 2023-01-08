@@ -8,9 +8,11 @@ import { DispatchStore, GlobalState } from './layout'
 export const Icon = ({ isDarkMode }) => (isDarkMode ? <Sun /> : <Moon />)
 
 export function DarkmodeToggle() {
+  console.log('here');
   const { isDarkMode } = useContext(GlobalState)
   const dispatch = useContext(DispatchStore)
   function handleToggle() {
+    console.log('here');
     dispatch({ type: 'SET_IS_DARKMODE', payload: !isDarkMode })
   }
 

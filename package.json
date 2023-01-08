@@ -82,7 +82,6 @@
     "husky": "^8.0.1",
     "identity-obj-proxy": "3.0.0",
     "lint-staged": "^13.0.1",
-    "node-sass": "^8.0.0",
     "pastoralist": "^1.1.11",
     "prettier": "2.7.1",
     "prismjs": "1.29.0",
@@ -100,7 +99,7 @@
     "url": "git+https://github.com/yowainwright/yowainwright.github.io"
   },
   "scripts": {
-    "build:css": "node-sass src/styles/main.scss assets/jeffry.in.css",
+    "build:css": "sass --style=compressed src/styles/main.scss assets/jeffry.in.css",
     "build": "gatsby build",
     "deploy": "pnpm pre-deploy && NODE_ENV=production gatsby build && gh-pages -d public --branch master && pnpm post-deploy",
     "dev": "gatsby develop",

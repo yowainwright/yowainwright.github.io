@@ -36,9 +36,13 @@ export default function BlogIndex({
         <h1>I used to stand for something but now it is just because someone stole my chair. 💺 </h1>
       </section>
       <section className='section section--posts'>
+        <h2><a href="https://jeffry.in/daily-changelogs">Check out what I&apos;m up to daily →</a></h2>
+        <hr />
         <div className='posts--basic'>
           <PostsRow posts={data.allMarkdownRemark.edges} />
         </div>
+        <hr />
+        <h2><a href="https://jeffry.in/daily-changelogs">Check out what I&apos;m up to daily on my changelogs →</a></h2>
       </section>
     </main>
   )
