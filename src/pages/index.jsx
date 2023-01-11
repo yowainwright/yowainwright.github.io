@@ -36,11 +36,9 @@ export default function BlogIndex({
         <h1>I used to stand for something but now it is just because someone stole my chair. 💺 </h1>
       </section>
       <section className='section section--posts'>
-        <hr />
         <div className='posts--basic'>
           <PostsRow posts={data.allMarkdownRemark.edges} />
         </div>
-        <hr />
       </section>
     </main>
   )
