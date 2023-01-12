@@ -99,8 +99,10 @@
     "url": "git+https://github.com/yowainwright/yowainwright.github.io"
   },
   "scripts": {
+    "build:giscus:dark": "sass --style=compressed src/styles/giscus-light.scss assets/jeffry.in.giscus.light.css",
+    "build:giscus:light": "sass --style=compressed src/styles/giscus-dark.scss assets/jeffry.in.giscus.dark.css",
     "build:css": "sass --style=compressed src/styles/main.scss assets/jeffry.in.css",
-    "build": "gatsby build",
+    "build": "pnpm run build:css && pnpm run build:giscus:light && pnpm run build:giscus:dark && gatsby build",
     "deploy": "pnpm pre-deploy && NODE_ENV=production gatsby build && gh-pages -d public --branch master && pnpm post-deploy",
     "dev": "gatsby develop",
     "develop": "GATSBY_GRAPHQL_IDE=playground NODE_ENV=development gatsby develop",

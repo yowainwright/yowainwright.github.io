@@ -1,8 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Giscus from '@giscus/react';
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import { Share } from '../components/Share'
+import { GlobalState } from '../components/layout';
+const THEME_DARK = "https://yowainwright.imgix.net/jeffry.in.giscus.dark.css"
+const THEME_LIGHT = "https://yowainwright.imgix.net/jeffry.in.giscus.light.css"
+
+const GiscusWrapper = ({ isDarkMode }) => {
+  const theme = isDarkMode ? THEME_DARK : THEME_LIGHT
+  return (
+    <Giscus
+      repo="yowainwright/yowainwright.github.io"
+      repoId="MDEwOlJlcG9zaXRvcnkxNzA5MTY4Mg=="
+      category="General"
+      categoryId="DIC_kwDOAQTMYs4COQJE"
+      mapping="pathname"
+      reactionsEnabled="1"
+      emitMetadata="0"
+      theme={theme}
+      lang="en"
+      loading="lazy"
+    />
+  )
+}
 
 export default function BlogPostTemplate({
   data: {
@@ -12,6 +33,7 @@ export default function BlogPostTemplate({
     },
   },
 }) {
+  const state = useContext(GlobalState)
   return (
     <article className='post__article'>
       <Helmet title={`${title} | Jeffry.in`}>
@@ -31,18 +53,7 @@ export default function BlogPostTemplate({
         <div className='post__container'>
         <div className='post__content' dangerouslySetInnerHTML={{ __html: html }} />
         <div className='post__giscus'>
-          <Giscus
-            repo="yowainwright/yowainwright.github.io"
-            repoId="MDEwOlJlcG9zaXRvcnkxNzA5MTY4Mg=="
-            category="General"
-            categoryId="DIC_kwDOAQTMYs4COQJE"
-            mapping="pathname"
-            reactionsEnabled="1"
-            emitMetadata="0"
-            theme="https://yowainwright.imgix.net/jeffry.in.css"
-            lang="en"
-            loading="lazy"
-          />
+          <GiscusWrapper isDarkMode={state?.isDarkMode || false} />
         </div>
         </div>
         <aside className='aside'>
