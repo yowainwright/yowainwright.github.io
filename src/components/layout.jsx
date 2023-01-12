@@ -8,6 +8,12 @@ import '../styles/main.scss'
 export const GlobalState = createContext()
 export const DispatchStore = createContext()
 
+export function messageGiscus(message) {
+  const iframe = document.querySelector('.giscus-frame');
+   if (!iframe) return;
+  iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+}
+
 export function isLoadingDarkmode() {
   if (typeof window === 'undefined') return false
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? true : false
