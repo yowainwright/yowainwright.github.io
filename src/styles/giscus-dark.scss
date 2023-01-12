@@ -9,6 +9,15 @@ main {
   .color-bg-tertiary,
   .gsc-comment-box-textarea,
   .gsc-reactions-button {
+    color: #fff;
     background: #162447;
+  }
+
+  .gsc-comment-box,
+  .color-bg-canvas,
+  .color-bg-tertiary,
+  .gsc-comment-box-textarea,
+  .gsc-reactions-button {
+    border: 1px solid #999;
   }
 }
