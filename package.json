@@ -23,6 +23,7 @@
     "dev": "next dev",
     "export": "next export",
     "lint": "next lint",
+    "postbuild": "next-sitemap",
     "pre-commit": "pnpm run build && pnpm run lint && pnpm run commit-msg",
     "start": "next start",
     "update": "codependence --update"
@@ -71,6 +72,7 @@
     "eslint-config-next": "13.1.1",
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
+    "next-sitemap": "^4.0.7",
     "pastoralist": "^1.1.11",
     "prettier": "2.7.1",
     "remark": "^14.0.2",
