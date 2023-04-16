@@ -29,14 +29,16 @@ export const getAllPosts = (folder: string) => {
   })
 }
 
+
+
 export const getAllPostsArchive = (folder: string) => {
   const posts = getAllPosts(folder)
-  return posts.filter(({ slug }) => !['404', 'about', 'resume'].includes(slug)).reverse();
+  return posts.filter(({ slug }: any) => !['404', 'about', 'resume'].includes(slug)).sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 }
 
 export const getAllNewPosts = (folder: string) => {
   const posts = getAllPosts(folder)
-  return posts.filter(({ slug }) => !['404', 'about', 'resume'].includes(slug)).reverse().slice(0, 10);
+  return posts.filter(({ slug }: any) => !['404', 'about', 'resume'].includes(slug)).sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)).slice(0, 10);
 }
 
 export const getSinglePost = (slug: string, folder: string) => {
