@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function copyToClipboard(str) {
+export function copyToClipboard(str: string) {
   const el = document.createElement('textarea')
   el.value = str
   document.body.appendChild(el)
@@ -9,7 +9,12 @@ export function copyToClipboard(str) {
   document.body.removeChild(el)
 }
 
-export function Share({ path, url = 'https://jeffry.in' }) {
+interface ShareProps {
+  path: string
+  url?: string
+};
+
+export function Share({ path, url = 'https://jeffry.in' }: ShareProps) {
   const shareUrl = path && url ? `${url}${path}` : url
 
   function onBtnClick() {

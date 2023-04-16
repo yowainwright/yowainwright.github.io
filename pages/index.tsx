@@ -1,7 +1,7 @@
 import React from "react";
 import Head from 'next/head'
 import Link from "next/link";
-import { getAllPosts } from "../utils";
+import { getAllNewPosts } from "../utils";
 
 interface Post {
   slug: string;
@@ -21,8 +21,11 @@ export const Home = ({ posts }: HomeProps) => {
   return (
     <div className="main">
       <Head>
-        <title>Jeff Wainwright&apos;s Changelog</title>
-        <meta name="description" content="Daily changelog notes generally related to programming but with a little daily context" />
+        <title>Jeff Wainwright</title>
+        <meta name="description" content="Jeffry.in is the blog of Jeffry Wainwright, an engineer living in California." />
+        <link rel='canonical' href='https://jeffry.in/' itemProp='url' />
+        <meta property='og:url' content='https://jeffry.in/' />
+        <meta property='og:title' content="Jeff Wainwright" />
       </Head>
       <section className='section section--posts'>
         <div className='posts--basic'>
@@ -30,7 +33,7 @@ export const Home = ({ posts }: HomeProps) => {
             <article key={post.slug} className="post--article">
               <header>
                 <h2>
-                  <Link href={post.slug}>{post.frontmatter.date}: {post.frontmatter.title}</Link>
+                  <Link href={post.slug}>{post.frontmatter.title}</Link>
                 </h2>
                 <time dateTime={post.frontmatter.date}>{post.frontmatter.date}</time>
               </header>
@@ -44,7 +47,7 @@ export const Home = ({ posts }: HomeProps) => {
 }
 
 export const getStaticProps = async () => {
-  const posts = getAllPosts("content");
+  const posts = getAllNewPosts("content");
   return {
     props: { posts },
   };

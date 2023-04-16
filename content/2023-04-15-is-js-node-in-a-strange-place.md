@@ -21,7 +21,7 @@ It feels like JavaScript and Node are in a strange place. Getting the opportunit
 
 ## To give you an idea of what I mean, here are a few bullets that capture some of my thoughts!
 
-<br>
+
 
 - First off, [Typescript](https://www.typescriptlang.org/)! If types are needed, why not use a language with built-in support and formatter?
 - Second, [more](https://github.com/evanw/esbuild) and [more](https://github.com/vercel/turbo) code is written in other languages to support the limitations of JavaScript—like Typescript.
@@ -32,7 +32,6 @@ It feels like JavaScript and Node are in a strange place. Getting the opportunit
 
 ## Folks can hope
 
-<br>
 
 My hope JavaScript and Node can once again embrace their dynamic so we can avoid transpilation and all of the modules required to build things. Typescript isn't bad but it isn't a solution. I feel it highlights problems to be solved in JavaScript and Node. JavaScript should implement types similar to Python's implementation. Node should do static checks ([like Go](https://go.dev/blog/gofmt)) and [import maps](https://github.com/WICG/import-maps). The community should embrace Node's [testing module](https://nodejs.org/api/test.html). These features would remove many transpilation issues, reduce security risks, and make JavaScript and Node more maintainable for everyone. Otherwise, I can envision a world were the engineering community does avoid JavaScript and Node for the wrong reasons.
 

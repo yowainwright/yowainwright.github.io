@@ -1,13 +1,15 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { getSinglePost, getAllPosts } from '../utils'
-import Link from 'next/link'
+import Head from 'next/head'
 
 interface PostProps {
   content: string
+  slug: string
   frontmatter: {
     date: string
     title: string
+    meta: string
   }
 }
 
@@ -15,24 +17,20 @@ const Post = ({ content, frontmatter }: PostProps) => {
   return (
     <article className='post__article'>
       <header className='post__header'>
-        <h2>
-          <Link href='/'>Back to Changelog List →</Link>
-        </h2>
         <h1>
-          <i>{frontmatter?.date}:</i> {frontmatter?.title}
+          {frontmatter?.title}
         </h1>
         <time className='post__time'>{frontmatter?.date}</time>
       </header>
       <section className='post__section' style={{ display: 'block' }}>
         <ReactMarkdown>{content}</ReactMarkdown>
       </section>
-      <hr />
     </article>
   )
 }
 
-export async function getStaticPaths() {
-  const paths = await getAllPosts('content').map(({ slug }: any) => `/${slug}`)
+export function getStaticPaths() {
+  const paths = getAllPosts('content').map(({ slug }: any) => `/${slug}`)
   return {
     paths,
     fallback: true,
@@ -45,8 +43,8 @@ interface StaticProps {
   }
 }
 
-export const getStaticProps = async ({ params }: StaticProps) => {
-  const data = await getSinglePost(params.slug, 'content')
+export const getStaticProps = ({ params }: StaticProps) => {
+  const data = getSinglePost(params.slug, 'content')
   return {
     props: { ...data },
   }

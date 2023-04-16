@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
-import { BasicPost } from '../components/post/Basic'
-import { getAllPosts } from "../utils";
+import { BasicPost } from '../components/post/basic'
+import { getAllPostsArchive } from "../utils";
 interface Post {
   slug: string;
   frontmatter: {
@@ -15,23 +15,8 @@ interface PostsRowProps {
   posts: Post[]
 }
 
-function PostsRow({ posts }: PostsRowProps) {
-  const filteredPosts = posts.filter(({ slug }) => !['/404/', '/about', '/about/', '/resume', '/resume/'].includes(slug))
-  if (filteredPosts.length === 0) {
-    return <p>There are no posts to display.</p>
-  }
-  const postRows = filteredPosts.map(
-    (
-      {
-        slug,
-        frontmatter: { date, meta, title },
-      },
-      i,
-    ) => <BasicPost key={i} date={date} description={meta} path={slug} title={title} />,
-  )
-  return <>{postRows}</>
-}
-
+const PostsRow = ({ posts }: PostsRowProps): any =>
+  posts.map(({ slug, frontmatter: { date, meta, title } }: Post, i: number) => <BasicPost key={i} date={date} description={meta} path={slug} title={title} />)
 
 interface ArchiveProps {
   posts: Post[];
@@ -43,7 +28,7 @@ export default function Archive({ posts, title = 'Archive | Jeffry.in' }: Archiv
   return (
     <main className='main'>
       <Head>
-        <time>{title}</time>
+        <title>{title}</title>
         <meta
           property='og:description'
           content='A full list of blog posts written by Jeffry Wainwright, a human person who enjoys building software, open source, being outside, and trying to live life with purpose.'
@@ -65,7 +50,7 @@ export default function Archive({ posts, title = 'Archive | Jeffry.in' }: Archiv
 }
 
 export const getStaticProps = async () => {
-  const posts = getAllPosts("content");
+  const posts = getAllPostsArchive("content");
   return {
     props: { posts },
   };

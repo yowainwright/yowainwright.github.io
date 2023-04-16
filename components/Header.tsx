@@ -22,7 +22,11 @@ export const navItems = [
   },
 ]
 
-export const Icon = ({ isDarkMode }) => (isDarkMode ? <Sun /> : <Moon />)
+interface IconProps {
+  isDarkMode: boolean
+};
+
+export const Icon = ({ isDarkMode }: IconProps) => (isDarkMode ? <Sun /> : <Moon />)
 
 export function DarkmodeToggle() {
   const state = useContext(GlobalState)
@@ -38,7 +42,14 @@ export function DarkmodeToggle() {
   )
 }
 
-export const NavItem = ({ alias, componentName, name, path }) => (
+interface NavItemProps {
+  alias: string
+  componentName?: string
+  name: string
+  path: string
+}
+
+export const NavItem = ({ alias, componentName, name, path }: NavItemProps) => (
   <li className={`${componentName}__item ${componentName}__item--${alias}`}>
     <Link className={`${componentName}__link ${componentName}__link--${alias}`} href={path}>
       {name}
@@ -46,7 +57,12 @@ export const NavItem = ({ alias, componentName, name, path }) => (
   </li>
 )
 
-export function NavList({ componentName, navItems }) {
+interface NavListProps {
+  componentName: string
+  navItems: NavItemProps[]
+}
+
+export function NavList({ componentName, navItems }: NavListProps) {
   return (
     <ul className={`${componentName}__items`}>
       {navItems.map(({ alias, name, path }, i) => (

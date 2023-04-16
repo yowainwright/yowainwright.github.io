@@ -6,6 +6,12 @@ const nextConfig = {
   images: {
     loader: 'imgix',
     path: 'https://yowainwright.imgix.net',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'yowainwright.imgix.net',
+      }
+    ]
   },
   sassOptions: {
     includePaths: [],

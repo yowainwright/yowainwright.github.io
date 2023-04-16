@@ -51,7 +51,7 @@
     "build:css": "sass --style=compressed styles/main.scss assets/jeffry.in.css",
     "commit": "git-cz",
     "commit-msg": "commitlint --edit $1",
-    "deploy": "pnpm pre-deploy && NODE_ENV=production gatsby build && gh-pages -d public --branch master",
+    "deploy": "pnpm pre-deploy && NODE_ENV=production next build && gh-pages -d public --branch master",
     "dev": "next dev",
     "export": "next export",
     "lint": "next lint",
