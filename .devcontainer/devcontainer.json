@@ -1,0 +1,15 @@
+{
+	"name": "Node.js",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": { "VARIANT": "18-bullseye" }
+	},
+	"settings": {},
+	"extensions": [
+		"rvest.vs-code-prettier-eslint",
+    "wix.vscode-import-cost",
+    "eamodio.gitlens"
+	],
+	"postCreateCommand": "pnpm install",
+	"remoteUser": "node"
+}
