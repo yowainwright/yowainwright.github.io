@@ -69,6 +69,7 @@
     "commitizen": "4.2.5",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
+    "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
     "pastoralist": "^1.1.11",
     "prettier": "2.7.1",
