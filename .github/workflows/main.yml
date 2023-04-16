@@ -1,0 +1,34 @@
+# On every push this script is executed
+name: GitHub Pages deploy
+
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: latest
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: Installing my packages
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Build my App
+        run: pnpm run build && pnpm run export && touch ./out/.nojekyll
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          BRANCH: master
+          FOLDER: out

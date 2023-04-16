@@ -3,3 +3,4 @@ node_modules/
 .eslintcache
 .dccache
 .next
+out

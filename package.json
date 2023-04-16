@@ -3,8 +3,51 @@
   "description": "Jeffry.in, Jeff Wainwright's blog",
   "version": "2.13.0",
   "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
+  "license": "MIT",
+  "homepage": "https://github.com/yowainwright/yowainwright.github.io#readme",
+  "main": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yowainwright/yowainwright.github.io"
+  },
   "bugs": {
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
+  },
+  "scripts": {
+    "build": "pnpm run build:css && pnpm run build:giscus:light && pnpm run build:giscus:dark && next build",
+    "build:giscus:dark": "sass --style=compressed styles/giscus-light.scss assets/jeffry.in.giscus.light.css",
+    "build:giscus:light": "sass --style=compressed styles/giscus-dark.scss assets/jeffry.in.giscus.dark.css",
+    "build:css": "sass --style=compressed styles/main.scss assets/jeffry.in.css",
+    "commit": "git-cz",
+    "commit-msg": "commitlint --edit $1",
+    "dev": "next dev",
+    "export": "pnpm run export:next && pnpm run export:content",
+    "export:next": "next export",
+    "export:content": "if [ ! -d 'out/assets' ]; then mkdir -p out/assets; fi && cp -a assets/ out/assets/",
+    "lint": "next lint",
+    "pre-commit": "pnpm run build && pnpm run lint && pnpm run commit-msg",
+    "start": "next start",
+    "update": "codependence --update"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/@commitlint/prompt"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "header-max-length": [
+        2,
+        "always",
+        120
+      ]
+    }
+  },
+  "pastoralist": {
+    "appendix": {}
   },
   "dependencies": {
     "@next/font": "13.1.1",
@@ -28,60 +71,11 @@
     "commitizen": "4.2.5",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
-    "gh-pages": "4.0.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.0.1",
     "pastoralist": "^1.1.11",
     "prettier": "2.7.1",
     "remark": "^14.0.2",
     "sass": "^1.62.0",
     "ts-node": "^10.9.1"
-  },
-  "homepage": "https://github.com/yowainwright/yowainwright.github.io#readme",
-  "license": "MIT",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yowainwright/yowainwright.github.io"
-  },
-  "scripts": {
-    "build": "pnpm run build:css && pnpm run build:giscus:light && pnpm run build:giscus:dark && next build",
-    "build:giscus:dark": "sass --style=compressed styles/giscus-light.scss assets/jeffry.in.giscus.light.css",
-    "build:giscus:light": "sass --style=compressed styles/giscus-dark.scss assets/jeffry.in.giscus.dark.css",
-    "build:css": "sass --style=compressed styles/main.scss assets/jeffry.in.css",
-    "commit": "git-cz",
-    "commit-msg": "commitlint --edit $1",
-    "deploy": "pnpm pre-deploy && NODE_ENV=production next build && gh-pages -d public --branch master",
-    "dev": "next dev",
-    "export": "next export",
-    "lint": "next lint",
-    "pre-commit": "lint-staged --quiet",
-    "start": "next start",
-    "update": "codependence --update"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/@commitlint/prompt"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "header-max-length": [
-        2,
-        "always",
-        120
-      ]
-    }
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx,json,md}": [
-      "pnpm lint"
-    ]
-  },
-  "pastoralist": {
-    "appendix": {}
   }
 }
