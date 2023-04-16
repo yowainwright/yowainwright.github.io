@@ -1,13 +1,15 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import sanitize from 'sanitize-filename'
 
 // eslint-disable-next-line no-undef
 export const getPath = (folder: string) => path.join(process.cwd(), `/${folder}`) // Get full path
 
 export const getFileContent = (filename: string, folder: string) => {
   const contentDir = getPath(folder)
-  return fs.readFileSync(path.join(contentDir, filename), 'utf8')
+  const file = sanitize(filename)
+  return fs.readFileSync(path.join(contentDir, file), 'utf8')
 }
 
 export const getAllPosts = (folder: string) => {
