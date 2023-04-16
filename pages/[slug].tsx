@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { getSinglePost, getAllPosts } from '../utils'
-import Head from 'next/head'
 
 interface PostProps {
   content: string
