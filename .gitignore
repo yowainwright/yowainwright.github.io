@@ -1,12 +1,6 @@
 node_modules/
-public
-.gatsby-context.js
 .DS_Store
-.intermediate-representation/
-.cache/
-gatsby-blog
-coverage/
-package-lock.json
-yarn-error.log
 .eslintcache
 .dccache
+.next
+out

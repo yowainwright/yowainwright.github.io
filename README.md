@@ -9,11 +9,11 @@
 
 ## About
 
-I'm a software engineer at [Currency](https://www.gocurrency.com/). I was born in South Dakota but grew internationally. I enjoy [art](https://www.instagram.com/porkypaints/), [music](https://open.spotify.com/user/127322575?si=6zrJlJX9RcaOk5mp-iJnJg), [running](https://www.strava.com/athletes/722335), and [surfing](https://www.instagram.com/yowainwright/).
+I'm a software engineer at [GoodRx](https://www.goodrx.com/). I was born in South Dakota but grew internationally. I enjoy [art](https://www.instagram.com/porkypaints/), [music](https://open.spotify.com/user/127322575?si=6zrJlJX9RcaOk5mp-iJnJg), [running](https://www.strava.com/athletes/722335), and [surfing](https://www.instagram.com/yowainwright/).
 
 ## Work
 
-Currently, I'm creating cross app tools to make building new frontend apps easier at Currency using Lerna, React, and TypeScript. Currency's products aim to give our customers great integrations for providing/getting financing for certain loan types.
+Currently, I'm creating cross app and security tools to make building things easier and more secure.
 
 Formally, I've worked at/on:
 
