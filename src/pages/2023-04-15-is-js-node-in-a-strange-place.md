@@ -1,6 +1,6 @@
 ---
 title: "Quick Thought: Does it feel like JavaScript and Node are in a strange place?"
-date: '2022-04-15'
+date: '2023-04-15'
 layout: post
 readNext: '/'
 path: '/js-node-strange-place/'
