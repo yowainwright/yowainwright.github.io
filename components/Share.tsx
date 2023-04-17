@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export function copyToClipboard(str: string) {
   const el = document.createElement('textarea')
@@ -15,18 +15,33 @@ interface ShareProps {
 };
 
 export function Share({ path, url = 'https://jeffry.in' }: ShareProps) {
+  const shareLinkText = 'Share Article Link'
+  const copied = 'Copied!'
+  const [copyText, setCopyText] = useState(shareLinkText)
+  const [isCopied, setIsCopied] = useState(false)
   const shareUrl = path && url ? `${url}${path}` : url
-
   function onBtnClick() {
     copyToClipboard(shareUrl)
+    setIsCopied(true)
+    setCopyText(copied)
   }
+
+  useEffect(() => {
+    if (isCopied) {
+      const timer = setTimeout(() => {
+        setIsCopied(false)
+      }, 1000);
+      return () => clearTimeout(timer);
+    } else if (!isCopied && copyText !== shareLinkText) {
+      setCopyText(shareLinkText)
+    }
+  }, [copyText, isCopied, setIsCopied, setCopyText, shareLinkText])
 
   return (
     <section className='share'>
-      <h3 className='share__title'>Sharing is caring! 💘</h3>
       <nav className='share__nav'>
         <button className='share__button' onClick={onBtnClick}>
-          Copy Link
+          {copyText}
         </button>
       </nav>
     </section>

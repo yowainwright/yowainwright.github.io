@@ -14,6 +14,7 @@ interface PostProps {
     date: string
     title: string
     meta: string
+    path: string
   }
 }
 
@@ -40,8 +41,8 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   )
 }
 
-const Post = ({ content, frontmatter, slug }: PostProps) => {
-   const state = useContext(GlobalState)
+const Post = ({ content, frontmatter }: PostProps) => {
+  const state = useContext(GlobalState)
   return (
     <article className='post__article'>
       <header className='post__header'>
@@ -64,7 +65,7 @@ const Post = ({ content, frontmatter, slug }: PostProps) => {
             <header className='aside__header'>
               <h3 className='aside__title'>{frontmatter?.title}</h3>
             </header>
-            <Share path={slug} />
+            <Share path={frontmatter?.path} />
           </div>
         </aside>
       </section>
