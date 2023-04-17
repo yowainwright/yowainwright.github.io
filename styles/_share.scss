@@ -1,27 +1,10 @@
 .share {
   padding: 1rem 0;
 
-  &__title {
-    background: #fff;
-    border: 1px solid #999;
-    display: inline-block;
-    font-size: 0.65rem;
-    left: 2rem;
-    letter-spacing: 0.15rem;
-    margin: 0;
-    padding: 0.5rem 1rem;
-    position: relative;
-    text-transform: uppercase;
-    top: 1rem;
-
-    .js-is-darkmode & {
-      background-color: #162447;
-    }
-  }
-
   &__nav {
     border-top: 1px solid #999;
-    padding: 2rem;
+    padding: .5rem 0;
+    text-align: center;
   }
 
   &__button,

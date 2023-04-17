@@ -45,7 +45,7 @@ export const Footer = () => (
     <section className='site-footer__wrapper site-footer__wrapper--last'>
       <h3 className='site-footer__title site-footer__title--last'>
         <Link className='site-footer__link' href='/'>
-          jeffry.in ⚡️
+          jeffry.in
         </Link>
         , {new Date().getFullYear()}
       </h3>

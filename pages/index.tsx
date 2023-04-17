@@ -27,6 +27,9 @@ export const Home = ({ posts }: HomeProps) => {
         <meta property='og:url' content='https://jeffry.in/' />
         <meta property='og:title' content="Jeff Wainwright" />
       </Head>
+      <section className='section section--intro'>
+        <h1>I used to stand for something but now it is just because someone stole my chair. 💺 </h1>
+      </section>
       <section className='section section--posts'>
         <div className='posts--basic'>
           {posts.map((post) => (
