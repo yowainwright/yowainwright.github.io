@@ -3,7 +3,7 @@ title: "A 'little deep' dive into Dependabot and Snyk Ingore Configs"
 date: '2022-02-12'
 layout: post
 readNext: '/'
-path: '/snyk-dependabot-ignore-configs/'
+path: '/snyk-dependabot-ignore-configs'
 meta: "This article focuses on Snyk and Dependabots' ignore configs (ignores) from a DevX perspective."
 featured_image: null
 post_type: technical

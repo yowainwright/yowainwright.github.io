@@ -3,7 +3,7 @@ title: Document Cookies Are a Useful Tool With A Simple API With Some Nunaces
 date: '2022-02-05'
 layout: post
 readNext: '/'
-path: '/document-cookie-nuances/'
+path: '/document-cookie-nuances'
 meta: "This brief artice covers nuances of document.cookie and how to use it to store and access data."
 featured_image: null
 post_type: technical

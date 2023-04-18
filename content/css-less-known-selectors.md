@@ -3,7 +3,7 @@ title: Less used & known CSS selectors, aka attribute selectors
 date: "2014-10-29"
 layout: post
 readNext: "/"
-path: "/css-less-known-selectors/"
+path: "/css-less-known-selectors"
 meta: Less known CSS selectors, aka attribute selectors
 share_image: "https://yowainwright.imgix.net/icons/sass.jpg"
 featured_image: null

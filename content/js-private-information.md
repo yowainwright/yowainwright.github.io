@@ -3,7 +3,7 @@ title: Creating private information in JavaScript
 date: "2015-01-22"
 layout: post
 readNext: "/"
-path: "/js-private-information/"
+path: "/js-private-information"
 meta: Creating a private information in JavaScript to be used in future functions
 share_image: "https://yowainwright.imgix.net/icons/js.jpg"
 featured_image: null

@@ -3,7 +3,7 @@ title: Understanding the basics parts of a CLI command
 date: '2022-01-19'
 layout: post
 readNext: '/'
-path: '/cli-program-basic-parts/'
+path: '/cli-program-basic-parts'
 meta: "This brief article digs into the basics of most CLI commands including a summary of the commands's name, arguments, options, and actions."
 featured_image: null
 post_type: technical
