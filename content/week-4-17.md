@@ -3,7 +3,7 @@ title: Week 4, 2017—Great surfing and improving negotiation skills
 date: "2017-02-06"
 layout: post
 readNext: "/"
-path: "/week-4-17/"
+path: "/week-4-17"
 meta: This post summarizes week 4 of 2017. Southern California had a lot of good surfing
 show_image: true
 imgix: true
@@ -19,5 +19,3 @@ Los Angeles had significantly more sun in the last week of January than during t
 <figure>
   <img src="https://yowainwright.imgix.net/wk-4/justin-walking-to-shore.jpg?w=800&h=800&crop=focalpoint&auto=format" alt="Justin walking to shore after a long surf day." />
 </figure>
-
-

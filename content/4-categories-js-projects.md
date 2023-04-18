@@ -3,7 +3,7 @@ title: The 4 Categories of Frontend JavaScript Projects
 date: "2017-02-08"
 layout: post
 readNext: "/"
-path: "/4-categories-js-projects/"
+path: "/4-categories-js-projects"
 meta: This post lists out the 4 types of Frontend JavaScript Projects and summarizes
   them.
 share_image: https://yowainwright.imgix.net/icons/js.jpg

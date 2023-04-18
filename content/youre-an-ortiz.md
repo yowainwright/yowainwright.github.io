@@ -4,7 +4,7 @@ title: You're an Ortiz, how I gained family & through them things changed for th
 date: "2013-05-21"
 layout: post
 readNext: "/"
-path: "/youre-an-ortiz/"
+path: "/youre-an-ortiz"
 meta: A short story about moving out of the a bad situation & into a good one
 note: no-featured-image
 featured_image: "https://yowainwright.imgix.net/youre-an-ortiz/water-puddles.jpg"

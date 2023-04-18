@@ -3,7 +3,7 @@ title: Using ES6 Function Destructuring with JavaScript Plugin Options
 date: "2017-03-12"
 layout: post
 readNext: "/"
-path: "/destructing-function-opts/"
+path: "/destructing-function-opts"
 meta: This post explains how to use ES6 function destructuring for more readable JavaScript
   Plugin Options.
 share_image: https://yowainwright.imgix.net/icons/js.jpg
@@ -15,13 +15,13 @@ categories:
 - javascript
 ---
 
-Open source plugin code can become confusing. After writing a few open source plugins, I've realized that readability is very important to get help and make code better. One area where readability becomes confusing is options code. In this short post, I will go over options code in JavaScript Plugins and how it can be improved. 
+Open source plugin code can become confusing. After writing a few open source plugins, I've realized that readability is very important to get help and make code better. One area where readability becomes confusing is options code. In this short post, I will go over options code in JavaScript Plugins and how it can be improved.
 
 ## What are options?
 
 > Options, in JavaScript, are arguments passed in a function to replace default properties values.
 
-Options, in JavaScript, are arguments passed in a function to replace default properties values. In example, sometimes a plugin will have a default CSS class that it is associated with. Plugins will often allow users to change this default CSS class. 
+Options, in JavaScript, are arguments passed in a function to replace default properties values. In example, sometimes a plugin will have a default CSS class that it is associated with. Plugins will often allow users to change this default CSS class.
 
 Here an example of how options look in JavaScript from ES5:
 
@@ -50,7 +50,7 @@ And here's how it can be changed when it is initiated:
 someFunction({attribute: 'data-attr'});
 ```
 
-The _log_ will now look something like: 
+The _log_ will now look something like:
 
 ```javaScript
   Object: attr: "data-attr", document: Window, element: html

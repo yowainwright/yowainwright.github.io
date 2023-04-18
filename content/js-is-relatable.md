@@ -3,7 +3,7 @@ title: 'JavaScript is relatable'
 date: '2017-09-08'
 layout: post
 readNext: '/'
-path: '/JS-is-relatable/'
+path: '/js-is-relatable'
 meta: 'JavaScript is for the people because it is relatable and usable.'
 post_index: 51
 categories:

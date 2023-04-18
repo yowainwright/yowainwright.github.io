@@ -3,7 +3,7 @@ title: Reframing content responsively with Reframe.js
 date: "2016-09-19"
 layout: post
 readNext: "/"
-path: "/reframing-content/"
+path: "/reframing-content"
 meta: Reframing content, one of the most important things to present well on a content
   site is embedded content.
 share_image: "https://yowainwright.imgix.net/reframing-content/aspect-ratio.jpg"

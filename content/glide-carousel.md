@@ -3,7 +3,7 @@ title: Glide Carousel, a easy to use slider for Semantic UI
 date: "2014-04-23"
 layout: post
 readNext: "/"
-path: "/glide-carousel/"
+path: "/glide-carousel"
 meta: This is a demo on how to use the Glide Carousel with Semantic UI
 post_index: 4
 categories:
@@ -41,7 +41,7 @@ The HTML for the first 2 slides
   <div class="slides">
     <div class="slide-item item1">
     </div>
-    <div class="slide-item item2"> 
+    <div class="slide-item item2">
     </div>
     <div class="slide-item item3">
     </div>

@@ -3,7 +3,7 @@ title: "Quick Thought: Does it feel like JavaScript and Node are in a strange pl
 date: '2023-04-15'
 layout: post
 readNext: '/'
-path: '/js-node-strange-place/'
+path: '/js-node-strange-place'
 meta: "It feels sorta like JavaScript and Node are in a weird place. They've greatly improved but are we using them for things we shouldn't?"
 featured_image: null
 post_type: technical

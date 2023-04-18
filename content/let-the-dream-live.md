@@ -3,7 +3,7 @@ title: "Let the dream live! Unless dreams have actionable plans, they're not rea
 date: "2019-01-22"
 layout: post
 readNext: "/"
-path: "/let-the-dream-live/"
+path: "/let-the-dream-live"
 meta: "Pragmatism has often told me that dreams cannot become real unless they're followed by an actionable plan. I've share this logic with friends when they tell me an unrealistic dream and to my surprise, 'thanks' was not the typical response. Responses tended to be negative. Dreams are often just that, dreams. Let then live if they make others happy."
 featured_image: null
 post_index: 62
@@ -49,4 +49,3 @@ In my example with my high school girlfriend, I was envisioning her dreams as go
 It is important when listening to people we care about that they feel open. Feeling open and listened to is important for people to be able to love and share. This is why understanding the subtle but important difference between a goal and a dream is important in humans' close relationships. When a person a human is close to shares a dream, probably all that is needed is to listen. If it is clear that the person is beginning to plan out a dream, turning it into a goal—that is the time to offer feedback and insight. In both scenarios truly listening is important.
 
 ![Let dreams live](https://yowainwright.imgix.net/let-dreams-live/sharing.svg?auto=format)
-
