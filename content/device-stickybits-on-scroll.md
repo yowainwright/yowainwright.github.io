@@ -3,7 +3,7 @@ title: All about Sticky Navs & what happens to them on devices
 date: "2016-07-24"
 layout: post
 readNext: "/"
-path: "/device-sticky-bits-on-scroll/"
+path: "/device-stickybits-on-scroll"
 meta: Creating a sticky nav that works while scrolling is a difficult issue that must
   be solved, many sites navigations are set to fixed position
 share_image: "https://yowainwright.imgix.net/icons/js.jpg"

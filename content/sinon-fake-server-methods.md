@@ -3,7 +3,7 @@ title: Digging into Sinon Fake Server Methods
 date: '2017-09-05'
 layout: post
 readNext: '/'
-path: '/sinon-fake-server-methods/'
+path: '/sinon-fake-server-methods'
 meta: Digging into Sinon Fake Server Methods and how to use them.
 featured_image: null
 post_index: 50
