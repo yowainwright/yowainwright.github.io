@@ -3,7 +3,7 @@ title: AWW—A Formula For Writing Git Commits
 date: "2017-03-12"
 layout: post
 readNext: "/"
-path: "/formula-for-commits/"
+path: "/formula-for-commits"
 meta: This post describes AWW, a formula for writing meaningful commit messages with git.
 share_image: https://yowainwright.imgix.net/icons/os.jpg
 featured_image: null
@@ -19,7 +19,7 @@ For software engineers, it is easy to reach an agreement that good commit messag
 
 -  **action**: this word is a verb that describes what the commit does
 -  **what**: word(s) that describe what the _action_ is relative to
--  **where**: word(s) that describe _where_ the _action_ is happening to _what_ 
+-  **where**: word(s) that describe _where_ the _action_ is happening to _what_
 
 This is called **AWW** which sounds cute, so I like it.
 
@@ -36,4 +36,4 @@ In the example above:
 
 ## Why make a formula?
 
-Git messages are important. They seem simple to write in discussion. When changing multiple files or things in a file, the meaning of changes can be lost easily. Following the AWW formula helps composing meaning when committing. 
+Git messages are important. They seem simple to write in discussion. When changing multiple files or things in a file, the meaning of changes can be lost easily. Following the AWW formula helps composing meaning when committing.

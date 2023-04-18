@@ -3,11 +3,11 @@ title: Art Lived, A Story Of How A Painting Was Given, Lost & Found
 date: "2012-10-21"
 layout: post
 readNext: "/"
-path: "/art-lived/"
+path: "/art-lived"
 meta: Art Lived, A Story Of A Painting
 featured_image: "https://yowainwright.imgix.net/art-lived/art-lived-start.jpg"
 post_index: 1
-category: 
+category:
 - story
 ---
 

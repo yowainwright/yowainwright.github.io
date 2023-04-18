@@ -3,7 +3,7 @@ title: Javascript Closure all wrapped up & why
 date: "2014-10-15"
 layout: post
 readNext: "/"
-path: "/js-closure/"
+path: "/js-closure"
 meta: Understanding Javascript Closure & what it does
 share_image: "https://yowainwright.imgix.net/icons/js.jpg"
 featured_image: null
@@ -19,7 +19,7 @@ Javascript Closures are bundles of code or inner functions that have access to o
 
 The first thing that comes to mind when I try to think of an example to explain Javascript Closures is the process of microwaving. When we put something, food preferably, in a microwave, we're expecting something tasty to come out after a few minutes. Well, maybe not tasty but definitely different.
 
-We can think of a Javascript Closure like a microwave. There's an outer function, a chunk of re-usable code, which is represented by a microwave & an inner function which we could think of as the 'thingy' that cooks the food. 
+We can think of a Javascript Closure like a microwave. There's an outer function, a chunk of re-usable code, which is represented by a microwave & an inner function which we could think of as the 'thingy' that cooks the food.
 
 We don't want whatever is cooking that food, to cook us, so we put the food in the microwave (outer function) & then the actual 'thingy' that cooks the food (inner function). That encapsulated process that cooks the food is what & why we use a function.
 

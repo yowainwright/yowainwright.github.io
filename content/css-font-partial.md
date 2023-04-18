@@ -3,7 +3,7 @@ title: Making a CSS Font Partial
 date: "2017-09-14"
 layout: post
 readNext: "/"
-path: "/css-font-partial/"
+path: "/css-font-partial"
 meta: Making a maintainable CSS font partial.
 featured_image: null
 post_index: 54
@@ -12,7 +12,7 @@ categories:
 - css
 ---
 
-Fonts and text styles are often managed along with other default styles by developers. Here is one way to create a font CSS partial using [BEM—Block Element Modifier](http://getbem.com/). 
+Fonts and text styles are often managed along with other default styles by developers. Here is one way to create a font CSS partial using [BEM—Block Element Modifier](http://getbem.com/).
 
 ---
 
@@ -33,7 +33,7 @@ $text: normal .9375rem/1.33 $serif;
 $text-small: normal .875rem/1.43 $serif;
 ```
 
-After general font styles are declared, css is written to modify them efficiently with cascade awareness. In the CSS block below, `.text` is the **block**. `__title` and `__cite` are **elements** that extend from the `.text` block. **Modifiers** are used to define `condensed` and `large` font modifications. 
+After general font styles are declared, css is written to modify them efficiently with cascade awareness. In the CSS block below, `.text` is the **block**. `__title` and `__cite` are **elements** that extend from the `.text` block. **Modifiers** are used to define `condensed` and `large` font modifications.
 
 ```sass
 .text {
@@ -51,7 +51,7 @@ After general font styles are declared, css is written to modify them efficientl
     font: $text-large;
     &--large {
       // the `large` modifier can modify the `title` element
-      font-size: 2rem; 
+      font-size: 2rem;
     }
   }
   &__cite {
@@ -61,7 +61,7 @@ After general font styles are declared, css is written to modify them efficientl
 }
 ```
 
-Write CSS as done above is purposeful. All styles are clearly nested within the `.text` block. This process provided the sense of cascade without causing the cascade to suffer as a result. Each selector compiles to 1 CSS class. 
+Write CSS as done above is purposeful. All styles are clearly nested within the `.text` block. This process provided the sense of cascade without causing the cascade to suffer as a result. Each selector compiles to 1 CSS class.
 
 The compiles CSS looks like this (unminified)
 
@@ -79,7 +79,7 @@ The compiles CSS looks like this (unminified)
   font: $text-large;
 }
 .text__title--large {
-  font-size: 2rem; 
+  font-size: 2rem;
 }
 .text__cite {
   font: $text-small;

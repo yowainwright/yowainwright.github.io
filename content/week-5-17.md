@@ -3,7 +3,7 @@ title: Week 5, 2017—Analytics Tech and Viewing Ocean Caves
 date: "2017-02-15"
 layout: post
 readNext: "/"
-path: "/week-5-17/"
+path: "/week-5-17"
 meta: Week 5, 2017—I was able to work on analytics for a current project and see Ocean
   Caves at Leo Carillo State Beach.
 featured_image: "https://yowainwright.imgix.net/wk-5/leo-carillo-rock.jpg"
@@ -21,10 +21,10 @@ The 5th week post is coming a week late. There were negotiations going on and I 
 </figure>
 
 ## Updating Analytics
-Analytics for the site I'm working on had a straightforward facelift. Or teams are also working on tool to make analytics more uniform across our web properties. 
+Analytics for the site I'm working on had a straightforward facelift. Or teams are also working on tool to make analytics more uniform across our web properties.
 
 ## Fitness Work
-I wasn't able to surf as much because of continued rain. I made it to the rock gym a few times and my apartment gym a few more times. I got onto my bike and ran for a few [hours](https://www.strava.com/athletes/722335#interval?interval=201705&interval_type=week&chart_type=miles&year_offset=0) as well. 
+I wasn't able to surf as much because of continued rain. I made it to the rock gym a few times and my apartment gym a few more times. I got onto my bike and ran for a few [hours](https://www.strava.com/athletes/722335#interval?interval=201705&interval_type=week&chart_type=miles&year_offset=0) as well.
 
 ## Leo Carrillo State Beach
 
@@ -33,7 +33,3 @@ Driving by Leo Carrillo State Beach on Highway 1 has always been enjoyable. Ther
 <figure>
   <img src="https://yowainwright.imgix.net/wk-5/leo-carillo-cave.jpg?w=800&h=800&crop=focalpoint&auto=format" alt="Looking through a rock cave at Leo Carillo State Beach in California." />
 </figure>
-
-
-
-

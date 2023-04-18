@@ -3,11 +3,11 @@ title: 'About me, Jeff Wainwright, a husband, dad, and software engineer in Los 
 date: '2017-07-28'
 layout: post
 readNext: /
-path: /about/
+path: /about
 meta: >-
   This is the About page of, me, Jeff Wainwright, "yowainwright" on the
   internet. I'm a husband, dad, software engineer, artist, and person who enjoys athletics,
-  living in Los Angeles. 
+  living in Los Angeles.
 post_index: null
 ---
 

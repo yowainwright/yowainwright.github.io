@@ -3,7 +3,7 @@ title: How To Execute Node Commands To Test With Jest
 date: '2021-01-19'
 layout: post
 readNext: '/'
-path: '/jest-exec-test/'
+path: '/jest-exec-test'
 meta: This post is a quick summary of running node script execution tests with Jest.
 featured_image: null
 post_type: technical
@@ -13,11 +13,11 @@ categories:
   - javascript
 ---
 
-This post is a quick summary of running [Node](https://nodejs.org/en/) [script execution](https://webplatform.github.io/docs/tutorials/your_first_look_at_javascript/#:~:text=To%20execute%20JavaScript%20in%20a,element%20with%20a%20src%20attribute.) tests with [Jest](https://jestjs.io/). This post will be written with [TypeScript](https://www.typescriptlang.org/) code snippets but I hope everything will still be clear if you're using plain JavaScript. Brief summaries of script execution, CLIs, Jest, and typescript are written below. 
+This post is a quick summary of running [Node](https://nodejs.org/en/) [script execution](https://webplatform.github.io/docs/tutorials/your_first_look_at_javascript/#:~:text=To%20execute%20JavaScript%20in%20a,element%20with%20a%20src%20attribute.) tests with [Jest](https://jestjs.io/). This post will be written with [TypeScript](https://www.typescriptlang.org/) code snippets but I hope everything will still be clear if you're using plain JavaScript. Brief summaries of script execution, CLIs, Jest, and typescript are written below.
 
 ## Why This Post Is Written
 
-When writing tests for a Command Line Interface ([CLI](https://en.wikipedia.org/wiki/Command-line_interface)), I googled for a clear path to writing CLI test in Jest and didn't find much! To some writing CLI tests may be obvious and therefore no pattern needs to be reviewed or copied. Good for you! However, for me at least, I like to be able to read about a common pattern that works and copy that pattern. This makes code and conversations about code easier! This sentiment is turning into a whole other can-of-worms. So how about some code, shall we? That **is** why you're here, I assume. 
+When writing tests for a Command Line Interface ([CLI](https://en.wikipedia.org/wiki/Command-line_interface)), I googled for a clear path to writing CLI test in Jest and didn't find much! To some writing CLI tests may be obvious and therefore no pattern needs to be reviewed or copied. Good for you! However, for me at least, I like to be able to read about a common pattern that works and copy that pattern. This makes code and conversations about code easier! This sentiment is turning into a whole other can-of-worms. So how about some code, shall we? That **is** why you're here, I assume.
 
 ## A sample test to copy
 
@@ -42,14 +42,14 @@ Now that a copy/paste snippet has been added, I feel better. How about you?
 
 ## Monorepo Utilities
 
-Here's the project I'm working [on]() which led me to writing this post. [Monorepo Utilities]() is group of tools to help developers more easily develop within a monorepo echo system. For each tool, a CLI program is added. I feel these tools can really help developers think less when using Monorepos. Please give the repo a star! 
+Here's the project I'm working [on]() which led me to writing this post. [Monorepo Utilities]() is group of tools to help developers more easily develop within a monorepo echo system. For each tool, a CLI program is added. I feel these tools can really help developers think less when using Monorepos. Please give the repo a star!
 
 ## Techinary summary
 
 Hopeing the summary below clarifies technical terms used in this post!
 
 - **Script Execution** is the execution of some code. This when programming is often done in a terminal but scripts can be executed in many other ways!
-- **Command Line Interface CLI** is an interface which is used to run commands. Commands for the purpose of this post **are** scripts. 
+- **Command Line Interface CLI** is an interface which is used to run commands. Commands for the purpose of this post **are** scripts.
 - **Jest** is popular open source testing library for JavaScript and Typescript.
 - **TypeScript** is typed version of JavaScript which is used to descriptively describe and support the writing and reading of JavaScript code.
 
@@ -61,16 +61,16 @@ In the summary below, how I setup a CLI to be written in TypeScript and tested u
 
 ## Installation
 
-First install the necessary dependencies. For my project, I'm using [Sade](https://github.com/lukeed/sade) by [Luke Edwards](https://github.com/lukeed) for my CLI. 
+First install the necessary dependencies. For my project, I'm using [Sade](https://github.com/lukeed/sade) by [Luke Edwards](https://github.com/lukeed) for my CLI.
 
 ## Install Commands
 
 ```bash
 # install a new node version, node 14+ hopefully
-nvm i 
-# yarn is expected, npm can be used, 
+nvm i
+# yarn is expected, npm can be used,
 # install dependencies
-yarn add sade -S 
+yarn add sade -S
 # installl devDependencies
 yarn add ts-node typescript jest ts-jest @types/node @types/jest @types/sade -D
 ```
@@ -125,7 +125,7 @@ The configurations below a generalized for clarity (hopefully)!
 }
 ```
 
-### Files 
+### Files
 
 The files below display a CLI file using Sade and a corresponding test.
 
@@ -175,6 +175,3 @@ describe('<someScript>', () => {
   })
 })
 ```
-
-
-

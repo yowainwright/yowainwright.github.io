@@ -3,7 +3,7 @@ title: Can Code Review Etiquette be a thing? Here are some starter thoughts on i
 date: "2017-09-16"
 layout: post
 readNext: "/"
-path: "/code-review-etiquette/"
+path: "/code-review-etiquette"
 meta: Code Review Etiquette is an important for code quality, engineer happiness, and engineer growth—but is never talked about?
 featured_image: null
 post_index: 55
@@ -38,7 +38,7 @@ The lines below dissect a code review comment of the theoretical `function` wher
 You should return out of this function early
 ```
 
-#### **We:** Using `we` is inclusive and it seems like a safe thing to say. However, if the person speaking says `we`, and has not worked on the code at all, it may seem falsely inclusive. 
+#### **We:** Using `we` is inclusive and it seems like a safe thing to say. However, if the person speaking says `we`, and has not worked on the code at all, it may seem falsely inclusive.
 
 ```md
 we should return out of this function early
@@ -65,23 +65,23 @@ Passion is an important motivator for improving at things. Even passion when it 
 #### Imagine this comment when stated with exaggerated physical movement, more excited vocal tone, and higher volume
 
 ```md
-There are 8 web fonts used in this mock which 
-may affect page load speed or even certain tracking metrics 
+There are 8 web fonts used in this mock which
+may affect page load speed or even certain tracking metrics
 that could be caused by new race conditions!
 ```
 
 #### Then, imagine a similar comment, even more terse but stated with a calm demeanour, slower delivery, and a normal vocal volume—followed by a question even
 
 ```md
-There are 8 web fonts used in this mock. 
-This will affect page load speed 
-and possible tracking metrics because of potential race conditions! 
+There are 8 web fonts used in this mock.
+This will affect page load speed
+and possible tracking metrics because of potential race conditions!
 How can this be improved?
 ```
 
 Notice, how the comments above are almost the same. The second comment is even more direct. It states a problem as a fact and then requests feedback.
 
-An important thing to remember when being passionate is taking on a quieter tone. This is a physical decision—not a social one. Passionate language can be the same and perceived very differently based on the orientation of the communicator's tone. If physical tone (body language), vocal tone, vocal pitch, and vocal volume remain gentle, it is observed that it is much more likely for an audience to remain engaged—even if the critique is critical in nature. 
+An important thing to remember when being passionate is taking on a quieter tone. This is a physical decision—not a social one. Passionate language can be the same and perceived very differently based on the orientation of the communicator's tone. If physical tone (body language), vocal tone, vocal pitch, and vocal volume remain gentle, it is observed that it is much more likely for an audience to remain engaged—even if the critique is critical in nature.
 
 Furthermore, it is observed that if the tone is seemingly aggressive in nature (exaggerated physical movement, more excited vocal tone, higher volume) that the actual words used can be gentle in nature but the audience can feel very differently. This communication leads to embarrassment, a disengaged audience, and even loss of respect.
 
@@ -96,14 +96,14 @@ The example below shows how this behavior can happen in a code review. The examp
 #### The comment below provides a comment and then a link that goes above 5 levels higher which is actually confusing in the context of the code review.
 
 ```md
-return out of this function earlier. 
+return out of this function earlier.
 You need to learn about [functional programming](http://www.cs.utah.edu/~germain/PPS/Topics/functions.html)
 ```
 
 #### The comment below provides a comment then a pseudo code suggestion
 
 ```javascript
-/* 
+/*
   return early like this 🏁
 */
 const calculateStuff = (stuff) => {
@@ -125,6 +125,6 @@ Developers almost always want to re-write things. It is natural to break down pr
 
 ---
 
-The above list is general high-level things that can help with positive engagement when talking about, reviewing, or reading about code or technology. I am a hypocrite. I do all of the things that I've written not to do in the list above. The goal for _Code Review Etiquette_ is developing a standard etiquette to strive for when discussing code in any format. Much like code, communication has things that are right and wrong. I hope to work with other developers to improve _Code Review Etiquette_ by developing standards by which code can be discussed. 
+The above list is general high-level things that can help with positive engagement when talking about, reviewing, or reading about code or technology. I am a hypocrite. I do all of the things that I've written not to do in the list above. The goal for _Code Review Etiquette_ is developing a standard etiquette to strive for when discussing code in any format. Much like code, communication has things that are right and wrong. I hope to work with other developers to improve _Code Review Etiquette_ by developing standards by which code can be discussed.
 
 By thinking through the notes above for myself, I have created benchmarks where I have naturally begun to assess my _Code Review Etiquette_. I'm focusing on improving my communication based on my list daily. I would love to share these sentiments with other engineers to improve. ~Thanks

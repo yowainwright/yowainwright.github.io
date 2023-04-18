@@ -4,7 +4,7 @@ title: Week 8, 2017—Losing a few friends, being sick, transitioning and writin
 date: "2017-03-05"
 layout: post
 readNext: "/"
-path: "/week-8-17/"
+path: "/week-8-17"
 meta: Week 8, 2017—This week I was sick, lost a few friends and started to do some
   transitioning.
 featured_image: "https://yowainwright.imgix.net/wk-7/running.jpg"
@@ -30,5 +30,4 @@ I'm switching over to an analytics project and I'm pumped about it. I'd started 
 
 ## In conclusion
 
-I'm thankful for my life and the goals I have to attain. I feel like I have so much more to say in this life. I hope my words will reflect a bit of what I learned from my dear friend that passed. I'll miss her forever and try to remember the gifts I received from her. 
-
+I'm thankful for my life and the goals I have to attain. I feel like I have so much more to say in this life. I hope my words will reflect a bit of what I learned from my dear friend that passed. I'll miss her forever and try to remember the gifts I received from her.

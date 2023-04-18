@@ -4,7 +4,7 @@ title: Week 2, 2017—run, rocks, rain; I couldn't surf but I definitely played 
 date: "2017-01-17"
 layout: post
 readNext: "/"
-path: "/week-2-17/"
+path: "/week-2-17"
 meta: This post summarizes week 2 of 2017. It included a little surfing, rock climbing,
   running and definitely a lot of programming.
 show_image: true
@@ -16,7 +16,7 @@ categories:
 - story
 ---
 
-Wow, writing a weekly update will be challenging but valuable. The rain in Southern California has lingered which great for water levels and local waterfalls up above Pasadena—I've enjoyed it thoroughly. This environmental change has switched my sport focus a bit—climbing more and surfing less. Beyond that, JavaScript MVC discovery has led to new open source projects to make and a few projects to contribute to as well. 
+Wow, writing a weekly update will be challenging but valuable. The rain in Southern California has lingered which great for water levels and local waterfalls up above Pasadena—I've enjoyed it thoroughly. This environmental change has switched my sport focus a bit—climbing more and surfing less. Beyond that, JavaScript MVC discovery has led to new open source projects to make and a few projects to contribute to as well.
 
 ## Mueller Tunnel Continues to Enchant
 
@@ -28,7 +28,7 @@ Mueller Tunnel is located about a mile from the summit of [Mount Wilson](https:/
 
 ## Riding In the Rain—on; board or bike
 
-Cycling has continued to be a challenge with the rain however views from the saddle are irresistible. I was able to maintain a bit over [130](https://www.strava.com/athletes/722335#interval?interval=201702&interval_type=week&chart_type=miles&year_offset=0) but my hips were a concern going into my third week. I was able to remedy this with a bit of surfing and climbing in the gym. Yeah, gym climbing has been great for me. It challenges me to stretch and relax. 
+Cycling has continued to be a challenge with the rain however views from the saddle are irresistible. I was able to maintain a bit over [130](https://www.strava.com/athletes/722335#interval?interval=201702&interval_type=week&chart_type=miles&year_offset=0) but my hips were a concern going into my third week. I was able to remedy this with a bit of surfing and climbing in the gym. Yeah, gym climbing has been great for me. It challenges me to stretch and relax.
 
 <figure class="width--content">
   <img src="https://yowainwright.imgix.net/wk-2/sacred-cove.jpg?fit=crop&w=2000&h=1500&auto=format" alt="Cycling to Sacred Cove, January 14, 2017" />
@@ -36,7 +36,7 @@ Cycling has continued to be a challenge with the rain however views from the sad
 
 ## Nuxt, Next and Svelte
 
-Over the past week, I researched [Nuxt](https://nuxtjs.org/), [Next](https://zeit.co/blog/next) and [Svelte](https://svelte.technology/). I'm currently working on basic setups for Nuxt and Next with a [mentor of mine](https://github.com/briangonzalez/). If it makes sense, those projects will be open sourced. I'm also planning on using Svelte personally on this here, blog site. I'm a huge fan of [Rich Harris](https://github.com/Rich-Harris). [Rollup](https://github.com/rollup/rollup) is my _go-to_for open source projects. It keeps my code honest. 
+Over the past week, I researched [Nuxt](https://nuxtjs.org/), [Next](https://zeit.co/blog/next) and [Svelte](https://svelte.technology/). I'm currently working on basic setups for Nuxt and Next with a [mentor of mine](https://github.com/briangonzalez/). If it makes sense, those projects will be open sourced. I'm also planning on using Svelte personally on this here, blog site. I'm a huge fan of [Rich Harris](https://github.com/Rich-Harris). [Rollup](https://github.com/rollup/rollup) is my _go-to_for open source projects. It keeps my code honest.
 
 ## Tried and True
 
@@ -47,4 +47,3 @@ Last and not least, I got my first custom surfboard made by [Caleb, 'Critter Sur
 <figure class="width--content">
   <img src="https://yowainwright.imgix.net/wk-2/new-surfboard.jpg?fit=crop&w=700&h=700&auto=format" alt="My Critter Surfboard, January 14, 2017" />
 </figure>
-
