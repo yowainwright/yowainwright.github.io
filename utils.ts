@@ -46,12 +46,14 @@ export const getAllNewPosts = (folder: string) => {
 export const getSinglePost = (slug: string, folder: string) => {
   const source = getFileContent(`${slug}.md`, folder)
   const { data: frontmatter, content } = matter(source)
-  const { date, ...rest } = frontmatter
+  const { date, path, ...rest } = frontmatter
   const prettyDate = new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+  const trimmedPath = `/${path.split('/')[1]}`
   return {
     frontmatter: {
       ...rest,
       date: prettyDate,
+      path: trimmedPath,
     },
     content,
   }
