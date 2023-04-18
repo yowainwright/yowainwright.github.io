@@ -19,7 +19,7 @@ export function Share({ path, url = 'https://jeffry.in' }: ShareProps) {
   const copied = 'Copied!'
   const [copyText, setCopyText] = useState(shareLinkText)
   const [isCopied, setIsCopied] = useState(false)
-  const shareUrl = path && url ? `${url}${path}` : url
+  const shareUrl = `${url}${path}`
   function onBtnClick() {
     copyToClipboard(shareUrl)
     setIsCopied(true)
