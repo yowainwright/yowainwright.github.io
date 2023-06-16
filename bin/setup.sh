@@ -13,21 +13,20 @@ else
 fi
 
 # Check to see if Homebrew, Go, and Pre-commit are installed, and install it if it is not
-HAS_NVM=$(command -v nvm >/dev/null)
+HAS_N=$(command -v n >/dev/null)
 HAS_PNPM=$(command -v pnpm >/dev/null)
 
 
 
-if $HAS_NVM; then
+if $HAS_N; then
   if [ "$NODE_ENV" == "local" ]; then
-    . ~/.nvm/nvm.sh install
-  else
-    nvm i
+    version=$(cat .node-version)
+    n $version
   fi
   echo 'node version is up-to-date'
   exit 0
 else
-  echo "Please install NVM or ensure your version matches the .nvmrc file"
+  echo "Please install N or ensure your version matches the .node-version file"
   exit 1
 fi
 
