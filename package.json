@@ -15,6 +15,7 @@
   },
   "scripts": {
     "build": "pnpm run build:css && pnpm run build:giscus:light && pnpm run build:giscus:dark && next build",
+    "build:sitemap": "next-sitemap",
     "build:giscus:dark": "sass --style=compressed styles/giscus-light.scss public/assets/jeffry.in.giscus.light.css",
     "build:giscus:light": "sass --style=compressed styles/giscus-dark.scss public/assets/jeffry.in.giscus.dark.css",
     "build:css": "sass --style=compressed styles/main.scss public/assets/jeffry.in.css",
@@ -23,7 +24,6 @@
     "dev": "next dev",
     "export": "next export",
     "lint": "next lint",
-    "postbuild": "next-sitemap",
     "pre-commit": "pnpm run build && pnpm run lint && pnpm run commit-msg",
     "start": "next start",
     "update": "codependence --update"
