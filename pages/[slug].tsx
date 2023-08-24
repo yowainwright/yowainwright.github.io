@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import Giscus from '@giscus/react';
 import ReactMarkdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
 import { getSinglePost, getAllPosts } from '../utils'
 import { GlobalState } from './_app';
 import { Share } from '../components/Share'
@@ -54,7 +55,7 @@ const Post = ({ content, frontmatter }: PostProps) => {
       <section className='post__section'>
         <div className='post__container'>
           <div className='post__content'>
-            <ReactMarkdown>{content}</ReactMarkdown>
+            <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
           </div>
           <div className='post__giscus'>
             <GiscusWrapper isDarkMode={state?.isDarkMode || false} />
