@@ -76,6 +76,7 @@
     "next-sitemap": "^4.1.8",
     "pastoralist": "^1.1.11",
     "prettier": "3.0.1",
+    "rehype-raw": "^6.1.1",
     "remark": "^14.0.3",
     "sass": "^1.64.2",
     "ts-node": "^10.9.1"
