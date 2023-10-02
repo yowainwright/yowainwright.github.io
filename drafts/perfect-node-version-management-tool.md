@@ -1,8 +1,7 @@
 ---
 title: "Quick Thought: N vs NVM, which to use? It depends¨—but N provides a killer feature for team alignment"
 date: "2023-08-03"
-layout: post
-readNext: "/"
+
 path: "/n-vs-nvm"
 meta: N and NVM are tools people often reach for to manage node versions. Both are great tools but for team alignment, N seems to provide a better experience you should try out!
 featured_image: null

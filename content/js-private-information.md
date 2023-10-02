@@ -1,13 +1,8 @@
 ---
 title: Creating private information in JavaScript
 date: "2015-01-22"
-layout: post
-readNext: "/"
 path: "/js-private-information"
 meta: Creating a private information in JavaScript to be used in future functions
-share_image: "https://yowainwright.imgix.net/icons/js.jpg"
-featured_image: null
-post_index: 10
 categories:
 - code
 - javascript
@@ -224,15 +219,3 @@ Both examples render the same result but my boss's code is much cleaner I think.
 This project was given to me after doing Udacity's [OOP JavaScript class](//www.udacity.com/course/object-oriented-javascript--ud015). It's been interesting after reviewing the class with my boss how much I thought I understood versus how much I actually do in practice.
 
 Welp, back to coding ...
-
-
-
-
-
-
-
-
-
-
-
-

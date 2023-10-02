@@ -1,13 +1,9 @@
 ---
 title: Understanding Javascript Objects - static objects to classes
 date: "2014-12-20"
-layout: post
-readNext: "/"
 path: "/js-objects"
 meta: Understanding JavaScript Objects, from static objects to classes
 share_image: "https://yowainwright.imgix.net/icons/js.jpg"
-featured_image: null
-post_index: 9
 categories:
 - code
 - javascript

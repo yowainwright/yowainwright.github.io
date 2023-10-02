@@ -1,14 +1,9 @@
 ---
 title: 'Rant: HTML is easy and that''s why we all write it wrong!'
 date: "2016-09-30"
-layout: post
-readNext: "/"
 path: "/html-is-easy"
 meta: Rant post  about potential gains from understanding and being more thoughtful
   when writing html.
-share_image: "https://yowainwright.imgix.net/icons/os.jpg"
-featured_image: null
-post_index: 19
 categories:
 - html
 - code

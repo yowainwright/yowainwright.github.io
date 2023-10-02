@@ -1,13 +1,8 @@
 ---
 title: Hanging out around White Rock Lake
 date: "2016-06-07"
-layout: post
-readNext: "/"
 path: "/white-rock-lake"
 meta: Hanging out around White Rock Lake
-show_image: true
-featured_image: https://yowainwright.imgix.net/white-rock-lake/brett-riding-sq.jpg
-post_index: 15
 categories:
 - story
 ---

@@ -1,14 +1,9 @@
 ---
 title: Arrow Function Notes  After Watching ES6 For Everyone
 date: "2017-01-06"
-layout: post
-readNext: "/"
 path: "/arrow-functions/"
 meta: This post reviews some things about arrow functions that I learned from Wes
   Bos's ES6 for everyone.
-share_image: "https://yowainwright.imgix.net/icons/js.jpg"
-featured_image: null
-post_index: 21
 categories:
 - html
 - code
@@ -105,4 +100,4 @@ What the `this` key word will be bound to and how minimal arrow functions can be
 
 Thank you [Wes Bos](http://wesbos.com/)!!!
 
-**Update:** After talking with Dan Benson a bit, I discovered even more about arrow functions. These things were covered in Wes Bos's course but I'm even clearer now. [See more](https://jeffry.in/arrow-functions-cont/) examples here. 
+**Update:** After talking with Dan Benson a bit, I discovered even more about arrow functions. These things were covered in Wes Bos's course but I'm even clearer now. [See more](https://jeffry.in/arrow-functions-cont/) examples here.

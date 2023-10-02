@@ -2,13 +2,9 @@
 title: Week 8, 2017—Losing a few friends, being sick, transitioning and writing some
   code
 date: "2017-03-05"
-layout: post
-readNext: "/"
 path: "/week-8-17"
 meta: Week 8, 2017—This week I was sick, lost a few friends and started to do some
   transitioning.
-featured_image: "https://yowainwright.imgix.net/wk-7/running.jpg"
-post_index: 32
 categories:
 - note
 - story

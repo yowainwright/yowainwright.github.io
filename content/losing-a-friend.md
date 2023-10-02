@@ -1,13 +1,9 @@
 ---
 title: Some great memories have Lauren in the foreground
 date: "2017-02-28"
-layout: post
-readNext: "/"
 path: "/losing-a-friend"
 meta: Recently, I lost a friend. Lauren Schlueter was a friend of mine who helped
   me through laughter. She was a historian, a teacher and a comedian.
-featured_image: "https://yowainwright.imgix.net/losing-a-friend/gulf-of-mexico.jpg"
-post_index: 30
 categories:
 - note
 - story

@@ -1,14 +1,11 @@
 ---
 title: 'About me, Jeff Wainwright, a husband, dad, and software engineer in Los Angeles 🥤'
 date: '2017-07-28'
-layout: post
-readNext: /
 path: /about
 meta: >-
   This is the About page of, me, Jeff Wainwright, "yowainwright" on the
   internet. I'm a husband, dad, software engineer, artist, and person who enjoys athletics,
   living in Los Angeles.
-post_index: null
 ---
 
 Hi! I'm a senior security software engineer at [GoodRx](https://www.goodrx.com/). Formerly, I was an engineering manager at [Currency](https://www.gocurrency.com/), wrote a lot of open source while at [Dollar Shave Club](https://www.dollarshaveclub.com/), and worked on [The Billboard's Charts](https://www.billboard.com/charts/hot-100/), [The Hollywood Reporter](https://www.hollywoodreporter.com/)'s Awards, and [NASDAQ](https://www.nasdaq.com/)'s first living code style guide. I'm passionate about making things, learning, and contributing to society which is why I write software. Software allows me to do those things everyday! Unrelated to software, I enjoy being a husband and dad, painting, [running](https://www.strava.com/athletes/722335), and surfing.

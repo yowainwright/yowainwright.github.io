@@ -1,15 +1,11 @@
 ---
 title: 'The 2000s are no longer a teenager, starting out 2020'
 date: '2020-01-06'
-layout: post
-readNext: /
 path: /2000s-not-a-teenager
 meta: >-
   This post summarizes my first days of 2020 with brief reflections on 2019,
   what I learned which included Functional Programming, TypeScript, nervous
   system healing and awareness
-featured_image: null
-post_type: update
 categories:
   - update
   - date

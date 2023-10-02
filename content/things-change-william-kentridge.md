@@ -1,15 +1,9 @@
 ---
 title: It's amazing the way that things change and William Kentridge
 date: "2016-02-04"
-layout: post
-readNext: "/"
 path: "/things-change-william-kentridge"
 meta: It's amazing the way things change. I, Jeff Wainwright, discuss myself and the
   first time I saw a William Kentridge exhibit
-show_image: true
-note: no-featured-image
-featured_image: https://yowainwright.imgix.net/things-change/man.jpg
-post_index: 13
 categories:
 - art
 - story

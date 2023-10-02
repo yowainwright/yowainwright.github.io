@@ -1,14 +1,9 @@
 ---
 title: Template Strings and Template Tagging After Watching ES6 For Everyone
 date: "2015-02-09"
-layout: post
-readNext: "/"
 path: "/js-template-strings"
 meta: This post summarizes my notes on template strings and template tagging after
   watching Wes Bos's ES6 For Everyone
-share_image: "https://yowainwright.imgix.net/icons/js.jpg"
-featured_image: null
-post_index: 11
 categories:
 - code
 - javascript

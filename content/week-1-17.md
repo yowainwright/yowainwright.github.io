@@ -1,14 +1,8 @@
 ---
 title: Week 1, 2017—the weather was rainy but the surf was great!
 date: "2017-01-13"
-layout: post
-readNext: "/"
 path: "/week-1-17"
 meta: This post summarizes week 1 of 2017
-show_image: true
-imgix: true
-featured_image: https://yowainwright.imgix.net/wk-1/malaga-cove-looking.jpg
-post_index: 22
 categories:
 - note
 - story

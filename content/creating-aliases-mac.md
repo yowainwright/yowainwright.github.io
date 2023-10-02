@@ -1,13 +1,9 @@
 ---
 title: Creating Aliases on a Mac
 date: "2016-05-19"
-layout: post
-readNext: "/"
 path: "/creating-aliases-mac"
 meta: Creating Aliases on a Mac is an easy thing to do & can save a lot of time
 share_image: "https://yowainwright.imgix.net/icons/os.jpg"
-featured_image: null
-post_index: 14
 categories:
 - code
 - terminal

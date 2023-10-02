@@ -1,14 +1,9 @@
 ---
 title: Using ES6 Function Destructuring with JavaScript Plugin Options
 date: "2017-03-12"
-layout: post
-readNext: "/"
 path: "/destructing-function-opts"
 meta: This post explains how to use ES6 function destructuring for more readable JavaScript
   Plugin Options.
-share_image: https://yowainwright.imgix.net/icons/js.jpg
-featured_image: null
-post_index: 35
 categories:
 - html
 - code

@@ -1,13 +1,9 @@
 ---
 title: All about Sticky Navs & what happens to them on devices
 date: "2016-07-24"
-layout: post
-readNext: "/"
 path: "/device-stickybits-on-scroll"
 meta: Creating a sticky nav that works while scrolling is a difficult issue that must
   be solved, many sites navigations are set to fixed position
-share_image: "https://yowainwright.imgix.net/icons/js.jpg"
-post_index: 16
 categories:
 - javascript
 - code
@@ -107,10 +103,3 @@ Here's a demo of the absolute position solution:
 
 <p data-height="265" data-theme-id="0" data-slug-hash="Bzxmpw" data-default-tab="js,result" data-user="yowainwright" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/yowainwright/pen/Bzxmpw/">Bzxmpw</a> by Jeff Wainwright (<a href="http://codepen.io/yowainwright">@yowainwright</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-
-
-
-
-
-

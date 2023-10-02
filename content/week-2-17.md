@@ -2,15 +2,9 @@
 title: Week 2, 2017—run, rocks, rain; I couldn't surf but I definitely played in the
   rain
 date: "2017-01-17"
-layout: post
-readNext: "/"
 path: "/week-2-17"
 meta: This post summarizes week 2 of 2017. It included a little surfing, rock climbing,
   running and definitely a lot of programming.
-show_image: true
-imgix: true
-featured_image: https://yowainwright.imgix.net/wk-2/mueller-tunnel-hike-bw-2.jpg
-post_index: 23
 categories:
 - note
 - story

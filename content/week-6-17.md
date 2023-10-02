@@ -2,13 +2,9 @@
 title: Week 6, 2017—Looking for rainbows in the rain, shipping analytics and best
   friends
 date: "2017-02-25"
-layout: post
-readNext: "/"
 path: "/week-6-17"
 meta: Week 6, 2017—This week we shipped analytics at work. I had some of my best friends
   in town and we surfed and explored some spots in Malibu.
-featured_image: "https://yowainwright.imgix.net/wk-6/mike-mork.jpg"
-post_index: 28
 categories:
 - note
 - story

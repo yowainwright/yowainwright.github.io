@@ -1,14 +1,11 @@
 ---
 title: 'Resume: the resume of Jeff Wainwright, a software engineer and surfer in Los Angeles 🏄🏾‍♂️'
 date: '2021-03-31'
-layout: post
-readNext: /
 path: /resume
 meta: >-
   This is the resume of, me, Jeff Wainwright, "yowainwright" on the
   internet. I'm a software engineer, artist, and person who enjoys athletics,
   living in Los Angeles.
-post_index: null
 ---
 
 As a Software Engineer and Engineering manager, I specialize in getting applications built! I love working with engineers, product and design to keep products simple and tested—except for the “special sauce” that makes a great product exceptional.

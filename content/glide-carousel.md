@@ -1,11 +1,8 @@
 ---
 title: Glide Carousel, a easy to use slider for Semantic UI
 date: "2014-04-23"
-layout: post
-readNext: "/"
 path: "/glide-carousel"
 meta: This is a demo on how to use the Glide Carousel with Semantic UI
-post_index: 4
 categories:
 - javascript
 - code
