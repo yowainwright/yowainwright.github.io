@@ -1,15 +1,9 @@
 ---
 title: Week 3, 2017—Releasing ScrollDir, working on interpersonal growth and surfing
 date: "2017-01-30"
-layout: post
-readNext: "/"
 path: "/week-3-17"
 meta: This post summarizes week 3 of 2017. ScrollDir was released and the weather
   was better so more surfing
-show_image: true
-imgix: true
-featured_image: https://yowainwright.imgix.net/wk-3/angeles-highway.jpg
-post_index: 24
 categories:
 - note
 - story

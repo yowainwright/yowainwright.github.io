@@ -1,14 +1,9 @@
 ---
 title: Week 5, 2017—Analytics Tech and Viewing Ocean Caves
 date: "2017-02-15"
-layout: post
-readNext: "/"
 path: "/week-5-17"
 meta: Week 5, 2017—I was able to work on analytics for a current project and see Ocean
   Caves at Leo Carillo State Beach.
-featured_image: "https://yowainwright.imgix.net/wk-5/leo-carillo-rock.jpg"
-share_image: "https://yowainwright.imgix.net/wk-5/leo-carillo-rock.jpg"
-post_index: 27
 categories:
 - note
 - story

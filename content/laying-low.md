@@ -1,12 +1,8 @@
 ---
 title: Week 33, laying low but focused
 date: "2017-09-18"
-layout: post
-readNext: "/"
 path: "/laying-low"
 meta: Laying low but staying focused on coding, running and writing.
-featured_image: "https://yowainwright.imgix.net/wk-33/beach-edge.jpg"
-post_index: 58
 categories:
 - note
 - story

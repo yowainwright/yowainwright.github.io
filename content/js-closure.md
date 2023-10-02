@@ -1,13 +1,8 @@
 ---
 title: Javascript Closure all wrapped up & why
 date: "2014-10-15"
-layout: post
-readNext: "/"
 path: "/js-closure"
 meta: Understanding Javascript Closure & what it does
-share_image: "https://yowainwright.imgix.net/icons/js.jpg"
-featured_image: null
-post_index: 6
 categories:
 - javascript
 - code

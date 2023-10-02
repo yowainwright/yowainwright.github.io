@@ -1,12 +1,8 @@
 ---
 title: Popular JavaScript tools in (mid) 2017
 date: '2017-09-09'
-layout: post
-readNext: '/'
 path: '/javascript-software-mid-2017'
 meta: JavaScript tools in 2017 as defined by Jeff Wainwright for the context of blog posts.
-featured_image: null
-post_index: 53
 categories:
   - javascript
 ---

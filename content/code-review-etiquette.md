@@ -1,12 +1,8 @@
 ---
 title: Can Code Review Etiquette be a thing? Here are some starter thoughts on it.
 date: "2017-09-16"
-layout: post
-readNext: "/"
 path: "/code-review-etiquette"
 meta: Code Review Etiquette is an important for code quality, engineer happiness, and engineer growth—but is never talked about?
-featured_image: null
-post_index: 55
 categories:
 - note
 - story

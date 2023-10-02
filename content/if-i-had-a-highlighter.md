@@ -3,16 +3,12 @@ title: >-
   Listening to what is most important to others is hard. What if there was a
   highlighter for spoken words?
 date: '2019-03-07'
-layout: post
-readNext: /
 path: /if-i-had-a-highlighter/
 meta: >-
   This post discusses how hard it for listeners to fully understand what a
   speaker is communicating. Misinterpretation happens often. What verbal tools
   can be used to improve interpretation? Perhaps, imagining a spoken word
   highlighter pen so that speakers could highlight their key points could help.
-featured_image: null
-post_index: 63
 categories:
   - note
   - story

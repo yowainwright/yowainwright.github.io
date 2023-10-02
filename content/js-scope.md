@@ -1,13 +1,8 @@
 ---
 title: Discussing Javascript Scope, let's keep it between us
 date: "2013-06-20"
-layout: post
-readNext: "/"
 path: "/js-scope/"
 meta: Discussing Javascript Scope & terms that are discussed when talking about it
-share_image: "https://yowainwright.imgix.net/icons/js.jpg"
-featured_image: null
-post_index: 3
 categories:
 - javascript
 - code

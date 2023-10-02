@@ -1,12 +1,8 @@
 ---
 title: Normalize.css, or not? Here are some considerations
 date: "2017-09-17"
-layout: post
-readNext: "/"
 path: "/normalize-css-or-not"
 meta: Normalizing CSS has been a default part of front-end projects for years. This post questions that and provides some points on why normalizing css may not be needed.
-featured_image: null
-post_index: 56
 categories:
 - note
 - css

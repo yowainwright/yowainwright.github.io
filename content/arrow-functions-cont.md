@@ -1,14 +1,9 @@
 ---
 title: Arrow Function Notes After Watching ES6 For Everyone, Continued
 date: "2017-03-03"
-layout: post
-readNext: "/"
 path: "/arrow-functions-cont"
 meta: This post reviews some things about arrow functions that I learned from Wes
   Bos's ES6 for everyone.
-share_image: "https://yowainwright.imgix.net/icons/js.jpg"
-featured_image: null
-post_index: 31
 categories:
 - html
 - code

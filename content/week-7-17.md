@@ -1,13 +1,9 @@
 ---
 title: Week 7, 2017—Transitioning and Climbing to Higher Heights and Deeper Turns
 date: "2017-02-26"
-layout: post
-readNext: "/"
 path: "/week-7-17"
 meta: Week 7, 2017—This week I'm beginning to climbing more consistently and catch
   waves more consistently.
-featured_image: "https://yowainwright.imgix.net/wk-7/hands-up.jpg"
-post_index: 29
 categories:
 - note
 - story

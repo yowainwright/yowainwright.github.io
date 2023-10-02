@@ -1,14 +1,9 @@
 ---
 title: Javascript's keyword this; THIS is what I'm talking about!
 date: "2015-01-10"
-layout: post
-readNext: "/"
 path: "/js-keyword-this/"
 meta: This post goes into Javascript's keyword this, how it is defined & why it is
   misunderstood
-share_image: "https://yowainwright.imgix.net/icons/js.jpg"
-featured_image: null
-post_index: 9
 categories:
 - javascript
 - code

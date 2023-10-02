@@ -1,12 +1,8 @@
 ---
 title: "Quick Tutorial: Run Intel Mac Cmds On Your M1 Mac Like a Boss In 5 Minutes"
 date: '2022-12-13'
-layout: post
-readNext: '/'
 path: '/m1-intel-terminal-cmds-like-a-boss'
 meta: "This document describes solving M1 Mac vs Intel Mac terminal command discrepancies by creating a copy of your terminal and setting it up to run Intel Mac terminal commands using Rosetta."
-featured_image: null
-post_type: technical
 categories:
   - m1
   - terminal

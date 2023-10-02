@@ -1,13 +1,9 @@
 ---
 title: Updating Git Tags That Have Been Pushed
 date: "2017-03-14"
-layout: post
-readNext: "/"
 path: "/git-tag-update"
 meta: This post instructs how to update git tags after they've been pushed
 share_image: https://yowainwright.imgix.net/icons/os.jpg
-featured_image: null
-post_index: 37
 categories:
 - code
 - os

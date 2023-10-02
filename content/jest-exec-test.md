@@ -1,12 +1,8 @@
 ---
 title: How To Execute Node Commands To Test With Jest
 date: '2021-01-19'
-layout: post
-readNext: '/'
 path: '/jest-exec-test'
 meta: This post is a quick summary of running node script execution tests with Jest.
-featured_image: null
-post_type: technical
 categories:
   - code
   - typescript

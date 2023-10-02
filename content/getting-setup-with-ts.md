@@ -1,12 +1,8 @@
 ---
 title: TypeScript Init—Getting A Test Driven TypeScript Repository Setup
 date: '2018-05-02'
-layout: post
-readNext: '/'
 path: '/getting-setup-with-ts'
 meta: This post documents getting setup with TypeScript—just beyond the Gettings Started TypeScript Tutorials. In this Post I will go through setting up a Test Driven TypeScript project.
-featured_image: null
-post_index: 60
 categories:
   - note
   - story

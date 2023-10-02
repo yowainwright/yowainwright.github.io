@@ -1,13 +1,8 @@
 ---
 title: AWW—A Formula For Writing Git Commits
 date: "2017-03-12"
-layout: post
-readNext: "/"
 path: "/formula-for-commits"
 meta: This post describes AWW, a formula for writing meaningful commit messages with git.
-share_image: https://yowainwright.imgix.net/icons/os.jpg
-featured_image: null
-post_index: 34
 categories:
 - code
 - terminal

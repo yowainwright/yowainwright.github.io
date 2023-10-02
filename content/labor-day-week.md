@@ -1,12 +1,8 @@
 ---
 title: '2017 Labor Day Week in Dallas'
 date: '2017-09-09'
-layout: post
-readNext: '/'
 path: '/labor-day-week'
 meta: 'This year I, Jeff Wainwright, spent Labor Day in Dallas with friends.'
-featured_image: 'https://yowainwright.imgix.net/labor-day/brett-ashley.jpg'
-post_index: 52
 categories:
   - story
 ---
