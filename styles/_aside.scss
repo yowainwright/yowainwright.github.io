@@ -10,6 +10,10 @@
     border-radius: 2rem;
     margin: 4rem auto 1rem;
 
+    .js-is-darkmode & {
+      border-color: #110e5b
+    }
+
     @media screen and (min-width:$width-small) {
       margin: 0;
       position: sticky;

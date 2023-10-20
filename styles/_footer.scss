@@ -5,6 +5,10 @@
     margin: 0 auto;
     max-width: calc(100% - 2rem);
 
+    .js-is-darkmode & {
+      border-color: #110e5b;
+    }
+
     @media screen and (min-width:$width-x-small) {
       display: grid;
     }
@@ -54,6 +58,11 @@
       grid-column: span 2;
       padding-bottom: 0;
       padding-top: 2rem;
+
+      .js-is-darkmode & {
+        border-color: #110e5b;
+      }
+
       @media screen and (min-width:$width-medium) {
         border-top: none;
         grid-column: auto;
@@ -93,6 +102,10 @@
     border: 1px solid #999;
     height: auto;
     width: calc(6rem - 8px);
+
+    .js-is-darkmode & {
+      border-color: #110e5b;
+    }
   }
 
   &__caption {

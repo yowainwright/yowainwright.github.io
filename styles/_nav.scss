@@ -8,7 +8,8 @@
   z-index: 3;
 
   .js-is-darkmode & {
-    background-color: #162447;
+    background-color: #040c20;
+    border-bottom: 1px solid #110e5b;
   }
 
   @media screen and (min-width:$width-small) {
@@ -18,7 +19,7 @@
   }
 
   @media screen and (min-width:$width-small) {
-    border-bottom-width: 0;
+    border-bottom-width: 0 !important;
     height: 5rem;
     padding: 3rem 0 5rem;
     position: relative;
@@ -57,7 +58,7 @@
     padding: 0;
 
     .js-is-darkmode & {
-      background-color: #162447;
+      background-color: #040c20;
     }
 
     @media screen and (min-width:$width-small) {
@@ -102,7 +103,7 @@
     padding: 0 0.25rem;
 
     .js-is-darkmode & {
-      color: #f1bbd5 !important;
+      color: #f2ee98 !important;
     }
 
     @media screen and (min-width:$width-x-small) {

@@ -9,7 +9,7 @@ body {
   line-height: 1.5;
   text-size-adjust: 100%;
   &.js-is-darkmode {
-    background-color: #162447;
+    background-color: #040c20;
     color: #fff;
   }
 }
@@ -110,7 +110,7 @@ a {
   text-decoration: none;
 
   .js-is-darkmode & {
-    color: #e43f5a;
+    color: #fbe902;
   }
 
   &:hover {
@@ -120,7 +120,7 @@ a {
   &:visited {
     color: #0000ff;
     .js-is-darkmode & {
-      color: #e43f5a;
+      color: #fbe902;
     }
   }
 
@@ -196,6 +196,9 @@ hr {
   margin-bottom: 0;
   margin-top: 2rem;
   padding-bottom: 2rem;
+  .js-is-darkmode & {
+    border-top: 1px solid #110e5b;
+  }
 }
 
 ul,
