@@ -51,7 +51,7 @@
   "dependencies": {
     "@next/font": "13.4.13",
     "gray-matter": "^4.0.3",
-    "next": "13.4.13",
+    "next": "14.0.0",
     "prismjs": "1.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
