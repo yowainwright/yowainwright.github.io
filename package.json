@@ -22,7 +22,6 @@
     "commit": "git-cz",
     "commit-msg": "commitlint --edit $1",
     "dev": "next dev",
-    "export": "next export",
     "lint": "next lint",
     "pre-commit": "pnpm run build && pnpm run lint && pnpm run commit-msg",
     "start": "next start",
