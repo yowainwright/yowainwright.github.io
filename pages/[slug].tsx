@@ -42,7 +42,7 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   )
 }
 
-const Post = ({ content, frontmatter }: PostProps) => {
+const Post = ({ content, frontmatter, slug }: PostProps) => {
   const state = useContext(GlobalState)
   return (
     <article className='post__article'>
@@ -50,7 +50,7 @@ const Post = ({ content, frontmatter }: PostProps) => {
         <h1>
           {frontmatter?.title}
         </h1>
-        <time className='post__time'>{frontmatter?.date}</time>
+        <DateText date={frontmatter?.date} slug={slug} />
       </header>
       <section className='post__section'>
         <div className='post__container'>
@@ -72,6 +72,17 @@ const Post = ({ content, frontmatter }: PostProps) => {
       </section>
     </article>
   )
+}
+
+export type DateTextProps = {
+  date: string
+  slug: string
+}
+
+export const DateText = ({ date, slug }: DateTextProps) => {
+  const isExcludedDate = ['about', 'resume'].includes(slug)
+  if (isExcludedDate) return null
+  return <time className='post__time'>{date}</time>
 }
 
 export function getStaticPaths() {
