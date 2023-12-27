@@ -25,7 +25,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build my App
-        run: pnpm run build && pnpm run export && touch ./out/.nojekyll
+        run: pnpm run build && touch ./out/.nojekyll
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.5.0
