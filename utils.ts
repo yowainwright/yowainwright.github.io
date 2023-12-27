@@ -56,5 +56,6 @@ export const getSinglePost = (slug: string, folder: string) => {
       path: trimmedPath,
     },
     content,
+    slug,
   }
 }

@@ -3,21 +3,24 @@ main {
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  .gsc-main,
-  .gsc-comment-box,
   .color-bg-canvas,
   .color-bg-tertiary,
+  .gsc-comment-box,
   .gsc-comment-box-textarea,
+  .gsc-main,
   .gsc-reactions-button {
     color: #fff;
     background: #040c20;
   }
 
-  .gsc-comment-box,
   .color-bg-canvas,
   .color-bg-tertiary,
+  .gsc-reactions-button,
+  .gsc-comment-box,
+  .gsc-comment-box-buttons,
+  .gsc-comment-box-buttons a,
   .gsc-comment-box-textarea,
-  .gsc-reactions-button {
+  .gsc-comment-box-textarea-extras {
     border: 1px solid #110e5b;
   }
 }
