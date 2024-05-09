@@ -39,7 +39,7 @@ fzf-tab is the star of the show on for this functionality. Setting it up took so
 
 I had to configuration the ui which is mostly (if not all copy/pasted from the docs):
 
-```zsh
+```bash
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath' # remember to use single quote here!!!
 # it is an example. you can change it
 zstyle ':fzf-tab:complete:git-(add|diff|restore):*' fzf-preview \
@@ -80,7 +80,7 @@ zstyle ':completion:*' list-max-items 20
 
 I also added more configuration as recommended in the docs with [fzf-tab-source](https://github.com/Freed-Wu/fzf-tab-source):
 
-```zsh
+```bash
 # zoxide
 eval "$(zoxide init zsh)"
 # enable fzf-tab-source

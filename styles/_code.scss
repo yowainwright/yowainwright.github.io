@@ -170,6 +170,6 @@ pre[class*='language-'] > code[class*='language-'] {
   }
 }
 
-.post__content + pre {
+.post__content > pre {
   overflow-y: auto;
 }
