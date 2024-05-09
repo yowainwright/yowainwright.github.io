@@ -170,6 +170,6 @@ pre[class*='language-'] > code[class*='language-'] {
   }
 }
 
-.gatsby-highlight {
-  margin: 2rem auto;
+.post__content + pre {
+  overflow-y: auto;
 }

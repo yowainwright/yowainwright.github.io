@@ -89,7 +89,7 @@ export function getStaticPaths() {
   const paths = getAllPosts('content').map(({ slug }: any) => `/${slug}`)
   return {
     paths,
-    fallback: true,
+    fallback: false,
   }
 }
 
