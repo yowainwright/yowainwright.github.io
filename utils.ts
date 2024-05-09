@@ -2,9 +2,13 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import sanitize from 'sanitize-filename'
+import { remark } from 'remark';
+import html from 'remark-html';
+import codeTitle from 'remark-code-title';
+import rehypeMermaid from 'rehype-mermaid';
+import rehypeHighlight from 'rehype-highlight';
 
-// eslint-disable-next-line no-undef
-export const getPath = (folder: string) => path.join(process.cwd(), `/${folder}`) // Get full path
+export const getPath = (folder: string) => path.join(process.cwd(), `/${folder}`)
 
 export const getFileContent = (filename: string, folder: string) => {
   const contentDir = getPath(folder)
@@ -31,8 +35,6 @@ export const getAllPosts = (folder: string) => {
   })
 }
 
-
-
 export const getAllPostsArchive = (folder: string) => {
   const posts = getAllPosts(folder)
   return posts.filter(({ slug }: any) => !['404', 'about', 'resume'].includes(slug)).sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
@@ -58,4 +60,14 @@ export const getSinglePost = (slug: string, folder: string) => {
     content,
     slug,
   }
+}
+
+export const markdownToHtml = async (markdown: string) => {
+  const result = await remark()
+    .use(html)
+    .use(codeTitle)
+    .use(rehypeHighlight)
+    .use(rehypeMermaid)
+    .process(markdown);
+  return result.toString();
 }

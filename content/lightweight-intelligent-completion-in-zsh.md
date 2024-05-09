@@ -1,14 +1,17 @@
 ---
-title: Lightweight Intelligent Completion in Zsh
+title: 'Lightweight Intelligent Completion in Zsh'
 date: '2024-05-05'
 path: '/lightweight-intelligent-completion-in-zsh/'
-meta: This post provides some quick tips on how to get intelligent completion in Zsh without the bloat.
+meta: 'This post provides some quick tips on how to get intelligent completion in Zsh without the bloat.'
 categories:
   - code
   - zsh
+  - terminal
+  - bash
 ---
 
-Over the last few years, exciting user interface ideas have come on the scene for terminals like [Fig](https://github.com/withfig/fig) and [Warp](https://github.com/warpdotdev/Warp). These tools provide great initial development experiences. However, after dealing with high memory usage which slows down other areas of software engineering workflows, I found myself asking, "Is there a way I can get similar functionality without the bloat?"
+
+Over the last few years, exciting user interface ideas have come on the scene for terminals like [Fig](https://github.com/withfig/fig) and [Warp](https://github.com/warpdotdev/Warp). These tools provide great initial development experiences. However, after dealing with high memory usage which slows down other areas of software engineering workflows, I found myself asking, 'Is there a way I can get similar functionality without the bloat?'
 
 ## TL;DR
 
@@ -40,53 +43,27 @@ fzf-tab is the star of the show on for this functionality. Setting it up took so
 I had to configuration the ui which is mostly (if not all copy/pasted from the docs):
 
 ```bash
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath' # remember to use single quote here!!!
-# it is an example. you can change it
-zstyle ':fzf-tab:complete:git-(add|diff|restore):*' fzf-preview \
-	'git diff $word | delta'
-zstyle ':fzf-tab:complete:git-log:*' fzf-preview \
-	'git log --color=always $word'
-zstyle ':fzf-tab:complete:git-help:*' fzf-preview \
-	'git help $word | bat -plman --color=always'
-zstyle ':fzf-tab:complete:git-show:*' fzf-preview \
-	'case "$group" in
-	"commit tag") git show --color=always $word ;;
-	*) git show --color=always $word | delta ;;
-	esac'
-zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview \
-	'case "$group" in
-	"modified file") git diff $word | delta ;;
-	"recent commit object name") git show --color=always $word | delta ;;
-	*) git log --color=always $word ;;
-	esac'
-
-# disable sort when completing `git checkout`
-zstyle ':completion:*:git-checkout:*' sort false
-# set descriptions format to enable group support
-# NOTE: don't use escape sequences here, fzf-tab will ignore them
-zstyle ':completion:*:descriptions' format '[%d]'
-# set list-colors to enable filename colorizing
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
-zstyle ':completion:*' menu no
-# preview directory's content with eza when completing cd
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
-# switch group using `<` and `>`
-zstyle ':fzf-tab:*' switch-group '<' '>'
-
-# Limit the number of completion options
-zstyle ':completion:*' list-max-items 20
+  zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+  zstyle ':fzf-tab:complete:git-(add|diff|restore):*' fzf-preview 'git diff $word | delta'
+  zstyle ':fzf-tab:complete:git-log:*' fzf-preview 'git log --color=always $word'
+  zstyle ':fzf-tab:complete:git-help:*' fzf-preview 'git help $word | bat -plman --color=always'
+  zstyle ':fzf-tab:complete:git-show:*' fzf-preview 'case "$group" in "commit tag") git show --color=always $word ;; *) git show --color=always $word | delta ;; esac'
+  zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview 'case "$group" in "modified file") git diff $word | delta ;; "recent commit object name") git show --color=always $word | delta ;; *) git log --color=always $word ;; esac'
+  zstyle ':completion:*:git-checkout:*' sort false
+  zstyle ':completion:*:descriptions' format '[%d]'
+  zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+  zstyle ':completion:*' menu no
+  zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+  zstyle ':fzf-tab:*' switch-group '<' '>'
+  zstyle ':completion:*' list-max-items 20
 ```
 
 I also added more configuration as recommended in the docs with [fzf-tab-source](https://github.com/Freed-Wu/fzf-tab-source):
 
 ```bash
-# zoxide
-eval "$(zoxide init zsh)"
-# enable fzf-tab-source
-source  $ZSH_CUSTOM/plugins/fzf-tab-source/fzf-tab-source.plugin.zsh
-# enable fzf-tab
-enable-fzf-tab
+  eval "$(zoxide init zsh)"
+  source  $ZSH_CUSTOM/plugins/fzf-tab-source/fzf-tab-source.plugin.zsh
+  enable-fzf-tab
 ```
 
 ## Conclusion
