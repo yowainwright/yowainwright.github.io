@@ -6,7 +6,10 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import codeTitle from 'remark-code-title';
 import rehypeMermaid from 'rehype-mermaid';
-import rehypeHighlight from 'rehype-highlight';
+import rehypePrism from 'rehype-prism-plus'
+import remarkRehype from 'remark-rehype';
+import rehypeStringify from 'rehype-stringify';
+import rehypeRaw from 'rehype-raw';
 
 export const getPath = (folder: string) => path.join(process.cwd(), `/${folder}`)
 
@@ -64,10 +67,13 @@ export const getSinglePost = (slug: string, folder: string) => {
 
 export const markdownToHtml = async (markdown: string) => {
   const result = await remark()
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
     .use(html)
     .use(codeTitle)
-    .use(rehypeHighlight)
+    .use(rehypePrism)
     .use(rehypeMermaid)
+    .use(rehypeStringify)
     .process(markdown);
   return result.toString();
 }

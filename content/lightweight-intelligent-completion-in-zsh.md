@@ -1,8 +1,8 @@
 ---
-title: 'Lightweight Intelligent Completion in Zsh'
+title: 'Enabling Intelligent Tab Completion in Zsh without High Memory Usage'
 date: '2024-05-05'
 path: '/lightweight-intelligent-completion-in-zsh/'
-meta: 'This post provides some quick tips on how to get intelligent completion in Zsh without the bloat.'
+meta: 'This post provides quick tips on how to enable Zsh Tab Completion to provide intelligent completion in Zsh without the bloat.'
 categories:
   - code
   - zsh
