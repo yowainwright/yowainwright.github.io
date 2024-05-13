@@ -1,8 +1,6 @@
 import React, { useContext } from 'react'
 import Giscus from '@giscus/react';
-import ReactMarkdown from 'react-markdown'
-import rehypeRaw from 'rehype-raw'
-import { getSinglePost, getAllPosts } from '../utils'
+import { getSinglePost, getAllPosts, markdownToHtml } from '../utils'
 import { GlobalState } from './_app';
 import { Share } from '../components/Share'
 const THEME_DARK = "https://yowainwright.imgix.net/jeffry.in.giscus.dark.css"
@@ -54,9 +52,7 @@ const Post = ({ content, frontmatter, slug }: PostProps) => {
       </header>
       <section className='post__section'>
         <div className='post__container'>
-          <div className='post__content'>
-            <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
-          </div>
+          <div className='post__content' dangerouslySetInnerHTML={{ __html: content }} />
           <div className='post__giscus'>
             <GiscusWrapper isDarkMode={state?.isDarkMode || false} />
           </div>
@@ -89,7 +85,7 @@ export function getStaticPaths() {
   const paths = getAllPosts('content').map(({ slug }: any) => `/${slug}`)
   return {
     paths,
-    fallback: true,
+    fallback: false,
   }
 }
 
@@ -99,10 +95,12 @@ interface StaticProps {
   }
 }
 
-export const getStaticProps = ({ params }: StaticProps) => {
+export const getStaticProps = async ({ params }: StaticProps) => {
   const data = getSinglePost(params.slug, 'content')
+  const content = await markdownToHtml(data.content || '')
+  console.log({ dataContent: data.content, content })
   return {
-    props: { ...data },
+    props: { ...data, content },
   }
 }
 

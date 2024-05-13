@@ -22,7 +22,9 @@ ol {
 
 ul,
 ol {
+  clear: both;
   margin-top: $spacing-unit;
+  padding-left: 1rem;
 
   li > p {
     margin-bottom: 0;
@@ -196,30 +198,15 @@ hr {
   margin-bottom: 0;
   margin-top: 2rem;
   padding-bottom: 2rem;
+
   .js-is-darkmode & {
     border-top: 1px solid #110e5b;
   }
 }
 
-ul,
-ol {
-  clear: both;
-  padding-left: 1rem;
-}
-
 main {
   margin-left: auto;
   margin-right: auto;
-}
-
-.header__description {
-  border-bottom: 1px solid #000;
-  padding: 1.5rem 0;
-
-  @media screen and (min-width:$width-small) {
-    border-bottom: 0;
-    padding-bottom: 0;
-  }
 }
 
 // table styles, here and below
@@ -260,6 +247,16 @@ tr {
   }
 }
 
+.header__description {
+  border-bottom: 1px solid #000;
+  padding: 1.5rem 0;
+
+  @media screen and (min-width:$width-small) {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
 .section {
   margin: 0 auto;
   max-width: calc(100% - 2rem);
@@ -273,6 +270,7 @@ tr {
   @media screen and (min-width:$width-medium) {
     max-width: 70%;
   }
+
   &--intro {
     margin-top: 4rem;
     @media screen and (min-width:$width-small) {
