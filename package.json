@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "@commitlint/format": "^19.5.0",
+    "@next/third-parties": "^14.2.13",
     "gray-matter": "^4.0.3",
     "next": "14.2.13",
     "prismjs": "1.29.0",
