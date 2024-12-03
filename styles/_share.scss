@@ -1,3 +1,5 @@
+@use "variables";
+
 .share {
   padding: 1rem 0;
 
@@ -23,7 +25,7 @@
     background: 0;
     border: 0;
     color: #0000ff;
-    font-family: $font-family-default;
+    font-family: variables.$font-family-default;
     margin: 0;
 
     .js-is-darkmode & {

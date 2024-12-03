@@ -1,3 +1,5 @@
+@use "variables";
+
 .site-footer {
   padding-top: 4rem;
   &__wrapper {
@@ -9,15 +11,15 @@
       border-color: #110e5b;
     }
 
-    @media screen and (min-width:$width-x-small) {
+    @media screen and (min-width:variables.$width-x-small) {
       display: grid;
     }
 
-    @media screen and (min-width:$width-small) {
+    @media screen and (min-width:variables.$width-small) {
       max-width: 80%;
     }
 
-    @media screen and (min-width:$width-medium) {
+    @media screen and (min-width:variables.$width-medium) {
       max-width: 70%;
     }
 
@@ -25,13 +27,13 @@
       padding: 4rem 0;
       column-gap: 1rem;
 
-      @media screen and (min-width:$width-small) {
+      @media screen and (min-width:variables.$width-small) {
         align-items: start;
         column-gap: 3rem;
         grid-template-columns: auto 10rem auto;
       }
 
-      @media screen and (min-width:$width-medium) {
+      @media screen and (min-width:variables.$width-medium) {
         grid-template-columns: 17rem 10rem auto;
       }
     }
@@ -49,7 +51,7 @@
     display: grid;
     padding-bottom: 2rem;
 
-    @media screen and (min-width:$width-medium) {
+    @media screen and (min-width:variables.$width-medium) {
       padding-bottom: 0;
     }
 
@@ -63,7 +65,7 @@
         border-color: #110e5b;
       }
 
-      @media screen and (min-width:$width-medium) {
+      @media screen and (min-width:variables.$width-medium) {
         border-top: none;
         grid-column: auto;
         padding-top: 0;
@@ -76,7 +78,7 @@
     text-align: left;
     margin: 0 0 1rem;
 
-    @media screen and (min-width:$width-small) {
+    @media screen and (min-width:variables.$width-small) {
       margin-bottom: 3rem;
     }
 
@@ -131,7 +133,7 @@
       display: inline-block;
       font-size: 1.2rem;
       margin-right: 1rem;
-      @media screen and (min-width:$width-small) {
+      @media screen and (min-width:variables.$width-small) {
         display: block;
         margin-right: 0;
       }

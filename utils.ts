@@ -5,7 +5,6 @@ import sanitize from 'sanitize-filename'
 import { remark } from 'remark';
 import html from 'remark-html';
 import codeTitle from 'remark-code-title';
-import rehypeMermaid from 'rehype-mermaid';
 import rehypePrism from 'rehype-prism-plus'
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
@@ -72,7 +71,6 @@ export const markdownToHtml = async (markdown: string) => {
     .use(html)
     .use(codeTitle)
     .use(rehypePrism)
-    .use(rehypeMermaid)
     .use(rehypeStringify)
     .process(markdown);
   return result.toString();

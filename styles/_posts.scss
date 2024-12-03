@@ -1,8 +1,10 @@
+@use "variables";
+
 .post {
   &__section {
     display: grid;
 
-    @media screen and (min-width:$width-medium) {
+    @media screen and (min-width:variables.$width-medium) {
       column-gap: 4rem;
       grid-template-columns: calc(65% - 2rem) calc(35% - 2rem);
     }
@@ -19,11 +21,11 @@
   &__article {
     margin: 3rem auto 0;
     max-width: calc(100% - 2rem);
-    @media screen and (min-width:$width-small) {
+    @media screen and (min-width:variables.$width-small) {
       margin: 0 auto;
       max-width: 80%;
     }
-    @media screen and (min-width:$width-medium) {
+    @media screen and (min-width:variables.$width-medium) {
       max-width: 70%;
     }
   }
@@ -35,7 +37,7 @@
   &--headline {
     margin-bottom: 2rem;
 
-    @media screen and (min-width:$width-small) {
+    @media screen and (min-width:variables.$width-small) {
       margin-bottom: 0;
     }
 
@@ -48,7 +50,7 @@
     margin: 4rem auto;
 
     &:first-of-type {
-      @media screen and (min-width:$width-small) {
+      @media screen and (min-width:variables.$width-small) {
         margin-top: 8rem;
       }
     }
@@ -60,13 +62,13 @@
         font-weight: 500;
       }
 
-      @media screen and (min-width:$width-small) {
-        max-width: $width-default;
+      @media screen and (min-width:variables.$width-small) {
+        max-width: variables.$width-default;
       }
     }
 
     hr {
-      @media screen and (min-width:$width-small) {
+      @media screen and (min-width:variables.$width-small) {
         margin-top: 3rem;
       }
     }
@@ -89,13 +91,13 @@
     &--full {
       font-size: 1.5rem;
 
-      @media screen and (min-width:$width-small) {
-        margin-bottom: $spacing-unit-small;
+      @media screen and (min-width:variables.$width-small) {
+        margin-bottom: variables.$spacing-unit-small;
       }
     }
 
     &--headline {
-      font-family: $font-family-default;
+      font-family: variables.$font-family-default;
       font-size: 1rem;
     }
   }
@@ -113,7 +115,7 @@
       }
     }
 
-    @media screen and (min-width:$width-small) {
+    @media screen and (min-width:variables.$width-small) {
       grid-template-columns: calc(50% - 1.25rem) calc(50% - 1.25rem);
       grid-gap: 2.5rem;
       p {
