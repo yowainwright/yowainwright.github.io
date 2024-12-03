@@ -1,3 +1,5 @@
+@use "variables";
+
 .aside {
   position: relative;
 
@@ -14,7 +16,7 @@
       border-color: #110e5b
     }
 
-    @media screen and (min-width:$width-small) {
+    @media screen and (min-width:variables.$width-small) {
       margin: 0;
       position: sticky;
       top: 1rem;
@@ -25,14 +27,14 @@
     font-size: 1.2rem;
     line-height: 1.8;
     max-width: calc(100% - 2rem);
-    @media screen and (min-width:$width-small) {
+    @media screen and (min-width:variables.$width-small) {
       max-width: none;
     }
   }
 
   &__content {
     padding: 1rem;
-    @media screen and (min-width:$width-small) {
+    @media screen and (min-width:variables.$width-small) {
       padding: 0;
     }
   }
