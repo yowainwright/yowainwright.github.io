@@ -10,7 +10,6 @@
     "react-helmet",
     "react-markdown",
     "rehype",
-    "rehype-mermaid",
     "rehype-prism-plus",
     "rehype-stringify",
     "remark-code-title",
