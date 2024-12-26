@@ -42,7 +42,7 @@ fzf-tab is the star of the show on for this functionality. Setting it up took so
 
 I had to configuration the ui which is mostly (if not all copy/pasted from the docs):
 
-```bash
+```bash {1,3-4}
   zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
   zstyle ':fzf-tab:complete:git-(add|diff|restore):*' fzf-preview 'git diff $word | delta'
   zstyle ':fzf-tab:complete:git-log:*' fzf-preview 'git log --color=always $word'
