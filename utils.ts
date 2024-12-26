@@ -2,13 +2,29 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import sanitize from 'sanitize-filename'
-import { remark } from 'remark';
-import html from 'remark-html';
-import codeTitle from 'remark-code-title';
-import rehypePrism from 'rehype-prism-plus'
-import remarkRehype from 'remark-rehype';
-import rehypeStringify from 'rehype-stringify';
-import rehypeRaw from 'rehype-raw';
+import remarkRehype from 'remark-rehype'
+import remarkParse from 'remark-parse'
+import rehypeShiki from '@shikijs/rehype'
+import {
+  transformerColorizedBrackets
+} from '@shikijs/colorized-brackets'
+import {
+  transformerNotationDiff,
+  transformerNotationHighlight,
+  transformerNotationWordHighlight,
+  transformerNotationFocus,
+  transformerNotationErrorLevel,
+  transformerMetaHighlight,
+  transformerMetaWordHighlight,
+} from '@shikijs/transformers'
+import {
+  rendererClassic,
+  transformerTwoslash
+} from '@shikijs/twoslash'
+import rehypeStringify from 'rehype-stringify'
+import { unified } from 'unified'
+import customDark from './themes/dark.json'
+import customLight from './themes/light.json'
 
 export const getPath = (folder: string) => path.join(process.cwd(), `/${folder}`)
 
@@ -65,12 +81,29 @@ export const getSinglePost = (slug: string, folder: string) => {
 }
 
 export const markdownToHtml = async (markdown: string) => {
-  const result = await remark()
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(html)
-    .use(codeTitle)
-    .use(rehypePrism)
+  const result = await unified()
+    .use(remarkParse, { allowDangerousHtml: true })
+    .use(remarkRehype)
+    .use(rehypeShiki, {
+      themes: {
+        dark: customDark,
+        light: customLight,
+      },
+      transformers: [
+        transformerNotationDiff(),
+        transformerNotationHighlight(),
+        transformerNotationWordHighlight(),
+        transformerNotationFocus(),
+        transformerNotationErrorLevel(),
+        transformerMetaHighlight(),
+        transformerMetaWordHighlight(),
+        transformerColorizedBrackets(),
+        transformerTwoslash({
+          explicitTrigger: true,
+          renderer: rendererClassic(),
+        }),
+      ],
+    })
     .use(rehypeStringify)
     .process(markdown);
   return result.toString();
