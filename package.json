@@ -23,6 +23,7 @@
     "commit-msg": "commitlint --edit $1",
     "dev": "next dev",
     "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "pre-commit": "pnpm run build && pnpm run lint && pnpm run commit-msg",
     "start": "next start",
     "update": "codependence --update"
@@ -48,15 +49,16 @@
     "appendix": {}
   },
   "dependencies": {
-    "@next/third-parties": "^15.2.1",
-    "next": "15.2.1",
+    "@next/third-parties": "^15.2.2",
+    "next": "15.2.2",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
   "devDependencies": {
-    "@commitlint/format": "^19.8.0",
     "@commitlint/cli": "19.8.0",
     "@commitlint/config-conventional": "19.8.0",
+    "@commitlint/format": "^19.8.0",
+    "@eslint/js": "^9.20.0",
     "@giscus/react": "^3.1.0",
     "@shikijs/colorized-brackets": "^1.24.4",
     "@shikijs/rehype": "^1.24.4",
@@ -69,8 +71,10 @@
     "commander": "^12.1.0",
     "commitizen": "4.3.1",
     "eslint": "9.22.0",
-    "eslint-config-next": "15.2.1",
+    "eslint-config-next": "15.2.2",
     "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^15.15.0",
     "gray-matter": "^4.0.3",
     "husky": "^9.1.7",
     "next-sitemap": "^4.2.3",
@@ -83,13 +87,14 @@
     "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
-    "remark-rehype": "^11.1.1",
     "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.1",
     "sanitize-filename": "^1.6.3",
     "sass": "^1.85.1",
     "shiki": "^1.24.4",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.2",
+    "typescript-eslint": "^8.24.1",
     "unified": "^11.0.5"
   }
 }
