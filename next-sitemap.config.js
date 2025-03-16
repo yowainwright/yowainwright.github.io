@@ -1,6 +1,8 @@
 /** @type {import('next-sitemap').IConfig} */
 
-module.exports = {
+export const sitemapConfig = {
   siteUrl: 'https://jeffry.in',
   generateRobotsTxt: true,
 }
+
+export default sitemapConfig;
