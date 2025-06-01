@@ -49,7 +49,7 @@
     "appendix": {}
   },
   "dependencies": {
-    "@next/third-parties": "^15.3.2",
+    "@next/third-parties": "^15.4.0-canary.51",
     "next": "15.3.2",
     "react": "19.1.0",
     "react-dom": "19.1.0"
@@ -64,14 +64,14 @@
     "@shikijs/rehype": "^1.24.4",
     "@shikijs/transformers": "^1.24.4",
     "@shikijs/twoslash": "^1.24.4",
-    "@types/node": "22.15.19",
-    "@types/react": "19.1.4",
+    "@types/node": "22.15.21",
+    "@types/react": "19.1.5",
     "@types/react-dom": "19.1.5",
     "codependence": "^0.3.1",
     "commander": "^12.1.0",
     "commitizen": "4.3.1",
     "eslint": "9.27.0",
-    "eslint-config-next": "15.3.2",
+    "eslint-config-next": "15.4.0-canary.51",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-react": "^7.37.4",
     "globals": "^15.15.0",
