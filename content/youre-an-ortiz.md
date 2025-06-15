@@ -1,11 +1,12 @@
 ---
-title: You're an Ortiz, how I gained family & through them things changed for the
+title:
+  You're an Ortiz, how I gained family & through them things changed for the
   better
 date: "2013-05-21"
 path: "/youre-an-ortiz"
 meta: A short story about moving out of the a bad situation & into a good one
 category:
-- story
+  - story
 ---
 
 In 2010 I was in a pretty low spot. I had been laid off from my job earlier that year and moved into a low-income area to save money. It turned into a nightmare.

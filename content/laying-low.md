@@ -4,11 +4,11 @@ date: "2017-09-18"
 path: "/laying-low"
 meta: Laying low but staying focused on coding, running and writing.
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
-Over the last  weeks, I've been laying low. I'm wrapping up a rewriting a better developer experience for [Stickybits](https://github.com/dollarshaveclub/stickybits). I'm finishing up two new open source repositories.  Two projects at work have also inspired me. I've learned a lot from them. Outside of work, I have a rib injury so no surfing but more [running and bike riding](https://www.strava.com/athletes/722335).
+Over the last weeks, I've been laying low. I'm wrapping up a rewriting a better developer experience for [Stickybits](https://github.com/dollarshaveclub/stickybits). I'm finishing up two new open source repositories. Two projects at work have also inspired me. I've learned a lot from them. Outside of work, I have a rib injury so no surfing but more [running and bike riding](https://www.strava.com/athletes/722335).
 
 ---
 

@@ -2,21 +2,22 @@
 title: The 4 Categories of Frontend JavaScript Projects
 date: "2017-02-08"
 path: "/4-categories-js-projects"
-meta: This post lists out the 4 types of Frontend JavaScript Projects and summarizes
+meta:
+  This post lists out the 4 types of Frontend JavaScript Projects and summarizes
   them.
 categories:
-- code
-- javascript
+  - code
+  - javascript
 ---
 
 I separate JavaScript Projects into 4 categories. It's important for me to remember these categories when learning about projects so that I can optimize my time spent learning, building and tooling with JavaScript. Currently (2017), JavaScript churn is real and it is easy to be overwhelmed. I find that when I break down JavaScript projects into these categories, I'm able to invest my time appropriately and pick tools faster.
 
 ## The Core 4
 
--  Plugins
--  Libraries
--  Frameworks
--  Services
+- Plugins
+- Libraries
+- Frameworks
+- Services
 
 ## Core 4 Definitions
 

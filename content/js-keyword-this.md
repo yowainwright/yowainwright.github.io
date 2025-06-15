@@ -2,11 +2,12 @@
 title: Javascript's keyword this; THIS is what I'm talking about!
 date: "2015-01-10"
 path: "/js-keyword-this/"
-meta: This post goes into Javascript's keyword this, how it is defined & why it is
+meta:
+  This post goes into Javascript's keyword this, how it is defined & why it is
   misunderstood
 categories:
-- javascript
-- code
+  - javascript
+  - code
 ---
 
 The _**this**_ keyword in Javascript is something that has often confused me, especial which object it is attached to. I've realized trying to explain it a few times that it's difficult to explain.
@@ -15,46 +16,44 @@ The _this_ keyword is a parameter that gets bound to an object. That parameter t
 
 Here’s a list of what the keyword this is **not** bound to:
 
--  the object created literal
--  the function object it appears in
--  a new function it appears in
--  a object that has a function of the property
--  the objects execution context
+- the object created literal
+- the function object it appears in
+- a new function it appears in
+- a object that has a function of the property
+- the objects execution context
 
 Key’s to figuring out what the key work This will be bound to
 
--  This gets bound to the object left of the dot (period, ‘.’)
--  If the keyword new is used to create a new object This gets bound to that new object
--  If there is not dot & no keyword this will get bound to the global object
--  When using the .call() method another argument is passed in & This takes that value
+- This gets bound to the object left of the dot (period, ‘.’)
+- If the keyword new is used to create a new object This gets bound to that new object
+- If there is not dot & no keyword this will get bound to the global object
+- When using the .call() method another argument is passed in & This takes that value
 
 The 4 ways this is initiated:
 
--  In a function.
+- In a function.
 
 ```javascript
-function funcName() {};
+function funcName() {}
 ```
 
--  In a method
+- In a method
 
 ```javascript
 var obj = {
-     funcName : function() {}
-}
+  funcName: function () {},
+};
 ```
 
--  As a constructor
+- As a constructor
 
 ```javascript
-
 function myFunc(name) {
   this.name = name;
-};
+}
 
-var newMyFunc = new myFunc('Jeff');
+var newMyFunc = new myFunc("Jeff");
 document.write(myFunc.name);
-
 ```
 
 - Using **.call();** or **.apply();** methods
@@ -63,29 +62,28 @@ document.write(myFunc.name);
 function juggle() {
   var result = 0;
   for (var n = 0; n < arguments.length; n++) {
-   result += arguments[n];
+    result += arguments[n];
   }
   this.result = result;
-};
+}
 
 var ninja1 = {};
 var ninja2 = {};
 
 juggle.apply(ninja1, [1, 2, 3, 4]);
 juggle.call(ninja2, 5, 6, 7, 8);
-
 ```
 
 **example:**
 
 ```javascript
-var fn = function(one, two) {
-    log(one, two);
+var fn = function (one, two) {
+  log(one, two);
 };
 
 var r = {},
-    g = {},
-    b = {};
+  g = {},
+  b = {};
 
 r.method = fn; // This gets bound to r
 r.method(g, b); // This gets bound to r

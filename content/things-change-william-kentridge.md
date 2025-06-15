@@ -2,11 +2,12 @@
 title: It's amazing the way that things change and William Kentridge
 date: "2016-02-04"
 path: "/things-change-william-kentridge"
-meta: It's amazing the way things change. I, Jeff Wainwright, discuss myself and the
+meta:
+  It's amazing the way things change. I, Jeff Wainwright, discuss myself and the
   first time I saw a William Kentridge exhibit
 categories:
-- art
-- story
+  - art
+  - story
 ---
 
 Remembering the first time I saw [William Kentridge](//en.wikipedia.org/wiki/William_Kentridge): it was in Chicago and I drove down from Madison, Madison Wisconsin with my girlfriend. I was around 21. I'm 35 now. I threw a temper tantrum while trying to find a place to park in the magnificent mile area.
@@ -20,6 +21,7 @@ The Kentridge Exhibit was at the [MCA](//mcachicago.org/Home) during the winter.
 We all (my hair, my girlfriend and I) entered the museum and got to the exhibit. The exhibit was a series of installation videos. Each video was a narrative done in charcoal frames.
 
 Kentridge's process for making his videos was/is:
+
 - do the drawing with charcoal on paper,
 - manipulate the unset charcoal on that _same piece of paper_ for multiple stills of the video.
 
@@ -39,7 +41,7 @@ My parents where diplomats and stationed in Albania at that time. When finals an
 
 One day, while in Albania, I went with a group of hikers down by the sea. There were fisherman fishing with dynamite at the beach we were hiking on. I got a call from my girlfriend on my Nokia Cell Phone (remember: 2000/2001). "Do you have time to talk?", she asked. "Of course.", I said; dynamite explosions happening in the background. "I've met someone; someone else", she said, "I don't want to be with you any more.". At that moment, a dynamite explosion happened. Fish and fish guts flew into the air. I could hear the fisherman boys' glee as they giggled near by. "I understand.", I said to my girlfriend on the phone.
 
->"I don't want to be with you any more.". At that moment, a dynamite explosion happened. Fish and fish guts flew into the air.
+> "I don't want to be with you any more.". At that moment, a dynamite explosion happened. Fish and fish guts flew into the air.
 
 We, Emily (my girlfriend of that time) and I, talked a few times after that and not about us really. The conversations were more along the lines of: "Can I get this back?". There was never much closure and there didn't have to be. We were very different and I'd been a selfish boyfriend for the most part. I think fondly of moments I spent with her and I smile when I think of my first time seeing William Kentridge and getting dumped to the sound of fish being blown up with dynamite in the background (not about the fish being blown up specifically - I'm not into that).
 

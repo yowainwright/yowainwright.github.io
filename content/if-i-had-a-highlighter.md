@@ -2,7 +2,7 @@
 title: >-
   Listening to what is most important to others is hard. What if there was a
   highlighter for spoken words?
-date: '2019-03-07'
+date: "2019-03-07"
 path: /if-i-had-a-highlighter/
 meta: >-
   This post discusses how hard it for listeners to fully understand what a
@@ -24,7 +24,7 @@ Imagine there was a highlighter pen that could highlight spoken words. With this
 
 For a long time, I've subtly been aware that often what I'm trying to convey verbally is not what is understood by my audience. Aware of this problem, I usually make it worse by attempting to express the same point in a different way over and over. Basically, I ramble. I've experienced where people who listen to my rambling feel shut down or become hurt/pissed by one of my numerous ways of trying to convey an exact thing. This has happened at key points for me; moments where I wanted to be precise to make my listener feel understood or cared for.
 
-## If I had a spoken word highlighter, I'd say it once and highlight the good s**t
+## If I had a spoken word highlighter, I'd say it once and highlight the good s\*\*t
 
 F\*\*king up while trying to say what I want to say has caused me to hurt relationships I care about while trying to convey how I feel about topics I care about—like my feelings. If I had a spoken word highlighter, I'd say what I felt once and highlight the good s\*\*t. I'd then ask if what I had highlighted made sense and ask how the listener interpreted what I'd said. If they did, we could move on to other important topics, like how they feel.
 

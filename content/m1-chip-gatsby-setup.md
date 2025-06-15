@@ -1,7 +1,7 @@
 ---
 title: Setting update Gatsby Development on an M1 Mac Mini
-date: '2021-06-01'
-path: '/m1-chip-gatsby-setup/'
+date: "2021-06-01"
+path: "/m1-chip-gatsby-setup/"
 meta: A post providing context into setting up an M1 Mac for Gatsby development and 1 happy path to get up and running with Gatsby on a M1 Mac fast!
 categories:
   - code
@@ -28,7 +28,8 @@ First, I observed that if I wasn't using Node 16, NVM seemed to endlessly try an
 To solve this issue, I bumped the version of Node in my `.nvmrc` to `16` and everything worked fine.
 
 Second, during NPM node module installation, I encountered errors with "pre-built or built binaries". [Sharp](https://www.npmjs.com/package/sharp) is one of the node modules which was causing the error. Sharp uses pre-built binaries to do image compression.
-To solve the  "pre-built or built binaries" issues with Sharp, I Installed Homebrew and some Homebrew formulas. Then I removed some folders and re-build my Gatsby app which go everything running.
+To solve the "pre-built or built binaries" issues with Sharp, I Installed Homebrew and some Homebrew formulas. Then I removed some folders and re-build my Gatsby app which go everything running.
+
 ## Homebrew setup
 
 _Maybe you haven't heard of [Homebrew](https://brew.sh/) or don't use it. If you have a particular reason not to use Homebrew setting up your M1 Chip Mac for Gatsby development might be a bit more [difficult](https://github.com/lovell/sharp/issues/2460)._

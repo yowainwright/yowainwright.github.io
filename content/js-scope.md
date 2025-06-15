@@ -4,8 +4,8 @@ date: "2013-06-20"
 path: "/js-scope/"
 meta: Discussing Javascript Scope & terms that are discussed when talking about it
 categories:
-- javascript
-- code
+  - javascript
+  - code
 ---
 
 Javascript **scope** is an essential for keeping & accessing information where we want it & using it when we want to.
@@ -48,6 +48,7 @@ Scope, in Javascript, refers to where stored information can be accessed.
 Local Scope refers the a variable that was declared within a function which means mean that it can only be accessed within that function.
 
 **example:**
+
 ```javascript
 
 var globalVar = ‘This var is global’;
@@ -60,12 +61,11 @@ var myFunc = function() {
 
 Execution context is memory scope. It’s created as a program runs.
 
-
 **A fun example which demonstrates scope:**
-```javascript
 
-var makeArray = function() {
-    return [];
+```javascript
+var makeArray = function () {
+  return [];
 };
 var array1 = makeArray();
 var array2 = makeArray();

@@ -2,11 +2,12 @@
 title: Week 3, 2017—Releasing ScrollDir, working on interpersonal growth and surfing
 date: "2017-01-30"
 path: "/week-3-17"
-meta: This post summarizes week 3 of 2017. ScrollDir was released and the weather
+meta:
+  This post summarizes week 3 of 2017. ScrollDir was released and the weather
   was better so more surfing
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 The weather in Southern California has improved greatly from the first few weeks of 2017. It's almost felt Spring like! The result is more—more surfing, more riding bikes and even still a little time to skateboard and rock climb. Besides enjoying the year's first sunny days, I released [ScrollDir](https://dollarshaveclub.github.io/scrolldir/) and continues to research into what I'm calling **story projects**. **Story projects**, 3 are started, are basically versions of server side rendering capable boilerplate blog sites with different frontend MVCs.

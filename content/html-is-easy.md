@@ -1,13 +1,14 @@
 ---
-title: 'Rant: HTML is easy and that''s why we all write it wrong!'
+title: "Rant: HTML is easy and that's why we all write it wrong!"
 date: "2016-09-30"
 path: "/html-is-easy"
-meta: Rant post  about potential gains from understanding and being more thoughtful
+meta:
+  Rant post  about potential gains from understanding and being more thoughtful
   when writing html.
 categories:
-- html
-- code
-- rant
+  - html
+  - code
+  - rant
 ---
 
 This post is a _rant_ attempting to express what seems to be a growing issue: lack of deep thought behind writing HTML for webpages—that will go to production! 🤓 Yes, more time is spent writing that animation, that slider, that app like experience than prioritizing what would probably ensure that customers come to webpages and have a better experience: semantic valid html.
@@ -26,8 +27,8 @@ Developers, product managers, maybe the whole world at this point assumes _it is
 
 Beyond Semantic HTML, valid HTML is an issue! With browser advancements, checking whether html webpages validate just doesn't happen.
 
--  [Google Search](https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.google.com%2F) doesn't render valid html according to W3C spec.
--  Neither does [Facebook](https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.facebook.com%2F)
+- [Google Search](https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.google.com%2F) doesn't render valid html according to W3C spec.
+- Neither does [Facebook](https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.facebook.com%2F)
 
 Validation may not be an issue for Google and Facebook because there usership maybe be so large. However, most websites are _not_ Google or Facebook. This is where the point of valid html is _still_ be a very important thing to consider! 💭
 
@@ -49,17 +50,17 @@ Now, years later, we know people don't go to many [webpages](https://www.quora.c
 
 **High quality html is:**
 
--  **Consumable:** when webpages are consumed by third party services like Medium and Facebook instant articles, high quality HTML is _probably_ much more consumable.
--  **Usable:** thoughtful HTML is much more usable for people with special needs and people in general.
--  **Fast:** browsers can probably render thoughtful HTML better.
+- **Consumable:** when webpages are consumed by third party services like Medium and Facebook instant articles, high quality HTML is _probably_ much more consumable.
+- **Usable:** thoughtful HTML is much more usable for people with special needs and people in general.
+- **Fast:** browsers can probably render thoughtful HTML better.
 
 ## Tools that might help us
 
 **Here are a few tools that can be used to write better html:**
 
--  [html validator](https://validator.w3.org/)
--  [htmllint](https://github.com/htmllint/htmllint)
--  [linter-htmlhint](https://github.com/AtomLinter/linter-htmlhint)
+- [html validator](https://validator.w3.org/)
+- [htmllint](https://github.com/htmllint/htmllint)
+- [linter-htmlhint](https://github.com/AtomLinter/linter-htmlhint)
 
 ## My fingers are tired so here's the wrap-up
 

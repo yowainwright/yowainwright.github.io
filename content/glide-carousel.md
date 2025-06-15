@@ -4,8 +4,8 @@ date: "2014-04-23"
 path: "/glide-carousel"
 meta: This is a demo on how to use the Glide Carousel with Semantic UI
 categories:
-- javascript
-- code
+  - javascript
+  - code
 ---
 
 This carousel was originally done for a bootstrap project. I quickly implemented it using [Glide JS](http://jedrzejchalubek.com/glide/) which fits in nicely with [Semantic UI](http://semantic-ui.com/) (the framework I use on this site). This post describes my implementation.
@@ -15,17 +15,20 @@ Many people don't like carousels and I _somewhat_ agree. Image carousels like th
 Good imagery with clean verbiage can get a user to go through a carousel or can used to create a _side swipe_ as demonstrated here. Notice how in my _Reference Rolex_ a user can swipe or click from the side to view new content rather than to continue to scroll down. This, from my perspective, becomes most effective and relevant for users on a mobile view where swiping is more standard.
 
 **The CSS used**
+
 ```html
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css"/>
+<link
+  rel="stylesheet"
+  href="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css"
+/>
 ```
 
 **The JS used**
-```html
 
+```html
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/javascript<ntic.min.js"></script>
 <script src="http://cdn.jsdelivr.net/jquery.glide/1.0.6/jquery.glide.min.js"></script>
-
 ```
 
 **The html**
@@ -33,27 +36,22 @@ Good imagery with clean verbiage can get a user to go through a carousel or can 
 The HTML for the first 2 slides
 
 ```html
-
 <div class="slider slider1">
   <div class="slides">
-    <div class="slide-item item1">
-    </div>
-    <div class="slide-item item2">
-    </div>
-    <div class="slide-item item3">
-    </div>
-    <div class="slide-item item4">
-    </div>
+    <div class="slide-item item1"></div>
+    <div class="slide-item item2"></div>
+    <div class="slide-item item3"></div>
+    <div class="slide-item item4"></div>
   </div>
 </div>
-
 ```
 
 **The JS added locally**
 
 Just call glide to run in your local JS
+
 ```javascript
-$('.slider').glide();
+$(".slider").glide();
 ```
 
 Note: my JS for glide is slightly different but this is all you need.

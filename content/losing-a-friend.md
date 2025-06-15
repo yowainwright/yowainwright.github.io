@@ -2,11 +2,12 @@
 title: Some great memories have Lauren in the foreground
 date: "2017-02-28"
 path: "/losing-a-friend"
-meta: Recently, I lost a friend. Lauren Schlueter was a friend of mine who helped
+meta:
+  Recently, I lost a friend. Lauren Schlueter was a friend of mine who helped
   me through laughter. She was a historian, a teacher and a comedian.
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 Lauren and I met through a mutual friend of ours from Chicago. When she arrived in Manhattan Beach, where I lived, we became fast friends. At the time, I was recovering from a serious bout with Pneumonia. The sickness had left me a bit depressed. She was going through some life changes making us the perfect travel/hang-out duo.

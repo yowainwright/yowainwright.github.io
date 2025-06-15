@@ -5,40 +5,39 @@ path: "/css-less-known-selectors"
 meta: Less known CSS selectors, aka attribute selectors
 share_image: "https://yowainwright.imgix.net/icons/sass.jpg"
 categories:
-- css
-- code
+  - css
+  - code
 ---
 
 Having written CSS & SASS for years & using [BEM](//csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) it's a rarity that I find the need to use some of the selectors I'll list below but, every once in a while a situation comes up where I'm so thankful that they're there.
 
 **Here are some attribute examples**
 
--  target:&nbsp;`[target="val"]`
--  value:&nbsp;`[target="val"]`
+- target:&nbsp;`[target="val"]`
+- value:&nbsp;`[target="val"]`
 
 **Here's a reference table of selectors I'll mention in this post:**
 
-| Selector | Example |
-|----------|:-------------:|
-| Begins with | `[attr^="val"]` |
-| Ends with | `[attr$="val"]` |
-| Contains (string) | `[attr*="val"]` |
-| Contains (text) | `[title~="text"]` |
+| Selector          |      Example      |
+| ----------------- | :---------------: |
+| Begins with       |  `[attr^="val"]`  |
+| Ends with         |  `[attr$="val"]`  |
+| Contains (string) |  `[attr*="val"]`  |
+| Contains (text)   | `[title~="text"]` |
 
 ## Begins with
 
 The **Begins with** css selector uses the `^` or carrot and will select an element that starts with the defined value.
 
 **Example**
-```html
-<a href="#something">something</a>
-<a href="#not-something"></a>
-```
 
+```html
+<a href="#something">something</a> <a href="#not-something"></a>
+```
 
 ```css
 a[href^="#something"] {
-    background: red;
+  background: red;
 }
 ```
 
@@ -51,13 +50,12 @@ The **ends width** css selector uses the `$` or dollar sign and will select an e
 **Example**
 
 ```html
-<a href="#something-else">something</a>
-<a href="#something"></a>
+<a href="#something-else">something</a> <a href="#something"></a>
 ```
 
 ```css
 a[href$="#else"] {
-    background: blue;
+  background: blue;
 }
 ```
 
@@ -71,13 +69,12 @@ The **Container (string)** css selector uses the `*` or star and will select an 
 **Example**
 
 ```html
-<a href="#something-in-here">something</a>
-<a href="#something"></a>
+<a href="#something-in-here">something</a> <a href="#something"></a>
 ```
 
 ```css
 a[href*="here"] {
-    background: yellow;
+  background: yellow;
 }
 ```
 
@@ -90,13 +87,12 @@ The **Container (text)** css selector uses the `~` or approx and will select an 
 **Example**
 
 ```html
-<a title="some special text">something</a>
-<a title="text"></a>
+<a title="some special text">something</a> <a title="text"></a>
 ```
 
 ```css
 a[href~="text"] {
-    background: yellow;
+  background: yellow;
 }
 ```
 

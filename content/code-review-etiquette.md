@@ -4,8 +4,8 @@ date: "2017-09-16"
 path: "/code-review-etiquette"
 meta: Code Review Etiquette is an important for code quality, engineer happiness, and engineer growth—but is never talked about?
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 _Code Review Etiquette_ is not discussed with a quarter of the level of scrutiny that _code_ is within the engineering community. Code Review Etiquette affects learning, code quality, relationships, and self-confidence. Code is logical in nature. It is easy to pinpoint code that is incorrect or could be improved. The human condition when looking at and discussing logical things (like code) can disregard feelings of other people. This causes feelings get hurt and loss of focus on learning and collaboration. This post boils down general feelings mixed with suggestions to improve **Code Review Etiquette**.
@@ -45,7 +45,6 @@ we should return out of this function early
 ```md
 return out of this function early
 ```
-
 
 Notice how the amount of text needed to communicate the same thing without using personal relationship takes fewer words and speaks most clearly to them too. This helps with human interaction, separate code discussion from personal discussion, and fewer words are needed to communicate the same thing.
 
@@ -103,10 +102,10 @@ You need to learn about [functional programming](http://www.cs.utah.edu/~germain
   return early like this 🏁
 */
 const calculateStuff = (stuff) => {
-  if (noStuff) return
+  if (noStuff) return;
   // calculate stuff
-  return calculatedStuff
-}
+  return calculatedStuff;
+};
 ```
 
 In the two comments above, the first comment causes the reader to go far beyond the issue. The conversation is more abstract—even [existential](https://www.merriam-webster.com/dictionary/existential). The second comment refers directly to the issue, then provides a `pseudo code` example that relates directly to the comment.

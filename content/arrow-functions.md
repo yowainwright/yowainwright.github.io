@@ -2,13 +2,14 @@
 title: Arrow Function Notes  After Watching ES6 For Everyone
 date: "2017-01-06"
 path: "/arrow-functions/"
-meta: This post reviews some things about arrow functions that I learned from Wes
+meta:
+  This post reviews some things about arrow functions that I learned from Wes
   Bos's ES6 for everyone.
 categories:
-- html
-- code
-- note
-- javascript
+  - html
+  - code
+  - note
+  - javascript
 ---
 
 Note post: this short post about Arrow Functions after watching [ES6 For Everyone](https://es6.io/)(EFE——for this post) by [Wes Bos](http://wesbos.com/)! Arrow functions are simpler way to write functions in [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). This post contains a few things that I wasn't completely clear on about Arrow Functions that EFE really clarified for me.
@@ -28,25 +29,21 @@ When writing a function normal `this` can be bound to things (like elements in e
 **ES5 Function**
 
 ```javascript
-
 var clickFunction = function clickFunc() {
   console.log(this);
   // This would be the selected element
 };
-var button1 = document.getElementById('button-1');
-button1.addEventListener('click', clickFunction, false);
-
+var button1 = document.getElementById("button-1");
+button1.addEventListener("click", clickFunction, false);
 ```
 
 **ES6 Arrow Function**
 
 ```javascript
-
-document.getElementById('elem').addEventListener('click', () => {
+document.getElementById("elem").addEventListener("click", () => {
   console.log(this);
   // `this` would be undefined
 });
-
 ```
 
 ### Remove Even More Cruft With Arrow Functions
@@ -56,21 +53,19 @@ Arrow functions can be even more minimal but most people add certain things like
 **Standard Way of Writing an Arrow Function**
 
 ```javascript
-
-const button2 = document.getElementById('button-2');
-button2.addEventListener('click', () => {
-  console.log('Normal arrow function');
+const button2 = document.getElementById("button-2");
+button2.addEventListener("click", () => {
+  console.log("Normal arrow function");
 });
-
 ```
 
 **More Minimal Way An Arrow Function Can Be Written**
 
 ```javascript
-
-const button3 = document.getElementById('button-3');
-button3.addEventListener('click', () => console.log('arrow function with less cruft'));
-
+const button3 = document.getElementById("button-3");
+button3.addEventListener("click", () =>
+  console.log("arrow function with less cruft"),
+);
 ```
 
 ### Objects Cannot Be Used In Arrow Function Arguments
@@ -80,16 +75,14 @@ Arrow functions can use arguments——as long as they're not objects.
 **Standard Way of Writing an Arrow Function**
 
 ```javascript
-
-const button4 = document.getElementById('button-4');
+const button4 = document.getElementById("button-4");
 const anObj = {
-  name: 'Objecto'
+  name: "Objecto",
 };
-button4.addEventListener('click', (anObj) => {
+button4.addEventListener("click", (anObj) => {
   console.log(anObj);
   // anObj will be undefined
 });
-
 ```
 
 ## Arrow Function Notes Conclusion

@@ -4,7 +4,7 @@ date: "2015-11-17"
 path: "/glendora-mountain-road"
 meta: Glendora Mountain Road is a road cycling paradise
 categories:
-- travel
+  - travel
 ---
 
 [Glendora Mountain Road](http://www.differentspokes.com/index.cfm?action=showEvent&eventID=1888) or GMR is approximately a 20 mile ride where you’ll be challenged with climbs, turns & a strong desire to take a lot of pictures.

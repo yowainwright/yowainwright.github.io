@@ -5,8 +5,8 @@ path: "/git-tag-update"
 meta: This post instructs how to update git tags after they've been pushed
 share_image: https://yowainwright.imgix.net/icons/os.jpg
 categories:
-- code
-- os
+  - code
+  - os
 ---
 
 [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are used for establishing versions of products. They usually use [Semver Versioning](http://semver.org/).

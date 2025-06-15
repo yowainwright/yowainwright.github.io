@@ -1,6 +1,6 @@
 ---
-title: 'The 2000s are no longer a teenager, starting out 2020'
-date: '2020-01-06'
+title: "The 2000s are no longer a teenager, starting out 2020"
+date: "2020-01-06"
 path: /2000s-not-a-teenager
 meta: >-
   This post summarizes my first days of 2020 with brief reflections on 2019,
@@ -34,11 +34,11 @@ To understand more about functional programming, I suggest reading posts by Eric
 The code below demonstrates a [linked list](https://en.wikipedia.org/wiki/Linked_list) in functional form. View a living [Codepen here](https://codepen.io/yowainwright/pen/eYmqeWo).
 
 ```javascript
-const link = (tree, item) => [item, tree]
+const link = (tree, item) => [item, tree];
 
-const items = [{ a: 'a' }, { b: 'b' }, { c: 'c' }]
+const items = [{ a: "a" }, { b: "b" }, { c: "c" }];
 
-const linkedList = items.reduceRight(link, [])
+const linkedList = items.reduceRight(link, []);
 ```
 
 ## TypeScript, data type checking for JavaScript
@@ -48,7 +48,7 @@ const linkedList = items.reduceRight(link, [])
 With JavaScript, a function as listed below does not require specific types which means that any type of data can be passed into the function.
 
 ```javascript
-const add = (num, num2) => num + num2
+const add = (num, num2) => num + num2;
 ```
 
 Which means that it can be invoked with a `number` data type and `string` data type as arguments even though the function is meant to be invoked with a `number` and a `number`.
@@ -60,16 +60,16 @@ add(2, 'hat)
 With TypeScript, a code editor would catch this potential mistake and the function would be written like so.
 
 ```typescript
-const add = (num: number, num2: number): number => num + num2
+const add = (num: number, num2: number): number => num + num2;
 ```
 
 The code, written in TypeScript above basically says the the function requires 2 numbers and returns a number.
 
 ```typescript
-const add = (num: number, num2: number): number => num + num2
+const add = (num: number, num2: number): number => num + num2;
 
-const addedNumber = add(2, 4) // 6
-const erroringAddedNumber = add(2, '4') // TypeScript would catch this within a text editor, and a build
+const addedNumber = add(2, 4); // 6
+const erroringAddedNumber = add(2, "4"); // TypeScript would catch this within a text editor, and a build
 ```
 
 If I tried to use the `add` function above with an number and string as I wrote above with JavaScript, TypeScript would throw an error at build time and within a [text editor](https://code.visualstudio.com/). See the could above for the general idea.

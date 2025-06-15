@@ -1,7 +1,7 @@
 ---
 title: TypeScript Init—Getting A Test Driven TypeScript Repository Setup
-date: '2018-05-02'
-path: '/getting-setup-with-ts'
+date: "2018-05-02"
+path: "/getting-setup-with-ts"
 meta: This post documents getting setup with TypeScript—just beyond the Gettings Started TypeScript Tutorials. In this Post I will go through setting up a Test Driven TypeScript project.
 categories:
   - note
@@ -50,18 +50,18 @@ Listed below are steps to get [ts-jest](https://github.com/kulshekhar/ts-jest) u
 ### Tests are working and I'm still alive
 
 ```javascript
-import { Node } from '../Node'
-expect(1).toBe(1)
+import { Node } from "../Node";
+expect(1).toBe(1);
 ```
 
 ### Files are importing correctly
 
 ```javascript
-import { Node } from '../Node'
+import { Node } from "../Node";
 
-test('Jest is working, Node is imported', () => {
-  expect(typeof Node).toBe('function')
-})
+test("Jest is working, Node is imported", () => {
+  expect(typeof Node).toBe("function");
+});
 ```
 
 ### Define the testing interface

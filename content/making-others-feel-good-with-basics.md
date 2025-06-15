@@ -4,8 +4,8 @@ date: "2018-06-17"
 path: "/making-others-feel-good-with-basics"
 meta: This post observes how different communication can be from intent to reception. It focuses on observations on simple comunications.
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 What information is received in basic human commmunication is often very different than intended based on psychical communication. Body language, vocal pitch, and other psychical gestures can make similar information be received differently.
@@ -16,7 +16,7 @@ I think about how verbal communication and psychical communication are received 
 
 ## Making others feel good in basic communication
 
-There are simple communications that people can do to make others feel good—smiling, telling  jokes, listening. This seems obvious but it is not! A joke can be misunderstood. Someone has to talk to you for you to listen. Even a smile can be misunderstood in the wrong context. When I think about it, what's the simplest way to make someone feel good? I'm not sure. It's nuanced. Below, I'm going to breakdown things I have observed with human expression.
+There are simple communications that people can do to make others feel good—smiling, telling jokes, listening. This seems obvious but it is not! A joke can be misunderstood. Someone has to talk to you for you to listen. Even a smile can be misunderstood in the wrong context. When I think about it, what's the simplest way to make someone feel good? I'm not sure. It's nuanced. Below, I'm going to breakdown things I have observed with human expression.
 
 ### Smiling
 

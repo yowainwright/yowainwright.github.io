@@ -5,8 +5,8 @@ path: "/happy-birthday"
 show_image: true
 meta: A post which creates letters with the body that spell out Happy Birthday!
 categories:
-- story
-- projects
+  - story
+  - projects
 ---
 
 A year ago I was not able to be with one of my dear friends on their birthday so I made this.

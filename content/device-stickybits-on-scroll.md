@@ -2,11 +2,12 @@
 title: All about Sticky Navs & what happens to them on devices
 date: "2016-07-24"
 path: "/device-stickybits-on-scroll"
-meta: Creating a sticky nav that works while scrolling is a difficult issue that must
+meta:
+  Creating a sticky nav that works while scrolling is a difficult issue that must
   be solved, many sites navigations are set to fixed position
 categories:
-- javascript
-- code
+  - javascript
+  - code
 ---
 
 Although navigations stuck to the top of browser windows are sometimes scrutinized, their relevance on webpages cannot easily be overlooked. Recently, I was challenged to make some sticky items that were fairly complex so I decided to write a plugin that would work for me & my use cases called [Sticky Bits](https://github.com/yowainwright/sticky-bits).
@@ -17,7 +18,7 @@ Sticky Navigation in my purview became more relevant with an implementation of [
 
 ### Browser sticky navigation
 
-*Sticky navigation:* This is when a navigation is sticky to the top of a webpage from the start. This is typically done when setting an element to `position: fixed` & then either setting adding a `margin-top` to the next sibling element that is equal to the height of the fixed navigation or adding an `element` that wraps the sticky nav & then has a height that is set to the height of the fixed navigation.
+_Sticky navigation:_ This is when a navigation is sticky to the top of a webpage from the start. This is typically done when setting an element to `position: fixed` & then either setting adding a `margin-top` to the next sibling element that is equal to the height of the fixed navigation or adding an `element` that wraps the sticky nav & then has a height that is set to the height of the fixed navigation.
 
 <figure>
 	<a href="https://www.dollarshaveclub.com/blades">
@@ -25,7 +26,7 @@ Sticky Navigation in my purview became more relevant with an implementation of [
 	</a>
 </figure>
 
-*Static then fixed navigation:* This is when a navigation appears to be static & then a when a customer scrolls to where the top of the browser window meets the top of the sticky element - the element appears to snap to the top of the browser window. This is done by typically  wrapping the sticky navigation in an element that is set to the height of the navigation. Using a Javascript `.onscroll` event - the browser scroll event tracks for when `window.scrollY` is greater that the sticky navigation element's `.offsetTop`. This is typically a very expensive javascript call as it is done continually throughout the process of a customer's scroll. This is why functions like [throttling](https://remysharp.com/2010/07/21/throttling-function-calls), [debouncing](https://davidwalsh.name/javascript-debounce-function) & [requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) are often used to help. This is still an issue as delays in the sticky navigation can easily occur.
+_Static then fixed navigation:_ This is when a navigation appears to be static & then a when a customer scrolls to where the top of the browser window meets the top of the sticky element - the element appears to snap to the top of the browser window. This is done by typically wrapping the sticky navigation in an element that is set to the height of the navigation. Using a Javascript `.onscroll` event - the browser scroll event tracks for when `window.scrollY` is greater that the sticky navigation element's `.offsetTop`. This is typically a very expensive javascript call as it is done continually throughout the process of a customer's scroll. This is why functions like [throttling](https://remysharp.com/2010/07/21/throttling-function-calls), [debouncing](https://davidwalsh.name/javascript-debounce-function) & [requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) are often used to help. This is still an issue as delays in the sticky navigation can easily occur.
 
 <figure>
 	<a href="https://medium.com/">
@@ -33,7 +34,7 @@ Sticky Navigation in my purview became more relevant with an implementation of [
 	</a>
 </figure>
 
-*Fixed navigation with a scroll stop:* This is when a navigation is sticky & then at a certain point the sticky nav stops. This is often done by setting a navigation to fixed & then when element reaches a scroll `stopping point`, the navigation is set with a `position` of `absolute` with a `top` position that equals the _height of the stopping offset_.
+_Fixed navigation with a scroll stop:_ This is when a navigation is sticky & then at a certain point the sticky nav stops. This is often done by setting a navigation to fixed & then when element reaches a scroll `stopping point`, the navigation is set with a `position` of `absolute` with a `top` position that equals the _height of the stopping offset_.
 
 <figure>
 <a href="http://www.billboard.com/">
@@ -41,7 +42,7 @@ Sticky Navigation in my purview became more relevant with an implementation of [
 	</a>
 </figure>
 
-*Scrolled distance queue navigation:* This is when a navigation is set to fixed & has some sort of visual queue that lets a user know how far they've scrolled. This is often done by returning a scrolled distance relative to a total window scroll. This is done by first storing scroll in a variable & then returning it out of a function.
+_Scrolled distance queue navigation:_ This is when a navigation is set to fixed & has some sort of visual queue that lets a user know how far they've scrolled. This is often done by returning a scrolled distance relative to a total window scroll. This is done by first storing scroll in a variable & then returning it out of a function.
 
 <figure>
 	<a href="http://www.hollywoodreporter.com/features/beverly-hills-1-billion-vineyard-819299">
@@ -50,18 +51,21 @@ Sticky Navigation in my purview became more relevant with an implementation of [
 </figure>
 
 ```javascript
-	var scrollPosition = 0;
+var scrollPosition = 0;
 
-	var scrollDistance = function() {
-		var newScrollPosition = window.scrollY;
-		if ( ( newScrollPosition > scrollPosition ) && newScrollPosition > somethingToMeasure ) {
-		    	// Something to do
-		} else if ( newScrollPosition < scrollPosition ) {
-		      // Something else to do
-		}
-		return scrollPosition = newScrollPosition;
-	};
-	return window.addOnScroll(scrollDistance);
+var scrollDistance = function () {
+  var newScrollPosition = window.scrollY;
+  if (
+    newScrollPosition > scrollPosition &&
+    newScrollPosition > somethingToMeasure
+  ) {
+    // Something to do
+  } else if (newScrollPosition < scrollPosition) {
+    // Something else to do
+  }
+  return (scrollPosition = newScrollPosition);
+};
+return window.addOnScroll(scrollDistance);
 ```
 
 ## Device Fixed Position & Sticky Bits
@@ -81,20 +85,20 @@ It seems that fixed position was more supported by IOS a few years ago but suppo
 It was after trying very hard to come up with a solution for fixed position support that I decided to see if making `absolute positioning` work like fixed position could be a solution. It was then that I came on to this [post](https://coderwall.com/p/8rz_7g/how-to-emulate-position-fixed-using-absolute-positioning) which uses css to essentially hijack window scrolling from the window so that elements positioned absolutely can behave in a way similarly to what we'd expect with fixed position.
 
 ```css
-	html {
-	  position: absolute;
-	  height: 100%;
-	  overflow: hidden;
-	}
+html {
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+}
 
-	body {
-	  height: 100%;
-	  overflow: auto;
-	}
+body {
+  height: 100%;
+  overflow: auto;
+}
 
-	.fixed {
-	  position: absolute;
-	}
+.fixed {
+  position: absolute;
+}
 ```
 
 I've been writing a plugin to accept standard web fixed position patterns as well as device fixed position patterns called [Sticky Bits](https://github.com/yowainwright/sticky-bits).

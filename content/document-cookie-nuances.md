@@ -1,7 +1,7 @@
 ---
 title: Document Cookies Are a Useful Tool With A Simple API With Some Nunaces
-date: '2022-02-05'
-path: '/document-cookie-nuances'
+date: "2022-02-05"
+path: "/document-cookie-nuances"
 meta: "This brief artice covers nuances of document.cookie and how to use it to store and access data."
 categories:
   - code
@@ -20,14 +20,14 @@ Cookies can be created or referenced via the `document.cookie` property.
 To create a cookie, all that is needed is something very simple.
 
 ```javascript
-document.cookie = '<key>=<value>;';
+document.cookie = "<key>=<value>;";
 ```
 
 Reading cookies is very simple as well.
 
 ```javascript
-const cookies = new UrlSearchParams(document.cookie.replaceAll('; ', '&'));
-cookies.get('<key>');
+const cookies = new UrlSearchParams(document.cookie.replaceAll("; ", "&"));
+cookies.get("<key>");
 ```
 
 ## Cookie Attributes Are Write Only (Nuance 1)
@@ -37,8 +37,9 @@ However, if viewing [MDN's](https://developer.mozilla.org/en-US/docs/Web/API/Doc
 This concept is easy to understand. However, when viewing the API for adding attributes, it's slightly more confusing.
 
 ```javascript
-document.cookie = '<key1>=value1; expires=<date1>; path=<path>; domain=<domain>; secure; httponly';
-document.cookie = '<key2>=value2; expires=<dat2>; path=<path>;secure; httponly';
+document.cookie =
+  "<key1>=value1; expires=<date1>; path=<path>; domain=<domain>; secure; httponly";
+document.cookie = "<key2>=value2; expires=<dat2>; path=<path>;secure; httponly";
 const cookies = new UrlSearchParams(document.cookie);
 Object.fromEntries(cookies); // { key1: 'value1', key2: 'value2' }
 ```
@@ -63,7 +64,7 @@ Lets see this in in action!
 
 ```javascript
 const cookies = new UrlSearchParams(document.cookie); // '<key1>=<value`>;<key2>=<value2>;'
-cookies.set('<key>', '<value>');
+cookies.set("<key>", "<value>");
 // note: when adding attributes the code  to update a cookie is slightly more complex
 ```
 
@@ -80,15 +81,19 @@ cookies.set('<key>', '<value>');
 - Cookies are separated by a `;` with the `cookies` string
 
 ---
+
 ## Adding Multiple Cookies (Nuance 3)
 
-When retrieving cookies, executing `console.log(document.cookie)`  will print all of the cookies on the document as key value pairs. In that same space, it isn’t far fetched to think multiple cookies could be added the same way—`document.cookie='foo=bar; biz=baz;'`. However, that could will only assign the first cookie.
+When retrieving cookies, executing `console.log(document.cookie)` will print all of the cookies on the document as key value pairs. In that same space, it isn’t far fetched to think multiple cookies could be added the same way—`document.cookie='foo=bar; biz=baz;'`. However, that could will only assign the first cookie.
 
 To add multiple cookies, each cookie must be added in a separate `document.cookie` assignment like the code block below.
 
 ```javascript
-  [{ key: 'foo', value: 'bar' }, { key: 'biz', value: 'baz' }].forEach(({ key, value }) => document.cookie = `${key}=${value};`);
-  document.cookie; // 'foo=bar; biz=baz;'
+[
+  { key: "foo", value: "bar" },
+  { key: "biz", value: "baz" },
+].forEach(({ key, value }) => (document.cookie = `${key}=${value};`));
+document.cookie; // 'foo=bar; biz=baz;'
 ```
 
 ### Code Observation
@@ -96,13 +101,15 @@ To add multiple cookies, each cookie must be added in a separate `document.cooki
 - Add cookies one at a time with the `document.cookie="<key>=<value>;"` assignment
 - Read cookies all at the same time by logging `document.cookie`
 - Each cookie must be added by assigning a key value pair to `document.cookie`
+
 ## Reading Multiple Added Cookies (Nuance 4)
 
 When assigning a cookie, attributes are added with the same value as the key and value pair `=`, and `;`.
 Weirdly, when retrieving cookies, each cookie represented by a key and value pair is also seperated by a `=`, and a `;`.
 
 ```javascript
-document.cookie = '<key1>=<value1>; expires=<date1>; path=<path>; domain=<domain>; secure; httponly';
+document.cookie =
+  "<key1>=<value1>; expires=<date1>; path=<path>; domain=<domain>; secure; httponly";
 document.cookie; // '<key1>=<value1>;'
 ```
 
@@ -111,13 +118,14 @@ document.cookie; // '<key1>=<value1>;'
 - Don't worry about creating a cookie string with attributes and not being able to filter it among cookies and attributes!
 - Do worry about writing tech spec which accounts for expires to only be re-written, not updated!
 - Remember cookie keys are are unique, in that if you assign a cookie with the same key, it will overwrite the other cookie!
+
 ## Deleting Cookies (Nuance 5)
 
 Deleting cookies is more complicated than expected. In order to delete the cookie, it must be assigned to no value as well as have its `Max-age` set to `-1`. It looks like this `document.cookie="foo=; Max-age=-1;";` . There is much discussion on Stackoverflow and the internet on the best way to delete cookies. Often the use of the setting the `expires` attribute to a date in the past is mentioned. However, defining a historical date seems more complex that setting a the Max-age to `-1`.
 
 ```javascript
-  document.cookie = 'foo=bar;'; // foo=bar
-  document.cookie = 'foo=; Max-age=-1;'; // empty
+document.cookie = "foo=bar;"; // foo=bar
+document.cookie = "foo=; Max-age=-1;"; // empty
 ```
 
 ### Code Observation

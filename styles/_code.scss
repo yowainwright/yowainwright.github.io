@@ -2,7 +2,7 @@ pre[data-line] {
   position: relative;
 }
 
-pre[class*='language-'] > code[class*='language-'] {
+pre[class*="language-"] > code[class*="language-"] {
   position: relative;
   z-index: 1;
 }
@@ -46,7 +46,7 @@ code .line:before {
   content: counter(step);
   counter-increment: step;
   width: 1rem;
-  margin: 0 .5rem 0 1rem;
+  margin: 0 0.5rem 0 1rem;
   display: inline-block;
   text-align: right;
   color: #777;

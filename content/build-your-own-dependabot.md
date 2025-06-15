@@ -1,13 +1,13 @@
 ---
 title: "Quick Tutorial: Build A Basic Dependency Manager Like Dependabot In 5 Minutes"
-date: '2022-12-23'
-path: '/build-your-own-dependabot'
+date: "2022-12-23"
+path: "/build-your-own-dependabot"
 meta: "This document goes over building the basics of your own dependency manager, like dependabot, for JavaScript ot Typescript using package managers and Github actions."
 categories:
   - dependabot
 ---
 
-Scope:_ This project focuses purely on JavaScript _and, sure, Typescript 😎_ but the same patterns could be applied to other languages and/or systems.
+Scope:_ This project focuses purely on JavaScript \_and, sure, Typescript 😎_ but the same patterns could be applied to other languages and/or systems.
 
 ---
 
@@ -41,7 +41,7 @@ name: update dependencies
 on:
   schedule:
     # This will run at 5am on Monday's
-    - cron:  '0 5 * * 1'
+    - cron: "0 5 * * 1"
     # The cron reference below is for every 5 minutes (useful for debugging)
     # - cron: '*/5 * * * *'
 ```
@@ -105,7 +105,7 @@ name: update dependencies
 
 on:
   schedule:
-    - cron:  '0 5 * * 1'
+    - cron: "0 5 * * 1"
     # - cron: '*/5 * * * *'
 
 jobs:
@@ -125,20 +125,20 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          cache: "pnpm"
       - run: pnpm install --no-frozen-lockfile
       - run: pnpm update
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
-            token: ${{ secrets.PR_CREATE_TOKEN }}
-            commit-message: Update dependencies
-            title: "update dependencies"
-            body: |
-              ## Dependency updates
-              [1]: https://github.com/<org/user name>/<repo name>
-              [2]: https://github.com/peter-evans/create-pull-request
-            branch: update-dependencies
+          token: ${{ secrets.PR_CREATE_TOKEN }}
+          commit-message: Update dependencies
+          title: "update dependencies"
+          body: |
+            ## Dependency updates
+            [1]: https://github.com/<org/user name>/<repo name>
+            [2]: https://github.com/peter-evans/create-pull-request
+          branch: update-dependencies
 ```
 
 ---

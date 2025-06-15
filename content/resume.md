@@ -1,6 +1,6 @@
 ---
-title: 'Resume: the resume of Jeff Wainwright, a software engineer and surfer in Los Angeles 🏄🏾‍♂️'
-date: '2021-03-31'
+title: "Resume: the resume of Jeff Wainwright, a software engineer and surfer in Los Angeles 🏄🏾‍♂️"
+date: "2021-03-31"
 path: /resume
 meta: >-
   This is the resume of, me, Jeff Wainwright, "yowainwright" on the
@@ -15,12 +15,14 @@ As a Software Engineer and Engineering manager, I specialize in getting applicat
 ### Work History
 
 ## [GoodRx](https://www.goodrx.com/)
+
 Senior Security Software Engineer
 <time>December 2021-Present</time>
 
 - Building security solutions for GoodRx frontend content delivery
 
 ## [Komodo Health](https://www.komodohealth.com/)
+
 Senior Software Engineer
 <time>June 2021-December 2021</time>
 
@@ -63,7 +65,7 @@ Frontend Software Engineer
 
 ### Education
 
-- **[University of Wisconsin—Madison](https://www.wisc.edu/):**  _1993-2003_, Bachelors of Science in Art
+- **[University of Wisconsin—Madison](https://www.wisc.edu/):** _1993-2003_, Bachelors of Science in Art
 - Illinois Institute of Art / _2006-2009_, Bachelors of Art in Visual Communication
 - **[American University](https://www.american.edu/):** _2000_, Summer Program
 - **[School of the Art Institute of Chicago](https://www.saic.edu/):** _1998_, Pre-college program

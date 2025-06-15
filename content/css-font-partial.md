@@ -4,8 +4,8 @@ date: "2017-09-14"
 path: "/css-font-partial"
 meta: Making a maintainable CSS font partial.
 categories:
-- sass
-- css
+  - sass
+  - css
 ---
 
 Fonts and text styles are often managed along with other default styles by developers. Here is one way to create a font CSS partial using [BEM—Block Element Modifier](http://getbem.com/).
