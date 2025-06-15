@@ -1,13 +1,15 @@
 ---
-title: Week 8, 2017—Losing a few friends, being sick, transitioning and writing some
+title:
+  Week 8, 2017—Losing a few friends, being sick, transitioning and writing some
   code
 date: "2017-03-05"
 path: "/week-8-17"
-meta: Week 8, 2017—This week I was sick, lost a few friends and started to do some
+meta:
+  Week 8, 2017—This week I was sick, lost a few friends and started to do some
   transitioning.
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 Week 8 was great for sitting. I was sick the whole week so I sat A LOT. Besides sitting a lot, a few friends started on new adventures and a close friend of mine passed away. Workwise, I started working on some cool analytics stuff and I'm continuing to work on some cool open source products.

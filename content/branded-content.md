@@ -1,8 +1,8 @@
 ---
 title: Reenvisioning branded content at Dollar Shave Club
-date: '2017-09-04'
-path: '/branded-content'
-meta: 'Reenvisioning branded content at Dollar Shave Club.'
+date: "2017-09-04"
+path: "/branded-content"
+meta: "Reenvisioning branded content at Dollar Shave Club."
 categories:
   - note
   - story
@@ -83,9 +83,17 @@ To make the site more searchable, we made sure to use as much modern HTML as pos
 #### Example of using semantic HTML and schema.org to clarify what objects are on the content site
 
 ```html
-<article class="post post--card style-card-hover" itemscope itemType="http://schema.org/Article">
+<article
+  class="post post--card style-card-hover"
+  itemscope
+  itemType="http://schema.org/Article"
+>
   <a href="/{{url}}" data-track-label="posts image: {{title}}" itemprop="url">
-    <figure class="post__figure--card js-image-preload" itemscope itemtype="http://schema.org/ImageObject">
+    <figure
+      class="post__figure--card js-image-preload"
+      itemscope
+      itemtype="http://schema.org/ImageObject"
+    >
       <img
         class="post__image post__image--card"
         title="{{title}}"
@@ -97,8 +105,13 @@ To make the site more searchable, we made sure to use as much modern HTML as pos
   </a>
   <div class="post__content--card">
     <a href="/{{url}}" data-track-label="posts title: {{title}}" itemprop="url">
-      <time class="text__date text--grey" itemprop="datePublished">{{formatted_date}}</time>
-      <h3 class="post__title--medium post__title--card text__title--medium" itemprop="headline">
+      <time class="text__date text--grey" itemprop="datePublished"
+        >{{formatted_date}}</time
+      >
+      <h3
+        class="post__title--medium post__title--card text__title--medium"
+        itemprop="headline"
+      >
         <span class="post__inline-text js-shave-card">{{title}}</span>
       </h3>
     </a>

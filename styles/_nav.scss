@@ -14,20 +14,20 @@
     border-bottom: 1px solid #110e5b;
   }
 
-  @media screen and (min-width:variables.$width-small) {
+  @media screen and (min-width: variables.$width-small) {
     box-shadow: none;
     padding: 0;
     position: relative;
   }
 
-  @media screen and (min-width:variables.$width-small) {
+  @media screen and (min-width: variables.$width-small) {
     border-bottom-width: 0 !important;
     height: 5rem;
     padding: 3rem 0 5rem;
     position: relative;
   }
 
-  @media screen and (min-width:variables.$width-medium) {
+  @media screen and (min-width: variables.$width-medium) {
     height: 10rem;
   }
 
@@ -38,12 +38,12 @@
     position: relative;
     width: 100%;
 
-    @media screen and (min-width:variables.$width-small) {
+    @media screen and (min-width: variables.$width-small) {
       max-width: 90%;
       margin: 0 auto;
     }
 
-    @media screen and (min-width:variables.$width-small) {
+    @media screen and (min-width: variables.$width-small) {
       max-width: 80%;
     }
   }
@@ -63,7 +63,7 @@
       background-color: #040c20;
     }
 
-    @media screen and (min-width:variables.$width-small) {
+    @media screen and (min-width: variables.$width-small) {
       margin-left: 3rem;
     }
   }
@@ -89,12 +89,12 @@
       fill: #fff;
     }
 
-    @media screen and (min-width:variables.$width-small) {
+    @media screen and (min-width: variables.$width-small) {
       width: 3rem;
       height: 5rem;
     }
 
-    @media screen and (min-width:variables.$width-medium) {
+    @media screen and (min-width: variables.$width-medium) {
       height: 10rem;
     }
   }
@@ -108,15 +108,15 @@
       color: #f2ee98 !important;
     }
 
-    @media screen and (min-width:variables.$width-x-small) {
+    @media screen and (min-width: variables.$width-x-small) {
       padding: 0 0.75rem;
     }
 
-    @media screen and (min-width:variables.$width-small) {
+    @media screen and (min-width: variables.$width-small) {
       padding: 0 1rem;
     }
 
-    @media screen and (min-width:variables.$width-medium) {
+    @media screen and (min-width: variables.$width-medium) {
       font-size: 1.2rem;
       padding: 0;
     }
@@ -128,12 +128,12 @@
     display: flex;
     justify-content: space-between;
 
-    @media screen and (min-width:variables.$width-small) {
+    @media screen and (min-width: variables.$width-small) {
       height: 5rem;
       width: calc(100% - 5rem);
     }
 
-    @media screen and (min-width:variables.$width-medium) {
+    @media screen and (min-width: variables.$width-medium) {
       height: 10rem;
       width: calc(100% - 10rem);
     }
@@ -155,13 +155,13 @@
     border-color: #fff;
   }
 
-  @media screen and (min-width:variables.$width-small) {
+  @media screen and (min-width: variables.$width-small) {
     border-width: 7px;
     height: 5rem;
     width: 5rem;
   }
 
-  @media screen and (min-width:variables.$width-medium) {
+  @media screen and (min-width: variables.$width-medium) {
     border-width: 10px;
     height: 10rem;
     width: 10rem;
@@ -173,11 +173,11 @@
     text-align: center;
     text-transform: uppercase;
 
-    @media screen and (min-width:variables.$width-small) {
+    @media screen and (min-width: variables.$width-small) {
       font-size: 3rem;
     }
 
-    @media screen and (min-width:variables.$width-medium) {
+    @media screen and (min-width: variables.$width-medium) {
       font-size: 6rem;
     }
   }

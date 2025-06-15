@@ -4,8 +4,8 @@ date: "2014-12-02"
 path: "/js-argument-key-word"
 meta: Javascript for loop & the argument key word defined & why it is misunderstood
 categories:
-- javascript
-- code
+  - javascript
+  - code
 ---
 
 Today, I was assigned the task of printing logs to the page instead of to the `console` if there was a certain string appended to the url so that the our Q/A engineer could get that data into his program.
@@ -15,7 +15,7 @@ My task was manageable, but before committing my pull request my boss & I went o
 The `argument` key word is an object that stores the arguments passed into a function within the scope of that function.
 
 ```javascript
-var passArguments = function() {
+var passArguments = function () {
   return document.write(arguments.length);
 };
 passArguments(1, 2, 3, 4, 5);
@@ -27,15 +27,15 @@ Live [Code](//codepen.io/yowainwright/pen/2f64d380b74302b396927d297828cd3a)
 For the program that I was working on today, the program takes the first argument of the function `passArguments` as stores it in a variable set as category. Then it loops through the other arguments & strong them in the logs array.
 
 ```javascript
-var passArguments = function() {
-	var category = arguments[0];
-	logs = new Array( arguments.length - 1 );
-	for (var i = 0, j = logs.length; i < j; i++) {
-	  logs[i] = arguments[i+1];
-	}
-	document.write(category + ' : ' + '[' + logs + ']' );
+var passArguments = function () {
+  var category = arguments[0];
+  logs = new Array(arguments.length - 1);
+  for (var i = 0, j = logs.length; i < j; i++) {
+    logs[i] = arguments[i + 1];
+  }
+  document.write(category + " : " + "[" + logs + "]");
 };
-passArguments('Categories', '1', '2', '3', '4', '5');
+passArguments("Categories", "1", "2", "3", "4", "5");
 ```
 
 Live [Code](//codepen.io/yowainwright/pen/6b24e79b8dcd00668619acd396dd4b46)

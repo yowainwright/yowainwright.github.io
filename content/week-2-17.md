@@ -1,13 +1,15 @@
 ---
-title: Week 2, 2017—run, rocks, rain; I couldn't surf but I definitely played in the
+title:
+  Week 2, 2017—run, rocks, rain; I couldn't surf but I definitely played in the
   rain
 date: "2017-01-17"
 path: "/week-2-17"
-meta: This post summarizes week 2 of 2017. It included a little surfing, rock climbing,
+meta:
+  This post summarizes week 2 of 2017. It included a little surfing, rock climbing,
   running and definitely a lot of programming.
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 Wow, writing a weekly update will be challenging but valuable. The rain in Southern California has lingered which great for water levels and local waterfalls up above Pasadena—I've enjoyed it thoroughly. This environmental change has switched my sport focus a bit—climbing more and surfing less. Beyond that, JavaScript MVC discovery has led to new open source projects to make and a few projects to contribute to as well.
@@ -18,7 +20,7 @@ Wow, writing a weekly update will be challenging but valuable. The rain in South
   <img src="https://yowainwright.imgix.net/wk-2/mueller-tunnel-hike-bw-1.jpg?fit=crop&w=2000&h=2000&auto=format" alt="Mueller Tunnel Hike, January 15, 2017" />
 </figure>
 
-Mueller Tunnel is located about a mile from the summit of [Mount Wilson](https://www.mtwilson.edu/). It's easy to park and view [Los Angeles lights](https://www.instagram.com/p/5ey73zSf9Z/) at sunset. Then after an easy quarter mile hike you get to the tunnel which can [capture silhouettes wonderfully](https://www.instagram.com/p/BL7mWWwDd_n/). If the hike is continued past the tunnel you can reach the summit of Mount Disappointment which offers another view of Los Angeles from mountain tops and has an interesting story behind it's [name](https://en.wikipedia.org/wiki/Mount_Disappointment_(California)). I walked there this past Sunday, the 15th. Clouds appeared to be surfing the mountain ridge line and all of the rain has created unusual and beautiful waterfalls which are traversing the mountain valleys.
+Mueller Tunnel is located about a mile from the summit of [Mount Wilson](https://www.mtwilson.edu/). It's easy to park and view [Los Angeles lights](https://www.instagram.com/p/5ey73zSf9Z/) at sunset. Then after an easy quarter mile hike you get to the tunnel which can [capture silhouettes wonderfully](https://www.instagram.com/p/BL7mWWwDd_n/). If the hike is continued past the tunnel you can reach the summit of Mount Disappointment which offers another view of Los Angeles from mountain tops and has an interesting story behind it's [name](<https://en.wikipedia.org/wiki/Mount_Disappointment_(California)>). I walked there this past Sunday, the 15th. Clouds appeared to be surfing the mountain ridge line and all of the rain has created unusual and beautiful waterfalls which are traversing the mountain valleys.
 
 ## Riding In the Rain—on; board or bike
 
@@ -30,7 +32,7 @@ Cycling has continued to be a challenge with the rain however views from the sad
 
 ## Nuxt, Next and Svelte
 
-Over the past week, I researched [Nuxt](https://nuxtjs.org/), [Next](https://zeit.co/blog/next) and [Svelte](https://svelte.technology/). I'm currently working on basic setups for Nuxt and Next with a [mentor of mine](https://github.com/briangonzalez/). If it makes sense, those projects will be open sourced. I'm also planning on using Svelte personally on this here, blog site. I'm a huge fan of [Rich Harris](https://github.com/Rich-Harris). [Rollup](https://github.com/rollup/rollup) is my _go-to_for open source projects. It keeps my code honest.
+Over the past week, I researched [Nuxt](https://nuxtjs.org/), [Next](https://zeit.co/blog/next) and [Svelte](https://svelte.technology/). I'm currently working on basic setups for Nuxt and Next with a [mentor of mine](https://github.com/briangonzalez/). If it makes sense, those projects will be open sourced. I'm also planning on using Svelte personally on this here, blog site. I'm a huge fan of [Rich Harris](https://github.com/Rich-Harris). [Rollup](https://github.com/rollup/rollup) is my \_go-to_for open source projects. It keeps my code honest.
 
 ## Tried and True
 

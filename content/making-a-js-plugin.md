@@ -4,13 +4,14 @@ date: "2017-03-09"
 path: "/making-a-js-plugin"
 meta: Moments writing JavaScript Plugins
 categories:
-- code
-- javascript
+  - code
+  - javascript
 ---
 
 I've made a few small JavaScript Open Source plugins—[reframe.js](https://dollarshaveclub.github.io/reframe.js/), [shave](https://dollarshaveclub.github.io/shave/) and, recently [scrolldir](https://github.com/dollarshaveclub/scrolldir)(built off of [Patrick Fisher's](https://github.com/pwfisher) [scroll-intent](https://github.com/pwfisher/scroll-intent.js)). While making them, I've had a few _a-ha_ moments.
 
 ## A-ha Moments 💭
+
 **Plugins should be simple.** Their functionality should be all that matters. Making them as useable as possible is key.
 
 **Open source and 'Plugins'** are loosely defined in the Open Source community—which I hope will change. Here's how I define [Plugins](https://jeffry.in/4-categories-js-projects/) within the JavaScript ecosystem. There was heavy debate, even with my friends about that post—which I think pointed to the fact that _plugins are loosely defined_.
@@ -58,6 +59,7 @@ Users of a JavaScript plugin should be able to require it, wrap it and treeshake
 When providing options, I often use options as a way to remove any trace of the plugin itself. From there, I may try to provide ways to make the plugin extendable. If the extension of an extendable bit of code reaches too far—it makes sense to write another plugin. This helps with the plugin's simplicity and functionality.
 
 ## Why make small plugins?
+
 I've been making small plugins to support larger JavaScript projects or for simple use. I look for opportunities to minimize my code by seeing if I can simplify what's out there or if I find a great jQuery plugin and simplify it with ES6.
 
 ## In Conclusion, Make Plugins! 🚀

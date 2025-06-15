@@ -4,8 +4,8 @@ date: "2017-02-06"
 path: "/week-4-17"
 meta: This post summarizes week 4 of 2017. Southern California had a lot of good surfing
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 Los Angeles had significantly more sun in the last week of January than during the rest of the month. I took advantage of this by being in the water and on a surfboard as much as possible. At work, we implemented a clipboard tool so that customers can quickly copy the link to an article and share it.

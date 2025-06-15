@@ -2,11 +2,12 @@
 title: Week 9, 2017—Getting Back to Surfing, Changing Teams and Feeling Beta
 date: "2017-03-13"
 path: "/week-9-17"
-meta: Week 9, 2017—This week I was feeling pretty beta after changing teams, recovering
+meta:
+  Week 9, 2017—This week I was feeling pretty beta after changing teams, recovering
   from being sick and getting back to surfing.
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 This week was a humbling and emotional week for me. I feel more emotional and humbled after being sick but this week _the feels_ were deeper. I'm transitioning work teams, was reminiscing about my friend Lauren who passed away, and continued learning how to surf.

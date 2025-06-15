@@ -7,12 +7,12 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
- output: 'export',
-  basePath: '',
-  assetPrefix: './',
+  output: "export",
+  basePath: "",
+  assetPrefix: "./",
   sassOptions: {
     includePaths: [],
   },
 };
 
-export default nextConfig
+export default nextConfig;

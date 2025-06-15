@@ -1,8 +1,8 @@
 ---
-title: '2017 Labor Day Week in Dallas'
-date: '2017-09-09'
-path: '/labor-day-week'
-meta: 'This year I, Jeff Wainwright, spent Labor Day in Dallas with friends.'
+title: "2017 Labor Day Week in Dallas"
+date: "2017-09-09"
+path: "/labor-day-week"
+meta: "This year I, Jeff Wainwright, spent Labor Day in Dallas with friends."
 categories:
   - story
 ---

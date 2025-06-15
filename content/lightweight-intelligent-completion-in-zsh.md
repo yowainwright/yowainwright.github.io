@@ -1,15 +1,14 @@
 ---
-title: 'Enabling Intelligent Tab Completion in Zsh without High Memory Usage'
-date: '2024-05-05'
-path: '/lightweight-intelligent-completion-in-zsh/'
-meta: 'This post provides quick tips on how to enable Zsh Tab Completion to provide intelligent completion in Zsh without the bloat.'
+title: "Enabling Intelligent Tab Completion in Zsh without High Memory Usage"
+date: "2024-05-05"
+path: "/lightweight-intelligent-completion-in-zsh/"
+meta: "This post provides quick tips on how to enable Zsh Tab Completion to provide intelligent completion in Zsh without the bloat."
 categories:
   - code
   - zsh
   - terminal
   - bash
 ---
-
 
 Over the last few years, exciting user interface ideas have come on the scene for terminals like [Fig](https://github.com/withfig/fig) and [Warp](https://github.com/warpdotdev/Warp). These tools provide great initial development experiences. However, after dealing with high memory usage which slows down other areas of software engineering workflows, I found myself asking, 'Is there a way I can get similar functionality without the bloat?'
 

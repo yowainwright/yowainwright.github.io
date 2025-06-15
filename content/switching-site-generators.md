@@ -1,8 +1,8 @@
 ---
 title: Switching Static Site Generators
-date: '2017-09-01'
-path: '/switching-site-generators'
-meta: 'Switching Site Generators, hiccups in between, and why I switched to Gatsby'
+date: "2017-09-01"
+path: "/switching-site-generators"
+meta: "Switching Site Generators, hiccups in between, and why I switched to Gatsby"
 categories:
   - note
   - story

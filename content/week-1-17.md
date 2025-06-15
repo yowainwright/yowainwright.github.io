@@ -4,8 +4,8 @@ date: "2017-01-13"
 path: "/week-1-17"
 meta: This post summarizes week 1 of 2017
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 My first week of 2017 was rainy but the surf was great! Fitness wise, I was able to surf, ride my bike and get into the climbing gym a few times. As far as computer programming, I was very close to releasing a few open source products and started taking to the time to get up to date with basic knowledge of current popular MVCs.

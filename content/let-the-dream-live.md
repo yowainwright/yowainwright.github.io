@@ -4,8 +4,8 @@ date: "2019-01-22"
 path: "/let-the-dream-live"
 meta: "Pragmatism has often told me that dreams cannot become real unless they're followed by an actionable plan. I've share this logic with friends when they tell me an unrealistic dream and to my surprise, 'thanks' was not the typical response. Responses tended to be negative. Dreams are often just that, dreams. Let then live if they make others happy."
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 When humans care about someone, it can be challenging to nurture goals and listen to dreams. Goals and dreams are different. A goal has a plan broken down into specific action items. Each action item is doable making the goal attainable. A dream is emotionally based. The are no doable action items, yet. A dream is unrealistic in its current state. A dream can become a goal with nurturing and developing planned action items but is not initially. This is important to consider in relations with people we are close to because the way that we respond to each thought type, dreams or goals, should be different. Nurturing the dreams and goals of people we care about is beneficial. Challenging goals can be help achieve goals while challenging dreams can be stifling.

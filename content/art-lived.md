@@ -4,7 +4,7 @@ date: "2012-10-21"
 path: "/art-lived"
 meta: Art Lived, A Story Of A Painting
 category:
-- story
+  - story
 ---
 
 Chatting with a friend, we began discussing situations we'd overcome in the past years. I decided that I should post an image of Lemonade on Facebook to acknowledge the process of turning lemons into lemonade.

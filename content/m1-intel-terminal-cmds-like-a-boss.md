@@ -1,7 +1,7 @@
 ---
 title: "Quick Tutorial: Run Intel Mac Cmds On Your M1 Mac Like a Boss In 5 Minutes"
-date: '2022-12-13'
-path: '/m1-intel-terminal-cmds-like-a-boss'
+date: "2022-12-13"
+path: "/m1-intel-terminal-cmds-like-a-boss"
 meta: "This document describes solving M1 Mac vs Intel Mac terminal command discrepancies by creating a copy of your terminal and setting it up to run Intel Mac terminal commands using Rosetta."
 categories:
   - m1
@@ -32,7 +32,7 @@ Many people use terminal tools everyday, like [pyenv](https://github.com/pyenv/p
 - If you're working on a Python project which is pinned to a **_specific version of Python and has pinned dependency versions_**,
 - It may be impossible to successfully intall the project's dependencies unless **_you run Intel Mac install commands using Rosetta_**.
 - Furthermore, if you then install Rosetta and successfully install a project's dependencies by run Intel Mac commands,
-- You may find you're unable to install multiple **_other projects dependencies  or other versions of Python_**.
+- You may find you're unable to install multiple **_other projects dependencies or other versions of Python_**.
 
 ### _Figuring out versions and dependency versions like this can take up a lot time!_
 
@@ -55,17 +55,17 @@ If that’s the case, the rest of this doc isn’t for you! Otherwise, **read on
 
 ---
 
-If your *personal Intel Mac command journey is similar to mine, I highly recommend setting up a separate terminal app to run Intel Mac commands. Setting up the terminal takes minutes and works seamlessly with your normal terminal. Read on!
+If your \*personal Intel Mac command journey is similar to mine, I highly recommend setting up a separate terminal app to run Intel Mac commands. Setting up the terminal takes minutes and works seamlessly with your normal terminal. Read on!
 
 ---
 
 ## Quickly setting up a seamless Rosetta Copy Terminal on your M1 Mac
 
-The following paragraphs are aimed to help you setup your terminal copy which will run Intel Mac commands using Rosetta in about 5 minutes (or less) of *"hands on keyboard" code time.
+The following paragraphs are aimed to help you setup your terminal copy which will run Intel Mac commands using Rosetta in about 5 minutes (or less) of \*"hands on keyboard" code time.
 
 ---
 
-*Intalling Homebrew brews for Rosetta **will take more time**—but you can run that job in
+\*Intalling Homebrew brews for Rosetta **will take more time**—but you can run that job in
 another terminal tab.
 
 ---
@@ -163,7 +163,7 @@ pyenv install <python-version>
 
 And, then I have access to using that version of python in **_both terminals_** after a successful install!
 
- If I need to do anything custom I can add that to a bash function or to one of my if-else statements—**_no problemo!_**
+If I need to do anything custom I can add that to a bash function or to one of my if-else statements—**_no problemo!_**
 
 ---
 

@@ -14,7 +14,7 @@
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
   },
   "scripts": {
-    "build": "pnpm run build:css && pnpm run build:giscus:light && pnpm run build:giscus:dark && next build",
+    "build": "bun run build:css && bun run build:giscus:light && bun run build:giscus:dark && next build",
     "build:sitemap": "next-sitemap",
     "build:giscus:dark": "sass --style=compressed styles/giscus-light.scss public/assets/jeffry.in.giscus.light.css",
     "build:giscus:light": "sass --style=compressed styles/giscus-dark.scss public/assets/jeffry.in.giscus.dark.css",
@@ -22,9 +22,10 @@
     "commit": "git-cz",
     "commit-msg": "commitlint --edit $1",
     "dev": "next dev",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "pre-commit": "pnpm run build && pnpm run lint && pnpm run commit-msg",
+    "format": "bunx prettier --write .",
+    "lint": "bunx oxlint .",
+    "lint:fix": "bunx oxlint --fix .",
+    "pre-commit": "bun run build && bun run lint && bun run commit-msg",
     "start": "next start",
     "update": "codependence --update"
   },
@@ -70,16 +71,11 @@
     "codependence": "^0.3.1",
     "commander": "^12.1.0",
     "commitizen": "4.3.1",
-    "eslint": "9.28.0",
-    "eslint-config-next": "15.3.3",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-react": "^7.37.4",
     "globals": "^15.15.0",
     "gray-matter": "^4.0.3",
     "husky": "^9.1.7",
     "next-sitemap": "^4.2.3",
     "pastoralist": "^1.2.1",
-    "prettier": "3.5.3",
     "react-helmet": "6.1.0",
     "rehype": "^13.0.2",
     "rehype-raw": "^7.0.0",
@@ -90,11 +86,13 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "sanitize-filename": "^1.6.3",
-    "sass": "^1.89.2",
     "shiki": "^1.24.4",
-    "ts-node": "^10.9.2",
-    "tsx": "^4.19.2",
-    "typescript-eslint": "^8.24.1",
-    "unified": "^11.0.5"
+    "sass": "^1.89.2",
+    "unified": "^11.0.5",
+    "@types/bun": "latest"
+  },
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
   }
 }

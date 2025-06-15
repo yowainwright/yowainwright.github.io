@@ -4,8 +4,8 @@ date: "2017-09-17"
 path: "/normalize-css-or-not"
 meta: Normalizing CSS has been a default part of front-end projects for years. This post questions that and provides some points on why normalizing css may not be needed.
 categories:
-- note
-- css
+  - note
+  - css
 ---
 
 Normalizing CSS has been part of building front-end product for years. The last few projects I've worked on, I've become adverse to normalization CSS files but ha not clarified why for myself or others. In this post, I will go into what CSS normalization is, why it is used, and why it might not be needed.
@@ -36,42 +36,33 @@ CSS Normalization gives developers a safe starting point at which to know styles
 In this code, browser one will have a preset h1 defined `font-size` of `3rem`
 
 ```css
-
 elementExample {
   font-size: 3rem;
 }
-
 ```
 
 Browser 2 will have a preset h1 defined `font-size` of `2.5rem`
 
 ```css
-
 elementExample {
   font-size: 2.5rem;
 }
-
 ```
 
 When `normalize.css` is included at the top of a CSS project, it will ensure all `elements`'s have a font size `2rem` until overridden.
 
 ```css
-
 elementExample {
   font-size: 2em;
 }
-
 ```
-
 
 As long as the `font-size` is not changed, the `font-size` will be consistent across all browsers.
 
 ```css
-
 elementExample {
   text-style: italic;
 }
-
 ```
 
 ## Why I have not used CSS Normalization for a long time?
@@ -83,31 +74,25 @@ Browsers provide CSS. Normalize.css adds duplicate CSS rules or overrides CSS ru
 In this code, by default, the `font-size` is `3rem`.
 
 ```css
-
 elementExample {
   font-size: 3rem;
 }
-
 ```
 
 Normalize.css re-declares the `font-size` is as `3rem`.
 
 ```css
-
 elementExample {
   font-size: 3rem;
 }
-
 ```
 
 Then if the `font-size` is declared for the actual project, elementExamples's CSS has already been re-defined three times.
 
 ```css
-
 elementExample {
   font-size: 3rem;
 }
-
 ```
 
 #### 2. Projects will override the Normalize.css CSS
@@ -117,32 +102,26 @@ Browsers come with CSS styles baked in that declare how HTML elements should loo
 In this code, by default, the `font-size` is `3rem`.
 
 ```css
-
 elementExample {
   font-size: 3rem;
 }
-
 ```
 
 `normalize.css` will change the `font-size` to `2.5rem`.
 
 ```css
-
 elementExample {
   font-size: 2.5rem;
 }
-
 ```
 
 Then, if the developer defines `font-size` again, without much CSS, elementExample's CSS has already been defined and overruled three times.
 
 ```css
-
 elementExample {
   font-size: 2em;
 }
-
-````
+```
 
 #### 3. If there is a slim element Inventory, styles will be added for elements that aren't used
 
@@ -150,11 +129,9 @@ Normalize.css provides CSS that normalizes CSS for all elements.
 
 If a project only uses three elements and normalize CSS provides six element styles, then there will be CSS rules defined for two extra elements.
 
-
 In this code, there are three defined styles
 
 ```css
-
 elementExample1 {
   display: block;
 }
@@ -164,16 +141,12 @@ elementExample2 {
 elementExample3 {
   display: inline;
 }
-
 ```
-
 
 The project only uses `elementExample`
 
 ```html
-
 <elementExample1></elementExample1>
-
 ```
 
 Normalize.css styles added for elementExample2 and elementExample3 will be unused.
@@ -181,9 +154,7 @@ Normalize.css styles added for elementExample2 and elementExample3 will be unuse
 The project only uses elementExample
 
 ```html
-
 <elementExample1></elementExample1>
-
 ```
 
 ## Conclusion

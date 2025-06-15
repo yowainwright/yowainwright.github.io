@@ -1,6 +1,6 @@
 ---
-title: 'Watching the sunset from Malaga Cove, waiting for ships to come in'
-date: '2019-10-19'
+title: "Watching the sunset from Malaga Cove, waiting for ships to come in"
+date: "2019-10-19"
 path: /ships-coming-in
 meta: >-
   Malaga Cove in Palos Verdes, California is a great spot to catch the sunset.

@@ -1,13 +1,15 @@
 ---
-title: Week 6, 2017—Looking for rainbows in the rain, shipping analytics and best
+title:
+  Week 6, 2017—Looking for rainbows in the rain, shipping analytics and best
   friends
 date: "2017-02-25"
 path: "/week-6-17"
-meta: Week 6, 2017—This week we shipped analytics at work. I had some of my best friends
+meta:
+  Week 6, 2017—This week we shipped analytics at work. I had some of my best friends
   in town and we surfed and explored some spots in Malibu.
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 The sixth week of 2017 included more rain in Southern California which again led to great waves in the later part of the week. I pushed my 3000th commit of the year on Github which was very important for me. At work, we released major analytics updates and I began working on some simpler things that can really improve performance—like code splitting.
@@ -24,7 +26,7 @@ We had more rain the day after our surf adventure. This particular rain was call
 
 ## 3000 Commits on Github and 2.5k Stars
 
-I'm thankful for my line of work and the teams I work with.  I sometimes feel like I don't fit the mold of the work that I do. Tools like Github point out—'Hey, this person gets shit done!' And I do. I will continue to release simple usable open source projects and commit at a rapid rate for the projects that I'm working on. It makes me feel good to have tools that show my value. Thanks, Github!
+I'm thankful for my line of work and the teams I work with. I sometimes feel like I don't fit the mold of the work that I do. Tools like Github point out—'Hey, this person gets shit done!' And I do. I will continue to release simple usable open source projects and commit at a rapid rate for the projects that I'm working on. It makes me feel good to have tools that show my value. Thanks, Github!
 
 ## Building Analytics Products
 

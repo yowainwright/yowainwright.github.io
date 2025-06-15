@@ -1,7 +1,7 @@
 ---
 title: "Quick Thought: Does it feel like JavaScript and Node are in a strange place?"
-date: '2023-04-15'
-path: '/js-node-strange-place'
+date: "2023-04-15"
+path: "/js-node-strange-place"
 meta: "It feels sorta like JavaScript and Node are in a weird place. They've greatly improved but are we using them for things we shouldn't?"
 categories:
   - Node
@@ -9,7 +9,6 @@ categories:
   - Standard Libraries
   - Testing
 ---
-
 
 It feels like JavaScript and Node are in a strange place.
 
@@ -21,7 +20,6 @@ However, after writing code in other languages, it feels like Node and JavaScrip
 
 ## To give you an idea of what I mean, here are a few bullets that capture some of my thoughts!
 
-
 - First off, [Typescript](https://www.typescriptlang.org/)! If types are needed, why not use a language with built-in type support and a formatter?
 - Second, [more](https://github.com/evanw/esbuild) and [more](https://github.com/vercel/turbo) code is written in other languages to support JavaScript and Node limitations—like Typescript.
 - Additionally, because of JavaScript's popularity and extensibility, it's a [security risk](https://socket.dev/) which should be considered.
@@ -32,7 +30,6 @@ However, after writing code in other languages, it feels like Node and JavaScrip
 ---
 
 ## Folks can hope for a better tomorrow
-
 
 My hope is that JavaScript and Node can once again embrace their dynamic nature so we can avoid transpilation and all of the modules required to build things. It would be great if modules were assets, not requirements.
 

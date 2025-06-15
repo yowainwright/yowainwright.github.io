@@ -4,8 +4,8 @@ date: "2018-04-08"
 path: "/first-post-in-a-bit"
 meta: I stopped posting on this blog in September last year, 2017. It was an easy decision to make then. There were specific reasons I stopped, but I couldn't articulate them.
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 I stopped posting on this blog in September last year, 2017. It was an easy decision to make then. There were specific reasons I stopped posting, but at the time I couldn't articulate them. In this post, I'm going to articulate why I stopped posting—but first I'll share a little bit about my history because it is related to why I stopped posting.
@@ -30,7 +30,7 @@ After getting injured cycling, I felt done with trying to love myself by hoping 
 
 Here's why I stopped writing posts: last August, I realized that the respect I hoped for through my dedication to design, exercise, and software might never come. Through learning to accept myself and starting to love myself—I accepted that.
 
-I had felt for a while when writing posts last year that my posts were like whispers in the wind. It was tough to realize that. I had fantasized since childhood that someday my dedication would matter to a wider audience.  I somewhat secretly hoped that the invisibility I felt in reality, was a case of circumstance. I fantasized that through effort in my passions that I would find a clan where my ideas would matter. That fantasy motivated me but I realized I needed to let it go.
+I had felt for a while when writing posts last year that my posts were like whispers in the wind. It was tough to realize that. I had fantasized since childhood that someday my dedication would matter to a wider audience. I somewhat secretly hoped that the invisibility I felt in reality, was a case of circumstance. I fantasized that through effort in my passions that I would find a clan where my ideas would matter. That fantasy motivated me but I realized I needed to let it go.
 
 It was disheartening to think that I might never have a clan and that my journey (written about in paragraphs above) to loving myself did not lead me to more friendship, love, fame, or riches. However, it felt good to know myself and begin to love myself. It felt good to know that I am who I want to be!
 

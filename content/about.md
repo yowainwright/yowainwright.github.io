@@ -1,6 +1,6 @@
 ---
-title: 'About me, Jeff Wainwright, a husband, dad, and software engineer in Los Angeles 🥤'
-date: '2017-07-28'
+title: "About me, Jeff Wainwright, a husband, dad, and software engineer in Los Angeles 🥤"
+date: "2017-07-28"
 path: /about
 meta: >-
   This is the About page of, me, Jeff Wainwright, "yowainwright" on the

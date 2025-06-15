@@ -2,12 +2,13 @@
 title: Using ES6 Function Destructuring with JavaScript Plugin Options
 date: "2017-03-12"
 path: "/destructing-function-opts"
-meta: This post explains how to use ES6 function destructuring for more readable JavaScript
+meta:
+  This post explains how to use ES6 function destructuring for more readable JavaScript
   Plugin Options.
 categories:
-- html
-- code
-- javascript
+  - html
+  - code
+  - javascript
 ---
 
 Open source plugin code can become confusing. After writing a few open source plugins, I've realized that readability is very important to get help and make code better. One area where readability becomes confusing is options code. In this short post, I will go over options code in JavaScript Plugins and how it can be improved.
@@ -54,6 +55,7 @@ The _log_ will now look something like:
 ## Defined Options Is Confusing
 
 The `options` code above is confusing! I mean, what the heck is going on here?
+
 ```javaScript
 var el = opts && opts.el || defaults.el;
 ```

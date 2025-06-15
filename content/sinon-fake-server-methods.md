@@ -1,7 +1,7 @@
 ---
 title: Digging into Sinon Fake Server Methods
-date: '2017-09-05'
-path: '/sinon-fake-server-methods'
+date: "2017-09-05"
+path: "/sinon-fake-server-methods"
 meta: Digging into Sinon Fake Server Methods and how to use them.
 categories:
   - javascript
@@ -19,9 +19,9 @@ In this post, I will explain a bit of Sinon for context and then dig into faking
 #### For this post, here's a stub example
 
 ```javascript
-let server
+let server;
 // then later in code a value is assigned to the variable
-server = sinon.fakeServer.create()
+server = sinon.fakeServer.create();
 ```
 
 ## Why would developers stub a server?
@@ -36,34 +36,34 @@ In the example below, an ajax request is being made with plain ole' JavaScript
 export default function getUser(url, callbackInfo) {
   let info = {
     stuff: null,
-  }
-  const xhr = new XMLHttpRequest()
-  xhr.open('GET', url, true)
-  xhr.withCredentials = true
+  };
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", url, true);
+  xhr.withCredentials = true;
   // update `info` onload
-  xhr.addEventListener('load', () => {
+  xhr.addEventListener("load", () => {
     if (xhr.status > 400) {
-      console.warn('Some Warning')
-      callbackInfo(info)
-      return
+      console.warn("Some Warning");
+      callbackInfo(info);
+      return;
     }
-    const resp = JSON.parse(xhr.responseText)
-    const respinfo = resp.info || null
-    if (respinfo === null) return
+    const resp = JSON.parse(xhr.responseText);
+    const respinfo = resp.info || null;
+    if (respinfo === null) return;
 
     // update info
     info = {
       stuff: respinfo.status || null,
-    }
-    callbackInfo(info)
-  })
+    };
+    callbackInfo(info);
+  });
 
-  xhr.addEventListener('error', () => {
-    console.warn('Some Warning')
-    callbackInfo(info)
-  })
+  xhr.addEventListener("error", () => {
+    console.warn("Some Warning");
+    callbackInfo(info);
+  });
 
-  xhr.send()
+  xhr.send();
 }
 ```
 
@@ -84,20 +84,20 @@ No, that there is an example and a bullet list of what's happening, Sinon can be
 To do this, first, a stub server must be created.
 
 ```javascript
-server = sinon.fakeServer.create()
+server = sinon.fakeServer.create();
 ```
 
 It is beneficial to mock a successful API response
 
 ```javascript
 // fake api
-const resp = '{"info": "stuff"}'
+const resp = '{"info": "stuff"}';
 ```
 
 Next, describe what the fake server should response with. This is done with a method provided by Sinon and arguments.
 
 ```javascript
-server.respondWith(url, resp)
+server.respondWith(url, resp);
 ```
 
 Sinon's `respondWith` method is _what the server responds with_. It can take in 3 arguments, a method (function), a URL or part of a URL, and the anticipated response. The documentation leaves what the method can do a mistery so this blog post will just stick to what's clear: the URL, and the response. When the `respondWith` method is left to that stubbing out the rest of the fake server response is just a few steps.
@@ -105,18 +105,18 @@ Sinon's `respondWith` method is _what the server responds with_. It can take in 
 The final step is, triggering the fake response.
 
 ```javascript
-server.respond()
+server.respond();
 ```
 
 Altogether the stubbed server looks like this.
 
 ```javascript
 // define fake api success reponse
-const resp = '{"info": "stuff"}'
+const resp = '{"info": "stuff"}';
 // create the fake server
-server = sinon.fakeServer.create()
+server = sinon.fakeServer.create();
 // declare what the fake server should respond with
-server.respondWith(url, resp)
+server.respondWith(url, resp);
 // declare the fake response
 ```
 
@@ -132,62 +132,62 @@ Now that this post has gone through stubbing a Sinon server, it will go into how
 
 ```javascript
 // this post reference Mocha testing
-it('provides `user` information with request success', function(done) {
+it("provides `user` information with request success", function (done) {
   // the done argument along with this.timeout acts waits for a response for 100ms
-  this.timeout(100)
+  this.timeout(100);
   // create the fake Sinon server
-  server = sinon.fakeServer.create()
+  server = sinon.fakeServer.create();
   // define the end point and its response within args
-  server.respondWith(url, resp)
+  server.respondWith(url, resp);
   getUser(url, function info(user) {
     // define user interface
-    expect(user).to.be.an('Object')
-    expect(user.accountStatus === 'registered').to.be.true
-    expect(user.loginState === 'semi').to.be.true
-    expect(user.memberType === '146216164134017374').to.be.true
-    expect(user.userID === '75607431722225').to.be.true
-    done()
-  })
+    expect(user).to.be.an("Object");
+    expect(user.accountStatus === "registered").to.be.true;
+    expect(user.loginState === "semi").to.be.true;
+    expect(user.memberType === "146216164134017374").to.be.true;
+    expect(user.userID === "75607431722225").to.be.true;
+    done();
+  });
   // invoke the fake Sinon server response
-  server.respond()
-})
+  server.respond();
+});
 ```
 
 ### Testing a failed response
 
 ```javascript
-it('provides `user` information with request success', () => {
+it("provides `user` information with request success", () => {
   // create the fake Sinon server
-  server = sinon.fakeServer.create({ respondImmediately: true })
+  server = sinon.fakeServer.create({ respondImmediately: true });
   // because the server response immediately, invoking the response is not needed
-  server.respondWith('/test', resp)
+  server.respondWith("/test", resp);
   getUser(url, function info(user) {
     // define a null user interface
-    expect(user).to.be.an('Object')
-    expect(user.accountStatus).to.be.null
-    expect(user.loginState).to.be.null
-    expect(user.memberType).to.be.null
-    expect(user.userID).to.be.null
-  })
-})
+    expect(user).to.be.an("Object");
+    expect(user.accountStatus).to.be.null;
+    expect(user.loginState).to.be.null;
+    expect(user.memberType).to.be.null;
+    expect(user.userID).to.be.null;
+  });
+});
 ```
 
 ### Testing an errant response
 
 ```javascript
-it('provides null defaults with `user` request error', function() {
+it("provides null defaults with `user` request error", function () {
   // invoke server immediately to enforce error response
-  server = sinon.fakeServer.create({ respondImmediately: true })
-  server.respondWith('/test', resp, [404, {}, ''])
+  server = sinon.fakeServer.create({ respondImmediately: true });
+  server.respondWith("/test", resp, [404, {}, ""]);
   getUser(url, function info(user) {
     // define null user interface
-    expect(user).to.be.an('Object')
-    expect(user.accountStatus).to.be.null
-    expect(user.loginState).to.be.null
-    expect(user.memberType).to.be.null
-    expect(user.userID).to.be.null
-  })
-})
+    expect(user).to.be.an("Object");
+    expect(user.accountStatus).to.be.null;
+    expect(user.loginState).to.be.null;
+    expect(user.memberType).to.be.null;
+    expect(user.userID).to.be.null;
+  });
+});
 ```
 
 ## Conclusion

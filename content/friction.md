@@ -1,7 +1,7 @@
 ---
-title: 'Friction and the Beauty it can create'
-date: '2020-06-28'
-path: '/friction'
+title: "Friction and the Beauty it can create"
+date: "2020-06-28"
+path: "/friction"
 meta: >-
   Friction sculpted this range of land. What devastation?—What destruction led to this moment? I cannot even comprehend! But, I appreciate that somehow, after it all, it is so beautiful.
 categories:

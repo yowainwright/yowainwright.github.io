@@ -2,11 +2,12 @@
 title: Week 7, 2017—Transitioning and Climbing to Higher Heights and Deeper Turns
 date: "2017-02-26"
 path: "/week-7-17"
-meta: Week 7, 2017—This week I'm beginning to climbing more consistently and catch
+meta:
+  Week 7, 2017—This week I'm beginning to climbing more consistently and catch
   waves more consistently.
 categories:
-- note
-- story
+  - note
+  - story
 ---
 
 This week had a little bit of everything for me. I was able to surf quite a bit. I went climbing at the gym 3 times. I did a soft launch of an open source project I've been thinking about for a while called [Stickybits](https://github.com/dollarshaveclub/stickybits). Meanwhile, [Scrolldir](https://github.com/dollarshaveclub/scrolldir) got to 100 stars on github.

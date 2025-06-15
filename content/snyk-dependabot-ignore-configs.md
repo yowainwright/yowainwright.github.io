@@ -1,7 +1,7 @@
 ---
 title: "A 'little deep' dive into Dependabot and Snyk Ingore Configs"
-date: '2022-02-12'
-path: '/snyk-dependabot-ignore-configs'
+date: "2022-02-12"
+path: "/snyk-dependabot-ignore-configs"
 meta: "This article focuses on Snyk and Dependabots' ignore configs (ignores) from a DevX perspective."
 categories:
   - code
@@ -25,9 +25,10 @@ It could be said that the `dependabot.yml` and `.snyk` files are so different th
 
 ## Snyk Ignore
 
-The `.snyk` ignore key is used along with the Snyk CLI. Ignores are used to ignore dependencies with anticipated security issues. This can be useful for a few reasons. First, `ignores` allow users to ignore dependencies that can't currently be updated. This can be useful when needing to do major updates to support a dependency's updates—think major version updates.  Second, `ignores` can help avoid Snyk misread security issues. For example, Snyk's CLI ignores Classic Yarn's (Yarn 1's) `resolutions` object within a `package.json` when assessing dependency security issues (2.15.22).
+The `.snyk` ignore key is used along with the Snyk CLI. Ignores are used to ignore dependencies with anticipated security issues. This can be useful for a few reasons. First, `ignores` allow users to ignore dependencies that can't currently be updated. This can be useful when needing to do major updates to support a dependency's updates—think major version updates. Second, `ignores` can help avoid Snyk misread security issues. For example, Snyk's CLI ignores Classic Yarn's (Yarn 1's) `resolutions` object within a `package.json` when assessing dependency security issues (2.15.22).
 
 In the section below, there are a few code snippets to go along with my comments from the paragraphs above.
+
 ### Snyk CLI
 
 By running
@@ -44,13 +45,14 @@ version: v1.22.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   SNYK-JS-BROWSERSLIST-1090194:
-    - '*':
+    - "*":
         reason: >-
           This will be captured within the root `package.json` resolutions
           object
         expires: 2022-02-23T22:40:13.244Z
         created: 2022-01-24T22:40:13.250Z
 ```
+
 If there is already a `.snyk` file, the new ignore is appended to the existing file. From there, the implementing developer can specify an `expires` time as well as a `reason`.
 
 ## Dependabot Ignore
@@ -60,13 +62,13 @@ Dependabot doesn't have a CLI. Dependency updates are done using [cron jobs](htt
 ```yaml
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: weekly
-    time: "13:00"
-  open-pull-requests-limit: 2
-  ignore:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      time: "13:00"
+    open-pull-requests-limit: 2
+    ignore:
       - dependency-name: eslint
         versions:
           - 7.32.0
@@ -103,7 +105,7 @@ Dependabot provides ways to update dependencies. It provides updates or the abil
 ignore:
   - dependency-name: eslint
     versions:
-    - 7.32.0
+      - 7.32.0
 ```
 
 I prefer Dependabot's approach because it requires less context and it's context relates specifically to the dependency used in the effected repository.

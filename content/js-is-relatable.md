@@ -1,8 +1,8 @@
 ---
-title: 'JavaScript is relatable'
-date: '2017-09-08'
-path: '/js-is-relatable'
-meta: 'JavaScript is for the people because it is relatable and usable.'
+title: "JavaScript is relatable"
+date: "2017-09-08"
+path: "/js-is-relatable"
+meta: "JavaScript is for the people because it is relatable and usable."
 categories:
   - javascript
 ---
@@ -25,7 +25,7 @@ JavaScript is scrappy and it has been for most of its life span so far. It was a
 ```javascript
 // crack open your console (on a mac)
 // cmd + opt + j
-alert('You are writing JavaScript')
+alert("You are writing JavaScript");
 ```
 
 #### JS write a bookmarklet to do stuff in your chrome browser
@@ -34,7 +34,7 @@ alert('You are writing JavaScript')
 // open your bookmark manager (on a mac 💻)
 // opt + cmd + b
 // copy/paste the code snippet below into a new bookmark
-javascript: alert('You are writing JavaScript')
+javascript: alert("You are writing JavaScript");
 // click the new bookmark on any page
 ```
 
@@ -47,7 +47,7 @@ JavaScript, when learning about computers goes right along with learning `HTML` 
 ```html
 <body>
   <script>
-    alert('You are writing JavaScript')
+    alert("You are writing JavaScript");
   </script>
 </body>
 ```
