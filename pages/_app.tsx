@@ -10,6 +10,12 @@ export const DispatchStore = createContext<any>(null);
 
 export function isLoadingDarkmode() {
   if (typeof window === "undefined") return false;
+  
+  const storedPreference = localStorage.getItem("darkMode");
+  if (storedPreference !== null) {
+    return storedPreference === "true";
+  }
+  
   return window.matchMedia("(prefers-color-scheme: dark)").matches
     ? true
     : false;
@@ -46,6 +52,10 @@ export default function App({ Component, pageProps }: AppProps) {
       body?.classList.add("js-is-darkmode");
     } else {
       body?.classList.remove("js-is-darkmode");
+    }
+    
+    if (state.isLoaded) {
+      localStorage.setItem("darkMode", String(state.isDarkMode));
     }
   }, [state]);
 
