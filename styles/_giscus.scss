@@ -11,32 +11,31 @@
 }
 
 .giscus-loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem;
-  font-family: variables.$font-family-default;
-  font-size: 1.2rem;
-  color: #666;
+  min-height: 200px;
+  padding: 2rem;
   
-  .js-is-darkmode & {
-    color: #b3d8e5;
+  &__skeleton {
+    animation: pulse 1.5s ease-in-out infinite;
   }
-
-  &:before {
-    content: "";
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-right: 1rem;
-    border: 2px solid #999;
-    border-top-color: transparent;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+  
+  &__header {
+    height: 40px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 1rem;
     
     .js-is-darkmode & {
-      border-color: #5B8FA8;
-      border-top-color: transparent;
+      background: #2a3f4d;
+    }
+  }
+  
+  &__body {
+    height: 100px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    
+    .js-is-darkmode & {
+      background: #2a3f4d;
     }
   }
 }
@@ -44,6 +43,11 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
 
 .giscus {
