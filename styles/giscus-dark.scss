@@ -1,20 +1,25 @@
-main {
+// Giscus dark theme overrides
+main,
+.giscus,
+.giscus-frame {
   .gsc-main {
     font-family: "Roboto", serif;
     font-size: 1.2rem;
     line-height: 1.8;
   }
 
+  // Backgrounds
   .color-bg-canvas,
   .color-bg-tertiary,
   .gsc-comment-box,
   .gsc-comment-box-textarea,
   .gsc-main,
   .gsc-reactions-button {
-    color: #fff;
-    background: #040c20;
+    color: #fff !important;
+    background: #040c20 !important;
   }
 
+  // All borders - using thinner 0.5px
   .color-bg-canvas,
   .color-bg-tertiary,
   .gsc-reactions-button,
@@ -22,40 +27,45 @@ main {
   .gsc-comment-box-buttons,
   .gsc-comment-box-buttons a,
   .gsc-comment-box-textarea,
-  .gsc-comment-box-textarea-extras {
-    border: 0.5px solid #5B8FA8;
+  .gsc-comment-box-textarea-extras,
+  .gsc-comment,
+  .gsc-comment-box-preview,
+  .color-border-default,
+  .color-border-muted {
+    border-width: 0.5px !important;
+    border-style: solid !important;
+    border-color: #5B8FA8 !important;
   }
 
   .gsc-homepage-bg {
-    background: #040c20;
+    background: #040c20 !important;
   }
 
   .gsc-comment {
-    border: 0.5px solid #5B8FA8;
     border-radius: 0.5rem;
     padding: 1rem;
     margin-bottom: 1rem;
-    background: rgba(91, 143, 168, 0.05);
+    background: rgba(91, 143, 168, 0.05) !important;
   }
 
   .gsc-comment-author {
     font-weight: 500;
-    color: #fbe902;
+    color: #fbe902 !important;
   }
 
   .gsc-comment-content {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #fff;
+    color: #fff !important;
   }
 
   .gsc-reactions-button:hover {
-    background: rgba(91, 143, 168, 0.1);
+    background: rgba(91, 143, 168, 0.1) !important;
   }
 
   .Link--primary,
   .Link--secondary {
-    color: #fbe902;
+    color: #fbe902 !important;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
@@ -63,35 +73,53 @@ main {
   }
 
   .color-fg-default {
-    color: #fff;
+    color: #fff !important;
   }
 
   .color-fg-muted {
-    color: #b3d8e5;
+    color: #b3d8e5 !important;
   }
 
-  .color-border-default {
-    border-color: #5B8FA8;
-  }
-
+  // More subtle muted borders
   .color-border-muted {
-    border-color: rgba(91, 143, 168, 0.3);
+    border-color: rgba(91, 143, 168, 0.3) !important;
   }
 
   .gsc-comment-box-preview {
-    border: 0.5px solid #5B8FA8;
-    background: rgba(91, 143, 168, 0.05);
+    background: rgba(91, 143, 168, 0.05) !important;
   }
 
   .gsc-comment-box-tabs {
-    background: #040c20;
-    border-bottom: 0.5px solid #5B8FA8;
+    background: #040c20 !important;
+    border-bottom: 0.5px solid #5B8FA8 !important;
   }
 
   .gsc-comment-box-tab {
     &[aria-selected="true"] {
-      border-color: #5B8FA8;
-      border-bottom-color: #040c20;
+      border-width: 0.5px !important;
+      border-color: #5B8FA8 !important;
+      border-bottom-color: #040c20 !important;
+    }
+  }
+
+  // Remove any default borders that might be too thick
+  .gsc-replies {
+    border-top: 0.5px solid #5B8FA8 !important;
+  }
+
+  .gsc-reply {
+    border-top: 0.5px solid rgba(91, 143, 168, 0.2) !important;
+  }
+
+  // Ensure all inputs and textareas have thin borders
+  input,
+  textarea,
+  select,
+  button {
+    &:focus {
+      outline: none !important;
+      border: 0.5px solid #5B8FA8 !important;
+      box-shadow: 0 0 0 2px rgba(91, 143, 168, 0.1) !important;
     }
   }
 }
