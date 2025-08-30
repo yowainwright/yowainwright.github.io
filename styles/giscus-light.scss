@@ -15,15 +15,14 @@ main {
     color: #000;
   }
 
-  .color-bg-canvas,
-  .color-bg-tertiary,
+  // Selective borders - only apply to elements that need them
   .gsc-reactions-button,
   .gsc-comment-box,
   .gsc-comment-box-buttons,
   .gsc-comment-box-buttons a,
   .gsc-comment-box-textarea,
   .gsc-comment-box-textarea-extras {
-    border: 1px solid #999;
+    border: 0.5px solid #999;
   }
 
   .gsc-homepage-bg {
@@ -31,7 +30,7 @@ main {
   }
 
   .gsc-comment {
-    border: 1px solid #f2f2f2;
+    border: 0.5px solid #f2f2f2;
     border-radius: 0.5rem;
     padding: 1rem;
     margin-bottom: 1rem;

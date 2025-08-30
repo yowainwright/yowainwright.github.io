@@ -1,4 +1,4 @@
-import React, { useContext, lazy, Suspense } from "react";
+import React, { useContext, lazy, Suspense, useState, useEffect } from "react";
 import { getSinglePost, getAllPosts, markdownToHtml } from "../utils";
 import { GlobalState } from "./_app";
 import { Share } from "../components/Share";
@@ -23,23 +23,115 @@ interface GiscusWrapperProps {
   isDarkMode: boolean;
 }
 
-const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
-  const theme = isDarkMode ? THEME_DARK : THEME_LIGHT;
+const GiscusErrorFallback = () => (
+  <div className="giscus-error">
+    <p>Unable to load comments at this time.</p>
+    <button onClick={() => window.location.reload()} className="giscus-error__retry">
+      Retry
+    </button>
+  </div>
+);
+
+const GiscusLoadingFallback = () => {
+  const [showSkeleton, setShowSkeleton] = useState(false);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setShowSkeleton(true), 200);
+    return () => clearTimeout(timer);
+  }, []);
+  
+  if (!showSkeleton) return null;
+  
   return (
-    <Suspense fallback={<div className="giscus-loading">Loading comments...</div>}>
-      <Giscus
-        repo="yowainwright/yowainwright.github.io"
-        repoId="MDEwOlJlcG9zaXRvcnkxNzA5MTY4Mg=="
-        category="General"
-        categoryId="DIC_kwDOAQTMYs4COQJE"
-        mapping="pathname"
-        reactionsEnabled="1"
-        emitMetadata="0"
-        theme={theme}
-        lang="en"
-        loading="lazy"
-        inputPosition="top"
-      />
+    <div className="giscus-loading">
+      <div className="giscus-loading__skeleton">
+        <div className="giscus-loading__header"></div>
+        <div className="giscus-loading__body"></div>
+      </div>
+    </div>
+  );
+};
+
+const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
+  const [hasError, setHasError] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const theme = isDarkMode ? THEME_DARK : THEME_LIGHT;
+  
+  useEffect(() => {
+    const userWantsAutoLoadComments = localStorage.getItem('jeffry-in-comments-autoload-enabled');
+    const lastCommentViewedPath = localStorage.getItem('jeffry-in-last-comment-viewed-path');
+    const currentPath = window.location.pathname;
+    
+    const shouldAutoLoad = userWantsAutoLoadComments === 'true' && 
+                          lastCommentViewedPath === currentPath;
+    
+    if (shouldAutoLoad) {
+      setIsInView(true);
+    } else {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+            observer.disconnect();
+          }
+        },
+        { rootMargin: '100px' }
+      );
+      
+      const element = document.querySelector('.post__giscus');
+      if (element) observer.observe(element);
+      
+      return () => observer.disconnect();
+    }
+  }, []);
+  
+  useEffect(() => {
+    if (isInView) {
+      localStorage.setItem('jeffry-in-comments-autoload-enabled', 'true');
+      localStorage.setItem('jeffry-in-last-comment-viewed-path', window.location.pathname);
+      localStorage.setItem('jeffry-in-comments-last-loaded-timestamp', Date.now().toString());
+    }
+  }, [isInView]);
+  
+  if (hasError) return <GiscusErrorFallback />;
+  
+  if (!isInView) {
+    return (
+      <div className="giscus-placeholder">
+        <button 
+          onClick={() => {
+            setIsInView(true);
+            localStorage.setItem('jeffry-in-comments-autoload-enabled', 'true');
+            localStorage.setItem('jeffry-in-last-comment-viewed-path', window.location.pathname);
+          }}
+          className="giscus-placeholder__button"
+        >
+          Load Comments
+        </button>
+      </div>
+    );
+  }
+  
+  return (
+    <Suspense fallback={<GiscusLoadingFallback />}>
+      <div 
+        onError={() => setHasError(true)}
+        className="giscus-container"
+      >
+        <Giscus
+          repo="yowainwright/yowainwright.github.io"
+          repoId="MDEwOlJlcG9zaXRvcnkxNzA5MTY4Mg=="
+          category="General"
+          categoryId="DIC_kwDOAQTMYs4COQJE"
+          mapping="pathname"
+          reactionsEnabled="1"
+          emitMetadata="0"
+          theme={theme}
+          lang="en"
+          loading="lazy"
+          inputPosition="top"
+        />
+      </div>
     </Suspense>
   );
 };
