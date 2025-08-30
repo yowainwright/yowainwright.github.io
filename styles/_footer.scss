@@ -8,7 +8,7 @@
     max-width: calc(100% - 2rem);
 
     .js-is-darkmode & {
-      border-color: #110e5b;
+      border-color: #5B8FA8;
     }
 
     @media screen and (min-width: variables.$width-x-small) {
@@ -62,7 +62,7 @@
       padding-top: 2rem;
 
       .js-is-darkmode & {
-        border-color: #110e5b;
+        border-color: #5B8FA8;
       }
 
       @media screen and (min-width: variables.$width-medium) {
@@ -106,7 +106,7 @@
     width: calc(6rem - 8px);
 
     .js-is-darkmode & {
-      border-color: #110e5b;
+      border-color: #5B8FA8;
     }
   }
 

@@ -1,6 +1,8 @@
 main {
   .gsc-main {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
   }
 
   .color-bg-canvas,
@@ -21,6 +23,75 @@ main {
   .gsc-comment-box-buttons a,
   .gsc-comment-box-textarea,
   .gsc-comment-box-textarea-extras {
-    border: 1px solid #110e5b;
+    border: 0.5px solid #5B8FA8;
+  }
+
+  .gsc-homepage-bg {
+    background: #040c20;
+  }
+
+  .gsc-comment {
+    border: 0.5px solid #5B8FA8;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: rgba(91, 143, 168, 0.05);
+  }
+
+  .gsc-comment-author {
+    font-weight: 500;
+    color: #fbe902;
+  }
+
+  .gsc-comment-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fff;
+  }
+
+  .gsc-reactions-button:hover {
+    background: rgba(91, 143, 168, 0.1);
+  }
+
+  .Link--primary,
+  .Link--secondary {
+    color: #fbe902;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .color-fg-default {
+    color: #fff;
+  }
+
+  .color-fg-muted {
+    color: #b3d8e5;
+  }
+
+  .color-border-default {
+    border-color: #5B8FA8;
+  }
+
+  .color-border-muted {
+    border-color: rgba(91, 143, 168, 0.3);
+  }
+
+  .gsc-comment-box-preview {
+    border: 0.5px solid #5B8FA8;
+    background: rgba(91, 143, 168, 0.05);
+  }
+
+  .gsc-comment-box-tabs {
+    background: #040c20;
+    border-bottom: 0.5px solid #5B8FA8;
+  }
+
+  .gsc-comment-box-tab {
+    &[aria-selected="true"] {
+      border-color: #5B8FA8;
+      border-bottom-color: #040c20;
+    }
   }
 }

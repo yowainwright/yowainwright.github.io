@@ -11,7 +11,7 @@
 
   .js-is-darkmode & {
     background-color: #040c20;
-    border-bottom: 1px solid #110e5b;
+    border-bottom: 0.5px solid #5B8FA8;
   }
 
   @media screen and (min-width: variables.$width-small) {

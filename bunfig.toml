@@ -1,0 +1,17 @@
+[install]
+# Configure package manager behavior
+cache = true
+lockfile = true
+exact = true
+
+[install.scopes]
+# Trust Next.js and related packages
+"@next" = { "trustedDependencies" = ["@next/swc"] }
+
+[run]
+# Use bun for running scripts
+bun = true
+
+# Environment optimizations
+[env]
+NODE_ENV = "development"

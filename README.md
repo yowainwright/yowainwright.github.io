@@ -14,12 +14,13 @@ I'm a husband, dad, & [software engineer](https://jeffry.in). When I'm not writi
 I write articles on my blog, [Jeffry.in](https://jeffry.in), & have written articles for [CSS-Tricks](https://css-tricks.com/?s=yowainwright).<br>
 I've presented at [JS.LA](https://www.youtube.com/watch?v=8YQ8BGSOsyE) on the benefits of CI/CD tools.
 
-I currently architect developer tools and work on privacy, & security tools for [GoodRx](https://www.goodrx.com/) in Typescript, Go, & Python.
+I'm currently a Principal Engineer at [Lokker](https://lokker.com), working on data privacy compliance software.
 
 ## Former Work
 
 Formally, I've worked at/on:
 
+- **[GoodRx](https://www.goodrx.com/):** Senior Software Engineer II, architected developer tools and worked on privacy & security tools in TypeScript, Go, & Python
 - **Currency:** Built fullstack payment systems for the frontend
 - **[Dollar Shave Club](https://www.dollarshaveclub.com/):** Led building [dynamic landing pages](https://www.dollarshaveclub.com/join/shave-set) with Contentful and React
 - **[Billboard](https://www.billboard.com/):** Built frontend of Headless CMS using Backbone and jQuery

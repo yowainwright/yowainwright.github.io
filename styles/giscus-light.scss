@@ -1,6 +1,8 @@
 main {
   .gsc-main {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
   }
 
   .gsc-main,
@@ -10,5 +12,66 @@ main {
   .gsc-comment-box-textarea,
   .gsc-reactions-button {
     background: #fff;
+    color: #000;
+  }
+
+  .color-bg-canvas,
+  .color-bg-tertiary,
+  .gsc-reactions-button,
+  .gsc-comment-box,
+  .gsc-comment-box-buttons,
+  .gsc-comment-box-buttons a,
+  .gsc-comment-box-textarea,
+  .gsc-comment-box-textarea-extras {
+    border: 1px solid #999;
+  }
+
+  .gsc-homepage-bg {
+    background: #fff;
+  }
+
+  .gsc-comment {
+    border: 1px solid #f2f2f2;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .gsc-comment-author {
+    font-weight: 500;
+  }
+
+  .gsc-comment-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .gsc-reactions-button:hover {
+    background: #f9f9f9;
+  }
+
+  .Link--primary,
+  .Link--secondary {
+    color: #131099;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .color-fg-default {
+    color: #000;
+  }
+
+  .color-fg-muted {
+    color: #666;
+  }
+
+  .color-border-default {
+    border-color: #999;
+  }
+
+  .color-border-muted {
+    border-color: #f2f2f2;
   }
 }

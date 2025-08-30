@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
-import Giscus from "@giscus/react";
+import React, { useContext, lazy, Suspense } from "react";
 import { getSinglePost, getAllPosts, markdownToHtml } from "../utils";
 import { GlobalState } from "./_app";
 import { Share } from "../components/Share";
+
+const Giscus = lazy(() => import("@giscus/react"));
+
 const THEME_DARK = "https://yowainwright.imgix.net/jeffry.in.giscus.dark.css";
 const THEME_LIGHT = "https://yowainwright.imgix.net/jeffry.in.giscus.light.css";
 
@@ -24,18 +26,21 @@ interface GiscusWrapperProps {
 const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   const theme = isDarkMode ? THEME_DARK : THEME_LIGHT;
   return (
-    <Giscus
-      repo="yowainwright/yowainwright.github.io"
-      repoId="MDEwOlJlcG9zaXRvcnkxNzA5MTY4Mg=="
-      category="General"
-      categoryId="DIC_kwDOAQTMYs4COQJE"
-      mapping="pathname"
-      reactionsEnabled="1"
-      emitMetadata="0"
-      theme={theme}
-      lang="en"
-      loading="lazy"
-    />
+    <Suspense fallback={<div className="giscus-loading">Loading comments...</div>}>
+      <Giscus
+        repo="yowainwright/yowainwright.github.io"
+        repoId="MDEwOlJlcG9zaXRvcnkxNzA5MTY4Mg=="
+        category="General"
+        categoryId="DIC_kwDOAQTMYs4COQJE"
+        mapping="pathname"
+        reactionsEnabled="1"
+        emitMetadata="0"
+        theme={theme}
+        lang="en"
+        loading="lazy"
+        inputPosition="top"
+      />
+    </Suspense>
   );
 };
 
@@ -98,7 +103,6 @@ interface StaticProps {
 export const getStaticProps = async ({ params }: StaticProps) => {
   const data = getSinglePost(params.slug, "content");
   const content = await markdownToHtml(data.content || "");
-  console.log({ dataContent: data.content, content });
   return {
     props: { ...data, content },
   };
