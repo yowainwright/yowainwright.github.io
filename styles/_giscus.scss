@@ -1,0 +1,56 @@
+@use "variables";
+
+.post__giscus {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 0.5px solid #999;
+
+  .js-is-darkmode & {
+    border-top-color: #5B8FA8;
+  }
+}
+
+.giscus-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  font-family: variables.$font-family-default;
+  font-size: 1.2rem;
+  color: #666;
+  
+  .js-is-darkmode & {
+    color: #b3d8e5;
+  }
+
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    border: 2px solid #999;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    
+    .js-is-darkmode & {
+      border-color: #5B8FA8;
+      border-top-color: transparent;
+    }
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.giscus {
+  min-height: 300px;
+}
+
+.giscus-frame {
+  width: 100% !important;
+  border: none !important;
+}
