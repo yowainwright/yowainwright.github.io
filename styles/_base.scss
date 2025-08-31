@@ -7,12 +7,12 @@ body {
 }
 
 body {
-  font-family: variables.$font-family-default;
-  line-height: 1.5;
+  font-family: var(--font-family-default);
+  line-height: var(--line-height-base);
   text-size-adjust: 100%;
   &.js-is-darkmode {
-    background-color: #040c20;
-    color: #fff;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
   }
 }
 
@@ -37,22 +37,22 @@ h1,
 h2,
 h3,
 .intro__title {
-  line-height: 1.3;
+  line-height: var(--line-height-tight);
 }
 
 h1,
 .intro__title {
-  font-size: 2rem;
+  font-size: var(--font-size-2xl);
   margin: 0;
   margin-bottom: 1rem;
 
   @media screen and (min-width: variables.$width-small) {
-    font-size: 2.5rem;
+    font-size: var(--font-size-3xl);
     margin-bottom: 2rem;
   }
 
   @media screen and (min-width: variables.$width-medium) {
-    font-size: 5rem;
+    font-size: var(--font-size-5xl);
   }
 }
 
@@ -61,30 +61,30 @@ h1,
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: var(--font-size-xl);
   @media screen and (min-width: variables.$width-small) {
-    font-size: 1.8rem;
+    font-size: calc(var(--font-size-xl) * 1.2);
   }
 }
 
 h2,
 h3 {
   .content & {
-    font-family: variables.$font-family-default;
-    font-size: 1.5rem;
-    font-weight: 900;
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-black);
     margin: 3rem auto;
 
     @media screen and (min-width: variables.$width-small) {
-      font-size: 2.5rem;
+      font-size: var(--font-size-3xl);
     }
   }
 }
 
 p,
 li {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-light);
   letter-spacing: 0.025rem;
   margin-left: auto;
   margin-right: auto;
@@ -92,12 +92,12 @@ li {
 }
 
 li {
-  line-height: 1.6;
+  line-height: var(--line-height-relaxed);
   margin-bottom: variables.$spacing-unit-small;
 }
 
 p {
-  line-height: 1.8;
+  line-height: var(--line-height-loose);
 
   li & {
     line-height: 1;
@@ -113,7 +113,7 @@ a {
   text-decoration: none;
 
   .js-is-darkmode & {
-    color: #fbe902;
+    color: var(--color-link-primary);
   }
 
   &:hover {
@@ -121,9 +121,9 @@ a {
   }
 
   &:visited {
-    color: #0000ff;
+    color: var(--color-link-visited);
     .js-is-darkmode & {
-      color: #fbe902;
+      color: var(--color-link-visited);
     }
   }
 
@@ -141,24 +141,24 @@ blockquote {
   p {
     font-family: sans-serif;
     font-style: italic;
-    line-height: 1.7;
+    line-height: calc(var(--line-height-loose) * 0.94);
     margin: 1rem 0;
     padding-left: 1.5rem;
     position: relative;
     &:before {
-      color: #000;
+      color: var(--color-text-primary);
       content: "“";
       font-size: 4rem;
       position: absolute;
       top: -2rem;
       left: -1rem;
       .js-is-darkmode & {
-        color: #fff;
+        color: var(--color-text-primary);
       }
     }
 
     @media screen and (min-width: variables.$width-small) {
-      line-height: 1.9;
+      line-height: var(--line-height-extra-loose);
       margin: 3rem 0;
     }
   }
@@ -195,13 +195,13 @@ time {
 
 hr {
   border: 0;
-  border-top: 1px solid #999;
+  border-top: 1px solid var(--color-border-default);
   margin-bottom: 0;
   margin-top: 2rem;
   padding-bottom: 2rem;
 
   .js-is-darkmode & {
-    border-top: 0.5px solid #5B8FA8;
+    border-top: 0.5px solid var(--color-border-default);
   }
 }
 
@@ -226,12 +226,12 @@ table {
 
 td,
 th {
-  border: 1px solid #f2f2f2;
+  border: 1px solid var(--color-border-light);
 }
 
 th {
-  background: #f3f2fd;
-  color: #282094;
+  background: var(--color-bg-table-header);
+  color: var(--color-text-table-header);
   font-family: sans-serif;
   padding: 0.75rem 1rem;
 }
@@ -243,13 +243,13 @@ td {
 tr {
   &:nth-child(odd) {
     tbody & {
-      background-color: #f9f9f9;
+      background-color: var(--color-bg-table-row);
     }
   }
 }
 
 .header__description {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--color-border-black);
   padding: 1.5rem 0;
 
   @media screen and (min-width: variables.$width-small) {

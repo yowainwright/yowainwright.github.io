@@ -16,7 +16,6 @@ _Code Review Etiquette_ is not discussed with a quarter of the level of scrutiny
   </a>
   <figcaption>Albert Einstein and Rabindranath Tagare discussing music, July 4th, 1930. Image from <a href="https://www.mindpodnetwork.com/">Mind Pod Network</a>.</figcaption>
 </figure>
-</a>
 
 **Note:** Improving Code Review Etiquette, because of the human condition, is difficult! Here is a quick list of things that I've done, said, seen, or received that are easier wins in the art of Code Review Etiquette.
 

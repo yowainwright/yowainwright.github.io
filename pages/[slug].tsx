@@ -1,9 +1,7 @@
-import React, { useContext, lazy, Suspense, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, lazy, Suspense, Component } from "react";
 import { getSinglePost, getAllPosts, markdownToHtml } from "../utils";
 import { GlobalState } from "./_app";
 import { Share } from "../components/Share";
-
-const Giscus = lazy(() => import("@giscus/react"));
 
 const THEME_DARK = "https://yowainwright.imgix.net/jeffry.in.giscus.dark.css";
 const THEME_LIGHT = "https://yowainwright.imgix.net/jeffry.in.giscus.light.css";
@@ -32,6 +30,29 @@ const GiscusErrorFallback = () => (
   </div>
 );
 
+class ErrorBoundary extends Component<{children: React.ReactNode}, {hasError: boolean}> {
+  constructor(props: any) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: any, errorInfo: any) {
+    console.error('Giscus loading error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <GiscusErrorFallback />;
+    }
+
+    return this.props.children;
+  }
+}
+
 const GiscusLoadingFallback = () => {
   const [showSkeleton, setShowSkeleton] = useState(false);
   
@@ -51,6 +72,25 @@ const GiscusLoadingFallback = () => {
     </div>
   );
 };
+
+// Lazy load Giscus component with proper error handling
+let GiscusComponent: any;
+
+if (typeof window !== 'undefined') {
+  GiscusComponent = lazy(() => 
+    import("@giscus/react")
+      .then(module => ({
+        default: module.default || module.Giscus || module
+      }))
+      .catch(err => {
+        console.error('Failed to load Giscus:', err);
+        return { default: GiscusErrorFallback };
+      })
+  );
+} else {
+  // Server-side fallback
+  GiscusComponent = () => null;
+}
 
 const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   const [hasError, setHasError] = useState(false);
@@ -113,26 +153,25 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   }
   
   return (
-    <Suspense fallback={<GiscusLoadingFallback />}>
-      <div 
-        onError={() => setHasError(true)}
-        className="giscus-container"
-      >
-        <Giscus
-          repo="yowainwright/yowainwright.github.io"
-          repoId="MDEwOlJlcG9zaXRvcnkxNzA5MTY4Mg=="
-          category="General"
-          categoryId="DIC_kwDOAQTMYs4COQJE"
-          mapping="pathname"
-          reactionsEnabled="1"
-          emitMetadata="0"
-          theme={theme}
-          lang="en"
-          loading="lazy"
-          inputPosition="top"
-        />
-      </div>
-    </Suspense>
+    <div className="giscus-container">
+      <ErrorBoundary>
+        <Suspense fallback={<GiscusLoadingFallback />}>
+          <GiscusComponent
+            repo="yowainwright/yowainwright.github.io"
+            repoId="MDEwOlJlcG9zaXRvcnkxNzA5MTY4Mg=="
+            category="General"
+            categoryId="DIC_kwDOAQTMYs4COQJE"
+            mapping="pathname"
+            reactionsEnabled="1"
+            emitMetadata="0"
+            theme={theme}
+            lang="en"
+            loading="lazy"
+            inputPosition="top"
+          />
+        </Suspense>
+      </ErrorBoundary>
+    </div>
   );
 };
 

@@ -3,10 +3,10 @@
 .post__giscus {
   margin-top: 4rem;
   padding-top: 2rem;
-  border-top: 0.5px solid #999;
+  border-top: 0.5px solid var(--color-border-default);
 
   .js-is-darkmode & {
-    border-top-color: #5B8FA8;
+    border-top-color: var(--color-border-default);
   }
 }
 
@@ -20,22 +20,22 @@
   
   &__header {
     height: 40px;
-    background: #f0f0f0;
+    background: var(--color-bg-tertiary);
     border-radius: 4px;
     margin-bottom: 1rem;
     
     .js-is-darkmode & {
-      background: #2a3f4d;
+      background: var(--color-bg-tertiary);
     }
   }
   
   &__body {
     height: 100px;
-    background: #f0f0f0;
+    background: var(--color-bg-tertiary);
     border-radius: 4px;
     
     .js-is-darkmode & {
-      background: #2a3f4d;
+      background: var(--color-bg-tertiary);
     }
   }
 }

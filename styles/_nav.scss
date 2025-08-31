@@ -1,8 +1,8 @@
 @use "variables";
 
 .site-nav {
-  background: #fff;
-  border-bottom: 1px solid #999;
+  background: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border-default);
   margin: 0 auto;
   padding: 1rem;
   position: sticky;
@@ -10,8 +10,8 @@
   z-index: 3;
 
   .js-is-darkmode & {
-    background-color: #040c20;
-    border-bottom: 0.5px solid #5B8FA8;
+    background-color: var(--color-bg-primary);
+    border-bottom: 0.5px solid var(--color-border-default);
   }
 
   @media screen and (min-width: variables.$width-small) {
@@ -49,7 +49,7 @@
   }
 
   &__item {
-    background: #fff;
+    background: var(--color-bg-primary);
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -60,7 +60,7 @@
     padding: 0;
 
     .js-is-darkmode & {
-      background-color: #040c20;
+      background-color: var(--color-bg-primary);
     }
 
     @media screen and (min-width: variables.$width-small) {
@@ -86,7 +86,7 @@
     width: 2.5rem;
 
     .js-is-darkmode & {
-      fill: #fff;
+      fill: var(--color-text-primary);
     }
 
     @media screen and (min-width: variables.$width-small) {
@@ -100,12 +100,12 @@
   }
 
   &__link {
-    color: #131099 !important;
+    color: var(--color-link-nav) !important;
     font-size: 1rem;
     padding: 0 0.25rem;
 
     .js-is-darkmode & {
-      color: #f2ee98 !important;
+      color: var(--color-link-hover) !important;
     }
 
     @media screen and (min-width: variables.$width-x-small) {
@@ -141,7 +141,7 @@
 }
 
 .logo {
-  border: 5px solid #000;
+  border: 5px solid var(--color-border-black);
   border-radius: 100%;
   display: flex;
   flex-direction: column;
@@ -152,7 +152,7 @@
   z-index: 2;
 
   .js-is-darkmode & {
-    border-color: #fff;
+    border-color: var(--color-text-primary);
   }
 
   @media screen and (min-width: variables.$width-small) {

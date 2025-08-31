@@ -1,8 +1,8 @@
 main {
   .gsc-main {
-    font-family: "Roboto", serif;
-    font-size: 1.2rem;
-    line-height: 1.8;
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-loose);
   }
 
   .gsc-main,
@@ -11,47 +11,42 @@ main {
   .color-bg-tertiary,
   .gsc-comment-box-textarea,
   .gsc-reactions-button {
-    background: #fff;
-    color: #000;
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
   }
 
-  // Selective borders - only apply to elements that need them
-  .gsc-reactions-button,
-  .gsc-comment-box,
-  .gsc-comment-box-buttons,
-  .gsc-comment-box-buttons a,
-  .gsc-comment-box-textarea,
-  .gsc-comment-box-textarea-extras {
-    border: 0.5px solid #999;
+  // Selective borders - only apply to textarea
+  .gsc-comment-box-textarea {
+    border: 0.5px solid var(--color-border-default);
   }
 
   .gsc-homepage-bg {
-    background: #fff;
+    background: var(--color-bg-primary);
   }
 
   .gsc-comment {
-    border: 0.5px solid #f2f2f2;
+    border: 0.5px solid var(--color-border-light);
     border-radius: 0.5rem;
     padding: 1rem;
     margin-bottom: 1rem;
   }
 
   .gsc-comment-author {
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
   }
 
   .gsc-comment-content {
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: calc(var(--font-size-large) * 0.92);
+    line-height: var(--line-height-relaxed);
   }
 
   .gsc-reactions-button:hover {
-    background: #f9f9f9;
+    background: var(--color-bg-secondary);
   }
 
   .Link--primary,
   .Link--secondary {
-    color: #131099;
+    color: var(--color-link-nav);
     text-decoration: none;
     &:hover {
       text-decoration: underline;
@@ -59,18 +54,18 @@ main {
   }
 
   .color-fg-default {
-    color: #000;
+    color: var(--color-text-primary);
   }
 
   .color-fg-muted {
-    color: #666;
+    color: var(--color-text-secondary);
   }
 
   .color-border-default {
-    border-color: #999;
+    border-color: var(--color-border-default);
   }
 
   .color-border-muted {
-    border-color: #f2f2f2;
+    border-color: var(--color-border-light);
   }
 }

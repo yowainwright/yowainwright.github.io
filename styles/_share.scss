@@ -4,12 +4,12 @@
   padding: 1rem 0;
 
   &__nav {
-    border-top: 1px solid #999;
+    border-top: 1px solid var(--color-border-default);
     padding: 0.5rem 0;
     text-align: center;
 
     .js-is-darkmode & {
-      border-color: #5B8FA8;
+      border-color: var(--color-border-default);
     }
   }
 
@@ -24,12 +24,12 @@
   &__button {
     background: 0;
     border: 0;
-    color: #0000ff;
+    color: var(--color-link-primary);
     font-family: variables.$font-family-default;
     margin: 0;
 
     .js-is-darkmode & {
-      color: #fbe902;
+      color: var(--color-link-primary);
     }
 
     &:hover {

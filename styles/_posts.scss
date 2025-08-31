@@ -108,10 +108,10 @@
     display: grid;
 
     h2 a {
-      color: #0a086e;
+      color: var(--color-text-post-link);
 
       .js-is-darkmode & {
-        color: #f2ee98;
+        color: var(--color-link-hover);
       }
     }
 
