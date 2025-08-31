@@ -9,7 +9,7 @@ categories:
   - rosetta
 ---
 
-After using terminals (iTerm, Terminal, Kitty) with an M1 Mac without issue for over a year, I finally came upon an issue that I couldn’t solve without using [Rosetta](https://support.apple.com/en-us/HT211861). Rosetta is Mac software to run Intel Mac terminal commands on an M1 Mac. My issue initially came from trying to use [Pyenv](https://github.com/pyenv/pyenv) to install and use different versions of [Python](https://www.python.org/) across multiple projects. After installing Rosetta, I initially used it by adding a custom flag to commands like this `arch -x86_64` <command>. This worked for me but was really error prone, _“Did I forget the flag? Did I add the flag in the correct place?”_.
+After using terminals (iTerm, Terminal, Kitty) with an M1 Mac without issue for over a year, I finally came upon an issue that I couldn't solve without using [Rosetta](https://support.apple.com/en-us/HT211861). Rosetta is Mac software to run Intel Mac terminal commands on an M1 Mac. My issue initially came from trying to use [Pyenv](https://github.com/pyenv/pyenv) to install and use different versions of [Python](https://www.python.org/) across multiple projects. After installing Rosetta, I initially used it by adding a custom flag to commands like this `arch -x86_64 <command>`. This worked for me but was really error prone, _"Did I forget the flag? Did I add the flag in the correct place?"_.
 
 ---
 
@@ -42,7 +42,7 @@ Many people use terminal tools everyday, like [pyenv](https://github.com/pyenv/p
 
 After you’ve run Intel Mac commands using Rosetta, you may be 100% fine!
 
-Maybe you’re fine just adding the flag `arch -x86_64 <command>`. Maybe you don’t use Homebrew or if you do, you’ve setup different homebrew paths with fun names like `brew` and `ibrew` and haven’t had any problems.
+Maybe you're fine just adding the flag `arch -x86_64 <command>`. Maybe you don't use Homebrew or if you do, you've setup different homebrew paths with fun names like `brew` and `ibrew` and haven't had any problems.
 
 If that’s the case, the rest of this doc isn’t for you! Otherwise, **read on!**
 

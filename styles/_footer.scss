@@ -3,12 +3,12 @@
 .site-footer {
   padding-top: 4rem;
   &__wrapper {
-    border-top: 1px solid #999;
+    border-top: 1px solid var(--color-border-default);
     margin: 0 auto;
     max-width: calc(100% - 2rem);
 
     .js-is-darkmode & {
-      border-color: #5B8FA8;
+      border-color: var(--color-border-default);
     }
 
     @media screen and (min-width: variables.$width-x-small) {
@@ -56,13 +56,13 @@
     }
 
     &--self {
-      border-top: 1px solid #999;
+      border-top: 1px solid var(--color-border-default);
       grid-column: span 2;
       padding-bottom: 0;
       padding-top: 2rem;
 
       .js-is-darkmode & {
-        border-color: #5B8FA8;
+        border-color: var(--color-border-default);
       }
 
       @media screen and (min-width: variables.$width-medium) {
@@ -101,12 +101,12 @@
   }
 
   &__image {
-    border: 1px solid #999;
+    border: 1px solid var(--color-border-default);
     height: auto;
     width: calc(6rem - 8px);
 
     .js-is-darkmode & {
-      border-color: #5B8FA8;
+      border-color: var(--color-border-default);
     }
   }
 
