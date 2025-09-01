@@ -15,7 +15,6 @@ import {
   transformerMetaHighlight,
   transformerMetaWordHighlight,
 } from "@shikijs/transformers";
-import { rendererClassic, transformerTwoslash } from "@shikijs/twoslash";
 import rehypeStringify from "rehype-stringify";
 import { unified } from "unified";
 import customDark from "./themes/dark.json";
@@ -97,7 +96,6 @@ function transformerCopyButton() {
   return {
     name: 'copy-button',
     pre(node: any) {
-      // Create copy icon SVG as HAST nodes
       const copyIcon = {
         type: 'element',
         tagName: 'svg',
@@ -138,7 +136,6 @@ function transformerCopyButton() {
         ]
       };
 
-      // Create check icon SVG as HAST nodes
       const checkIcon = {
         type: 'element',
         tagName: 'svg',
@@ -198,26 +195,95 @@ function transformerCopyButton() {
 function transformerTitle() {
   return {
     name: 'title',
-    preprocess(code: string, options: any) {
-      const match = code.match(/^\/\/\s*@title:\s*(.+)\n/);
-      if (match && options) {
-        options.meta = { ...options.meta, title: match[1] };
-        return code.replace(match[0], '');
-      }
-      return code;
+    preprocess(code, options) {
+      if (!code.includes('[title:')) return code;
+      
+      const lines = code.split('\n');
+      const firstLine = lines[0];
+      
+      const titleStart = firstLine.indexOf('[title:');
+      const titleEnd = firstLine.indexOf(']', titleStart);
+      
+      if (titleStart === -1 || titleEnd <= titleStart) return code;
+      
+      const isComment = firstLine.startsWith('//') || 
+                       firstLine.startsWith('#') || 
+                       firstLine.startsWith('/*');
+      
+      if (!isComment || !options) return code;
+      
+      const title = firstLine.slice(titleStart + 7, titleEnd).trim();
+      options.meta = { ...options.meta, title };
+      return lines.slice(1).join('\n');
     },
-    pre(node: any, options: any) {
-      if (!options) return;
-      const meta = options.meta;
-      if (meta?.title) {
-        const titleNode = {
+    pre(node) {
+      if (!node.properties) node.properties = {};
+      
+      const title = node.properties.title;
+      if (!title) return;
+      
+      const titleNode = {
+        type: 'element',
+        tagName: 'div',
+        properties: { class: 'shiki-title' },
+        children: [{ type: 'text', value: title }]
+      };
+      
+      node.children = [titleNode, ...node.children];
+      delete node.properties.title;
+    }
+  };
+}
+
+function transformerCodeWrapper() {
+  return {
+    name: 'code-wrapper',
+    root(root) {
+      root.children = root.children.map(node => {
+        if (node.type !== 'element' || node.tagName !== 'pre') return node;
+        if (!node.properties?.class?.includes('shiki')) return node;
+        
+        // Extract title and language from the pre's children
+        let titleElement = null;
+        let langElement = null;
+        const codeChildren = [];
+        
+        node.children.forEach(child => {
+          if (child.properties?.class === 'shiki-title') {
+            titleElement = child;
+          } else if (child.properties?.class === 'shiki-language-badge') {
+            langElement = child;
+          } else {
+            codeChildren.push(child);
+          }
+        });
+        
+        // Rebuild the pre with only code content
+        node.children = codeChildren;
+        
+        // Build header if we have title or language
+        const headerChildren = [];
+        if (titleElement) headerChildren.push(titleElement);
+        if (langElement) headerChildren.push(langElement);
+        
+        if (headerChildren.length === 0) return node;
+        
+        const header = {
           type: 'element',
           tagName: 'div',
-          properties: { class: 'shiki-title' },
-          children: [{ type: 'text', value: meta.title }]
+          properties: { class: 'shiki-header' },
+          children: headerChildren
         };
-        node.children = [titleNode, ...node.children];
-      }
+        
+        return {
+          type: 'element',
+          tagName: 'div',
+          properties: { class: 'shiki-wrapper' },
+          children: [header, node]
+        };
+      });
+      
+      return root;
     }
   };
 }
@@ -225,18 +291,49 @@ function transformerTitle() {
 function transformerLanguageBadge() {
   return {
     name: 'language-badge',
-    pre(node: any, options: any) {
-      if (!options) return;
-      const lang = options.lang;
-      if (lang && lang !== 'text') {
-        const badge = {
-          type: 'element',
-          tagName: 'div',
-          properties: { class: 'shiki-language-badge' },
-          children: [{ type: 'text', value: lang.toUpperCase() }]
-        };
-        node.children = [...node.children, badge];
+    pre(node, options) {
+      // Try to find language from various sources
+      let lang = null;
+      
+      // Check the code element inside pre for language class
+      const codeElement = node.children?.find(child => 
+        child.type === 'element' && child.tagName === 'code'
+      );
+      
+      if (codeElement?.properties?.class) {
+        const classes = Array.isArray(codeElement.properties.class) 
+          ? codeElement.properties.class 
+          : [codeElement.properties.class];
+        
+        const langClass = classes.find(c => 
+          typeof c === 'string' && c.startsWith('language-')
+        );
+        
+        if (langClass) {
+          lang = langClass.replace('language-', '');
+        }
       }
+      
+      // Check data-language attribute
+      if (!lang) {
+        lang = node.properties?.['data-language'];
+      }
+      
+      // Check options.lang directly
+      if (!lang && options?.lang) {
+        lang = options.lang;
+      }
+      
+      if (!lang || lang === 'text') return;
+      
+      const badge = {
+        type: 'element',
+        tagName: 'div',
+        properties: { class: 'shiki-language-badge' },
+        children: [{ type: 'text', value: lang.toUpperCase() }]
+      };
+      
+      node.children.push(badge);
     }
   };
 }
@@ -244,29 +341,32 @@ function transformerLanguageBadge() {
 function transformerTooltip() {
   return {
     name: 'tooltip',
-    code(node: any) {
-      node.children = node.children.map((line: any) => {
-        if (line.type === 'element' && line.children) {
-          line.children = line.children.map((child: any) => {
-            if (child.type === 'text') {
-              const tooltipMatch = child.value.match(/\/\/\s*\[([^\]]+)\]:\s*(.+)$/);
-              if (tooltipMatch) {
-                const [, text, tooltip] = tooltipMatch;
-                return {
-                  type: 'element',
-                  tagName: 'span',
-                  properties: {
-                    class: 'shiki-tooltip',
-                    'data-tooltip': tooltip.trim()
-                  },
-                  children: [{ type: 'text', value: text }]
-                };
-              }
-            }
-            return child;
-          });
-        }
-        return line;
+    code(node) {
+      node.children.forEach(line => {
+        if (!line.children) return;
+        
+        line.children = line.children.map(child => {
+          if (child.type !== 'text') return child;
+          
+          const tooltipIndex = child.value.indexOf('[tooltip:');
+          if (tooltipIndex === -1) return child;
+          
+          const endIndex = child.value.indexOf(']', tooltipIndex);
+          if (endIndex === -1) return child;
+          
+          const tooltip = child.value.slice(tooltipIndex + 9, endIndex).trim();
+          const beforeTooltip = child.value.slice(0, tooltipIndex).trimEnd();
+          
+          return {
+            type: 'element',
+            tagName: 'span',
+            properties: {
+              class: 'shiki-tooltip',
+              'data-tooltip': tooltip
+            },
+            children: [{ type: 'text', value: beforeTooltip }]
+          };
+        });
       });
     }
   };
@@ -282,6 +382,7 @@ export const markdownToHtml = async (markdown: string) => {
         light: customLight,
       },
       transformers: [
+        transformerTitle(),
         transformerNotationDiff(),
         transformerNotationHighlight(),
         transformerNotationWordHighlight(),
@@ -290,14 +391,28 @@ export const markdownToHtml = async (markdown: string) => {
         transformerMetaHighlight(),
         transformerMetaWordHighlight(),
         transformerColorizedBrackets(),
-        transformerTwoslash({
-          explicitTrigger: true,
-          renderer: rendererClassic(),
-        }),
         transformerCopyButton(),
-        transformerTitle(),
+        {
+          name: 'store-language',
+          preprocess(code, options) {
+            if (options?.lang && options.lang !== 'text') {
+              options.meta = { ...options.meta, __lang: options.lang };
+            }
+            return code;
+          },
+          pre(node, options) {
+            const lang = options?.meta?.__lang;
+            if (!lang) return;
+            
+            node.properties = {
+              ...node.properties,
+              'data-language': lang
+            };
+          }
+        },
         transformerLanguageBadge(),
         transformerTooltip(),
+        transformerCodeWrapper(), // Run last to wrap everything
       ],
     })
     .use(rehypeStringify)

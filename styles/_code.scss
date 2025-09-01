@@ -25,33 +25,71 @@ pre[class*="language-"] > code[class*="language-"] {
 
 .shiki {
   border-radius: var(--code-border-radius);
-  display: flex;
+  display: block;
   margin: 2rem 0;
+  position: relative;
+  
+  // Fix black text issue - set default code color for all spans
+  color: #4a90e2;
+  
+  span {
+    color: inherit;
+  }
+  
+  // Override inline styles for black text
+  span[style*="color:#000000"],
+  span[style*="color: #000000"] {
+    color: #4a90e2 !important;
+  }
+  
   .js-is-darkmode & {
     background: var(--code-bg) !important;
+    color: #7ec8e3;
+    
+    span[style*="color:#000000"],
+    span[style*="color: #000000"] {
+      color: #7ec8e3 !important;
+    }
   }
 }
 
 .shiki code {
-  display: block;
-  margin: var(--spacing-lg) 0;
-}
-
-code {
+  display: table;
+  margin: 0;
+  padding: var(--spacing-lg) 0;
+  width: 100%;
+  min-width: 100%;
+  table-layout: fixed;
   counter-reset: step;
   counter-increment: step 0;
 }
 
-code .line:before {
-  content: counter(step);
-  counter-increment: step;
-  width: 1rem;
-  margin: 0 0.5rem 0 1rem;
-  display: inline-block;
-  text-align: right;
-  color: var(--code-line-number);
-  .js-is-darkmode & {
+code .line {
+  display: table-row;
+  
+  &:before {
+    content: counter(step);
+    counter-increment: step;
+    display: table-cell;
+    width: 2.5rem;
+    min-width: 2.5rem;
+    padding: 0 0.5rem 0 0;
+    text-align: right;
     color: var(--code-line-number);
+    position: sticky;
+    left: 0;
+    background: inherit;
+    user-select: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    .js-is-darkmode & {
+      color: var(--code-line-number);
+      border-right-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+  
+  // Add padding to the code content after the border
+  > span:first-of-type {
+    padding-left: 0.75rem;
   }
 }
 
@@ -60,10 +98,11 @@ code .line:before {
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
+  z-index: 10;
   padding: 0.5rem;
   background: rgba(255, 255, 255, 0.9);
-  color: var(--color-text-secondary);
-  border: 1px solid var(--color-border-light);
+  color: var(--color-text-secondary, #666);
+  border: 1px solid var(--color-border-light, #ddd);
   border-radius: 0.375rem;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -76,9 +115,9 @@ code .line:before {
   height: 32px;
   
   &:hover {
-    background: var(--color-bg-primary);
-    color: var(--color-text-primary);
-    border-color: var(--color-border-default);
+    background: var(--color-bg-primary, #fff);
+    color: var(--color-text-primary, #000);
+    border-color: var(--color-border-default, #ccc);
     transform: translateY(-1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -143,7 +182,256 @@ code .line:before {
   }
 }
 
-// Ensure shiki container has position relative for absolute copy button
+// Shiki container wrapper for proper copy button positioning
 .shiki {
   position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  
+  // Copy button stays fixed to container
+  .shiki-copy-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+}
+
+// Wrapper for code blocks with header
+.shiki-wrapper {
+  position: relative;
+  margin: 2rem 0;
+  border-radius: var(--code-border-radius, 0.5rem);
+  overflow: hidden;
+  border: 1px solid var(--color-border-light, #ddd);
+  
+  .js-is-darkmode & {
+    border-color: var(--color-border-default, #444);
+  }
+  
+  // Shiki within wrapper
+  .shiki {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+  }
+}
+
+// Header bar above code
+.shiki-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: var(--color-bg-secondary, #f5f5f5);
+  border-bottom: 1px solid var(--color-border-light, #ddd);
+  
+  .js-is-darkmode & {
+    background: var(--color-bg-secondary, #1a1a1a);
+    border-color: var(--color-border-default, #444);
+  }
+}
+
+// Title in header
+.shiki-title {
+  font-weight: 600;
+  color: var(--color-text-primary, #333);
+  font-size: 0.875rem;
+  font-family: var(--font-mono, monospace);
+  
+  .js-is-darkmode & {
+    color: var(--color-text-primary, #fff);
+  }
+}
+
+// Language badge positioned below header
+.shiki-language-badge {
+  position: absolute;
+  top: 3.5rem; // Below the header
+  right: 0.75rem; // Aligned with copy button
+  padding: 0.25rem 0.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--color-text-secondary, #666);
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-mono, monospace);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 5;
+  
+  .js-is-darkmode & {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+// Tooltip styling
+.shiki-tooltip {
+  position: relative;
+  border-bottom: 1px dotted var(--color-text-secondary, #666);
+  cursor: help;
+  
+  &:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    background: var(--color-bg-secondary, #333);
+    color: var(--color-text-primary, #fff);
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 0.25rem;
+  }
+}
+
+// Diff notation styles
+.shiki code .line.diff {
+  position: relative;
+  display: table-row;
+  width: 100%;
+}
+
+// Add diff styles - green background for added lines
+.shiki code .line.diff.add {
+  background: rgba(34, 197, 94, 0.15) !important;
+  
+  &::before {
+    content: '+' counter(step);
+    background: rgba(34, 197, 94, 0.25) !important;
+    color: #22c55e !important;
+    font-weight: 600;
+  }
+  
+  // Apply green tint to code content cell
+  > span:first-of-type {
+    background: rgba(34, 197, 94, 0.1) !important;
+  }
+  
+  .js-is-darkmode & {
+    background: rgba(34, 197, 94, 0.2) !important;
+    
+    &::before {
+      background: rgba(34, 197, 94, 0.3) !important;
+    }
+    
+    > span:first-of-type {
+      background: rgba(34, 197, 94, 0.15) !important;
+    }
+  }
+}
+
+// Red background for removed lines
+.shiki code .line.diff.remove {
+  background: rgba(239, 68, 68, 0.15) !important;
+  opacity: 0.9;
+  
+  &::before {
+    content: '-' counter(step);
+    background: rgba(239, 68, 68, 0.25) !important;
+    color: #ef4444 !important;
+    font-weight: 600;
+  }
+  
+  // Apply red tint to code content cell
+  > span:first-of-type {
+    background: rgba(239, 68, 68, 0.1) !important;
+  }
+  
+  .js-is-darkmode & {
+    background: rgba(239, 68, 68, 0.2) !important;
+    opacity: 0.9;
+    
+    &::before {
+      background: rgba(239, 68, 68, 0.3) !important;
+    }
+    
+    > span:first-of-type {
+      background: rgba(239, 68, 68, 0.15) !important;
+    }
+  }
+}
+
+// Line highlighting
+.shiki .highlighted {
+  background-color: rgba(59, 130, 246, 0.1);
+  position: relative;
+  display: table-row;
+  border-left: 3px solid #3b82f6;
+  
+  .js-is-darkmode & {
+    background-color: rgba(59, 130, 246, 0.15);
+    border-left-color: #60a5fa;
+  }
+}
+
+// Word highlighting
+.shiki .highlighted-word {
+  background-color: rgba(251, 191, 36, 0.2);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  border-bottom: 2px solid #f59e0b;
+  
+  .js-is-darkmode & {
+    background-color: rgba(251, 191, 36, 0.25);
+    border-bottom-color: #fbbf24;
+  }
+}
+
+// Focus lines (dim non-focused)
+.shiki.has-focused .line:not(.focused) {
+  opacity: 0.5;
+  filter: blur(0.5px);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.shiki.has-focused .line.focused {
+  background-color: rgba(139, 92, 246, 0.05);
+  position: relative;
+  display: table-row;
+  
+  .js-is-darkmode & {
+    background-color: rgba(139, 92, 246, 0.1);
+  }
+}
+
+// Error and warning annotations
+.shiki .error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-bottom: 2px wavy #ef4444;
+  position: relative;
+  
+  &::after {
+    content: '⚠';
+    position: absolute;
+    right: -1.5rem;
+    color: #ef4444;
+    font-size: 0.875rem;
+  }
+  
+  .js-is-darkmode & {
+    background-color: rgba(239, 68, 68, 0.15);
+    border-bottom-color: #f87171;
+  }
+}
+
+.shiki .warning {
+  background-color: rgba(251, 191, 36, 0.1);
+  border-bottom: 2px wavy #f59e0b;
+  position: relative;
+  
+  &::after {
+    content: '⚠';
+    position: absolute;
+    right: -1.5rem;
+    color: #f59e0b;
+    font-size: 0.875rem;
+  }
+  
+  .js-is-darkmode & {
+    background-color: rgba(251, 191, 36, 0.15);
+    border-bottom-color: #fbbf24;
+  }
 }

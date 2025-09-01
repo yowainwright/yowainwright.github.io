@@ -102,6 +102,8 @@
     "typescript": "^5"
   },
   "trustedDependencies": [
-    "@next/swc"
+    "@next/swc",
+    "@swc/core",
+    "@swc/helpers"
   ]
 }
