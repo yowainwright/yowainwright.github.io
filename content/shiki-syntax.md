@@ -1,8 +1,8 @@
 ---
 title: "Shiki Syntax Highlighting: A Complete Feature Showcase"
 date: 2025-08-31
-path: content/shiki-syntax-highlighting-demo
-description: "Exploring all the powerful features of Shiki syntax highlighting with custom themes, transformers, and interactive elements"
+path: content/shiki-syntax
+description: "Comprehensive showcase of Shiki syntax highlighting with custom themes, diff notation, line highlighting, focus modes, error annotations, and interactive copy buttons. See how modern code presentation enhances technical content."
 tags: ["Development", "Shiki", "Syntax Highlighting", "Web Development"]
 ---
 
