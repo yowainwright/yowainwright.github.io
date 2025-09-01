@@ -1,12 +1,14 @@
-import React, { useContext, useState, useEffect, lazy, Suspense, Component } from "react";
+import React, { useContext, useState, useEffect, Component } from "react";
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import { getSinglePost, getAllPosts, markdownToHtml } from "../utils";
 import { GlobalState } from "./_app";
 import { Share } from "../components/Share";
 import { useCodeBlocks } from "../hooks/useCodeBlocks";
 
-const THEME_DARK = "https://yowainwright.imgix.net/jeffry.in.giscus.dark.css";
-const THEME_LIGHT = "https://yowainwright.imgix.net/jeffry.in.giscus.light.css";
+// Use built-in giscus themes or custom hosted themes
+const THEME_DARK = "dark";
+const THEME_LIGHT = "light";
 
 interface PostProps {
   content: string;
@@ -76,24 +78,14 @@ const GiscusLoadingFallback = () => {
   );
 };
 
-// Lazy load Giscus component with proper error handling
-let GiscusComponent: any;
-
-if (typeof window !== 'undefined') {
-  GiscusComponent = lazy(() => 
-    import("@giscus/react")
-      .then(module => ({
-        default: module.default || module.Giscus || module
-      }))
-      .catch(err => {
-        console.error('Failed to load Giscus:', err);
-        return { default: GiscusErrorFallback };
-      })
-  );
-} else {
-  // Server-side fallback
-  GiscusComponent = () => null;
-}
+// Dynamically load Giscus component (client-side only)
+const GiscusComponent = dynamic(
+  () => import("@giscus/react"),
+  { 
+    ssr: false,
+    loading: () => <GiscusLoadingFallback />
+  }
+);
 
 const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   const [hasError, setHasError] = useState(false);
@@ -158,8 +150,7 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   return (
     <div className="giscus-container">
       <ErrorBoundary>
-        <Suspense fallback={<GiscusLoadingFallback />}>
-          <GiscusComponent
+        <GiscusComponent
             repo="yowainwright/yowainwright.github.io"
             repoId="MDEwOlJlcG9zaXRvcnkxNzA5MTY4Mg=="
             category="General"
@@ -172,7 +163,6 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
             loading="lazy"
             inputPosition="top"
           />
-        </Suspense>
       </ErrorBoundary>
     </div>
   );
