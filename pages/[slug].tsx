@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect, lazy, Suspense, Component } from "react";
+import Head from "next/head";
 import { getSinglePost, getAllPosts, markdownToHtml } from "../utils";
 import { GlobalState } from "./_app";
 import { Share } from "../components/Share";
@@ -13,7 +14,8 @@ interface PostProps {
   frontmatter: {
     date: string;
     title: string;
-    meta: string;
+    meta?: string;
+    description?: string;
     path: string;
   };
 }
@@ -180,8 +182,19 @@ const Post = ({ content, frontmatter, slug }: PostProps) => {
   const state = useContext(GlobalState);
   useCodeBlocks();
   
+  const description = frontmatter?.description || frontmatter?.meta || "";
+  const title = frontmatter?.title || "";
+  
   return (
-    <article className="post__article">
+    <>
+      <Head>
+        <title>{title} | Jeffry.in</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={`https://jeffry.in/${slug}`} />
+      </Head>
+      <article className="post__article">
       <header className="post__header">
         <h1>{frontmatter?.title}</h1>
         <DateText date={frontmatter?.date} slug={slug} />
@@ -206,6 +219,7 @@ const Post = ({ content, frontmatter, slug }: PostProps) => {
         </aside>
       </section>
     </article>
+    </>
   );
 };
 

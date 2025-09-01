@@ -203,16 +203,13 @@ function transformerCodeWrapper() {
         // Generate unique ID for this code block
         const blockId = `code-block-${++codeBlockId}`;
         
-        // Extract title and language from the pre's children
+        // Extract title from the pre's children
         let titleElement = null;
-        let langElement = null;
         const codeChildren = [];
         
         node.children.forEach(child => {
           if (child.properties?.class === 'shiki-title') {
             titleElement = child;
-          } else if (child.properties?.class === 'shiki-language-badge') {
-            langElement = child;
           } else {
             codeChildren.push(child);
           }
@@ -222,12 +219,15 @@ function transformerCodeWrapper() {
         node.children = codeChildren;
         node.properties = { ...node.properties, id: blockId };
         
-        // Build header if we have title or language
+        // Build header with placeholder for copy button
         const headerChildren = [];
-        if (titleElement) headerChildren.push(titleElement);
-        if (langElement) headerChildren.push(langElement);
         
-        // Create a placeholder for the copy button
+        // Add title if present
+        if (titleElement) {
+          headerChildren.push(titleElement);
+        }
+        
+        // Create a placeholder for the copy button (will be on the right)
         const copyButtonPlaceholder = {
           type: 'element',
           tagName: 'div',
@@ -237,11 +237,13 @@ function transformerCodeWrapper() {
           },
           children: []
         };
+        headerChildren.push(copyButtonPlaceholder);
         
         // Build wrapper structure
         const wrapperChildren = [];
         
-        if (headerChildren.length > 0) {
+        // Create a header if we have title
+        if (titleElement) {
           const header = {
             type: 'element',
             tagName: 'div',
@@ -251,7 +253,9 @@ function transformerCodeWrapper() {
           wrapperChildren.push(header);
         }
         
-        wrapperChildren.push(copyButtonPlaceholder); // Add placeholder for copy button
+        // Always add copy button placeholder
+        wrapperChildren.push(copyButtonPlaceholder);
+        
         wrapperChildren.push(node); // Add the pre element
         
         return {
@@ -267,55 +271,6 @@ function transformerCodeWrapper() {
   };
 }
 
-function transformerLanguageBadge() {
-  return {
-    name: 'language-badge',
-    pre(node, options) {
-      // Try to find language from various sources
-      let lang = null;
-      
-      // Check the code element inside pre for language class
-      const codeElement = node.children?.find(child => 
-        child.type === 'element' && child.tagName === 'code'
-      );
-      
-      if (codeElement?.properties?.class) {
-        const classes = Array.isArray(codeElement.properties.class) 
-          ? codeElement.properties.class 
-          : [codeElement.properties.class];
-        
-        const langClass = classes.find(c => 
-          typeof c === 'string' && c.startsWith('language-')
-        );
-        
-        if (langClass) {
-          lang = langClass.replace('language-', '');
-        }
-      }
-      
-      // Check data-language attribute
-      if (!lang) {
-        lang = node.properties?.['data-language'];
-      }
-      
-      // Check options.lang directly
-      if (!lang && options?.lang) {
-        lang = options.lang;
-      }
-      
-      if (!lang || lang === 'text') return;
-      
-      const badge = {
-        type: 'element',
-        tagName: 'div',
-        properties: { class: 'shiki-language-badge' },
-        children: [{ type: 'text', value: lang.toUpperCase() }]
-      };
-      
-      node.children.push(badge);
-    }
-  };
-}
 
 function transformerTooltip() {
   return {
@@ -352,6 +307,14 @@ function transformerTooltip() {
 }
 
 export const markdownToHtml = async (markdown: string) => {
+  // Extract languages from markdown code blocks
+  const codeBlockRegex = /```(\w+)/g;
+  const languages: string[] = [];
+  let match;
+  while ((match = codeBlockRegex.exec(markdown)) !== null) {
+    languages.push(match[1]);
+  }
+  
   const result = await unified()
     .use(remarkParse, { allowDangerousHtml: true })
     .use(remarkRehype)
@@ -371,30 +334,26 @@ export const markdownToHtml = async (markdown: string) => {
         transformerMetaWordHighlight(),
         transformerColorizedBrackets(),
         transformerDiffLines(),
-        {
-          name: 'store-language',
-          preprocess(code, options) {
-            if (options?.lang && options.lang !== 'text') {
-              options.meta = { ...options.meta, __lang: options.lang };
-            }
-            return code;
-          },
-          pre(node, options) {
-            const lang = options?.meta?.__lang;
-            if (!lang) return;
-            
-            node.properties = {
-              ...node.properties,
-              'data-language': lang
-            };
-          }
-        },
-        transformerLanguageBadge(),
         transformerTooltip(),
-        transformerCodeWrapper(), // Run last to wrap everything
+        transformerCodeWrapper(), // Original wrapper
       ],
     })
     .use(rehypeStringify)
     .process(markdown);
-  return result.toString();
+  
+  let html = result.toString();
+  
+  // Post-process: inject languages into the shiki-wrapper divs (after the header, before the copy button)
+  let langIndex = 0;
+  
+  html = html.replace(/<div class="shiki-wrapper">([\s\S]*?)<div class="copy-button-placeholder"/g, (match, content) => {
+    const lang = languages[langIndex++];
+    if (lang && lang !== 'text') {
+      // Insert language badge before the copy button placeholder
+      return `<div class="shiki-wrapper">${content}<div class="shiki-language">${lang.toUpperCase()}</div><div class="copy-button-placeholder"`;
+    }
+    return match;
+  });
+  
+  return html;
 };
