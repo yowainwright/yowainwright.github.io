@@ -14,10 +14,8 @@
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
   },
   "scripts": {
-    "build": "bun run build:css && bun run build:giscus:light && bun run build:giscus:dark && next build",
+    "build": "bun run build:css && next build",
     "build:sitemap": "next-sitemap",
-    "build:giscus:dark": "sass --style=compressed styles/giscus-dark.scss public/assets/jeffry.in.giscus.dark.css",
-    "build:giscus:light": "sass --style=compressed styles/giscus-light.scss public/assets/jeffry.in.giscus.light.css",
     "build:css": "sass --style=compressed styles/main.scss public/assets/jeffry.in.css",
     "commit": "git-cz",
     "commit-msg": "commitlint --edit $1",
@@ -51,7 +49,7 @@
   },
   "dependencies": {
     "@next/third-parties": "^15.5.2",
-    "lucide-react": "^0.542.0",
+    "lucide-react": "0.542.0",
     "next": "15.5.2",
     "react": "19.1.1",
     "react-dom": "19.1.1"
@@ -102,6 +100,8 @@
     "typescript": "^5"
   },
   "trustedDependencies": [
-    "@next/swc"
+    "@next/swc",
+    "@swc/core",
+    "@swc/helpers"
   ]
 }
