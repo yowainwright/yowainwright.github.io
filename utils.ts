@@ -92,105 +92,60 @@ export const getSinglePost = (slug: string, folder: string) => {
   };
 };
 
-function transformerCopyButton() {
+function transformerDiffLines() {
   return {
-    name: 'copy-button',
-    pre(node: any) {
-      const copyIcon = {
-        type: 'element',
-        tagName: 'svg',
-        properties: {
-          class: 'copy-icon',
-          xmlns: 'http://www.w3.org/2000/svg',
-          width: '16',
-          height: '16',
-          viewBox: '0 0 24 24',
-          fill: 'none',
-          stroke: 'currentColor',
-          strokeWidth: '2',
-          strokeLinecap: 'round',
-          strokeLinejoin: 'round'
-        },
-        children: [
-          {
-            type: 'element',
-            tagName: 'rect',
-            properties: {
-              width: '14',
-              height: '14',
-              x: '8',
-              y: '8',
-              rx: '2',
-              ry: '2'
-            },
-            children: []
-          },
-          {
-            type: 'element',
-            tagName: 'path',
-            properties: {
-              d: 'M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2'
-            },
-            children: []
+    name: 'diff-lines',
+    code(node: any) {
+      // Process each line in the code block
+      node.children?.forEach((line: any) => {
+        if (!line.children || line.children.length === 0) return;
+        
+        // Get the text content of the first child
+        let firstText = '';
+        const getFirstText = (element: any): string => {
+          if (element.type === 'text') return element.value;
+          if (element.children && element.children.length > 0) {
+            return getFirstText(element.children[0]);
           }
-        ]
-      };
-
-      const checkIcon = {
-        type: 'element',
-        tagName: 'svg',
-        properties: {
-          class: 'check-icon',
-          xmlns: 'http://www.w3.org/2000/svg',
-          width: '16',
-          height: '16',
-          viewBox: '0 0 24 24',
-          fill: 'none',
-          stroke: 'currentColor',
-          strokeWidth: '2',
-          strokeLinecap: 'round',
-          strokeLinejoin: 'round'
-        },
-        children: [
-          {
-            type: 'element',
-            tagName: 'path',
-            properties: {
-              d: 'M20 6 9 17l-5-5'
-            },
-            children: []
+          return '';
+        };
+        
+        firstText = getFirstText(line.children[0]);
+        
+        // Check if line starts with + or -
+        if (firstText.startsWith('+')) {
+          // Add diff add class
+          if (!line.properties) line.properties = {};
+          if (!line.properties.class) line.properties.class = [];
+          if (Array.isArray(line.properties.class)) {
+            line.properties.class.push('diff', 'add');
+          } else {
+            line.properties.class = [line.properties.class, 'diff', 'add'];
           }
-        ]
-      };
-      
-      const button = {
-        type: 'element',
-        tagName: 'button',
-        properties: {
-          class: 'shiki-copy-button',
-          'aria-label': 'Copy code',
-          'data-copied': 'false',
-          title: 'Copy code',
-          onclick: `
-            const code = this.parentElement.querySelector('code').textContent;
-            navigator.clipboard.writeText(code);
-            this.setAttribute('data-copied', 'true');
-            this.setAttribute('aria-label', 'Copied!');
-            this.setAttribute('title', 'Copied!');
-            setTimeout(() => {
-              this.setAttribute('data-copied', 'false');
-              this.setAttribute('aria-label', 'Copy code');
-              this.setAttribute('title', 'Copy code');
-            }, 2000);
-          `.replace(/\s+/g, ' ').trim()
-        },
-        children: [copyIcon, checkIcon]
-      };
-
-      node.children = [button, ...node.children];
+        } else if (firstText.startsWith('-')) {
+          // Add diff remove class
+          if (!line.properties) line.properties = {};
+          if (!line.properties.class) line.properties.class = [];
+          if (Array.isArray(line.properties.class)) {
+            line.properties.class.push('diff', 'remove');
+          } else {
+            line.properties.class = [line.properties.class, 'diff', 'remove'];
+          }
+        }
+      });
+    },
+    pre(node: any, options: any) {
+      // Add data-language attribute for CSS targeting
+      if (options?.lang === 'diff') {
+        node.properties = {
+          ...node.properties,
+          'data-language': 'diff'
+        };
+      }
     }
   };
 }
+
 
 function transformerTitle() {
   return {
@@ -239,9 +194,14 @@ function transformerCodeWrapper() {
   return {
     name: 'code-wrapper',
     root(root) {
+      let codeBlockId = 0;
+      
       root.children = root.children.map(node => {
         if (node.type !== 'element' || node.tagName !== 'pre') return node;
         if (!node.properties?.class?.includes('shiki')) return node;
+        
+        // Generate unique ID for this code block
+        const blockId = `code-block-${++codeBlockId}`;
         
         // Extract title and language from the pre's children
         let titleElement = null;
@@ -258,28 +218,47 @@ function transformerCodeWrapper() {
           }
         });
         
-        // Rebuild the pre with only code content
+        // Rebuild the pre with only code content and add ID
         node.children = codeChildren;
+        node.properties = { ...node.properties, id: blockId };
         
         // Build header if we have title or language
         const headerChildren = [];
         if (titleElement) headerChildren.push(titleElement);
         if (langElement) headerChildren.push(langElement);
         
-        if (headerChildren.length === 0) return node;
-        
-        const header = {
+        // Create a placeholder for the copy button
+        const copyButtonPlaceholder = {
           type: 'element',
           tagName: 'div',
-          properties: { class: 'shiki-header' },
-          children: headerChildren
+          properties: { 
+            class: 'copy-button-placeholder',
+            'data-code-id': blockId
+          },
+          children: []
         };
+        
+        // Build wrapper structure
+        const wrapperChildren = [];
+        
+        if (headerChildren.length > 0) {
+          const header = {
+            type: 'element',
+            tagName: 'div',
+            properties: { class: 'shiki-header' },
+            children: headerChildren
+          };
+          wrapperChildren.push(header);
+        }
+        
+        wrapperChildren.push(copyButtonPlaceholder); // Add placeholder for copy button
+        wrapperChildren.push(node); // Add the pre element
         
         return {
           type: 'element',
           tagName: 'div',
           properties: { class: 'shiki-wrapper' },
-          children: [header, node]
+          children: wrapperChildren
         };
       });
       
@@ -391,7 +370,7 @@ export const markdownToHtml = async (markdown: string) => {
         transformerMetaHighlight(),
         transformerMetaWordHighlight(),
         transformerColorizedBrackets(),
-        transformerCopyButton(),
+        transformerDiffLines(),
         {
           name: 'store-language',
           preprocess(code, options) {

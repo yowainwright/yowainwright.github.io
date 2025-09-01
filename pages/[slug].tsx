@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect, lazy, Suspense, Component } fro
 import { getSinglePost, getAllPosts, markdownToHtml } from "../utils";
 import { GlobalState } from "./_app";
 import { Share } from "../components/Share";
+import { useCodeBlocks } from "../hooks/useCodeBlocks";
 
 const THEME_DARK = "https://yowainwright.imgix.net/jeffry.in.giscus.dark.css";
 const THEME_LIGHT = "https://yowainwright.imgix.net/jeffry.in.giscus.light.css";
@@ -177,6 +178,8 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
 
 const Post = ({ content, frontmatter, slug }: PostProps) => {
   const state = useContext(GlobalState);
+  useCodeBlocks();
+  
   return (
     <article className="post__article">
       <header className="post__header">

@@ -123,7 +123,7 @@ print(f"Analysis complete: {result}")
 
 Show additions and deletions in code:
 
-```javascript
+```diff
 // [title: Code Changes]
 function calculateTotal(items) {
   let total = 0;
@@ -214,73 +214,6 @@ function divideNumbers(a, b) {
 }
 ```
 
-## Colorized Brackets
-
-Our implementation includes colorized brackets for better code readability:
-
-```javascript
-// [title: Nested Structure with Colorized Brackets]
-const complexData = {
-  users: [
-    {
-      id: 1,
-      name: "Alice",
-      permissions: {
-        read: true,
-        write: false,
-        admin: false,
-        settings: {
-          notifications: {
-            email: true,
-            push: false,
-            sms: false
-          }
-        }
-      }
-    },
-    {
-      id: 2,
-      name: "Bob",
-      permissions: {
-        read: true,
-        write: true,
-        admin: true,
-        settings: {
-          notifications: {
-            email: false,
-            push: true,
-            sms: true
-          }
-        }
-      }
-    }
-  ]
-};
-```
-
-## TwoSlash Integration
-
-For TypeScript files, we support TwoSlash for type information:
-
-```typescript twoslash
-// [title: TypeScript with TwoSlash]
-interface Point {
-  x: number;
-  y: number;
-}
-
-function distance(p1: Point, p2: Point): number {
-  const dx = p2.x - p1.x;
-  const dy = p2.y - p1.y;
-  return Math.sqrt(dx * dx + dy * dy);
-}
-
-const origin = { x: 0, y: 0 };
-const point = { x: 3, y: 4 };
-
-const dist = distance(origin, point);
-//    ^? const dist: number
-```
 
 ## Long Code with Horizontal Scrolling
 
@@ -293,34 +226,6 @@ const veryLongConfigurationObject = { apiEndpoint: "https://api.example.com/v1/u
 const anotherLongLine = "This is a very long string that extends far beyond the typical viewport width to demonstrate how our syntax highlighting handles horizontal scrolling while keeping the copy button accessible and visible at all times.";
 ```
 
-## Custom Styling Features
-
-### Line Numbers
-
-All code blocks include line numbers for easy reference:
-
-```javascript
-// [title: Line Numbers Example]
-function fibonacci(n) {
-  if (n <= 1) return n;
-  
-  const fib = [0, 1];
-  
-  for (let i = 2; i <= n; i++) {
-    fib[i] = fib[i - 1] + fib[i - 2];
-  }
-  
-  return fib[n];
-}
-```
-
-### Copy Button
-
-Every code block features a copy button that:
-- Stays visible during horizontal scroll
-- Shows visual feedback when clicked
-- Copies the entire code content
-- Works seamlessly in light and dark modes
 
 ## Shell Commands
 
@@ -464,11 +369,10 @@ const expensiveOperation = memoize((n) => {
 Our Shiki implementation provides:
 
 1. **Rich Syntax Highlighting** - Support for 100+ languages with custom themes
-2. **Interactive Elements** - Copy button, line numbers, and language badges
-3. **Advanced Transformers** - Diff notation, line highlighting, word highlighting, and more
-4. **Dark Mode Support** - Seamless theme switching with custom color schemes
-5. **Accessibility** - Semantic HTML, ARIA labels, and keyboard navigation
-6. **Performance** - Optimized rendering with minimal runtime overhead
+2. **Advanced Transformers** - Diff notation, line highlighting, word highlighting, focus, and error annotations
+3. **Dark Mode Support** - Seamless theme switching with custom color schemes
+4. **Interactive Elements** - Copy button with visual feedback
+5. **Performance** - Optimized rendering with minimal runtime overhead
 
 The combination of these features creates a superior code reading experience that enhances comprehension and makes technical content more engaging and accessible.
 

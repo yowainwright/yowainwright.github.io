@@ -93,10 +93,11 @@ code .line {
   }
 }
 
-// Copy button styles
-.shiki-copy-button {
+// Copy button styles - now positioned in wrapper
+.shiki-wrapper .shiki-copy-button,
+.copy-button-placeholder .shiki-copy-button {
   position: absolute;
-  top: 0.75rem;
+  top: 3rem;
   right: 0.75rem;
   z-index: 10;
   padding: 0.5rem;
@@ -191,7 +192,7 @@ code .line {
   // Copy button stays fixed to container
   .shiki-copy-button {
     position: absolute;
-    top: 0.75rem;
+    top: 3rem;
     right: 0.75rem;
   }
 }
@@ -294,6 +295,52 @@ code .line {
   width: 100%;
 }
 
+// Diff language specific styles - detect by the color Shiki applies
+.shiki[data-language="diff"] .line,
+.shiki .line.diff {
+  // Lines starting with + (additions) - Shiki colors them blue (#007CF0)
+  &:has(> span:first-child[style*="#007CF0"]) {
+    background: rgba(34, 197, 94, 0.15) !important;
+    
+    &::before {
+      content: '+' counter(step);
+      background: rgba(34, 197, 94, 0.25) !important;
+      color: #22c55e !important;
+      font-weight: 600;
+    }
+    
+    .js-is-darkmode & {
+      background: rgba(34, 197, 94, 0.2) !important;
+      
+      &::before {
+        background: rgba(34, 197, 94, 0.3) !important;
+      }
+    }
+  }
+  
+  // Lines starting with - (deletions) - Shiki colors them red (#E2657E)
+  &:has(> span:first-child[style*="#E2657E"]) {
+    background: rgba(239, 68, 68, 0.15) !important;
+    opacity: 0.9;
+    
+    &::before {
+      content: '-' counter(step);
+      background: rgba(239, 68, 68, 0.25) !important;
+      color: #ef4444 !important;
+      font-weight: 600;
+    }
+    
+    .js-is-darkmode & {
+      background: rgba(239, 68, 68, 0.2) !important;
+      opacity: 0.9;
+      
+      &::before {
+        background: rgba(239, 68, 68, 0.3) !important;
+      }
+    }
+  }
+}
+
 // Add diff styles - green background for added lines
 .shiki code .line.diff.add {
   background: rgba(34, 197, 94, 0.15) !important;
@@ -305,20 +352,11 @@ code .line {
     font-weight: 600;
   }
   
-  // Apply green tint to code content cell
-  > span:first-of-type {
-    background: rgba(34, 197, 94, 0.1) !important;
-  }
-  
   .js-is-darkmode & {
     background: rgba(34, 197, 94, 0.2) !important;
     
     &::before {
       background: rgba(34, 197, 94, 0.3) !important;
-    }
-    
-    > span:first-of-type {
-      background: rgba(34, 197, 94, 0.15) !important;
     }
   }
 }
@@ -335,21 +373,12 @@ code .line {
     font-weight: 600;
   }
   
-  // Apply red tint to code content cell
-  > span:first-of-type {
-    background: rgba(239, 68, 68, 0.1) !important;
-  }
-  
   .js-is-darkmode & {
     background: rgba(239, 68, 68, 0.2) !important;
     opacity: 0.9;
     
     &::before {
       background: rgba(239, 68, 68, 0.3) !important;
-    }
-    
-    > span:first-of-type {
-      background: rgba(239, 68, 68, 0.15) !important;
     }
   }
 }
