@@ -1,16 +1,25 @@
 ---
-title: "Shiki Syntax Highlighting: A Complete Feature Showcase"
+title: "Shiki Syntax Highlighting: More features for markdown for markdown"
 date: 2025-08-31
 path: content/shiki-syntax
-description: "Comprehensive showcase of Shiki syntax highlighting with custom themes, diff notation, line highlighting, focus modes, error annotations, and interactive copy buttons. See how modern code presentation enhances technical content."
-tags: ["Development", "Shiki", "Syntax Highlighting", "Web Development"]
+description: "Comprehensive Shiki syntax highlighting with custom themes, diff notation, line highlighting, focus modes, error annotations, and interactive copy buttons."
+tags: ["Shiki", "Syntax Highlighting"]
 ---
 
-Welcome to a comprehensive showcase of our Shiki syntax highlighting implementation! This post demonstrates all the features we've integrated, from basic syntax highlighting to advanced transformers and interactive elements.
+[Shiki](https://shiki.matsu.io/)'s been used on this site site for some time. But it was missing a few things Shiki provides that I wanted to implement including, language badges
+## TL;DR
 
-## Basic Syntax Highlighting
+Jeffry.in is updated with slightly more advanced Shiki codeblocks, including:
+- **Custom transformers** for titles, diffs, and tooltips
+- **Enhanced CSS** with sticky line numbers and proper dark mode support
+- **Simplified Giscus integration** using built-in themes
+- **Performance optimizations** with Next.js dynamic imports
 
-Let's start with a simple example showing our custom light/dark theme support:
+---
+
+## Syntax Highlighting Overview
+
+Let's start with a simple example. In code block below, you will "hopefully" observe, a title, the languages, a copy button and syntax highlighting.
 
 ```javascript
 // [title: Basic JavaScript Example]
@@ -27,7 +36,13 @@ console.log(`Sum: ${calculateSum(numbers)}`);
 
 ## Language Support
 
-Shiki supports numerous programming languages. Here are some examples:
+Shiki supports numerous programming languages. Here are some examples. 
+I've become accustom to being able to add earmarks, the language, and then seeing syntax for that language.
+Shiki provides this sort of support out of the box. 
+
+However, I wanted to add the language as a badge which was harder to do than expected. 
+I found even though I could get that information from Shiki, I wasn't able to add it to headers as easily as I would have liked.
+The reason for this is Shiki's transforms and what data is available and when...
 
 ### TypeScript with Type Annotations
 
@@ -55,7 +70,9 @@ class UserService {
 const service = new UserService();
 ```
 
-### Python
+But, with a little work, I was able to hack my way to things that I wanted.
+
+### With Python Example
 
 ```python
 # [title: Python Data Processing]
@@ -86,7 +103,7 @@ result = process_data(data)
 print(f"Analysis complete: {result}")
 ```
 
-### CSS with Modern Features
+### With CSS example
 
 ```css
 /* [title: Modern CSS Styling] */
@@ -116,8 +133,6 @@ print(f"Analysis complete: {result}")
   }
 }
 ```
-
-## Notation Transformers
 
 ### Diff Notation
 
@@ -182,7 +197,7 @@ function processUserData(userData) {
     throw new Error('Invalid user data');
   }
   
-  // This is the important part we're focusing on
+  // This is the important part to focus on
   const normalizedEmail = userData.email.toLowerCase().trim();
   const username = normalizedEmail.split('@')[0];
   
@@ -223,28 +238,11 @@ Here's an example with long lines to demonstrate the copy button staying visible
 // [title: Long Lines Example]
 const veryLongConfigurationObject = { apiEndpoint: "https://api.example.com/v1/users", timeout: 5000, retryAttempts: 3, headers: { "Content-Type": "application/json", "Authorization": "Bearer token_goes_here" }, options: { enableCache: true, cacheTimeout: 3600, enableLogging: true, logLevel: "debug" } };
 
-const anotherLongLine = "This is a very long string that extends far beyond the typical viewport width to demonstrate how our syntax highlighting handles horizontal scrolling while keeping the copy button accessible and visible at all times.";
+const anotherLongLine = "This is a very long string that extends far beyond the typical viewport width to demonstrate how the syntax highlighting handles horizontal scrolling while keeping the copy button accessible and visible at all times.";
 ```
 
 
-## Shell Commands
-
-```bash
-# [title: Setup Commands]
-# Install dependencies
-npm install @shikijs/rehype @shikijs/transformers @shikijs/twoslash
-
-# Build the project
-npm run build
-
-# Start development server
-npm run dev
-
-# Run tests
-npm test --coverage
-```
-
-## JSON Configuration
+## JSON Configuration (and no title)
 
 ```json
 {
@@ -272,113 +270,222 @@ npm test --coverage
 }
 ```
 
-## Markdown in Code Comments
+## Implementation Details: What Changed
 
-```javascript
-// [title: Documentation in Comments]
-/**
- * Calculate the area of a circle
- * 
- * Formula: A = π × r²
- * 
- * @param {number} radius - The radius of the circle
- * @returns {number} The area of the circle
- * 
- * @example
- * const area = calculateCircleArea(5);
- * console.log(area); // 78.54
- */
-function calculateCircleArea(radius) {
-  return Math.PI * Math.pow(radius, 2);
+### 1. React-Based Copy Button with Dynamic Mounting
+
+Replaced the inline SVG copy button with a React component that gets dynamically mounted:
+
+```typescript
+// [title: hooks/useCodeBlocks.tsx - Dynamic Copy Button Mounting]
+export function useCodeBlocks() {
+  const rootsRef = useRef<Map<HTMLElement, Root>>(new Map());
+  
+  const mountCopyButtons = useCallback(() => {
+    const placeholders = document.querySelectorAll('.copy-button-placeholder');
+    
+    placeholders.forEach((placeholder) => {
+      const element = placeholder as HTMLElement;
+      const codeId = element.getAttribute('data-code-id');
+      
+      if (!codeId || rootsRef.current.has(element)) return;
+      
+      const root = createRoot(element);
+      root.render(<CopyButton codeId={codeId} />);
+      rootsRef.current.set(element, root);
+    });
+  }, []);
+  
+  // MutationObserver watches for new code blocks added dynamically
+  // ... observer setup code
 }
 ```
 
-## React Component Example
+```tsx
+// [title: components/CopyButton.tsx - React Copy Component]
+export default function CopyButton({ codeId }: CopyButtonProps) {
+  const [copied, setCopied] = useState(false);
 
-```jsx
-// [title: React Component with Hooks]
-import React, { useState, useEffect } from 'react';
+  const handleCopy = async () => {
+    const codeElement = document.querySelector(`#${codeId} code`);
+    if (!codeElement) return;
+    
+    const code = codeElement.textContent || '';
+    await navigator.clipboard.writeText(code);
+    
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
-const DataFetcher = ({ endpoint, renderData }) => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        const response = await fetch(endpoint);
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const result = await response.json();
-        setData(result);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [endpoint]);
-
-  if (loading) return <div className="spinner">Loading...</div>;
-  if (error) return <div className="error">Error: {error}</div>;
-  if (!data) return null;
-
-  return <div className="data-container">{renderData(data)}</div>;
-};
-
-export default DataFetcher;
+  return (
+    <button className="shiki-copy-button" onClick={handleCopy}>
+      {copied ? <Check size={16} /> : <Copy size={16} />}
+    </button>
+  );
+}
 ```
 
-## Performance Considerations
+### 2. Custom Transformers for Enhanced Features
+
+Created custom Shiki transformers to handle titles and diff lines:
 
 ```javascript
-// [title: Optimized Code]
-// Use memoization for expensive calculations
-const memoize = (fn) => {
-  const cache = new Map();
-  
-  return (...args) => {
-    const key = JSON.stringify(args);
-    
-    if (cache.has(key)) {
-      return cache.get(key); // [!code ++]
+// [title: utils.ts - Custom Title Transformer]
+function transformerTitle() {
+  return {
+    name: 'title',
+    preprocess(code, options) {
+      // Extract title from comments like: // [title: My Title]
+      if (!code.includes('[title:')) return code;
+      
+      const lines = code.split('\n');
+      const firstLine = lines[0];
+      const titleStart = firstLine.indexOf('[title:');
+      const titleEnd = firstLine.indexOf(']', titleStart);
+      
+      if (titleStart !== -1 && titleEnd > titleStart) {
+        const title = firstLine.slice(titleStart + 7, titleEnd).trim();
+        options.meta = { ...options.meta, title };
+        return lines.slice(1).join('\n'); // Remove title line from code
+      }
+      return code;
     }
-    
-    const result = fn(...args);
-    cache.set(key, result); // [!code ++]
-    return result;
   };
-};
+}
+```
 
-// Example usage
-const expensiveOperation = memoize((n) => {
-  console.log('Computing...');
-  return n * n * n;
-});
+```javascript
+// [title: utils.ts - Diff Lines Transformer]
+function transformerDiffLines() {
+  return {
+    name: 'diff-lines',
+    code(node) {
+      node.children?.forEach((line) => {
+        const firstText = getFirstText(line.children[0]);
+        
+        if (firstText.startsWith('+')) {
+          // Add classes for additions
+          line.properties.class.push('diff', 'add');
+        } else if (firstText.startsWith('-')) {
+          // Add classes for deletions  
+          line.properties.class.push('diff', 'remove');
+        }
+      });
+    }
+  };
+}
+```
+
+### 3. Improved CSS Architecture
+
+Rewrote the code block styles for better structure and dark mode support:
+
+```scss
+// [title: styles/_code.scss - Enhanced Shiki Styles]
+// Main container with proper overflow handling
+.shiki {
+  position: relative;
+  display: block;
+  margin: 2rem 0;
+  border-radius: var(--code-border-radius);
+  overflow-x: auto;
+  overflow-y: hidden;
+  
+  // Dark mode background override
+  .js-is-darkmode & {
+    background: var(--code-bg) !important;
+  }
+}
+
+// Table-based layout for proper line numbering
+.shiki code {
+  display: table;
+  width: 100%;
+  min-width: 100%;
+  table-layout: fixed;
+  counter-reset: step;
+}
+
+// Line numbers with sticky positioning
+code .line {
+  display: table-row;
+  
+  &::before {
+    content: counter(step);
+    counter-increment: step;
+    display: table-cell;
+    width: 2.5rem;
+    position: sticky;
+    left: 0;
+    text-align: right;
+    user-select: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Copy button positioning
+.shiki-copy-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 10;
+  
+  &[data-copied="true"] {
+    background: rgba(34, 197, 94, 0.1);
+    border-color: #22c55e;
+  }
+}
+```
+
+### 4. Giscus Theme Simplification
+
+Switched from custom-hosted Giscus CSS themes to built-in theme names:
+
+```diff
+// [title: pages/[slug].tsx - Giscus Theme Update]
+- const THEME_DARK = "https://yowainwright.imgix.net/jeffry.in.giscus.dark.css";
+- const THEME_LIGHT = "https://yowainwright.imgix.net/jeffry.in.giscus.light.css";
++ const THEME_DARK = "dark";
++ const THEME_LIGHT = "light";
+```
+
+### 5. Dynamic Import Strategy
+
+Replaced lazy loading with Next.js dynamic imports for better SSR handling:
+
+```diff
+// [title: pages/[slug].tsx - Dynamic Import Change]
+- const GiscusComponent = lazy(() => 
+-   import("@giscus/react")
+-     .then(module => ({
+-       default: module.default || module.Giscus || module
+-     }))
+- );
+
++ const GiscusComponent = dynamic(
++   () => import("@giscus/react"),
++   { 
++     ssr: false,
++     loading: () => <GiscusLoadingFallback />
++   }
++ );
 ```
 
 ## Conclusion
 
-Our Shiki implementation provides:
+The enhanced Shiki implementation now provides:
 
-1. **Rich Syntax Highlighting** - Support for 100+ languages with custom themes
-2. **Advanced Transformers** - Diff notation, line highlighting, word highlighting, focus, and error annotations
-3. **Dark Mode Support** - Seamless theme switching with custom color schemes
-4. **Interactive Elements** - Copy button with visual feedback
-5. **Performance** - Optimized rendering with minimal runtime overhead
+1. **React-Based Interactivity** - Dynamic copy button mounting with proper state management
+2. **Custom Transformers** - Title extraction, diff highlighting, and tooltip support
+3. **Improved CSS Architecture** - Table-based layout for proper line numbering and sticky positioning
+4. **Dark Mode Support** - Seamless theme switching with custom color overrides
+5. **Performance Optimizations** - Efficient dynamic imports and debounced DOM observations
 
-The combination of these features creates a superior code reading experience that enhances comprehension and makes technical content more engaging and accessible.
+These improvements make code blocks more readable and functional across all devices and themes.
 
 ## CSS Implementation Details
 
-Here's a look at some of the custom CSS that powers our Shiki integration:
+Here's a look at some of the custom CSS that powers the Shiki integration:
 
 ```scss
 // [title: Core Shiki Styles]
