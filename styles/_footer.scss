@@ -1,15 +1,11 @@
 @use "variables";
 
 .site-footer {
-  padding-top: 4rem;
+  padding-top: variables.$m-3xl;
   &__wrapper {
     border-top: 1px solid var(--color-border-default);
     margin: 0 auto;
-    max-width: calc(100% - 2rem);
-
-    .js-is-darkmode & {
-      border-color: var(--color-border-default);
-    }
+    max-width: calc(100% - #{variables.$m-xl});
 
     @media screen and (min-width: variables.$width-x-small) {
       display: grid;
@@ -24,17 +20,17 @@
     }
 
     &--main {
-      padding: 4rem 0;
-      column-gap: 1rem;
+      padding: variables.$m-3xl 0;
+      column-gap: variables.$m-md;
 
       @media screen and (min-width: variables.$width-small) {
         align-items: start;
-        column-gap: 3rem;
-        grid-template-columns: auto 10rem auto;
+        column-gap: variables.$m-2xl;
+        grid-template-columns: auto variables.$m-5xl auto;
       }
 
       @media screen and (min-width: variables.$width-medium) {
-        grid-template-columns: 17rem 10rem auto;
+        grid-template-columns: 17rem variables.$m-5xl auto;
       }
     }
 
@@ -49,7 +45,7 @@
 
   &__col {
     display: grid;
-    padding-bottom: 2rem;
+    padding-bottom: variables.$m-xl;
 
     @media screen and (min-width: variables.$width-medium) {
       padding-bottom: 0;
@@ -59,11 +55,7 @@
       border-top: 1px solid var(--color-border-default);
       grid-column: span 2;
       padding-bottom: 0;
-      padding-top: 2rem;
-
-      .js-is-darkmode & {
-        border-color: var(--color-border-default);
-      }
+      padding-top: variables.$m-xl;
 
       @media screen and (min-width: variables.$width-medium) {
         border-top: none;
@@ -74,16 +66,16 @@
   }
 
   &__title {
-    font-size: 1.5rem;
+    font-size: variables.$m-lg;
     text-align: left;
-    margin: 0 0 1rem;
+    margin: 0 0 variables.$m-md;
 
     @media screen and (min-width: variables.$width-small) {
-      margin-bottom: 3rem;
+      margin-bottom: variables.$m-2xl;
     }
 
     &--last {
-      padding: 1.5rem 0;
+      padding: variables.$m-lg 0;
     }
   }
 
@@ -97,17 +89,13 @@
   &__figure {
     display: grid;
     grid-template-columns: 6rem auto;
-    grid-gap: 1.5rem;
+    grid-gap: variables.$m-lg;
   }
 
   &__image {
     border: 1px solid var(--color-border-default);
     height: auto;
     width: calc(6rem - 8px);
-
-    .js-is-darkmode & {
-      border-color: var(--color-border-default);
-    }
   }
 
   &__caption {
@@ -132,7 +120,7 @@
     &__item {
       display: inline-block;
       font-size: 1.2rem;
-      margin-right: 1rem;
+      margin-right: variables.$m-md;
       @media screen and (min-width: variables.$width-small) {
         display: block;
         margin-right: 0;

@@ -15,7 +15,6 @@ import {
   transformerMetaHighlight,
   transformerMetaWordHighlight,
 } from "@shikijs/transformers";
-import { rendererClassic, transformerTwoslash } from "@shikijs/twoslash";
 import rehypeStringify from "rehype-stringify";
 import { unified } from "unified";
 import customDark from "./themes/dark.json";
@@ -93,186 +92,229 @@ export const getSinglePost = (slug: string, folder: string) => {
   };
 };
 
-function transformerCopyButton() {
+function transformerDiffLines() {
   return {
-    name: 'copy-button',
-    pre(node: any) {
-      // Create copy icon SVG as HAST nodes
-      const copyIcon = {
-        type: 'element',
-        tagName: 'svg',
-        properties: {
-          class: 'copy-icon',
-          xmlns: 'http://www.w3.org/2000/svg',
-          width: '16',
-          height: '16',
-          viewBox: '0 0 24 24',
-          fill: 'none',
-          stroke: 'currentColor',
-          strokeWidth: '2',
-          strokeLinecap: 'round',
-          strokeLinejoin: 'round'
-        },
-        children: [
-          {
-            type: 'element',
-            tagName: 'rect',
-            properties: {
-              width: '14',
-              height: '14',
-              x: '8',
-              y: '8',
-              rx: '2',
-              ry: '2'
-            },
-            children: []
-          },
-          {
-            type: 'element',
-            tagName: 'path',
-            properties: {
-              d: 'M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2'
-            },
-            children: []
+    name: 'diff-lines',
+    code(node: any) {
+      // Process each line in the code block
+      node.children?.forEach((line: any) => {
+        if (!line.children || line.children.length === 0) return;
+        
+        // Get the text content of the first child
+        let firstText = '';
+        const getFirstText = (element: any): string => {
+          if (element.type === 'text') return element.value;
+          if (element.children && element.children.length > 0) {
+            return getFirstText(element.children[0]);
           }
-        ]
-      };
-
-      // Create check icon SVG as HAST nodes
-      const checkIcon = {
-        type: 'element',
-        tagName: 'svg',
-        properties: {
-          class: 'check-icon',
-          xmlns: 'http://www.w3.org/2000/svg',
-          width: '16',
-          height: '16',
-          viewBox: '0 0 24 24',
-          fill: 'none',
-          stroke: 'currentColor',
-          strokeWidth: '2',
-          strokeLinecap: 'round',
-          strokeLinejoin: 'round'
-        },
-        children: [
-          {
-            type: 'element',
-            tagName: 'path',
-            properties: {
-              d: 'M20 6 9 17l-5-5'
-            },
-            children: []
+          return '';
+        };
+        
+        firstText = getFirstText(line.children[0]);
+        
+        // Check if line starts with + or -
+        if (firstText.startsWith('+')) {
+          // Add diff add class
+          if (!line.properties) line.properties = {};
+          if (!line.properties.class) line.properties.class = [];
+          if (Array.isArray(line.properties.class)) {
+            line.properties.class.push('diff', 'add');
+          } else {
+            line.properties.class = [line.properties.class, 'diff', 'add'];
           }
-        ]
-      };
-      
-      const button = {
-        type: 'element',
-        tagName: 'button',
-        properties: {
-          class: 'shiki-copy-button',
-          'aria-label': 'Copy code',
-          'data-copied': 'false',
-          title: 'Copy code',
-          onclick: `
-            const code = this.parentElement.querySelector('code').textContent;
-            navigator.clipboard.writeText(code);
-            this.setAttribute('data-copied', 'true');
-            this.setAttribute('aria-label', 'Copied!');
-            this.setAttribute('title', 'Copied!');
-            setTimeout(() => {
-              this.setAttribute('data-copied', 'false');
-              this.setAttribute('aria-label', 'Copy code');
-              this.setAttribute('title', 'Copy code');
-            }, 2000);
-          `.replace(/\s+/g, ' ').trim()
-        },
-        children: [copyIcon, checkIcon]
-      };
-
-      node.children = [button, ...node.children];
+        } else if (firstText.startsWith('-')) {
+          // Add diff remove class
+          if (!line.properties) line.properties = {};
+          if (!line.properties.class) line.properties.class = [];
+          if (Array.isArray(line.properties.class)) {
+            line.properties.class.push('diff', 'remove');
+          } else {
+            line.properties.class = [line.properties.class, 'diff', 'remove'];
+          }
+        }
+      });
+    },
+    pre(node: any, options: any) {
+      // Add data-language attribute for CSS targeting
+      if (options?.lang === 'diff') {
+        node.properties = {
+          ...node.properties,
+          'data-language': 'diff'
+        };
+      }
     }
   };
 }
+
 
 function transformerTitle() {
   return {
     name: 'title',
-    preprocess(code: string, options: any) {
-      const match = code.match(/^\/\/\s*@title:\s*(.+)\n/);
-      if (match && options) {
-        options.meta = { ...options.meta, title: match[1] };
-        return code.replace(match[0], '');
-      }
-      return code;
+    preprocess(code, options) {
+      if (!code.includes('[title:')) return code;
+      
+      const lines = code.split('\n');
+      const firstLine = lines[0];
+      
+      const titleStart = firstLine.indexOf('[title:');
+      const titleEnd = firstLine.indexOf(']', titleStart);
+      
+      if (titleStart === -1 || titleEnd <= titleStart) return code;
+      
+      const isComment = firstLine.startsWith('//') || 
+                       firstLine.startsWith('#') || 
+                       firstLine.startsWith('/*');
+      
+      if (!isComment || !options) return code;
+      
+      const title = firstLine.slice(titleStart + 7, titleEnd).trim();
+      options.meta = { ...options.meta, title };
+      return lines.slice(1).join('\n');
     },
-    pre(node: any, options: any) {
-      if (!options) return;
-      const meta = options.meta;
-      if (meta?.title) {
-        const titleNode = {
-          type: 'element',
-          tagName: 'div',
-          properties: { class: 'shiki-title' },
-          children: [{ type: 'text', value: meta.title }]
-        };
-        node.children = [titleNode, ...node.children];
-      }
+    pre(node) {
+      if (!node.properties) node.properties = {};
+      
+      const title = node.properties.title;
+      if (!title) return;
+      
+      const titleNode = {
+        type: 'element',
+        tagName: 'div',
+        properties: { class: 'shiki-title' },
+        children: [{ type: 'text', value: title }]
+      };
+      
+      node.children = [titleNode, ...node.children];
+      delete node.properties.title;
     }
   };
 }
 
-function transformerLanguageBadge() {
+function transformerCodeWrapper() {
   return {
-    name: 'language-badge',
-    pre(node: any, options: any) {
-      if (!options) return;
-      const lang = options.lang;
-      if (lang && lang !== 'text') {
-        const badge = {
+    name: 'code-wrapper',
+    root(root) {
+      let codeBlockId = 0;
+      
+      root.children = root.children.map(node => {
+        if (node.type !== 'element' || node.tagName !== 'pre') return node;
+        if (!node.properties?.class?.includes('shiki')) return node;
+        
+        // Generate unique ID for this code block
+        const blockId = `code-block-${++codeBlockId}`;
+        
+        // Extract title from the pre's children
+        let titleElement = null;
+        const codeChildren = [];
+        
+        node.children.forEach(child => {
+          if (child.properties?.class === 'shiki-title') {
+            titleElement = child;
+          } else {
+            codeChildren.push(child);
+          }
+        });
+        
+        // Rebuild the pre with only code content and add ID
+        node.children = codeChildren;
+        node.properties = { ...node.properties, id: blockId };
+        
+        // Build header with placeholder for copy button
+        const headerChildren = [];
+        
+        // Add title if present
+        if (titleElement) {
+          headerChildren.push(titleElement);
+        }
+        
+        // Create a placeholder for the copy button (will be on the right)
+        const copyButtonPlaceholder = {
           type: 'element',
           tagName: 'div',
-          properties: { class: 'shiki-language-badge' },
-          children: [{ type: 'text', value: lang.toUpperCase() }]
+          properties: { 
+            class: 'copy-button-placeholder',
+            'data-code-id': blockId
+          },
+          children: []
         };
-        node.children = [...node.children, badge];
-      }
+        headerChildren.push(copyButtonPlaceholder);
+        
+        // Build wrapper structure
+        const wrapperChildren = [];
+        
+        // Create a header if we have title
+        if (titleElement) {
+          const header = {
+            type: 'element',
+            tagName: 'div',
+            properties: { class: 'shiki-header' },
+            children: headerChildren
+          };
+          wrapperChildren.push(header);
+        }
+        
+        // Always add copy button placeholder
+        wrapperChildren.push(copyButtonPlaceholder);
+        
+        wrapperChildren.push(node); // Add the pre element
+        
+        return {
+          type: 'element',
+          tagName: 'div',
+          properties: { class: 'shiki-wrapper' },
+          children: wrapperChildren
+        };
+      });
+      
+      return root;
     }
   };
 }
+
 
 function transformerTooltip() {
   return {
     name: 'tooltip',
-    code(node: any) {
-      node.children = node.children.map((line: any) => {
-        if (line.type === 'element' && line.children) {
-          line.children = line.children.map((child: any) => {
-            if (child.type === 'text') {
-              const tooltipMatch = child.value.match(/\/\/\s*\[([^\]]+)\]:\s*(.+)$/);
-              if (tooltipMatch) {
-                const [, text, tooltip] = tooltipMatch;
-                return {
-                  type: 'element',
-                  tagName: 'span',
-                  properties: {
-                    class: 'shiki-tooltip',
-                    'data-tooltip': tooltip.trim()
-                  },
-                  children: [{ type: 'text', value: text }]
-                };
-              }
-            }
-            return child;
-          });
-        }
-        return line;
+    code(node) {
+      node.children.forEach(line => {
+        if (!line.children) return;
+        
+        line.children = line.children.map(child => {
+          if (child.type !== 'text') return child;
+          
+          const tooltipIndex = child.value.indexOf('[tooltip:');
+          if (tooltipIndex === -1) return child;
+          
+          const endIndex = child.value.indexOf(']', tooltipIndex);
+          if (endIndex === -1) return child;
+          
+          const tooltip = child.value.slice(tooltipIndex + 9, endIndex).trim();
+          const beforeTooltip = child.value.slice(0, tooltipIndex).trimEnd();
+          
+          return {
+            type: 'element',
+            tagName: 'span',
+            properties: {
+              class: 'shiki-tooltip',
+              'data-tooltip': tooltip
+            },
+            children: [{ type: 'text', value: beforeTooltip }]
+          };
+        });
       });
     }
   };
 }
 
 export const markdownToHtml = async (markdown: string) => {
+  // Extract languages from markdown code blocks
+  const codeBlockRegex = /```(\w+)/g;
+  const languages: string[] = [];
+  let match;
+  while ((match = codeBlockRegex.exec(markdown)) !== null) {
+    languages.push(match[1]);
+  }
+  
   const result = await unified()
     .use(remarkParse, { allowDangerousHtml: true })
     .use(remarkRehype)
@@ -282,6 +324,7 @@ export const markdownToHtml = async (markdown: string) => {
         light: customLight,
       },
       transformers: [
+        transformerTitle(),
         transformerNotationDiff(),
         transformerNotationHighlight(),
         transformerNotationWordHighlight(),
@@ -290,17 +333,27 @@ export const markdownToHtml = async (markdown: string) => {
         transformerMetaHighlight(),
         transformerMetaWordHighlight(),
         transformerColorizedBrackets(),
-        transformerTwoslash({
-          explicitTrigger: true,
-          renderer: rendererClassic(),
-        }),
-        transformerCopyButton(),
-        transformerTitle(),
-        transformerLanguageBadge(),
+        transformerDiffLines(),
         transformerTooltip(),
+        transformerCodeWrapper(), // Original wrapper
       ],
     })
     .use(rehypeStringify)
     .process(markdown);
-  return result.toString();
+  
+  let html = result.toString();
+  
+  // Post-process: inject languages into the shiki-wrapper divs (after the header, before the copy button)
+  let langIndex = 0;
+  
+  html = html.replace(/<div class="shiki-wrapper">([\s\S]*?)<div class="copy-button-placeholder"/g, (match, content) => {
+    const lang = languages[langIndex++];
+    if (lang && lang !== 'text') {
+      // Insert language badge before the copy button placeholder
+      return `<div class="shiki-wrapper">${content}<div class="shiki-language">${lang.toUpperCase()}</div><div class="copy-button-placeholder"`;
+    }
+    return match;
+  });
+  
+  return html;
 };

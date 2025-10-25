@@ -1,3 +1,6 @@
+@use "variables";
+
+// Base pre styles
 pre[data-line] {
   position: relative;
 }
@@ -7,143 +10,374 @@ pre[class*="language-"] > code[class*="language-"] {
   z-index: 1;
 }
 
-.line {
-  background: var(--code-line-bg);
-  .js-is-darkmode & {
-    background: var(--code-line-bg);
-  }
-}
-
 .post__content > pre {
   overflow-y: auto;
 }
 
-.shiki .line {
+// Basic line styles
+.line {
+  background: var(--code-line-bg);
   font-size: var(--font-size-base);
   line-height: var(--line-height-loose);
 }
 
+// Main Shiki container
 .shiki {
-  border-radius: var(--code-border-radius);
-  display: flex;
-  margin: 2rem 0;
-  .js-is-darkmode & {
-    background: var(--code-bg) !important;
-  }
-}
-
-.shiki code {
+  position: relative;
   display: block;
-  margin: var(--spacing-lg) 0;
+  margin: variables.$m-xl 0;
+  border-radius: var(--code-border-radius);
+  overflow-x: auto;
+  overflow-y: hidden;
+  color: var(--code-text-light);
+  background: var(--code-bg) !important;
 }
 
-code {
+// Shiki code element
+.shiki code {
+  display: table;
+  margin: 0;
+  padding: 2.5rem 0 variables.$m-lg 0;
+  width: 100%;
+  min-width: 100%;
+  table-layout: fixed;
   counter-reset: step;
   counter-increment: step 0;
 }
 
-code .line:before {
-  content: counter(step);
-  counter-increment: step;
-  width: 1rem;
-  margin: 0 0.5rem 0 1rem;
-  display: inline-block;
-  text-align: right;
-  color: var(--code-line-number);
-  .js-is-darkmode & {
+// Code lines with numbering
+code .line {
+  display: table-row;
+  
+  &::before {
+    content: counter(step);
+    counter-increment: step;
+    display: table-cell;
+    width: 2.5rem;
+    min-width: 2.5rem;
+    padding-right: variables.$m-sm;
+    text-align: right;
     color: var(--code-line-number);
+    position: sticky;
+    left: 0;
+    background: inherit;
+    user-select: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+    .js-is-darkmode & {
+      border-right-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  > span:first-of-type {
+    padding-left: 0.75rem;
   }
 }
 
-// Copy button styles
+// Span color inheritance
+.shiki span {
+  color: inherit;
+}
+
+// Fix black text in code
+.shiki span[style*="color:#000000"],
+.shiki span[style*="color: #000000"] {
+  color: var(--code-text-light) !important;
+}
+
+// Wrapper container
+.shiki-wrapper {
+  position: relative;
+  margin: variables.$m-xl 0;
+  border-radius: var(--code-border-radius);
+  overflow: hidden;
+  border: 1px solid var(--color-border-light);
+
+  .shiki {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+  }
+}
+
+// Header bar
+.shiki-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: variables.$m-sm variables.$m-md;
+  background: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border-light);
+  position: relative;
+}
+
+// Title in header
+.shiki-title {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: 0.875rem;
+  font-family: var(--font-mono, monospace);
+  flex: 1;
+  margin-left: variables.$m-sm;
+}
+
+// Language badge
+.shiki-language {
+  position: absolute;
+  top: variables.$m-2xl;
+  left: variables.$m-lg;
+  z-index: 10;
+  padding: variables.$m-xs variables.$m-sm;
+  background: var(--code-language-bg);
+  color: var(--code-language-text);
+  font-size: 0.75rem;
+  border-radius: variables.$radius-sm;
+  font-family: var(--font-mono, monospace);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+// Copy button
 .shiki-copy-button {
   position: absolute;
-  top: 0.75rem;
+  top: variables.$m-2xl;
   right: 0.75rem;
-  padding: 0.5rem;
+  z-index: 10;
+  padding: variables.$m-xs variables.$m-sm;
+  height: 28px;
   background: rgba(255, 255, 255, 0.9);
   color: var(--color-text-secondary);
   border: 1px solid var(--color-border-light);
-  border-radius: 0.375rem;
+  border-radius: variables.$radius-sm;
   cursor: pointer;
   transition: all 0.2s ease;
-  z-index: 10;
   outline: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  
+
+  .js-is-darkmode & {
+    background: rgba(30, 41, 59, 0.9);
+  }
+
   &:hover {
     background: var(--color-bg-primary);
     color: var(--color-text-primary);
     border-color: var(--color-border-default);
     transform: translateY(-1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .js-is-darkmode & {
+      background: var(--color-bg-secondary);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
   }
-  
+
   &:active {
     transform: translateY(0);
   }
-  
+
   &:focus-visible {
     box-shadow: var(--shadow-focus);
   }
-  
-  // Icon styling
+
+  &[data-copied="true"] {
+    background: var(--code-add-bg);
+    border-color: var(--code-add-text);
+
+    .copy-icon {
+      display: none;
+    }
+
+    .check-icon {
+      display: block;
+      color: var(--code-add-text);
+
+      .js-is-darkmode & {
+        color: #4ade80;
+      }
+    }
+  }
+
   svg {
     width: 16px;
     height: 16px;
     display: block;
   }
-  
-  // Show/hide icons based on state
+
   .copy-icon {
     display: block;
   }
-  
+
   .check-icon {
     display: none;
-    color: #22c55e;
   }
-  
-  &[data-copied="true"] {
-    background: rgba(34, 197, 94, 0.1);
-    border-color: #22c55e;
-    
-    .copy-icon {
-      display: none;
-    }
-    
-    .check-icon {
-      display: block;
+}
+
+// Adjust positions when no header
+.shiki-wrapper:not(:has(.shiki-header)) {
+  .shiki-language,
+  .shiki-copy-button {
+    top: 0.75rem;
+  }
+}
+
+// Tooltip
+.shiki-tooltip {
+  position: relative;
+  border-bottom: 1px dotted var(--color-text-secondary, #666);
+  cursor: help;
+
+  &:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: variables.$m-sm;
+    background: var(--color-bg-secondary, #333);
+    color: var(--color-text-primary, #fff);
+    border-radius: variables.$radius-sm;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: variables.$m-xs;
+  }
+}
+
+// Base diff line
+.diff {
+  position: relative;
+  display: table-row;
+  width: 100%;
+}
+
+// Diff add styles
+.diff.add {
+  background: var(--code-add-bg) !important;
+
+  &::before {
+    content: '+' counter(step);
+    background: var(--code-add-bg-strong) !important;
+    color: var(--code-add-text) !important;
+    font-weight: 600;
+  }
+}
+
+// Diff remove styles
+.diff.remove {
+  background: var(--code-remove-bg) !important;
+  opacity: 0.9;
+
+  &::before {
+    content: '-' counter(step);
+    background: var(--code-remove-bg-strong) !important;
+    color: var(--code-remove-text) !important;
+    font-weight: 600;
+  }
+}
+
+// Diff language detection by Shiki colors
+.shiki[data-language="diff"] .line {
+  &:has(> span:first-child[style*="#007CF0"]) {
+    background: var(--code-add-bg) !important;
+
+    &::before {
+      content: '+' counter(step);
+      background: var(--code-add-bg-strong) !important;
+      color: var(--code-add-text) !important;
+      font-weight: 600;
     }
   }
-  
-  .js-is-darkmode & {
-    background: rgba(30, 41, 59, 0.9);
-    color: var(--color-text-secondary);
-    border-color: var(--color-border-default);
-    
-    &:hover {
-      background: var(--color-bg-secondary);
-      color: var(--color-text-primary);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-    
-    &[data-copied="true"] {
-      background: rgba(34, 197, 94, 0.15);
-      border-color: #22c55e;
-      
-      .check-icon {
-        color: #4ade80;
-      }
+
+  &:has(> span:first-child[style*="#E2657E"]) {
+    background: var(--code-remove-bg) !important;
+    opacity: 0.9;
+
+    &::before {
+      content: '-' counter(step);
+      background: var(--code-remove-bg-strong) !important;
+      color: var(--code-remove-text) !important;
+      font-weight: 600;
     }
   }
 }
 
-// Ensure shiki container has position relative for absolute copy button
-.shiki {
+// Line highlighting
+.highlighted {
+  background-color: var(--code-highlight-bg);
   position: relative;
+  display: table-row;
+  border-left: 3px solid var(--code-highlight-border);
+}
+
+// Word highlighting
+.highlighted-word {
+  background-color: rgba(251, 191, 36, 0.2);
+  padding: 0.125rem variables.$m-xs;
+  border-radius: variables.$radius-sm;
+  border-bottom: 2px solid #f59e0b;
+
+  .js-is-darkmode & {
+    background-color: rgba(251, 191, 36, 0.25);
+    border-bottom-color: #fbbf24;
+  }
+}
+
+// Focus states
+.has-focused .line:not(.focused) {
+  opacity: 0.5;
+  filter: blur(0.5px);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.has-focused .line.focused {
+  background-color: rgba(139, 92, 246, 0.05);
+  position: relative;
+  display: table-row;
+  
+  .js-is-darkmode & {
+    background-color: rgba(139, 92, 246, 0.1);
+  }
+}
+
+// Error annotations
+.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-bottom: 2px wavy #ef4444;
+  position: relative;
+  
+  .js-is-darkmode & {
+    background-color: rgba(239, 68, 68, 0.15);
+    border-bottom-color: #f87171;
+  }
+  
+  &::after {
+    content: '⚠';
+    position: absolute;
+    right: -1.5rem;
+    color: #ef4444;
+    font-size: 0.875rem;
+  }
+}
+
+// Warning annotations
+.warning {
+  background-color: rgba(251, 191, 36, 0.1);
+  border-bottom: 2px wavy #f59e0b;
+  position: relative;
+  
+  .js-is-darkmode & {
+    background-color: rgba(251, 191, 36, 0.15);
+    border-bottom-color: #fbbf24;
+  }
+  
+  &::after {
+    content: '⚠';
+    position: absolute;
+    right: -1.5rem;
+    color: #f59e0b;
+    font-size: 0.875rem;
+  }
 }

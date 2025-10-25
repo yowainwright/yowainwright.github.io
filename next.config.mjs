@@ -13,6 +13,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: [],
   },
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
 };
 
 export default nextConfig;
