@@ -178,7 +178,7 @@ const Post = ({ content, frontmatter, slug }: PostProps) => {
   return (
     <>
       <Head>
-        <title>{title} | Jeffry.in</title>
+        <title>{`${title} | Jeffry.in`}</title>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />

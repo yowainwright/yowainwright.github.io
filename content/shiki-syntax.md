@@ -1,25 +1,27 @@
 ---
-title: "Shiki Syntax Highlighting: More features for markdown for markdown"
+title: "Shiki Syntax Highlighting: More features for markdown"
 date: 2025-08-31
-path: content/shiki-syntax
-description: "Comprehensive Shiki syntax highlighting with custom themes, diff notation, line highlighting, focus modes, error annotations, and interactive copy buttons."
-tags: ["Shiki", "Syntax Highlighting"]
+path: /shiki-syntax
+meta: "Comprehensive Shiki syntax highlighting implementation with custom themes, diff notation, line highlighting, focus modes, error annotations, interactive copy buttons, and optimized Sass architecture using a scalable variable system."
+tags: ["Shiki", "Syntax Highlighting", "Sass", "CSS", "Performance"]
 ---
 
-[Shiki](https://shiki.matsu.io/)'s been used on this site site for some time. But it was missing a few things Shiki provides that I wanted to implement including, language badges
+[Shiki](https://shiki.matsu.io/)'s been used on this site for some time. ^^But it was missing several key features that Shiki provides out of the box, including language badges, custom transformers for enhanced metadata, and more granular control over code block styling.^^
+
 ## TL;DR
 
-Jeffry.in is updated with slightly more advanced Shiki codeblocks, including:
-- **Custom transformers** for titles, diffs, and tooltips
+`https://jeffry.in` is updated with Shiki codeblocks, including:
+
+- **Transformers for** for titles, diffs, and tooltips
 - **Enhanced CSS** with sticky line numbers and proper dark mode support
-- **Simplified Giscus integration** using built-in themes
-- **Performance optimizations** with Next.js dynamic imports
+- **Simplified Giscus integration** using built-in themes, and
+- **Performance optimizations** with [Next.js](https://nextjs.org/) dynamic imports
 
 ---
 
 ## Syntax Highlighting Overview
 
-Let's start with a simple example. In code block below, you will "hopefully" observe, a title, the languages, a copy button and syntax highlighting.
+Here's a simple example. In code block below, you'll observe, a title, the languages, a copy button and Shiki syntax highlighting.
 
 ```javascript
 // [title: Basic JavaScript Example]
@@ -36,13 +38,9 @@ console.log(`Sum: ${calculateSum(numbers)}`);
 
 ## Language Support
 
-Shiki supports numerous programming languages. Here are some examples. 
-I've become accustom to being able to add earmarks, the language, and then seeing syntax for that language.
-Shiki provides this sort of support out of the box. 
-
-However, I wanted to add the language as a badge which was harder to do than expected. 
-I found even though I could get that information from Shiki, I wasn't able to add it to headers as easily as I would have liked.
-The reason for this is Shiki's transforms and what data is available and when...
+Shiki supports multiple programming languages out of the box. However, I wanted to add the language as a badge which was harder than expected.
+I found I could view that information from Shiki but I wasn't able to hoist it to code block headers as easily as I would have liked.
+Shiki's transformer architecture transformers and executes at different stages of the rendering pipeline, and language metadata isn't always accessible in the pre-processing phase where it can be injected into header elements. `code()` and `preprocess()` hooks run at different times, and getting data to flow between them requires a little state management through the options object.
 
 ### TypeScript with Type Annotations
 
@@ -70,7 +68,7 @@ class UserService {
 const service = new UserService();
 ```
 
-But, with a little work, I was able to hack my way to things that I wanted.
+I was able to hack my way to the functionality I wanted. The key was creating a custom transformer that stores language information in the root node's data attributes during the `root()` phase, then injecting the badge element during the `pre()` phase when the parent container is available. This approach ensures the language badge appears in the header alongside titles and other metadata.^^
 
 ### With Python Example
 
@@ -378,98 +376,31 @@ function transformerDiffLines() {
 
 ### 3. Improved CSS Architecture
 
-Rewrote the code block styles for better structure and dark mode support:
+Rewrote the code block styles with:
+- Table-based layout for proper line numbering
+- Sticky positioning for line numbers during scroll
+- Dark mode support with CSS custom properties
+- Optimized Sass using scalable variable system (`$m-*` sizing, `$radius-*` for borders)
 
-```scss
-// [title: styles/_code.scss - Enhanced Shiki Styles]
-// Main container with proper overflow handling
-.shiki {
-  position: relative;
-  display: block;
-  margin: 2rem 0;
-  border-radius: var(--code-border-radius);
-  overflow-x: auto;
-  overflow-y: hidden;
-  
-  // Dark mode background override
-  .js-is-darkmode & {
-    background: var(--code-bg) !important;
-  }
-}
+### 4. Giscus Theme & Dynamic Import Improvements
 
-// Table-based layout for proper line numbering
-.shiki code {
-  display: table;
-  width: 100%;
-  min-width: 100%;
-  table-layout: fixed;
-  counter-reset: step;
-}
+- Switched from custom-hosted CSS to built-in Giscus themes (`dark`/`light`)
+- Replaced lazy loading with Next.js dynamic imports for better SSR handling
+- Added proper loading states and error boundaries
 
-// Line numbers with sticky positioning
-code .line {
-  display: table-row;
-  
-  &::before {
-    content: counter(step);
-    counter-increment: step;
-    display: table-cell;
-    width: 2.5rem;
-    position: sticky;
-    left: 0;
-    text-align: right;
-    user-select: none;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-  }
-}
+## ^^Key Challenges and Lessons Learned^^
 
-// Copy button positioning
-.shiki-copy-button {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  z-index: 10;
-  
-  &[data-copied="true"] {
-    background: rgba(34, 197, 94, 0.1);
-    border-color: #22c55e;
-  }
-}
-```
+^^Throughout this implementation, several challenges emerged that required creative solutions:^^
 
-### 4. Giscus Theme Simplification
+^^**1. Transformer Execution Order** - Understanding when each transformer hook executes was crucial. The `preprocess()` hook runs before tokenization, `code()` during rendering, and `pre()` after the code block is assembled. Getting data to flow between these stages required careful use of the options object and node properties.^^
 
-Switched from custom-hosted Giscus CSS themes to built-in theme names:
+^^**2. React Hydration Issues** - Initially, server-rendered copy buttons would fail to hydrate properly in Next.js. The solution was to use placeholders during SSR and dynamically mount React components client-side using a MutationObserver to detect new code blocks.^^
 
-```diff
-// [title: pages/[slug].tsx - Giscus Theme Update]
-- const THEME_DARK = "https://yowainwright.imgix.net/jeffry.in.giscus.dark.css";
-- const THEME_LIGHT = "https://yowainwright.imgix.net/jeffry.in.giscus.light.css";
-+ const THEME_DARK = "dark";
-+ const THEME_LIGHT = "light";
-```
+^^**3. Sticky Positioning in Tables** - Achieving sticky line numbers while maintaining proper code alignment required switching from a flex layout to a table-based layout. This allowed line numbers to remain visible during horizontal scrolling while the code content scrolls naturally.^^
 
-### 5. Dynamic Import Strategy
+^^**4. Dark Mode Background Overrides** - Shiki applies inline background colors from its themes, which can override CSS custom properties. The solution was using `!important` flags specifically scoped to dark mode contexts, ensuring the theme background is properly overridden.^^
 
-Replaced lazy loading with Next.js dynamic imports for better SSR handling:
-
-```diff
-// [title: pages/[slug].tsx - Dynamic Import Change]
-- const GiscusComponent = lazy(() => 
--   import("@giscus/react")
--     .then(module => ({
--       default: module.default || module.Giscus || module
--     }))
-- );
-
-+ const GiscusComponent = dynamic(
-+   () => import("@giscus/react"),
-+   { 
-+     ssr: false,
-+     loading: () => <GiscusLoadingFallback />
-+   }
-+ );
-```
+^^**5. Copy Button State Management** - Managing the copied state across multiple code blocks required generating unique IDs for each block and ensuring the React components properly tracked which block was just copied from. The `data-code-id` attribute system solved this cleanly.^^
 
 ## Conclusion
 
@@ -481,61 +412,14 @@ The enhanced Shiki implementation now provides:
 4. **Dark Mode Support** - Seamless theme switching with custom color overrides
 5. **Performance Optimizations** - Efficient dynamic imports and debounced DOM observations
 
-These improvements make code blocks more readable and functional across all devices and themes.
+^^These improvements make code blocks more readable, functional, and interactive across all devices and themes. The combination of Shiki's powerful syntax highlighting engine with custom transformers and React-based interactivity creates a robust solution that handles everything from simple code snippets to complex examples with annotations, highlighting, and diff notation.^^
 
-## CSS Implementation Details
+^^For developers looking to implement similar features, the key takeaways are:^^
+^^- Invest time in understanding Shiki's transformer lifecycle - it's more flexible than it initially appears^^
+^^- Use React's dynamic mounting capabilities for interactive elements that need state management^^
+^^- Don't fight against inline styles - work with them using scoped overrides when necessary^^
+^^- Test thoroughly across SSR and CSR scenarios to catch hydration mismatches early^^
 
-Here's a look at some of the custom CSS that powers the Shiki integration:
+^^The result is a code highlighting system that not only looks great but also provides the interactive features modern technical documentation demands.^^
 
-```scss
-// [title: Core Shiki Styles]
-.shiki {
-  border-radius: var(--code-border-radius);
-  display: flex;
-  margin: 2rem 0;
-  position: relative;
-  
-  .js-is-darkmode & {
-    background: var(--code-bg) !important;
-  }
-}
-
-.shiki-copy-button {
-  position: sticky;
-  top: 0.75rem;
-  right: 0.75rem;
-  padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 0.375rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  z-index: 10;
-  
-  &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  &[data-copied="true"] {
-    background: rgba(34, 197, 94, 0.1);
-    border-color: #22c55e;
-    
-    .check-icon {
-      display: block;
-      color: #4ade80;
-    }
-  }
-}
-
-code .line:before {
-  content: counter(step);
-  counter-increment: step;
-  width: 1rem;
-  margin: 0 0.5rem 0 1rem;
-  display: inline-block;
-  text-align: right;
-  color: var(--code-line-number);
-}
-```
-
-This comprehensive implementation ensures that code snippets are not just functional but also beautiful and user-friendly across all devices and themes.
+This comprehensive implementation ensures that code snippets are not just functional but also beautiful and user-friendly across all devices and themes, with optimized Sass using a scalable variable system for maintainability.
