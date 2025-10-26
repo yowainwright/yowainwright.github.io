@@ -6,22 +6,21 @@ meta: "Comprehensive Shiki syntax highlighting implementation with custom themes
 tags: ["Shiki", "Syntax Highlighting", "Sass", "CSS", "Performance"]
 ---
 
-[Shiki](https://shiki.matsu.io/)'s been used on this site for some time. ^^But it was missing several key features that Shiki provides out of the box, including language badges, custom transformers for enhanced metadata, and more granular control over code block styling.^^
+[Shiki](https://shiki.matsu.io/)'s been used on this blog for some time. But it was missing several features that Shiki provides, including language badges, custom transformers for enhanced metadata, and more granular control over code block styling.
 
 ## TL;DR
 
 `https://jeffry.in` is updated with Shiki codeblocks, including:
 
-- **Transformers for** for titles, diffs, and tooltips
-- **Enhanced CSS** with sticky line numbers and proper dark mode support
-- **Simplified Giscus integration** using built-in themes, and
+- **Shiki Transformers** for titles, diffs, and tooltips
+- **Simplified Giscus integration** using built-in themes
 - **Performance optimizations** with [Next.js](https://nextjs.org/) dynamic imports
 
 ---
 
 ## Syntax Highlighting Overview
 
-Here's a simple example. In code block below, you'll observe, a title, the languages, a copy button and Shiki syntax highlighting.
+Here's a simple example. In the code block below, observe a title, the language badge, a copy button, and Shiki syntax highlighting.
 
 ```javascript
 // [title: Basic JavaScript Example]
@@ -38,99 +37,58 @@ console.log(`Sum: ${calculateSum(numbers)}`);
 
 ## Language Support
 
-Shiki supports multiple programming languages out of the box. However, I wanted to add the language as a badge which was harder than expected.
-I found I could view that information from Shiki but I wasn't able to hoist it to code block headers as easily as I would have liked.
-Shiki's transformer architecture transformers and executes at different stages of the rendering pipeline, and language metadata isn't always accessible in the pre-processing phase where it can be injected into header elements. `code()` and `preprocess()` hooks run at different times, and getting data to flow between them requires a little state management through the options object.
-
-### TypeScript with Type Annotations
+Shiki supports multiple programming languages. However, I wanted to add the language as a badge which was harder than I had expected.
+I found I could view language information from Shiki but I wasn't able to hoist it to code block headers.
+Shiki's architecture transforms and executes at different stages of the code rendering pipeline, and language metadata isn't always accessible in the pre-processing phase where it can be injected into header elements. `code()` and `preprocess()` hooks run at different times, and getting data to flow between them requires a little state management through the options object. See below.
 
 ```typescript
-// [title: TypeScript Example]
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  isActive: boolean;
-}
+// [title: utils.ts - Language Badge Transformer]
+function transformerLanguageBadge() {
+  return {
+    name: 'language-badge',
+    root(node) {
+      // Store language from options in root data attribute
+      const lang = this.options.lang || 'text';
+      node.properties['data-language'] = lang;
+    },
+    pre(node) {
+      // Hoist the language from options to create badge in header
+      const lang = this.options.lang || 'text';
 
-class UserService {
-  private users: User[] = [];
+      // Find or create header
+      let header = node.children.find(
+        (child) => child.type === 'element' &&
+                   child.properties?.className?.includes('code-header')
+      );
 
-  addUser(user: User): void {
-    this.users.push(user);
-  }
+      if (!header) {
+        header = {
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['code-header'] },
+          children: [],
+        };
+        node.children.unshift(header);
+      }
 
-  getActiveUsers(): User[] {
-    return this.users.filter(user => user.isActive);
-  }
-}
-
-const service = new UserService();
-```
-
-I was able to hack my way to the functionality I wanted. The key was creating a custom transformer that stores language information in the root node's data attributes during the `root()` phase, then injecting the badge element during the `pre()` phase when the parent container is available. This approach ensures the language badge appears in the header alongside titles and other metadata.^^
-
-### With Python Example
-
-```python
-# [title: Python Data Processing]
-import pandas as pd
-import numpy as np
-
-def process_data(data):
-    """Process and analyze data using pandas."""
-    df = pd.DataFrame(data)
-    
-    # Calculate statistics
-    mean_value = df['value'].mean()
-    std_dev = df['value'].std()
-    
-    return {
-        'mean': mean_value,
-        'std': std_dev,
-        'count': len(df)
+      // Add language badge to header
+      header.children.push({
+        type: 'element',
+        tagName: 'span',
+        properties: {
+          className: ['language-badge'],
+          'data-language': lang
+        },
+        children: [{ type: 'text', value: lang.toUpperCase() }],
+      });
     }
-
-# Sample data
-data = {
-    'id': [1, 2, 3, 4, 5],
-    'value': [10, 20, 15, 25, 30]
-}
-
-result = process_data(data)
-print(f"Analysis complete: {result}")
-```
-
-### With CSS example
-
-```css
-/* [title: Modern CSS Styling] */
-:root {
-  --primary-color: #3b82f6;
-  --secondary-color: #8b5cf6;
-  --spacing-unit: 1rem;
-  --border-radius: 0.5rem;
-}
-
-.card {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  padding: calc(var(--spacing-unit) * 2);
-  border-radius: var(--border-radius);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-@container (min-width: 768px) {
-  .card {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+  };
 }
 ```
+
+I created a custom transformer that stores language information in the root node's data attributes during the `root()` phase, then injects the badge element during the `pre()` phase when the parent container is available. This approach ensures the language badge appears in the header alongside titles and other metadata.
+
+## Advanced Features
 
 ### Diff Notation
 
@@ -237,35 +195,6 @@ Here's an example with long lines to demonstrate the copy button staying visible
 const veryLongConfigurationObject = { apiEndpoint: "https://api.example.com/v1/users", timeout: 5000, retryAttempts: 3, headers: { "Content-Type": "application/json", "Authorization": "Bearer token_goes_here" }, options: { enableCache: true, cacheTimeout: 3600, enableLogging: true, logLevel: "debug" } };
 
 const anotherLongLine = "This is a very long string that extends far beyond the typical viewport width to demonstrate how the syntax highlighting handles horizontal scrolling while keeping the copy button accessible and visible at all times.";
-```
-
-
-## JSON Configuration (and no title)
-
-```json
-{
-  "name": "shiki-demo",
-  "version": "1.0.0",
-  "description": "Showcasing Shiki syntax highlighting features",
-  "themes": {
-    "light": "custom-light",
-    "dark": "custom-dark"
-  },
-  "transformers": [
-    "notationDiff",
-    "notationHighlight",
-    "notationWordHighlight",
-    "notationFocus",
-    "notationErrorLevel",
-    "metaHighlight",
-    "metaWordHighlight",
-    "colorizedBrackets",
-    "twoslash",
-    "copyButton",
-    "title",
-    "languageBadge"
-  ]
-}
 ```
 
 ## Implementation Details: What Changed
@@ -388,38 +317,14 @@ Rewrote the code block styles with:
 - Replaced lazy loading with Next.js dynamic imports for better SSR handling
 - Added proper loading states and error boundaries
 
-## ^^Key Challenges and Lessons Learned^^
-
-^^Throughout this implementation, several challenges emerged that required creative solutions:^^
-
-^^**1. Transformer Execution Order** - Understanding when each transformer hook executes was crucial. The `preprocess()` hook runs before tokenization, `code()` during rendering, and `pre()` after the code block is assembled. Getting data to flow between these stages required careful use of the options object and node properties.^^
-
-^^**2. React Hydration Issues** - Initially, server-rendered copy buttons would fail to hydrate properly in Next.js. The solution was to use placeholders during SSR and dynamically mount React components client-side using a MutationObserver to detect new code blocks.^^
-
-^^**3. Sticky Positioning in Tables** - Achieving sticky line numbers while maintaining proper code alignment required switching from a flex layout to a table-based layout. This allowed line numbers to remain visible during horizontal scrolling while the code content scrolls naturally.^^
-
-^^**4. Dark Mode Background Overrides** - Shiki applies inline background colors from its themes, which can override CSS custom properties. The solution was using `!important` flags specifically scoped to dark mode contexts, ensuring the theme background is properly overridden.^^
-
-^^**5. Copy Button State Management** - Managing the copied state across multiple code blocks required generating unique IDs for each block and ensuring the React components properly tracked which block was just copied from. The `data-code-id` attribute system solved this cleanly.^^
-
 ## Conclusion
 
-The enhanced Shiki implementation now provides:
+A few challenges came up during this implementation:
 
-1. **React-Based Interactivity** - Dynamic copy button mounting with proper state management
-2. **Custom Transformers** - Title extraction, diff highlighting, and tooltip support
-3. **Improved CSS Architecture** - Table-based layout for proper line numbering and sticky positioning
-4. **Dark Mode Support** - Seamless theme switching with custom color overrides
-5. **Performance Optimizations** - Efficient dynamic imports and debounced DOM observations
+**Transformer Execution Order** - Understanding when each transformer hook executes was crucial. The `preprocess()` hook runs before tokenization, `code()` during rendering, and `pre()` after the code block is assembled. Getting data to flow between these stages required careful use of the options object and node properties.
 
-^^These improvements make code blocks more readable, functional, and interactive across all devices and themes. The combination of Shiki's powerful syntax highlighting engine with custom transformers and React-based interactivity creates a robust solution that handles everything from simple code snippets to complex examples with annotations, highlighting, and diff notation.^^
+**React Hydration Issues** - Server-rendered copy buttons failed to hydrate properly in Next.js. I solved this by using placeholders during SSR and dynamically mounting React components client-side with a MutationObserver to detect new code blocks.
 
-^^For developers looking to implement similar features, the key takeaways are:^^
-^^- Invest time in understanding Shiki's transformer lifecycle - it's more flexible than it initially appears^^
-^^- Use React's dynamic mounting capabilities for interactive elements that need state management^^
-^^- Don't fight against inline styles - work with them using scoped overrides when necessary^^
-^^- Test thoroughly across SSR and CSR scenarios to catch hydration mismatches early^^
+**Sticky Positioning in Tables** - Achieving sticky line numbers while maintaining proper code alignment required switching from a flex layout to a table-based layout. This keeps line numbers visible during horizontal scrolling while the code content scrolls naturally.
 
-^^The result is a code highlighting system that not only looks great but also provides the interactive features modern technical documentation demands.^^
-
-This comprehensive implementation ensures that code snippets are not just functional but also beautiful and user-friendly across all devices and themes, with optimized Sass using a scalable variable system for maintainability.
+**Copy Button State Management** - Managing the copied state across multiple code blocks required generating unique IDs for each block and ensuring the React components tracked which block was just copied from. The `data-code-id` attribute system solved this cleanly.

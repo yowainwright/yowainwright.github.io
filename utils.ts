@@ -190,23 +190,48 @@ function transformerTitle() {
   };
 }
 
-function transformerCodeWrapper() {
+function transformerLanguageBadge() {
   return {
-    name: 'code-wrapper',
-    root(root) {
-      let codeBlockId = 0;
-      
+    name: 'language-badge',
+    root(root, options) {
       root.children = root.children.map(node => {
         if (node.type !== 'element' || node.tagName !== 'pre') return node;
         if (!node.properties?.class?.includes('shiki')) return node;
-        
+
+        // Get the language from the data-language attribute or meta
+        const lang = node.properties['data-language'] || options?.lang || 'text';
+
+        // Store language for later use
+        node.properties['data-language'] = lang;
+
+        return node;
+      });
+
+      return root;
+    }
+  };
+}
+
+function transformerCodeWrapper() {
+  return {
+    name: 'code-wrapper',
+    root(root, options) {
+      let codeBlockId = 0;
+
+      root.children = root.children.map(node => {
+        if (node.type !== 'element' || node.tagName !== 'pre') return node;
+        if (!node.properties?.class?.includes('shiki')) return node;
+
         // Generate unique ID for this code block
         const blockId = `code-block-${++codeBlockId}`;
-        
+
+        // Get language from data-language attribute
+        const lang = node.properties['data-language'] || 'text';
+
         // Extract title from the pre's children
         let titleElement = null;
         const codeChildren = [];
-        
+
         node.children.forEach(child => {
           if (child.properties?.class === 'shiki-title') {
             titleElement = child;
@@ -214,34 +239,42 @@ function transformerCodeWrapper() {
             codeChildren.push(child);
           }
         });
-        
+
         // Rebuild the pre with only code content and add ID
         node.children = codeChildren;
         node.properties = { ...node.properties, id: blockId };
-        
+
         // Build header with placeholder for copy button
         const headerChildren = [];
-        
+
         // Add title if present
         if (titleElement) {
           headerChildren.push(titleElement);
         }
-        
+
+        // Create language badge
+        const languageBadge = {
+          type: 'element',
+          tagName: 'div',
+          properties: { class: 'shiki-language' },
+          children: [{ type: 'text', value: lang.toUpperCase() }]
+        };
+
         // Create a placeholder for the copy button (will be on the right)
         const copyButtonPlaceholder = {
           type: 'element',
           tagName: 'div',
-          properties: { 
+          properties: {
             class: 'copy-button-placeholder',
             'data-code-id': blockId
           },
           children: []
         };
         headerChildren.push(copyButtonPlaceholder);
-        
+
         // Build wrapper structure
         const wrapperChildren = [];
-        
+
         // Create a header if we have title
         if (titleElement) {
           const header = {
@@ -252,12 +285,15 @@ function transformerCodeWrapper() {
           };
           wrapperChildren.push(header);
         }
-        
+
+        // Add language badge (always)
+        wrapperChildren.push(languageBadge);
+
         // Always add copy button placeholder
         wrapperChildren.push(copyButtonPlaceholder);
-        
+
         wrapperChildren.push(node); // Add the pre element
-        
+
         return {
           type: 'element',
           tagName: 'div',
@@ -265,7 +301,7 @@ function transformerCodeWrapper() {
           children: wrapperChildren
         };
       });
-      
+
       return root;
     }
   };
@@ -306,16 +342,15 @@ function transformerTooltip() {
   };
 }
 
-export const markdownToHtml = async (markdown: string) => {
-  // Extract languages from markdown code blocks
-  const codeBlockRegex = /```(\w+)/g;
-  const languages: string[] = [];
-  let match;
-  while ((match = codeBlockRegex.exec(markdown)) !== null) {
-    languages.push(match[1]);
+// Memoized unified processor for better build performance
+let cachedProcessor: ReturnType<typeof unified> | null = null;
+
+function getProcessor() {
+  if (cachedProcessor) {
+    return cachedProcessor;
   }
-  
-  const result = await unified()
+
+  cachedProcessor = unified()
     .use(remarkParse, { allowDangerousHtml: true })
     .use(remarkRehype)
     .use(rehypeShiki, {
@@ -335,25 +370,17 @@ export const markdownToHtml = async (markdown: string) => {
         transformerColorizedBrackets(),
         transformerDiffLines(),
         transformerTooltip(),
-        transformerCodeWrapper(), // Original wrapper
+        transformerLanguageBadge(),
+        transformerCodeWrapper(),
       ],
     })
-    .use(rehypeStringify)
-    .process(markdown);
-  
-  let html = result.toString();
-  
-  // Post-process: inject languages into the shiki-wrapper divs (after the header, before the copy button)
-  let langIndex = 0;
-  
-  html = html.replace(/<div class="shiki-wrapper">([\s\S]*?)<div class="copy-button-placeholder"/g, (match, content) => {
-    const lang = languages[langIndex++];
-    if (lang && lang !== 'text') {
-      // Insert language badge before the copy button placeholder
-      return `<div class="shiki-wrapper">${content}<div class="shiki-language">${lang.toUpperCase()}</div><div class="copy-button-placeholder"`;
-    }
-    return match;
-  });
-  
-  return html;
+    .use(rehypeStringify);
+
+  return cachedProcessor;
+}
+
+export const markdownToHtml = async (markdown: string) => {
+  const processor = getProcessor();
+  const result = await processor.process(markdown);
+  return result.toString();
 };
