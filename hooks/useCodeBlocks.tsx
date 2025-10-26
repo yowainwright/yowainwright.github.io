@@ -40,11 +40,11 @@ export function useCodeBlocks() {
       const hasRelevantChanges = mutations.some(mutation => {
         const hasAddedNodes = mutation.addedNodes.length > 0;
         if (!hasAddedNodes) return false;
-        
+
         return Array.from(mutation.addedNodes).some(node => {
           if (node.nodeType !== Node.ELEMENT_NODE) return false;
           const element = node as HTMLElement;
-          return element.querySelector?.('.copy-button-placeholder') || 
+          return element.querySelector?.('.copy-button-placeholder') ||
                  element.classList?.contains('copy-button-placeholder');
         });
       });
@@ -56,8 +56,12 @@ export function useCodeBlocks() {
     };
 
     if (!observerRef.current) {
+      // Scope observer to content area instead of entire document.body
+      const contentArea = document.querySelector('.post__content');
+      const targetNode = contentArea || document.body;
+
       observerRef.current = new MutationObserver(debouncedMount);
-      observerRef.current.observe(document.body, {
+      observerRef.current.observe(targetNode, {
         childList: true,
         subtree: true,
       });

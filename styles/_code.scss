@@ -1,6 +1,20 @@
 @use "variables";
 
-// Base pre styles
+code:not(pre code) {
+  padding: 0.125rem 0.375rem;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: variables.$radius-sm;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.875em;
+  color: var(--color-text-primary);
+
+  .js-is-darkmode & {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
 pre[data-line] {
   position: relative;
 }
@@ -107,8 +121,12 @@ code .line {
   align-items: center;
   padding: variables.$m-sm variables.$m-md;
   background: var(--color-bg-secondary);
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   position: relative;
+
+  .js-is-darkmode & {
+    border-bottom-color: var(--color-border-light);
+  }
 }
 
 // Title in header
@@ -147,7 +165,7 @@ code .line {
   height: 28px;
   background: rgba(255, 255, 255, 0.9);
   color: var(--color-text-secondary);
-  border: 1px solid var(--color-border-light);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: variables.$radius-sm;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -158,6 +176,7 @@ code .line {
 
   .js-is-darkmode & {
     background: rgba(30, 41, 59, 0.9);
+    border-color: var(--color-border-light);
   }
 
   &:hover {
