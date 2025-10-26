@@ -81,6 +81,21 @@ h3 {
   }
 }
 
+.content-header {
+  cursor: pointer;
+}
+
+.heading-icon {
+  opacity: 0;
+  margin-left: 0.5rem;
+  transition: opacity 0.4s ease;
+  color: var(--color-text-primary);
+
+  .content-header:hover & {
+    opacity: 1;
+  }
+}
+
 p,
 li {
   font-size: var(--font-size-large);

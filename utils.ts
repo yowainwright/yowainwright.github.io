@@ -16,7 +16,11 @@ import {
   transformerMetaWordHighlight,
 } from "@shikijs/transformers";
 import rehypeStringify from "rehype-stringify";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { unified } from "unified";
+import { visit } from "unist-util-visit";
+import type { Element } from "hast";
 import customDark from "./themes/dark.json";
 import customLight from "./themes/light.json";
 
@@ -342,7 +346,20 @@ function transformerTooltip() {
   };
 }
 
-// Memoized unified processor for better build performance
+function addHeadingClass() {
+  return (tree: Element) => {
+    visit(tree, 'element', (node: Element) => {
+      if (/^h[1-6]$/.test(node.tagName)) {
+        node.properties = node.properties || {};
+        const classes = node.properties.className || [];
+        node.properties.className = Array.isArray(classes)
+          ? [...classes, 'content-header']
+          : [classes, 'content-header'];
+      }
+    });
+  };
+}
+
 let cachedProcessor: ReturnType<typeof unified> | null = null;
 
 function getProcessor() {
@@ -353,6 +370,16 @@ function getProcessor() {
   cachedProcessor = unified()
     .use(remarkParse, { allowDangerousHtml: true })
     .use(remarkRehype)
+    .use(rehypeSlug)
+    .use(addHeadingClass)
+    .use(rehypeAutolinkHeadings, {
+      behavior: "append",
+      properties: {
+        className: ["heading-icon-placeholder"],
+        ariaLabel: "Link to section",
+      },
+      content: [],
+    })
     .use(rehypeShiki, {
       themes: {
         dark: customDark,

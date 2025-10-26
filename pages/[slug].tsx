@@ -5,6 +5,7 @@ import { getSinglePost, getAllPosts, markdownToHtml } from "../utils";
 import { GlobalState } from "./_app";
 import { Share } from "../components/Share";
 import { useCodeBlocks } from "../hooks/useCodeBlocks";
+import { useHeadingAnchors } from "../hooks/useHeadingAnchors";
 
 // Use built-in giscus themes or custom hosted themes
 const THEME_DARK = "dark";
@@ -171,6 +172,7 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
 const Post = ({ content, frontmatter, slug }: PostProps) => {
   const state = useContext(GlobalState);
   useCodeBlocks();
+  useHeadingAnchors();
   
   const description = frontmatter?.description || frontmatter?.meta || "";
   const title = frontmatter?.title || "";
