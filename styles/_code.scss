@@ -244,25 +244,85 @@ code .line {
 // Tooltip
 .shiki-tooltip {
   position: relative;
-  border-bottom: 1px dotted var(--color-text-secondary, #666);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgba(139, 92, 246, 0.6);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
   cursor: help;
+  outline: none;
 
-  &:hover::after {
+  .js-is-darkmode & {
+    text-decoration-color: rgba(167, 139, 250, 0.7);
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration-color: rgba(139, 92, 246, 0.9);
+
+    .js-is-darkmode & {
+      text-decoration-color: rgba(167, 139, 250, 1);
+    }
+  }
+
+  &:hover::after,
+  &:focus::after {
     content: attr(data-tooltip);
-    position: absolute;
-    bottom: 100%;
+    position: fixed;
+    bottom: auto;
     left: 50%;
-    transform: translateX(-50%);
-    padding: variables.$m-sm;
-    background: var(--color-bg-secondary, #333);
-    color: var(--color-text-primary, #fff);
-    border-radius: variables.$radius-sm;
+    transform: translate(-50%, -100%) translateY(-8px);
+    padding: variables.$m-sm variables.$m-md;
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border-light);
+    border-radius: variables.$radius-md;
     font-size: 0.875rem;
     white-space: nowrap;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    margin-bottom: variables.$m-xs;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+    max-width: 300px;
+    text-align: center;
+
+    .js-is-darkmode & {
+      background: rgba(30, 41, 59, 0.98);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
   }
+
+  &:hover::before,
+  &:focus::before {
+    content: '';
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid var(--color-bg-secondary);
+    z-index: 9999;
+
+    .js-is-darkmode & {
+      border-top-color: rgba(30, 41, 59, 0.98);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(139, 92, 246, 0.5);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+.shiki-wrapper {
+  overflow: visible;
+}
+
+.shiki {
+  overflow-x: auto;
+  overflow-y: visible;
 }
 
 // Base diff line
