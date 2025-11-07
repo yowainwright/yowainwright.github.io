@@ -1,19 +1,24 @@
 import React, { useContext, useState, useEffect, Component } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 import { getSinglePost, getAllPosts, markdownToHtml } from "../utils";
 import { GlobalState } from "./_app";
 import { Share } from "../components/Share";
 import { useCodeBlocks } from "../hooks/useCodeBlocks";
 import { useHeadingAnchors } from "../hooks/useHeadingAnchors";
+import { BarChart, LineChart } from "../components/charts";
 
 // Use built-in giscus themes or custom hosted themes
 const THEME_DARK = "dark";
 const THEME_LIGHT = "light";
 
 interface PostProps {
-  content: string;
+  content?: string;
+  mdxSource?: MDXRemoteSerializeResult;
   slug: string;
+  isMdx: boolean;
   frontmatter: {
     date: string;
     title: string;
@@ -169,14 +174,19 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   );
 };
 
-const Post = ({ content, frontmatter, slug }: PostProps) => {
+const mdxComponents = {
+  BarChart,
+  LineChart,
+};
+
+const Post = ({ content, mdxSource, frontmatter, slug, isMdx }: PostProps) => {
   const state = useContext(GlobalState);
   useCodeBlocks();
   useHeadingAnchors();
-  
+
   const description = frontmatter?.description || frontmatter?.meta || "";
   const title = frontmatter?.title || "";
-  
+
   return (
     <>
       <Head>
@@ -193,10 +203,16 @@ const Post = ({ content, frontmatter, slug }: PostProps) => {
       </header>
       <section className="post__section">
         <div className="post__container">
-          <div
-            className="post__content"
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+          {isMdx && mdxSource ? (
+            <div className="post__content">
+              <MDXRemote {...mdxSource} components={mdxComponents} />
+            </div>
+          ) : (
+            <div
+              className="post__content"
+              dangerouslySetInnerHTML={{ __html: content || '' }}
+            />
+          )}
           <div className="post__giscus">
             <GiscusWrapper isDarkMode={state?.isDarkMode || false} />
           </div>
@@ -242,9 +258,17 @@ interface StaticProps {
 
 export const getStaticProps = async ({ params }: StaticProps) => {
   const data = getSinglePost(params.slug, "content");
+
+  if (data.isMdx) {
+    const mdxSource = await serialize(data.content || "");
+    return {
+      props: { ...data, mdxSource, content: null },
+    };
+  }
+
   const content = await markdownToHtml(data.content || "");
   return {
-    props: { ...data, content },
+    props: { ...data, content, mdxSource: null },
   };
 };
 

@@ -1,0 +1,247 @@
+{
+  "title": "The Software Engineer Economy: Data vs. Feelings in 2025",
+  "date": "2025-11-03",
+  "path": "/software-engineer-economy-2025",
+  "meta": "A data-driven analysis examining whether software engineers are struggling more financially in 2025: exploring job market demand, real wages vs inflation, workload trends, and AI's impact on engineering productivity and compensation.",
+  "tags": ["Career", "Economics", "Software Engineering", "AI", "Industry Analysis"],
+  "charts": [
+    {
+      "name": "employmentIndex",
+      "data": [
+        {
+          "label": "Employment Index",
+          "data": [
+            { "primary": "Jan 2018", "secondary": 100 },
+            { "primary": "Oct 2019", "secondary": 111 },
+            { "primary": "Jan 2024", "secondary": 83 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/",
+          "author": "ADP Research Institute",
+          "publication": "ADP Research"
+        }
+      ]
+    },
+    {
+      "name": "historicalEmployment",
+      "data": [
+        {
+          "label": "Software Developer Employment (Relative)",
+          "data": [
+            { "primary": "1995", "secondary": 60 },
+            { "primary": "1998", "secondary": 85 },
+            { "primary": "2000", "secondary": 100 },
+            { "primary": "2002", "secondary": 75 },
+            { "primary": "2004", "secondary": 82 },
+            { "primary": "2006", "secondary": 95 },
+            { "primary": "2008", "secondary": 98 },
+            { "primary": "2010", "secondary": 85 },
+            { "primary": "2012", "secondary": 92 },
+            { "primary": "2014", "secondary": 105 },
+            { "primary": "2016", "secondary": 115 },
+            { "primary": "2018", "secondary": 125 },
+            { "primary": "2020", "secondary": 122 },
+            { "primary": "2021", "secondary": 138 },
+            { "primary": "2022", "secondary": 145 },
+            { "primary": "2024", "secondary": 104 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.bls.gov/oes/current/oes151252.htm",
+          "author": "Bureau of Labor Statistics",
+          "publication": "U.S. Department of Labor"
+        },
+        {
+          "link": "https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/",
+          "author": "ADP Research Institute",
+          "publication": "ADP Research"
+        }
+      ]
+    },
+    {
+      "name": "burnoutCauses",
+      "data": [
+        {
+          "label": "Burnout Causes",
+          "data": [
+            { "primary": "High workloads", "secondary": 47 },
+            { "primary": "Inefficient processes", "secondary": 31 },
+            { "primary": "Unclear goals", "secondary": 29 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.itpro.com/development/software-development/360192/83-of-developers-suffer-from-burnout",
+          "author": "JetBrains",
+          "publication": "State of Developer Ecosystem 2023"
+        }
+      ]
+    },
+    {
+      "name": "hoursPerWeek",
+      "data": [
+        {
+          "label": "Average Weekly Hours",
+          "data": [
+            { "primary": "2010", "secondary": 42 },
+            { "primary": "2012", "secondary": 43 },
+            { "primary": "2014", "secondary": 44 },
+            { "primary": "2016", "secondary": 45 },
+            { "primary": "2018", "secondary": 46 },
+            { "primary": "2020", "secondary": 44 },
+            { "primary": "2021", "secondary": 47 },
+            { "primary": "2022", "secondary": 49 },
+            { "primary": "2023", "secondary": 48 },
+            { "primary": "2024", "secondary": 47 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.techneeds.com/2025/07/26/4-steps-to-understand-how-many-hours-does-a-software-engineer-work/",
+          "author": "TechNeeds",
+          "publication": "TechNeeds"
+        },
+        {
+          "link": "https://myhours.com/articles/average-work-productivity-statistics-2025",
+          "author": "MyHours",
+          "publication": "MyHours Productivity Statistics"
+        }
+      ]
+    },
+    {
+      "name": "realWages",
+      "data": [
+        {
+          "label": "Nominal Salary",
+          "data": [
+            { "primary": "2021", "secondary": 160097 },
+            { "primary": "2022", "secondary": 169000 },
+            { "primary": "2023", "secondary": 172000 }
+          ]
+        },
+        {
+          "label": "Real Wage (2021 $)",
+          "data": [
+            { "primary": "2021", "secondary": 160097 },
+            { "primary": "2022", "secondary": 156512 },
+            { "primary": "2023", "secondary": 152789 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://spectrum.ieee.org/electrical-engineer-salary-2023",
+          "author": "IEEE-USA",
+          "publication": "IEEE Spectrum"
+        },
+        {
+          "link": "https://www.levels.fyi/2022/",
+          "author": "Levels.fyi",
+          "publication": "Levels.fyi 2022 Report"
+        }
+      ]
+    },
+    {
+      "name": "aiPerceptionGap",
+      "data": [
+        {
+          "label": "Expected vs Actual",
+          "data": [
+            { "primary": "Expected Speed", "secondary": 24 },
+            { "primary": "Actual Speed", "secondary": -19 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+          "author": "METR",
+          "publication": "METR Research"
+        }
+      ]
+    },
+    {
+      "name": "salaryByLocation",
+      "data": [
+        {
+          "label": "2024 Average Salary",
+          "data": [
+            { "primary": "San Francisco", "secondary": 165000 },
+            { "primary": "Seattle", "secondary": 152000 },
+            { "primary": "New York", "secondary": 148000 },
+            { "primary": "Austin", "secondary": 135000 },
+            { "primary": "Denver", "secondary": 128000 },
+            { "primary": "Chicago", "secondary": 125000 },
+            { "primary": "Remote US", "secondary": 140000 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.levels.fyi/2024/",
+          "author": "Levels.fyi",
+          "publication": "Levels.fyi 2024 Salary Data"
+        },
+        {
+          "link": "https://www.bls.gov/oes/current/oes151252.htm",
+          "author": "Bureau of Labor Statistics",
+          "publication": "U.S. Department of Labor"
+        }
+      ]
+    },
+    {
+      "name": "globalGrowth",
+      "data": [
+        {
+          "label": "United States",
+          "data": [
+            { "primary": "2015", "secondary": 100 },
+            { "primary": "2017", "secondary": 115 },
+            { "primary": "2019", "secondary": 125 },
+            { "primary": "2021", "secondary": 138 },
+            { "primary": "2023", "secondary": 108 }
+          ]
+        },
+        {
+          "label": "India",
+          "data": [
+            { "primary": "2015", "secondary": 100 },
+            { "primary": "2017", "secondary": 145 },
+            { "primary": "2019", "secondary": 198 },
+            { "primary": "2021", "secondary": 265 },
+            { "primary": "2023", "secondary": 312 }
+          ]
+        },
+        {
+          "label": "Eastern Europe",
+          "data": [
+            { "primary": "2015", "secondary": 100 },
+            { "primary": "2017", "secondary": 135 },
+            { "primary": "2019", "secondary": 178 },
+            { "primary": "2021", "secondary": 225 },
+            { "primary": "2023", "secondary": 268 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.bls.gov/oes/current/oes151252.htm",
+          "author": "Bureau of Labor Statistics",
+          "publication": "U.S. Department of Labor"
+        },
+        {
+          "link": "https://www.statista.com/statistics/627312/worldwide-developer-population/",
+          "author": "Statista",
+          "publication": "Global Developer Population"
+        }
+      ]
+    }
+  ]
+}

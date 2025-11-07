@@ -21,6 +21,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { unified } from "unified";
 import { visit } from "unist-util-visit";
 import type { Element } from "hast";
+import { serialize } from "next-mdx-remote/serialize";
 import customDark from "./themes/dark.json";
 import customLight from "./themes/light.json";
 
@@ -30,12 +31,29 @@ export const getPath = (folder: string) =>
 export const getFileContent = (filename: string, folder: string) => {
   const contentDir = getPath(folder);
   const file = sanitize(filename);
-  return fs.readFileSync(path.join(contentDir, file), "utf8");
+  const filePath = path.join(contentDir, file);
+
+  if (fs.existsSync(filePath)) {
+    return fs.readFileSync(filePath, "utf8");
+  }
+
+  const withoutExt = file.replace(/\.(md|mdx)$/, '');
+  const mdPath = path.join(contentDir, `${withoutExt}.md`);
+  const mdxPath = path.join(contentDir, `${withoutExt}.mdx`);
+
+  if (fs.existsSync(mdxPath)) {
+    return fs.readFileSync(mdxPath, "utf8");
+  }
+  if (fs.existsSync(mdPath)) {
+    return fs.readFileSync(mdPath, "utf8");
+  }
+
+  throw new Error(`File not found: ${filename} in ${folder}`);
 };
 
 export const getAllPosts = (folder: string) => {
   const contentDir = getPath(folder);
-  const files = fs.readdirSync(contentDir);
+  const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.md') || f.endsWith('.mdx'));
 
   const isDev = process.env.NODE_ENV === 'development';
   let allFiles = files;
@@ -44,7 +62,7 @@ export const getAllPosts = (folder: string) => {
   const draftsExist = isDev && fs.existsSync(draftsDir);
   const shouldIncludeDrafts = draftsExist;
   if (shouldIncludeDrafts) {
-    const draftFiles = fs.readdirSync(draftsDir);
+    const draftFiles = fs.readdirSync(draftsDir).filter(f => f.endsWith('.md') || f.endsWith('.mdx'));
     allFiles = files.concat(draftFiles);
   }
 
@@ -99,13 +117,19 @@ export const getSinglePost = (slug: string, folder: string) => {
   const isDev = process.env.NODE_ENV === 'development';
   let fileFolder = folder;
 
-  const draftPath = path.join(getPath('drafts'), `${slug}.md`);
-  const isInDrafts = isDev && fs.existsSync(draftPath);
+  const draftMdxPath = path.join(getPath('drafts'), `${slug}.mdx`);
+  const draftMdPath = path.join(getPath('drafts'), `${slug}.md`);
+  const isInDrafts = isDev && (fs.existsSync(draftMdxPath) || fs.existsSync(draftMdPath));
   if (isInDrafts) {
     fileFolder = 'drafts';
   }
 
-  const source = getFileContent(`${slug}.md`, fileFolder);
+  const mdxPath = path.join(getPath(fileFolder), `${slug}.mdx`);
+  const mdPath = path.join(getPath(fileFolder), `${slug}.md`);
+  const isMdx = fs.existsSync(mdxPath);
+  const fileName = isMdx ? `${slug}.mdx` : `${slug}.md`;
+
+  const source = getFileContent(fileName, fileFolder);
   const { data: frontmatter, content } = matter(source);
   const { date, path: postPath, ...rest } = frontmatter;
   const prettyDate = new Date(date).toLocaleDateString("en-US", {
@@ -122,6 +146,7 @@ export const getSinglePost = (slug: string, folder: string) => {
     },
     content,
     slug,
+    isMdx,
   };
 };
 
