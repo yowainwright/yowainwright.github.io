@@ -242,6 +242,871 @@
           "publication": "Global Developer Population"
         }
       ]
+    },
+    {
+      "name": "techWorkforcePercentage",
+      "data": [
+        {
+          "label": "Tech as % of US Workforce",
+          "data": [
+            { "primary": "1990", "secondary": 1.8 },
+            { "primary": "1995", "secondary": 2.1 },
+            { "primary": "2000", "secondary": 2.9 },
+            { "primary": "2005", "secondary": 2.4 },
+            { "primary": "2010", "secondary": 2.6 },
+            { "primary": "2015", "secondary": 3.1 },
+            { "primary": "2019", "secondary": 3.8 },
+            { "primary": "2022", "secondary": 4.2 },
+            { "primary": "2024", "secondary": 3.5 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.bls.gov/oes/current/oes151252.htm",
+          "author": "Bureau of Labor Statistics",
+          "publication": "U.S. Department of Labor"
+        }
+      ]
+    },
+    {
+      "name": "industryComparison",
+      "data": [
+        {
+          "label": "Software Engineering",
+          "data": [
+            { "primary": "Peak", "secondary": 100 },
+            { "primary": "Trough", "secondary": 72 }
+          ]
+        },
+        {
+          "label": "Manufacturing (2000-2010)",
+          "data": [
+            { "primary": "Peak", "secondary": 100 },
+            { "primary": "Trough", "secondary": 67 }
+          ]
+        },
+        {
+          "label": "Finance (2007-2009)",
+          "data": [
+            { "primary": "Peak", "secondary": 100 },
+            { "primary": "Trough", "secondary": 82 }
+          ]
+        },
+        {
+          "label": "Retail (2017-2024)",
+          "data": [
+            { "primary": "Peak", "secondary": 100 },
+            { "primary": "Trough", "secondary": 85 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.bls.gov/ces/",
+          "author": "Bureau of Labor Statistics",
+          "publication": "Current Employment Statistics"
+        }
+      ]
+    },
+    {
+      "name": "hoursVsWages",
+      "data": [
+        {
+          "label": "Weekly Hours (indexed to 2019)",
+          "data": [
+            { "primary": "2019", "secondary": 100 },
+            { "primary": "2020", "secondary": 97.8 },
+            { "primary": "2021", "secondary": 104.4 },
+            { "primary": "2022", "secondary": 108.9 },
+            { "primary": "2023", "secondary": 106.7 },
+            { "primary": "2024", "secondary": 104.4 }
+          ]
+        },
+        {
+          "label": "Real Wages (indexed to 2019)",
+          "data": [
+            { "primary": "2019", "secondary": 100 },
+            { "primary": "2020", "secondary": 98.5 },
+            { "primary": "2021", "secondary": 100 },
+            { "primary": "2022", "secondary": 97.8 },
+            { "primary": "2023", "secondary": 95.4 },
+            { "primary": "2024", "secondary": 93 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.techneeds.com/2025/07/26/4-steps-to-understand-how-many-hours-does-a-software-engineer-work/",
+          "author": "TechNeeds",
+          "publication": "TechNeeds"
+        },
+        {
+          "link": "https://spectrum.ieee.org/electrical-engineer-salary-2023",
+          "author": "IEEE-USA",
+          "publication": "IEEE Spectrum"
+        },
+        {
+          "link": "https://www.levels.fyi/2022/",
+          "author": "Levels.fyi",
+          "publication": "Levels.fyi Compensation Data"
+        }
+      ]
+    },
+    {
+      "name": "laborExtractionComparison",
+      "data": [
+        {
+          "label": "Early Industrial (1820-1850)",
+          "data": [
+            { "primary": "Hours Worked", "secondary": 112 },
+            { "primary": "Real Wages", "secondary": 95 }
+          ]
+        },
+        {
+          "label": "Software Engineering (2019-2024)",
+          "data": [
+            { "primary": "Hours Worked", "secondary": 104 },
+            { "primary": "Real Wages", "secondary": 93 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://eh.net/encyclopedia/hours-of-work-in-u-s-history/",
+          "author": "Robert Whaples",
+          "publication": "Economic History Association"
+        },
+        {
+          "link": "https://www.techneeds.com/2025/07/26/4-steps-to-understand-how-many-hours-does-a-software-engineer-work/",
+          "author": "TechNeeds",
+          "publication": "TechNeeds"
+        },
+        {
+          "link": "https://spectrum.ieee.org/electrical-engineer-salary-2023",
+          "author": "IEEE-USA",
+          "publication": "IEEE Spectrum"
+        }
+      ]
+    },
+    {
+      "name": "wageStagnationByClass",
+      "data": [
+        {
+          "label": "Production/Manual Labor",
+          "data": [
+            { "primary": "1975", "secondary": 100 },
+            { "primary": "1985", "secondary": 98 },
+            { "primary": "1995", "secondary": 96 },
+            { "primary": "2005", "secondary": 95 },
+            { "primary": "2015", "secondary": 93 },
+            { "primary": "2024", "secondary": 91 }
+          ]
+        },
+        {
+          "label": "White-Collar Workers",
+          "data": [
+            { "primary": "1975", "secondary": 100 },
+            { "primary": "1985", "secondary": 105 },
+            { "primary": "1995", "secondary": 110 },
+            { "primary": "2005", "secondary": 108 },
+            { "primary": "2015", "secondary": 106 },
+            { "primary": "2024", "secondary": 102 }
+          ]
+        },
+        {
+          "label": "Software Engineers",
+          "data": [
+            { "primary": "1975", "secondary": 100 },
+            { "primary": "1985", "secondary": 125 },
+            { "primary": "1995", "secondary": 158 },
+            { "primary": "2005", "secondary": 172 },
+            { "primary": "2015", "secondary": 185 },
+            { "primary": "2024", "secondary": 180 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.epi.org/publication/swa-wages-2019/",
+          "author": "Economic Policy Institute",
+          "publication": "State of Working America Wages 2019"
+        },
+        {
+          "link": "https://www.bls.gov/opub/mlr/2020/article/comparing-compensation-costs.htm",
+          "author": "Bureau of Labor Statistics",
+          "publication": "Monthly Labor Review"
+        },
+        {
+          "link": "https://www.pewresearch.org/short-reads/2018/08/07/for-most-us-workers-real-wages-have-barely-budged-for-decades/",
+          "author": "Pew Research Center",
+          "publication": "For Most U.S. Workers, Real Wages Have Barely Budged in Decades"
+        },
+        {
+          "link": "https://spectrum.ieee.org/electrical-engineer-salary-2023",
+          "author": "IEEE-USA",
+          "publication": "IEEE Spectrum"
+        }
+      ]
+    },
+    {
+      "name": "purchasingPowerByLocation",
+      "data": [
+        {
+          "label": "Nominal Salary",
+          "data": [
+            { "primary": "San Francisco, US", "secondary": 165000 },
+            { "primary": "Seattle, US", "secondary": 152000 },
+            { "primary": "New York, US", "secondary": 148000 },
+            { "primary": "Austin, US", "secondary": 135000 },
+            { "primary": "Denver, US", "secondary": 128000 },
+            { "primary": "Raleigh, US", "secondary": 115000 },
+            { "primary": "London, UK", "secondary": 85000 },
+            { "primary": "Toronto, Canada", "secondary": 95000 },
+            { "primary": "Berlin, Germany", "secondary": 72000 },
+            { "primary": "Tel Aviv, Israel", "secondary": 110000 },
+            { "primary": "Singapore", "secondary": 105000 },
+            { "primary": "Sydney, Australia", "secondary": 98000 },
+            { "primary": "Warsaw, Poland", "secondary": 45000 },
+            { "primary": "Bucharest, Romania", "secondary": 38000 },
+            { "primary": "Kyiv, Ukraine", "secondary": 32000 },
+            { "primary": "Moscow, Russia", "secondary": 48000 },
+            { "primary": "São Paulo, Brazil", "secondary": 35000 },
+            { "primary": "Buenos Aires, Argentina", "secondary": 32000 },
+            { "primary": "Bangalore, India", "secondary": 25000 },
+            { "primary": "Ho Chi Minh, Vietnam", "secondary": 28000 },
+            { "primary": "Mexico City, Mexico", "secondary": 42000 }
+          ]
+        },
+        {
+          "label": "Adjusted for Cost of Living",
+          "data": [
+            { "primary": "San Francisco, US", "secondary": 78000 },
+            { "primary": "Seattle, US", "secondary": 92000 },
+            { "primary": "New York, US", "secondary": 82000 },
+            { "primary": "Austin, US", "secondary": 98000 },
+            { "primary": "Denver, US", "secondary": 95000 },
+            { "primary": "Raleigh, US", "secondary": 92000 },
+            { "primary": "London, UK", "secondary": 58000 },
+            { "primary": "Toronto, Canada", "secondary": 68000 },
+            { "primary": "Berlin, Germany", "secondary": 58000 },
+            { "primary": "Tel Aviv, Israel", "secondary": 65000 },
+            { "primary": "Singapore", "secondary": 72000 },
+            { "primary": "Sydney, Australia", "secondary": 62000 },
+            { "primary": "Warsaw, Poland", "secondary": 78000 },
+            { "primary": "Bucharest, Romania", "secondary": 82000 },
+            { "primary": "Kyiv, Ukraine", "secondary": 88000 },
+            { "primary": "Moscow, Russia", "secondary": 75000 },
+            { "primary": "São Paulo, Brazil", "secondary": 68000 },
+            { "primary": "Buenos Aires, Argentina", "secondary": 72000 },
+            { "primary": "Bangalore, India", "secondary": 62000 },
+            { "primary": "Ho Chi Minh, Vietnam", "secondary": 68000 },
+            { "primary": "Mexico City, Mexico", "secondary": 72000 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.levels.fyi/2024/",
+          "author": "Levels.fyi",
+          "publication": "Levels.fyi 2024 Compensation Data"
+        },
+        {
+          "link": "https://www.numbeo.com/cost-of-living/",
+          "author": "Numbeo",
+          "publication": "Cost of Living Index"
+        },
+        {
+          "link": "https://www.epi.org/publication/family-budget-calculator/",
+          "author": "Economic Policy Institute",
+          "publication": "Family Budget Calculator"
+        }
+      ]
+    },
+    {
+      "name": "immigrantTechWorkforce",
+      "data": [
+        {
+          "label": "Tech Workforce Composition",
+          "data": [
+            { "primary": "US-Born", "secondary": 62 },
+            { "primary": "Foreign-Born", "secondary": 38 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.bloomberg.com/graphics/2024-foreign-born-tech-workers/",
+          "author": "Bloomberg",
+          "publication": "Foreign-Born Workers Dominate Tech Jobs"
+        },
+        {
+          "link": "https://www.mercatus.org/students/research/policy-briefs/role-immigrants-us-high-tech-sector",
+          "author": "Mercatus Center",
+          "publication": "The Role of Immigrants in the U.S. High-Tech Sector"
+        }
+      ]
+    },
+    {
+      "name": "homestakeRealWages",
+      "data": [
+        {
+          "label": "Real Wages (1980 dollars)",
+          "data": [
+            { "primary": "1980", "secondary": 100 },
+            { "primary": "1985", "secondary": 98 },
+            { "primary": "1990", "secondary": 95 },
+            { "primary": "1995", "secondary": 92 },
+            { "primary": "2000", "secondary": 89 },
+            { "primary": "2001", "secondary": 88 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.bls.gov/opub/mlr/2001/03/art3full.pdf",
+          "author": "Bureau of Labor Statistics",
+          "publication": "Real Earnings in Mining Industry"
+        },
+        {
+          "link": "https://www.epi.org/publication/swa-wages-2019/",
+          "author": "Economic Policy Institute",
+          "publication": "State of Working America Wages"
+        }
+      ]
+    },
+    {
+      "name": "homestakeEmployment",
+      "data": [
+        {
+          "label": "Employment at Homestake Mine",
+          "data": [
+            { "primary": "1980", "secondary": 2200 },
+            { "primary": "1985", "secondary": 1850 },
+            { "primary": "1990", "secondary": 1400 },
+            { "primary": "1995", "secondary": 980 },
+            { "primary": "2000", "secondary": 640 },
+            { "primary": "2001", "secondary": 0 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.sanfordhomestakegold.com/history",
+          "author": "Sanford Lab Homestake Visitor Center",
+          "publication": "Homestake Mine History"
+        },
+        {
+          "link": "https://www.bls.gov/iag/tgs/iag212.htm",
+          "author": "Bureau of Labor Statistics",
+          "publication": "Mining Industry Employment"
+        }
+      ]
+    },
+    {
+      "name": "gmRealWages",
+      "data": [
+        {
+          "label": "Real Wages (1979 dollars)",
+          "data": [
+            { "primary": "1979", "secondary": 100 },
+            { "primary": "1985", "secondary": 96 },
+            { "primary": "1990", "secondary": 92 },
+            { "primary": "1995", "secondary": 89 },
+            { "primary": "2000", "secondary": 86 },
+            { "primary": "2005", "secondary": 83 },
+            { "primary": "2009", "secondary": 81 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.epi.org/publication/ib364-trends-us-work-hours-wages-1979-2007/",
+          "author": "Economic Policy Institute",
+          "publication": "Trends in US Work Hours and Wages"
+        },
+        {
+          "link": "https://www.bls.gov/opub/mlr/2020/article/comparing-compensation-costs.htm",
+          "author": "Bureau of Labor Statistics",
+          "publication": "Manufacturing Compensation Trends"
+        }
+      ]
+    },
+    {
+      "name": "gmEmployment",
+      "data": [
+        {
+          "label": "GM US Employment",
+          "data": [
+            { "primary": "1979", "secondary": 618000 },
+            { "primary": "1985", "secondary": 470000 },
+            { "primary": "1990", "secondary": 395000 },
+            { "primary": "1995", "secondary": 315000 },
+            { "primary": "2000", "secondary": 265000 },
+            { "primary": "2005", "secondary": 178000 },
+            { "primary": "2009", "secondary": 91000 },
+            { "primary": "2024", "secondary": 164000 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.bls.gov/iag/tgs/iag336.htm",
+          "author": "Bureau of Labor Statistics",
+          "publication": "Transportation Equipment Manufacturing"
+        },
+        {
+          "link": "https://www.macrotrends.net/stocks/charts/GM/general-motors/number-of-employees",
+          "author": "Macrotrends",
+          "publication": "GM Historical Employment Data"
+        }
+      ]
+    },
+    {
+      "name": "bethlehemSteelRealWages",
+      "data": [
+        {
+          "label": "Real Wages (1975 dollars)",
+          "data": [
+            { "primary": "1975", "secondary": 100 },
+            { "primary": "1980", "secondary": 97 },
+            { "primary": "1985", "secondary": 93 },
+            { "primary": "1990", "secondary": 90 },
+            { "primary": "1995", "secondary": 87 },
+            { "primary": "2000", "secondary": 84 },
+            { "primary": "2003", "secondary": 82 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.epi.org/publication/swa-wages-2019/",
+          "author": "Economic Policy Institute",
+          "publication": "State of Working America Wages"
+        },
+        {
+          "link": "https://www.bls.gov/opub/mlr/2001/03/art3full.pdf",
+          "author": "Bureau of Labor Statistics",
+          "publication": "Primary Metals Industry Earnings"
+        }
+      ]
+    },
+    {
+      "name": "bethlehemSteelEmployment",
+      "data": [
+        {
+          "label": "Bethlehem Steel Employment",
+          "data": [
+            { "primary": "1975", "secondary": 115000 },
+            { "primary": "1980", "secondary": 95000 },
+            { "primary": "1985", "secondary": 68000 },
+            { "primary": "1990", "secondary": 42000 },
+            { "primary": "1995", "secondary": 28000 },
+            { "primary": "2000", "secondary": 13000 },
+            { "primary": "2003", "secondary": 0 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.bls.gov/iag/tgs/iag331.htm",
+          "author": "Bureau of Labor Statistics",
+          "publication": "Primary Metals Manufacturing"
+        },
+        {
+          "link": "https://www.lehighvalleylive.com/bethlehem/2013/11/bethlehem_steel_10_years_after.html",
+          "author": "Lehigh Valley Live",
+          "publication": "Bethlehem Steel History"
+        }
+      ]
+    },
+    {
+      "name": "declineTimeline",
+      "data": [
+        {
+          "label": "GM",
+          "data": [
+            { "primary": "Year 0", "secondary": 0 },
+            { "primary": "Year 5", "secondary": -24 },
+            { "primary": "Year 10", "secondary": -36 },
+            { "primary": "Year 15", "secondary": -49 },
+            { "primary": "Year 20", "secondary": -57 },
+            { "primary": "Year 25", "secondary": -71 },
+            { "primary": "Year 30", "secondary": -85 }
+          ]
+        },
+        {
+          "label": "Bethlehem Steel",
+          "data": [
+            { "primary": "Year 0", "secondary": 0 },
+            { "primary": "Year 5", "secondary": -17 },
+            { "primary": "Year 10", "secondary": -41 },
+            { "primary": "Year 15", "secondary": -63 },
+            { "primary": "Year 20", "secondary": -76 },
+            { "primary": "Year 25", "secondary": -89 },
+            { "primary": "Year 28", "secondary": -100 }
+          ]
+        },
+        {
+          "label": "Homestake Mine",
+          "data": [
+            { "primary": "Year 0", "secondary": 0 },
+            { "primary": "Year 5", "secondary": -16 },
+            { "primary": "Year 10", "secondary": -36 },
+            { "primary": "Year 15", "secondary": -55 },
+            { "primary": "Year 20", "secondary": -71 },
+            { "primary": "Year 21", "secondary": -100 }
+          ]
+        },
+        {
+          "label": "Software Engineering",
+          "data": [
+            { "primary": "Year 0", "secondary": 0 },
+            { "primary": "Year 5", "secondary": -28 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.bls.gov/opub/mlr/2001/03/art3full.pdf",
+          "author": "Bureau of Labor Statistics",
+          "publication": "Mining Industry Data"
+        },
+        {
+          "link": "https://www.epi.org/publication/ib364-trends-us-work-hours-wages-1979-2007/",
+          "author": "Economic Policy Institute",
+          "publication": "Manufacturing Wage Trends"
+        },
+        {
+          "link": "https://spectrum.ieee.org/electrical-engineer-salary-2023",
+          "author": "IEEE-USA",
+          "publication": "IEEE Spectrum"
+        },
+        {
+          "link": "https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/",
+          "author": "ADP Research Institute",
+          "publication": "ADP Research"
+        }
+      ]
+    },
+    {
+      "name": "boilingFrogComparison",
+      "data": [
+        {
+          "label": "GM (1979-2009)",
+          "data": [
+            { "primary": "Employment", "secondary": -85 },
+            { "primary": "Real Wages", "secondary": -19 }
+          ]
+        },
+        {
+          "label": "Bethlehem Steel (1975-2003)",
+          "data": [
+            { "primary": "Employment", "secondary": -100 },
+            { "primary": "Real Wages", "secondary": -18 }
+          ]
+        },
+        {
+          "label": "Homestake Mine (1980-2001)",
+          "data": [
+            { "primary": "Employment", "secondary": -100 },
+            { "primary": "Real Wages", "secondary": -12 }
+          ]
+        },
+        {
+          "label": "Software Engineering (2019-2024)",
+          "data": [
+            { "primary": "Employment", "secondary": -28 },
+            { "primary": "Real Wages", "secondary": -7 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.bls.gov/opub/mlr/2001/03/art3full.pdf",
+          "author": "Bureau of Labor Statistics",
+          "publication": "Mining Industry Data"
+        },
+        {
+          "link": "https://www.epi.org/publication/ib364-trends-us-work-hours-wages-1979-2007/",
+          "author": "Economic Policy Institute",
+          "publication": "Manufacturing Wage Trends"
+        },
+        {
+          "link": "https://spectrum.ieee.org/electrical-engineer-salary-2023",
+          "author": "IEEE-USA",
+          "publication": "IEEE Spectrum"
+        },
+        {
+          "link": "https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/",
+          "author": "ADP Research Institute",
+          "publication": "ADP Research"
+        }
+      ]
+    },
+    {
+      "name": "industrialRevolutionWages",
+      "data": [
+        {
+          "label": "Pre-Union Era (1820-1880)",
+          "data": [
+            { "primary": "1820", "secondary": 100 },
+            { "primary": "1840", "secondary": 98 },
+            { "primary": "1860", "secondary": 102 },
+            { "primary": "1880", "secondary": 105 }
+          ]
+        },
+        {
+          "label": "Union Era (1880-1920)",
+          "data": [
+            { "primary": "1880", "secondary": 105 },
+            { "primary": "1890", "secondary": 118 },
+            { "primary": "1900", "secondary": 135 },
+            { "primary": "1910", "secondary": 152 },
+            { "primary": "1920", "secondary": 168 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://eh.net/encyclopedia/hours-of-work-in-u-s-history/",
+          "author": "Robert Whaples",
+          "publication": "Economic History Association"
+        },
+        {
+          "link": "https://www.nber.org/system/files/chapters/c2503/c2503.pdf",
+          "author": "National Bureau of Economic Research",
+          "publication": "Long-Term Wage Trends"
+        }
+      ]
+    },
+    {
+      "name": "industrialRevolutionHours",
+      "data": [
+        {
+          "label": "Weekly Hours",
+          "data": [
+            { "primary": "1830 (Pre-Union)", "secondary": 72 },
+            { "primary": "1860 (Pre-Union)", "secondary": 68 },
+            { "primary": "1880 (Early Union)", "secondary": 62 },
+            { "primary": "1900 (Union Growth)", "secondary": 58 },
+            { "primary": "1920 (Union Era)", "secondary": 50 },
+            { "primary": "1940 (Post-Union Gains)", "secondary": 44 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://eh.net/encyclopedia/hours-of-work-in-u-s-history/",
+          "author": "Robert Whaples",
+          "publication": "Economic History Association"
+        },
+        {
+          "link": "https://www.bls.gov/opub/mlr/2014/article/one-hundred-years-of-price-change.htm",
+          "author": "Bureau of Labor Statistics",
+          "publication": "100 Years of Price Change"
+        }
+      ]
+    },
+    {
+      "name": "unionFormationTimeline",
+      "data": [
+        {
+          "label": "Union Membership (% of workforce)",
+          "data": [
+            { "primary": "1880", "secondary": 2 },
+            { "primary": "1890", "secondary": 4 },
+            { "primary": "1900", "secondary": 6 },
+            { "primary": "1910", "secondary": 10 },
+            { "primary": "1920", "secondary": 18 },
+            { "primary": "1930", "secondary": 12 },
+            { "primary": "1940", "secondary": 27 },
+            { "primary": "1950", "secondary": 35 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.bls.gov/opub/mlr/2013/article/union-membership-in-the-united-states.htm",
+          "author": "Bureau of Labor Statistics",
+          "publication": "Union Membership Historical Data"
+        }
+      ]
+    },
+    {
+      "name": "britishEmpireDecline",
+      "data": [
+        {
+          "label": "GDP Share (% of World)",
+          "data": [
+            { "primary": "1870", "secondary": 24 },
+            { "primary": "1900", "secondary": 18 },
+            { "primary": "1913", "secondary": 14 },
+            { "primary": "1950", "secondary": 6.5 },
+            { "primary": "1973", "secondary": 4.2 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.ggdc.net/maddison/maddison-project/home.htm",
+          "author": "Maddison Project",
+          "publication": "Historical Statistics of World Economy"
+        }
+      ]
+    },
+    {
+      "name": "britishManufacturingJobs",
+      "data": [
+        {
+          "label": "Manufacturing Employment (millions)",
+          "data": [
+            { "primary": "1841", "secondary": 4.1 },
+            { "primary": "1911", "secondary": 8.6 },
+            { "primary": "1951", "secondary": 8.7 },
+            { "primary": "1971", "secondary": 7.9 },
+            { "primary": "1991", "secondary": 4.5 },
+            { "primary": "2011", "secondary": 2.5 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes",
+          "author": "UK Office for National Statistics",
+          "publication": "Historical Employment Data"
+        }
+      ]
+    },
+    {
+      "name": "economicAnxietyVoters",
+      "data": [
+        {
+          "label": "Economic Anxiety Index",
+          "data": [
+            { "primary": "Working Class Voters", "secondary": 68 },
+            { "primary": "Middle Class Decline", "secondary": 58 },
+            { "primary": "Rural Communities", "secondary": 72 },
+            { "primary": "Urban Poor", "secondary": 64 },
+            { "primary": "College Educated", "secondary": 38 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.pewresearch.org/politics/2024/09/09/issues-and-the-2024-election/",
+          "author": "Pew Research Center",
+          "publication": "Economic Anxiety and Voting Patterns"
+        },
+        {
+          "link": "https://www.brookings.edu/articles/the-2024-election-and-the-politics-of-economic-anxiety/",
+          "author": "Brookings Institution",
+          "publication": "Economic Anxiety in American Politics"
+        }
+      ]
+    },
+    {
+      "name": "populistMomentumTimeline",
+      "data": [
+        {
+          "label": "Populist Support Growth",
+          "data": [
+            { "primary": "2008", "secondary": 15 },
+            { "primary": "2012", "secondary": 22 },
+            { "primary": "2016", "secondary": 43 },
+            { "primary": "2020", "secondary": 47 },
+            { "primary": "2024", "secondary": 52 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.pewresearch.org/politics/2024/09/09/issues-and-the-2024-election/",
+          "author": "Pew Research Center",
+          "publication": "Political Polarization and Populism"
+        }
+      ]
+    },
+    {
+      "name": "billionaireClassAwareness",
+      "data": [
+        {
+          "label": "Believe Billionaires Have Too Much Power",
+          "data": [
+            { "primary": "2012", "secondary": 52 },
+            { "primary": "2016", "secondary": 61 },
+            { "primary": "2020", "secondary": 68 },
+            { "primary": "2024", "secondary": 74 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.pewresearch.org/politics/2024/03/21/americans-views-of-government-decades-of-distrust/",
+          "author": "Pew Research Center",
+          "publication": "Views on Wealth and Power"
+        },
+        {
+          "link": "https://www.brookings.edu/articles/public-opinion-on-wealth-inequality/",
+          "author": "Brookings Institution",
+          "publication": "Public Opinion on Wealth Inequality"
+        }
+      ]
+    },
+    {
+      "name": "grassrootsPoliticalWins",
+      "data": [
+        {
+          "label": "Progressive/Grassroots Election Victories",
+          "data": [
+            { "primary": "2016", "secondary": 12 },
+            { "primary": "2018", "secondary": 28 },
+            { "primary": "2020", "secondary": 42 },
+            { "primary": "2022", "secondary": 56 },
+            { "primary": "2024", "secondary": 67 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.dsausa.org/electoral-endorsements/",
+          "author": "Democratic Socialists of America",
+          "publication": "Electoral Victories Database"
+        },
+        {
+          "link": "https://www.jacobin.com/2024/11/grassroots-victories-2024-election",
+          "author": "Jacobin Magazine",
+          "publication": "Grassroots Political Wins"
+        }
+      ]
+    },
+    {
+      "name": "crossDemographicUnity",
+      "data": [
+        {
+          "label": "Support for Worker Rights (% by demographic)",
+          "data": [
+            { "primary": "Rural White", "secondary": 64 },
+            { "primary": "Urban Black", "secondary": 78 },
+            { "primary": "Hispanic", "secondary": 72 },
+            { "primary": "Asian American", "secondary": 68 },
+            { "primary": "College Educated", "secondary": 58 },
+            { "primary": "Non-College White", "secondary": 71 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.pewresearch.org/politics/2024/09/09/issues-and-the-2024-election/",
+          "author": "Pew Research Center",
+          "publication": "Cross-Demographic Political Views"
+        },
+        {
+          "link": "https://www.epi.org/publication/unions-and-wellbeing/",
+          "author": "Economic Policy Institute",
+          "publication": "Public Opinion on Worker Rights"
+        }
+      ]
     }
   ]
 }
