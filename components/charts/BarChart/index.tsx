@@ -13,7 +13,7 @@ import {
   Label,
   Cell,
 } from 'recharts';
-import type { BarChartProps } from './types';
+import type { BarChartProps } from '../types';
 import { CHART_COLORS, CHART_STYLES } from '../constants';
 
 export const BarChart = ({

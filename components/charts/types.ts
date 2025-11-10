@@ -14,3 +14,10 @@ export interface BarChartProps {
   secondaryLabel?: string;
   height?: string;
 }
+
+export interface LineChartProps {
+  data: Series[];
+  primaryLabel?: string;
+  secondaryLabel?: string;
+  height?: string;
+}

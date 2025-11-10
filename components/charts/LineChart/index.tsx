@@ -12,7 +12,7 @@ import {
   ResponsiveContainer,
   Label,
 } from 'recharts';
-import type { LineChartProps } from './types';
+import type { LineChartProps } from '../types';
 import { CHART_COLORS, CHART_STYLES } from '../constants';
 
 export const LineChart = ({
