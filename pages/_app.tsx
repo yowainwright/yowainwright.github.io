@@ -4,6 +4,7 @@ import "../styles/main.scss";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { usePageViews, useExternalLinks, useCodeBlockCopy } from "../hooks/useAnalytics";
 
 export const GlobalState = createContext<any>(null);
 export const DispatchStore = createContext<any>(null);
@@ -39,6 +40,11 @@ export function reducer(state: any, { payload, type }: any) {
 
 export default function App({ Component, pageProps }: AppProps) {
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  usePageViews();
+  useExternalLinks();
+  useCodeBlockCopy();
+
   useEffect(() => {
     if (state.isLoaded) return;
     dispatch({ type: "SET_IS_LOADED", payload: true });

@@ -1,14 +1,13 @@
 import createMDX from "@next/mdx";
 
+const isProduction = process.env.NODE_ENV === "production";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
-  output: "export",
+  ...(isProduction && { output: "export" }),
   basePath: "",
   assetPrefix: "./",
   sassOptions: {

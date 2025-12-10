@@ -14,79 +14,52 @@
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
   },
   "scripts": {
-    "build": "bun run build:css && next build",
+    "build": "bun run build:css && next build && next-sitemap",
     "build:sitemap": "next-sitemap",
     "build:css": "sass --style=compressed styles/main.scss public/assets/jeffry.in.css",
-    "commit": "git-cz",
-    "commit-msg": "commitlint --edit $1",
     "dev": "next dev",
     "format": "bunx prettier --write .",
     "lint": "bunx oxlint .",
     "lint:fix": "bunx oxlint --fix .",
-    "prepare": "bun run update && bun run maintain",
-    "pre-commit": "bun run build && bun run lint && bun run commit-msg",
+    "prepare": "bun scripts/install-hooks.ts && bun run update && bun run maintain",
     "start": "next start",
     "update": "codependence --update",
     "maintain": "pastoralist"
   },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/@commitlint/prompt"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "header-max-length": [
-        2,
-        "always",
-        120
-      ]
-    }
-  },
   "dependencies": {
+    "@giscus/react": "3.1.0",
+    "@keystatic/core": "0.5.48",
+    "@keystatic/next": "5.0.4",
     "@mdx-js/loader": "3.1.1",
     "@mdx-js/react": "3.1.1",
-    "@next/mdx": "16.0.1",
-    "@next/third-parties": "16.0.1",
+    "@next/mdx": "16.0.8",
+    "@next/third-parties": "16.0.8",
     "lucide-react": "0.542.0",
-    "next": "16.0.1",
+    "next": "16.0.8",
     "next-mdx-remote": "5.0.0",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
     "recharts": "3.3.0",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-slug": "^6.0.0",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.1.0",
-    "@commitlint/config-conventional": "20.0.0",
-    "@commitlint/format": "20.0.0",
-    "@eslint/js": "9.38.0",
-    "@giscus/react": "3.1.0",
     "@shikijs/colorized-brackets": "1.29.2",
     "@shikijs/rehype": "1.29.2",
     "@shikijs/transformers": "1.29.2",
     "@types/bun": "latest",
-    "@types/node": "24.10.0",
-    "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.2",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
     "codependence": "0.3.1",
-    "commander": "12.1.0",
-    "commitizen": "4.3.1",
-    "globals": "15.15.0",
     "gray-matter": "4.0.3",
-    "husky": "9.1.7",
     "next-sitemap": "4.2.3",
-    "pastoralist": "1.8.1",
+    "pastoralist": "1.8.3",
     "rehype-stringify": "10.0.1",
     "remark-parse": "11.0.0",
     "remark-rehype": "11.1.2",
     "sanitize-filename": "1.6.3",
-    "sass": "1.93.3",
+    "sass": "1.95.0",
     "unified": "11.0.5"
   },
   "private": true,

@@ -8,6 +8,7 @@ import { GlobalState } from "./_app";
 import { Share } from "../components/Share";
 import { useCodeBlocks } from "../hooks/useCodeBlocks";
 import { useHeadingAnchors } from "../hooks/useHeadingAnchors";
+import { useScrollDepth, useReadTime } from "../hooks/useAnalytics";
 import { BarChart, LineChart } from "../components/charts";
 
 // Use built-in giscus themes or custom hosted themes
@@ -19,6 +20,7 @@ interface PostProps {
   mdxSource?: MDXRemoteSerializeResult;
   slug: string;
   isMdx: boolean;
+  wordCount: number;
   frontmatter: {
     date: string;
     title: string;
@@ -179,10 +181,12 @@ const mdxComponents = {
   LineChart,
 };
 
-const Post = ({ content, mdxSource, frontmatter, slug, isMdx }: PostProps) => {
+const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostProps) => {
   const state = useContext(GlobalState);
   useCodeBlocks();
   useHeadingAnchors();
+  useScrollDepth();
+  const estimatedReadTime = useReadTime(wordCount);
 
   const description = frontmatter?.description || frontmatter?.meta || "";
   const title = frontmatter?.title || "";
@@ -199,7 +203,12 @@ const Post = ({ content, mdxSource, frontmatter, slug, isMdx }: PostProps) => {
       <article className="post__article">
       <header className="post__header">
         <h1>{frontmatter?.title}</h1>
-        <DateText date={frontmatter?.date} slug={slug} />
+        <div className="post__meta">
+          <DateText date={frontmatter?.date} slug={slug} />
+          {estimatedReadTime > 0 && (
+            <span className="post__read-time">{estimatedReadTime} min read</span>
+          )}
+        </div>
       </header>
       <section className="post__section">
         <div className="post__container">
@@ -258,17 +267,18 @@ interface StaticProps {
 
 export const getStaticProps = async ({ params }: StaticProps) => {
   const data = getSinglePost(params.slug, "content");
+  const wordCount = (data.content || "").split(/\s+/).filter(Boolean).length;
 
   if (data.isMdx) {
     const mdxSource = await serialize(data.content || "");
     return {
-      props: { ...data, mdxSource, content: null },
+      props: { ...data, mdxSource, content: null, wordCount },
     };
   }
 
   const content = await markdownToHtml(data.content || "");
   return {
-    props: { ...data, content, mdxSource: null },
+    props: { ...data, content, mdxSource: null, wordCount },
   };
 };
 
