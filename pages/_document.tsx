@@ -1,6 +1,5 @@
 import React from "react";
 import { Html, Head, Main, NextScript } from "next/document";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 export default function Document() {
   return (
@@ -38,7 +37,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <GoogleAnalytics gaId="G-5BH1F8XBX5" />
       </body>
     </Html>
   );

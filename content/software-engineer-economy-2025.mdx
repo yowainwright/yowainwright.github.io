@@ -1,0 +1,308 @@
+---
+title: "The Software Engineer Economy—Data vs. Feelings in 2025"
+date: 2025-11-03
+path: /software-engineer-economy-2025
+meta: "A data-driven analysis examining whether software engineers are struggling more financially in 2025: exploring job market demand, real wages vs inflation, workload trends, and AI's impact on engineering productivity and compensation."
+tags: ["Career", "Economics", "Software Engineering", "AI", "Industry Analysis"]
+---
+
+import { InlineSource, SectionSources } from '../components/citations';
+import { RiseAndFallChart, GlobalGrowthChart, WageStagnationChart, IndustrialRevolutionChart } from '../components/swe-econ-25';
+
+## TL;DR
+
+I've been wondering if I could draw parallels between US Software Engineering jobs now and US manufacturing jobs starting in the 1970's.<InlineSource url="https://www.bls.gov/opub/btn/volume-9/forty-years-of-falling-manufacturing-employment.htm">BLS</InlineSource>.
+
+---
+
+### After looking at the data, I found parallels worth sharing
+
+- **US Based Software Engineering Employment:** Peaked November 2019, declining since—the drop started before AI, before the pandemic<InlineSource url="https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/">ADP Research</InlineSource>
+- **Job postings:** -35% vs 5 years ago, -71% from 2022 peak<InlineSource url="https://fred.stlouisfed.org/series/IHLIDXUSTPSOFTDEVE">FRED/Indeed</InlineSource>
+- **Entry-level jobs:** -50% in Big Tech<InlineSource url="https://newsletter.eng-leadership.com/p/decrease-in-entry-level-tech-jobs">Eng Leadership</InlineSource>
+- **Pay growth:** Developers +24% vs all US workers +30% (2018-2024)—we're falling behind<InlineSource url="https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/">ADP Research</InlineSource>
+- **Full-time vs contract:** 75% of tech candidates sought full-time work in 2014, only 50% today<InlineSource url="https://www.computerworld.com/article/1629166/tech-pros-make-the-most-of-the-gig-economy-2.html">Computerworld</InlineSource>
+- **Global shift:** Asia +350%<InlineSource url="https://www.griddynamics.com/blog/number-software-developers-world">Grid Dynamics</InlineSource>, Eastern Europe +168%<InlineSource url="https://dealroom.co/guides/the-state-of-european-tech">Dealroom</InlineSource>, US flat since 2015
+
+---
+
+<RiseAndFallChart />
+
+---
+
+US manufacturing peaked in 1979.
+It's been declining for 45 years.
+Software engineering peaked in 2019.
+The trajectory is starting to look familiar.
+
+## A Good Life
+
+I grew up near Lead, South Dakota in the 1980s. My dad worked for Homestake Mine.
+In the early 1990s, people still said "you could always work at the mine."
+It was stable, well-paying work—$38,000 per year<InlineSource url="https://www.minneapolisfed.org/article/1995/report-details-mining-industrys-impact-on-south-dakotas-economy">1</InlineSource>, double the South Dakota state average.
+Lead had a population of about 3,000.
+The mine employed 2,200.
+If you worked there, you could buy a house, save for retirement, send your kids to college.
+This was how I grew up.
+
+Then the slow collapse began.
+Nearly 200 jobs eliminated during "restructuring"<InlineSource url="https://republicofmining.com/2015/05/06/homestake-mining-company-history-1877-2000/">2</InlineSource>. Most workers didn't panic. January 1998: 400 more jobs lost, underground operations ceased. Gold prices fell to $253/ounce in July 1999—lowest in 20 years. September 2000: shutdown announced. December 2001: Homestake closed entirely. All 2,200 jobs gone.<InlineSource url="https://www.blackhillsknowledgenetwork.org/home/in-history-homestake-announces-shutdown-of-lead-mine.html">4</InlineSource>
+It didn't feel like a disaster at the time. It was slow. Each year felt manageable—just a little worse than the last.
+This same pattern has played out across the US.
+The stories have become mundane in their commonality, yet they mean tens of millions of Americans quietly have less.
+As a software engineer, I've had an itching feeling something similar is going now in tech to what I experienced as a kid with manufacturing.
+
+---
+
+## Are US-based Software Engineers Next?
+
+For ~3 years, I've wondered if software engineers are experiencing the same pattern.
+My teammates dismiss it: "It's AI." "It's the economy." "It's inflation." And, I've wanted to believe them.
+After switching jobs in June 2024, watching mass layoffs, and seeing AI adoption explode, I really had to look at some data from the perspective of where I grew up.
+
+### What's Happening to Software Engineers in the US
+
+US-based software engineering employment is declining while global software engineering is growing rapidly.
+Us companies are cutting domestic jobs while expanding internationally.
+The pattern looks almost identical to manufacturing.
+
+Developer employment peaked in November 2019—then started falling<InlineSource url="https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/">ADP Research</InlineSource>.
+The decline accelerated in 2022 and 2023, but it started before the pandemic.
+428,000+ tech workers were laid off in 2022-2023 combined, with software engineers making up 22% of layoffs<InlineSource url="https://365datascience.com/trending/who-was-affected-by-the-2022-2023-tech-layoffs/">365 Data Science</InlineSource>
+
+Software engineer job postings in the US are down **-35%** vs 5 years ago<InlineSource url="https://fred.stlouisfed.org/series/IHLIDXUSTPSOFTDEVE">FRED/Indeed</InlineSource>
+Current postings are **3.5x lower** than the 2022 peak<InlineSource url="https://blog.pragmaticengineer.com/software-engineer-jobs-five-year-low/">Pragmatic Engineer</InlineSource>
+Specialized roles (Android, Java, iOS, .NET) are also **-60%+**<InlineSource url="https://newsletter.pragmaticengineer.com/p/state-of-the-tech-market-in-2025">Pragmatic Engineer</InlineSource>
+The decline started before AI tools went mainstream.
+But this trend was going on before ChatGPT and tech layoffs making headlines.
+
+#### 2. International Engineers: Company Demand Surging
+- FY 2022: 308,613 employer applications
+- FY 2023: 484,927 applications
+- FY 2024: 780,884 applications **153% increase in 2 years**<InlineSource url="https://www.pewresearch.org/short-reads/2025/03/04/what-we-know-about-the-us-h-1b-visa-program/">6</InlineSource>
+
+During 2022-2023, major tech firms hired 34,000 new international workers while laying off 85,000 employees.<InlineSource url="https://www.newsweek.com/h1b-visa-immigrants-tech-jobs-impact-college-grads-2106392">7</InlineSource>
+
+Software engineering isn't declining everywhere—just in the US.
+
+#### 3. Offshore Engineering: Exploding
+
+<GlobalGrowthChart />
+
+- **Asia:** +350-400% growth (2015-2023), led by China (7M developers, tripled from 2.4M)<InlineSource url="https://www.griddynamics.com/blog/number-software-developers-world">7a</InlineSource><InlineSource url="https://news.cgtn.com/news/2024-12-23/China-leads-global-software-development-with-9-4-million-developers-1zyViTkmCoE/p.html">7b</InlineSource> and India (5.8M developers, +212% growth)<InlineSource url="https://joingenius.com/statistics/number-of-software-developers/">7c</InlineSource>, plus Southeast Asia, Japan, and South Korea. Asia-Pacific has the highest growth rate globally<InlineSource url="https://www.outsourceaccelerator.com/articles/software-developer-statistics/">7d</InlineSource>
+- **Eastern Europe:** +168% growth (2015-2023), with Poland, Romania, and Ukraine becoming major tech hubs<InlineSource url="https://dealroom.co/guides/the-state-of-european-tech">7e</InlineSource>
+- **United States:** Barely above 2015 levels
+
+The work isn't disappearing—it's moving. Companies are expanding globally while contracting domestically. This is the same pattern manufacturing experienced: jobs shift to regions with lower labor costs while domestic employment declines.
+
+### Why This Pattern Is Hard to See
+
+The decline happens slowly—2-3% per year, not 20% overnight. Nominal salaries still look high ($165k in SF). Companies frame it as "innovation" and "staying competitive."
+
+A large portion of domestic software engineers didn't grow up watching factories close or mines shut down. We don't have the reference point that manufacturing workers' families had. The pattern is the same, but we haven't seen it before.
+
+**The data shows:** Jobs declining, hours increasing, real wages down. The same squeeze, different industry.
+
+### Who's Getting Squeezed Hardest?
+
+The decline isn't hitting everyone equally.
+
+**Entry-level engineers:**
+- Entry-level jobs in Big Tech: **-50%** vs pre-pandemic<InlineSource url="https://newsletter.eng-leadership.com/p/decrease-in-entry-level-tech-jobs">Eng Leadership</InlineSource>
+- Entry-level jobs in startups: **-30%** vs pre-pandemic<InlineSource url="https://newsletter.eng-leadership.com/p/decrease-in-entry-level-tech-jobs">Eng Leadership</InlineSource>
+- Unemployment among recent college grads: **+50%** (3.9% → 5.8%, 2022-2025)<InlineSource url="https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/">ADP Research</InlineSource>
+- CS graduate unemployment: **6.1%** in 2025—nearly 2x philosophy majors<InlineSource url="https://www.finalroundai.com/blog/computer-science-graduates-face-worst-job-market-in-decades">Final Round AI</InlineSource>
+
+**Senior engineers:**
+- Senior engineer job openings: **+13%** since 2019<InlineSource url="https://www.aei.org/domestic-policy/decoding-the-software-engineering-job-market/">AEI</InlineSource>
+
+**What this means:** Junior roles are disappearing fastest. Companies are cutting the pipeline while holding onto experienced talent—for now. This mirrors manufacturing, where entry-level apprenticeships disappeared first.
+
+### The Hiring Process Has Shifted
+
+Power has moved from candidates to employers:
+
+- **60%** of companies report increased time-to-hire in 2024 (up from 44% in 2023)<InlineSource url="https://blog.theinterviewguys.com/state-of-the-hiring-process-in-2025/">Interview Guys</InlineSource>
+- Teams interview **40% more candidates** per hire than in 2021<InlineSource url="https://www.ashbyhq.com/talent-trends-report/reports/2023-recruiter-productivity-trends-report">Ashby</InlineSource>
+- **81%** of hiring managers report decision-making paralysis<InlineSource url="https://blog.theinterviewguys.com/state-of-the-hiring-process-in-2025/">Interview Guys</InlineSource>
+- Average engineering time per candidate: **65 hours**<InlineSource url="https://www.paraform.com/blog/average-time-to-hire-software-engineer">Paraform</InlineSource>
+
+When demand exceeds supply, companies compete for candidates. When supply exceeds demand, candidates compete for companies. The data shows which way it's shifted.
+
+### The Contractor Shift
+
+Companies are also changing *how* they hire:
+
+- Full-time independent workers: **27.7M** in 2024, up from 13.6M in 2020<InlineSource url="https://zety.com/blog/gig-economy-statistics">Zety</InlineSource>
+- Google in 2019: **121,000 contractors** vs 102,000 full-time employees<InlineSource url="https://zety.com/blog/gig-economy-statistics">Zety</InlineSource>
+- 34% of all freelancers work in Web/Mobile/Software Development<InlineSource url="https://www.hrstacks.com/gig-economy-freelance-work-statistics/">HR Stacks</InlineSource>
+- Contingent workers expected to exceed **25% of US workforce** by 2025<InlineSource url="https://zety.com/blog/gig-economy-statistics">Zety</InlineSource>
+
+This mirrors manufacturing's shift from full-time employees to temp workers in the 1980s-90s. During that period, temp employment grew from 185,000 to over 1 million daily workers<InlineSource url="https://info.headwaywfs.com/blog/2021/07/a-brief-history-of-staffing">Headway</InlineSource>, and by 1997, manufacturing used about 890,000 temps out of 19 million workers.<InlineSource url="https://www.nber.org/digest/apr00/temporary-workers-raise-manufacturing-productivity-measure">NBER</InlineSource> Companies shifted from viewing workers as assets to viewing them as liabilities—a "ring and core" model with a small permanent staff surrounded by expendable contingent workers.<InlineSource url="https://www.bls.gov/opub/mlr/2016/book-review/the-temp-economy.htm">BLS</InlineSource>
+
+Contractors don't get benefits, job security, or the same protections. The work still gets done—just with less commitment to the workers doing it.
+
+### AI Tools: Massive Adoption, Mixed Results
+
+While employment was contracting, AI coding tools saw explosive adoption—but the productivity gains haven't matched the hype.
+
+**Adoption (2022-2025):**
+- GitHub Copilot: 1.2M → 20M users (+1,567%)<InlineSource url="https://en.wikipedia.org/wiki/GitHub_Copilot">13a</InlineSource><InlineSource url="https://techcrunch.com/2025/07/30/github-copilot-crosses-20-million-all-time-users/">13b</InlineSource>
+- 92% of developers now use AI tools at work<InlineSource url="https://github.blog/news-insights/research/survey-ai-wave-grows/">13c</InlineSource>
+- 41% of all code is AI-generated<InlineSource url="https://aiforcode.io/stats">13d</InlineSource>
+- 97% of enterprise developers report company encouragement to use AI<InlineSource url="https://github.blog/news-insights/research/survey-ai-wave-grows/">13e</InlineSource>
+
+**But measured productivity tells a different story:**
+- **19% slower task completion** with AI tools (METR study, 2024)<InlineSource url="https://metr.org/blog/2024-06-12-evaluating-llms-as-software-engineers/">13</InlineSource>
+- **9% more bugs introduced** with AI assistance (Google DORA 2025)<InlineSource url="https://dora.dev/research/2025/dora-report/">14</InlineSource>
+- **91% longer code review time** for AI-generated code (Google DORA 2025)<InlineSource url="https://dora.dev/research/2025/dora-report/">15</InlineSource>
+- **Code churn doubled** - developers revising recent code at 2x the rate (GitClear 2024)<InlineSource url="https://www.gitclear.com/coding_on_copilot_data_shows_ais_downward_pressure_on_code_quality">16</InlineSource>
+
+**Developer trust is declining:**
+- 2023: 77% trusted AI coding tools
+- 2024: 43% trusted AI coding tools<InlineSource url="https://stackoverflow.blog/2024/06/10/developer-survey-results-2024/">17</InlineSource>
+- 2025: 33% trust AI coding tools<InlineSource url="https://survey.stackoverflow.co/2025/">18</InlineSource>
+
+AI tools are useful for boilerplate and exploration. But adoption surged (+1,567%) while measured productivity stayed flat or declined—during the same period job postings collapsed and companies increased hours for remaining engineers.
+
+---
+
+## Comparing the Numbers
+
+Here's how manufacturing declines looked at year 5:
+
+**At year 5 in their declines:**
+- GM (1984): -24% employment, -4% wages
+- Bethlehem Steel (1980): -17% employment, -3% wages
+- Homestake (1985): -16% employment, -2% wages
+
+**Software engineering (2024, year 5 since 2019 peak):**
+- Job postings: -35% from 2019, -71% from 2022 peak
+- Pay growth: lagging US workers by 6 percentage points
+
+Different metrics, but the direction is the same.
+
+### Record Profits, Mass Layoffs
+
+**Microsoft (2024):**
+- **$98.8 billion EBITDA**<InlineSource url="https://www.microsoft.com/en-us/investor/earnings/fy-2024-q4/press-release-webcast">24</InlineSource>
+- Cut **10,000 workers**<InlineSource url="https://www.cnbc.com/2023/01/18/microsoft-announces-layoffs-affecting-10000-employees.html">25</InlineSource>
+
+**Meta (2023):**
+- **Profits up 201%**<InlineSource url="https://investor.fb.com/investor-news/press-release-details/2024/Meta-Reports-Fourth-Quarter-and-Full-Year-2023-Results/default.aspx">26</InlineSource>
+- Mass layoffs across engineering
+
+**Big 5 Tech (2023):**
+- **$327 billion in profit** (+25.6%)<InlineSource url="https://www.reuters.com/technology/big-five-tech-companies-revenue-grew-10-23-ai-concerns-mount-2024-02-02/">27</InlineSource>
+- Cut **42,000 jobs**<InlineSource url="https://layoffs.fyi">28</InlineSource>
+
+**The pattern:** Record profits alongside mass layoffs. Short-term gains prioritized over long-term investment in talent and technology.
+
+### Executive vs Engineer Compensation Trends
+
+The data shows diverging compensation trends:
+
+**CEOs (2019-2024):**
+- Compensation up **+34.7%**<InlineSource url="https://www.epi.org/publication/ceo-pay-in-2023/">29</InlineSource>
+- CEO-to-worker pay ratio: **281:1**<InlineSource url="https://www.epi.org/publication/ceo-pay-in-2023/">29</InlineSource>
+
+**Software Engineers (2023-2024):**
+- 2023: Essentially flat (high inflation year)
+- 2024: +1.2% nominal<InlineSource url="https://www.levels.fyi/2024/">30</InlineSource>
+- Real wages (inflation-adjusted): **DOWN 7%** since 2019
+
+**The data:** Executive compensation grew 34.7% while engineering real wages fell 7% over the same period. The CEO-to-worker pay ratio reached 281:1.
+
+### Manual Laborers Have Been Experiencing This Since 1975
+
+Manual laborers have been experiencing wage stagnation since 1975. White-collar workers since the 1990s. Software engineers are just now joining them.
+
+<WageStagnationChart />
+
+**The data shows:**
+- **Production/manual labor:** Real wages DOWN 9% since 1975
+- **White-collar workers:** Real wages UP only 2% since 1975 (essentially flat for 50 years)
+- **Software engineers:** Real wages UP 80% since 1975, but DOWN 5% since 2015
+
+**Manual laborers recognize this pattern.** They've watched similar sequences:
+1. Company introduces "efficiency tools" (automation, computers, AI)
+2. Productivity narrative: "You can do more now!"
+3. Workforce reduction: "We need fewer workers"
+4. Increased hours for survivors: "Cover for the people we let go"
+5. Wage stagnation: "The tools made you more productive, not us paying you more"
+
+Manufacturing experienced this from 1975-2010. Automation increased output per worker, but:
+- Employment fell 33%
+- Real wages for remaining workers fell 9%
+- Hours increased for survivors
+- Productivity gains went to ownership
+
+**Why many engineers don't see the pattern:**
+
+If you grew up in a household where your parent worked in a factory or warehouse, the current tech environment feels familiar.
+
+If you grew up in a household where your parents were doctors, lawyers, or knowledge workers who saw steady wage growth through the 1990s-2000s, this decline feels new.
+
+If you grew up internationally where a place like SF offers amenities and opportunities that seem wonderful compared to your home country, the domestic market squeeze may not be visible at all.
+
+**The pattern exists, but different engineers have different reference points for recognizing it.**
+
+---
+
+## Historical Context
+
+### The Industrial Revolution: Workers Eventually Organized
+
+<IndustrialRevolutionChart />
+
+**Pre-Union Era (1820-1880):** Real wages essentially flat for 60 years. **Union Era (1880-1920):** Real wages surged 60%. Hours dropped from 72/week to 44/week. Union membership grew from 2% to 35%.
+
+**What changed?** Workers organized. They recognized the pattern: productivity gains going entirely to ownership while workers got longer hours and stagnant wages. Once they organized, wages grew and hours fell for the first time in industrial history.
+
+---
+
+## What Happened When Workers Organized
+
+Historically, when workers face similar patterns of wage stagnation and employment decline, they eventually organize. During the Industrial Revolution, union membership grew from 2% (1880) to 35% (1950), and during that period real wages increased 60% while hours fell 39%.
+
+**Current trends suggest similar recognition is emerging:**
+
+Support for unions has reached its highest level in decades. Gallup polling shows **71% of Americans approve of labor unions** (2022)<InlineSource url="https://news.gallup.com/poll/398303/approval-labor-unions-highest-point-1965.aspx">31</InlineSource> - the highest since 1965. Workers across industries are organizing at rates not seen in decades.
+
+The question is whether software engineers will recognize themselves as part of this broader pattern.
+
+---
+
+## Conclusion
+
+I started this research wondering if what I was feeling was real or just my perception. After looking at the data, I found patterns that surprised me.
+
+**Where we are now (Year 5 since the 2019 peak):**
+- Software engineering: job postings down 35% from 2019, pay growth lagging all US workers by 6 points
+- GM at year 5 (1984): -24% employment, -4% wages
+- Bethlehem Steel at year 5 (1980): -17% employment, -3% wages
+- Homestake at year 5 (1985): -16% employment, -2% wages
+
+The patterns rhyme. That doesn't mean the outcome will be the same—but it's worth paying attention to.
+
+**What happened next for them:**
+- GM: 30-year decline to -85% employment, -19% wages
+- Bethlehem Steel: 28 years to bankruptcy
+- Homestake: 21 years to closure, 2,200 jobs gone
+
+**What happened when workers organized:**
+During the Industrial Revolution, organized workers saw wages grow 60% and hours fall 39%. Workers who didn't organize saw decades of stagnation.
+
+---
+
+Growing up near Lead, South Dakota which has a population of 3,000; watching 2,200 jobs disappear is devastating. My dad's workplace went from 2,200 jobs to zero over two decades. Each year felt manageable. By the time the pattern was clear, it was too late.
+
+Now I'm a software engineer looking at similar data patterns. I could be wrong about what they mean. But the numbers are there, and I think they're worth discussing.
+
+If you see something I've missed or have a different interpretation of this data, I'd genuinely like to hear it. Please reach out.
+
+---
+
+## Sources
+
+All sources are linked inline throughout this post. If you find broken links or want to verify the data, please let me know.

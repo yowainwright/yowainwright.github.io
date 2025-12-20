@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useReducer } from "react";
 import type { AppProps } from "next/app";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "../styles/main.scss";
 
 import Header from "../components/Header";
@@ -71,6 +72,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Header />
         <Component {...pageProps} />
         <Footer />
+        <GoogleAnalytics gaId="G-5BH1F8XBX5" />
       </GlobalState.Provider>
     </DispatchStore.Provider>
   );

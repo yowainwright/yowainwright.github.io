@@ -30,13 +30,17 @@ export const BarChart = ({
       <ResponsiveContainer width="100%" height="100%">
         <RechartsBarChart data={chartData} margin={CHART_STYLES.margin}>
           <CartesianGrid strokeDasharray={CHART_STYLES.grid.strokeDasharray} />
-          <XAxis dataKey="primary">
+          <XAxis dataKey="primary" fontSize={CHART_STYLES.axis.fontSize}>
             {primaryLabel && <Label value={primaryLabel} offset={-10} position="insideBottom" />}
           </XAxis>
-          <YAxis>
+          <YAxis fontSize={CHART_STYLES.axis.fontSize}>
             {secondaryLabel && <Label value={secondaryLabel} angle={-90} position="insideLeft" />}
           </YAxis>
-          <Tooltip />
+          <Tooltip
+            contentStyle={CHART_STYLES.tooltip.content}
+            itemStyle={CHART_STYLES.tooltip.item}
+            labelStyle={CHART_STYLES.tooltip.label}
+          />
           <Bar
             dataKey="secondary"
             maxBarSize={CHART_STYLES.bar.maxBarSize}

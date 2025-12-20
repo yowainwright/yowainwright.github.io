@@ -1,3 +1,4 @@
 export { BarChart } from './BarChart';
 export { LineChart } from './LineChart';
-export type { BarChartProps, LineChartProps, DataPoint, Series } from './types';
+export { ChartSources } from './ChartSources';
+export type { BarChartProps, LineChartProps, ChartSourcesProps, ChartSource, DataPoint, Series } from './types';

@@ -20,4 +20,15 @@ export interface LineChartProps {
   primaryLabel?: string;
   secondaryLabel?: string;
   height?: string;
+  yDomain?: [number, number];
+}
+
+export interface ChartSource {
+  link: string;
+  author: string;
+  publication: string;
+}
+
+export interface ChartSourcesProps {
+  sources: ChartSource[];
 }

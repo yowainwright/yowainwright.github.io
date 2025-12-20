@@ -6,6 +6,69 @@
   "tags": ["Career", "Economics", "Software Engineering", "AI", "Industry Analysis"],
   "charts": [
     {
+      "name": "riseAndFallComparison",
+      "data": [
+        {
+          "label": "US Manufacturing Employment",
+          "data": [
+            { "primary": "1970", "secondary": 91 },
+            { "primary": "1975", "secondary": 95 },
+            { "primary": "1979", "secondary": 100 },
+            { "primary": "1985", "secondary": 91 },
+            { "primary": "1990", "secondary": 91 },
+            { "primary": "1995", "secondary": 89 },
+            { "primary": "2000", "secondary": 89 },
+            { "primary": "2005", "secondary": 76 },
+            { "primary": "2010", "secondary": 59 },
+            { "primary": "2015", "secondary": 64 },
+            { "primary": "2020", "secondary": 62 },
+            { "primary": "2024", "secondary": 66 }
+          ]
+        },
+        {
+          "label": "Software Engineering Employment",
+          "data": [
+            { "primary": "1995", "secondary": 40 },
+            { "primary": "2000", "secondary": 55 },
+            { "primary": "2005", "secondary": 58 },
+            { "primary": "2010", "secondary": 65 },
+            { "primary": "2015", "secondary": 80 },
+            { "primary": "2019", "secondary": 100 },
+            { "primary": "2022", "secondary": 105 },
+            { "primary": "2024", "secondary": 90 }
+          ]
+        },
+        {
+          "label": "Software Engineering Job Postings",
+          "data": [
+            { "primary": "2019", "secondary": 100 },
+            { "primary": "2020", "secondary": 85 },
+            { "primary": "2021", "secondary": 150 },
+            { "primary": "2022", "secondary": 200 },
+            { "primary": "2023", "secondary": 90 },
+            { "primary": "2024", "secondary": 65 }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "link": "https://www.bls.gov/opub/btn/volume-9/forty-years-of-falling-manufacturing-employment.htm",
+          "author": "Bureau of Labor Statistics",
+          "publication": "Forty Years of Falling Manufacturing Employment"
+        },
+        {
+          "link": "https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/",
+          "author": "ADP Research Institute",
+          "publication": "The Rise and Fall of the Software Developer"
+        },
+        {
+          "link": "https://fred.stlouisfed.org/series/IHLIDXUSTPSOFTDEVE",
+          "author": "Federal Reserve Bank of St. Louis",
+          "publication": "Indeed Job Postings Data"
+        }
+      ]
+    },
+    {
       "name": "employmentIndex",
       "data": [
         {

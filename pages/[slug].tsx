@@ -9,9 +9,9 @@ import { Share } from "../components/Share";
 import { useCodeBlocks } from "../hooks/useCodeBlocks";
 import { useHeadingAnchors } from "../hooks/useHeadingAnchors";
 import { useScrollDepth, useReadTime } from "../hooks/useAnalytics";
-import { BarChart, LineChart } from "../components/charts";
+import { InlineSource, SectionSources } from "../components/citations";
+import { RiseAndFallChart, GlobalGrowthChart, WageStagnationChart, IndustrialRevolutionChart } from "../components/swe-econ-25";
 
-// Use built-in giscus themes or custom hosted themes
 const THEME_DARK = "dark";
 const THEME_LIGHT = "light";
 
@@ -86,7 +86,6 @@ const GiscusLoadingFallback = () => {
   );
 };
 
-// Dynamically load Giscus component (client-side only)
 const GiscusComponent = dynamic(
   () => import("@giscus/react"),
   { 
@@ -177,8 +176,12 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
 };
 
 const mdxComponents = {
-  BarChart,
-  LineChart,
+  InlineSource,
+  SectionSources,
+  RiseAndFallChart,
+  GlobalGrowthChart,
+  WageStagnationChart,
+  IndustrialRevolutionChart,
 };
 
 const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostProps) => {
