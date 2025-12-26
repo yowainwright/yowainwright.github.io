@@ -8,3 +8,7 @@ out
 tsconfig.tsbuildinfo
 drafts/
 1. 1.tmp/
+
+# Claude Code local settings (personal overrides)
+.claude/settings.local.json
+.claude/
