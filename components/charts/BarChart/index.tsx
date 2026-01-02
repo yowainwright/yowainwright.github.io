@@ -1,0 +1,64 @@
+'use client';
+
+import React from 'react';
+import {
+  BarChart as RechartsBarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Label,
+  Cell,
+} from 'recharts';
+import type { BarChartProps } from '../types';
+import { CHART_STYLES } from '../constants';
+
+const BAR_COLORS = {
+  grey: '#9ca3af',
+  blue: '#3b82f6',
+};
+
+export const BarChart = ({
+  data,
+  primaryLabel = '',
+  secondaryLabel = '',
+  height = '400px'
+}: BarChartProps) => {
+  const chartData = data[0]?.data || [];
+  const zebraColors = [BAR_COLORS.grey, BAR_COLORS.blue];
+
+  return (
+    <div style={{ width: '100%', height, padding: '20px 0' }}>
+      <ResponsiveContainer width="100%" height="100%">
+        <RechartsBarChart data={chartData} margin={CHART_STYLES.margin}>
+          <CartesianGrid strokeDasharray={CHART_STYLES.grid.strokeDasharray} />
+          <XAxis dataKey="primary" fontSize={CHART_STYLES.axis.fontSize}>
+            {primaryLabel && <Label value={primaryLabel} offset={-10} position="insideBottom" />}
+          </XAxis>
+          <YAxis fontSize={CHART_STYLES.axis.fontSize}>
+            {secondaryLabel && <Label value={secondaryLabel} angle={-90} position="insideLeft" />}
+          </YAxis>
+          <Tooltip
+            contentStyle={CHART_STYLES.tooltip.content}
+            itemStyle={CHART_STYLES.tooltip.item}
+            labelStyle={CHART_STYLES.tooltip.label}
+          />
+          <Bar
+            dataKey="secondary"
+            maxBarSize={CHART_STYLES.bar.maxBarSize}
+            label={{
+              position: 'top',
+              fontSize: CHART_STYLES.line.label.fontSize,
+            }}
+          >
+            {chartData.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={zebraColors[index % 2]} />
+            ))}
+          </Bar>
+        </RechartsBarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};

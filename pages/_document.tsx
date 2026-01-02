@@ -1,12 +1,13 @@
 import React from "react";
 import { Html, Head, Main, NextScript } from "next/document";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
         <meta property="og:locale" content="en_US" />
+        <link rel="preconnect" href="https://giscus.app" />
+        <link rel="dns-prefetch" href="https://giscus.app" />
         <link href="https://yowainwright.imgix.net/favicon.png" rel="icon" />
         <link
           href="https://yowainwright.imgix.net/apple-icon-120x120.png"
@@ -38,7 +39,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <GoogleAnalytics gaId="G-5BH1F8XBX5" />
       </body>
     </Html>
   );

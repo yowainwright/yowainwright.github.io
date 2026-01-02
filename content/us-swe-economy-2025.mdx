@@ -1,0 +1,86 @@
+---
+title: "Being a US-based Software Engineer in 2025; is it what it used to be?"
+date: 2025-11-03
+path: /us-swe-economy-2025
+meta: "The quick article provides a data-driven look at US-based software engineering employment trends in 2025: relating current swe trends, recent swe trends, pre-covid, and US job labor trends over the last 45 years."
+tags: ["Career", "Economics", "Software Engineering", "Industry Analysis"]
+---
+
+import { InlineSource, SectionSources } from '../components/citations';
+import { RiseAndFallChart, GlobalGrowthChart, WageStagnationChart, SWEMetricsGrid } from '../components/swe-econ-25';
+
+I grew up near Lead, South Dakota. My dad worked at Homestake Mine—
+a solid job that employed a good majority of the population in the 1980s and 1990s.
+<InlineSource url="https://www.minneapolisfed.org/article/1995/report-details-mining-industrys-impact-on-south-dakotas-economy">1</InlineSource>.
+By 2001, all those jobs were gone<InlineSource url="https://www.blackhillsknowledgenetwork.org/home/in-history-homestake-announces-shutdown-of-lead-mine.html">2</InlineSource>. Each year felt manageable until it wasn't and it hit the area really hard.
+
+US software engineering employment peaked November 2019<InlineSource url="https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/">3</InlineSource>.
+The decline started before AI; before the pandemic!
+Now, in 2025, Software engineering job postings are down 35%<InlineSource url="https://fred.stlouisfed.org/series/IHLIDXUSTPSOFTDEVE">4</InlineSource>.
+Entry-level software engineering jobs are down 50%<InlineSource url="https://newsletter.eng-leadership.com/p/decrease-in-entry-level-tech-jobs">5</InlineSource>.
+The work didn't disappear, though. It moved! Asia +312%, Eastern Europe +168% job markets to name a few have ballooned<InlineSource url="https://dealroom.co/guides/the-state-of-european-tech">6</InlineSource>.
+
+<RiseAndFallChart />
+
+<GlobalGrowthChart />
+
+---
+
+## Is This a Familiar Pattern?
+
+Looking back historically at the decline of other US middle class opportunities, this shouldn't feel new.
+
+GM, which peaked with 618,000 employees (1979), cut jobs for 30 years and then needed $51B taxpayer bailout (2009)<InlineSource url="https://www.congress.gov/crs-product/R41978">7</InlineSource>. It now employs 164,000.
+
+GE, which peaked at 411,000 (1980), was led by Jack Welch who implemented "rank and yank".
+Wall Street loved it until GE quietly took $16B from the Fed + $74B in FDIC-backed debt guarantees during 2008<InlineSource url="https://www.propublica.org/article/general-electric-tapped-fed-to-borrow-16-billion">8</InlineSource> to stay afloat and then split into three companies 2024 because the core business had been hollowed out.
+
+**Big Tech (2022-2024):** Meta, Google, Amazon, Microsoft have cut 42,000+ jobs while posting record profits—$327B combined<InlineSource url="https://www.levels.fyi/2024/">9</InlineSource>. CEO pay is up 35%. Engineer real wages are down 7%<InlineSource url="https://www.epi.org/publication/ceo-pay-in-2023/">10</InlineSource>.
+
+---
+
+## The "No Talent" Myth
+
+US universities—widely considered world-leading—produce ~90,000 CS graduates annually.
+The same companies claiming talent shortages cut 42,000+ jobs while posting record profits and appear to not want to hire here.
+
+<WageStagnationChart />
+
+Manufacturing real wages fell 8% in the six years after their employment peak around 1980.
+Software engineering is on the same trajectory now.
+
+GM and GE framed cuts as efficiency and then both needed public money to survive. A shrinking group of people won.
+Everyone else adjusted downward, year-by-year, until the pattern was undeniable.
+
+<SWEMetricsGrid />
+
+---
+
+I watched my dad's workplace go from 2,200 jobs to zero. Each year felt manageable until everything was gone.
+The numbers for US manufacturing jobs in the 1980s seem to be matching a similar trajectory for US-based software engineers now.
+I'm not confident these strategies of off-shoring and cutting are about innovation or efficiency—or that they'll lead to longer-term stability. The data shows otherwise.
+
+Software engineers built the digital infrastructure the largest companies in the world run on.
+Now their treatment is beginning to mimic US manufacturing.
+I understand the need to compete—cutting costs is table stakes to ensure there is capital to invest.
+However, there comes a point—drive down pretty much any main street in the US in 2025 and you'll see it—where the cuts leave behind a sort of desolate zombie-land. Did we cut too much?
+How long can the investor class continue to sell the American dream from buildings and infrastructure treated like a dump?
+
+---
+
+## Sources
+
+<SectionSources sources={[
+  { title: "Report Details Mining Industry's Impact on South Dakota's Economy", author: "Federal Reserve Bank of Minneapolis", date: "1995", url: "https://www.minneapolisfed.org/article/1995/report-details-mining-industrys-impact-on-south-dakotas-economy" },
+  { title: "In History: Homestake Announces Shutdown of Lead Mine", publication: "Black Hills Knowledge Network", url: "https://www.blackhillsknowledgenetwork.org/home/in-history-homestake-announces-shutdown-of-lead-mine.html" },
+  { title: "The Rise and Fall of the Software Developer", author: "ADP Research Institute", date: "2024", url: "https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/" },
+  { title: "Job Postings on Indeed: Software Development", publication: "FRED, Federal Reserve Bank of St. Louis", url: "https://fred.stlouisfed.org/series/IHLIDXUSTPSOFTDEVE" },
+  { title: "Decrease in Entry-Level Tech Jobs", author: "Gregor Ojstersek", publication: "Engineering Leadership", url: "https://newsletter.eng-leadership.com/p/decrease-in-entry-level-tech-jobs" },
+  { title: "The State of European Tech", publication: "Dealroom", date: "2024", url: "https://dealroom.co/guides/the-state-of-european-tech" },
+  { title: "Government Assistance for General Motors", publication: "Congressional Research Service", url: "https://www.congress.gov/crs-product/R41978" },
+  { title: "General Electric Tapped Fed to Borrow $16 Billion", author: "Paul Kiel", publication: "ProPublica", date: "2011", url: "https://www.propublica.org/article/general-electric-tapped-fed-to-borrow-16-billion" },
+  { title: "2024 End of Year Pay Report", publication: "Levels.fyi", date: "2024", url: "https://www.levels.fyi/2024/" },
+  { title: "CEO Pay in 2023", publication: "Economic Policy Institute", date: "2024", url: "https://www.epi.org/publication/ceo-pay-in-2023/" }
+]} />
+
+---

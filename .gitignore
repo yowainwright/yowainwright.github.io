@@ -6,4 +6,14 @@ node_modules/
 out
 .pnpm-store
 tsconfig.tsbuildinfo
-1. 1.
+drafts/
+1. 1.tmp/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Claude Code local settings (personal overrides)
+.claude/settings.local.json
+.claude/

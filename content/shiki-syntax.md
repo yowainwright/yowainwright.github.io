@@ -176,12 +176,26 @@ function divideNumbers(a, b) {
   if (b === 0) { // [!code error]
     throw new Error('Division by zero!'); // [!code error]
   }
-  
+
   if (typeof a !== 'number' || typeof b !== 'number') { // [!code warning]
     console.warn('Non-numeric input detected'); // [!code warning]
   }
-  
+
   return a / b;
+}
+```
+
+### Interactive Tooltips
+
+Add helpful tooltips to explain code concepts:
+
+```javascript
+// [title: Tooltips Example]
+const API_URL[tooltip:Base URL for all API requests] = 'https://api.example.com';
+
+function fetchUser[tooltip:Retrieves user data from the API](id) {
+  const endpoint[tooltip:Constructed URL path] = `${API_URL}/users/${id}`;
+  return fetch(endpoint).then(res[tooltip:HTTP response object] => res.json());
 }
 ```
 
@@ -289,14 +303,34 @@ function transformerDiffLines() {
     code(node) {
       node.children?.forEach((line) => {
         const firstText = getFirstText(line.children[0]);
-        
+
         if (firstText.startsWith('+')) {
           // Add classes for additions
           line.properties.class.push('diff', 'add');
         } else if (firstText.startsWith('-')) {
-          // Add classes for deletions  
+          // Add classes for deletions
           line.properties.class.push('diff', 'remove');
         }
+      });
+    }
+  };
+}
+```
+
+```javascript
+// [title: utils.ts - Tooltip Transformer]
+function transformerTooltip() {
+  return {
+    name: 'tooltip',
+    code(node) {
+      node.children.forEach(line => {
+        line.children = line.children.flatMap(child => {
+          if (child.type !== 'text') return [child];
+
+          const tooltipPattern = /(\S+)\[tooltip:([^\]]+)\]/g;
+          const parts = parseTooltips(child.value, tooltipPattern);
+          return parts.length > 0 ? parts : [child];
+        });
       });
     }
   };

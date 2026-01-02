@@ -1,13 +1,13 @@
-/** @type {import('next').NextConfig} */
+import createMDX from "@next/mdx";
 
+const isProduction = process.env.NODE_ENV === "production";
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
-  output: "export",
+  ...(isProduction && { output: "export" }),
   basePath: "",
   assetPrefix: "./",
   sassOptions: {
@@ -16,6 +16,15 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
+  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+});
+
+export default withMDX(nextConfig);

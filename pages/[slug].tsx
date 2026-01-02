@@ -1,19 +1,27 @@
 import React, { useContext, useState, useEffect, Component } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 import { getSinglePost, getAllPosts, markdownToHtml } from "../utils";
 import { GlobalState } from "./_app";
 import { Share } from "../components/Share";
 import { useCodeBlocks } from "../hooks/useCodeBlocks";
 import { useHeadingAnchors } from "../hooks/useHeadingAnchors";
+import { useScrollDepth, useReadTime } from "../hooks/useAnalytics";
+import { trackView } from "../lib/analytics-firebase";
+import { InlineSource, SectionSources } from "../components/citations";
+import { RiseAndFallChart, GlobalGrowthChart, WageStagnationChart, IndustrialRevolutionChart, SWEMetricsGrid } from "../components/swe-econ-25";
 
-// Use built-in giscus themes or custom hosted themes
 const THEME_DARK = "dark";
 const THEME_LIGHT = "light";
 
 interface PostProps {
-  content: string;
+  content?: string;
+  mdxSource?: MDXRemoteSerializeResult;
   slug: string;
+  isMdx: boolean;
+  wordCount: number;
   frontmatter: {
     date: string;
     title: string;
@@ -79,7 +87,6 @@ const GiscusLoadingFallback = () => {
   );
 };
 
-// Dynamically load Giscus component (client-side only)
 const GiscusComponent = dynamic(
   () => import("@giscus/react"),
   { 
@@ -89,43 +96,43 @@ const GiscusComponent = dynamic(
 );
 
 const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
-  const [hasError, setHasError] = useState(false);
+  const [hasError] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const theme = isDarkMode ? THEME_DARK : THEME_LIGHT;
-  
+
   useEffect(() => {
-    const userWantsAutoLoadComments = localStorage.getItem('jeffry-in-comments-autoload-enabled');
-    const lastCommentViewedPath = localStorage.getItem('jeffry-in-last-comment-viewed-path');
-    const currentPath = window.location.pathname;
-    
-    const shouldAutoLoad = userWantsAutoLoadComments === 'true' && 
-                          lastCommentViewedPath === currentPath;
-    
-    if (shouldAutoLoad) {
+    const hasLoadedBefore = localStorage.getItem('jeffry-in-comments-autoload-enabled') === 'true';
+
+    if (hasLoadedBefore) {
       setIsInView(true);
-    } else {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setIsInView(true);
-            observer.disconnect();
-          }
-        },
-        { rootMargin: '100px' }
-      );
-      
-      const element = document.querySelector('.post__giscus');
-      if (element) observer.observe(element);
-      
-      return () => observer.disconnect();
+      return;
     }
+
+    const handleLoadGiscus = () => setIsInView(true);
+    window.addEventListener('load-giscus', handleLoadGiscus);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '300px' }
+    );
+
+    const element = document.querySelector('.post__giscus');
+    if (element) observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('load-giscus', handleLoadGiscus);
+    };
   }, []);
-  
+
   useEffect(() => {
     if (isInView) {
       localStorage.setItem('jeffry-in-comments-autoload-enabled', 'true');
-      localStorage.setItem('jeffry-in-last-comment-viewed-path', window.location.pathname);
-      localStorage.setItem('jeffry-in-comments-last-loaded-timestamp', Date.now().toString());
     }
   }, [isInView]);
   
@@ -134,12 +141,8 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   if (!isInView) {
     return (
       <div className="giscus-placeholder">
-        <button 
-          onClick={() => {
-            setIsInView(true);
-            localStorage.setItem('jeffry-in-comments-autoload-enabled', 'true');
-            localStorage.setItem('jeffry-in-last-comment-viewed-path', window.location.pathname);
-          }}
+        <button
+          onClick={() => setIsInView(true)}
           className="giscus-placeholder__button"
         >
           Load Comments
@@ -161,7 +164,6 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
             emitMetadata="0"
             theme={theme}
             lang="en"
-            loading="lazy"
             inputPosition="top"
           />
       </ErrorBoundary>
@@ -169,14 +171,30 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   );
 };
 
-const Post = ({ content, frontmatter, slug }: PostProps) => {
+const mdxComponents = {
+  InlineSource,
+  SectionSources,
+  RiseAndFallChart,
+  GlobalGrowthChart,
+  WageStagnationChart,
+  IndustrialRevolutionChart,
+  SWEMetricsGrid,
+};
+
+const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostProps) => {
   const state = useContext(GlobalState);
   useCodeBlocks();
   useHeadingAnchors();
-  
+  useScrollDepth();
+  const estimatedReadTime = useReadTime(wordCount);
+
+  useEffect(() => {
+    trackView(slug);
+  }, [slug]);
+
   const description = frontmatter?.description || frontmatter?.meta || "";
   const title = frontmatter?.title || "";
-  
+
   return (
     <>
       <Head>
@@ -189,14 +207,25 @@ const Post = ({ content, frontmatter, slug }: PostProps) => {
       <article className="post__article">
       <header className="post__header">
         <h1>{frontmatter?.title}</h1>
-        <DateText date={frontmatter?.date} slug={slug} />
+        <div className="post__meta">
+          <DateText date={frontmatter?.date} slug={slug} />
+          {estimatedReadTime > 0 && (
+            <span className="post__read-time">{estimatedReadTime} min read</span>
+          )}
+        </div>
       </header>
       <section className="post__section">
         <div className="post__container">
-          <div
-            className="post__content"
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+          {isMdx && mdxSource ? (
+            <div className="post__content">
+              <MDXRemote {...mdxSource} components={mdxComponents} />
+            </div>
+          ) : (
+            <div
+              className="post__content"
+              dangerouslySetInnerHTML={{ __html: content || '' }}
+            />
+          )}
           <div className="post__giscus">
             <GiscusWrapper isDarkMode={state?.isDarkMode || false} />
           </div>
@@ -206,7 +235,7 @@ const Post = ({ content, frontmatter, slug }: PostProps) => {
             <header className="aside__header">
               <h3 className="aside__title">{frontmatter?.title}</h3>
             </header>
-            <Share path={frontmatter?.path} />
+            <Share path={frontmatter?.path} slug={slug} />
           </div>
         </aside>
       </section>
@@ -242,9 +271,18 @@ interface StaticProps {
 
 export const getStaticProps = async ({ params }: StaticProps) => {
   const data = getSinglePost(params.slug, "content");
+  const wordCount = (data.content || "").split(/\s+/).filter(Boolean).length;
+
+  if (data.isMdx) {
+    const mdxSource = await serialize(data.content || "");
+    return {
+      props: { ...data, mdxSource, content: null, wordCount },
+    };
+  }
+
   const content = await markdownToHtml(data.content || "");
   return {
-    props: { ...data, content },
+    props: { ...data, content, mdxSource: null, wordCount },
   };
 };
 

@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { ShareProps } from "../types";
+import { HeartButton } from "./HeartButton";
+import { PixelLink } from "./PixelLink";
+import { PixelComment } from "./PixelComment";
+import { trackShare, trackComment } from "../lib/analytics-firebase";
 
-export const Share = ({ path, url = "https://jeffry.in" }: ShareProps) => {
-  const shareLinkText = "Share Article Link";
+export const Share = ({ path, url = "https://jeffry.in", slug }: ShareProps) => {
+  const shareLinkText = "Share";
   const copied = "Copied!";
   const [copyText, setCopyText] = useState(shareLinkText);
   const [isCopied, setIsCopied] = useState(false);
@@ -23,6 +27,20 @@ export const Share = ({ path, url = "https://jeffry.in" }: ShareProps) => {
     copyToClipboard(shareUrl);
     setIsCopied(true);
     setCopyText(copied);
+    if (slug) {
+      trackShare(slug);
+    }
+  };
+
+  const onCommentClick = () => {
+    window.dispatchEvent(new CustomEvent('load-giscus'));
+    const giscusElement = document.querySelector('.post__giscus');
+    if (giscusElement) {
+      giscusElement.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (slug) {
+      trackComment(slug);
+    }
   };
 
   return (
@@ -30,7 +48,13 @@ export const Share = ({ path, url = "https://jeffry.in" }: ShareProps) => {
       <nav className="share__nav">
         <button className="share__button" onClick={onBtnClick}>
           {copyText}
+          <PixelLink size={2} />
         </button>
+        <button className="share__button" onClick={onCommentClick}>
+          Comment
+          <PixelComment size={2} />
+        </button>
+        {slug && <HeartButton slug={slug} />}
       </nav>
     </section>
   );

@@ -30,14 +30,51 @@ export const getPath = (folder: string) =>
 export const getFileContent = (filename: string, folder: string) => {
   const contentDir = getPath(folder);
   const file = sanitize(filename);
-  return fs.readFileSync(path.join(contentDir, file), "utf8");
+  const filePath = path.join(contentDir, file);
+
+  if (fs.existsSync(filePath)) {
+    return fs.readFileSync(filePath, "utf8");
+  }
+
+  const withoutExt = file.replace(/\.(md|mdx)$/, '');
+  const mdPath = path.join(contentDir, `${withoutExt}.md`);
+  const mdxPath = path.join(contentDir, `${withoutExt}.mdx`);
+
+  if (fs.existsSync(mdxPath)) {
+    return fs.readFileSync(mdxPath, "utf8");
+  }
+  if (fs.existsSync(mdPath)) {
+    return fs.readFileSync(mdPath, "utf8");
+  }
+
+  throw new Error(`File not found: ${filename} in ${folder}`);
 };
 
 export const getAllPosts = (folder: string) => {
   const contentDir = getPath(folder);
-  const files = fs.readdirSync(contentDir);
-  return files.map((fileName) => {
-    const source = getFileContent(fileName, folder);
+  const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.md') || f.endsWith('.mdx'));
+
+  const isDev = process.env.NODE_ENV === 'development';
+  let allFiles = files;
+
+  const draftsDir = getPath('drafts');
+  const draftsExist = isDev && fs.existsSync(draftsDir);
+  const shouldIncludeDrafts = draftsExist;
+  if (shouldIncludeDrafts) {
+    const draftFiles = fs.readdirSync(draftsDir).filter(f => f.endsWith('.md') || f.endsWith('.mdx'));
+    allFiles = files.concat(draftFiles);
+  }
+
+  return allFiles.map((fileName) => {
+    let fileFolder = folder;
+
+    const draftPath = path.join(getPath('drafts'), fileName);
+    const isInDrafts = isDev && fs.existsSync(draftPath);
+    if (isInDrafts) {
+      fileFolder = 'drafts';
+    }
+
+    const source = getFileContent(fileName, fileFolder);
     const slug = fileName.split(".")[0];
     const { data: frontmatter } = matter(source);
     const { date, ...rest } = frontmatter;
@@ -76,15 +113,29 @@ export const getAllNewPosts = (folder: string) => {
 };
 
 export const getSinglePost = (slug: string, folder: string) => {
-  const source = getFileContent(`${slug}.md`, folder);
+  const isDev = process.env.NODE_ENV === 'development';
+  let fileFolder = folder;
+
+  const draftMdxPath = path.join(getPath('drafts'), `${slug}.mdx`);
+  const draftMdPath = path.join(getPath('drafts'), `${slug}.md`);
+  const isInDrafts = isDev && (fs.existsSync(draftMdxPath) || fs.existsSync(draftMdPath));
+  if (isInDrafts) {
+    fileFolder = 'drafts';
+  }
+
+  const mdxPath = path.join(getPath(fileFolder), `${slug}.mdx`);
+  const isMdx = fs.existsSync(mdxPath);
+  const fileName = isMdx ? `${slug}.mdx` : `${slug}.md`;
+
+  const source = getFileContent(fileName, fileFolder);
   const { data: frontmatter, content } = matter(source);
-  const { date, path, ...rest } = frontmatter;
+  const { date, path: postPath, ...rest } = frontmatter;
   const prettyDate = new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
-  const trimmedPath = `/${path.split("/")[1]}`;
+  const trimmedPath = `/${postPath.split("/")[1]}`;
   return {
     frontmatter: {
       ...rest,
@@ -93,6 +144,7 @@ export const getSinglePost = (slug: string, folder: string) => {
     },
     content,
     slug,
+    isMdx,
   };
 };
 
@@ -100,47 +152,45 @@ function transformerDiffLines() {
   return {
     name: 'diff-lines',
     code(node: any) {
-      // Process each line in the code block
       node.children?.forEach((line: any) => {
-        if (!line.children || line.children.length === 0) return;
-        
-        // Get the text content of the first child
+        const hasNoChildren = !line.children || line.children.length === 0;
+        if (hasNoChildren) return;
+
         let firstText = '';
         const getFirstText = (element: any): string => {
-          if (element.type === 'text') return element.value;
-          if (element.children && element.children.length > 0) {
+          const isText = element.type === 'text';
+          if (isText) return element.value;
+          const hasChildren = element.children && element.children.length > 0;
+          if (hasChildren) {
             return getFirstText(element.children[0]);
           }
           return '';
         };
-        
+
         firstText = getFirstText(line.children[0]);
-        
-        // Check if line starts with + or -
-        if (firstText.startsWith('+')) {
-          // Add diff add class
-          if (!line.properties) line.properties = {};
-          if (!line.properties.class) line.properties.class = [];
-          if (Array.isArray(line.properties.class)) {
-            line.properties.class.push('diff', 'add');
-          } else {
-            line.properties.class = [line.properties.class, 'diff', 'add'];
-          }
-        } else if (firstText.startsWith('-')) {
-          // Add diff remove class
-          if (!line.properties) line.properties = {};
-          if (!line.properties.class) line.properties.class = [];
-          if (Array.isArray(line.properties.class)) {
-            line.properties.class.push('diff', 'remove');
-          } else {
-            line.properties.class = [line.properties.class, 'diff', 'remove'];
-          }
+
+        const isAddition = firstText.startsWith('+');
+        const isRemoval = firstText.startsWith('-');
+        const shouldProcessDiff = isAddition || isRemoval;
+
+        if (!shouldProcessDiff) return;
+
+        if (!line.properties) line.properties = {};
+        if (!line.properties.class) line.properties.class = [];
+
+        const isClassArray = Array.isArray(line.properties.class);
+        const diffType = isAddition ? 'add' : 'remove';
+
+        if (isClassArray) {
+          line.properties.class.push('diff', diffType);
+        } else {
+          line.properties.class = [line.properties.class, 'diff', diffType];
         }
       });
     },
     pre(node: any, options: any) {
-      // Add data-language attribute for CSS targeting
-      if (options?.lang === 'diff') {
+      const isDiffLanguage = options?.lang === 'diff';
+      if (isDiffLanguage) {
         node.properties = {
           ...node.properties,
           'data-language': 'diff'
@@ -155,22 +205,25 @@ function transformerTitle() {
   return {
     name: 'title',
     preprocess(code, options) {
-      if (!code.includes('[title:')) return code;
-      
+      const hasTitle = code.includes('[title:');
+      if (!hasTitle) return code;
+
       const lines = code.split('\n');
       const firstLine = lines[0];
-      
+
       const titleStart = firstLine.indexOf('[title:');
       const titleEnd = firstLine.indexOf(']', titleStart);
-      
-      if (titleStart === -1 || titleEnd <= titleStart) return code;
-      
-      const isComment = firstLine.startsWith('//') || 
-                       firstLine.startsWith('#') || 
+
+      const hasTitleBounds = titleStart !== -1 && titleEnd > titleStart;
+      if (!hasTitleBounds) return code;
+
+      const isComment = firstLine.startsWith('//') ||
+                       firstLine.startsWith('#') ||
                        firstLine.startsWith('/*');
-      
-      if (!isComment || !options) return code;
-      
+
+      const shouldProcessTitle = isComment && options;
+      if (!shouldProcessTitle) return code;
+
       const title = firstLine.slice(titleStart + 7, titleEnd).trim();
       options.meta = { ...options.meta, title };
       return lines.slice(1).join('\n');
@@ -197,15 +250,14 @@ function transformerTitle() {
 function transformerLanguageBadge() {
   return {
     name: 'language-badge',
-    root(root, options) {
+    root(root) {
       root.children = root.children.map(node => {
-        if (node.type !== 'element' || node.tagName !== 'pre') return node;
-        if (!node.properties?.class?.includes('shiki')) return node;
+        const isPreElement = node.type === 'element' && node.tagName === 'pre';
+        const hasShikiClass = node.properties?.class?.includes('shiki');
+        const shouldProcess = isPreElement && hasShikiClass;
+        if (!shouldProcess) return node;
 
-        // Get the language from the data-language attribute or meta
-        const lang = node.properties['data-language'] || options?.lang || 'text';
-
-        // Store language for later use
+        const lang = node.properties['data-language'] || this.options?.lang || 'text';
         node.properties['data-language'] = lang;
 
         return node;
@@ -219,44 +271,39 @@ function transformerLanguageBadge() {
 function transformerCodeWrapper() {
   return {
     name: 'code-wrapper',
-    root(root, options) {
+    root(root) {
       let codeBlockId = 0;
 
       root.children = root.children.map(node => {
-        if (node.type !== 'element' || node.tagName !== 'pre') return node;
-        if (!node.properties?.class?.includes('shiki')) return node;
+        const isPreElement = node.type === 'element' && node.tagName === 'pre';
+        const hasShikiClass = node.properties?.class?.includes('shiki');
+        const shouldProcess = isPreElement && hasShikiClass;
+        if (!shouldProcess) return node;
 
-        // Generate unique ID for this code block
         const blockId = `code-block-${++codeBlockId}`;
+        const lang = node.properties['data-language'] || this.options?.lang || 'text';
 
-        // Get language from data-language attribute
-        const lang = node.properties['data-language'] || 'text';
-
-        // Extract title from the pre's children
         let titleElement = null;
         const codeChildren = [];
 
         node.children.forEach(child => {
-          if (child.properties?.class === 'shiki-title') {
+          const isTitle = child.properties?.class === 'shiki-title';
+          if (isTitle) {
             titleElement = child;
           } else {
             codeChildren.push(child);
           }
         });
 
-        // Rebuild the pre with only code content and add ID
         node.children = codeChildren;
         node.properties = { ...node.properties, id: blockId };
 
-        // Build header with placeholder for copy button
         const headerChildren = [];
 
-        // Add title if present
         if (titleElement) {
           headerChildren.push(titleElement);
         }
 
-        // Create language badge
         const languageBadge = {
           type: 'element',
           tagName: 'div',
@@ -264,7 +311,6 @@ function transformerCodeWrapper() {
           children: [{ type: 'text', value: lang.toUpperCase() }]
         };
 
-        // Create a placeholder for the copy button (will be on the right)
         const copyButtonPlaceholder = {
           type: 'element',
           tagName: 'div',
@@ -276,10 +322,8 @@ function transformerCodeWrapper() {
         };
         headerChildren.push(copyButtonPlaceholder);
 
-        // Build wrapper structure
         const wrapperChildren = [];
 
-        // Create a header if we have title
         if (titleElement) {
           const header = {
             type: 'element',
@@ -290,13 +334,9 @@ function transformerCodeWrapper() {
           wrapperChildren.push(header);
         }
 
-        // Add language badge (always)
         wrapperChildren.push(languageBadge);
-
-        // Always add copy button placeholder
         wrapperChildren.push(copyButtonPlaceholder);
-
-        wrapperChildren.push(node); // Add the pre element
+        wrapperChildren.push(node);
 
         return {
           type: 'element',
@@ -315,33 +355,47 @@ function transformerCodeWrapper() {
 function transformerTooltip() {
   return {
     name: 'tooltip',
-    code(node) {
-      node.children.forEach(line => {
-        if (!line.children) return;
-        
-        line.children = line.children.map(child => {
-          if (child.type !== 'text') return child;
-          
-          const tooltipIndex = child.value.indexOf('[tooltip:');
-          if (tooltipIndex === -1) return child;
-          
-          const endIndex = child.value.indexOf(']', tooltipIndex);
-          if (endIndex === -1) return child;
-          
-          const tooltip = child.value.slice(tooltipIndex + 9, endIndex).trim();
-          const beforeTooltip = child.value.slice(0, tooltipIndex).trimEnd();
-          
-          return {
-            type: 'element',
-            tagName: 'span',
-            properties: {
-              class: 'shiki-tooltip',
-              'data-tooltip': tooltip
-            },
-            children: [{ type: 'text', value: beforeTooltip }]
-          };
+    preprocess(code) {
+      const tooltipPattern = /(\S+)\[tooltip:([^\]]+)\]/g;
+      const tooltips = [];
+      let match;
+
+      while ((match = tooltipPattern.exec(code)) !== null) {
+        tooltips.push({
+          word: match[1],
+          tooltip: match[2].trim(),
+          full: match[0]
         });
-      });
+      }
+
+      this.tooltips = tooltips;
+      return code.replace(tooltipPattern, '$1');
+    },
+    span(node) {
+      const tooltips = this.tooltips || [];
+      const nodeText = node.children?.[0]?.value;
+
+      if (!nodeText) return;
+
+      const matchingTooltip = tooltips.find(t => nodeText.includes(t.word));
+      if (!matchingTooltip) return;
+
+      const wrapper = {
+        type: 'element',
+        tagName: 'span',
+        properties: {
+          class: 'shiki-tooltip',
+          'data-tooltip': matchingTooltip.tooltip,
+          'role': 'tooltip',
+          'aria-label': matchingTooltip.tooltip,
+          'tabindex': '0'
+        },
+        children: node.children
+      };
+
+      node.type = wrapper.type;
+      node.tagName = wrapper.tagName;
+      node.properties = { ...node.properties, ...wrapper.properties };
     }
   };
 }
@@ -349,13 +403,15 @@ function transformerTooltip() {
 function addHeadingClass() {
   return (tree: Element) => {
     visit(tree, 'element', (node: Element) => {
-      if (/^h[1-6]$/.test(node.tagName)) {
-        node.properties = node.properties || {};
-        const classes = node.properties.className || [];
-        node.properties.className = Array.isArray(classes)
-          ? [...classes, 'content-header']
-          : [classes, 'content-header'];
-      }
+      const isHeading = /^h[1-6]$/.test(node.tagName);
+      if (!isHeading) return;
+
+      node.properties = node.properties || {};
+      const classes = node.properties.className || [];
+      const isClassArray = Array.isArray(classes);
+      node.properties.className = isClassArray
+        ? [...classes, 'content-header']
+        : [classes, 'content-header'];
     });
   };
 }

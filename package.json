@@ -14,83 +14,53 @@
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
   },
   "scripts": {
-    "build": "bun run build:css && next build",
+    "build": "bun run build:css && next build && next-sitemap",
     "build:sitemap": "next-sitemap",
     "build:css": "sass --style=compressed styles/main.scss public/assets/jeffry.in.css",
-    "commit": "git-cz",
-    "commit-msg": "commitlint --edit $1",
-    "dev": "next dev",
+    "dev": "next dev --port 34729",
     "format": "bunx prettier --write .",
     "lint": "bunx oxlint .",
     "lint:fix": "bunx oxlint --fix .",
-    "pre-commit": "bun run build && bun run lint && bun run commit-msg",
+    "prepare": "bun scripts/install-hooks.ts && bun run update && bun run maintain",
     "start": "next start",
-    "update": "codependence --update"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/@commitlint/prompt"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "header-max-length": [
-        2,
-        "always",
-        120
-      ]
-    }
-  },
-  "pastoralist": {
-    "appendix": {}
+    "update": "codependence --update",
+    "maintain": "pastoralist"
   },
   "dependencies": {
-    "@next/third-parties": "15.5.6",
+    "@giscus/react": "3.1.0",
+    "@keystatic/core": "0.5.48",
+    "@keystatic/next": "5.0.4",
+    "@mdx-js/loader": "3.1.1",
+    "@mdx-js/react": "3.1.1",
+    "@next/mdx": "16.0.8",
+    "@next/third-parties": "16.1.1",
+    "firebase": "12.7.0",
     "lucide-react": "0.542.0",
-    "next": "15.5.9",
-    "react": "19.1.1",
-    "react-dom": "19.1.1",
+    "next": "16.1.1",
+    "next-mdx-remote": "5.0.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "recharts": "3.3.0",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-slug": "^6.0.0",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.8.1",
-    "@commitlint/config-conventional": "19.8.1",
-    "@commitlint/format": "19.8.1",
-    "@eslint/js": "9.38.0",
-    "@giscus/react": "3.1.0",
     "@shikijs/colorized-brackets": "1.29.2",
     "@shikijs/rehype": "1.29.2",
     "@shikijs/transformers": "1.29.2",
-    "@shikijs/twoslash": "1.29.2",
     "@types/bun": "latest",
-    "@types/node": "24.3.0",
-    "@types/react": "19.1.12",
-    "@types/react-dom": "19.1.9",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
     "codependence": "0.3.1",
-    "commander": "12.1.0",
-    "commitizen": "4.3.1",
-    "globals": "15.15.0",
     "gray-matter": "4.0.3",
-    "husky": "9.1.7",
     "next-sitemap": "4.2.3",
-    "pastoralist": "1.7.5",
-    "react-helmet": "6.1.0",
-    "rehype": "13.0.2",
-    "rehype-raw": "7.0.0",
-    "rehype-shiki": "0.0.9",
+    "pastoralist": "1.9.2",
     "rehype-stringify": "10.0.1",
-    "remark": "15.0.1",
-    "remark-html": "16.0.1",
     "remark-parse": "11.0.0",
     "remark-rehype": "11.1.2",
     "sanitize-filename": "1.6.3",
-    "sass": "1.93.2",
-    "shiki": "1.29.2",
+    "sass": "1.97.1",
     "unified": "11.0.5"
   },
   "private": true,
@@ -106,5 +76,14 @@
     "@next/swc",
     "@swc/core",
     "@swc/helpers"
-  ]
+  ],
+  "pastoralist": {
+    "security": {
+      "enabled": true,
+      "provider": "osv",
+      "interactive": false,
+      "autoFix": true,
+      "severityThreshold": "high"
+    }
+  }
 }
