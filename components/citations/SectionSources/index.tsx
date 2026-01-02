@@ -3,7 +3,7 @@
 import React from 'react';
 import type { SectionSourcesProps } from './types';
 
-export const SectionSources = ({ sources, title = 'Sources' }: SectionSourcesProps) => {
+export const SectionSources = ({ sources }: SectionSourcesProps) => {
   if (!sources || sources.length === 0) return null;
 
   return (

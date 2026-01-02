@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, useRef } from 'react';
-import { ref, get, set, onValue } from 'firebase/database';
+import { ref, get, set, onValue, DatabaseReference } from 'firebase/database';
 import { db } from '../../lib/firebase';
 import { trackLove } from '../../lib/analytics-firebase';
 import { formatCount } from '../../lib/format-count';
@@ -17,6 +17,11 @@ interface Particle {
   y: number;
 }
 
+function getHeartRef(slug: string): DatabaseReference | null {
+  if (!db) return null;
+  return ref(db, `hearts/${slug.replace(/\//g, '_')}`);
+}
+
 export const HeartButton = ({ slug }: HeartButtonProps) => {
   const [count, setCount] = useState<number>(0);
   const [hasLiked, setHasLiked] = useState(false);
@@ -26,14 +31,19 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
   const particleId = useRef(0);
 
   const storageKey = `heart-${slug}`;
-  const dbRef = ref(db, `hearts/${slug.replace(/\//g, '_')}`);
 
   useEffect(() => {
     const liked = localStorage.getItem(storageKey) === 'true';
     setHasLiked(liked);
 
+    const dbRef = getHeartRef(slug);
+    if (!dbRef) {
+      setIsLoading(false);
+      return;
+    }
+
     const unsubscribe = onValue(dbRef, (snapshot) => {
-      setCount(snapshot.val() || 0);
+      setCount(snapshot.val() ?? 0);
       setIsLoading(false);
     });
 
@@ -60,9 +70,16 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
 
     spawnParticles();
 
+    const dbRef = getHeartRef(slug);
+    if (!dbRef) {
+      localStorage.setItem(storageKey, 'true');
+      setHasLiked(true);
+      return;
+    }
+
     try {
       const snapshot = await get(dbRef);
-      const currentCount = snapshot.val() || 0;
+      const currentCount = snapshot.val() ?? 0;
       await set(dbRef, currentCount + 1);
       await trackLove(slug);
       localStorage.setItem(storageKey, 'true');

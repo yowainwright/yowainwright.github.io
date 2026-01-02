@@ -21,7 +21,6 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { unified } from "unified";
 import { visit } from "unist-util-visit";
 import type { Element } from "hast";
-import { serialize } from "next-mdx-remote/serialize";
 import customDark from "./themes/dark.json";
 import customLight from "./themes/light.json";
 
@@ -125,7 +124,6 @@ export const getSinglePost = (slug: string, folder: string) => {
   }
 
   const mdxPath = path.join(getPath(fileFolder), `${slug}.mdx`);
-  const mdPath = path.join(getPath(fileFolder), `${slug}.md`);
   const isMdx = fs.existsSync(mdxPath);
   const fileName = isMdx ? `${slug}.mdx` : `${slug}.md`;
 

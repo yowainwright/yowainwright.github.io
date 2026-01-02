@@ -8,13 +8,12 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
   Label,
   Cell,
 } from 'recharts';
 import type { BarChartProps } from '../types';
-import { CHART_COLORS, CHART_STYLES } from '../constants';
+import { CHART_STYLES } from '../constants';
 
 const BAR_COLORS = {
   grey: '#9ca3af',

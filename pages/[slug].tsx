@@ -96,7 +96,7 @@ const GiscusComponent = dynamic(
 );
 
 const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
-  const [hasError, setHasError] = useState(false);
+  const [hasError] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const theme = isDarkMode ? THEME_DARK : THEME_LIGHT;
 
