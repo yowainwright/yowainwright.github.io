@@ -18,10 +18,13 @@
     display: inline-block;
     font-size: 1.2rem;
     font-weight: bold;
-    padding: 0.5rem 0.75rem 0 0;
+    padding: 0.5rem 1.25rem 0 0;
   }
 
   &__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
     background: 0;
     border: 0;
     color: var(--color-link-primary);
@@ -36,11 +39,24 @@
       cursor: pointer;
       text-decoration: underline;
     }
+
+    &:disabled {
+      cursor: default;
+      text-decoration: none;
+    }
   }
 
   &__link {
     &:last-of-type {
       padding-right: 0;
     }
+  }
+
+  &__count {
+    font-size: 0.65rem;
+    font-weight: 600;
+    align-self: flex-start;
+    margin-top: -0.25rem;
+    margin-left: -0.15rem;
   }
 }

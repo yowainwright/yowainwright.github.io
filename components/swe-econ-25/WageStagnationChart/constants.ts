@@ -1,58 +1,42 @@
 export const data = [
   {
-    label: "Production/Manual Labor",
+    label: "Manufacturing (1977-1983)",
     data: [
-      { primary: "1975", secondary: 100 },
-      { primary: "1985", secondary: 98 },
-      { primary: "1995", secondary: 96 },
-      { primary: "2005", secondary: 95 },
-      { primary: "2015", secondary: 93 },
-      { primary: "2024", secondary: 91 }
+      { primary: "Year 1", secondary: 100 },
+      { primary: "Year 2", secondary: 101 },
+      { primary: "Year 3", secondary: 99 },
+      { primary: "Year 4", secondary: 95 },
+      { primary: "Year 5", secondary: 93 },
+      { primary: "Year 6", secondary: 92 }
     ]
   },
   {
-    label: "White-Collar Workers",
+    label: "Software Engineering (2018-2024)",
     data: [
-      { primary: "1975", secondary: 100 },
-      { primary: "1985", secondary: 105 },
-      { primary: "1995", secondary: 110 },
-      { primary: "2005", secondary: 108 },
-      { primary: "2015", secondary: 106 },
-      { primary: "2024", secondary: 102 }
-    ]
-  },
-  {
-    label: "Software Engineers",
-    data: [
-      { primary: "1975", secondary: 100 },
-      { primary: "1985", secondary: 125 },
-      { primary: "1995", secondary: 158 },
-      { primary: "2005", secondary: 172 },
-      { primary: "2015", secondary: 185 },
-      { primary: "2024", secondary: 180 }
+      { primary: "Year 1", secondary: 100 },
+      { primary: "Year 2", secondary: 103 },
+      { primary: "Year 3", secondary: 102 },
+      { primary: "Year 4", secondary: 99 },
+      { primary: "Year 5", secondary: 96 },
+      { primary: "Year 6", secondary: 94 }
     ]
   }
 ];
 
 export const sources = [
   {
-    link: "https://www.epi.org/publication/swa-wages-2019/",
-    author: "Economic Policy Institute",
-    publication: "State of Working America Wages 2019"
+    link: "https://www.congress.gov/crs-product/R45090",
+    author: "Congressional Research Service",
+    publication: "Real Wage Trends, 1979 to 2019"
   },
   {
-    link: "https://www.bls.gov/opub/mlr/2020/article/comparing-compensation-costs.htm",
-    author: "Bureau of Labor Statistics",
-    publication: "Monthly Labor Review"
-  },
-  {
-    link: "https://www.pewresearch.org/short-reads/2018/08/07/for-most-us-workers-real-wages-have-barely-budged-for-decades/",
-    author: "Pew Research Center",
-    publication: "For Most U.S. Workers, Real Wages Have Barely Budged in Decades"
+    link: "https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/",
+    author: "ADP Research Institute",
+    publication: "The Rise and Fall of the Software Developer"
   },
   {
     link: "https://spectrum.ieee.org/electrical-engineer-salary-2023",
     author: "IEEE-USA",
-    publication: "IEEE Spectrum"
+    publication: "Inflation Bites U.S. Engineering Salaries"
   }
 ];

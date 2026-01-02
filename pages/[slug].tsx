@@ -9,8 +9,9 @@ import { Share } from "../components/Share";
 import { useCodeBlocks } from "../hooks/useCodeBlocks";
 import { useHeadingAnchors } from "../hooks/useHeadingAnchors";
 import { useScrollDepth, useReadTime } from "../hooks/useAnalytics";
+import { trackView } from "../lib/analytics-firebase";
 import { InlineSource, SectionSources } from "../components/citations";
-import { RiseAndFallChart, GlobalGrowthChart, WageStagnationChart, IndustrialRevolutionChart } from "../components/swe-econ-25";
+import { RiseAndFallChart, GlobalGrowthChart, WageStagnationChart, IndustrialRevolutionChart, SWEMetricsGrid } from "../components/swe-econ-25";
 
 const THEME_DARK = "dark";
 const THEME_LIGHT = "light";
@@ -98,40 +99,40 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const theme = isDarkMode ? THEME_DARK : THEME_LIGHT;
-  
+
   useEffect(() => {
-    const userWantsAutoLoadComments = localStorage.getItem('jeffry-in-comments-autoload-enabled');
-    const lastCommentViewedPath = localStorage.getItem('jeffry-in-last-comment-viewed-path');
-    const currentPath = window.location.pathname;
-    
-    const shouldAutoLoad = userWantsAutoLoadComments === 'true' && 
-                          lastCommentViewedPath === currentPath;
-    
-    if (shouldAutoLoad) {
+    const hasLoadedBefore = localStorage.getItem('jeffry-in-comments-autoload-enabled') === 'true';
+
+    if (hasLoadedBefore) {
       setIsInView(true);
-    } else {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setIsInView(true);
-            observer.disconnect();
-          }
-        },
-        { rootMargin: '100px' }
-      );
-      
-      const element = document.querySelector('.post__giscus');
-      if (element) observer.observe(element);
-      
-      return () => observer.disconnect();
+      return;
     }
+
+    const handleLoadGiscus = () => setIsInView(true);
+    window.addEventListener('load-giscus', handleLoadGiscus);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '300px' }
+    );
+
+    const element = document.querySelector('.post__giscus');
+    if (element) observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('load-giscus', handleLoadGiscus);
+    };
   }, []);
-  
+
   useEffect(() => {
     if (isInView) {
       localStorage.setItem('jeffry-in-comments-autoload-enabled', 'true');
-      localStorage.setItem('jeffry-in-last-comment-viewed-path', window.location.pathname);
-      localStorage.setItem('jeffry-in-comments-last-loaded-timestamp', Date.now().toString());
     }
   }, [isInView]);
   
@@ -140,12 +141,8 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   if (!isInView) {
     return (
       <div className="giscus-placeholder">
-        <button 
-          onClick={() => {
-            setIsInView(true);
-            localStorage.setItem('jeffry-in-comments-autoload-enabled', 'true');
-            localStorage.setItem('jeffry-in-last-comment-viewed-path', window.location.pathname);
-          }}
+        <button
+          onClick={() => setIsInView(true)}
           className="giscus-placeholder__button"
         >
           Load Comments
@@ -167,7 +164,6 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
             emitMetadata="0"
             theme={theme}
             lang="en"
-            loading="lazy"
             inputPosition="top"
           />
       </ErrorBoundary>
@@ -182,6 +178,7 @@ const mdxComponents = {
   GlobalGrowthChart,
   WageStagnationChart,
   IndustrialRevolutionChart,
+  SWEMetricsGrid,
 };
 
 const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostProps) => {
@@ -190,6 +187,10 @@ const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostP
   useHeadingAnchors();
   useScrollDepth();
   const estimatedReadTime = useReadTime(wordCount);
+
+  useEffect(() => {
+    trackView(slug);
+  }, [slug]);
 
   const description = frontmatter?.description || frontmatter?.meta || "";
   const title = frontmatter?.title || "";
@@ -234,7 +235,7 @@ const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostP
             <header className="aside__header">
               <h3 className="aside__title">{frontmatter?.title}</h3>
             </header>
-            <Share path={frontmatter?.path} />
+            <Share path={frontmatter?.path} slug={slug} />
           </div>
         </aside>
       </section>

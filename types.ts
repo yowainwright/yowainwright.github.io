@@ -17,6 +17,7 @@ export type NavListProps = {
 export type ShareProps = {
   path: string;
   url?: string;
+  slug?: string;
 };
 
 export type SocialItem = {

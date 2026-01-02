@@ -6,6 +6,8 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta property="og:locale" content="en_US" />
+        <link rel="preconnect" href="https://giscus.app" />
+        <link rel="dns-prefetch" href="https://giscus.app" />
         <link href="https://yowainwright.imgix.net/favicon.png" rel="icon" />
         <link
           href="https://yowainwright.imgix.net/apple-icon-120x120.png"

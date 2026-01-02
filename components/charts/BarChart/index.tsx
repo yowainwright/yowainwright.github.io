@@ -16,6 +16,11 @@ import {
 import type { BarChartProps } from '../types';
 import { CHART_COLORS, CHART_STYLES } from '../constants';
 
+const BAR_COLORS = {
+  grey: '#9ca3af',
+  blue: '#3b82f6',
+};
+
 export const BarChart = ({
   data,
   primaryLabel = '',
@@ -23,7 +28,7 @@ export const BarChart = ({
   height = '400px'
 }: BarChartProps) => {
   const chartData = data[0]?.data || [];
-  const colors = Object.values(CHART_COLORS.light);
+  const zebraColors = [BAR_COLORS.grey, BAR_COLORS.blue];
 
   return (
     <div style={{ width: '100%', height, padding: '20px 0' }}>
@@ -46,12 +51,11 @@ export const BarChart = ({
             maxBarSize={CHART_STYLES.bar.maxBarSize}
             label={{
               position: 'top',
-              fontSize: CHART_STYLES.label.fontSize,
-              fontWeight: CHART_STYLES.label.fontWeight,
+              fontSize: CHART_STYLES.line.label.fontSize,
             }}
           >
             {chartData.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+              <Cell key={`cell-${index}`} fill={zebraColors[index % 2]} />
             ))}
           </Bar>
         </RechartsBarChart>

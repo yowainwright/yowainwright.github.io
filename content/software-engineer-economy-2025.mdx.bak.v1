@@ -44,9 +44,7 @@ If you worked there, you could buy a house, save for retirement, and even send y
 This was how I grew up.
 
 Then Homestake's slow decline began.
-First, 200 jobs eliminated during<InlineSource url="https://republicofmining.com/2015/05/06/homestake-mining-company-history-1877-2000/">2</InlineSource>.
-Most workers didn't panic. January 1998: 400 more jobs lost, underground operations ceased. Gold prices fell to $253/ounce in July 1999—lowest in 20 years. September 2000: shutdown announced. December 2001: Homestake closed entirely. All 2,200 jobs gone.<InlineSource url="https://www.blackhillsknowledgenetwork.org/home/in-history-homestake-announces-shutdown-of-lead-mine.html">4</InlineSource>. It was slow. Each year felt manageable—just a little worse than the last.
-which didn't feel like a disaster then. This same pattern has played out across the US.
+First, 200 jobs eliminated<InlineSource url="https://republicofmining.com/2015/05/06/homestake-mining-company-history-1877-2000/">2</InlineSource>. Most workers didn't panic. January 1998: 400 more jobs lost, underground operations ceased. September 2000: shutdown announced. December 2001: Homestake closed entirely. All 2,200 jobs gone<InlineSource url="https://www.blackhillsknowledgenetwork.org/home/in-history-homestake-announces-shutdown-of-lead-mine.html">4</InlineSource>. It was slow. Each year felt manageable—just a little worse than the last. This same pattern has played out across the US.
 The stories have become mundane in their commonality, yet they mean tens of millions of Americans quietly have less.
 As a software engineer, I've had an itching feeling something similar is going now in tech to what I experienced as a kid with manufacturing.
 
@@ -70,9 +68,8 @@ Software engineer job postings in the US are down **-35%** vs 5 years ago<Inline
 Current postings are **3.5x lower** than the 2022 peak<InlineSource url="https://blog.pragmaticengineer.com/software-engineer-jobs-five-year-low/">Pragmatic Engineer</InlineSource>
 Specialized roles (Android, Java, iOS, .NET) are also **-60%+**<InlineSource url="https://newsletter.pragmaticengineer.com/p/state-of-the-tech-market-in-2025">Pragmatic Engineer</InlineSource>
 The decline started before AI tools went mainstream.
-But this trend was going on before ChatGPT and tech layoffs making headlines.
 
-#### 2. Offshore Engineering: Exploding
+### Offshore Engineering: Exploding
 
 <GlobalGrowthChart />
 
@@ -133,23 +130,14 @@ If you grew up watching a parent work in a factory or warehouse, the current tec
 
 ---
 
-## When Workers Were Valued
-
-<IndustrialRevolutionChart />
-
-{/* @TODO: rewrite - management book language */}
-From 1820-1880, real wages stayed flat for 60 years while productivity soared. From 1880-1920, that changed—wages surged 60%, hours dropped from 72/week to 44/week. What shifted? Companies that invested in workers outperformed those that didn't. The data from that era is clear: treating workers as assets, not costs, built stronger companies and stronger communities.
-
----
-
 ## Conclusion
 
 I started this research wondering if what I was feeling was real or just my perception. After looking at the data, I found patterns that surprised me.
 
 At year 5 since their peaks: software engineering has job postings down 35%, pay growth lagging by 6 points. GM (1984) was at -24% employment, -4% wages. Bethlehem Steel (1980) at -17% employment, -3% wages. Homestake (1985) at -16% employment, -2% wages. The patterns rhyme.
 
-{/* @TODO: rewrite - last sentence sounds like me */}
-What happened next? GM declined 85% over 30 years and needed a government bailout. Bethlehem Steel went bankrupt. Cutting workers was framed as efficiency. The data suggests it was a symptom of decline, not a path to growth.
+{/* @TODO: refine */}
+What happened next? GM declined 85% over 30 years and needed a government bailout. Bethlehem Steel went bankrupt. Cutting workers was framed as efficiency. The data suggests it was a symptom of decline, not a path to growth. From 1820-1880, wages stayed flat for 60 years while productivity soared. Then it changed.
 
 ---
 

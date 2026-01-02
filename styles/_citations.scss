@@ -1,0 +1,62 @@
+@use "variables" as *;
+
+// Citations & Sources
+
+.citation {
+  font-size: 0.7em;
+  vertical-align: super;
+  line-height: 0;
+
+  &__link {
+    text-decoration: none;
+    color: var(--color-link-primary);
+
+    &:hover {
+      color: var(--color-link-hover);
+      text-decoration: underline;
+    }
+  }
+}
+
+.sources {
+  font-size: 0.875rem;
+  margin-top: $m-lg;
+  color: var(--color-text-secondary);
+
+  &__title {
+    font-weight: 600;
+    margin-bottom: $m-sm;
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: $m-lg;
+    line-height: var(--line-height-relaxed);
+  }
+
+  &__item {
+    margin-bottom: $m-xs;
+  }
+
+  &__author {
+    // author name before title
+  }
+
+  &__link {
+    color: var(--color-link-primary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-link-hover);
+      text-decoration: underline;
+    }
+  }
+
+  &__publication {
+    font-style: italic;
+  }
+
+  &__date {
+    // date styling
+  }
+}

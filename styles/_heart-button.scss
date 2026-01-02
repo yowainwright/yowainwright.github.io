@@ -1,0 +1,33 @@
+.heart-button {
+  position: relative;
+  gap: 0.35rem;
+
+  &:hover:not(:disabled) {
+    .pixel-heart {
+      --heart-color: var(--heart-color-filled);
+    }
+  }
+
+  &--liked {
+    .pixel-heart {
+      --heart-color: var(--heart-color-filled);
+    }
+  }
+}
+
+@keyframes heart-float {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.5);
+  }
+}
+
+.heart-particle {
+  position: absolute;
+  pointer-events: none;
+  animation: heart-float 0.8s ease-out forwards;
+}

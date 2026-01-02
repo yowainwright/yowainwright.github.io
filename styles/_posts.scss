@@ -14,8 +14,34 @@
     padding-bottom: 2rem;
   }
 
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.6rem;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+
+    time {
+      display: inline;
+      font-size: inherit;
+      font-weight: inherit;
+      letter-spacing: inherit;
+      text-transform: inherit;
+      margin-bottom: 0;
+    }
+  }
+
   &__time {
     margin-bottom: 0;
+  }
+
+  &__read-time {
+    &::before {
+      content: "·";
+      margin-right: 0.25rem;
+    }
   }
 
   &__article {
