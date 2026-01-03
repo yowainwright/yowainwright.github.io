@@ -1,4 +1,4 @@
-import { ref, get, set, onValue, off } from 'firebase/database';
+import { ref, get, runTransaction, onValue, off } from 'firebase/database';
 import { db } from './firebase';
 
 export interface AnalyticsData {
@@ -43,9 +43,7 @@ async function incrementMetric(slug: string, metric: string): Promise<void> {
   if (!metricRef) return;
 
   try {
-    const snapshot = await get(metricRef);
-    const currentCount = snapshot.val() ?? 0;
-    await set(metricRef, currentCount + 1);
+    await runTransaction(metricRef, (current) => (current ?? 0) + 1);
   } catch (error) {
     console.error(`Failed to increment ${metric} for ${slug}:`, error);
   }
