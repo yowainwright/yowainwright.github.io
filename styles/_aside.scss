@@ -1,41 +1,114 @@
 @use "variables";
 
 .aside {
-  position: relative;
+  position: sticky;
+  top: 5.7rem;
+  z-index: 10;
+  order: -1;
+  align-self: start;
+  height: 2.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+
+  &.is-sticky {
+    opacity: 1;
+  }
+
+  @media screen and (min-width: variables.$width-small) {
+    top: 0;
+    opacity: 1;
+  }
+
+  @media screen and (min-width: variables.$width-medium) {
+    order: 0;
+    top: 1rem;
+    height: auto;
+    transition: none;
+  }
 
   &__header {
-    padding: 1rem 2.5rem 0;
+    padding: 0;
+    flex: 1;
+    min-width: 0;
+    height: 2.5rem;
+    margin: 0;
+
+    @media screen and (min-width: variables.$width-medium) {
+      padding: 1rem 2.5rem 0;
+      height: auto;
+    }
   }
 
   &__meta {
-    border: 1px solid var(--color-border-default);
-    border-radius: 2rem;
-    margin: 4rem auto 1rem;
+    border: 0;
+    border-bottom: 1px solid var(--color-border-default);
+    border-radius: 0;
+    margin: 0 -1rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-bg-primary);
+    height: 2.5rem;
 
     .js-is-darkmode & {
       border-color: var(--color-border-default)
     }
 
-    @media screen and (min-width:variables.$width-small) {
+    @media screen and (min-width: variables.$width-small) {
+      margin: 0 calc(-10% - 1rem);
+      padding: 0 calc(10% + 1rem);
+    }
+
+    @media screen and (min-width: variables.$width-medium) {
+      border: 1px solid var(--color-border-default);
+      border-radius: 2rem;
       margin: 0;
-      position: sticky;
-      top: 1rem;
+      padding: 0;
+      display: block;
+      height: auto;
     }
   }
 
   &__title {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 100;
     line-height: 1.8;
-    max-width: calc(100% - 2rem);
-    @media screen and (min-width:variables.$width-small) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.3rem;
+    flex: 1;
+    min-width: 0;
+    max-width: calc(100vw - 120px);
+
+    @media screen and (min-width: variables.$width-medium) {
+      font-size: 1.2rem;
+      font-weight: bold;
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+      margin-top: 0;
+      flex: none;
       max-width: none;
     }
   }
 
   &__content {
     padding: 1rem;
-    @media screen and (min-width:variables.$width-small) {
+    @media screen and (min-width: variables.$width-small) {
       padding: 0;
     }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

@@ -47,11 +47,11 @@ export const Share = ({ path, url = "https://jeffry.in", slug }: ShareProps) => 
     <section className="share">
       <nav className="share__nav">
         <button className="share__button" onClick={onBtnClick}>
-          {copyText}
+          <span className="share__label">{copyText}</span>
           <PixelLink size={2} />
         </button>
         <button className="share__button" onClick={onCommentClick}>
-          Comment
+          <span className="share__label">Comment</span>
           <PixelComment size={2} />
         </button>
         {slug && <HeartButton slug={slug} />}
