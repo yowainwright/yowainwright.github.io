@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   BarChart as RechartsBarChart,
   Bar,
@@ -13,12 +13,8 @@ import {
   Cell,
 } from 'recharts';
 import type { BarChartProps } from '../types';
-import { CHART_STYLES } from '../constants';
-
-const BAR_COLORS = {
-  grey: '#9ca3af',
-  blue: '#3b82f6',
-};
+import { CHART_COLORS, CHART_STYLES } from '../constants';
+import { GlobalState } from '../../../pages/_app';
 
 export const BarChart = ({
   data,
@@ -26,8 +22,11 @@ export const BarChart = ({
   secondaryLabel = '',
   height = '400px'
 }: BarChartProps) => {
+  const state = useContext(GlobalState);
+  const isDark = state?.isDarkMode ?? false;
+  const colors = isDark ? CHART_COLORS.dark : CHART_COLORS.light;
   const chartData = data[0]?.data || [];
-  const zebraColors = [BAR_COLORS.grey, BAR_COLORS.blue];
+  const zebraColors = [colors.grey, colors.primary];
 
   return (
     <div style={{ width: '100%', height, padding: '20px 0' }}>

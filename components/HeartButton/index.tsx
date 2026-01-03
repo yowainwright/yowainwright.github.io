@@ -99,7 +99,7 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
       className={`share__button heart-button ${hasLiked ? 'heart-button--liked' : ''}`}
       aria-label={hasLiked ? 'You liked this post' : 'Like this post'}
     >
-      Love
+      <span className="share__label">Love</span>
       <PixelHeart filled={hasLiked} size={2} color="currentColor" />
       {countText && <span className="share__count">{countText}</span>}
       {particles.map((p) => (

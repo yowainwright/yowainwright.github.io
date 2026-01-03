@@ -6,6 +6,7 @@ export const CHART_COLORS = {
     danger: '#ef4444',
     purple: '#8b5cf6',
     pink: '#ec4899',
+    grey: '#9ca3af',
   },
   dark: {
     primary: '#60a5fa',
@@ -14,6 +15,7 @@ export const CHART_COLORS = {
     danger: '#f87171',
     purple: '#a78bfa',
     pink: '#f472b6',
+    grey: '#6b7280',
   },
 };
 

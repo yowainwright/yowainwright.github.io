@@ -192,6 +192,25 @@ const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostP
     trackView(slug);
   }, [slug]);
 
+  useEffect(() => {
+    const aside = document.querySelector('.aside');
+    const postSection = document.querySelector('.post__section');
+    if (!aside || !postSection) return;
+
+    const handleScroll = () => {
+      const sectionTop = postSection.getBoundingClientRect().top;
+      if (sectionTop <= 100) {
+        aside.classList.add('is-sticky');
+      } else {
+        aside.classList.remove('is-sticky');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const description = frontmatter?.description || frontmatter?.meta || "";
   const title = frontmatter?.title || "";
 

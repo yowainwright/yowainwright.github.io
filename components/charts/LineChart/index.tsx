@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   LineChart as RechartsLineChart,
   Line,
@@ -16,6 +16,7 @@ import { GitCommitHorizontal } from 'lucide-react';
 import type { LineChartProps, Series } from '../types';
 import { CHART_COLORS, CHART_STYLES } from '../constants';
 import { LabelPosition } from 'recharts/types/component/Label';
+import { GlobalState } from '../../../pages/_app';
 
 const formatChartData = (data: Series[]) => {
   const allPrimaryKeys = [...new Set(data.flatMap(s => s.data.map(d => d.primary)))].sort();
@@ -56,7 +57,9 @@ export const LineChart = ({
   height = '400px',
   yDomain
 }: LineChartProps) => {
-  const colors = Object.values(CHART_COLORS.light);
+  const state = useContext(GlobalState);
+  const isDark = state?.isDarkMode ?? false;
+  const colors = Object.values(isDark ? CHART_COLORS.dark : CHART_COLORS.light);
   const series = data.map((s) => s.label);
   const formattedData = formatChartData(data);
 

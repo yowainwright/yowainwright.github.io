@@ -1,12 +1,23 @@
 @use "variables";
 
 .share {
-  padding: 1rem 0;
+  padding: 0;
+
+  @media screen and (min-width: variables.$width-medium) {
+    padding: 1rem 0;
+  }
 
   &__nav {
-    border-top: 1px solid var(--color-border-default);
-    padding: 0.5rem 0;
+    border-top: 0;
+    padding: 0;
     text-align: center;
+    margin-top: -1rem;
+
+    @media screen and (min-width: variables.$width-medium) {
+      border-top: 1px solid var(--color-border-default);
+      padding: 0.5rem 0;
+      margin-top: 0;
+    }
 
     .js-is-darkmode & {
       border-color: var(--color-border-default);
@@ -16,9 +27,21 @@
   &__button,
   &__link {
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
-    padding: 0.5rem 1.25rem 0 0;
+    padding: 0 1rem 0 0;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+
+    @media screen and (min-width: variables.$width-medium) {
+      padding: 0.5rem 1rem 0 0;
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
   }
 
   &__button {
@@ -58,5 +81,13 @@
     align-self: flex-start;
     margin-top: -0.25rem;
     margin-left: -0.15rem;
+  }
+
+  &__label {
+    display: none;
+
+    @media screen and (min-width: variables.$width-medium) {
+      display: inline;
+    }
   }
 }

@@ -1,3 +1,29 @@
+@use "variables";
+
+.metrics-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: variables.$width-medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__item {
+    border: 1px solid var(--color-border-light);
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+
+  &__title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+}
+
 $chart-font-size: 12px;
 $chart-line-height: 1.8;
 $chart-border-radius: 5px;
@@ -47,4 +73,8 @@ $chart-container-padding: 20px 0;
 
 .recharts-label {
   font-size: $chart-font-size;
+}
+
+.recharts-responsive-container {
+  max-width: 100%;
 }
