@@ -1,11 +1,13 @@
 'use client';
 
 import React, { useEffect, useState, useRef } from 'react';
-import { ref, get, set, onValue, DatabaseReference } from 'firebase/database';
+import { ref, runTransaction, onValue, DatabaseReference } from 'firebase/database';
 import { db } from '../../lib/firebase';
 import { trackLove } from '../../lib/analytics-firebase';
 import { formatCount } from '../../lib/format-count';
 import { PixelHeart } from '../PixelHeart';
+
+const MAX_CLICKS = 10;
 
 interface HeartButtonProps {
   slug: string;
@@ -24,17 +26,20 @@ function getHeartRef(slug: string): DatabaseReference | null {
 
 export const HeartButton = ({ slug }: HeartButtonProps) => {
   const [count, setCount] = useState<number>(0);
-  const [hasLiked, setHasLiked] = useState(false);
+  const [userClicks, setUserClicks] = useState<number>(0);
   const [isLoading, setIsLoading] = useState(true);
   const [particles, setParticles] = useState<Particle[]>([]);
+  const [isAnimating, setIsAnimating] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const particleId = useRef(0);
 
   const storageKey = `heart-${slug}`;
+  const hasMaxed = userClicks >= MAX_CLICKS;
 
   useEffect(() => {
-    const liked = localStorage.getItem(storageKey) === 'true';
-    setHasLiked(liked);
+    const stored = localStorage.getItem(storageKey);
+    const clicks = stored ? parseInt(stored, 10) : 0;
+    setUserClicks(isNaN(clicks) ? 0 : clicks);
 
     const dbRef = getHeartRef(slug);
     if (!dbRef) {
@@ -50,13 +55,14 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
     return () => unsubscribe();
   }, [slug, storageKey]);
 
-  const spawnParticles = () => {
+  const spawnParticles = (clickCount: number) => {
+    const particleCount = 3 + clickCount * 2;
     const newParticles: Particle[] = [];
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < particleCount; i++) {
       newParticles.push({
         id: particleId.current++,
-        x: Math.random() * 40 - 20,
-        y: Math.random() * -10,
+        x: Math.random() * 60 - 30,
+        y: Math.random() * -20,
       });
     }
     setParticles((prev) => [...prev, ...newParticles]);
@@ -66,41 +72,45 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
   };
 
   const handleClick = async () => {
-    if (hasLiked) return;
+    if (hasMaxed) return;
 
-    spawnParticles();
+    const newClickCount = userClicks + 1;
+    spawnParticles(newClickCount);
+    setIsAnimating(true);
+    setTimeout(() => setIsAnimating(false), 150);
+
+    setUserClicks(newClickCount);
+    localStorage.setItem(storageKey, String(newClickCount));
 
     const dbRef = getHeartRef(slug);
-    if (!dbRef) {
-      localStorage.setItem(storageKey, 'true');
-      setHasLiked(true);
-      return;
-    }
+    if (!dbRef) return;
 
     try {
-      const snapshot = await get(dbRef);
-      const currentCount = snapshot.val() ?? 0;
-      await set(dbRef, currentCount + 1);
+      await runTransaction(dbRef, (current) => (current ?? 0) + 1);
       await trackLove(slug);
-      localStorage.setItem(storageKey, 'true');
-      setHasLiked(true);
     } catch (error) {
       console.error('Failed to like post:', error);
     }
   };
 
   const countText = isLoading ? '' : count > 0 ? formatCount(count) : '';
+  const heartSize = hasMaxed ? 2 : 2 + userClicks * 0.15;
+  const hasClicked = userClicks > 0;
+  const heartFilled = hasClicked;
+  const heartColor = hasClicked ? '#e53935' : 'currentColor';
+  const buttonClass = `share__button heart-button ${hasClicked ? 'heart-button--active' : ''} ${hasMaxed ? 'heart-button--maxed' : ''} ${isAnimating ? 'heart-button--pulse' : ''}`;
+  const ariaLabel = hasMaxed ? `You've loved this post ${MAX_CLICKS} times` : 'Love this post';
 
   return (
     <button
       ref={buttonRef}
       onClick={handleClick}
-      disabled={hasLiked}
-      className={`share__button heart-button ${hasLiked ? 'heart-button--liked' : ''}`}
-      aria-label={hasLiked ? 'You liked this post' : 'Like this post'}
+      disabled={hasMaxed}
+      className={buttonClass}
+      aria-label={ariaLabel}
     >
       <span className="share__label">Love</span>
-      <PixelHeart filled={hasLiked} size={2} color="currentColor" />
+      <PixelHeart filled={heartFilled} size={heartSize} color={heartColor} />
       {countText && <span className="share__count">{countText}</span>}
       {particles.map((p) => (
         <span
@@ -108,7 +118,7 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
           className="heart-particle"
           style={{ left: p.x, top: p.y }}
         >
-          <PixelHeart filled size={1} />
+          <PixelHeart filled size={1} color="#e53935" />
         </span>
       ))}
     </button>
