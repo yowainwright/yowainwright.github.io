@@ -6,13 +6,13 @@ self.__BUILD_MANIFEST = {
     "static/chunks/5fb2f602a676d6cb.js"
   ],
   "/[slug]": [
-    "static/chunks/3e42c5b314276894.js"
+    "static/chunks/99885c0d7b2ade57.js"
   ],
   "/_error": [
     "static/chunks/99bbe2c33ed5798d.js"
   ],
   "/admin": [
-    "static/chunks/f1186295969602d8.js"
+    "static/chunks/6125fe1dfa53a271.js"
   ],
   "/archive": [
     "static/chunks/5fba634132c4333f.js"
