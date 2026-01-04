@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="85532d32-3ea3-e86d-519d-496cfd9f6870")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,5311,t=>{"use strict";var e=t.i(91398),i=t.i(91788);function a({id:a,host:o,repo:n,repoId:s,category:r,categoryId:c,mapping:d,term:l,strict:p,reactionsEnabled:u,emitMetadata:g,inputPosition:m,theme:h,lang:f,loading:b}){let[y,P]=(0,i.useState)(!1);return(0,i.useEffect)(()=>{y||t.A(76276).then(()=>P(!0))},[]),y?(0,e.jsx)("giscus-widget",{id:a,host:o,repo:n,repoid:s,category:r,categoryid:c,mapping:d,term:l,strict:p,reactionsenabled:u,emitmetadata:g,inputposition:m,theme:h,lang:f,loading:b}):null}t.s(["default",()=>a])},52860,t=>{t.n(t.i(5311))},76276,t=>{t.v(e=>Promise.all(["static/chunks/21c269f388c530d8.js"].map(e=>t.l(e))).then(()=>e(4649)))}]);
+
+//# debugId=85532d32-3ea3-e86d-519d-496cfd9f6870
+//# sourceMappingURL=a823049cc94eb403.js.map
