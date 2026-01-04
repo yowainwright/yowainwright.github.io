@@ -24,8 +24,19 @@ import type { Element } from "hast";
 import customDark from "./themes/dark.json";
 import customLight from "./themes/light.json";
 
-export const getPath = (folder: string) =>
-  path.join(process.cwd(), `/${folder}`);
+const PROJECT_ROOT = process.cwd();
+const CONTENT_DIR = path.join(PROJECT_ROOT, "content");
+const DRAFTS_DIR = path.join(PROJECT_ROOT, "drafts");
+
+export const getPath = (folder: string) => {
+  const isContent = folder === "content";
+  if (isContent) return CONTENT_DIR;
+
+  const isDrafts = folder === "drafts";
+  if (isDrafts) return DRAFTS_DIR;
+
+  return path.join(PROJECT_ROOT, folder);
+};
 
 export const getFileContent = (filename: string, folder: string) => {
   const contentDir = getPath(folder);

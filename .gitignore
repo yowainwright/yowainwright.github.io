@@ -14,6 +14,9 @@ drafts/
 .env.local
 .env.*.local
 
+# Sentry
+.sentryclirc
+
 # Claude Code local settings (personal overrides)
 .claude/settings.local.json
 .claude/

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { ref, runTransaction, onValue, DatabaseReference } from 'firebase/database';
+import * as Sentry from '@sentry/nextjs';
 import { db } from '../../lib/firebase';
 import { trackLove } from '../../lib/analytics-firebase';
 import { formatCount } from '../../lib/format-count';
@@ -89,7 +90,7 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
       await runTransaction(dbRef, (current) => (current ?? 0) + 1);
       await trackLove(slug);
     } catch (error) {
-      console.error('Failed to like post:', error);
+      Sentry.captureException(error, { extra: { slug } });
     }
   };
 

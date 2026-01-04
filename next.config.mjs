@@ -1,3 +1,4 @@
+import { withSentryConfig } from "@sentry/nextjs";
 import createMDX from "@next/mdx";
 
 const isProduction = process.env.NODE_ENV === "production";
@@ -27,4 +28,12 @@ const withMDX = createMDX({
   },
 });
 
-export default withMDX(nextConfig);
+const sentryConfig = {
+  silent: true,
+  hideSourceMaps: true,
+  org: process.env.SENTRY_ORG,
+  project: process.env.SENTRY_PROJECT,
+  authToken: process.env.SENTRY_AUTH_TOKEN,
+};
+
+export default withSentryConfig(withMDX(nextConfig), sentryConfig);
