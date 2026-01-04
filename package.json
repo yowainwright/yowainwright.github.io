@@ -14,7 +14,8 @@
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
   },
   "scripts": {
-    "build": "bun run build:css && next build && bun run build:og && next-sitemap",
+    "build": "bun run build:css && next build && next-sitemap",
+    "build:local": "bun run build:css && next build && bun run build:og && next-sitemap",
     "build:sitemap": "next-sitemap",
     "build:css": "sass --style=compressed styles/main.scss public/assets/jeffry.in.css",
     "build:og": "bun scripts/og-analyze.ts && bun scripts/generate-og.ts",

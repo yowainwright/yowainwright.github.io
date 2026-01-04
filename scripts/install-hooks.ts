@@ -15,8 +15,12 @@ import { $ } from 'bun';
 console.log('Running pre-commit checks...');
 
 try {
-  await $\`bun run build\`;
+  await $\`bun run build:local\`;
   await $\`bun run lint\`;
+
+  // Add any newly generated OG images to the commit
+  await $\`git add public/og\`;
+
   console.log('✓ All pre-commit checks passed');
 } catch (error) {
   console.error('✗ Pre-commit checks failed');

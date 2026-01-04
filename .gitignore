@@ -4,7 +4,6 @@ node_modules/
 .dccache
 .next
 out
-public/og/
 .pnpm-store
 tsconfig.tsbuildinfo
 drafts/
