@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import * as Sentry from '@sentry/nextjs';
 import {
   getStoredUser,
   getStoredToken,
@@ -40,7 +41,7 @@ export function useAuth() {
           window.history.replaceState({}, '', '/admin');
         } catch (err) {
           setError('Failed to authenticate with GitHub');
-          console.error('OAuth error:', err);
+          Sentry.captureException(err);
         }
         setLoading(false);
         return;

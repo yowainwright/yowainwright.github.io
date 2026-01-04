@@ -1,0 +1,12 @@
+# Build outputs
+public/
+.next/
+out/
+
+# Dependencies
+node_modules/
+
+# Generated files
+*.min.css
+*.min.js
+bun.lock

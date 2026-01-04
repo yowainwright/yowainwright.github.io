@@ -1,4 +1,5 @@
 import { ref, get, runTransaction, onValue, off } from 'firebase/database';
+import * as Sentry from '@sentry/nextjs';
 import { db } from './firebase';
 
 export interface AnalyticsData {
@@ -45,7 +46,7 @@ async function incrementMetric(slug: string, metric: string): Promise<void> {
   try {
     await runTransaction(metricRef, (current) => (current ?? 0) + 1);
   } catch (error) {
-    console.error(`Failed to increment ${metric} for ${slug}:`, error);
+    Sentry.captureException(error, { extra: { metric, slug } });
   }
 }
 
@@ -86,7 +87,7 @@ export async function getAnalytics(slug: string): Promise<AnalyticsData> {
     const snapshot = await get(analyticsRef);
     return createAnalyticsData(slug, snapshot.val());
   } catch (error) {
-    console.error(`Failed to get analytics for ${slug}:`, error);
+    Sentry.captureException(error, { extra: { slug } });
     return createAnalyticsData(slug);
   }
 }

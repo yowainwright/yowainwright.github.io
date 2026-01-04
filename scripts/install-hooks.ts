@@ -2,6 +2,9 @@
 
 import { existsSync, writeFileSync, chmodSync, mkdirSync } from "fs";
 import { join } from "path";
+import { createLogger } from "../lib/logger";
+
+const log = createLogger("install-hooks");
 
 const HOOKS_DIR = ".git/hooks";
 
@@ -67,7 +70,7 @@ const HOOKS = {
 const installHooks = (): void => {
   const isGitRepo = existsSync(".git");
   if (!isGitRepo) {
-    console.log("Not a git repository, skipping hook installation");
+    log.info("not a git repository, skipping hook installation");
     return;
   }
 
@@ -93,22 +96,22 @@ const installHooks = (): void => {
     writeFileSync(hookPath, hookContent, { mode: 0o755 });
     chmodSync(hookPath, 0o755);
     installed = installed + 1;
-    console.log(`✓ Installed ${hookName} hook`);
+    log.info({ hook: hookName }, "installed hook");
   }
 
   const hasInstalledHooks = installed > 0;
   if (hasInstalledHooks) {
-    console.log(`\n✅ Installed ${installed} git hook(s)`);
+    log.info({ count: installed }, "installed git hooks");
   }
 
   const hasSkippedHooks = skipped > 0;
   if (hasSkippedHooks) {
-    console.log(`ℹ️  Skipped ${skipped} existing hook(s)`);
+    log.info({ count: skipped }, "skipped existing hooks");
   }
 
   const hasNoChanges = installed === 0 && skipped === 0;
   if (hasNoChanges) {
-    console.log("ℹ️  No hooks to install");
+    log.info("no hooks to install");
   }
 };
 

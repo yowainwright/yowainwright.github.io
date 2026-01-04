@@ -1,11 +1,11 @@
 import React, { useContext, useState, useEffect, Component } from "react";
-import Head from "next/head";
 import dynamic from "next/dynamic";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { getSinglePost, getAllPosts, markdownToHtml } from "../utils";
 import { GlobalState } from "./_app";
 import { Share } from "../components/Share";
+import { OgMeta } from "../components/OgMeta";
 import { useCodeBlocks } from "../hooks/useCodeBlocks";
 import { useHeadingAnchors } from "../hooks/useHeadingAnchors";
 import { useScrollDepth, useReadTime } from "../hooks/useAnalytics";
@@ -55,7 +55,9 @@ class ErrorBoundary extends Component<{children: React.ReactNode}, {hasError: bo
   }
 
   componentDidCatch(error: any, errorInfo: any) {
-    console.error('Giscus loading error:', error, errorInfo);
+    import("@sentry/nextjs").then((Sentry) => {
+      Sentry.captureException(error, { extra: errorInfo });
+    });
   }
 
   render() {
@@ -216,13 +218,12 @@ const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostP
 
   return (
     <>
-      <Head>
-        <title>{`${title} | Jeffry.in`}</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={`https://jeffry.in/${slug}`} />
-      </Head>
+      <OgMeta
+        title={title}
+        description={description}
+        slug={slug}
+        date={frontmatter?.date || ""}
+      />
       <article className="post__article">
       <header className="post__header">
         <h1>{frontmatter?.title}</h1>
