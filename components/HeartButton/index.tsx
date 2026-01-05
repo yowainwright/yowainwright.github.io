@@ -111,7 +111,7 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
       aria-label={ariaLabel}
     >
       <span className="share__label">Love</span>
-      <PixelIcon name={heartFilled ? 'heart' : 'heart-outline'} size={heartSize} color={heartColor} />
+      <PixelIcon name="heart" size={heartSize} color={heartColor} />
       {countText && <span className="share__count">{countText}</span>}
       {particles.map((p) => (
         <span
