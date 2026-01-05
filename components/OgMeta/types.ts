@@ -5,6 +5,9 @@ export interface OgMetaProps {
   date: string;
   author?: string;
   twitterHandle?: string;
+  tags?: string[];
+  wordCount?: number;
+  modifiedDate?: string;
 }
 
 export interface JsonLdBlogPosting {
@@ -29,4 +32,8 @@ export interface JsonLdBlogPosting {
     "@type": string;
     "@id": string;
   };
+  keywords?: string;
+  wordCount?: number;
+  articleSection?: string;
+  inLanguage?: string;
 }

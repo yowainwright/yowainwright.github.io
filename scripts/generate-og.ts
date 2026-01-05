@@ -4,6 +4,14 @@ import fs from "node:fs";
 import path from "node:path";
 import { chromium, type Browser } from "playwright";
 import { createLogger } from "../lib/logger";
+import {
+  OG_WIDTH,
+  OG_HEIGHT,
+  buildTitleCardHtml,
+  buildChartCardHtml,
+  buildCodeCardHtml,
+  buildDefaultOgHtml,
+} from "./og-templates";
 
 const log = createLogger("generate-og");
 
@@ -38,15 +46,10 @@ interface PostOgManifest {
 }
 
 const getContentType = (ext: string): string => {
-  const isHtml = ext === ".html";
-  if (isHtml) return "text/html";
-
-  const isCss = ext === ".css";
-  if (isCss) return "text/css";
-
-  const isJs = ext === ".js";
-  if (isJs) return "application/javascript";
-
+  if (ext === ".html") return "text/html";
+  if (ext === ".css") return "text/css";
+  if (ext === ".js") return "application/javascript";
+  if (ext === ".png") return "image/png";
   return "application/octet-stream";
 };
 
@@ -89,88 +92,6 @@ const startStaticServer = async (): Promise<Bun.Server> => {
   return server;
 };
 
-const OG_WIDTH = 1200;
-const OG_HEIGHT = 630;
-const OG_GRADIENT = "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)";
-
-const BASE_STYLES = `
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-`;
-
-const getTitleFontSize = (titleLength: number): number => {
-  const isVeryLong = titleLength > 60;
-  if (isVeryLong) return 42;
-
-  const isLong = titleLength > 40;
-  if (isLong) return 52;
-
-  return 64;
-};
-
-const buildTitleCardHtml = (title: string, date: string, fontSize: number): string => `
-  <!DOCTYPE html>
-  <html>
-  <head><style>${BASE_STYLES}</style></head>
-  <body>
-    <div style="
-      width: ${OG_WIDTH}px;
-      height: ${OG_HEIGHT}px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: ${OG_GRADIENT};
-      padding: 60px;
-      position: relative;
-    ">
-      <h1 style="
-        font-size: ${fontSize}px;
-        font-weight: 700;
-        color: #ffffff;
-        text-align: center;
-        line-height: 1.2;
-        max-width: 1000px;
-      ">${title}</h1>
-      <p style="
-        font-size: 24px;
-        color: #94a3b8;
-        margin-top: 24px;
-      ">${date}</p>
-      <div style="
-        position: absolute;
-        bottom: 20px;
-        right: 30px;
-        font-size: 20px;
-        color: #64748b;
-        font-weight: 600;
-      ">jeffry.in</div>
-    </div>
-  </body>
-  </html>
-`;
-
-const buildDefaultOgHtml = (): string => `
-  <!DOCTYPE html>
-  <html>
-  <head><style>${BASE_STYLES}</style></head>
-  <body>
-    <div style="
-      width: ${OG_WIDTH}px;
-      height: ${OG_HEIGHT}px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: ${OG_GRADIENT};
-    ">
-      <h1 style="font-size: 96px; font-weight: 700; color: #ffffff; margin: 0;">jeffry.in</h1>
-      <p style="font-size: 28px; color: #94a3b8; margin-top: 20px;">Engineering notes & thoughts</p>
-    </div>
-  </body>
-  </html>
-`;
-
 const screenshotTitleCard = async (
   browser: Browser,
   post: PostAnalysis,
@@ -179,10 +100,27 @@ const screenshotTitleCard = async (
   const page = await browser.newPage();
   await page.setViewportSize({ width: OG_WIDTH, height: OG_HEIGHT });
 
-  const titleFontSize = getTitleFontSize(post.title.length);
-  const html = buildTitleCardHtml(post.title, post.date, titleFontSize);
+  const html = buildTitleCardHtml(post.title, post.date);
   await page.setContent(html);
 
+  await page.screenshot({ path: outputPath });
+  await page.close();
+};
+
+const screenshotBrandedCard = async (
+  browser: Browser,
+  post: PostAnalysis,
+  assetDataUrl: string,
+  outputPath: string
+): Promise<void> => {
+  const page = await browser.newPage();
+  await page.setViewportSize({ width: OG_WIDTH, height: OG_HEIGHT });
+
+  const html = post.strategy === "chart"
+    ? buildChartCardHtml(post.title, post.date, assetDataUrl)
+    : buildCodeCardHtml(post.title, post.date, assetDataUrl);
+
+  await page.setContent(html);
   await page.screenshot({ path: outputPath });
   await page.close();
 };
@@ -243,6 +181,41 @@ const hasExistingImages = (slug: string): boolean => {
   }
 };
 
+const captureElementAsBase64 = async (
+  page: any,
+  element: any,
+  padding: number,
+  viewportWidth: number,
+  viewportHeight: number
+): Promise<string | null> => {
+  const box = await element.boundingBox();
+  if (!isElementVisible(box)) return null;
+
+  const clip = calculateClip(box, padding);
+  const inViewport = isClipInViewport(clip, viewportWidth, viewportHeight);
+
+  if (!inViewport) {
+    await element.scrollIntoViewIfNeeded();
+    const newBox = await element.boundingBox();
+    if (!isElementVisible(newBox)) return null;
+
+    const newClip = calculateClip(newBox, padding);
+    try {
+      const buffer = await page.screenshot({ clip: newClip });
+      return `data:image/png;base64,${buffer.toString("base64")}`;
+    } catch {
+      return null;
+    }
+  }
+
+  try {
+    const buffer = await page.screenshot({ clip });
+    return `data:image/png;base64,${buffer.toString("base64")}`;
+  } catch {
+    return null;
+  }
+};
+
 const generateForPost = async (
   browser: Browser,
   post: PostAnalysis,
@@ -256,13 +229,13 @@ const generateForPost = async (
   }
 
   const postDir = path.join(OUTPUT_DIR, post.slug);
-  const postDirExists = fs.existsSync(postDir);
-  if (!postDirExists) {
+  if (!fs.existsSync(postDir)) {
     fs.mkdirSync(postDir, { recursive: true });
   }
 
   const images: string[] = [];
   let imageIndex = 1;
+  const capturedAssets: string[] = [];
 
   const page = await browser.newPage();
   await page.setViewportSize({ width: 1400, height: 900 });
@@ -279,73 +252,22 @@ const generateForPost = async (
     const viewportWidth = viewport?.width || 1400;
     const viewportHeight = viewport?.height || 900;
 
-    const safeScreenshot = async (
-      element: any,
-      imgPath: string,
-      padding: number
-    ): Promise<boolean> => {
-      const box = await element.boundingBox();
-      const isVisible = isElementVisible(box);
-      if (!isVisible) return false;
-
-      const clip = calculateClip(box, padding);
-      const inViewport = isClipInViewport(clip, viewportWidth, viewportHeight);
-
-      if (!inViewport) {
-        await element.scrollIntoViewIfNeeded();
-        const newBox = await element.boundingBox();
-        const isStillVisible = isElementVisible(newBox);
-        if (!isStillVisible) return false;
-
-        const newClip = calculateClip(newBox, padding);
-        try {
-          await page.screenshot({ path: imgPath, clip: newClip });
-          return true;
-        } catch {
-          return false;
-        }
-      }
-
-      try {
-        await page.screenshot({ path: imgPath, clip });
-        return true;
-      } catch {
-        return false;
-      }
+    const captureElements = async (selector: string, padding: number) => {
+      const elements = await page.$$(selector);
+      const results = await Promise.all(
+        elements.map((el) => captureElementAsBase64(page, el, padding, viewportWidth, viewportHeight))
+      );
+      return results.filter((r): r is string => r !== null);
     };
 
-    const isChartStrategy = post.strategy === "chart";
-    if (isChartStrategy) {
-      const chartContainers = await page.$$(".recharts-responsive-container");
-      for (let i = 0; i < chartContainers.length; i++) {
-        const imgName = `img-${imageIndex}.png`;
-        const imgPath = path.join(postDir, imgName);
-        const captured = await safeScreenshot(chartContainers[i], imgPath, 20);
-        if (captured) {
-          images.push(imgName);
-          imageIndex++;
-          log.debug({ slug: post.slug, chart: i }, "chart captured");
-        }
-      }
+    if (post.strategy === "chart") {
+      const charts = await captureElements(".recharts-responsive-container", 20);
+      capturedAssets.push(...charts);
     }
 
-    const isCodeStrategy = post.strategy === "code";
-    const hasNoImages = images.length === 0;
-    const shouldCaptureCode = isCodeStrategy || hasNoImages;
-    if (shouldCaptureCode) {
-      const codeBlocks = await page.$$(".shiki-wrapper");
-      const maxCodeBlocks = Math.min(3, codeBlocks.length);
-
-      for (let i = 0; i < maxCodeBlocks; i++) {
-        const imgName = `img-${imageIndex}.png`;
-        const imgPath = path.join(postDir, imgName);
-        const captured = await safeScreenshot(codeBlocks[i], imgPath, 10);
-        if (captured) {
-          images.push(imgName);
-          imageIndex++;
-          log.debug({ slug: post.slug, codeBlock: i }, "code block captured");
-        }
-      }
+    if (post.strategy === "code" || capturedAssets.length === 0) {
+      const codeBlocks = await captureElements(".shiki-wrapper", 10);
+      capturedAssets.push(...codeBlocks.slice(0, 3));
     }
   } catch (err) {
     log.warn({ slug: post.slug, error: String(err) }, "page load failed");
@@ -353,12 +275,22 @@ const generateForPost = async (
     await page.close();
   }
 
-  const needsTitleCard = images.length === 0;
-  if (needsTitleCard) {
-    const imgName = `img-${imageIndex}.png`;
-    const imgPath = path.join(postDir, imgName);
+  if (capturedAssets.length > 0) {
+    await Promise.all(
+      capturedAssets.map(async (assetBase64, idx) => {
+        const imgName = `img-${idx + 1}.png`;
+        const imgPath = path.join(postDir, imgName);
+        await screenshotBrandedCard(browser, post, assetBase64, imgPath);
+        images.push(imgName);
+        log.debug({ slug: post.slug, imageIndex: idx + 1 }, "branded card generated");
+      })
+    );
+  }
+
+  if (images.length === 0) {
+    const imgPath = path.join(postDir, "img-1.png");
     await screenshotTitleCard(browser, post, imgPath);
-    images.push(imgName);
+    images.push("img-1.png");
     log.debug({ slug: post.slug }, "title card generated");
   }
 

@@ -28,6 +28,7 @@ interface PostProps {
     meta?: string;
     description?: string;
     path: string;
+    tags?: string[];
   };
 }
 
@@ -223,6 +224,8 @@ const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostP
         description={description}
         slug={slug}
         date={frontmatter?.date || ""}
+        tags={frontmatter?.tags}
+        wordCount={wordCount}
       />
       <article className="post__article">
       <header className="post__header">

@@ -1,0 +1,513 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Jeffry.in",
+  "home_page_url": "https://jeffry.in",
+  "feed_url": "https://jeffry.in/feed.json",
+  "description": "Jeff Wainwright's blog about software engineering, life, and everything in between.",
+  "author": {
+    "name": "Jeff Wainwright",
+    "url": "https://jeffry.in/about"
+  },
+  "items": [
+    {
+      "id": "https://jeffry.in/us-swe-economy-2025",
+      "url": "https://jeffry.in/us-swe-economy-2025",
+      "title": "Being a US-based Software Engineer in 2025; is it what it used to be?",
+      "summary": "The quick article provides a data-driven look at US-based software engineering employment trends in 2025: relating current swe trends, recent swe trends, pre-covid, and US job labor trends over the last 45 years.",
+      "date_published": "2025-11-03T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/shiki-syntax",
+      "url": "https://jeffry.in/shiki-syntax",
+      "title": "Shiki Syntax Highlighting: More features for markdown",
+      "summary": "Comprehensive Shiki syntax highlighting implementation with custom themes, diff notation, line highlighting, focus modes, error annotations, interactive copy buttons, and optimized Sass architecture using a scalable variable system.",
+      "date_published": "2025-08-31T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/lightweight-intelligent-completion-in-zsh",
+      "url": "https://jeffry.in/lightweight-intelligent-completion-in-zsh",
+      "title": "Enabling Intelligent Tab Completion in Zsh without High Memory Usage",
+      "summary": "This post provides quick tips on how to enable Zsh Tab Completion to provide intelligent completion in Zsh without the bloat.",
+      "date_published": "2024-05-05T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/js-node-strange-place",
+      "url": "https://jeffry.in/js-node-strange-place",
+      "title": "Quick Thought: Does it feel like JavaScript and Node are in a strange place?",
+      "summary": "It feels sorta like JavaScript and Node are in a weird place. They've greatly improved but are we using them for things we shouldn't?",
+      "date_published": "2023-04-15T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/build-your-own-dependabot",
+      "url": "https://jeffry.in/build-your-own-dependabot",
+      "title": "Quick Tutorial: Build A Basic Dependency Manager Like Dependabot In 5 Minutes",
+      "summary": "This document goes over building the basics of your own dependency manager, like dependabot, for JavaScript ot Typescript using package managers and Github actions.",
+      "date_published": "2022-12-23T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/m1-intel-terminal-cmds-like-a-boss",
+      "url": "https://jeffry.in/m1-intel-terminal-cmds-like-a-boss",
+      "title": "Quick Tutorial: Run Intel Mac Cmds On Your M1 Mac Like a Boss In 5 Minutes",
+      "summary": "This document describes solving M1 Mac vs Intel Mac terminal command discrepancies by creating a copy of your terminal and setting it up to run Intel Mac terminal commands using Rosetta.",
+      "date_published": "2022-12-13T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/snyk-dependabot-ignore-configs",
+      "url": "https://jeffry.in/snyk-dependabot-ignore-configs",
+      "title": "A 'little deep' dive into Dependabot and Snyk Ingore Configs",
+      "summary": "This article focuses on Snyk and Dependabots' ignore configs (ignores) from a DevX perspective.",
+      "date_published": "2022-02-12T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/document-cookie-nuances",
+      "url": "https://jeffry.in/document-cookie-nuances",
+      "title": "Document Cookies Are a Useful Tool With A Simple API With Some Nunaces",
+      "summary": "This brief artice covers nuances of document.cookie and how to use it to store and access data.",
+      "date_published": "2022-02-05T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/cli-program-basic-parts",
+      "url": "https://jeffry.in/cli-program-basic-parts",
+      "title": "Understanding the basics parts of a CLI command",
+      "summary": "This brief article digs into the basics of most CLI commands including a summary of the commands's name, arguments, options, and actions.",
+      "date_published": "2022-01-19T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/m1-chip-gatsby-setup",
+      "url": "https://jeffry.in/m1-chip-gatsby-setup",
+      "title": "Setting update Gatsby Development on an M1 Mac Mini",
+      "summary": "A post providing context into setting up an M1 Mac for Gatsby development and 1 happy path to get up and running with Gatsby on a M1 Mac fast!",
+      "date_published": "2021-06-01T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/resume",
+      "url": "https://jeffry.in/resume",
+      "title": "Resume: the resume of Jeff Wainwright, a software engineer and surfer in Los Angeles 🏄🏾‍♂️",
+      "summary": "This is the resume of, me, Jeff Wainwright, \"yowainwright\" on the internet. I'm a software engineer, artist, and person who enjoys athletics, living in Los Angeles.",
+      "date_published": "2021-03-31T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/jest-exec-test",
+      "url": "https://jeffry.in/jest-exec-test",
+      "title": "How To Execute Node Commands To Test With Jest",
+      "summary": "This post is a quick summary of running node script execution tests with Jest.",
+      "date_published": "2021-01-19T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/friction",
+      "url": "https://jeffry.in/friction",
+      "title": "Friction and the Beauty it can create",
+      "summary": "Friction sculpted this range of land. What devastation?—What destruction led to this moment? I cannot even comprehend! But, I appreciate that somehow, after it all, it is so beautiful.",
+      "date_published": "2020-06-28T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/2000s-not-a-teenager",
+      "url": "https://jeffry.in/2000s-not-a-teenager",
+      "title": "The 2000s are no longer a teenager, starting out 2020",
+      "summary": "This post summarizes my first days of 2020 with brief reflections on 2019, what I learned which included Functional Programming, TypeScript, nervous system healing and awareness",
+      "date_published": "2020-01-06T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/ships-coming-in",
+      "url": "https://jeffry.in/ships-coming-in",
+      "title": "Watching the sunset from Malaga Cove, waiting for ships to come in",
+      "summary": "Malaga Cove in Palos Verdes, California is a great spot to catch the sunset. At sunset, it's a place were families, couples, and sometimes dreamers go to watch the sunset. At sunset on Sunday, I watched one particular person stare longly against the sunset. It appeared they were waiting for their ships to come in.",
+      "date_published": "2019-10-19T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/if-i-had-a-highlighter",
+      "url": "https://jeffry.in/if-i-had-a-highlighter",
+      "title": "Listening to what is most important to others is hard. What if there was a highlighter for spoken words?",
+      "summary": "This post discusses how hard it for listeners to fully understand what a speaker is communicating. Misinterpretation happens often. What verbal tools can be used to improve interpretation? Perhaps, imagining a spoken word highlighter pen so that speakers could highlight their key points could help.",
+      "date_published": "2019-03-07T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/let-the-dream-live",
+      "url": "https://jeffry.in/let-the-dream-live",
+      "title": "Let the dream live! Unless dreams have actionable plans, they're not real—so let them live if they bring happiness.",
+      "summary": "Pragmatism has often told me that dreams cannot become real unless they're followed by an actionable plan. I've share this logic with friends when they tell me an unrealistic dream and to my surprise, 'thanks' was not the typical response. Responses tended to be negative. Dreams are often just that, dreams. Let then live if they make others happy.",
+      "date_published": "2019-01-22T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/making-others-feel-good-with-basics",
+      "url": "https://jeffry.in/making-others-feel-good-with-basics",
+      "title": "Moments Between Words—Simple Communication and Observations of Quick Ways To Make Others Feel Good",
+      "summary": "This post observes how different communication can be from intent to reception. It focuses on observations on simple comunications.",
+      "date_published": "2018-06-17T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/getting-setup-with-ts",
+      "url": "https://jeffry.in/getting-setup-with-ts",
+      "title": "TypeScript Init—Getting A Test Driven TypeScript Repository Setup",
+      "summary": "This post documents getting setup with TypeScript—just beyond the Gettings Started TypeScript Tutorials. In this Post I will go through setting up a Test Driven TypeScript project.",
+      "date_published": "2018-05-02T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/first-post-in-a-bit",
+      "url": "https://jeffry.in/first-post-in-a-bit",
+      "title": "First Post in Bit, This Is Why",
+      "summary": "I stopped posting on this blog in September last year, 2017. It was an easy decision to make then. There were specific reasons I stopped, but I couldn't articulate them.",
+      "date_published": "2018-04-08T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/week-34-17",
+      "url": "https://jeffry.in/week-34-17",
+      "title": "Week 34, Finding Fun In Nature Again After A Few Months Away",
+      "summary": "Week 34, I was able to do some trail running after a few months of not running",
+      "date_published": "2017-09-26T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/laying-low",
+      "url": "https://jeffry.in/laying-low",
+      "title": "Week 33, laying low but focused",
+      "summary": "Laying low but staying focused on coding, running and writing.",
+      "date_published": "2017-09-18T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/normalize-css-or-not",
+      "url": "https://jeffry.in/normalize-css-or-not",
+      "title": "Normalize.css, or not? Here are some considerations",
+      "summary": "Normalizing CSS has been a default part of front-end projects for years. This post questions that and provides some points on why normalizing css may not be needed.",
+      "date_published": "2017-09-17T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/code-review-etiquette",
+      "url": "https://jeffry.in/code-review-etiquette",
+      "title": "Can Code Review Etiquette be a thing? Here are some starter thoughts on it.",
+      "summary": "Code Review Etiquette is an important for code quality, engineer happiness, and engineer growth—but is never talked about?",
+      "date_published": "2017-09-16T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/css-font-partial",
+      "url": "https://jeffry.in/css-font-partial",
+      "title": "Making a CSS Font Partial",
+      "summary": "Making a maintainable CSS font partial.",
+      "date_published": "2017-09-14T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/javascript-software-mid-2017",
+      "url": "https://jeffry.in/javascript-software-mid-2017",
+      "title": "Popular JavaScript tools in (mid) 2017",
+      "summary": "JavaScript tools in 2017 as defined by Jeff Wainwright for the context of blog posts.",
+      "date_published": "2017-09-09T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/labor-day-week",
+      "url": "https://jeffry.in/labor-day-week",
+      "title": "2017 Labor Day Week in Dallas",
+      "summary": "This year I, Jeff Wainwright, spent Labor Day in Dallas with friends.",
+      "date_published": "2017-09-09T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/js-is-relatable",
+      "url": "https://jeffry.in/js-is-relatable",
+      "title": "JavaScript is relatable",
+      "summary": "JavaScript is for the people because it is relatable and usable.",
+      "date_published": "2017-09-08T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/sinon-fake-server-methods",
+      "url": "https://jeffry.in/sinon-fake-server-methods",
+      "title": "Digging into Sinon Fake Server Methods",
+      "summary": "Digging into Sinon Fake Server Methods and how to use them.",
+      "date_published": "2017-09-05T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/branded-content",
+      "url": "https://jeffry.in/branded-content",
+      "title": "Reenvisioning branded content at Dollar Shave Club",
+      "summary": "Reenvisioning branded content at Dollar Shave Club.",
+      "date_published": "2017-09-04T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/switching-site-generators",
+      "url": "https://jeffry.in/switching-site-generators",
+      "title": "Switching Static Site Generators",
+      "summary": "Switching Site Generators, hiccups in between, and why I switched to Gatsby",
+      "date_published": "2017-09-01T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/about",
+      "url": "https://jeffry.in/about",
+      "title": "About me, Jeff Wainwright, a husband, dad, and software engineer in Los Angeles 🥤",
+      "summary": "This is the About page of, me, Jeff Wainwright, \"yowainwright\" on the internet. I'm a husband, dad, software engineer, artist, and person who enjoys athletics, living in Los Angeles.",
+      "date_published": "2017-07-28T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/week-20-17",
+      "url": "https://jeffry.in/week-20-17",
+      "title": "Week 20, code more, surf more—managing time for happiness",
+      "summary": "Week 20, figuring out how to code more and surf more—what makes me happy",
+      "date_published": "2017-05-29T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/week-19-17",
+      "url": "https://jeffry.in/week-19-17",
+      "title": "Week 19, mislabeled mountains and other things I enjoy",
+      "summary": "Week 19, mislabeled mountains and other things I enjoy.",
+      "date_published": "2017-05-22T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/week-18-17",
+      "url": "https://jeffry.in/week-18-17",
+      "title": "Week 18, a trip to the North West to celebrate my sister's birthday",
+      "summary": "Week 18, a trip to the North West to celebrate my sister's birthday",
+      "date_published": "2017-05-15T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/week-17-17",
+      "url": "https://jeffry.in/week-17-17",
+      "title": "Week 17, dealing with an ankle injury and using an observer and/or a mediator pattern",
+      "summary": "Week 17, I was dealing with an ankle injury and using an observer to fix race conditions",
+      "date_published": "2017-05-07T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/week-15-17",
+      "url": "https://jeffry.in/week-15-17",
+      "title": "Week 15, was about being a good friend, surfing and gaining momentum on another open source project.",
+      "summary": "Week 15, I was trying to be a good friend, surf, and gain momentum on StickyBits—an open source project I did.",
+      "date_published": "2017-04-19T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/week-16-17",
+      "url": "https://jeffry.in/week-16-17",
+      "title": "Week 16, great surfing week and feeling tired from feeling busy",
+      "summary": "Week 16, I had a great week surfing and felt pretty tired besides that.",
+      "date_published": "2017-04-19T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/week-14-17",
+      "url": "https://jeffry.in/week-14-17",
+      "title": "Week 14, releasing analytics updates and my first trip South in 2017",
+      "summary": "Week 14, I'm releasing a new analytics product and I was able to stay in Encinitas which  for the weekend.",
+      "date_published": "2017-04-19T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/week-13-17",
+      "url": "https://jeffry.in/week-13-17",
+      "title": "Week 13, 2017—camping above Ojai on Highway 33, surfing and other things",
+      "summary": "Week 13, I am doing it—camping above Ojai, surfing and finding to code.",
+      "date_published": "2017-04-18T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/week-12-17",
+      "url": "https://jeffry.in/week-12-17",
+      "title": "Week 12, 2017—getting the opportunity to listen see a new place",
+      "summary": "Week 12, I was given the opportunity to catch up with some people I care about and visit Wrightwood, CA for the first time.",
+      "date_published": "2017-04-06T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/week-11-17",
+      "url": "https://jeffry.in/week-11-17",
+      "title": "Week 11, 2017—Got Some Good Surfing In and Felt More Comfortable On My New Project",
+      "summary": "Week 11, 2017 was fair. I got some good surfing time on a new fun board and I felt more comfortable in my new position at work.",
+      "date_published": "2017-03-27T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/git-tag-update",
+      "url": "https://jeffry.in/git-tag-update",
+      "title": "Updating Git Tags That Have Been Pushed",
+      "summary": "This post instructs how to update git tags after they've been pushed",
+      "date_published": "2017-03-14T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/week-9-17",
+      "url": "https://jeffry.in/week-9-17",
+      "title": "Week 9, 2017—Getting Back to Surfing, Changing Teams and Feeling Beta",
+      "summary": "Week 9, 2017—This week I was feeling pretty beta after changing teams, recovering from being sick and getting back to surfing.",
+      "date_published": "2017-03-13T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/destructing-function-opts",
+      "url": "https://jeffry.in/destructing-function-opts",
+      "title": "Using ES6 Function Destructuring with JavaScript Plugin Options",
+      "summary": "This post explains how to use ES6 function destructuring for more readable JavaScript Plugin Options.",
+      "date_published": "2017-03-12T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/formula-for-commits",
+      "url": "https://jeffry.in/formula-for-commits",
+      "title": "AWW—A Formula For Writing Git Commits",
+      "summary": "This post describes AWW, a formula for writing meaningful commit messages with git.",
+      "date_published": "2017-03-12T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/making-a-js-plugin",
+      "url": "https://jeffry.in/making-a-js-plugin",
+      "title": "A-ha Moments Writing Simple JavaScript Plugins",
+      "summary": "Moments writing JavaScript Plugins",
+      "date_published": "2017-03-09T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/week-8-17",
+      "url": "https://jeffry.in/week-8-17",
+      "title": "Week 8, 2017—Losing a few friends, being sick, transitioning and writing some code",
+      "summary": "Week 8, 2017—This week I was sick, lost a few friends and started to do some transitioning.",
+      "date_published": "2017-03-05T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/arrow-functions-cont",
+      "url": "https://jeffry.in/arrow-functions-cont",
+      "title": "Arrow Function Notes After Watching ES6 For Everyone, Continued",
+      "summary": "This post reviews some things about arrow functions that I learned from Wes Bos's ES6 for everyone.",
+      "date_published": "2017-03-03T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
+      "id": "https://jeffry.in/losing-a-friend",
+      "url": "https://jeffry.in/losing-a-friend",
+      "title": "Some great memories have Lauren in the foreground",
+      "summary": "Recently, I lost a friend. Lauren Schlueter was a friend of mine who helped me through laughter. She was a historian, a teacher and a comedian.",
+      "date_published": "2017-02-28T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    }
+  ]
+}

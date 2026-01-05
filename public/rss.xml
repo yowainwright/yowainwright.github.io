@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Jeffry.in</title>
+    <link>https://jeffry.in</link>
+    <description>Jeff Wainwright&apos;s blog about software engineering, life, and everything in between.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Nov 2025 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://jeffry.in/rss.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://jeffry.in/apple-icon-180x180.png</url>
+      <title>Jeffry.in</title>
+      <link>https://jeffry.in</link>
+    </image>
+    <item>
+      <title>Being a US-based Software Engineer in 2025; is it what it used to be?</title>
+      <link>https://jeffry.in/us-swe-economy-2025</link>
+      <guid isPermaLink="true">https://jeffry.in/us-swe-economy-2025</guid>
+      <description>The quick article provides a data-driven look at US-based software engineering employment trends in 2025: relating current swe trends, recent swe trends, pre-covid, and US job labor trends over the last 45 years.</description>
+      <pubDate>Mon, 03 Nov 2025 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Shiki Syntax Highlighting: More features for markdown</title>
+      <link>https://jeffry.in/shiki-syntax</link>
+      <guid isPermaLink="true">https://jeffry.in/shiki-syntax</guid>
+      <description>Comprehensive Shiki syntax highlighting implementation with custom themes, diff notation, line highlighting, focus modes, error annotations, interactive copy buttons, and optimized Sass architecture using a scalable variable system.</description>
+      <pubDate>Sun, 31 Aug 2025 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Enabling Intelligent Tab Completion in Zsh without High Memory Usage</title>
+      <link>https://jeffry.in/lightweight-intelligent-completion-in-zsh</link>
+      <guid isPermaLink="true">https://jeffry.in/lightweight-intelligent-completion-in-zsh</guid>
+      <description>This post provides quick tips on how to enable Zsh Tab Completion to provide intelligent completion in Zsh without the bloat.</description>
+      <pubDate>Sun, 05 May 2024 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Quick Thought: Does it feel like JavaScript and Node are in a strange place?</title>
+      <link>https://jeffry.in/js-node-strange-place</link>
+      <guid isPermaLink="true">https://jeffry.in/js-node-strange-place</guid>
+      <description>It feels sorta like JavaScript and Node are in a weird place. They&apos;ve greatly improved but are we using them for things we shouldn&apos;t?</description>
+      <pubDate>Sat, 15 Apr 2023 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Quick Tutorial: Build A Basic Dependency Manager Like Dependabot In 5 Minutes</title>
+      <link>https://jeffry.in/build-your-own-dependabot</link>
+      <guid isPermaLink="true">https://jeffry.in/build-your-own-dependabot</guid>
+      <description>This document goes over building the basics of your own dependency manager, like dependabot, for JavaScript ot Typescript using package managers and Github actions.</description>
+      <pubDate>Fri, 23 Dec 2022 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Quick Tutorial: Run Intel Mac Cmds On Your M1 Mac Like a Boss In 5 Minutes</title>
+      <link>https://jeffry.in/m1-intel-terminal-cmds-like-a-boss</link>
+      <guid isPermaLink="true">https://jeffry.in/m1-intel-terminal-cmds-like-a-boss</guid>
+      <description>This document describes solving M1 Mac vs Intel Mac terminal command discrepancies by creating a copy of your terminal and setting it up to run Intel Mac terminal commands using Rosetta.</description>
+      <pubDate>Tue, 13 Dec 2022 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>A &apos;little deep&apos; dive into Dependabot and Snyk Ingore Configs</title>
+      <link>https://jeffry.in/snyk-dependabot-ignore-configs</link>
+      <guid isPermaLink="true">https://jeffry.in/snyk-dependabot-ignore-configs</guid>
+      <description>This article focuses on Snyk and Dependabots&apos; ignore configs (ignores) from a DevX perspective.</description>
+      <pubDate>Sat, 12 Feb 2022 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Document Cookies Are a Useful Tool With A Simple API With Some Nunaces</title>
+      <link>https://jeffry.in/document-cookie-nuances</link>
+      <guid isPermaLink="true">https://jeffry.in/document-cookie-nuances</guid>
+      <description>This brief artice covers nuances of document.cookie and how to use it to store and access data.</description>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Understanding the basics parts of a CLI command</title>
+      <link>https://jeffry.in/cli-program-basic-parts</link>
+      <guid isPermaLink="true">https://jeffry.in/cli-program-basic-parts</guid>
+      <description>This brief article digs into the basics of most CLI commands including a summary of the commands&apos;s name, arguments, options, and actions.</description>
+      <pubDate>Wed, 19 Jan 2022 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Setting update Gatsby Development on an M1 Mac Mini</title>
+      <link>https://jeffry.in/m1-chip-gatsby-setup</link>
+      <guid isPermaLink="true">https://jeffry.in/m1-chip-gatsby-setup</guid>
+      <description>A post providing context into setting up an M1 Mac for Gatsby development and 1 happy path to get up and running with Gatsby on a M1 Mac fast!</description>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Resume: the resume of Jeff Wainwright, a software engineer and surfer in Los Angeles 🏄🏾‍♂️</title>
+      <link>https://jeffry.in/resume</link>
+      <guid isPermaLink="true">https://jeffry.in/resume</guid>
+      <description>This is the resume of, me, Jeff Wainwright, &quot;yowainwright&quot; on the internet. I&apos;m a software engineer, artist, and person who enjoys athletics, living in Los Angeles.</description>
+      <pubDate>Wed, 31 Mar 2021 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>How To Execute Node Commands To Test With Jest</title>
+      <link>https://jeffry.in/jest-exec-test</link>
+      <guid isPermaLink="true">https://jeffry.in/jest-exec-test</guid>
+      <description>This post is a quick summary of running node script execution tests with Jest.</description>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Friction and the Beauty it can create</title>
+      <link>https://jeffry.in/friction</link>
+      <guid isPermaLink="true">https://jeffry.in/friction</guid>
+      <description>Friction sculpted this range of land. What devastation?—What destruction led to this moment? I cannot even comprehend! But, I appreciate that somehow, after it all, it is so beautiful.</description>
+      <pubDate>Sun, 28 Jun 2020 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>The 2000s are no longer a teenager, starting out 2020</title>
+      <link>https://jeffry.in/2000s-not-a-teenager</link>
+      <guid isPermaLink="true">https://jeffry.in/2000s-not-a-teenager</guid>
+      <description>This post summarizes my first days of 2020 with brief reflections on 2019, what I learned which included Functional Programming, TypeScript, nervous system healing and awareness</description>
+      <pubDate>Mon, 06 Jan 2020 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Watching the sunset from Malaga Cove, waiting for ships to come in</title>
+      <link>https://jeffry.in/ships-coming-in</link>
+      <guid isPermaLink="true">https://jeffry.in/ships-coming-in</guid>
+      <description>Malaga Cove in Palos Verdes, California is a great spot to catch the sunset. At sunset, it&apos;s a place were families, couples, and sometimes dreamers go to watch the sunset. At sunset on Sunday, I watched one particular person stare longly against the sunset. It appeared they were waiting for their ships to come in.</description>
+      <pubDate>Sat, 19 Oct 2019 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Listening to what is most important to others is hard. What if there was a highlighter for spoken words?</title>
+      <link>https://jeffry.in/if-i-had-a-highlighter</link>
+      <guid isPermaLink="true">https://jeffry.in/if-i-had-a-highlighter</guid>
+      <description>This post discusses how hard it for listeners to fully understand what a speaker is communicating. Misinterpretation happens often. What verbal tools can be used to improve interpretation? Perhaps, imagining a spoken word highlighter pen so that speakers could highlight their key points could help.</description>
+      <pubDate>Thu, 07 Mar 2019 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Let the dream live! Unless dreams have actionable plans, they&apos;re not real—so let them live if they bring happiness.</title>
+      <link>https://jeffry.in/let-the-dream-live</link>
+      <guid isPermaLink="true">https://jeffry.in/let-the-dream-live</guid>
+      <description>Pragmatism has often told me that dreams cannot become real unless they&apos;re followed by an actionable plan. I&apos;ve share this logic with friends when they tell me an unrealistic dream and to my surprise, &apos;thanks&apos; was not the typical response. Responses tended to be negative. Dreams are often just that, dreams. Let then live if they make others happy.</description>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Moments Between Words—Simple Communication and Observations of Quick Ways To Make Others Feel Good</title>
+      <link>https://jeffry.in/making-others-feel-good-with-basics</link>
+      <guid isPermaLink="true">https://jeffry.in/making-others-feel-good-with-basics</guid>
+      <description>This post observes how different communication can be from intent to reception. It focuses on observations on simple comunications.</description>
+      <pubDate>Sun, 17 Jun 2018 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>TypeScript Init—Getting A Test Driven TypeScript Repository Setup</title>
+      <link>https://jeffry.in/getting-setup-with-ts</link>
+      <guid isPermaLink="true">https://jeffry.in/getting-setup-with-ts</guid>
+      <description>This post documents getting setup with TypeScript—just beyond the Gettings Started TypeScript Tutorials. In this Post I will go through setting up a Test Driven TypeScript project.</description>
+      <pubDate>Wed, 02 May 2018 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>First Post in Bit, This Is Why</title>
+      <link>https://jeffry.in/first-post-in-a-bit</link>
+      <guid isPermaLink="true">https://jeffry.in/first-post-in-a-bit</guid>
+      <description>I stopped posting on this blog in September last year, 2017. It was an easy decision to make then. There were specific reasons I stopped, but I couldn&apos;t articulate them.</description>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Week 34, Finding Fun In Nature Again After A Few Months Away</title>
+      <link>https://jeffry.in/week-34-17</link>
+      <guid isPermaLink="true">https://jeffry.in/week-34-17</guid>
+      <description>Week 34, I was able to do some trail running after a few months of not running</description>
+      <pubDate>Tue, 26 Sep 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Week 33, laying low but focused</title>
+      <link>https://jeffry.in/laying-low</link>
+      <guid isPermaLink="true">https://jeffry.in/laying-low</guid>
+      <description>Laying low but staying focused on coding, running and writing.</description>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Normalize.css, or not? Here are some considerations</title>
+      <link>https://jeffry.in/normalize-css-or-not</link>
+      <guid isPermaLink="true">https://jeffry.in/normalize-css-or-not</guid>
+      <description>Normalizing CSS has been a default part of front-end projects for years. This post questions that and provides some points on why normalizing css may not be needed.</description>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Can Code Review Etiquette be a thing? Here are some starter thoughts on it.</title>
+      <link>https://jeffry.in/code-review-etiquette</link>
+      <guid isPermaLink="true">https://jeffry.in/code-review-etiquette</guid>
+      <description>Code Review Etiquette is an important for code quality, engineer happiness, and engineer growth—but is never talked about?</description>
+      <pubDate>Sat, 16 Sep 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Making a CSS Font Partial</title>
+      <link>https://jeffry.in/css-font-partial</link>
+      <guid isPermaLink="true">https://jeffry.in/css-font-partial</guid>
+      <description>Making a maintainable CSS font partial.</description>
+      <pubDate>Thu, 14 Sep 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Popular JavaScript tools in (mid) 2017</title>
+      <link>https://jeffry.in/javascript-software-mid-2017</link>
+      <guid isPermaLink="true">https://jeffry.in/javascript-software-mid-2017</guid>
+      <description>JavaScript tools in 2017 as defined by Jeff Wainwright for the context of blog posts.</description>
+      <pubDate>Sat, 09 Sep 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>2017 Labor Day Week in Dallas</title>
+      <link>https://jeffry.in/labor-day-week</link>
+      <guid isPermaLink="true">https://jeffry.in/labor-day-week</guid>
+      <description>This year I, Jeff Wainwright, spent Labor Day in Dallas with friends.</description>
+      <pubDate>Sat, 09 Sep 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>JavaScript is relatable</title>
+      <link>https://jeffry.in/js-is-relatable</link>
+      <guid isPermaLink="true">https://jeffry.in/js-is-relatable</guid>
+      <description>JavaScript is for the people because it is relatable and usable.</description>
+      <pubDate>Fri, 08 Sep 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Digging into Sinon Fake Server Methods</title>
+      <link>https://jeffry.in/sinon-fake-server-methods</link>
+      <guid isPermaLink="true">https://jeffry.in/sinon-fake-server-methods</guid>
+      <description>Digging into Sinon Fake Server Methods and how to use them.</description>
+      <pubDate>Tue, 05 Sep 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Reenvisioning branded content at Dollar Shave Club</title>
+      <link>https://jeffry.in/branded-content</link>
+      <guid isPermaLink="true">https://jeffry.in/branded-content</guid>
+      <description>Reenvisioning branded content at Dollar Shave Club.</description>
+      <pubDate>Mon, 04 Sep 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Switching Static Site Generators</title>
+      <link>https://jeffry.in/switching-site-generators</link>
+      <guid isPermaLink="true">https://jeffry.in/switching-site-generators</guid>
+      <description>Switching Site Generators, hiccups in between, and why I switched to Gatsby</description>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>About me, Jeff Wainwright, a husband, dad, and software engineer in Los Angeles 🥤</title>
+      <link>https://jeffry.in/about</link>
+      <guid isPermaLink="true">https://jeffry.in/about</guid>
+      <description>This is the About page of, me, Jeff Wainwright, &quot;yowainwright&quot; on the internet. I&apos;m a husband, dad, software engineer, artist, and person who enjoys athletics, living in Los Angeles.</description>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Week 20, code more, surf more—managing time for happiness</title>
+      <link>https://jeffry.in/week-20-17</link>
+      <guid isPermaLink="true">https://jeffry.in/week-20-17</guid>
+      <description>Week 20, figuring out how to code more and surf more—what makes me happy</description>
+      <pubDate>Mon, 29 May 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Week 19, mislabeled mountains and other things I enjoy</title>
+      <link>https://jeffry.in/week-19-17</link>
+      <guid isPermaLink="true">https://jeffry.in/week-19-17</guid>
+      <description>Week 19, mislabeled mountains and other things I enjoy.</description>
+      <pubDate>Mon, 22 May 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Week 18, a trip to the North West to celebrate my sister&apos;s birthday</title>
+      <link>https://jeffry.in/week-18-17</link>
+      <guid isPermaLink="true">https://jeffry.in/week-18-17</guid>
+      <description>Week 18, a trip to the North West to celebrate my sister&apos;s birthday</description>
+      <pubDate>Mon, 15 May 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Week 17, dealing with an ankle injury and using an observer and/or a mediator pattern</title>
+      <link>https://jeffry.in/week-17-17</link>
+      <guid isPermaLink="true">https://jeffry.in/week-17-17</guid>
+      <description>Week 17, I was dealing with an ankle injury and using an observer to fix race conditions</description>
+      <pubDate>Sun, 07 May 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Week 15, was about being a good friend, surfing and gaining momentum on another open source project.</title>
+      <link>https://jeffry.in/week-15-17</link>
+      <guid isPermaLink="true">https://jeffry.in/week-15-17</guid>
+      <description>Week 15, I was trying to be a good friend, surf, and gain momentum on StickyBits—an open source project I did.</description>
+      <pubDate>Wed, 19 Apr 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Week 16, great surfing week and feeling tired from feeling busy</title>
+      <link>https://jeffry.in/week-16-17</link>
+      <guid isPermaLink="true">https://jeffry.in/week-16-17</guid>
+      <description>Week 16, I had a great week surfing and felt pretty tired besides that.</description>
+      <pubDate>Wed, 19 Apr 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Week 14, releasing analytics updates and my first trip South in 2017</title>
+      <link>https://jeffry.in/week-14-17</link>
+      <guid isPermaLink="true">https://jeffry.in/week-14-17</guid>
+      <description>Week 14, I&apos;m releasing a new analytics product and I was able to stay in Encinitas which  for the weekend.</description>
+      <pubDate>Wed, 19 Apr 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Week 13, 2017—camping above Ojai on Highway 33, surfing and other things</title>
+      <link>https://jeffry.in/week-13-17</link>
+      <guid isPermaLink="true">https://jeffry.in/week-13-17</guid>
+      <description>Week 13, I am doing it—camping above Ojai, surfing and finding to code.</description>
+      <pubDate>Tue, 18 Apr 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Week 12, 2017—getting the opportunity to listen see a new place</title>
+      <link>https://jeffry.in/week-12-17</link>
+      <guid isPermaLink="true">https://jeffry.in/week-12-17</guid>
+      <description>Week 12, I was given the opportunity to catch up with some people I care about and visit Wrightwood, CA for the first time.</description>
+      <pubDate>Thu, 06 Apr 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Week 11, 2017—Got Some Good Surfing In and Felt More Comfortable On My New Project</title>
+      <link>https://jeffry.in/week-11-17</link>
+      <guid isPermaLink="true">https://jeffry.in/week-11-17</guid>
+      <description>Week 11, 2017 was fair. I got some good surfing time on a new fun board and I felt more comfortable in my new position at work.</description>
+      <pubDate>Mon, 27 Mar 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Updating Git Tags That Have Been Pushed</title>
+      <link>https://jeffry.in/git-tag-update</link>
+      <guid isPermaLink="true">https://jeffry.in/git-tag-update</guid>
+      <description>This post instructs how to update git tags after they&apos;ve been pushed</description>
+      <pubDate>Tue, 14 Mar 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Week 9, 2017—Getting Back to Surfing, Changing Teams and Feeling Beta</title>
+      <link>https://jeffry.in/week-9-17</link>
+      <guid isPermaLink="true">https://jeffry.in/week-9-17</guid>
+      <description>Week 9, 2017—This week I was feeling pretty beta after changing teams, recovering from being sick and getting back to surfing.</description>
+      <pubDate>Mon, 13 Mar 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Using ES6 Function Destructuring with JavaScript Plugin Options</title>
+      <link>https://jeffry.in/destructing-function-opts</link>
+      <guid isPermaLink="true">https://jeffry.in/destructing-function-opts</guid>
+      <description>This post explains how to use ES6 function destructuring for more readable JavaScript Plugin Options.</description>
+      <pubDate>Sun, 12 Mar 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>AWW—A Formula For Writing Git Commits</title>
+      <link>https://jeffry.in/formula-for-commits</link>
+      <guid isPermaLink="true">https://jeffry.in/formula-for-commits</guid>
+      <description>This post describes AWW, a formula for writing meaningful commit messages with git.</description>
+      <pubDate>Sun, 12 Mar 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>A-ha Moments Writing Simple JavaScript Plugins</title>
+      <link>https://jeffry.in/making-a-js-plugin</link>
+      <guid isPermaLink="true">https://jeffry.in/making-a-js-plugin</guid>
+      <description>Moments writing JavaScript Plugins</description>
+      <pubDate>Thu, 09 Mar 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Week 8, 2017—Losing a few friends, being sick, transitioning and writing some code</title>
+      <link>https://jeffry.in/week-8-17</link>
+      <guid isPermaLink="true">https://jeffry.in/week-8-17</guid>
+      <description>Week 8, 2017—This week I was sick, lost a few friends and started to do some transitioning.</description>
+      <pubDate>Sun, 05 Mar 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Arrow Function Notes After Watching ES6 For Everyone, Continued</title>
+      <link>https://jeffry.in/arrow-functions-cont</link>
+      <guid isPermaLink="true">https://jeffry.in/arrow-functions-cont</guid>
+      <description>This post reviews some things about arrow functions that I learned from Wes Bos&apos;s ES6 for everyone.</description>
+      <pubDate>Fri, 03 Mar 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+    <item>
+      <title>Some great memories have Lauren in the foreground</title>
+      <link>https://jeffry.in/losing-a-friend</link>
+      <guid isPermaLink="true">https://jeffry.in/losing-a-friend</guid>
+      <description>Recently, I lost a friend. Lauren Schlueter was a friend of mine who helped me through laughter. She was a historian, a teacher and a comedian.</description>
+      <pubDate>Tue, 28 Feb 2017 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
+  </channel>
+</rss>

@@ -51,11 +51,21 @@
       padding-bottom: 0;
     }
 
+    &--social {
+      @media screen and (max-width: variables.$width-small) {
+        display: block;
+      }
+    }
+
     &--self {
       border-top: 1px solid var(--color-border-default);
       grid-column: span 2;
       padding-bottom: 0;
       padding-top: variables.$m-xl;
+
+      @media screen and (min-width: variables.$width-small) {
+        grid-column: span 3;
+      }
 
       @media screen and (min-width: variables.$width-medium) {
         border-top: none;

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ShareProps } from "../types";
 import { HeartButton } from "./HeartButton";
-import { PixelLink } from "./PixelLink";
-import { PixelComment } from "./PixelComment";
+import { PixelIcon } from "./PixelIcon";
 import { trackShare, trackComment } from "../lib/analytics-firebase";
 
 export const Share = ({ path, url = "https://jeffry.in", slug }: ShareProps) => {
@@ -48,11 +47,11 @@ export const Share = ({ path, url = "https://jeffry.in", slug }: ShareProps) => 
       <nav className="share__nav">
         <button className="share__button" onClick={onBtnClick}>
           <span className="share__label">{copyText}</span>
-          <PixelLink size={2} />
+          <PixelIcon name="link" size={2} />
         </button>
         <button className="share__button" onClick={onCommentClick}>
           <span className="share__label">Comment</span>
-          <PixelComment size={2} />
+          <PixelIcon name="comment" size={2} />
         </button>
         {slug && <HeartButton slug={slug} />}
       </nav>
@@ -60,11 +59,14 @@ export const Share = ({ path, url = "https://jeffry.in", slug }: ShareProps) => 
   );
 };
 
-export const copyToClipboard = (str: string) => {
-  const el = document.createElement("textarea");
-  el.value = str;
-  document.body.appendChild(el);
-  el.select();
-  document.execCommand("copy");
-  document.body.removeChild(el);
+export const copyToClipboard = async (str: string): Promise<boolean> => {
+  if (navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(str);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+  return false;
 };
