@@ -36,7 +36,7 @@
         "@vercel/og": "0.8.6",
         "codependence": "0.3.1",
         "gray-matter": "4.0.3",
-        "pastoralist": "1.9.2",
+        "pastoralist": "1.9.3",
         "pino": "10.1.0",
         "pino-pretty": "13.1.3",
         "playwright": "1.57.0",
@@ -1708,7 +1708,7 @@
 
     "pascal-case": ["pascal-case@3.1.2", "", { "dependencies": { "no-case": "^3.0.4", "tslib": "^2.0.3" } }, "sha512-uWlGT3YSnK9x3BQJaOdcZwrnV6hPpd8jFH1/ucpiLRPh/2zCVJKS19E4GvYHvaCcACn3foXZ0cLB9Wrx1KGe5g=="],
 
-    "pastoralist": ["pastoralist@1.9.2", "", { "bin": { "pastoralist": "dist/index.js" } }, "sha512-5ERpUTiIa2fp2/PBzwgtcR0lcB92laT8q+cL+xnzO/tcaHhoFmxcnPux4gEzekQZEZxBelOscb3WJGZiF/YDMQ=="],
+    "pastoralist": ["pastoralist@1.9.3", "", { "bin": { "pastoralist": "dist/index.js" } }, "sha512-dNdyC1h4OmZZ6rJjFTUNdSO4/TJrvACwGPLTUixTfW7rF4AV0CSYcWkogLoJP+50wijXVjvVGxzQi++WcO9Nww=="],
 
     "path-case": ["path-case@3.0.4", "", { "dependencies": { "dot-case": "^3.0.4", "tslib": "^2.0.3" } }, "sha512-qO4qCFjXqVTrcbPt/hQfhTQ+VhFsqNKOPtytgNKkKxSoEp3XPUQ8ObFuePylOIok5gjn69ry8XiULxCwot3Wfg=="],
 
