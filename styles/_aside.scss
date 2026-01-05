@@ -2,24 +2,26 @@
 
 .aside {
   position: sticky;
-  top: 5.7rem;
+  top: 5.05rem;
   z-index: 10;
   order: -1;
   align-self: start;
   height: 2.5rem;
-  opacity: 0;
+  display: none;
   transition: opacity 0.2s ease-in-out;
 
   &.is-sticky {
+    display: block;
     opacity: 1;
   }
 
   @media screen and (min-width: variables.$width-small) {
     top: 0;
-    opacity: 1;
   }
 
   @media screen and (min-width: variables.$width-medium) {
+    display: block;
+    opacity: 1;
     order: 0;
     top: 1rem;
     height: auto;

@@ -1,5 +1,10 @@
 export const NAV_ITEMS = [
   {
+    alias: "projects",
+    name: "Projects",
+    path: "https://jeffry.in/projects/",
+  },
+  {
     alias: "resume",
     name: "Resume",
     path: "/resume/",
@@ -33,6 +38,12 @@ export const SOCIAL_ITEMS = [
     alias: "linkedin",
     name: "LinkedIn",
     path: "https://www.linkedin.com/in/jeffrywainwright/",
+    small: true,
+  },
+  {
+    alias: "rss",
+    name: "RSS",
+    path: "/rss.xml",
     small: true,
   },
 ];

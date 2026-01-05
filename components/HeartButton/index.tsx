@@ -6,7 +6,7 @@ import * as Sentry from '@sentry/nextjs';
 import { db } from '../../lib/firebase';
 import { trackLove } from '../../lib/analytics-firebase';
 import { formatCount } from '../../lib/format-count';
-import { PixelHeart } from '../PixelHeart';
+import { PixelIcon } from '../PixelIcon';
 
 const MAX_CLICKS = 10;
 
@@ -111,7 +111,7 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
       aria-label={ariaLabel}
     >
       <span className="share__label">Love</span>
-      <PixelHeart filled={heartFilled} size={heartSize} color={heartColor} />
+      <PixelIcon name={heartFilled ? 'heart' : 'heart-outline'} size={heartSize} color={heartColor} />
       {countText && <span className="share__count">{countText}</span>}
       {particles.map((p) => (
         <span
@@ -119,7 +119,7 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
           className="heart-particle"
           style={{ left: p.x, top: p.y }}
         >
-          <PixelHeart filled size={1} color="#e53935" />
+          <PixelIcon name="heart" size={1} color="#e53935" />
         </span>
       ))}
     </button>

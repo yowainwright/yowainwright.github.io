@@ -14,10 +14,14 @@ export const OgMeta = ({
   date,
   author = DEFAULT_AUTHOR,
   twitterHandle = DEFAULT_TWITTER_HANDLE,
+  tags = [],
+  wordCount,
+  modifiedDate,
 }: OgMetaProps) => {
   const url = `${SITE_URL}/${slug}`;
   const imageUrl = `${SITE_URL}/og/${slug}/img-1.png`;
   const isoDate = new Date(date).toISOString();
+  const isoModified = modifiedDate ? new Date(modifiedDate).toISOString() : isoDate;
 
   const jsonLd: JsonLdBlogPosting = {
     "@context": "https://schema.org",
@@ -26,7 +30,7 @@ export const OgMeta = ({
     description,
     image: imageUrl,
     datePublished: isoDate,
-    dateModified: isoDate,
+    dateModified: isoModified,
     author: {
       "@type": "Person",
       name: author,
@@ -41,6 +45,9 @@ export const OgMeta = ({
       "@type": "WebPage",
       "@id": url,
     },
+    inLanguage: "en-US",
+    ...(tags.length > 0 && { keywords: tags.join(", "), articleSection: tags[0] }),
+    ...(wordCount && { wordCount }),
   };
 
   return (
@@ -58,8 +65,11 @@ export const OgMeta = ({
       <meta property="og:image:alt" content={title} />
 
       <meta property="article:published_time" content={isoDate} />
-      <meta property="article:modified_time" content={isoDate} />
+      <meta property="article:modified_time" content={isoModified} />
       <meta property="article:author" content={author} />
+      {tags.map((tag) => (
+        <meta key={tag} property="article:tag" content={tag} />
+      ))}
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />

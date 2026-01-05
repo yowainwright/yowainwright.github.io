@@ -3,26 +3,12 @@
   gap: 0.35rem;
   cursor: pointer;
 
-  &:hover:not(:disabled) {
-    .pixel-heart {
-      --heart-color: var(--heart-color-filled);
-    }
-  }
-
   &--active {
     color: #e53935;
-
-    .pixel-heart {
-      --heart-color: #e53935;
-    }
   }
 
   &--maxed {
     color: #e53935;
-
-    .pixel-heart {
-      --heart-color: #e53935;
-    }
   }
 
   &--pulse {

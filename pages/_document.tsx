@@ -28,16 +28,14 @@ export default function Document() {
           content="Jeffry.in is the daily changelog of Jeffry Wainwright, an engineer living in California."
         />
         <meta property="og:site_name" content="Jeffry.in" />
-        <meta property="og:image" content="https://jeffry.in/og/default.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://jeffry.in/og/default.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
           rel="stylesheet"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="alternate" type="application/rss+xml" title="Jeffry.in RSS Feed" href="/rss.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Jeffry.in Atom Feed" href="/atom.xml" />
+        <link rel="alternate" type="application/feed+json" title="Jeffry.in JSON Feed" href="/feed.json" />
       </Head>
       <body>
         <Main />
