@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import React from 'react';
-import type { PixelGrid } from './constants';
+import React from "react";
+import type { PixelGrid } from "./constants";
 import {
   LINK_GRID,
   COMMENT_GRID,
   HEART_GRID,
   HEART_OUTLINE_GRID,
-} from './constants';
+} from "./constants";
 
-export type IconName = 'link' | 'comment' | 'heart' | 'heart-outline';
+export type IconName = "link" | "comment" | "heart" | "heart-outline";
 
 interface PixelIconProps {
   name?: IconName;
@@ -23,15 +23,15 @@ const GRIDS: Record<IconName, PixelGrid> = {
   link: LINK_GRID,
   comment: COMMENT_GRID,
   heart: HEART_GRID,
-  'heart-outline': HEART_OUTLINE_GRID,
+  "heart-outline": HEART_OUTLINE_GRID,
 };
 
 export const PixelIcon = ({
   name,
   grid: customGrid,
   size = 2,
-  color = 'currentColor',
-  className = '',
+  color = "currentColor",
+  className = "",
 }: PixelIconProps) => {
   const grid = customGrid ?? (name ? GRIDS[name] : LINK_GRID);
   const rows = grid.length;
@@ -51,7 +51,7 @@ export const PixelIcon = ({
             width={1}
             height={1}
             fill={color}
-          />
+          />,
         );
       }
     });

@@ -111,7 +111,7 @@ const selectPrimaryAsset = (
     const titledBlocks = codeBlocks.filter((b) => b.hasTitle);
     const preferredBlocks = titledBlocks.length > 0 ? titledBlocks : codeBlocks;
     const bestBlock = preferredBlocks.reduce((best, current) =>
-      current.lineCount > best.lineCount ? current : best
+      current.lineCount > best.lineCount ? current : best,
     );
     const index = codeBlocks.indexOf(bestBlock);
     return `code-${index}`;
@@ -182,8 +182,13 @@ const main = () => {
   fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2));
 
   log.info(
-    { total: posts.length, charts: stats.chart, code: stats.code, titleCards: stats["title-card"] },
-    "analysis complete"
+    {
+      total: posts.length,
+      charts: stats.chart,
+      code: stats.code,
+      titleCards: stats["title-card"],
+    },
+    "analysis complete",
   );
   log.info({ path: MANIFEST_PATH }, "manifest written");
 };

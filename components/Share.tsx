@@ -4,7 +4,11 @@ import { HeartButton } from "./HeartButton";
 import { PixelIcon } from "./PixelIcon";
 import { trackShare, trackComment } from "../lib/analytics-firebase";
 
-export const Share = ({ path, url = "https://jeffry.in", slug }: ShareProps) => {
+export const Share = ({
+  path,
+  url = "https://jeffry.in",
+  slug,
+}: ShareProps) => {
   const shareLinkText = "Share";
   const copied = "Copied!";
   const [copyText, setCopyText] = useState(shareLinkText);
@@ -32,10 +36,10 @@ export const Share = ({ path, url = "https://jeffry.in", slug }: ShareProps) => 
   };
 
   const onCommentClick = () => {
-    window.dispatchEvent(new CustomEvent('load-giscus'));
-    const giscusElement = document.querySelector('.post__giscus');
+    window.dispatchEvent(new CustomEvent("load-giscus"));
+    const giscusElement = document.querySelector(".post__giscus");
     if (giscusElement) {
-      giscusElement.scrollIntoView({ behavior: 'smooth' });
+      giscusElement.scrollIntoView({ behavior: "smooth" });
     }
     if (slug) {
       trackComment(slug);

@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react';
-import * as Sentry from '@sentry/nextjs';
+import { useState, useEffect, useCallback } from "react";
+import * as Sentry from "@sentry/nextjs";
 import {
   getStoredUser,
   getStoredToken,
@@ -9,7 +9,7 @@ import {
   handleOAuthCallback,
   isAllowedUser,
   type GitHubUser,
-} from '../lib/auth';
+} from "../lib/auth";
 
 export function useAuth() {
   const [user, setUser] = useState<GitHubUser | null>(null);
@@ -20,27 +20,30 @@ export function useAuth() {
   useEffect(() => {
     const initAuth = async () => {
       const params = new URLSearchParams(window.location.search);
-      const code = params.get('code');
-      const state = params.get('state');
+      const code = params.get("code");
+      const state = params.get("state");
 
       if (code && state) {
         try {
-          const { user: authUser, token: authToken } = await handleOAuthCallback(code, state);
+          const { user: authUser, token: authToken } =
+            await handleOAuthCallback(code, state);
 
           if (!isAllowedUser(authUser)) {
-            setError('Access denied. You are not authorized to view this page.');
+            setError(
+              "Access denied. You are not authorized to view this page.",
+            );
             clearAuth();
             setLoading(false);
-            window.history.replaceState({}, '', '/admin');
+            window.history.replaceState({}, "", "/admin");
             return;
           }
 
           setAuth(authUser, authToken);
           setUser(authUser);
           setToken(authToken);
-          window.history.replaceState({}, '', '/admin');
+          window.history.replaceState({}, "", "/admin");
         } catch (err) {
-          setError('Failed to authenticate with GitHub');
+          setError("Failed to authenticate with GitHub");
           Sentry.captureException(err);
         }
         setLoading(false);

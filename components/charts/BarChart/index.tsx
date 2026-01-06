@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import {
   BarChart as RechartsBarChart,
   Bar,
@@ -11,16 +11,16 @@ import {
   ResponsiveContainer,
   Label,
   Cell,
-} from 'recharts';
-import type { BarChartProps } from '../types';
-import { CHART_COLORS, CHART_STYLES } from '../constants';
-import { GlobalState } from '../../../pages/_app';
+} from "recharts";
+import type { BarChartProps } from "../types";
+import { CHART_COLORS, CHART_STYLES } from "../constants";
+import { GlobalState } from "../../../pages/_app";
 
 export const BarChart = ({
   data,
-  primaryLabel = '',
-  secondaryLabel = '',
-  height = '400px'
+  primaryLabel = "",
+  secondaryLabel = "",
+  height = "400px",
 }: BarChartProps) => {
   const state = useContext(GlobalState);
   const isDark = state?.isDarkMode ?? false;
@@ -29,15 +29,23 @@ export const BarChart = ({
   const zebraColors = [colors.grey, colors.primary];
 
   return (
-    <div style={{ width: '100%', height, padding: '20px 0' }}>
+    <div style={{ width: "100%", height, padding: "20px 0" }}>
       <ResponsiveContainer width="100%" height="100%">
         <RechartsBarChart data={chartData} margin={CHART_STYLES.margin}>
           <CartesianGrid strokeDasharray={CHART_STYLES.grid.strokeDasharray} />
           <XAxis dataKey="primary" fontSize={CHART_STYLES.axis.fontSize}>
-            {primaryLabel && <Label value={primaryLabel} offset={-10} position="insideBottom" />}
+            {primaryLabel && (
+              <Label
+                value={primaryLabel}
+                offset={-10}
+                position="insideBottom"
+              />
+            )}
           </XAxis>
           <YAxis fontSize={CHART_STYLES.axis.fontSize}>
-            {secondaryLabel && <Label value={secondaryLabel} angle={-90} position="insideLeft" />}
+            {secondaryLabel && (
+              <Label value={secondaryLabel} angle={-90} position="insideLeft" />
+            )}
           </YAxis>
           <Tooltip
             contentStyle={CHART_STYLES.tooltip.content}
@@ -48,7 +56,7 @@ export const BarChart = ({
             dataKey="secondary"
             maxBarSize={CHART_STYLES.bar.maxBarSize}
             label={{
-              position: 'top',
+              position: "top",
               fontSize: CHART_STYLES.line.label.fontSize,
             }}
           >

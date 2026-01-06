@@ -11,7 +11,13 @@ import { useHeadingAnchors } from "../hooks/useHeadingAnchors";
 import { useScrollDepth, useReadTime } from "../hooks/useAnalytics";
 import { trackView } from "../lib/analytics-firebase";
 import { InlineSource, SectionSources } from "../components/citations";
-import { RiseAndFallChart, GlobalGrowthChart, WageStagnationChart, IndustrialRevolutionChart, SWEMetricsGrid } from "../components/swe-econ-25";
+import {
+  RiseAndFallChart,
+  GlobalGrowthChart,
+  WageStagnationChart,
+  IndustrialRevolutionChart,
+  SWEMetricsGrid,
+} from "../components/swe-econ-25";
 
 const THEME_DARK = "dark";
 const THEME_LIGHT = "light";
@@ -39,13 +45,19 @@ interface GiscusWrapperProps {
 const GiscusErrorFallback = () => (
   <div className="giscus-error">
     <p>Unable to load comments at this time.</p>
-    <button onClick={() => window.location.reload()} className="giscus-error__retry">
+    <button
+      onClick={() => window.location.reload()}
+      className="giscus-error__retry"
+    >
       Retry
     </button>
   </div>
 );
 
-class ErrorBoundary extends Component<{children: React.ReactNode}, {hasError: boolean}> {
+class ErrorBoundary extends Component<
+  { children: React.ReactNode },
+  { hasError: boolean }
+> {
   constructor(props: any) {
     super(props);
     this.state = { hasError: false };
@@ -72,14 +84,14 @@ class ErrorBoundary extends Component<{children: React.ReactNode}, {hasError: bo
 
 const GiscusLoadingFallback = () => {
   const [showSkeleton, setShowSkeleton] = useState(false);
-  
+
   useEffect(() => {
     const timer = setTimeout(() => setShowSkeleton(true), 200);
     return () => clearTimeout(timer);
   }, []);
-  
+
   if (!showSkeleton) return null;
-  
+
   return (
     <div className="giscus-loading">
       <div className="giscus-loading__skeleton">
@@ -90,13 +102,10 @@ const GiscusLoadingFallback = () => {
   );
 };
 
-const GiscusComponent = dynamic(
-  () => import("@giscus/react"),
-  { 
-    ssr: false,
-    loading: () => <GiscusLoadingFallback />
-  }
-);
+const GiscusComponent = dynamic(() => import("@giscus/react"), {
+  ssr: false,
+  loading: () => <GiscusLoadingFallback />,
+});
 
 const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   const [hasError] = useState(false);
@@ -104,7 +113,8 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   const theme = isDarkMode ? THEME_DARK : THEME_LIGHT;
 
   useEffect(() => {
-    const hasLoadedBefore = localStorage.getItem('jeffry-in-comments-autoload-enabled') === 'true';
+    const hasLoadedBefore =
+      localStorage.getItem("jeffry-in-comments-autoload-enabled") === "true";
 
     if (hasLoadedBefore) {
       setIsInView(true);
@@ -112,7 +122,7 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
     }
 
     const handleLoadGiscus = () => setIsInView(true);
-    window.addEventListener('load-giscus', handleLoadGiscus);
+    window.addEventListener("load-giscus", handleLoadGiscus);
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -121,26 +131,26 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
           observer.disconnect();
         }
       },
-      { rootMargin: '300px' }
+      { rootMargin: "300px" },
     );
 
-    const element = document.querySelector('.post__giscus');
+    const element = document.querySelector(".post__giscus");
     if (element) observer.observe(element);
 
     return () => {
       observer.disconnect();
-      window.removeEventListener('load-giscus', handleLoadGiscus);
+      window.removeEventListener("load-giscus", handleLoadGiscus);
     };
   }, []);
 
   useEffect(() => {
     if (isInView) {
-      localStorage.setItem('jeffry-in-comments-autoload-enabled', 'true');
+      localStorage.setItem("jeffry-in-comments-autoload-enabled", "true");
     }
   }, [isInView]);
-  
+
   if (hasError) return <GiscusErrorFallback />;
-  
+
   if (!isInView) {
     return (
       <div className="giscus-placeholder">
@@ -153,22 +163,22 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
       </div>
     );
   }
-  
+
   return (
     <div className="giscus-container">
       <ErrorBoundary>
         <GiscusComponent
-            repo="yowainwright/yowainwright.github.io"
-            repoId="MDEwOlJlcG9zaXRvcnkxNzA5MTY4Mg=="
-            category="General"
-            categoryId="DIC_kwDOAQTMYs4COQJE"
-            mapping="pathname"
-            reactionsEnabled="1"
-            emitMetadata="0"
-            theme={theme}
-            lang="en"
-            inputPosition="top"
-          />
+          repo="yowainwright/yowainwright.github.io"
+          repoId="MDEwOlJlcG9zaXRvcnkxNzA5MTY4Mg=="
+          category="General"
+          categoryId="DIC_kwDOAQTMYs4COQJE"
+          mapping="pathname"
+          reactionsEnabled="1"
+          emitMetadata="0"
+          theme={theme}
+          lang="en"
+          inputPosition="top"
+        />
       </ErrorBoundary>
     </div>
   );
@@ -184,7 +194,14 @@ const mdxComponents = {
   SWEMetricsGrid,
 };
 
-const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostProps) => {
+const Post = ({
+  content,
+  mdxSource,
+  frontmatter,
+  slug,
+  isMdx,
+  wordCount,
+}: PostProps) => {
   const state = useContext(GlobalState);
   useCodeBlocks();
   useHeadingAnchors();
@@ -196,22 +213,22 @@ const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostP
   }, [slug]);
 
   useEffect(() => {
-    const aside = document.querySelector('.aside');
-    const postSection = document.querySelector('.post__section');
+    const aside = document.querySelector(".aside");
+    const postSection = document.querySelector(".post__section");
     if (!aside || !postSection) return;
 
     const handleScroll = () => {
       const sectionTop = postSection.getBoundingClientRect().top;
       if (sectionTop <= 100) {
-        aside.classList.add('is-sticky');
+        aside.classList.add("is-sticky");
       } else {
-        aside.classList.remove('is-sticky');
+        aside.classList.remove("is-sticky");
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const description = frontmatter?.description || frontmatter?.meta || "";
@@ -228,41 +245,43 @@ const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostP
         wordCount={wordCount}
       />
       <article className="post__article">
-      <header className="post__header">
-        <h1>{frontmatter?.title}</h1>
-        <div className="post__meta">
-          <DateText date={frontmatter?.date} slug={slug} />
-          {estimatedReadTime > 0 && (
-            <span className="post__read-time">{estimatedReadTime} min read</span>
-          )}
-        </div>
-      </header>
-      <section className="post__section">
-        <div className="post__container">
-          {isMdx && mdxSource ? (
-            <div className="post__content">
-              <MDXRemote {...mdxSource} components={mdxComponents} />
+        <header className="post__header">
+          <h1>{frontmatter?.title}</h1>
+          <div className="post__meta">
+            <DateText date={frontmatter?.date} slug={slug} />
+            {estimatedReadTime > 0 && (
+              <span className="post__read-time">
+                {estimatedReadTime} min read
+              </span>
+            )}
+          </div>
+        </header>
+        <section className="post__section">
+          <div className="post__container">
+            {isMdx && mdxSource ? (
+              <div className="post__content">
+                <MDXRemote {...mdxSource} components={mdxComponents} />
+              </div>
+            ) : (
+              <div
+                className="post__content"
+                dangerouslySetInnerHTML={{ __html: content || "" }}
+              />
+            )}
+            <div className="post__giscus">
+              <GiscusWrapper isDarkMode={state?.isDarkMode || false} />
             </div>
-          ) : (
-            <div
-              className="post__content"
-              dangerouslySetInnerHTML={{ __html: content || '' }}
-            />
-          )}
-          <div className="post__giscus">
-            <GiscusWrapper isDarkMode={state?.isDarkMode || false} />
           </div>
-        </div>
-        <aside className="aside">
-          <div className="aside__meta">
-            <header className="aside__header">
-              <h3 className="aside__title">{frontmatter?.title}</h3>
-            </header>
-            <Share path={frontmatter?.path} slug={slug} />
-          </div>
-        </aside>
-      </section>
-    </article>
+          <aside className="aside">
+            <div className="aside__meta">
+              <header className="aside__header">
+                <h3 className="aside__title">{frontmatter?.title}</h3>
+              </header>
+              <Share path={frontmatter?.path} slug={slug} />
+            </div>
+          </aside>
+        </section>
+      </article>
     </>
   );
 };

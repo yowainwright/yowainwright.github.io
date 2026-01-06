@@ -41,9 +41,9 @@ export const NavItem = ({ alias, componentName, name, path }: NavItemProps) => (
 export function NavList({ componentName, navItems }: NavListProps) {
   return (
     <ul className={`${componentName}__items`}>
-      {navItems.map(({ alias, name, path }, i) => (
+      {navItems.map(({ alias, name, path }) => (
         <NavItem
-          key={i}
+          key={alias}
           alias={alias}
           componentName={componentName}
           name={name}

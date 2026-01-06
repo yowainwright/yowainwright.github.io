@@ -1,5 +1,5 @@
-import { initializeApp, getApps } from 'firebase/app';
-import { getDatabase, Database } from 'firebase/database';
+import { initializeApp, getApps } from "firebase/app";
+import { getDatabase, Database } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -16,7 +16,8 @@ const isConfigValid = firebaseConfig.apiKey && firebaseConfig.databaseURL;
 let db: Database | null = null;
 
 if (isConfigValid) {
-  const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+  const app =
+    getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
   db = getDatabase(app);
 }
 

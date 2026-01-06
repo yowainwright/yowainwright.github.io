@@ -95,7 +95,7 @@ const startStaticServer = async (): Promise<Bun.Server> => {
 const screenshotTitleCard = async (
   browser: Browser,
   post: PostAnalysis,
-  outputPath: string
+  outputPath: string,
 ): Promise<void> => {
   const page = await browser.newPage();
   await page.setViewportSize({ width: OG_WIDTH, height: OG_HEIGHT });
@@ -111,14 +111,15 @@ const screenshotBrandedCard = async (
   browser: Browser,
   post: PostAnalysis,
   assetDataUrl: string,
-  outputPath: string
+  outputPath: string,
 ): Promise<void> => {
   const page = await browser.newPage();
   await page.setViewportSize({ width: OG_WIDTH, height: OG_HEIGHT });
 
-  const html = post.strategy === "chart"
-    ? buildChartCardHtml(post.title, post.date, assetDataUrl)
-    : buildCodeCardHtml(post.title, post.date, assetDataUrl);
+  const html =
+    post.strategy === "chart"
+      ? buildChartCardHtml(post.title, post.date, assetDataUrl)
+      : buildCodeCardHtml(post.title, post.date, assetDataUrl);
 
   await page.setContent(html);
   await page.screenshot({ path: outputPath });
@@ -134,7 +135,7 @@ interface ScreenshotClip {
 
 const calculateClip = (
   box: { x: number; y: number; width: number; height: number },
-  padding: number
+  padding: number,
 ): ScreenshotClip => ({
   x: Math.max(0, box.x - padding),
   y: Math.max(0, box.y - padding),
@@ -142,7 +143,9 @@ const calculateClip = (
   height: Math.min(630, box.height + padding * 2),
 });
 
-const isElementVisible = (box: { width: number; height: number } | null): boolean => {
+const isElementVisible = (
+  box: { width: number; height: number } | null,
+): boolean => {
   const hasBox = box !== null;
   if (!hasBox) return false;
 
@@ -154,7 +157,7 @@ const isElementVisible = (box: { width: number; height: number } | null): boolea
 const isClipInViewport = (
   clip: ScreenshotClip,
   viewportWidth: number,
-  viewportHeight: number
+  viewportHeight: number,
 ): boolean => {
   const fitsHorizontally = clip.x + clip.width <= viewportWidth;
   const fitsVertically = clip.y + clip.height <= viewportHeight;
@@ -186,7 +189,7 @@ const captureElementAsBase64 = async (
   element: any,
   padding: number,
   viewportWidth: number,
-  viewportHeight: number
+  viewportHeight: number,
 ): Promise<string | null> => {
   const box = await element.boundingBox();
   if (!isElementVisible(box)) return null;
@@ -219,7 +222,7 @@ const captureElementAsBase64 = async (
 const generateForPost = async (
   browser: Browser,
   post: PostAnalysis,
-  force: boolean = false
+  force: boolean = false,
 ): Promise<boolean> => {
   const alreadyGenerated = hasExistingImages(post.slug);
   const shouldSkip = alreadyGenerated && !force;
@@ -255,13 +258,24 @@ const generateForPost = async (
     const captureElements = async (selector: string, padding: number) => {
       const elements = await page.$$(selector);
       const results = await Promise.all(
-        elements.map((el) => captureElementAsBase64(page, el, padding, viewportWidth, viewportHeight))
+        elements.map((el) =>
+          captureElementAsBase64(
+            page,
+            el,
+            padding,
+            viewportWidth,
+            viewportHeight,
+          ),
+        ),
       );
       return results.filter((r): r is string => r !== null);
     };
 
     if (post.strategy === "chart") {
-      const charts = await captureElements(".recharts-responsive-container", 20);
+      const charts = await captureElements(
+        ".recharts-responsive-container",
+        20,
+      );
       capturedAssets.push(...charts);
     }
 
@@ -282,8 +296,11 @@ const generateForPost = async (
         const imgPath = path.join(postDir, imgName);
         await screenshotBrandedCard(browser, post, assetBase64, imgPath);
         images.push(imgName);
-        log.debug({ slug: post.slug, imageIndex: idx + 1 }, "branded card generated");
-      })
+        log.debug(
+          { slug: post.slug, imageIndex: idx + 1 },
+          "branded card generated",
+        );
+      }),
     );
   }
 
@@ -304,7 +321,7 @@ const generateForPost = async (
 
   fs.writeFileSync(
     path.join(postDir, "manifest.json"),
-    JSON.stringify(postManifest, null, 2)
+    JSON.stringify(postManifest, null, 2),
   );
 
   log.debug({ slug: post.slug, images: images.length }, "OG images generated");
@@ -357,7 +374,11 @@ const main = async () => {
 
     for (const post of manifest.posts) {
       try {
-        const wasGenerated = await generateForPost(browser, post, forceRegenerate);
+        const wasGenerated = await generateForPost(
+          browser,
+          post,
+          forceRegenerate,
+        );
         if (wasGenerated) {
           generated++;
         } else {
@@ -367,14 +388,20 @@ const main = async () => {
         const total = generated + skipped;
         const shouldLogProgress = total % 10 === 0;
         if (shouldLogProgress) {
-          log.info({ generated, skipped, total: manifest.posts.length }, "progress");
+          log.info(
+            { generated, skipped, total: manifest.posts.length },
+            "progress",
+          );
         }
       } catch (err) {
         log.error({ slug: post.slug, error: String(err) }, "failed");
       }
     }
 
-    log.info({ generated, skipped, total: manifest.posts.length }, "OG image generation complete");
+    log.info(
+      { generated, skipped, total: manifest.posts.length },
+      "OG image generation complete",
+    );
   } catch (error) {
     log.error({ error: String(error) }, "generation failed");
     process.exit(1);

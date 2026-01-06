@@ -111,14 +111,18 @@ const generatePreviewHtml = (images: string[]): string => `
 <body>
   <h1>OG Image Preview (${OG_WIDTH}x${OG_HEIGHT})</h1>
   <div class="grid">
-    ${images.map((img, i) => `
+    ${images
+      .map(
+        (img, i) => `
       <div class="card">
         <img src="${img}" alt="OG Image ${i + 1}" />
         <div class="card-info">
           <strong>img-${i + 1}.png</strong> &middot; ${OG_WIDTH}x${OG_HEIGHT}
         </div>
       </div>
-    `).join("")}
+    `,
+      )
+      .join("")}
   </div>
   <div class="platforms">
     <div class="platform">
@@ -163,27 +167,43 @@ const main = async () => {
         fs.copyFileSync(src, dest);
         images.push(`${options.slug}-${file}`);
       });
-      log.info({ slug: options.slug, count: images.length }, "loaded existing images");
+      log.info(
+        { slug: options.slug, count: images.length },
+        "loaded existing images",
+      );
     } else {
-      log.info({ slug: options.slug }, "no existing images, generating preview");
+      log.info(
+        { slug: options.slug },
+        "no existing images, generating preview",
+      );
     }
   }
 
   if (images.length === 0) {
     const title = options.title || "Sample Article Title for Preview";
-    const date = options.date || new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+    const date =
+      options.date ||
+      new Date().toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
 
     const page = await browser.newPage();
     await page.setViewportSize({ width: OG_WIDTH, height: OG_HEIGHT });
 
     const html = buildTitleCardHtml(title, date);
     await page.setContent(html);
-    await page.screenshot({ path: path.join(PREVIEW_DIR, "preview-title.png") });
+    await page.screenshot({
+      path: path.join(PREVIEW_DIR, "preview-title.png"),
+    });
     images.push("preview-title.png");
 
     const defaultHtml = buildDefaultOgHtml();
     await page.setContent(defaultHtml);
-    await page.screenshot({ path: path.join(PREVIEW_DIR, "preview-default.png") });
+    await page.screenshot({
+      path: path.join(PREVIEW_DIR, "preview-default.png"),
+    });
     images.push("preview-default.png");
 
     await page.close();

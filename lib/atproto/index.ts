@@ -40,7 +40,7 @@ export class AtProtoClient {
 
     if (imageData.length > MAX_IMAGE_SIZE) {
       throw new Error(
-        `Image exceeds ${MAX_IMAGE_SIZE} bytes: ${imageData.length}`
+        `Image exceeds ${MAX_IMAGE_SIZE} bytes: ${imageData.length}`,
       );
     }
 

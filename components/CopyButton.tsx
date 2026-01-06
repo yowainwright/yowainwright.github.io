@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { Copy, Check } from 'lucide-react';
+import React, { useState } from "react";
+import { Copy, Check } from "lucide-react";
 
 interface CopyButtonProps {
   codeId: string;
@@ -13,10 +13,10 @@ export default function CopyButton({ codeId }: CopyButtonProps) {
   const handleCopy = async () => {
     const codeElement = document.querySelector(`#${codeId} code`);
     if (!codeElement) return;
-    
-    const code = codeElement.textContent || '';
+
+    const code = codeElement.textContent || "";
     await navigator.clipboard.writeText(code);
-    
+
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -25,8 +25,8 @@ export default function CopyButton({ codeId }: CopyButtonProps) {
     <button
       className="shiki-copy-button"
       onClick={handleCopy}
-      aria-label={copied ? 'Copied!' : 'Copy code'}
-      title={copied ? 'Copied!' : 'Copy code'}
+      aria-label={copied ? "Copied!" : "Copy code"}
+      title={copied ? "Copied!" : "Copy code"}
       data-copied={copied}
     >
       {copied ? (

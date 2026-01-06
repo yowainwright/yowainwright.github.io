@@ -21,7 +21,9 @@ export const OgMeta = ({
   const url = `${SITE_URL}/${slug}`;
   const imageUrl = `${SITE_URL}/og/${slug}/img-1.png`;
   const isoDate = new Date(date).toISOString();
-  const isoModified = modifiedDate ? new Date(modifiedDate).toISOString() : isoDate;
+  const isoModified = modifiedDate
+    ? new Date(modifiedDate).toISOString()
+    : isoDate;
 
   const jsonLd: JsonLdBlogPosting = {
     "@context": "https://schema.org",
@@ -46,7 +48,10 @@ export const OgMeta = ({
       "@id": url,
     },
     inLanguage: "en-US",
-    ...(tags.length > 0 && { keywords: tags.join(", "), articleSection: tags[0] }),
+    ...(tags.length > 0 && {
+      keywords: tags.join(", "),
+      articleSection: tags[0],
+    }),
     ...(wordCount && { wordCount }),
   };
 

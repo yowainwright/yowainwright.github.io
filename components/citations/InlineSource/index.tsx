@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import type { InlineSourceProps } from './types';
+import React from "react";
+import type { InlineSourceProps } from "./types";
 
 export const InlineSource = ({ url, children }: InlineSourceProps) => (
   <sup className="citation">

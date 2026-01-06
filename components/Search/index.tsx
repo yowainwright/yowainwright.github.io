@@ -33,7 +33,7 @@ export function Search() {
               />
             </div>
           </>,
-          document.body
+          document.body,
         )}
     </>
   );

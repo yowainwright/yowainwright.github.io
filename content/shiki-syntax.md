@@ -45,27 +45,28 @@ Shiki's architecture transforms and executes at different stages of the code ren
 // [title: utils.ts - Language Badge Transformer]
 function transformerLanguageBadge() {
   return {
-    name: 'language-badge',
+    name: "language-badge",
     root(node) {
       // Store language from options in root data attribute
-      const lang = this.options.lang || 'text';
-      node.properties['data-language'] = lang;
+      const lang = this.options.lang || "text";
+      node.properties["data-language"] = lang;
     },
     pre(node) {
       // Hoist the language from options to create badge in header
-      const lang = this.options.lang || 'text';
+      const lang = this.options.lang || "text";
 
       // Find or create header
       let header = node.children.find(
-        (child) => child.type === 'element' &&
-                   child.properties?.className?.includes('code-header')
+        (child) =>
+          child.type === "element" &&
+          child.properties?.className?.includes("code-header"),
       );
 
       if (!header) {
         header = {
-          type: 'element',
-          tagName: 'div',
-          properties: { className: ['code-header'] },
+          type: "element",
+          tagName: "div",
+          properties: { className: ["code-header"] },
           children: [],
         };
         node.children.unshift(header);
@@ -73,15 +74,15 @@ function transformerLanguageBadge() {
 
       // Add language badge to header
       header.children.push({
-        type: 'element',
-        tagName: 'span',
+        type: "element",
+        tagName: "span",
         properties: {
-          className: ['language-badge'],
-          'data-language': lang
+          className: ["language-badge"],
+          "data-language": lang,
         },
-        children: [{ type: 'text', value: lang.toUpperCase() }],
+        children: [{ type: "text", value: lang.toUpperCase() }],
       });
-    }
+    },
   };
 }
 ```
@@ -113,14 +114,14 @@ Highlight specific lines to draw attention:
 ```javascript {3-5,8}
 // [title: Important Lines]
 const config = {
-  apiUrl: 'https://api.example.com',
-  timeout: 5000,           // These lines are highlighted
-  retryAttempts: 3,        // to show important config
-  enableLogging: true,     // values
-  
+  apiUrl: "https://api.example.com",
+  timeout: 5000, // These lines are highlighted
+  retryAttempts: 3, // to show important config
+  enableLogging: true, // values
+
   headers: {
-    'Content-Type': 'application/json',  // This line too!
-  }
+    "Content-Type": "application/json", // This line too!
+  },
 };
 ```
 
@@ -133,7 +134,8 @@ Highlight specific words or patterns:
 const password = "secret123"; // [!code word:password]
 const apiKey = process.env.API_KEY; // [!code word:API_KEY]
 
-function authenticate(user, pass) { // [!code word:authenticate]
+function authenticate(user, pass) {
+  // [!code word:authenticate]
   // Never store passwords in plain text
   const hashedPassword = hash(pass);
   return validateCredentials(user, hashedPassword);
@@ -150,18 +152,18 @@ Focus on specific sections while dimming others:
 function processUserData(userData) {
   // Validation
   if (!userData || !userData.email) {
-    throw new Error('Invalid user data');
+    throw new Error("Invalid user data");
   }
-  
+
   // This is the important part to focus on
   const normalizedEmail = userData.email.toLowerCase().trim();
-  const username = normalizedEmail.split('@')[0];
-  
+  const username = normalizedEmail.split("@")[0];
+
   // Save to database
   return saveUser({
     ...userData,
     email: normalizedEmail,
-    username
+    username,
   });
 }
 ```
@@ -173,12 +175,14 @@ Show warnings and errors in code:
 ```javascript
 // [title: Error Handling]
 function divideNumbers(a, b) {
-  if (b === 0) { // [!code error]
-    throw new Error('Division by zero!'); // [!code error]
+  if (b === 0) {
+    // [!code error]
+    throw new Error("Division by zero!"); // [!code error]
   }
 
-  if (typeof a !== 'number' || typeof b !== 'number') { // [!code warning]
-    console.warn('Non-numeric input detected'); // [!code warning]
+  if (typeof a !== "number" || typeof b !== "number") {
+    // [!code warning]
+    console.warn("Non-numeric input detected"); // [!code warning]
   }
 
   return a / b;
@@ -199,16 +203,30 @@ function fetchUser[tooltip:Retrieves user data from the API](id) {
 }
 ```
 
-
 ## Long Code with Horizontal Scrolling
 
 Here's an example with long lines to demonstrate the copy button staying visible:
 
 ```javascript
 // [title: Long Lines Example]
-const veryLongConfigurationObject = { apiEndpoint: "https://api.example.com/v1/users", timeout: 5000, retryAttempts: 3, headers: { "Content-Type": "application/json", "Authorization": "Bearer token_goes_here" }, options: { enableCache: true, cacheTimeout: 3600, enableLogging: true, logLevel: "debug" } };
+const veryLongConfigurationObject = {
+  apiEndpoint: "https://api.example.com/v1/users",
+  timeout: 5000,
+  retryAttempts: 3,
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: "Bearer token_goes_here",
+  },
+  options: {
+    enableCache: true,
+    cacheTimeout: 3600,
+    enableLogging: true,
+    logLevel: "debug",
+  },
+};
 
-const anotherLongLine = "This is a very long string that extends far beyond the typical viewport width to demonstrate how the syntax highlighting handles horizontal scrolling while keeping the copy button accessible and visible at all times.";
+const anotherLongLine =
+  "This is a very long string that extends far beyond the typical viewport width to demonstrate how the syntax highlighting handles horizontal scrolling while keeping the copy button accessible and visible at all times.";
 ```
 
 ## Implementation Details: What Changed
@@ -221,22 +239,22 @@ Replaced the inline SVG copy button with a React component that gets dynamically
 // [title: hooks/useCodeBlocks.tsx - Dynamic Copy Button Mounting]
 export function useCodeBlocks() {
   const rootsRef = useRef<Map<HTMLElement, Root>>(new Map());
-  
+
   const mountCopyButtons = useCallback(() => {
     const placeholders = document.querySelectorAll('.copy-button-placeholder');
-    
+
     placeholders.forEach((placeholder) => {
       const element = placeholder as HTMLElement;
       const codeId = element.getAttribute('data-code-id');
-      
+
       if (!codeId || rootsRef.current.has(element)) return;
-      
+
       const root = createRoot(element);
       root.render(<CopyButton codeId={codeId} />);
       rootsRef.current.set(element, root);
     });
   }, []);
-  
+
   // MutationObserver watches for new code blocks added dynamically
   // ... observer setup code
 }
@@ -250,10 +268,10 @@ export default function CopyButton({ codeId }: CopyButtonProps) {
   const handleCopy = async () => {
     const codeElement = document.querySelector(`#${codeId} code`);
     if (!codeElement) return;
-    
-    const code = codeElement.textContent || '';
+
+    const code = codeElement.textContent || "";
     await navigator.clipboard.writeText(code);
-    
+
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -274,23 +292,23 @@ Created custom Shiki transformers to handle titles and diff lines:
 // [title: utils.ts - Custom Title Transformer]
 function transformerTitle() {
   return {
-    name: 'title',
+    name: "title",
     preprocess(code, options) {
       // Extract title from comments like: // [title: My Title]
-      if (!code.includes('[title:')) return code;
-      
-      const lines = code.split('\n');
+      if (!code.includes("[title:")) return code;
+
+      const lines = code.split("\n");
       const firstLine = lines[0];
-      const titleStart = firstLine.indexOf('[title:');
-      const titleEnd = firstLine.indexOf(']', titleStart);
-      
+      const titleStart = firstLine.indexOf("[title:");
+      const titleEnd = firstLine.indexOf("]", titleStart);
+
       if (titleStart !== -1 && titleEnd > titleStart) {
         const title = firstLine.slice(titleStart + 7, titleEnd).trim();
         options.meta = { ...options.meta, title };
-        return lines.slice(1).join('\n'); // Remove title line from code
+        return lines.slice(1).join("\n"); // Remove title line from code
       }
       return code;
-    }
+    },
   };
 }
 ```
@@ -299,20 +317,20 @@ function transformerTitle() {
 // [title: utils.ts - Diff Lines Transformer]
 function transformerDiffLines() {
   return {
-    name: 'diff-lines',
+    name: "diff-lines",
     code(node) {
       node.children?.forEach((line) => {
         const firstText = getFirstText(line.children[0]);
 
-        if (firstText.startsWith('+')) {
+        if (firstText.startsWith("+")) {
           // Add classes for additions
-          line.properties.class.push('diff', 'add');
-        } else if (firstText.startsWith('-')) {
+          line.properties.class.push("diff", "add");
+        } else if (firstText.startsWith("-")) {
           // Add classes for deletions
-          line.properties.class.push('diff', 'remove');
+          line.properties.class.push("diff", "remove");
         }
       });
-    }
+    },
   };
 }
 ```
@@ -321,18 +339,18 @@ function transformerDiffLines() {
 // [title: utils.ts - Tooltip Transformer]
 function transformerTooltip() {
   return {
-    name: 'tooltip',
+    name: "tooltip",
     code(node) {
-      node.children.forEach(line => {
-        line.children = line.children.flatMap(child => {
-          if (child.type !== 'text') return [child];
+      node.children.forEach((line) => {
+        line.children = line.children.flatMap((child) => {
+          if (child.type !== "text") return [child];
 
           const tooltipPattern = /(\S+)\[tooltip:([^\]]+)\]/g;
           const parts = parseTooltips(child.value, tooltipPattern);
           return parts.length > 0 ? parts : [child];
         });
       });
-    }
+    },
   };
 }
 ```
@@ -340,6 +358,7 @@ function transformerTooltip() {
 ### 3. Improved CSS Architecture
 
 Rewrote the code block styles with:
+
 - Table-based layout for proper line numbering
 - Sticky positioning for line numbers during scroll
 - Dark mode support with CSS custom properties

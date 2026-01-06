@@ -130,11 +130,16 @@ const cardContainer = (content: string): string =>
   `<div style="${style(STYLES.cardContainer)}">${content}</div>`;
 
 const brandWatermark = (position: "absolute" | "static"): string => {
-  const styles = position === "absolute" ? STYLES.brandAbsolute : STYLES.brandStatic;
+  const styles =
+    position === "absolute" ? STYLES.brandAbsolute : STYLES.brandStatic;
   return `<div style="${style(styles)}">jeffry.in</div>`;
 };
 
-const titleBlock = (title: string, fontSize: number, centered: boolean): string => {
+const titleBlock = (
+  title: string,
+  fontSize: number,
+  centered: boolean,
+): string => {
   const styles: StyleObject = {
     ...STYLES.titleBase,
     fontSize,
@@ -188,7 +193,7 @@ export const buildTitleCardHtml = (title: string, date: string): string => {
 export const buildChartCardHtml = (
   title: string,
   date: string,
-  chartDataUrl: string
+  chartDataUrl: string,
 ): string => {
   const fontSize = getCardTitleFontSize(title.length);
   const content = `
@@ -206,7 +211,7 @@ export const buildChartCardHtml = (
 export const buildCodeCardHtml = (
   title: string,
   date: string,
-  codeDataUrl: string
+  codeDataUrl: string,
 ): string => {
   const fontSize = getCardTitleFontSize(title.length);
   const content = `

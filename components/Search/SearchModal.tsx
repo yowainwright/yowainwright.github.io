@@ -26,7 +26,7 @@ export const SearchModal = forwardRef<HTMLDivElement, SearchModalProps>(
       onQueryChange,
       onClose,
     },
-    ref
+    ref,
   ) => {
     const hasQuery = query.length > 0;
     const hasResults = results.length > 0;
@@ -52,7 +52,7 @@ export const SearchModal = forwardRef<HTMLDivElement, SearchModalProps>(
         </div>
       </div>
     );
-  }
+  },
 );
 
 SearchModal.displayName = "SearchModal";
