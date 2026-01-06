@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Link from "next/link";
 import { Moon } from "./svg/Moon";
 import { Sun } from "./svg/Sun";
+import { Search } from "./Search";
 import { DispatchStore, GlobalState } from "../pages/_app";
 import { NavItemProps, IconProps, NavListProps } from "../types";
 import { NAV_ITEMS as navItems } from "../constants";
@@ -67,7 +68,10 @@ export function Header() {
         </Link>
         <div className="site-nav__links-wrapper">
           <NavList componentName="site-nav" navItems={navItems} />
-          <DarkmodeToggle />
+          <div className="site-nav__actions">
+            <Search />
+            <DarkmodeToggle />
+          </div>
         </div>
       </section>
     </nav>
