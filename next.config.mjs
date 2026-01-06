@@ -9,6 +9,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   ...(isProduction && { output: "export" }),
+  trailingSlash: true,
   basePath: "",
   assetPrefix: "./",
   sassOptions: {
