@@ -61,12 +61,20 @@
     padding: 0;
   }
 
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
   &__toggle {
-    align-self: flex-end;
     background: none;
     border: 0;
     cursor: pointer;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 2.5rem;
     outline: none;
     width: 2rem;
@@ -75,15 +83,9 @@
       fill: var(--color-text-primary);
     }
 
-    @media screen and (min-width: variables.$width-small) {
-      position: relative;
-      top: -1.2rem;
-    }
-
     @media screen and (min-width: variables.$width-medium) {
-      top: 0;
       width: variables.$m-2xl;
-      height: variables.$m-5xl;
+      height: variables.$m-2xl;
     }
   }
 
@@ -134,6 +136,7 @@
   border-radius: variables.$radius-full;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   height: 2.5rem;
   justify-content: center;
   position: relative;
