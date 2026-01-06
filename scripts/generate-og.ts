@@ -237,7 +237,6 @@ const generateForPost = async (
   }
 
   const images: string[] = [];
-  let imageIndex = 1;
   const capturedAssets: string[] = [];
 
   const page = await browser.newPage();

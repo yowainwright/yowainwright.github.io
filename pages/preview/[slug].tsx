@@ -142,7 +142,7 @@ const JsonLdSection = ({
 };
 
 export default function PreviewPage(props: PreviewPageProps) {
-  const { slug, title, description, imageUrl, url, date } = props;
+  const { slug, title, description, imageUrl, url } = props;
 
   return (
     <>

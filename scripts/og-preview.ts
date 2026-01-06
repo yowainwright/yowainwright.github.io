@@ -8,7 +8,6 @@ import {
   OG_WIDTH,
   OG_HEIGHT,
   buildTitleCardHtml,
-  buildChartCardHtml,
   buildDefaultOgHtml,
 } from "./og-templates";
 

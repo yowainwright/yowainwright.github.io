@@ -103,7 +103,6 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
   const countText = isLoading ? "" : count > 0 ? formatCount(count) : "";
   const heartSize = hasMaxed ? 2 : 2 + userClicks * 0.15;
   const hasClicked = userClicks > 0;
-  const heartFilled = hasClicked;
   const heartColor = hasClicked ? "#e53935" : "currentColor";
   const buttonClass = `share__button heart-button ${hasClicked ? "heart-button--active" : ""} ${hasMaxed ? "heart-button--maxed" : ""} ${isAnimating ? "heart-button--pulse" : ""}`;
   const ariaLabel = hasMaxed
