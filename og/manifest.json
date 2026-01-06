@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-06T09:57:06.163Z",
+  "generatedAt": "2026-01-06T23:36:11.370Z",
   "posts": [
     {
       "slug": "js-closure",
@@ -403,7 +403,7 @@
         },
         {
           "language": "typescript",
-          "lineCount": 43,
+          "lineCount": 44,
           "hasTitle": true
         },
         {
@@ -1311,7 +1311,7 @@
       "codeBlocks": [],
       "hasImages": false,
       "strategy": "chart",
-      "primaryAsset": "chart-SWEMetricsGrid"
+      "primaryAsset": "chart-WageStagnationChart"
     },
     {
       "slug": "making-a-js-plugin",
