@@ -6,13 +6,25 @@ meta: "The quick article provides a data-driven look at US-based software engine
 tags: ["Career", "Economics", "Software Engineering", "Industry Analysis"]
 ---
 
-import { InlineSource, SectionSources } from '../components/citations';
-import { RiseAndFallChart, GlobalGrowthChart, WageStagnationChart, SWEMetricsGrid } from '../components/swe-econ-25';
+import { InlineSource, SectionSources } from "../components/citations";
+import {
+  RiseAndFallChart,
+  GlobalGrowthChart,
+  WageStagnationChart,
+  SWEMetricsGrid,
+} from "../components/swe-econ-25";
 
 I grew up near Lead, South Dakota. My dad worked at Homestake Mine—
 a solid job that employed a good majority of the population in the 1980s and 1990s.
-<InlineSource url="https://www.minneapolisfed.org/article/1995/report-details-mining-industrys-impact-on-south-dakotas-economy">1</InlineSource>.
-By 2001, all those jobs were gone<InlineSource url="https://www.blackhillsknowledgenetwork.org/home/in-history-homestake-announces-shutdown-of-lead-mine.html">2</InlineSource>. Each year felt manageable until it wasn't and it hit the area really hard.
+
+<InlineSource url="https://www.minneapolisfed.org/article/1995/report-details-mining-industrys-impact-on-south-dakotas-economy">
+  1
+</InlineSource>
+. By 2001, all those jobs were gone
+<InlineSource url="https://www.blackhillsknowledgenetwork.org/home/in-history-homestake-announces-shutdown-of-lead-mine.html">
+  2
+</InlineSource>
+. Each year felt manageable until it wasn't and it hit the area really hard.
 
 US software engineering employment peaked November 2019<InlineSource url="https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/">3</InlineSource>.
 The decline started before AI; before the pandemic.
@@ -73,17 +85,68 @@ How long can the investor class continue to sell the American dream from buildin
 
 ## Sources
 
-<SectionSources sources={[
-  { title: "Report Details Mining Industry's Impact on South Dakota's Economy", author: "Federal Reserve Bank of Minneapolis", date: "1995", url: "https://www.minneapolisfed.org/article/1995/report-details-mining-industrys-impact-on-south-dakotas-economy" },
-  { title: "In History: Homestake Announces Shutdown of Lead Mine", publication: "Black Hills Knowledge Network", url: "https://www.blackhillsknowledgenetwork.org/home/in-history-homestake-announces-shutdown-of-lead-mine.html" },
-  { title: "The Rise and Fall of the Software Developer", author: "ADP Research Institute", date: "2024", url: "https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/" },
-  { title: "Job Postings on Indeed: Software Development", publication: "FRED, Federal Reserve Bank of St. Louis", url: "https://fred.stlouisfed.org/series/IHLIDXUSTPSOFTDEVE" },
-  { title: "Decrease in Entry-Level Tech Jobs", author: "Gregor Ojstersek", publication: "Engineering Leadership", url: "https://newsletter.eng-leadership.com/p/decrease-in-entry-level-tech-jobs" },
-  { title: "The State of European Tech", publication: "Dealroom", date: "2024", url: "https://dealroom.co/guides/the-state-of-european-tech" },
-  { title: "Government Assistance for General Motors", publication: "Congressional Research Service", url: "https://www.congress.gov/crs-product/R41978" },
-  { title: "General Electric Tapped Fed to Borrow $16 Billion", author: "Paul Kiel", publication: "ProPublica", date: "2011", url: "https://www.propublica.org/article/general-electric-tapped-fed-to-borrow-16-billion" },
-  { title: "2024 End of Year Pay Report", publication: "Levels.fyi", date: "2024", url: "https://www.levels.fyi/2024/" },
-  { title: "CEO Pay in 2023", publication: "Economic Policy Institute", date: "2024", url: "https://www.epi.org/publication/ceo-pay-in-2023/" }
-]} />
+<SectionSources
+  sources={[
+    {
+      title:
+        "Report Details Mining Industry's Impact on South Dakota's Economy",
+      author: "Federal Reserve Bank of Minneapolis",
+      date: "1995",
+      url: "https://www.minneapolisfed.org/article/1995/report-details-mining-industrys-impact-on-south-dakotas-economy",
+    },
+    {
+      title: "In History: Homestake Announces Shutdown of Lead Mine",
+      publication: "Black Hills Knowledge Network",
+      url: "https://www.blackhillsknowledgenetwork.org/home/in-history-homestake-announces-shutdown-of-lead-mine.html",
+    },
+    {
+      title: "The Rise and Fall of the Software Developer",
+      author: "ADP Research Institute",
+      date: "2024",
+      url: "https://www.adpresearch.com/the-rise-and-fall-of-the-software-developer/",
+    },
+    {
+      title: "Job Postings on Indeed: Software Development",
+      publication: "FRED, Federal Reserve Bank of St. Louis",
+      url: "https://fred.stlouisfed.org/series/IHLIDXUSTPSOFTDEVE",
+    },
+    {
+      title: "Decrease in Entry-Level Tech Jobs",
+      author: "Gregor Ojstersek",
+      publication: "Engineering Leadership",
+      url: "https://newsletter.eng-leadership.com/p/decrease-in-entry-level-tech-jobs",
+    },
+    {
+      title: "The State of European Tech",
+      publication: "Dealroom",
+      date: "2024",
+      url: "https://dealroom.co/guides/the-state-of-european-tech",
+    },
+    {
+      title: "Government Assistance for General Motors",
+      publication: "Congressional Research Service",
+      url: "https://www.congress.gov/crs-product/R41978",
+    },
+    {
+      title: "General Electric Tapped Fed to Borrow $16 Billion",
+      author: "Paul Kiel",
+      publication: "ProPublica",
+      date: "2011",
+      url: "https://www.propublica.org/article/general-electric-tapped-fed-to-borrow-16-billion",
+    },
+    {
+      title: "2024 End of Year Pay Report",
+      publication: "Levels.fyi",
+      date: "2024",
+      url: "https://www.levels.fyi/2024/",
+    },
+    {
+      title: "CEO Pay in 2023",
+      publication: "Economic Policy Institute",
+      date: "2024",
+      url: "https://www.epi.org/publication/ceo-pay-in-2023/",
+    },
+  ]}
+/>
 
 ---

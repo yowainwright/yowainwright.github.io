@@ -15,10 +15,10 @@ interface PostsRowProps {
   posts: Post[];
 }
 
-const PostsRow = ({ posts }: PostsRowProps): any =>
-  posts.map(({ slug, frontmatter: { date, meta, title } }: Post, i: number) => (
+const PostsRow = ({ posts }: PostsRowProps): React.ReactNode =>
+  posts.map(({ slug, frontmatter: { date, meta, title } }: Post) => (
     <BasicPost
-      key={i}
+      key={slug}
       date={date}
       description={meta}
       path={slug}

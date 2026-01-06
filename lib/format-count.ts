@@ -5,7 +5,7 @@ export function formatCount(count: number): string {
 
   if (count < 10000) {
     const k = count / 1000;
-    return `${k.toFixed(1).replace(/\.0$/, '')}k`;
+    return `${k.toFixed(1).replace(/\.0$/, "")}k`;
   }
 
   if (count < 1000000) {
@@ -15,7 +15,7 @@ export function formatCount(count: number): string {
 
   if (count < 10000000) {
     const m = count / 1000000;
-    return `${m.toFixed(1).replace(/\.0$/, '')}m`;
+    return `${m.toFixed(1).replace(/\.0$/, "")}m`;
   }
 
   const m = count / 1000000;

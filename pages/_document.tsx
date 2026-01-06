@@ -33,9 +33,24 @@ export default function Document() {
           rel="stylesheet"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="alternate" type="application/rss+xml" title="Jeffry.in RSS Feed" href="/rss.xml" />
-        <link rel="alternate" type="application/atom+xml" title="Jeffry.in Atom Feed" href="/atom.xml" />
-        <link rel="alternate" type="application/feed+json" title="Jeffry.in JSON Feed" href="/feed.json" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Jeffry.in RSS Feed"
+          href="/rss.xml"
+        />
+        <link
+          rel="alternate"
+          type="application/atom+xml"
+          title="Jeffry.in Atom Feed"
+          href="/atom.xml"
+        />
+        <link
+          rel="alternate"
+          type="application/feed+json"
+          title="Jeffry.in JSON Feed"
+          href="/feed.json"
+        />
       </Head>
       <body>
         <Main />

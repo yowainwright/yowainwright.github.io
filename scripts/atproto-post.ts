@@ -88,7 +88,10 @@ const listPosts = (): void => {
   log.info({ count: manifest.posts.length }, "available posts");
   for (const post of manifest.posts.slice(0, 20)) {
     const hasOg = fs.existsSync(path.join(OG_DIR, post.slug, "manifest.json"));
-    log.info({ slug: post.slug, title: post.title, date: post.date, hasOg }, "post");
+    log.info(
+      { slug: post.slug, title: post.title, date: post.date, hasOg },
+      "post",
+    );
   }
   log.info({ remaining: manifest.posts.length - 20 }, "more posts available");
 };

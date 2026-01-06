@@ -16,7 +16,7 @@ const clampIndex = (index: number, max: number): number =>
 
 const searchItems = (
   fuse: Fuse<SearchResult>,
-  query: string
+  query: string,
 ): SearchResult[] => {
   const searchResults = fuse.search(query);
   return searchResults.slice(0, MAX_RESULTS).map((r) => r.item);
@@ -37,7 +37,7 @@ export function useSearch() {
 
   const fuse = useMemo(
     () => new Fuse(state.searchData, FUSE_OPTIONS),
-    [state.searchData]
+    [state.searchData],
   );
 
   const hasQuery = state.query.length > 0;
@@ -48,7 +48,7 @@ export function useSearch() {
     fetch(SEARCH_DATA_PATH)
       .then((res) => res.json())
       .then((data: SearchResult[]) =>
-        setState((prev) => ({ ...prev, searchData: data }))
+        setState((prev) => ({ ...prev, searchData: data })),
       )
       .catch(console.error);
   }, []);
@@ -86,14 +86,17 @@ export function useSearch() {
 
   const selectPrev = useCallback(() => {
     setState((prev) => {
-      const prevIndex = clampIndex(prev.selectedIndex - 1, prev.results.length - 1);
+      const prevIndex = clampIndex(
+        prev.selectedIndex - 1,
+        prev.results.length - 1,
+      );
       return { ...prev, selectedIndex: prevIndex };
     });
   }, []);
 
   const getSelectedResult = useCallback(
     (): SearchResult | null => state.results[state.selectedIndex] ?? null,
-    [state.results, state.selectedIndex]
+    [state.results, state.selectedIndex],
   );
 
   useEffect(() => {
@@ -138,7 +141,14 @@ export function useSearch() {
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [canNavigateResults, open, close, selectNext, selectPrev, getSelectedResult]);
+  }, [
+    canNavigateResults,
+    open,
+    close,
+    selectNext,
+    selectPrev,
+    getSelectedResult,
+  ]);
 
   useEffect(() => {
     if (!state.isOpen) return;

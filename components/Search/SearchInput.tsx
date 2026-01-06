@@ -22,7 +22,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
         <kbd className="search-esc">ESC</kbd>
       </div>
     );
-  }
+  },
 );
 
 SearchInput.displayName = "SearchInput";

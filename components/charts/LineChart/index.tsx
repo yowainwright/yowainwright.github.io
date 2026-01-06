@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import {
   LineChart as RechartsLineChart,
   Line,
@@ -11,26 +11,32 @@ import {
   Legend,
   ResponsiveContainer,
   Label,
-} from 'recharts';
-import { GitCommitHorizontal } from 'lucide-react';
-import type { LineChartProps, Series } from '../types';
-import { CHART_COLORS, CHART_STYLES } from '../constants';
-import { LabelPosition } from 'recharts/types/component/Label';
-import { GlobalState } from '../../../pages/_app';
+} from "recharts";
+import { GitCommitHorizontal } from "lucide-react";
+import type { LineChartProps, Series } from "../types";
+import { CHART_COLORS, CHART_STYLES } from "../constants";
+import { LabelPosition } from "recharts/types/component/Label";
+import { GlobalState } from "../../../pages/_app";
 
 const formatChartData = (data: Series[]) => {
-  const allPrimaryKeys = [...new Set(data.flatMap(s => s.data.map(d => d.primary)))].sort();
+  const allPrimaryKeys = [
+    ...new Set(data.flatMap((s) => s.data.map((d) => d.primary))),
+  ].sort();
   return allPrimaryKeys.map((primary) => {
     const dataPoint: Record<string, string | number | undefined> = { primary };
     data.forEach((s) => {
-      const match = s.data.find(d => d.primary === primary);
+      const match = s.data.find((d) => d.primary === primary);
       dataPoint[s.label] = match?.secondary;
     });
     return dataPoint;
   });
 };
 
-const LegendContent = ({ payload }: { payload?: Array<{ color: string; value: string }> }) => (
+const LegendContent = ({
+  payload,
+}: {
+  payload?: Array<{ color: string; value: string }>;
+}) => (
   <ul>
     {payload?.map((entry, index) => (
       <li
@@ -42,7 +48,10 @@ const LegendContent = ({ payload }: { payload?: Array<{ color: string; value: st
       >
         <GitCommitHorizontal
           size={CHART_STYLES.legend.iconSize}
-          style={{ color: entry.color, paddingRight: CHART_STYLES.legend.icon.paddingRight }}
+          style={{
+            color: entry.color,
+            paddingRight: CHART_STYLES.legend.icon.paddingRight,
+          }}
         />
         {entry.value}
       </li>
@@ -52,10 +61,10 @@ const LegendContent = ({ payload }: { payload?: Array<{ color: string; value: st
 
 export const LineChart = ({
   data,
-  primaryLabel = '',
-  secondaryLabel = '',
-  height = '400px',
-  yDomain
+  primaryLabel = "",
+  secondaryLabel = "",
+  height = "400px",
+  yDomain,
 }: LineChartProps) => {
   const state = useContext(GlobalState);
   const isDark = state?.isDarkMode ?? false;
@@ -93,7 +102,10 @@ export const LineChart = ({
             itemStyle={CHART_STYLES.tooltip.item}
             labelStyle={CHART_STYLES.tooltip.label}
           />
-          <Legend verticalAlign={CHART_STYLES.legend.verticalAlign} content={LegendContent} />
+          <Legend
+            verticalAlign={CHART_STYLES.legend.verticalAlign}
+            content={LegendContent}
+          />
           {series.map((seriesLabel, index) => (
             <Line
               key={seriesLabel}

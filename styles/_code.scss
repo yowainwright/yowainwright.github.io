@@ -62,7 +62,7 @@ pre[class*="language-"] > code[class*="language-"] {
 // Code lines with numbering
 code .line {
   display: table-row;
-  
+
   &::before {
     content: counter(step);
     counter-increment: step;
@@ -293,7 +293,7 @@ code .line {
 
   &:hover::before,
   &:focus::before {
-    content: '';
+    content: "";
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -337,7 +337,7 @@ code .line {
   background: var(--code-add-bg) !important;
 
   &::before {
-    content: '+' counter(step);
+    content: "+" counter(step);
     background: var(--code-add-bg-strong) !important;
     color: var(--code-add-text) !important;
     font-weight: 600;
@@ -350,7 +350,7 @@ code .line {
   opacity: 0.9;
 
   &::before {
-    content: '-' counter(step);
+    content: "-" counter(step);
     background: var(--code-remove-bg-strong) !important;
     color: var(--code-remove-text) !important;
     font-weight: 600;
@@ -363,7 +363,7 @@ code .line {
     background: var(--code-add-bg) !important;
 
     &::before {
-      content: '+' counter(step);
+      content: "+" counter(step);
       background: var(--code-add-bg-strong) !important;
       color: var(--code-add-text) !important;
       font-weight: 600;
@@ -375,7 +375,7 @@ code .line {
     opacity: 0.9;
 
     &::before {
-      content: '-' counter(step);
+      content: "-" counter(step);
       background: var(--code-remove-bg-strong) !important;
       color: var(--code-remove-text) !important;
       font-weight: 600;
@@ -408,14 +408,16 @@ code .line {
 .has-focused .line:not(.focused) {
   opacity: 0.5;
   filter: blur(0.5px);
-  transition: opacity 0.3s ease, filter 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    filter 0.3s ease;
 }
 
 .has-focused .line.focused {
   background-color: rgba(139, 92, 246, 0.05);
   position: relative;
   display: table-row;
-  
+
   .js-is-darkmode & {
     background-color: rgba(139, 92, 246, 0.1);
   }
@@ -426,14 +428,14 @@ code .line {
   background-color: rgba(239, 68, 68, 0.1);
   border-bottom: 2px wavy #ef4444;
   position: relative;
-  
+
   .js-is-darkmode & {
     background-color: rgba(239, 68, 68, 0.15);
     border-bottom-color: #f87171;
   }
-  
+
   &::after {
-    content: '⚠';
+    content: "⚠";
     position: absolute;
     right: -1.5rem;
     color: #ef4444;
@@ -446,14 +448,14 @@ code .line {
   background-color: rgba(251, 191, 36, 0.1);
   border-bottom: 2px wavy #f59e0b;
   position: relative;
-  
+
   .js-is-darkmode & {
     background-color: rgba(251, 191, 36, 0.15);
     border-bottom-color: #fbbf24;
   }
-  
+
   &::after {
-    content: '⚠';
+    content: "⚠";
     position: absolute;
     right: -1.5rem;
     color: #f59e0b;

@@ -4,9 +4,9 @@ import { SocialListProps } from "../types";
 
 export const SocialList = ({ items = socialItems }: SocialListProps) => (
   <ul className="social-list">
-    {items.map(({ name, path, small }, i) => (
+    {items.map(({ alias, name, path, small }) => (
       <li
-        key={i}
+        key={alias}
         className={`social-list__item social-list__item--${small ? "showing" : "hidden"}`}
       >
         <a href={path} className="social-list__link">

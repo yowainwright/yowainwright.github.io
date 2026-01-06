@@ -1,22 +1,22 @@
-import React from 'react';
-import dynamic from 'next/dynamic';
-import { ChartSources } from '../../charts';
+import React from "react";
+import dynamic from "next/dynamic";
+import { ChartSources } from "../../charts";
 import {
   gradsVsJobsData,
   layoffsVsStockData,
   entryLevelData,
   profitsVsHeadcountData,
-  sources
-} from './constants';
+  sources,
+} from "./constants";
 
 const LineChart = dynamic(
-  () => import('../../charts').then(mod => mod.LineChart),
-  { ssr: false }
+  () => import("../../charts").then((mod) => mod.LineChart),
+  { ssr: false },
 );
 
 const BarChart = dynamic(
-  () => import('../../charts').then(mod => mod.BarChart),
-  { ssr: false }
+  () => import("../../charts").then((mod) => mod.BarChart),
+  { ssr: false },
 );
 
 export const SWEMetricsGrid = () => (

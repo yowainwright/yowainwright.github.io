@@ -29,7 +29,9 @@ const escapeXml = (str: string): string =>
     .replace(/'/g, "&apos;");
 
 const getPosts = (): Post[] => {
-  const files = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
+  const files = fs
+    .readdirSync(CONTENT_DIR)
+    .filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
 
   const posts = files
     .map((fileName) => {
@@ -71,7 +73,7 @@ const buildRssXml = (posts: Post[]): string => {
       <description>${escapeXml(post.description)}</description>
       <pubDate>${post.date.toUTCString()}</pubDate>
       <author>${AUTHOR_EMAIL} (${AUTHOR_NAME})</author>
-    </item>`
+    </item>`,
     )
     .join("");
 
@@ -111,7 +113,7 @@ const buildAtomXml = (posts: Post[]): string => {
       <name>${AUTHOR_NAME}</name>
       <email>${AUTHOR_EMAIL}</email>
     </author>
-  </entry>`
+  </entry>`,
     )
     .join("");
 
@@ -186,7 +188,7 @@ const buildSitemapXml = (entries: SitemapEntry[]): string => {
     <loc>${entry.loc}</loc>${entry.lastmod ? `\n    <lastmod>${entry.lastmod}</lastmod>` : ""}
     <changefreq>${entry.changefreq}</changefreq>
     <priority>${entry.priority}</priority>
-  </url>`
+  </url>`,
     )
     .join("");
 

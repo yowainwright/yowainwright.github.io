@@ -1,24 +1,44 @@
 import React from "react";
 import Head from "next/head";
 
+const META_TITLE = "404 | Jeffry.in";
+const META_CONTENT =
+  "This is the 404 page of Jeffry.in. Use the navigation to find other pages of this website.";
+const PATH = "https://jeffry.in/404/";
+const TITLE = "404";
+const MAIN_CLASS = "main main--404";
+
+const DEFAULT_TEXT_LINES = [
+  "Somehow, you've reached the 404 page of Jeffry.in.",
+  "It's probably not your fault but that doesn't fix the problem.",
+  "Use the navigation above to help you find your way.",
+];
+
+const DefaultText = (
+  <>
+    {DEFAULT_TEXT_LINES.map((line) => (
+      <p key={line}>{line}</p>
+    ))}
+  </>
+);
+
+interface FourZeroFourProps {
+  metaTitle?: string;
+  metaContent?: string;
+  path?: string;
+  Text?: React.ReactNode;
+  title?: string;
+}
+
 export default function FourZeroFour({
-  metaTitle = "404 | Jeffry.in",
-  metaContent = "This is the 404 page of Jeffry.in. Use the navigation to find other pages of this website.",
-  path = "https://jeffry.in/404/",
-  Text = (
-    <>
-      <p>Somehow, you&apos;ve reached the 404 page of Jeffry.in.</p>
-      <p>
-        It&apos;s probably not your fault but that doesn&apos;t fix the
-        problem.{" "}
-      </p>
-      <p>Use the navigation above to help you find your way.</p>
-    </>
-  ),
-  title = "404",
-}) {
+  metaTitle = META_TITLE,
+  metaContent = META_CONTENT,
+  path = PATH,
+  Text = DefaultText,
+  title = TITLE,
+}: FourZeroFourProps) {
   return (
-    <main className="main main--404">
+    <main className={MAIN_CLASS}>
       <Head>
         <title>{metaTitle}</title>
         <meta property="og:description" content={metaContent} />

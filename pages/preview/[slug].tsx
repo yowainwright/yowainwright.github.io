@@ -7,23 +7,29 @@ import { getAllPosts, getSinglePost } from "../../utils";
 import { SITE_URL, DEFAULT_AUTHOR } from "../../components/OgMeta/constants";
 
 const FacebookPreviews = dynamic(
-  () => import("@automattic/social-previews").then((mod) => mod.FacebookPreviews),
-  { ssr: false }
+  () =>
+    import("@automattic/social-previews").then((mod) => mod.FacebookPreviews),
+  { ssr: false },
 );
 
 const TwitterPreviews = dynamic(
-  () => import("@automattic/social-previews").then((mod) => mod.TwitterPreviews),
-  { ssr: false }
+  () =>
+    import("@automattic/social-previews").then((mod) => mod.TwitterPreviews),
+  { ssr: false },
 );
 
 const LinkedInPreviews = dynamic(
-  () => import("@automattic/social-previews").then((mod) => mod.LinkedInPreviews),
-  { ssr: false }
+  () =>
+    import("@automattic/social-previews").then((mod) => mod.LinkedInPreviews),
+  { ssr: false },
 );
 
 const GoogleSearchPreview = dynamic(
-  () => import("@automattic/social-previews").then((mod) => mod.GoogleSearchPreview),
-  { ssr: false }
+  () =>
+    import("@automattic/social-previews").then(
+      (mod) => mod.GoogleSearchPreview,
+    ),
+  { ssr: false },
 );
 
 interface PreviewPageProps {
@@ -37,7 +43,14 @@ interface PreviewPageProps {
   wordCount: number;
 }
 
-const MetaTagsSection = ({ title, description, url, imageUrl, date, tags }: PreviewPageProps) => {
+const MetaTagsSection = ({
+  title,
+  description,
+  url,
+  imageUrl,
+  date,
+  tags,
+}: PreviewPageProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const isoDate = new Date(date).toISOString();
 
@@ -66,7 +79,11 @@ const MetaTagsSection = ({ title, description, url, imageUrl, date, tags }: Prev
         <pre style={styles.code}>
           {metaTags.map((tag, i) => (
             <div key={i}>
-              &lt;meta {tag.property ? `property="${tag.property}"` : `name="${tag.name}"`} content="{tag.content}" /&gt;
+              &lt;meta{" "}
+              {tag.property
+                ? `property="${tag.property}"`
+                : `name="${tag.name}"`}{" "}
+              content="{tag.content}" /&gt;
             </div>
           ))}
         </pre>
@@ -75,7 +92,14 @@ const MetaTagsSection = ({ title, description, url, imageUrl, date, tags }: Prev
   );
 };
 
-const JsonLdSection = ({ title, description, url, imageUrl, date, wordCount }: PreviewPageProps) => {
+const JsonLdSection = ({
+  title,
+  description,
+  url,
+  imageUrl,
+  date,
+  wordCount,
+}: PreviewPageProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const isoDate = new Date(date).toISOString();
 
@@ -118,7 +142,7 @@ const JsonLdSection = ({ title, description, url, imageUrl, date, wordCount }: P
 };
 
 export default function PreviewPage(props: PreviewPageProps) {
-  const { slug, title, description, imageUrl, url, date } = props;
+  const { slug, title, description, imageUrl, url } = props;
 
   return (
     <>
@@ -132,7 +156,9 @@ export default function PreviewPage(props: PreviewPageProps) {
       <div style={styles.container}>
         <header style={styles.header}>
           <h1 style={styles.h1}>Social Preview: {slug}</h1>
-          <a href={`/${slug}`} style={styles.link}>View Post</a>
+          <a href={`/${slug}`} style={styles.link}>
+            View Post
+          </a>
         </header>
 
         <section style={styles.section}>
@@ -149,7 +175,8 @@ export default function PreviewPage(props: PreviewPageProps) {
                 {
                   date: Date.now(),
                   name: DEFAULT_AUTHOR,
-                  profileImage: "https://pbs.twimg.com/profile_images/1265754417220501506/gv6HHbYH_400x400.jpg",
+                  profileImage:
+                    "https://pbs.twimg.com/profile_images/1265754417220501506/gv6HHbYH_400x400.jpg",
                   screenName: "@yowainwright",
                   text: title,
                   card: {
@@ -284,7 +311,9 @@ const styles: Record<string, React.CSSProperties> = {
 };
 
 export function getStaticPaths() {
-  const paths = getAllPosts("content").map(({ slug }: { slug: string }) => `/preview/${slug}`);
+  const paths = getAllPosts("content").map(
+    ({ slug }: { slug: string }) => `/preview/${slug}`,
+  );
   return {
     paths,
     fallback: false,
@@ -300,7 +329,8 @@ interface StaticProps {
 export const getStaticProps = async ({ params }: StaticProps) => {
   const data = getSinglePost(params.slug, "content");
   const wordCount = (data.content || "").split(/\s+/).filter(Boolean).length;
-  const description = data.frontmatter?.description || data.frontmatter?.meta || "";
+  const description =
+    data.frontmatter?.description || data.frontmatter?.meta || "";
 
   return {
     props: {

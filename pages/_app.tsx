@@ -5,35 +5,48 @@ import "../styles/main.scss";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { usePageViews, useExternalLinks, useCodeBlockCopy } from "../hooks/useAnalytics";
+import {
+  usePageViews,
+  useExternalLinks,
+  useCodeBlockCopy,
+} from "../hooks/useAnalytics";
 
-export const GlobalState = createContext<any>(null);
-export const DispatchStore = createContext<any>(null);
+interface AppState {
+  isDarkMode: boolean;
+  isLoaded: boolean;
+}
 
-export function isLoadingDarkmode() {
+type AppAction =
+  | { type: "SET_IS_DARKMODE"; payload: boolean }
+  | { type: "SET_IS_LOADED"; payload: boolean };
+
+export const GlobalState = createContext<AppState | null>(null);
+export const DispatchStore = createContext<React.Dispatch<AppAction> | null>(
+  null,
+);
+
+export function isLoadingDarkmode(): boolean {
   if (typeof window === "undefined") return false;
-  
+
   const storedPreference = localStorage.getItem("darkMode");
   if (storedPreference !== null) {
     return storedPreference === "true";
   }
-  
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? true
-    : false;
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
 
-export const initialState = {
+export const initialState: AppState = {
   isDarkMode: false,
   isLoaded: false,
 };
 
-export function reducer(state: any, { payload, type }: any) {
-  switch (type) {
+export function reducer(state: AppState, action: AppAction): AppState {
+  switch (action.type) {
     case "SET_IS_DARKMODE":
-      return { ...state, isDarkMode: payload };
+      return { ...state, isDarkMode: action.payload };
     case "SET_IS_LOADED":
-      return { ...state, isLoaded: payload };
+      return { ...state, isLoaded: action.payload };
     default:
       return state;
   }
@@ -60,11 +73,11 @@ export default function App({ Component, pageProps }: AppProps) {
     } else {
       body?.classList.remove("js-is-darkmode");
     }
-    
+
     if (state.isLoaded) {
       localStorage.setItem("darkMode", String(state.isDarkMode));
     }
-  }, [state]);
+  }, [state.isDarkMode, state.isLoaded]);
 
   return (
     <DispatchStore.Provider value={dispatch}>

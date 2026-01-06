@@ -1,12 +1,17 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState, useRef } from 'react';
-import { ref, runTransaction, onValue, DatabaseReference } from 'firebase/database';
-import * as Sentry from '@sentry/nextjs';
-import { db } from '../../lib/firebase';
-import { trackLove } from '../../lib/analytics-firebase';
-import { formatCount } from '../../lib/format-count';
-import { PixelIcon } from '../PixelIcon';
+import React, { useEffect, useState, useRef } from "react";
+import {
+  ref,
+  runTransaction,
+  onValue,
+  DatabaseReference,
+} from "firebase/database";
+import * as Sentry from "@sentry/nextjs";
+import { db } from "../../lib/firebase";
+import { trackLove } from "../../lib/analytics-firebase";
+import { formatCount } from "../../lib/format-count";
+import { PixelIcon } from "../PixelIcon";
 
 const MAX_CLICKS = 10;
 
@@ -22,7 +27,7 @@ interface Particle {
 
 function getHeartRef(slug: string): DatabaseReference | null {
   if (!db) return null;
-  return ref(db, `hearts/${slug.replace(/\//g, '_')}`);
+  return ref(db, `hearts/${slug.replace(/\//g, "_")}`);
 }
 
 export const HeartButton = ({ slug }: HeartButtonProps) => {
@@ -66,9 +71,10 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
         y: Math.random() * -20,
       });
     }
+    const newIds = new Set(newParticles.map((p) => p.id));
     setParticles((prev) => [...prev, ...newParticles]);
     setTimeout(() => {
-      setParticles((prev) => prev.filter((p) => !newParticles.includes(p)));
+      setParticles((prev) => prev.filter((p) => !newIds.has(p.id)));
     }, 800);
   };
 
@@ -94,13 +100,14 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
     }
   };
 
-  const countText = isLoading ? '' : count > 0 ? formatCount(count) : '';
+  const countText = isLoading ? "" : count > 0 ? formatCount(count) : "";
   const heartSize = hasMaxed ? 2 : 2 + userClicks * 0.15;
   const hasClicked = userClicks > 0;
-  const heartFilled = hasClicked;
-  const heartColor = hasClicked ? '#e53935' : 'currentColor';
-  const buttonClass = `share__button heart-button ${hasClicked ? 'heart-button--active' : ''} ${hasMaxed ? 'heart-button--maxed' : ''} ${isAnimating ? 'heart-button--pulse' : ''}`;
-  const ariaLabel = hasMaxed ? `You've loved this post ${MAX_CLICKS} times` : 'Love this post';
+  const heartColor = hasClicked ? "#e53935" : "currentColor";
+  const buttonClass = `share__button heart-button ${hasClicked ? "heart-button--active" : ""} ${hasMaxed ? "heart-button--maxed" : ""} ${isAnimating ? "heart-button--pulse" : ""}`;
+  const ariaLabel = hasMaxed
+    ? `You've loved this post ${MAX_CLICKS} times`
+    : "Love this post";
 
   return (
     <button

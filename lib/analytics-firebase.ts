@@ -1,6 +1,6 @@
-import { ref, get, runTransaction, onValue, off } from 'firebase/database';
-import * as Sentry from '@sentry/nextjs';
-import { db } from './firebase';
+import { ref, get, runTransaction, onValue, off } from "firebase/database";
+import * as Sentry from "@sentry/nextjs";
+import { db } from "./firebase";
 
 export interface AnalyticsData {
   slug: string;
@@ -10,14 +10,17 @@ export interface AnalyticsData {
   loves: number;
 }
 
-const EMPTY_ANALYTICS: Omit<AnalyticsData, 'slug'> = {
+const EMPTY_ANALYTICS: Omit<AnalyticsData, "slug"> = {
   views: 0,
   shares: 0,
   comments: 0,
   loves: 0,
 };
 
-function createAnalyticsData(slug: string, data?: Record<string, number>): AnalyticsData {
+function createAnalyticsData(
+  slug: string,
+  data?: Record<string, number>,
+): AnalyticsData {
   if (!data) {
     return { slug, ...EMPTY_ANALYTICS };
   }
@@ -31,7 +34,7 @@ function createAnalyticsData(slug: string, data?: Record<string, number>): Analy
 }
 
 function sanitizeSlug(slug: string): string {
-  return slug.replace(/\//g, '_');
+  return slug.replace(/\//g, "_");
 }
 
 function getAnalyticsRef(slug: string, metric: string) {
@@ -52,28 +55,28 @@ async function incrementMetric(slug: string, metric: string): Promise<void> {
 
 export async function trackView(slug: string): Promise<void> {
   const sessionKey = `viewed-${slug}`;
-  const hasViewed = sessionStorage.getItem(sessionKey) === 'true';
+  const hasViewed = sessionStorage.getItem(sessionKey) === "true";
   if (hasViewed) return;
 
-  await incrementMetric(slug, 'views');
-  sessionStorage.setItem(sessionKey, 'true');
+  await incrementMetric(slug, "views");
+  sessionStorage.setItem(sessionKey, "true");
 }
 
 export async function trackShare(slug: string): Promise<void> {
-  await incrementMetric(slug, 'shares');
+  await incrementMetric(slug, "shares");
 }
 
 export async function trackComment(slug: string): Promise<void> {
   const sessionKey = `commented-${slug}`;
-  const hasCommented = sessionStorage.getItem(sessionKey) === 'true';
+  const hasCommented = sessionStorage.getItem(sessionKey) === "true";
   if (hasCommented) return;
 
-  await incrementMetric(slug, 'comments');
-  sessionStorage.setItem(sessionKey, 'true');
+  await incrementMetric(slug, "comments");
+  sessionStorage.setItem(sessionKey, "true");
 }
 
 export async function trackLove(slug: string): Promise<void> {
-  await incrementMetric(slug, 'loves');
+  await incrementMetric(slug, "loves");
 }
 
 export async function getAnalytics(slug: string): Promise<AnalyticsData> {
@@ -93,22 +96,25 @@ export async function getAnalytics(slug: string): Promise<AnalyticsData> {
 }
 
 export function subscribeToAllAnalytics(
-  callback: (data: Record<string, AnalyticsData>) => void
+  callback: (data: Record<string, AnalyticsData>) => void,
 ): () => void {
   if (!db) {
     callback({});
     return () => {};
   }
 
-  const analyticsRef = ref(db, 'analytics');
+  const analyticsRef = ref(db, "analytics");
 
   onValue(analyticsRef, (snapshot) => {
     const rawData = snapshot.val() ?? {};
     const result: Record<string, AnalyticsData> = {};
 
     for (const [sanitizedSlug, metrics] of Object.entries(rawData)) {
-      const slug = sanitizedSlug.replace(/_/g, '/');
-      result[slug] = createAnalyticsData(slug, metrics as Record<string, number>);
+      const slug = sanitizedSlug.replace(/_/g, "/");
+      result[slug] = createAnalyticsData(
+        slug,
+        metrics as Record<string, number>,
+      );
     }
 
     callback(result);

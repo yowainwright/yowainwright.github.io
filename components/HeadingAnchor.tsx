@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { Link, Check } from 'lucide-react';
+import React, { useState } from "react";
+import { Link, Check } from "lucide-react";
 
 interface HeadingAnchorProps {
   headingId: string;
@@ -17,7 +17,7 @@ export default function HeadingAnchor({ headingId }: HeadingAnchorProps) {
     const url = `${window.location.origin}${window.location.pathname}#${headingId}`;
     await navigator.clipboard.writeText(url);
 
-    window.history.pushState(null, '', `#${headingId}`);
+    window.history.pushState(null, "", `#${headingId}`);
 
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
