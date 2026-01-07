@@ -1,36 +1,31 @@
 self.__BUILD_MANIFEST = {
   "/": [
-    "static/chunks/0c74e963112b871c.js"
+    "static/chunks/7e1749a1aca9e6f2.js"
   ],
   "/404": [
-    "static/chunks/22fc7c0ea3c476db.js"
+    "static/chunks/713ac0a8c18f48eb.js"
   ],
   "/[slug]": [
-    "static/chunks/884546137de4ed11.js"
+    "static/chunks/4e7181f7c12255f9.js"
   ],
   "/_error": [
-    "static/chunks/409ebfe20103cfd1.js"
+    "static/chunks/d1385eeb12f3f79d.js"
   ],
   "/admin": [
-    "static/chunks/9a9e4c5042eb37a5.js"
+    "static/chunks/ea500fb590f9174e.js"
   ],
   "/archive": [
-    "static/chunks/764d762da1a92e5f.js"
+    "static/chunks/387302956e8454b2.js"
   ],
   "/keystatic/[[...params]]": [
-    "static/chunks/0b930ac35f2907b5.js"
+    "static/chunks/3abdbc7f728b2521.js"
   ],
   "/preview/[slug]": [
-    "static/chunks/b89d9a92a4f2d3a2.js"
+    "static/chunks/751e14f6e9c1c012.js"
   ],
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [
-      {
-        "source": "/.//_next/:path+",
-        "destination": "/_next/:path+"
-      }
-    ],
+    "beforeFiles": [],
     "fallback": []
   },
   "sortedPages": [
