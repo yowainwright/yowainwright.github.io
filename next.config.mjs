@@ -11,7 +11,6 @@ const nextConfig = {
   ...(isProduction && { output: "export" }),
   trailingSlash: true,
   basePath: "",
-  assetPrefix: "./",
   sassOptions: {
     includePaths: [],
   },
