@@ -1,5 +1,5 @@
 ---
-title: "About me, Jeff Wainwright, a husband, dad, and software engineer in Los Angeles 🥤"
+title: "About me, Jeff Wainwright, a husband, dad, and software engineer in Los Angeles"
 date: "2017-07-28"
 path: /about
 meta: >-
@@ -8,7 +8,7 @@ meta: >-
   living in Los Angeles.
 ---
 
-Hi! I'm a Principal Engineer at [Lokker](https://lokker.com), working on data privacy compliance software. Formerly, I was a Senior Software Engineer II at [GoodRx](https://www.goodrx.com/), an engineering manager at [Currency](https://www.gocurrency.com/), wrote a lot of open source while at [Dollar Shave Club](https://www.dollarshaveclub.com/), and worked on [The Billboard's Charts](https://www.billboard.com/charts/hot-100/), [The Hollywood Reporter](https://www.hollywoodreporter.com/)'s Awards, and [NASDAQ](https://www.nasdaq.com/)'s first living code style guide. I'm passionate about making things, learning, and contributing to society which is why I write software. Software allows me to do those things everyday! Unrelated to software, I enjoy being a husband and dad, painting, [running](https://www.strava.com/athletes/722335), and surfing.
+Hi! I'm a Principal Engineer at [Lokker](https://lokker.com), working on data privacy compliance software. Formerly, I was a Senior Software Engineer II at [GoodRx](https://www.goodrx.com/), an engineering manager at [Currency](https://www.gocurrency.com/), wrote a lot of open source while at [Dollar Shave Club](https://www.dollarshaveclub.com/), and worked on [The Billboard's Charts](https://www.billboard.com/charts/hot-100/), [The Hollywood Reporter](https://www.hollywoodreporter.com/)'s Awards, and [NASDAQ](https://www.nasdaq.com/)'s first living code style guide. I'm passionate about making things, learning, and contributing to society which is why I write software. Software allows me to do those things everyday! Unrelated to software, I enjoy being a husband and dad, painting, and being [active](https://www.strava.com/athletes/722335).
 
 ---
 
