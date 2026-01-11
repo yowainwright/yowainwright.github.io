@@ -16,7 +16,7 @@ As a Software Engineer, I specialize in maintainable software applications & bui
 
 ## [Lokker](https://lokker.com/)
 
-Principle Software Engineer
+Principal Software Engineer
 <time>June 2025-present</time>
 
 - Maintain customer internal tools using React, Typescript, Fastify, Postgres
@@ -29,7 +29,7 @@ Senior Security Software Engineer/Senior Engineer 2
 <time>December 2021-June 2025</time>
 
 - Building security solutions for GoodRx frontend content delivery, using Go, Python, and Typescript
-- Productionalize Lifecycle, a ephemeral envirionment platform with Kubernetes and Typescript
+- Productionalize Lifecycle, an ephemeral environment platform with Kubernetes and Typescript
 
 ## [Komodo Health](https://www.komodohealth.com/)
 
