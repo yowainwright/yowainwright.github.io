@@ -1,5 +1,5 @@
 ---
-title: "Resume: the resume of Jeff Wainwright, a software engineer and surfer in Los Angeles 🏄🏾‍♂️"
+title: "Resume: the resume of Jeff Wainwright, a software engineer and dad living in California"
 date: "2021-03-31"
 path: /resume
 meta: >-
@@ -8,18 +8,28 @@ meta: >-
   living in Los Angeles.
 ---
 
-As a Software Engineer and Engineering manager, I specialize in getting applications built! I love working with engineers, product and design to keep products simple and tested—except for the “special sauce” that makes a great product exceptional.
+As a Software Engineer, I specialize in maintainable software applications & build pipelines. I love getting things to work & then making them work better! With 15+ years of start-up & corporate engineering, I have technical ability ranging from design, to engineering management to—just-a-little DevOps. I've written a lot of open source with a utility focus because I enjoy making the “squeaky wheel” spin! I seek roles where learning is must, there are problems to solve, & I can feel good about creating products that hopefully make people happier.
 
 ---
 
 ### Work History
 
+## [Lokker](https://lokker.com/)
+
+Principal Software Engineer
+<time>June 2025-present</time>
+
+- Maintain customer internal tools using React, Typescript, Fastify, Postgres
+- Built engineer focused infrastructure using Prometheus and Grafana
+
+
 ## [GoodRx](https://www.goodrx.com/)
 
-Senior Security Software Engineer
-<time>December 2021-Present</time>
+Senior Security Software Engineer/Senior Engineer 2
+<time>December 2021-June 2025</time>
 
-- Building security solutions for GoodRx frontend content delivery
+- Building security solutions for GoodRx frontend content delivery, using Go, Python, and Typescript
+- Productionalize Lifecycle, an ephemeral environment platform with Kubernetes and Typescript
 
 ## [Komodo Health](https://www.komodohealth.com/)
 
