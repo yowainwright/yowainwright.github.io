@@ -1,0 +1,44 @@
+Jeffry Wainwright
+Principal Software Engineer @ Lokker.com
+Santa Monica, CA, June 2025-current
+yowainwright@gmail.com | https://jeffry.in | https://www.linkedin.com/in/jeffrywainwright/ | https://github.com/yowainwright
+
+I've been building and maintaining tools to make life a little easier for 15+ years with extensive experience in JavaScript/TypeScript.
+I do moonlight with Go, Python, and Kubernetes; always looking to learn more!
+
+Professional Experience
+
+Lokker | Santa Monica, CA
+Principal Software Engineer | June 2025-current
+- Rebuilt Lokker's privacy insights using TypeScript, React, Fastify, Bun, and Claude.
+
+GoodRx | Santa Monica, CA
+Senior Software Engineer II | December 2021-June 2025
+- Kept the dev lifecycle alive by maintaining Lifecycle, GoodRx's ephemeral environment tool, supporting hundreds of deploys and developers a day in TypeScript, Node.js, Docker, Kubernetes, and AWS.
+- Built an automated scripting tool for executing security and privacy monitoring scripts using Node, AWS Lambda, and a little React app to ensure it's working.
+- Implemented and maintained key chunks of GoodRx's global opt-out architecture using Go and TypeScript with GraphQL and gRPC protocols, enabling customers to privately manage their data.
+
+Komodo Health | Los Angeles, CA
+Senior Software Engineer | June 2021-December 2021
+- Developed low-code software to help healthcare professionals map data into usable results and infographics using TypeScript, React, and Python.
+
+Currency | Santa Monica, CA
+Senior Software Engineer/Engineering Manager | February 2020-June 2021
+- Built a payment platform for big-ticket online purchases.
+- Set up a monorepo so that the team could collaborate better; frontend (React, TypeScript) and backend (Node.js, TypeScript) really sped up productivity.
+
+Dollar Shave Club | Venice, CA
+Frontend Engineer | March 2016-February 2020
+- Built a headless CMS; helped streamline CI/CD.
+- Set up content infrastructure that made deploys less painful.
+- Built a dynamic, internationalized landing page system.
+- Released and maintained a bunch of fun open-source products while there: stickybits, shave, reframe.js, and more.
+
+Open Source
+- Current/previous core member of Koajs and JSPM
+- Maintain ES Check, Stickybits, Shave, Reframe.js, scrolldir, and more.
+
+Education
+- University of Wisconsin-Madison | BS in Art
+
+More experience and education background available upon request
