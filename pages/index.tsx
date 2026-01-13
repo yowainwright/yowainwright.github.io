@@ -28,11 +28,20 @@ export const Home = ({ posts }: HomeProps) => {
         <link rel="canonical" href="https://jeffry.in/" itemProp="url" />
         <meta property="og:url" content="https://jeffry.in/" />
         <meta property="og:title" content="Jeff Wainwright" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://jeffry.in/og/default.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Jeff Wainwright" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://jeffry.in/og/default.png" />
+        <meta name="twitter:creator" content="@yowainwright" />
+        <meta name="fediverse:creator" content="@yowainwright.jeffry.in" />
       </Head>
       <section className="section section--intro">
         <h1>
           I used to stand for something but now it is just because someone stole
-          my chair. 💺{" "}
+          my chair.
         </h1>
       </section>
       <section className="section section--posts">

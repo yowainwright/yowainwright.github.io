@@ -3,6 +3,7 @@ import type { OgMetaProps, JsonLdBlogPosting } from "./types";
 import {
   DEFAULT_AUTHOR,
   DEFAULT_TWITTER_HANDLE,
+  DEFAULT_ATPROTO_HANDLE,
   SITE_URL,
   ABOUT_URL,
 } from "./constants";
@@ -81,6 +82,8 @@ export const OgMeta = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
       <meta name="twitter:creator" content={twitterHandle} />
+
+      <meta name="fediverse:creator" content={DEFAULT_ATPROTO_HANDLE} />
 
       <script
         type="application/ld+json"

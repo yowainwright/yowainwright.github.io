@@ -50,10 +50,19 @@ export default function Archive({
         />
         <meta property="og:url" content="https://jeffry.in/archive/" />
         <meta property="og:title" content={`${title}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://jeffry.in/og/default.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Archive | Jeffry.in" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://jeffry.in/og/default.png" />
+        <meta name="twitter:creator" content="@yowainwright" />
+        <meta name="fediverse:creator" content="@yowainwright.jeffry.in" />
       </Head>
       <section className="section section--intro">
         <h1>
-          Article archive: I have been writing for a while. Enjoy scrolling! 📚
+          Article archive: I have been writing for a while. Enjoy scrolling!
         </h1>
       </section>
       <section className="section section--posts">

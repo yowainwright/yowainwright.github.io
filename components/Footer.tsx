@@ -3,6 +3,10 @@ import Link from "next/link";
 
 import { SocialFooter } from "./SocialFooter";
 
+const PORTRAIT_URL =
+  "https://yowainwright.imgix.net/portraits/me-smiling.jpg?w=150&h=150&fit=crop&auto=format";
+const currentYear = new Date().getFullYear();
+
 export const Footer = () => (
   <footer
     className="site-footer"
@@ -29,14 +33,16 @@ export const Footer = () => (
         <figure className="site-footer__figure">
           <img
             className="media--circular site-footer__image"
-            src="https://yowainwright.imgix.net/portraits/me-smiling.jpg?w=150&h=150&fit=crop&auto=format"
+            src={PORTRAIT_URL}
             height="150"
             width="150"
             alt="Me smiling with a beard"
+            loading="lazy"
+            decoding="async"
           />
           <figcaption className="site-footer__caption">
             <Link className="site-footer__link" href="/">
-              <strong>jeffry.in</strong>, {new Date().getFullYear()}
+              <strong>jeffry.in</strong>, {currentYear}
             </Link>
             , is the blog of{" "}
             <Link className="site-footer__link" href="/about">
@@ -52,7 +58,7 @@ export const Footer = () => (
         <Link className="site-footer__link" href="/">
           jeffry.in
         </Link>
-        , {new Date().getFullYear()}
+        , {currentYear}
       </h3>
     </section>
   </footer>
