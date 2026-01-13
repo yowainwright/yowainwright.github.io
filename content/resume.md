@@ -108,4 +108,4 @@ Frontend Software Engineer
 
 ### Resume
 
-**[Word Doc](https://github.com/yowainwright/yowainwright.github.io/files/6246283/jeffry-wainwright-resume-03-30-21.docx)** | **[PDF](https://github.com/yowainwright/yowainwright.github.io/files/6246284/jeffry-wainwright-resume-03-30-21.pdf)** | **[TXT](https://github.com/yowainwright/yowainwright.github.io/files/6246282/jeffry-wainwright-04-01-21.txt)**
+**[Word Doc](https://yowainwright.imgix.net/resumes/resume.docx)** | **[PDF](https://yowainwright.imgix.net/resumes/resume.pdf)** | **[Markdown](https://yowainwright.imgix.net/resumes/resume.md)** | **[TXT](https://yowainwright.imgix.net/resumes/resume.txt)**
