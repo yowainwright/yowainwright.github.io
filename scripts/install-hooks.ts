@@ -72,6 +72,12 @@ const HOOKS = {
 };
 
 const installHooks = (): void => {
+  const isCI = process.env.CI === "true";
+  if (isCI) {
+    log.info("CI detected, skipping hook installation");
+    return;
+  }
+
   const isGitRepo = existsSync(".git");
   if (!isGitRepo) {
     log.info("not a git repository, skipping hook installation");
