@@ -433,6 +433,19 @@ function addHeadingClass() {
   };
 }
 
+function addLazyLoadingToImages() {
+  return (tree: Element) => {
+    visit(tree, "element", (node: Element) => {
+      const isImage = node.tagName === "img";
+      if (!isImage) return;
+
+      node.properties = node.properties || {};
+      node.properties.loading = "lazy";
+      node.properties.decoding = "async";
+    });
+  };
+}
+
 let cachedProcessor: ReturnType<typeof unified> | null = null;
 
 function getProcessor() {
@@ -445,6 +458,7 @@ function getProcessor() {
     .use(remarkRehype)
     .use(rehypeSlug)
     .use(addHeadingClass)
+    .use(addLazyLoadingToImages)
     .use(rehypeAutolinkHeadings, {
       behavior: "append",
       properties: {
