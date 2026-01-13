@@ -10,7 +10,9 @@ I’ve been building and maintaining tools to make life a little easier for 15+ 
 **Lokker | Santa Monica, CA**  
 *Principal Software Engineer | June 2025-current*
 
-* Rebuilt Lokker’s privacy insights using TypeScript, React, Fastify, Bun, and Claude.
+* Rebuilt Lokker’s [Privacy Insights product](https://lokker.com/online-privacy-solutions/detection-monitoring/), think DataDog for privacy, using TypeScript, React, Fastify, Bun, and Claude  
+* Refactored [Guardian,](https://lokker.com/online-privacy-solutions/protection-blocking/) a 3rd-party script sanitizer, to be more performant and scalable using TypeScript and Cloudflare workers  
+* Built out observability with Prometheus and Grafana to track product health
 
 **GoodRx | Santa Monica, CA**  
 *Senior Software Engineer II | December 2021-June 2025*
