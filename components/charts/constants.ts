@@ -42,7 +42,7 @@ const lineStrokeWidth = 1;
 const lineDotRadius = 2;
 const lineLabelPosition = "top" as const;
 
-const barMaxSize = 100;
+const barMaxSize = 60;
 
 const gridStrokeDasharray = "3 3";
 
