@@ -45,6 +45,7 @@ export const AgentTaskCostChart = () => {
     <>
       <BarChart
         data={data.agentTaskCosts}
+        title={AGENT_TASK_CHART_LABELS.TITLE}
         secondaryLabel={AGENT_TASK_CHART_LABELS.SECONDARY_LABEL}
         yDomain={[0, AGENT_TASK_CHART_LABELS.Y_DOMAIN_MAX]}
       />

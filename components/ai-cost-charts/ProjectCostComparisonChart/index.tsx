@@ -45,6 +45,7 @@ export const ProjectCostComparisonChart = () => {
     <>
       <BarChart
         data={data.totalProjectCosts}
+        title={PROJECT_COMPARISON_LABELS.TITLE}
         secondaryLabel={PROJECT_COMPARISON_LABELS.SECONDARY_LABEL}
         yDomain={[0, PROJECT_COMPARISON_LABELS.Y_DOMAIN_MAX]}
       />

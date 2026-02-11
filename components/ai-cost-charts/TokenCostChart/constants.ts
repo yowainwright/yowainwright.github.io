@@ -1,3 +1,8 @@
+export const TOKEN_COST_CHART_LABELS = {
+  TITLE: 'Approximate Cost Per Query',
+  SECONDARY_LABEL: 'USD',
+};
+
 export const tokenCostData = [
   {
     label: "Cost for Human Query (700 input tokens + typical output)",

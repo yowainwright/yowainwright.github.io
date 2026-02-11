@@ -104,6 +104,14 @@ $radius-full: 100%;
 
   // Shadows & Effects
   --shadow-focus: 0 0 0 2px rgba(19, 16, 153, 0.1);
+
+  // Mermaid Chart Colors
+  --mermaid-node-fill: var(--color-bg-primary);
+  --mermaid-node-stroke: var(--color-border-default);
+  --mermaid-text-fill: var(--color-text-primary);
+  --mermaid-edge-stroke: var(--color-border-default);
+  --mermaid-background: var(--color-bg-primary);
+  --mermaid-border: var(--color-border-default);
 }
 
 // Dark Mode Theme
@@ -150,4 +158,12 @@ body.js-is-darkmode,
 
   // Dark mode shadows
   --shadow-focus: 0 0 0 2px rgba(91, 143, 168, 0.1);
+
+    // Mermaid Chart Colors
+  --mermaid-node-fill: var(--color-bg-primary);
+  --mermaid-node-stroke: var(--color-border-default);
+  --mermaid-text-fill: var(--color-text-primary);
+  --mermaid-edge-stroke: var(--color-border-default);
+  --mermaid-background: var(--color-bg-primary);
+  --mermaid-border: var(--color-border-default);
 }

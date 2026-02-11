@@ -1,5 +1,6 @@
 export const AGENT_TASK_CHART_LABELS = {
-  SECONDARY_LABEL: 'My approximate USD cost per Claude Code agent query based on token input size',
+  TITLE: 'Cost Per Query Based On Agent Token',
+  SECONDARY_LABEL: 'USD',
   LOADING_TEXT: 'Claude Code agent task costs',
   Y_DOMAIN_MAX: 1.0,
 };

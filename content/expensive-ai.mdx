@@ -99,7 +99,6 @@ flowchart TD
     J --> K
     K --> L[$150 Hit → Manual Rescue]
 ```
-
 ---
 
 As the messaging got more persistent about my usage, I observed I kept getting shifted to different models—or it felt like it.
@@ -175,6 +174,41 @@ If coding _is_ becoming an art, then I am happy to call my keyboard a paint brus
 And, I do appreciate the new craft. I do hope as a human I get to participate in the fun parts of this tooling.
 Currently, for this project, I felt like I was replacing a team, including all of the stress of a team's deadline, leaving the fun UI and API mocks to the Claude.
 It's confusing; definitely more to learn.
+
+## Efficient Iterative Development Pattern
+
+After my $150 wake-up call, I switched to a more focused iterative approach.
+Instead of running multiple agents in parallel, I pair with a Principal Engineer upfront and then work with one expert at a time, sequentially.
+
+```mermaid
+sequenceDiagram
+    participant Dev as Developer
+    participant PE as Principal Engineer
+    participant FE as Fastify Expert
+    participant K8S as K8s Expert
+    participant QA as QA Lead
+    participant RT as React/TS Expert
+
+    Dev->>PE: Initial Pairing Session
+    PE-->>Dev: Architecture Plan
+
+    Dev->>FE: Create API Endpoint
+    FE-->>Dev: Endpoint Implementation
+
+    Dev->>K8S: Deploy Service
+    K8S-->>Dev: Deployment Config
+
+    Dev->>QA: Write Tests
+    QA-->>Dev: Test Suite
+
+    Dev->>RT: Update Frontend
+    RT-->>Dev: UI Components
+
+    Dev->>PE: Final Code Review
+    PE-->>Dev: Approved ✓
+```
+
+The sequential pattern provides more control and deeper understanding for me and on the Claude Max plan I can work ~12-18 hours per day without cost concerns. I think I execute faster to "done-done" with this approach but with more cognitive load—less plan and chill; more pairing.
 
 ---
 

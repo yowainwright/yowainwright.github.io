@@ -13,6 +13,7 @@ export interface BarChartProps {
   primaryLabel?: string;
   secondaryLabel?: string;
   height?: string;
+  title?: string;
 }
 
 export interface LineChartProps {
@@ -21,6 +22,7 @@ export interface LineChartProps {
   secondaryLabel?: string;
   height?: string;
   yDomain?: [number, number];
+  title?: string;
 }
 
 export interface ChartSource {

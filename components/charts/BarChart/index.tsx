@@ -21,6 +21,7 @@ export const BarChart = ({
   primaryLabel = "",
   secondaryLabel = "",
   height = "400px",
+  title,
 }: BarChartProps) => {
   const state = useContext(GlobalState);
   const isDark = state?.isDarkMode ?? false;
@@ -30,6 +31,7 @@ export const BarChart = ({
 
   return (
     <div style={{ width: "100%", height, padding: "20px 0" }}>
+      {title && <div className="chart-title">{title}</div>}
       <ResponsiveContainer width="100%" height="100%">
         <RechartsBarChart data={chartData} margin={CHART_STYLES.margin}>
           <CartesianGrid strokeDasharray={CHART_STYLES.grid.strokeDasharray} />

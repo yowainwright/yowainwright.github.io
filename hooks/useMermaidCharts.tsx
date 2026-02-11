@@ -17,7 +17,7 @@ const getTextDimensions = (textElement: Element) => {
     if (hasBbox) {
       return { height: bbox.height, width: bbox.width };
     }
-  } catch (e) {
+  } catch {
     const computedStyle = window.getComputedStyle(textElement);
     const fontSize = parseFloat(computedStyle.fontSize) || 14;
     const textContent = textElement.textContent || '';
@@ -31,26 +31,6 @@ const getTextDimensions = (textElement: Element) => {
     };
   }
   return { height: 0, width: 0 };
-};
-
-const calculateNodeDimensions = (textElements: NodeListOf<Element>) => {
-  const textArray = Array.from(textElements);
-  const dimensions = textArray.map(textEl => getTextDimensions(textEl));
-
-  const heights = dimensions.map(d => d.height);
-  const widths = dimensions.map(d => d.width);
-
-  const maxTextHeight = Math.max(...heights, 20);
-  const maxTextWidth = Math.max(...widths, 80);
-
-  const padding = 32;
-  const minWidth = 120;
-  const minHeight = 80;
-
-  return {
-    height: Math.max(minHeight, maxTextHeight + padding),
-    width: Math.max(minWidth, maxTextWidth + padding)
-  };
 };
 
 const adjustRectDimensions = (rect: Element, requiredDimensions: { height: number; width: number }) => {
@@ -78,89 +58,20 @@ const adjustRectDimensions = (rect: Element, requiredDimensions: { height: numbe
   return { heightAdjusted: heightNeedsAdjustment, widthAdjusted: widthNeedsAdjustment };
 };
 
-const adjustTextPosition = (node: Element, rectDimensions: { height: number; width: number }) => {
-  const textElements = Array.from(node.querySelectorAll('text, .label, .nodeLabel'));
-  const rect = node.querySelector('rect');
-
-  if (!rect) return;
-
-  const rectX = parseFloat(rect.getAttribute('x') || '0');
-  const rectY = parseFloat(rect.getAttribute('y') || '0');
-  const centerX = rectX + rectDimensions.width / 2;
-  const centerY = rectY + rectDimensions.height / 2;
-
-  textElements.forEach(textEl => {
-    textEl.setAttribute('x', centerX.toString());
-    textEl.setAttribute('y', centerY.toString());
-    textEl.setAttribute('text-anchor', 'middle');
-    textEl.setAttribute('dominant-baseline', 'central');
-  });
-};
-
-const adjustNodeHeights = (svg: SVGElement) => {
-  const nodes = Array.from(svg.querySelectorAll('.node'));
-
-  const adjustableNodes = nodes.filter(node => {
-    const foreignObjects = node.querySelectorAll('foreignObject');
-    const rectElements = node.querySelectorAll('rect');
-    const hasForeignObjects = foreignObjects.length > 0;
-    const hasRectElements = rectElements.length > 0;
-    return hasForeignObjects && hasRectElements;
-  });
-
-  const nodesWithDimensions = adjustableNodes.map(node => {
-    const foreignObjects = Array.from(node.querySelectorAll('foreignObject'));
-    const rectElements = Array.from(node.querySelectorAll('rect'));
-
-    const textContent = Array.from(node.querySelectorAll('p')).map(p => p.textContent || '').join(' ');
-    const estimatedWidth = textContent.length * 7.5;
-    const estimatedHeight = 60;
-
-    const requiredDimensions = {
-      height: Math.max(80, estimatedHeight),
-      width: Math.max(120, estimatedWidth + 32)
-    };
-
-    return { node, rectElements, foreignObjects, requiredDimensions };
-  });
-
-  const validNodes = nodesWithDimensions.filter(({ requiredDimensions }) =>
-    requiredDimensions.height > 0
-  );
-
-  validNodes.forEach(({ rectElements, foreignObjects, requiredDimensions }) => {
-    rectElements.forEach(rect => {
-      adjustRectDimensions(rect, requiredDimensions);
-    });
-
-    foreignObjects.forEach(foreignObj => {
-      foreignObj.setAttribute('width', requiredDimensions.width.toString());
-      foreignObj.setAttribute('height', requiredDimensions.height.toString());
-
-      const currentX = parseFloat(foreignObj.getAttribute('x') || '0');
-      const currentY = parseFloat(foreignObj.getAttribute('y') || '0');
-      const newX = currentX - (requiredDimensions.width / 2);
-      const newY = currentY - (requiredDimensions.height / 2);
-
-      foreignObj.setAttribute('x', newX.toString());
-      foreignObj.setAttribute('y', newY.toString());
-    });
-  });
-};
-
 export function useMermaidCharts() {
-  const [dialogState, setDialogState] = useState<{ isOpen: boolean; svgContent: string }>({
+  const [dialogState, setDialogState] = useState<{ isOpen: boolean; svgContent: string; title?: string }>({
     isOpen: false,
-    svgContent: ''
+    svgContent: '',
+    title: undefined
   });
   const observerRef = useRef<MutationObserver | null>(null);
 
-  const openDialog = useCallback((svgContent: string) => {
-    setDialogState({ isOpen: true, svgContent });
+  const openDialog = useCallback((svgContent: string, title?: string) => {
+    setDialogState({ isOpen: true, svgContent, title });
   }, []);
 
   const closeDialog = useCallback(() => {
-    setDialogState({ isOpen: false, svgContent: '' });
+    setDialogState({ isOpen: false, svgContent: '', title: undefined });
   }, []);
 
   const processMermaidCharts = useCallback(() => {
@@ -205,25 +116,21 @@ export function useMermaidCharts() {
         return;
       }
 
-      const svgClone = svg.cloneNode(true) as SVGElement;
-      adjustNodeHeights(svgClone);
+      const originalSvgClone = svg.cloneNode(true) as SVGElement;
 
       parent.classList.add('mermaid-chart', 'mermaid-processed');
-      parent.style.position = 'relative';
-      parent.style.cursor = 'pointer';
-      parent.style.padding = '1.5rem';
-      parent.style.border = '1px solid var(--color-border-light)';
-      parent.style.borderRadius = '8px';
-      parent.style.background = 'var(--color-bg-primary)';
-      parent.style.margin = '2rem 0';
+
+      const titleText = '';
+
+      if (titleText) {
+        const chartTitle = document.createElement('div');
+        chartTitle.className = 'chart-title';
+        chartTitle.textContent = titleText;
+        parent.insertBefore(chartTitle, svg);
+      }
 
       const expandHint = document.createElement('div');
       expandHint.className = 'mermaid-chart__expand-hint';
-      expandHint.style.position = 'absolute';
-      expandHint.style.top = '12px';
-      expandHint.style.right = '12px';
-      expandHint.style.opacity = '0.6';
-      expandHint.style.zIndex = '10';
 
       const iconRoot = createRoot(expandHint);
       iconRoot.render(React.createElement(Maximize2, { size: 16 }));
@@ -231,7 +138,7 @@ export function useMermaidCharts() {
       parent.appendChild(expandHint);
 
       parent.addEventListener('click', () => {
-        openDialog(svgClone.outerHTML);
+        openDialog(originalSvgClone.outerHTML, titleText);
       });
     });
   }, [openDialog]);
@@ -293,6 +200,7 @@ export function withMermaidCharts<T extends {}>(
           isOpen={dialogState.isOpen}
           onClose={closeDialog}
           svgContent={dialogState.svgContent}
+          title={dialogState.title}
         />
       </>
     );
