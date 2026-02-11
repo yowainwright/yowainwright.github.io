@@ -54,9 +54,8 @@ const calculator: BEMBlock = {
       width: "100%",
       borderCollapse: "collapse",
       backgroundColor: "var(--color-bg-primary)",
-      borderRadius: RADIUS.md,
-      overflow: "hidden",
-      boxShadow: SHADOW.md
+      border: "1px solid var(--color-border-default)",
+      borderRadius: RADIUS.md
     },
     "table-header": {
       backgroundColor: "var(--color-bg-secondary)",
