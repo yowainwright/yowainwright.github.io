@@ -57,6 +57,9 @@ export const MODEL_NAMES = {
 
 export const LAST_UPDATED = '2026-02-11T03:10:57.337Z';
 
+export const STORAGE_KEY = 'ai-token-calculator-input';
+export const DEFAULT_TOKENS = 700;
+
 export const GRAMMARS = {
   DESCRIPTION: 'Calculate approximate costs for different AI models based on token usage',
   LABEL: 'Input Tokens:',

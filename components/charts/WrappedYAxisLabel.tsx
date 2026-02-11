@@ -1,12 +1,5 @@
 import React from 'react';
-
-interface WrappedYAxisLabelProps {
-  value: string;
-  x: number;
-  y: number;
-  maxWidth?: number;
-  fontSize?: number;
-}
+import type { WrappedYAxisLabelProps } from './types';
 
 const wrapText = (text: string, maxWidth: number = 100): string[] => {
   const words = text.split(' ');

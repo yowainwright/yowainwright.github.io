@@ -21,13 +21,6 @@ export function useMermaidCharts() {
   }, []);
 
   const processMermaidCharts = useCallback(() => {
-    const codeBlocks = document.querySelectorAll('pre code.language-mermaid, code.language-mermaid');
-    console.log('Found mermaid code blocks:', codeBlocks.length);
-
-    codeBlocks.forEach((code, index) => {
-      console.log(`Code block ${index}:`, code.textContent?.substring(0, 50) + '...');
-    });
-
     const allSvgs = document.querySelectorAll(MERMAID_SELECTORS.ALL_SVGS);
 
     const mermaidSvgs = Array.from(allSvgs).filter(svg => {

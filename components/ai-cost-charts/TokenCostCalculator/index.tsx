@@ -1,19 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2 } from 'lucide-react';
-import type { ModelCalculation } from './types';
-import { GRAMMARS } from './constants';
-
-const STORAGE_KEY = 'ai-token-calculator-input';
-const DEFAULT_TOKENS = 700;
-
-interface AIData {
-  models: Record<string, { input: number; output: number; source: string; lastUpdated: string }>;
-  reasoningMultipliers: Record<string, number>;
-  inputTokenEfficiency: Record<string, number>;
-  modelNames: Record<string, string>;
-  lastUpdated: string;
-  sources: Array<{ link: string; author: string; publication: string }>;
-}
+import type { ModelCalculation, AIData } from './types';
+import { GRAMMARS, STORAGE_KEY, DEFAULT_TOKENS } from './constants';
 
 function calculateCosts(inputTokens: number, data: AIData): ModelCalculation[] {
   return Object.entries(data.models).map(([modelId, pricing]) => {

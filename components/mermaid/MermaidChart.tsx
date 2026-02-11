@@ -2,11 +2,7 @@
 
 import React from 'react';
 import { Maximize2 } from 'lucide-react';
-
-interface MermaidChartProps {
-  svgContent: string;
-  onClick: () => void;
-}
+import type { MermaidChartProps } from './types';
 
 export function MermaidChart({ svgContent, onClick }: MermaidChartProps) {
   return (

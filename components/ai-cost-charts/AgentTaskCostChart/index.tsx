@@ -22,7 +22,7 @@ export const AgentTaskCostChart = () => {
         const agentData = await response.json();
         setData(agentData);
       } catch {
-        setData(SHARED_CHART_CONSTANTS.ERROR_HANDLING.FALLBACK_STATE);
+        setData(null);
       }
     };
 

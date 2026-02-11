@@ -5,9 +5,8 @@ export interface MermaidDialogProps {
 }
 
 export interface MermaidChartProps {
-  children?: React.ReactNode;
-  className?: string;
-  onClick?: () => void;
+  svgContent: string;
+  onClick: () => void;
 }
 
 export interface MermaidContainerProps {

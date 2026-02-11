@@ -3,12 +3,7 @@
 import React, { useCallback, useEffect } from 'react';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 import { X, ZoomIn, ZoomOut, RotateCcw, Download } from 'lucide-react';
-
-interface MermaidDialogProps {
-  isOpen: boolean;
-  onClose: () => void;
-  svgContent: string;
-}
+import type { MermaidDialogProps } from './types';
 
 export function MermaidDialog({ isOpen, onClose, svgContent }: MermaidDialogProps) {
   const handleBackdropClick = useCallback((e: React.MouseEvent) => {
