@@ -5,13 +5,21 @@
     <link>https://jeffry.in</link>
     <description>Jeff Wainwright&apos;s blog about software engineering, life, and everything in between.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Nov 2025 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 21 Jan 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jeffry.in/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://jeffry.in/apple-icon-180x180.png</url>
       <title>Jeffry.in</title>
       <link>https://jeffry.in</link>
     </image>
+    <item>
+      <title>When the AI Token Gravy Train Stops: My approximately $150 single hour Claude Code Cost Wake-up Call</title>
+      <link>https://jeffry.in/expensive-api</link>
+      <guid isPermaLink="true">https://jeffry.in/expensive-api</guid>
+      <description>This post covers my AI token usage journey and what happened when limitless AI usage hit reality and became limited. I go into my evolution, how it happened, and what I am doing to fix the issue</description>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
     <item>
       <title>Being a US-based Software Engineer in 2025; is it what it used to be?</title>
       <link>https://jeffry.in/us-swe-economy-2025</link>
@@ -402,14 +410,6 @@
       <guid isPermaLink="true">https://jeffry.in/arrow-functions-cont</guid>
       <description>This post reviews some things about arrow functions that I learned from Wes Bos&apos;s ES6 for everyone.</description>
       <pubDate>Fri, 03 Mar 2017 00:00:00 GMT</pubDate>
-      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
-    </item>
-    <item>
-      <title>Some great memories have Lauren in the foreground</title>
-      <link>https://jeffry.in/losing-a-friend</link>
-      <guid isPermaLink="true">https://jeffry.in/losing-a-friend</guid>
-      <description>Recently, I lost a friend. Lauren Schlueter was a friend of mine who helped me through laughter. She was a historian, a teacher and a comedian.</description>
-      <pubDate>Tue, 28 Feb 2017 00:00:00 GMT</pubDate>
       <author>yowainwright@gmail.com (Jeff Wainwright)</author>
     </item>
   </channel>

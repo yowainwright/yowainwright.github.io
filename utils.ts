@@ -169,16 +169,16 @@ function transformerDiffLines() {
     name: "diff-lines",
     code(node: any) {
       node.children?.forEach((line: any) => {
-        const hasNoChildren = !line.children || line.children.length === 0;
+        const hasNoChildren = !line.children || line.children?.length === 0;
         if (hasNoChildren) return;
 
         let firstText = "";
         const getFirstText = (element: any): string => {
           const isText = element.type === "text";
           if (isText) return element.value;
-          const hasChildren = element.children && element.children.length > 0;
+          const hasChildren = element.children?.length > 0;
           if (hasChildren) {
-            return getFirstText(element.children[0]);
+            return getFirstText(element.children?.[0]);
           }
           return "";
         };
@@ -192,15 +192,15 @@ function transformerDiffLines() {
         if (!shouldProcessDiff) return;
 
         if (!line.properties) line.properties = {};
-        if (!line.properties.class) line.properties.class = [];
+        if (!line.properties?.class) line.properties.class = [];
 
-        const isClassArray = Array.isArray(line.properties.class);
+        const isClassArray = Array.isArray(line.properties?.class);
         const diffType = isAddition ? "add" : "remove";
 
         if (isClassArray) {
-          line.properties.class.push("diff", diffType);
+          line.properties?.class?.push("diff", diffType);
         } else {
-          line.properties.class = [line.properties.class, "diff", diffType];
+          line.properties.class = [line.properties?.class, "diff", diffType];
         }
       });
     },
@@ -247,7 +247,7 @@ function transformerTitle() {
     pre(node) {
       if (!node.properties) node.properties = {};
 
-      const title = node.properties.title;
+      const title = node.properties?.title;
       if (!title) return;
 
       const titleNode = {
@@ -258,7 +258,7 @@ function transformerTitle() {
       };
 
       node.children = [titleNode, ...node.children];
-      delete node.properties.title;
+      delete node.properties?.title;
     },
   };
 }

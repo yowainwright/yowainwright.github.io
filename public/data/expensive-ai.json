@@ -1,0 +1,84 @@
+{
+  "title": "AI Model Cost Calculator",
+  "lastUpdated": "2026-02-11T06:23:49.107Z",
+  "models": {
+    "claude-opus-4.5": {
+      "input": 28,
+      "output": 280,
+      "source": "docs.anthropic.com",
+      "lastUpdated": "2026-02-11"
+    },
+    "gpt-5": {
+      "input": 60,
+      "output": 120,
+      "source": "openai.com",
+      "lastUpdated": "2026-02-11"
+    },
+    "gemini-3-ultra": {
+      "input": 8.75,
+      "output": 87.5,
+      "source": "cloud.google.com",
+      "lastUpdated": "2026-02-11"
+    },
+    "grok-4.1": {
+      "input": 0.2,
+      "output": 0.5,
+      "source": "x.ai",
+      "lastUpdated": "2026-02-11"
+    },
+    "deepseek-r1": {
+      "input": 0.7,
+      "output": 2.5,
+      "source": "openrouter.ai",
+      "lastUpdated": "2026-02-11"
+    }
+  },
+  "sources": [
+    {
+      "link": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "author": "Anthropic",
+      "publication": "Claude API Pricing Documentation"
+    },
+    {
+      "link": "https://platform.openai.com/docs/pricing",
+      "author": "OpenAI",
+      "publication": "OpenAI API Pricing"
+    },
+    {
+      "link": "https://ai.google.dev/gemini-api/docs/pricing",
+      "author": "Google",
+      "publication": "Gemini API Pricing"
+    },
+    {
+      "link": "https://docs.x.ai/developers/models",
+      "author": "xAI",
+      "publication": "Grok API Pricing"
+    },
+    {
+      "link": "https://api-docs.deepseek.com/quick_start/pricing",
+      "author": "DeepSeek",
+      "publication": "DeepSeek API Pricing"
+    }
+  ],
+  "reasoningMultipliers": {
+    "claude-opus-4.5": 2.8,
+    "gpt-5": 2.2,
+    "gemini-3-ultra": 2,
+    "deepseek-r1": 3.5,
+    "grok-4.1": 1.8
+  },
+  "inputTokenEfficiency": {
+    "claude-opus-4.5": 0.5,
+    "gpt-5": 1,
+    "gemini-3-ultra": 1.2,
+    "deepseek-r1": 0.9,
+    "grok-4.1": 1.1
+  },
+  "modelNames": {
+    "claude-opus-4.5": "Claude Opus 4.5",
+    "gpt-5": "GPT-5",
+    "gemini-3-ultra": "Gemini 3 Ultra",
+    "deepseek-r1": "DeepSeek R1",
+    "grok-4.1": "Grok 4.1"
+  }
+}

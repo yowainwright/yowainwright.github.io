@@ -50,14 +50,14 @@ export const Home = ({ posts }: HomeProps) => {
             <article key={post.slug} className="post--article">
               <header>
                 <h2>
-                  <Link href={post.slug}>{post.frontmatter.title}</Link>
+                  <Link href={post.slug}>{post.frontmatter?.title}</Link>
                 </h2>
-                <time dateTime={post.frontmatter.date}>
-                  {post.frontmatter.date}
+                <time dateTime={post.frontmatter?.date}>
+                  {post.frontmatter?.date}
                 </time>
               </header>
               <p>
-                {post.frontmatter.meta}
+                {post.frontmatter?.meta}
                 <Link href={post.slug}>→</Link>
               </p>
             </article>

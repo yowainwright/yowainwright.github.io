@@ -9,6 +9,7 @@ import { OgMeta } from "../components/OgMeta";
 import { useCodeBlocks } from "../hooks/useCodeBlocks";
 import { useHeadingAnchors } from "../hooks/useHeadingAnchors";
 import { useScrollDepth, useReadTime } from "../hooks/useAnalytics";
+import { withMermaidCharts } from "../hooks/useMermaidCharts";
 import { trackView } from "../lib/analytics-firebase";
 import { InlineSource, SectionSources } from "../components/citations";
 import {
@@ -18,6 +19,12 @@ import {
   IndustrialRevolutionChart,
   SWEMetricsGrid,
 } from "../components/swe-econ-25";
+import {
+  TokenCostChart,
+  AgentTaskCostChart,
+  ProjectCostComparisonChart,
+  TokenCostCalculator,
+} from "../components/ai-cost-charts";
 
 const THEME_DARK = "dark";
 const THEME_LIGHT = "light";
@@ -192,6 +199,10 @@ const mdxComponents = {
   WageStagnationChart,
   IndustrialRevolutionChart,
   SWEMetricsGrid,
+  TokenCostChart,
+  AgentTaskCostChart,
+  ProjectCostComparisonChart,
+  TokenCostCalculator,
 };
 
 const Post = ({
@@ -316,7 +327,35 @@ export const getStaticProps = async ({ params }: StaticProps) => {
   const wordCount = (data.content || "").split(/\s+/).filter(Boolean).length;
 
   if (data.isMdx) {
-    const mdxSource = await serialize(data.content || "");
+    const remarkMermaidjs = (await import('remark-mermaidjs')).default;
+    const mdxSource = await serialize(data.content || "", {
+      mdxOptions: {
+        remarkPlugins: [
+          [remarkMermaidjs, {
+            theme: 'base',
+            themeVariables: {
+              primaryColor: '#f2f2f2',
+              primaryTextColor: '#000000',
+              primaryBorderColor: '#0000ff',
+              lineColor: '#0000ff',
+              secondaryColor: '#f9f9f9',
+              tertiaryColor: '#ffffff',
+              background: '#ffffff',
+              mainBkg: '#f2f2f2',
+              secondBkg: '#f9f9f9',
+              tertiaryBkg: '#ffffff',
+              nodeBorder: '#0000ff',
+              clusterBkg: '#f9f9f9',
+              clusterBorder: '#999999',
+              defaultLinkColor: '#0000ff',
+              titleColor: '#000000',
+              edgeLabelBackground: '#ffffff'
+            }
+          }]
+        ],
+        rehypePlugins: [],
+      },
+    });
     return {
       props: { ...data, mdxSource, content: null, wordCount },
     };
@@ -328,4 +367,4 @@ export const getStaticProps = async ({ params }: StaticProps) => {
   };
 };
 
-export default Post;
+export default withMermaidCharts(Post);
