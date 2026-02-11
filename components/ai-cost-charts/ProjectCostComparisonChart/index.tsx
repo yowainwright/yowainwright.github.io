@@ -1,19 +1,16 @@
 import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
+import { Loader2 } from "lucide-react";
 import { ChartSources } from "../../charts";
+import { PROJECT_COMPARISON_LABELS } from './constants';
+import { SHARED_CHART_CONSTANTS } from '../shared/constants';
+import type { ProjectCostData } from './types';
 
 const BarChart = dynamic(
   () => import("../../charts").then((mod) => mod.BarChart),
   { ssr: false },
 );
 
-interface ProjectCostData {
-  totalProjectCosts: Array<{
-    label: string;
-    data: Array<{ primary: string; secondary: number }>;
-  }>;
-  sources: Array<{ link: string; author: string; publication: string }>;
-}
 
 export const ProjectCostComparisonChart = () => {
   const [data, setData] = useState<ProjectCostData | null>(null);
@@ -21,11 +18,11 @@ export const ProjectCostComparisonChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/data/agent-cost-data.json');
+        const response = await fetch(SHARED_CHART_CONSTANTS.DATA_SOURCE);
         const agentData = await response.json();
         setData(agentData);
       } catch (error) {
-        console.error('Failed to load project cost data:', error);
+        setData(SHARED_CHART_CONSTANTS.ERROR_HANDLING.FALLBACK_STATE);
       }
     };
 
@@ -33,15 +30,23 @@ export const ProjectCostComparisonChart = () => {
   }, []);
 
   if (!data) {
-    return <div>Loading project cost comparison...</div>;
+    return (
+      <div style={SHARED_CHART_CONSTANTS.LOADING_STATES.CONTAINER_STYLE}>
+        <Loader2
+          size={SHARED_CHART_CONSTANTS.LOADING_STATES.SPINNER_SIZE}
+          style={{ animation: SHARED_CHART_CONSTANTS.LOADING_STATES.SPINNER_ANIMATION }}
+        />
+        {PROJECT_COMPARISON_LABELS.LOADING_TEXT}
+      </div>
+    );
   }
 
   return (
     <>
       <BarChart
         data={data.totalProjectCosts}
-        secondaryLabel="Total USD cost"
-        yDomain={[0, 3.5]}
+        secondaryLabel={PROJECT_COMPARISON_LABELS.SECONDARY_LABEL}
+        yDomain={[0, PROJECT_COMPARISON_LABELS.Y_DOMAIN_MAX]}
       />
       <ChartSources sources={data.sources} />
     </>

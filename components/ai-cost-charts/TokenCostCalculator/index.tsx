@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Loader2 } from 'lucide-react';
 import type { ModelCalculation } from './types';
+import { GRAMMARS } from './constants';
 
 const STORAGE_KEY = 'ai-token-calculator-input';
 const DEFAULT_TOKENS = 700;
@@ -15,8 +17,8 @@ interface AIData {
 
 function calculateCosts(inputTokens: number, data: AIData): ModelCalculation[] {
   return Object.entries(data.models).map(([modelId, pricing]) => {
-    const outputMultiplier = data.reasoningMultipliers[modelId] || 1;
-    const inputEfficiency = data.inputTokenEfficiency[modelId] || 1;
+    const outputMultiplier = data.reasoningMultipliers?.[modelId] || 1;
+    const inputEfficiency = data.inputTokenEfficiency?.[modelId] || 1;
     const actualInputTokens = Math.round(inputTokens * inputEfficiency);
     const outputTokens = Math.round(inputTokens * outputMultiplier);
     const inputCost = (actualInputTokens / 1_000_000) * pricing.input;
@@ -24,7 +26,7 @@ function calculateCosts(inputTokens: number, data: AIData): ModelCalculation[] {
 
     return {
       modelId,
-      modelName: data.modelNames[modelId] || modelId,
+      modelName: data.modelNames?.[modelId] || modelId,
       inputCost,
       outputCost,
       totalCost: inputCost + outputCost,
@@ -45,7 +47,7 @@ export const TokenCostCalculator = () => {
         const data = await response.json();
         setAiData(data);
       } catch (error) {
-        console.error('Failed to load AI pricing data:', error);
+        setAiData(null);
       }
     };
 
@@ -67,23 +69,25 @@ export const TokenCostCalculator = () => {
     }
   }, [inputTokens, aiData]);
 
+  const isValidNumericInput = (input: string): boolean => {
+    if (input === '') return true;
+    return /^\d+$/.test(input);
+  };
+
+  const normalizeNumericValue = (input: string): number => {
+    if (input === '') return 0;
+    const cleanValue = input.replace(/^0+/, '') || '0';
+    return parseInt(cleanValue, 10);
+  };
+
   const handleTokenChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
 
-    if (inputValue === '') {
-      setInputTokens(0);
+    if (!isValidNumericInput(inputValue)) {
       return;
     }
 
-    // Only allow numeric characters
-    if (!/^\d+$/.test(inputValue)) {
-      return;
-    }
-
-    // Remove leading zeros and convert to number
-    const cleanValue = inputValue.replace(/^0+/, '') || '0';
-    const value = parseInt(cleanValue, 10);
-
+    const value = normalizeNumericValue(inputValue);
     if (!isNaN(value) && value >= 0) {
       setInputTokens(value);
     }
@@ -100,14 +104,14 @@ export const TokenCostCalculator = () => {
       <div className="calculator__header">
         <h3 className="calculator__title">AI Token Cost Calculator</h3>
         <p className="calculator__description">
-          Calculate costs for different AI models based on your token usage
+          {GRAMMARS.DESCRIPTION}
         </p>
       </div>
 
       <div className="calculator__input-section">
         <label htmlFor="token-input" className="calculator__label">
-          Input Tokens:
-          <span className="calculator__helper-text">(500 words ≈ 700 tokens)</span>
+          {GRAMMARS.LABEL}
+          <span className="calculator__helper-text">{GRAMMARS.INPUT_LABEL}</span>
         </label>
         <input
           id="token-input"
@@ -158,17 +162,17 @@ export const TokenCostCalculator = () => {
 
       {!aiData && (
         <div className="calculator__loading">
-          Loading pricing data...
+          <Loader2 size={16} className="calculator__spinner" />
+          <strong>Pricing data</strong>
         </div>
       )}
 
       <div className="calculator__footer">
         <p className="calculator__pricing-note">
-          Prices last updated: {aiData ? new Date(aiData.lastUpdated).toLocaleDateString() : 'Loading...'}
+          {GRAMMARS.META_TITLE} {aiData?.lastUpdated ? new Date(aiData.lastUpdated).toLocaleDateString() : <Loader2 size={8} style={{ animation: 'spin 1s linear infinite' }} />}
         </p>
         <p className="calculator__helper-note">
-          Output tokens calculated using reasoning multipliers based on model capabilities.
-          Actual usage may vary.
+          {GRAMMARS.META_DESCRIPTION}
         </p>
       </div>
     </div>

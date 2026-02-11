@@ -15,10 +15,10 @@ const calculator: BEMBlock = {
       fontSize: TYPOGRAPHY.fontSize.xl,
       fontWeight: TYPOGRAPHY.fontWeight.semibold,
       marginBottom: SPACING.sm,
-      color: COLORS.text.primary
+      color: "var(--color-text-primary)"
     },
     description: {
-      color: COLORS.text.secondary,
+      color: "var(--color-text-secondary)",
       fontSize: TYPOGRAPHY.fontSize.base,
       margin: "0"
     },
@@ -32,17 +32,19 @@ const calculator: BEMBlock = {
       fontSize: TYPOGRAPHY.fontSize.base
     },
     "helper-text": {
-      color: COLORS.text.muted,
+      color: "var(--color-text-muted)",
       marginLeft: SPACING.sm,
       fontWeight: TYPOGRAPHY.fontWeight.normal
     },
     input: {
       padding: SPACING.md,
-      border: `1px solid ${COLORS.border}`,
+      border: "1px solid var(--color-border-default)",
       borderRadius: RADIUS.sm,
       fontSize: TYPOGRAPHY.fontSize.base,
       width: "200px",
-      fontFamily: TYPOGRAPHY.fontFamily
+      fontFamily: TYPOGRAPHY.fontFamily,
+      backgroundColor: "var(--color-bg-primary)",
+      color: "var(--color-text-primary)"
     },
     "table-wrapper": {
       overflowX: "auto",
@@ -51,36 +53,37 @@ const calculator: BEMBlock = {
     table: {
       width: "100%",
       borderCollapse: "collapse",
-      backgroundColor: "white",
+      backgroundColor: "var(--color-bg-primary)",
       borderRadius: RADIUS.md,
       overflow: "hidden",
       boxShadow: SHADOW.md
     },
     "table-header": {
-      backgroundColor: COLORS.background.header,
+      backgroundColor: "var(--color-bg-secondary)",
       fontWeight: TYPOGRAPHY.fontWeight.semibold,
-      color: COLORS.text.primary,
+      color: "var(--color-text-primary)",
       fontSize: TYPOGRAPHY.fontSize.base
     },
     "table-cell": {
       padding: `${SPACING.md} ${SPACING.lg}`,
       textAlign: "left",
-      borderBottom: `1px solid ${COLORS.borderLight}`,
-      fontSize: TYPOGRAPHY.fontSize.base
+      borderBottom: "1px solid var(--color-border-default)",
+      fontSize: TYPOGRAPHY.fontSize.base,
+      backgroundColor: "transparent"
     },
     "model-name": {
       fontWeight: TYPOGRAPHY.fontWeight.medium
     },
     "total-cost": {
       fontWeight: TYPOGRAPHY.fontWeight.semibold,
-      color: COLORS.primary
+      color: "var(--color-primary)"
     },
     footer: {
       marginTop: SPACING.lg,
       paddingTop: SPACING.lg,
-      borderTop: `1px solid ${COLORS.borderLight}`,
+      borderTop: "1px solid var(--color-border-default)",
       fontSize: TYPOGRAPHY.fontSize.sm,
-      color: COLORS.text.secondary
+      color: "var(--color-text-secondary)"
     },
     "pricing-note": {
       margin: `0 0 ${SPACING.sm} 0`,

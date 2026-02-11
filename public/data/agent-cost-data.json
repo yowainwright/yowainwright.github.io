@@ -3,7 +3,7 @@
   "lastUpdated": "2026-02-11",
   "agentTaskCosts": [
     {
-      "label": "Agent Task Costs with Claude Opus 4.5",
+      "label": "My approximate agent cost per query based on token input size with Claude Opus 4.5",
       "data": [
         { "primary": "Direct Coding (700i→1750o)", "secondary": 0.21 },
         { "primary": "QA Lead Agent (700i→4000o)", "secondary": 0.47 },
@@ -17,7 +17,7 @@
   ],
   "totalProjectCosts": [
     {
-      "label": "Total Project Cost Comparison",
+      "label": "My approximate single query cost comparison between solo and my agentic team",
       "data": [
         { "primary": "Solo Development (700i→1750o)", "secondary": 0.21 },
         { "primary": "5-Agent Orchestration (3500i→26500o)", "secondary": 3.08 }

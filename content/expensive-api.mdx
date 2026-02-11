@@ -3,7 +3,7 @@ title: "When the AI Token Gravy Train Stops: My approximately $150 single hour C
 date: "2026-01-21"
 path: "/ai-token-gravy-train"
 meta:
-  "This post covers my AI token usage journey and what happened when limitless AI usage hit reality and becaome limited. I go into my evolution, how it happened, and what I am doing to fix the issue"
+  "This post covers my AI token usage journey and what happened when limitless AI usage hit reality and became limited. I go into my evolution, how it happened, and what I am doing to fix the issue"
 categories:
   - code
   - ai
@@ -27,9 +27,11 @@ And. I've embarrassed myself by submitting pull requests where I've proved that 
 This _is_ new developer tools. Amiright?
 
 <figure>
-    <img src="https://yowainwright.imgix.net/expensive-ai/claude-cost.png" alt="approximage cost of my work on claude per week" />
-  <figcaption>This cost was my Claud Usage actual cost in October 2025</figcaption>
+    <img src="https://yowainwright.imgix.net/expensive-ai/claude-cost.png" alt="approximate cost of my work on claude per week" />
+  <figcaption>This cost was my Claude Usage actual cost in October 2025</figcaption>
 </figure>
+
+---
 
 ## Just A Caveman In A Cave
 
@@ -51,7 +53,7 @@ well, fair—_why put the effort in when my Max plan will be better?_ DHH is sma
 
 ## Approximate Cost Per Query
 
-The graph per query **approximately** displays the real cost per each question you ask diffent models.
+What I pay approximately per query - your approximate baseline before adding agents.
 This is not a session but one question in a session.
 
 <TokenCostChart />
@@ -64,7 +66,7 @@ Then, 48 hours ago, I started to get a message in bright yellow at the bottom of
 > You may see where this is going. And, you may be thinking to yourself already, "If this guy can code, then, "What's the problem?".
 > Well, **the problem is**, I have been building this project's features like a foreman.
 
-For this project, I spent time write my architectural plan, crafting agents to work together to assist in completing major pieces of the project.
+For this project, I spent time writing my architectural plan, crafting agents to work together to assist in completing major pieces of the project.
 My intended role was that of a foreman where I expected to take pieces of the project but major chunks work went to different agents.
 
 ---
@@ -73,11 +75,16 @@ Since Claude code came out, honing ways to instruct Claude to write code with th
 And for the last month, I have been honing an orchestrator agent flow where I've prompted a few super hero agents and they largely execute on tasks and I am a man in the middle overseeing the work.
 It is cool! I mean, it IS cool if I can afford it.
 
+---
+
 ## Flowchart example of the architectural agentic pattern I was following
+
+My expensive orchestration pattern - the exact flow that hit $150/hour.
+Your agents might differ, but watch for similar token multiplication.
 
 ```mermaid
 flowchart TD
-    A[User Request] --> B[Orchestrator Agent]
+    A[My API Feature - deadline looming] --> B[Orchestrator Agent]
     B --> C[QA Lead Agent]
     B --> D[TypeScript Expert]
     B --> E[Principal Engineer]
@@ -90,8 +97,10 @@ flowchart TD
     H --> K
     I --> K
     J --> K
-    K --> L[Final Review]
+    K --> L[$150 Hit → Manual Rescue]
 ```
+
+// Each agent: 2000+ tokens. Your agents × your tokens = your risk
 
 ---
 
@@ -100,6 +109,16 @@ I had my QA Lead agent working with my typescript expert agent getting code cov 
 I had my principal engineer working with my fastify expert ensuring caching was optimal.
 But the quality was starting to degrade. I felt like I was going to have to jump ship.
 So close to the deadline, anxiety was setting in.
+
+---
+
+## Cost Per Query Based On Agent Token
+
+My orchestrated agent costs - how specialized instructions multiply token usage.
+
+<AgentTaskCostChart />
+
+---
 
 ## 90% Done and No Tokens
 
@@ -124,11 +143,18 @@ This may read like low friction but this was just me. No team. Me and all of tha
 
 I'm sure you can empathize or, perhaps, know what I could have done better. Please share.
 
-<AgentTaskCostChart />
+---
+
+## Representation of normal LLM coding vs Agent coding
+
+My $150 wake-up call: single prompts vs my orchestrated agent team.
+Your pattern might differ, but parallel agents compound costs fast.
 
 <ProjectCostComparisonChart />
 
-## Postmortem
+---
+
+## Revelations
 
 Moving forward. I will continue to use Claude. It's the best for me, currently.
 I will review how I can incorporate agents from open source models, routing, and tools like crush so I can be less reliant on Claude.
@@ -138,6 +164,10 @@ Especially when incurring the most difficult 10% of the project and the stress.
 I will also now try to execute more closely to how I would have built the product alone.
 
 <TokenCostCalculator />
+
+Calculate your own potential burn rate - my $150 hour started with these same 'reasonable' numbers.
+
+---
 
 ## Conclusion
 
@@ -151,5 +181,6 @@ It's confusing; definitely more to learn.
 ---
 
 **An article written by [Nicholas C. Zakas](https://humanwhocodes.com/blog/), code god creator of [eslint](https://eslint.org/) and inspirational person on multiple levels wrote [this post](https://newsletter.humanwhocodes.com/posts/expensive-ai-is-coming) which clear illustrates the issue.
-I'm also continually keep up with [crush](https://github.com/charmbracelet/crush), [ollama](https://ollama.com/), to try and insure I have some idea of what's going on!**
+I'm also continually keep up with [crush](https://github.com/charmbracelet/crush), [ollama](https://ollama.com/), to try and insure I have some idea of what's going on!
+I used claude writing this. I wrote most of the article myself and mainly used it to ensure a decent parallel between my experience and yours could be drawn. I also used it to gather data and use it so it can be clearer to you.**
 
