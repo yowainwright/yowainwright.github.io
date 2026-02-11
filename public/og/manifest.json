@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-11T06:29:41.735Z",
+  "generatedAt": "2026-02-11T09:13:34.140Z",
   "posts": [
     {
       "slug": "js-closure",
@@ -756,6 +756,23 @@
       "hasImages": true,
       "strategy": "code",
       "primaryAsset": "code-3"
+    },
+    {
+      "slug": "expensive-ai",
+      "title": "When the AI Token Gravy Train Stops: My approximately $150 single hour Claude Code Cost Wake-up Call",
+      "date": "2026-01-21",
+      "isMdx": true,
+      "charts": [],
+      "codeBlocks": [
+        {
+          "language": "mermaid",
+          "lineCount": 16,
+          "hasTitle": false
+        }
+      ],
+      "hasImages": true,
+      "strategy": "code",
+      "primaryAsset": "code-0"
     },
     {
       "slug": "html-is-easy",
@@ -1546,23 +1563,6 @@
       "hasImages": false,
       "strategy": "code",
       "primaryAsset": "code-4"
-    },
-    {
-      "slug": "expensive-api",
-      "title": "When the AI Token Gravy Train Stops: My approximately $150 single hour Claude Code Cost Wake-up Call",
-      "date": "2026-01-21",
-      "isMdx": true,
-      "charts": [],
-      "codeBlocks": [
-        {
-          "language": "mermaid",
-          "lineCount": 16,
-          "hasTitle": false
-        }
-      ],
-      "hasImages": true,
-      "strategy": "code",
-      "primaryAsset": "code-0"
     },
     {
       "slug": "week-9-17",
