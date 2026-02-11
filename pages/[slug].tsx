@@ -21,7 +21,8 @@ import {
 } from "../components/swe-econ-25";
 import {
   TokenCostChart,
-  AgentCostChart,
+  AgentTaskCostChart,
+  ProjectCostComparisonChart,
   TokenCostCalculator,
 } from "../components/ai-cost-charts";
 
@@ -199,7 +200,8 @@ const mdxComponents = {
   IndustrialRevolutionChart,
   SWEMetricsGrid,
   TokenCostChart,
-  AgentCostChart,
+  AgentTaskCostChart,
+  ProjectCostComparisonChart,
   TokenCostCalculator,
 };
 

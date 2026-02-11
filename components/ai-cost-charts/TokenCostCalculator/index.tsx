@@ -1,20 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import { MODEL_PRICING, REASONING_MULTIPLIERS, MODEL_NAMES, LAST_UPDATED } from './constants';
 import type { ModelCalculation } from './types';
 
 const STORAGE_KEY = 'ai-token-calculator-input';
 const DEFAULT_TOKENS = 700;
 
-function calculateCosts(inputTokens: number): ModelCalculation[] {
-  return Object.entries(MODEL_PRICING).map(([modelId, pricing]) => {
-    const multiplier = REASONING_MULTIPLIERS[modelId] || 1;
-    const outputTokens = Math.round(inputTokens * multiplier);
-    const inputCost = (inputTokens / 1_000_000) * pricing.input;
+interface AIData {
+  models: Record<string, { input: number; output: number; source: string; lastUpdated: string }>;
+  reasoningMultipliers: Record<string, number>;
+  inputTokenEfficiency: Record<string, number>;
+  modelNames: Record<string, string>;
+  lastUpdated: string;
+  sources: Array<{ link: string; author: string; publication: string }>;
+}
+
+function calculateCosts(inputTokens: number, data: AIData): ModelCalculation[] {
+  return Object.entries(data.models).map(([modelId, pricing]) => {
+    const outputMultiplier = data.reasoningMultipliers[modelId] || 1;
+    const inputEfficiency = data.inputTokenEfficiency[modelId] || 1;
+    const actualInputTokens = Math.round(inputTokens * inputEfficiency);
+    const outputTokens = Math.round(inputTokens * outputMultiplier);
+    const inputCost = (actualInputTokens / 1_000_000) * pricing.input;
     const outputCost = (outputTokens / 1_000_000) * pricing.output;
 
     return {
       modelId,
-      modelName: MODEL_NAMES[modelId] || modelId,
+      modelName: data.modelNames[modelId] || modelId,
       inputCost,
       outputCost,
       totalCost: inputCost + outputCost,
@@ -26,26 +36,62 @@ function calculateCosts(inputTokens: number): ModelCalculation[] {
 export const TokenCostCalculator = () => {
   const [inputTokens, setInputTokens] = useState(DEFAULT_TOKENS);
   const [calculations, setCalculations] = useState<ModelCalculation[]>([]);
+  const [aiData, setAiData] = useState<AIData | null>(null);
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/data/expensive-ai.json');
+        const data = await response.json();
+        setAiData(data);
+      } catch (error) {
+        console.error('Failed to load AI pricing data:', error);
+      }
+    };
+
+    fetchData();
+
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
       const parsedTokens = parseInt(saved, 10);
-      if (!isNaN(parsedTokens) && parsedTokens > 0) {
+      if (!isNaN(parsedTokens) && parsedTokens >= 0) {
         setInputTokens(parsedTokens);
       }
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, inputTokens.toString());
-    setCalculations(calculateCosts(inputTokens));
-  }, [inputTokens]);
+    if (aiData) {
+      localStorage.setItem(STORAGE_KEY, inputTokens.toString());
+      setCalculations(calculateCosts(inputTokens, aiData));
+    }
+  }, [inputTokens, aiData]);
 
   const handleTokenChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(e.target.value, 10);
+    const inputValue = e.target.value;
+
+    if (inputValue === '') {
+      setInputTokens(0);
+      return;
+    }
+
+    // Only allow numeric characters
+    if (!/^\d+$/.test(inputValue)) {
+      return;
+    }
+
+    // Remove leading zeros and convert to number
+    const cleanValue = inputValue.replace(/^0+/, '') || '0';
+    const value = parseInt(cleanValue, 10);
+
     if (!isNaN(value) && value >= 0) {
       setInputTokens(value);
+    }
+  };
+
+  const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+    if (inputTokens === 0) {
+      e.target.select();
     }
   };
 
@@ -65,11 +111,12 @@ export const TokenCostCalculator = () => {
         </label>
         <input
           id="token-input"
-          type="number"
+          type="text"
+          inputMode="numeric"
+          pattern="[0-9]*"
           value={inputTokens}
           onChange={handleTokenChange}
-          min="0"
-          step="1"
+          onFocus={handleFocus}
           className="calculator__input"
         />
       </div>
@@ -109,9 +156,15 @@ export const TokenCostCalculator = () => {
         </table>
       </div>
 
+      {!aiData && (
+        <div className="calculator__loading">
+          Loading pricing data...
+        </div>
+      )}
+
       <div className="calculator__footer">
         <p className="calculator__pricing-note">
-          Prices last updated: {new Date(LAST_UPDATED).toLocaleDateString()}
+          Prices last updated: {aiData ? new Date(aiData.lastUpdated).toLocaleDateString() : 'Loading...'}
         </p>
         <p className="calculator__helper-note">
           Output tokens calculated using reasoning multipliers based on model capabilities.

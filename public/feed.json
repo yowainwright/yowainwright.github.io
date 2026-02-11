@@ -10,6 +10,16 @@
   },
   "items": [
     {
+      "id": "https://jeffry.in/expensive-api",
+      "url": "https://jeffry.in/expensive-api",
+      "title": "When the AI Token Gravy Train Stops: My approximately $150 single hour Claude Code Cost Wake-up Call",
+      "summary": "This post covers my AI token usage journey and what happened when limitless AI usage hit reality and becaome limited. I go into my evolution, how it happened, and what I am doing to fix the issue",
+      "date_published": "2026-01-21T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
       "id": "https://jeffry.in/us-swe-economy-2025",
       "url": "https://jeffry.in/us-swe-economy-2025",
       "title": "Being a US-based Software Engineer in 2025; is it what it used to be?",
@@ -495,16 +505,6 @@
       "title": "Arrow Function Notes After Watching ES6 For Everyone, Continued",
       "summary": "This post reviews some things about arrow functions that I learned from Wes Bos's ES6 for everyone.",
       "date_published": "2017-03-03T00:00:00.000Z",
-      "author": {
-        "name": "Jeff Wainwright"
-      }
-    },
-    {
-      "id": "https://jeffry.in/losing-a-friend",
-      "url": "https://jeffry.in/losing-a-friend",
-      "title": "Some great memories have Lauren in the foreground",
-      "summary": "Recently, I lost a friend. Lauren Schlueter was a friend of mine who helped me through laughter. She was a historian, a teacher and a comedian.",
-      "date_published": "2017-02-28T00:00:00.000Z",
       "author": {
         "name": "Jeff Wainwright"
       }
