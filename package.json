@@ -14,6 +14,7 @@
     "url": "https://github.com/yowainwright/yowainwright.github.io/issues"
   },
   "scripts": {
+    "prebuild": "playwright install chromium --with-deps",
     "build": "bun run update-pricing && bun run build:css && bun run build:search && next build && bun run build:rss",
     "update-pricing": "bun scripts/update-ai-pricing/index.ts",
     "build:search": "bun scripts/generate-search-data.ts",
@@ -28,7 +29,6 @@
     "lint": "bunx oxlint .",
     "lint:fix": "bunx oxlint --fix .",
     "prepare": "bun scripts/install-hooks.ts && bun run update && bun run maintain",
-    "postinstall": "playwright install chromium --with-deps",
     "start": "next start",
     "update": "codependence --update",
     "maintain": "pastoralist"
