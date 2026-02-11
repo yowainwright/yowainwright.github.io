@@ -170,34 +170,6 @@ export function useMermaidCharts() {
   const observerRef = useRef<MutationObserver | null>(null);
 
   const openDialog = useCallback((svgContent: string, title?: string) => {
-    // Apply styles to dialog SVG content as well
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = svgContent;
-    const dialogSvg = tempDiv.querySelector('svg') as SVGElement;
-
-    if (dialogSvg) {
-      const textElements = dialogSvg.querySelectorAll('text');
-      textElements.forEach(text => {
-        text.style.fill = 'var(--color-text-primary)';
-        text.style.color = 'var(--color-text-primary)';
-      });
-
-      const lines = dialogSvg.querySelectorAll('line');
-      lines.forEach(line => {
-        if (line.getAttribute('stroke') === '#666' || line.getAttribute('stroke') === '#6C6C6C') {
-          line.style.stroke = 'var(--color-border-light)';
-        }
-      });
-
-      const markers = dialogSvg.querySelectorAll('marker path, .arrowhead');
-      markers.forEach(marker => {
-        marker.style.fill = 'var(--color-link-primary)';
-        marker.style.stroke = 'var(--color-link-primary)';
-      });
-
-      svgContent = tempDiv.innerHTML;
-    }
-
     setDialogState({ isOpen: true, svgContent, title });
   }, []);
 
@@ -247,42 +219,9 @@ export function useMermaidCharts() {
         return;
       }
 
-      // Force override inline styles for dark mode - apply to both original and clone
-      const applyMermaidStyles = (svgElement: SVGElement) => {
-        const textElements = svgElement.querySelectorAll('text');
-        textElements.forEach(text => {
-          text.style.fill = 'var(--color-text-primary)';
-          text.style.color = 'var(--color-text-primary)';
-        });
-
-        // Fix sequence diagram lines
-        const lines = svgElement.querySelectorAll('line');
-        lines.forEach(line => {
-          if (line.getAttribute('stroke') === '#666' || line.getAttribute('stroke') === '#6C6C6C') {
-            line.style.stroke = 'var(--color-border-light)';
-          }
-        });
-
-        // Fix arrow markers
-        const markers = svgElement.querySelectorAll('marker path, .arrowhead');
-        markers.forEach(marker => {
-          marker.style.fill = 'var(--color-link-primary)';
-          marker.style.stroke = 'var(--color-link-primary)';
-        });
-      };
-
-      applyMermaidStyles(svg as SVGElement);
       const originalSvgClone = svg.cloneNode(true) as SVGElement;
-      applyMermaidStyles(originalSvgClone);
 
       parent.classList.add('mermaid-chart', 'mermaid-processed');
-      parent.style.position = 'relative';
-      parent.style.cursor = 'pointer';
-      parent.style.padding = '1.5rem';
-      parent.style.border = '1px solid var(--color-border-light)';
-      parent.style.borderRadius = '8px';
-      parent.style.background = 'var(--color-bg-primary)';
-      parent.style.margin = '2rem 0';
 
       const titleText = '';
 
@@ -295,11 +234,6 @@ export function useMermaidCharts() {
 
       const expandHint = document.createElement('div');
       expandHint.className = 'mermaid-chart__expand-hint';
-      expandHint.style.position = 'absolute';
-      expandHint.style.top = '12px';
-      expandHint.style.right = '12px';
-      expandHint.style.opacity = '0.6';
-      expandHint.style.zIndex = '10';
 
       const iconRoot = createRoot(expandHint);
       iconRoot.render(React.createElement(Maximize2, { size: 16 }));
