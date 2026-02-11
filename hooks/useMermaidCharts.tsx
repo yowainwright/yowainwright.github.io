@@ -5,6 +5,19 @@ import { createRoot } from "react-dom/client";
 import { Maximize2 } from "lucide-react";
 import { MermaidDialog, PROCESSING_DELAYS, MERMAID_SELECTORS } from "../components/mermaid";
 
+const extractTitleFromContent = (chartParent: Element): string => {
+  let currentElement = chartParent.previousElementSibling;
+
+  while (currentElement) {
+    if (currentElement.tagName && /^H[1-6]$/.test(currentElement.tagName)) {
+      return currentElement.textContent?.trim() || '';
+    }
+    currentElement = currentElement.previousElementSibling;
+  }
+
+  return '';
+};
+
 const getTextDimensions = (textElement: Element) => {
   try {
     const bbox = (textElement as SVGTextElement).getBBox();
@@ -149,18 +162,47 @@ const adjustNodeHeights = (svg: SVGElement) => {
 };
 
 export function useMermaidCharts() {
-  const [dialogState, setDialogState] = useState<{ isOpen: boolean; svgContent: string }>({
+  const [dialogState, setDialogState] = useState<{ isOpen: boolean; svgContent: string; title?: string }>({
     isOpen: false,
-    svgContent: ''
+    svgContent: '',
+    title: undefined
   });
   const observerRef = useRef<MutationObserver | null>(null);
 
-  const openDialog = useCallback((svgContent: string) => {
-    setDialogState({ isOpen: true, svgContent });
+  const openDialog = useCallback((svgContent: string, title?: string) => {
+    // Apply styles to dialog SVG content as well
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = svgContent;
+    const dialogSvg = tempDiv.querySelector('svg') as SVGElement;
+
+    if (dialogSvg) {
+      const textElements = dialogSvg.querySelectorAll('text');
+      textElements.forEach(text => {
+        text.style.fill = 'var(--color-text-primary)';
+        text.style.color = 'var(--color-text-primary)';
+      });
+
+      const lines = dialogSvg.querySelectorAll('line');
+      lines.forEach(line => {
+        if (line.getAttribute('stroke') === '#666' || line.getAttribute('stroke') === '#6C6C6C') {
+          line.style.stroke = 'var(--color-border-light)';
+        }
+      });
+
+      const markers = dialogSvg.querySelectorAll('marker path, .arrowhead');
+      markers.forEach(marker => {
+        marker.style.fill = 'var(--color-link-primary)';
+        marker.style.stroke = 'var(--color-link-primary)';
+      });
+
+      svgContent = tempDiv.innerHTML;
+    }
+
+    setDialogState({ isOpen: true, svgContent, title });
   }, []);
 
   const closeDialog = useCallback(() => {
-    setDialogState({ isOpen: false, svgContent: '' });
+    setDialogState({ isOpen: false, svgContent: '', title: undefined });
   }, []);
 
   const processMermaidCharts = useCallback(() => {
@@ -205,8 +247,33 @@ export function useMermaidCharts() {
         return;
       }
 
-      const svgClone = svg.cloneNode(true) as SVGElement;
-      adjustNodeHeights(svgClone);
+      // Force override inline styles for dark mode - apply to both original and clone
+      const applyMermaidStyles = (svgElement: SVGElement) => {
+        const textElements = svgElement.querySelectorAll('text');
+        textElements.forEach(text => {
+          text.style.fill = 'var(--color-text-primary)';
+          text.style.color = 'var(--color-text-primary)';
+        });
+
+        // Fix sequence diagram lines
+        const lines = svgElement.querySelectorAll('line');
+        lines.forEach(line => {
+          if (line.getAttribute('stroke') === '#666' || line.getAttribute('stroke') === '#6C6C6C') {
+            line.style.stroke = 'var(--color-border-light)';
+          }
+        });
+
+        // Fix arrow markers
+        const markers = svgElement.querySelectorAll('marker path, .arrowhead');
+        markers.forEach(marker => {
+          marker.style.fill = 'var(--color-link-primary)';
+          marker.style.stroke = 'var(--color-link-primary)';
+        });
+      };
+
+      applyMermaidStyles(svg as SVGElement);
+      const originalSvgClone = svg.cloneNode(true) as SVGElement;
+      applyMermaidStyles(originalSvgClone);
 
       parent.classList.add('mermaid-chart', 'mermaid-processed');
       parent.style.position = 'relative';
@@ -216,6 +283,15 @@ export function useMermaidCharts() {
       parent.style.borderRadius = '8px';
       parent.style.background = 'var(--color-bg-primary)';
       parent.style.margin = '2rem 0';
+
+      const titleText = '';
+
+      if (titleText) {
+        const chartTitle = document.createElement('div');
+        chartTitle.className = 'chart-title';
+        chartTitle.textContent = titleText;
+        parent.insertBefore(chartTitle, svg);
+      }
 
       const expandHint = document.createElement('div');
       expandHint.className = 'mermaid-chart__expand-hint';
@@ -231,7 +307,7 @@ export function useMermaidCharts() {
       parent.appendChild(expandHint);
 
       parent.addEventListener('click', () => {
-        openDialog(svgClone.outerHTML);
+        openDialog(originalSvgClone.outerHTML, titleText);
       });
     });
   }, [openDialog]);
@@ -293,6 +369,7 @@ export function withMermaidCharts<T extends {}>(
           isOpen={dialogState.isOpen}
           onClose={closeDialog}
           svgContent={dialogState.svgContent}
+          title={dialogState.title}
         />
       </>
     );

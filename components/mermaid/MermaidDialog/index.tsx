@@ -8,7 +8,8 @@ import type { MermaidDialogProps } from '../types';
 export const MermaidDialog: React.FC<MermaidDialogProps> = ({
   isOpen,
   onClose,
-  svgContent
+  svgContent,
+  title
 }) => {
   const [transformRef, setTransformRef] = useState<any>(null);
 
@@ -92,6 +93,9 @@ export const MermaidDialog: React.FC<MermaidDialogProps> = ({
             >
               <Download size={18} />
             </button>
+          </div>
+          {title && <div className="mermaid-dialog-title">{title}</div>}
+          <div className="mermaid-dialog-controls">
             <button
               onClick={onClose}
               aria-label="Close dialog"

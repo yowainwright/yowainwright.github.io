@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-11T09:13:34.140Z",
+  "generatedAt": "2026-02-11T20:06:29.019Z",
   "posts": [
     {
       "slug": "js-closure",
@@ -768,11 +768,16 @@
           "language": "mermaid",
           "lineCount": 16,
           "hasTitle": false
+        },
+        {
+          "language": "mermaid",
+          "lineCount": 26,
+          "hasTitle": false
         }
       ],
       "hasImages": true,
       "strategy": "code",
-      "primaryAsset": "code-0"
+      "primaryAsset": "code-1"
     },
     {
       "slug": "html-is-easy",

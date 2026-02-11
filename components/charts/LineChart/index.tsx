@@ -65,6 +65,7 @@ export const LineChart = ({
   secondaryLabel = "",
   height = "400px",
   yDomain,
+  title,
 }: LineChartProps) => {
   const state = useContext(GlobalState);
   const isDark = state?.isDarkMode ?? false;
@@ -74,6 +75,7 @@ export const LineChart = ({
 
   return (
     <div style={{ ...CHART_STYLES.container, height }}>
+      {title && <div className="chart-title">{title}</div>}
       <ResponsiveContainer width="100%" height="100%">
         <RechartsLineChart data={formattedData} margin={CHART_STYLES.margin}>
           <CartesianGrid strokeDasharray={CHART_STYLES.grid.strokeDasharray} />

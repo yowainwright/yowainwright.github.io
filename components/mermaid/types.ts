@@ -2,6 +2,7 @@ export interface MermaidDialogProps {
   isOpen: boolean;
   onClose: () => void;
   svgContent: string;
+  title?: string;
 }
 
 export interface MermaidChartProps {
@@ -19,6 +20,7 @@ export interface UseMermaidChartsReturn {
   dialogState: {
     isOpen: boolean;
     svgContent: string;
+    title?: string;
   };
   closeDialog: () => void;
   processMermaidCharts: () => void;

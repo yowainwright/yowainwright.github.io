@@ -1,5 +1,6 @@
 export const PROJECT_COMPARISON_LABELS = {
-  SECONDARY_LABEL: 'My approximate USD cost: single Claude query vs orchestrated agent team approach',
+  TITLE: 'Normal LLM Coding vs Orchestrated Agents',
+  SECONDARY_LABEL: 'USD',
   LOADING_TEXT: 'Project cost comparison analysis',
   Y_DOMAIN_MAX: 3.5,
 };
