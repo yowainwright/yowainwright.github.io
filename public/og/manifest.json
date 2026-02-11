@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-11T21:12:26.541Z",
+  "generatedAt": "2026-02-11T21:13:45.018Z",
   "posts": [
     {
       "slug": "js-closure",
@@ -1333,7 +1333,7 @@
       "codeBlocks": [],
       "hasImages": false,
       "strategy": "chart",
-      "primaryAsset": "chart-SWEMetricsGrid"
+      "primaryAsset": "chart-RiseAndFallChart"
     },
     {
       "slug": "making-a-js-plugin",
