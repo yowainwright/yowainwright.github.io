@@ -251,7 +251,7 @@
     stroke-width: 2px !important;
   }
 
-  .actor text {
+  .actor text, text.actor tspan {
     color: var(--mermaid-text-fill) !important;
     fill: var(--mermaid-text-fill) !important;
   }

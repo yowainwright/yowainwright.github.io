@@ -5,19 +5,6 @@ import { createRoot } from "react-dom/client";
 import { Maximize2 } from "lucide-react";
 import { MermaidDialog, PROCESSING_DELAYS, MERMAID_SELECTORS } from "../components/mermaid";
 
-const extractTitleFromContent = (chartParent: Element): string => {
-  let currentElement = chartParent.previousElementSibling;
-
-  while (currentElement) {
-    if (currentElement.tagName && /^H[1-6]$/.test(currentElement.tagName)) {
-      return currentElement.textContent?.trim() || '';
-    }
-    currentElement = currentElement.previousElementSibling;
-  }
-
-  return '';
-};
-
 const getTextDimensions = (textElement: Element) => {
   try {
     const bbox = (textElement as SVGTextElement).getBBox();
@@ -30,7 +17,7 @@ const getTextDimensions = (textElement: Element) => {
     if (hasBbox) {
       return { height: bbox.height, width: bbox.width };
     }
-  } catch (e) {
+  } catch {
     const computedStyle = window.getComputedStyle(textElement);
     const fontSize = parseFloat(computedStyle.fontSize) || 14;
     const textContent = textElement.textContent || '';
@@ -44,26 +31,6 @@ const getTextDimensions = (textElement: Element) => {
     };
   }
   return { height: 0, width: 0 };
-};
-
-const calculateNodeDimensions = (textElements: NodeListOf<Element>) => {
-  const textArray = Array.from(textElements);
-  const dimensions = textArray.map(textEl => getTextDimensions(textEl));
-
-  const heights = dimensions.map(d => d.height);
-  const widths = dimensions.map(d => d.width);
-
-  const maxTextHeight = Math.max(...heights, 20);
-  const maxTextWidth = Math.max(...widths, 80);
-
-  const padding = 32;
-  const minWidth = 120;
-  const minHeight = 80;
-
-  return {
-    height: Math.max(minHeight, maxTextHeight + padding),
-    width: Math.max(minWidth, maxTextWidth + padding)
-  };
 };
 
 const adjustRectDimensions = (rect: Element, requiredDimensions: { height: number; width: number }) => {
@@ -89,76 +56,6 @@ const adjustRectDimensions = (rect: Element, requiredDimensions: { height: numbe
   }
 
   return { heightAdjusted: heightNeedsAdjustment, widthAdjusted: widthNeedsAdjustment };
-};
-
-const adjustTextPosition = (node: Element, rectDimensions: { height: number; width: number }) => {
-  const textElements = Array.from(node.querySelectorAll('text, .label, .nodeLabel'));
-  const rect = node.querySelector('rect');
-
-  if (!rect) return;
-
-  const rectX = parseFloat(rect.getAttribute('x') || '0');
-  const rectY = parseFloat(rect.getAttribute('y') || '0');
-  const centerX = rectX + rectDimensions.width / 2;
-  const centerY = rectY + rectDimensions.height / 2;
-
-  textElements.forEach(textEl => {
-    textEl.setAttribute('x', centerX.toString());
-    textEl.setAttribute('y', centerY.toString());
-    textEl.setAttribute('text-anchor', 'middle');
-    textEl.setAttribute('dominant-baseline', 'central');
-  });
-};
-
-const adjustNodeHeights = (svg: SVGElement) => {
-  const nodes = Array.from(svg.querySelectorAll('.node'));
-
-  const adjustableNodes = nodes.filter(node => {
-    const foreignObjects = node.querySelectorAll('foreignObject');
-    const rectElements = node.querySelectorAll('rect');
-    const hasForeignObjects = foreignObjects.length > 0;
-    const hasRectElements = rectElements.length > 0;
-    return hasForeignObjects && hasRectElements;
-  });
-
-  const nodesWithDimensions = adjustableNodes.map(node => {
-    const foreignObjects = Array.from(node.querySelectorAll('foreignObject'));
-    const rectElements = Array.from(node.querySelectorAll('rect'));
-
-    const textContent = Array.from(node.querySelectorAll('p')).map(p => p.textContent || '').join(' ');
-    const estimatedWidth = textContent.length * 7.5;
-    const estimatedHeight = 60;
-
-    const requiredDimensions = {
-      height: Math.max(80, estimatedHeight),
-      width: Math.max(120, estimatedWidth + 32)
-    };
-
-    return { node, rectElements, foreignObjects, requiredDimensions };
-  });
-
-  const validNodes = nodesWithDimensions.filter(({ requiredDimensions }) =>
-    requiredDimensions.height > 0
-  );
-
-  validNodes.forEach(({ rectElements, foreignObjects, requiredDimensions }) => {
-    rectElements.forEach(rect => {
-      adjustRectDimensions(rect, requiredDimensions);
-    });
-
-    foreignObjects.forEach(foreignObj => {
-      foreignObj.setAttribute('width', requiredDimensions.width.toString());
-      foreignObj.setAttribute('height', requiredDimensions.height.toString());
-
-      const currentX = parseFloat(foreignObj.getAttribute('x') || '0');
-      const currentY = parseFloat(foreignObj.getAttribute('y') || '0');
-      const newX = currentX - (requiredDimensions.width / 2);
-      const newY = currentY - (requiredDimensions.height / 2);
-
-      foreignObj.setAttribute('x', newX.toString());
-      foreignObj.setAttribute('y', newY.toString());
-    });
-  });
 };
 
 export function useMermaidCharts() {
