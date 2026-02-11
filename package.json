@@ -28,6 +28,7 @@
     "lint": "bunx oxlint .",
     "lint:fix": "bunx oxlint --fix .",
     "prepare": "bun scripts/install-hooks.ts && bun run update && bun run maintain",
+    "postinstall": "playwright install chromium --with-deps",
     "start": "next start",
     "update": "codependence --update",
     "maintain": "pastoralist"
