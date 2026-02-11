@@ -21,7 +21,7 @@ export const AgentTaskCostChart = () => {
         const response = await fetch(SHARED_CHART_CONSTANTS.DATA_SOURCE);
         const agentData = await response.json();
         setData(agentData);
-      } catch (error) {
+      } catch {
         setData(SHARED_CHART_CONSTANTS.ERROR_HANDLING.FALLBACK_STATE);
       }
     };

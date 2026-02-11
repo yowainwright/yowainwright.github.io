@@ -46,7 +46,7 @@ export const TokenCostCalculator = () => {
         const response = await fetch('/data/expensive-ai.json');
         const data = await response.json();
         setAiData(data);
-      } catch (error) {
+      } catch {
         setAiData(null);
       }
     };

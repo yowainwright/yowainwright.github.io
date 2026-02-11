@@ -1,6 +1,5 @@
 import { withSentryConfig } from "@sentry/nextjs";
 import createMDX from "@next/mdx";
-import remarkMermaidjs from "remark-mermaidjs";
 
 const isProduction = process.env.NODE_ENV === "production";
 

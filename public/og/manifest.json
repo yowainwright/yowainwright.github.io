@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-11T05:48:55.896Z",
+  "generatedAt": "2026-02-11T06:02:53.309Z",
   "posts": [
     {
       "slug": "js-closure",
@@ -1311,7 +1311,7 @@
       "codeBlocks": [],
       "hasImages": false,
       "strategy": "chart",
-      "primaryAsset": "chart-GlobalGrowthChart"
+      "primaryAsset": "chart-WageStagnationChart"
     },
     {
       "slug": "making-a-js-plugin",

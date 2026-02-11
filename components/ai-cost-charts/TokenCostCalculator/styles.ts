@@ -1,5 +1,5 @@
 import { bemToCSS, type BEMBlock } from '../../../lib/style-generator/bem';
-import { COLORS, SPACING, TYPOGRAPHY, RADIUS, SHADOW } from '../../../lib/style-generator/tokens';
+import { SPACING, TYPOGRAPHY, RADIUS } from '../../../lib/style-generator/tokens';
 
 const calculator: BEMBlock = {
   base: {

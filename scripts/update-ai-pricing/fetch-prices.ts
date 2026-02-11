@@ -1,8 +1,6 @@
-import type { PricingData, OpenRouterResponse, ModelPricing } from './types';
+import type { PricingData, OpenRouterResponse } from './types';
 
 const OPENROUTER_MODELS_URL = 'https://openrouter.ai/api/v1/models';
-const ANTHROPIC_DOCS_URL = 'https://docs.anthropic.com/en/api/pricing';
-const OPENAI_PRICING_URL = 'https://openai.com/api/pricing/';
 
 async function fetchOpenRouterPricing(): Promise<Partial<PricingData>> {
   try {
@@ -30,7 +28,7 @@ async function fetchOpenRouterPricing(): Promise<Partial<PricingData>> {
     });
 
     return pricing;
-  } catch (error) {
+  } catch {
     return {};
   }
 }

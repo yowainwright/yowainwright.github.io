@@ -107,7 +107,7 @@ async function main() {
     await saveCachedPricing(pricing);
     await writeFile(JSON_PATH, generateJsonFile(pricing));
 
-  } catch (error) {
+  } catch {
     const cached = await loadCachedPricing();
     if (cached) {
       await writeFile(JSON_PATH, generateJsonFile(cached));
