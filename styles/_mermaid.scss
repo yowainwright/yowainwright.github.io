@@ -155,6 +155,38 @@
   stroke-width: 1px !important;
 }
 
+.mermaid-chart svg .node text,
+.mermaid-chart svg text {
+  dominant-baseline: middle !important;
+  text-anchor: middle !important;
+  font-size: 14px !important;
+  font-family: inherit !important;
+}
+
+/* Shared foreignObject styles for both chart and dialog */
+.mermaid-chart svg foreignObject,
+.mermaid-dialog svg foreignObject {
+  overflow: visible !important;
+}
+
+.mermaid-chart svg foreignObject div,
+.mermaid-chart svg foreignObject p,
+.mermaid-dialog svg foreignObject div,
+.mermaid-dialog svg foreignObject p {
+  overflow: visible !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+  line-height: 1.2 !important;
+  padding: 8px !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
 /* Apply same styles to dialog */
 .mermaid-dialog svg .node rect,
 .mermaid-dialog svg .node circle,
@@ -220,3 +252,12 @@
   stroke: var(--color-link-primary) !important;
   stroke-width: 1px !important;
 }
+
+.mermaid-dialog svg .node text,
+.mermaid-dialog svg text {
+  dominant-baseline: middle !important;
+  text-anchor: middle !important;
+  font-size: 14px !important;
+  font-family: inherit !important;
+}
+
