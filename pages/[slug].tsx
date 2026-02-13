@@ -2,7 +2,13 @@ import React, { useContext, useState, useEffect, Component } from "react";
 import dynamic from "next/dynamic";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import { getSinglePost, getAllPosts, markdownToHtml } from "../utils";
+import {
+  getSinglePost,
+  getAllPosts,
+  markdownToHtml,
+} from "../lib/server/markdown";
+import { Post } from "../lib/server/markdown/types";
+import { ensureArray } from "../lib/client/utils";
 import { GlobalState } from "./_app";
 import { Share } from "../components/Share";
 import { OgMeta } from "../components/OgMeta";
@@ -10,7 +16,7 @@ import { useCodeBlocks } from "../hooks/useCodeBlocks";
 import { useHeadingAnchors } from "../hooks/useHeadingAnchors";
 import { useScrollDepth, useReadTime } from "../hooks/useAnalytics";
 import { withMermaidCharts } from "../hooks/useMermaidCharts";
-import { trackView } from "../lib/analytics-firebase";
+import { trackView } from "../lib/client/analytics-firebase";
 import { InlineSource, SectionSources } from "../components/citations";
 import {
   RiseAndFallChart,
@@ -18,13 +24,13 @@ import {
   WageStagnationChart,
   IndustrialRevolutionChart,
   SWEMetricsGrid,
-} from "../components/swe-econ-25";
+} from "../components/content/us-swe-economy-2025";
 import {
   TokenCostChart,
   AgentTaskCostChart,
   ProjectCostComparisonChart,
   TokenCostCalculator,
-} from "../components/ai-cost-charts";
+} from "../components/content/expensive-ai";
 
 const THEME_DARK = "dark";
 const THEME_LIGHT = "light";
@@ -65,7 +71,7 @@ class ErrorBoundary extends Component<
   { children: React.ReactNode },
   { hasError: boolean }
 > {
-  constructor(props: any) {
+  constructor(props: { children: React.ReactNode }) {
     super(props);
     this.state = { hasError: false };
   }
@@ -74,7 +80,7 @@ class ErrorBoundary extends Component<
     return { hasError: true };
   }
 
-  componentDidCatch(error: any, errorInfo: any) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     import("@sentry/nextjs").then((Sentry) => {
       Sentry.captureException(error, { extra: errorInfo });
     });
@@ -203,6 +209,22 @@ const mdxComponents = {
   AgentTaskCostChart,
   ProjectCostComparisonChart,
   TokenCostCalculator,
+  pre: (props) => <pre className="post__code" {...props} />,
+  img: (props) => <img className="post__image" {...props} />,
+  table: (props) => <table className="post__table" {...props} />,
+  figure: ({ children, ...props }) => (
+    <figure {...props}>
+      {typeof children === "string" ? (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: children.replace(/<img /g, '<img class="post__image" '),
+          }}
+        />
+      ) : (
+        children
+      )}
+    </figure>
+  ),
 };
 
 const Post = ({
@@ -309,7 +331,7 @@ export const DateText = ({ date, slug }: DateTextProps) => {
 };
 
 export function getStaticPaths() {
-  const paths = getAllPosts("content").map(({ slug }: any) => `/${slug}`);
+  const paths = getAllPosts("content").map(({ slug }: Post) => `/${slug}`);
   return {
     paths,
     fallback: false,
@@ -326,44 +348,66 @@ export const getStaticProps = async ({ params }: StaticProps) => {
   const data = getSinglePost(params.slug, "content");
   const wordCount = (data.content || "").split(/\s+/).filter(Boolean).length;
 
+  const sanitizedFrontmatter = {
+    ...data.frontmatter,
+    description: data.frontmatter.description || null,
+    meta: data.frontmatter.meta || null,
+    tags: ensureArray(data.frontmatter.tags),
+  };
+
   if (data.isMdx) {
-    const remarkMermaidjs = (await import('remark-mermaidjs')).default;
+    const remarkMermaidjs = (await import("remark-mermaidjs")).default;
     const mdxSource = await serialize(data.content || "", {
       mdxOptions: {
         remarkPlugins: [
-          [remarkMermaidjs, {
-            theme: 'base',
-            themeVariables: {
-              primaryColor: '#f2f2f2',
-              primaryTextColor: '#000000',
-              primaryBorderColor: '#0000ff',
-              lineColor: '#0000ff',
-              secondaryColor: '#f9f9f9',
-              tertiaryColor: '#ffffff',
-              background: '#ffffff',
-              mainBkg: '#f2f2f2',
-              secondBkg: '#f9f9f9',
-              tertiaryBkg: '#ffffff',
-              nodeBorder: '#0000ff',
-              clusterBkg: '#f9f9f9',
-              clusterBorder: '#999999',
-              defaultLinkColor: '#0000ff',
-              titleColor: '#000000',
-              edgeLabelBackground: '#ffffff'
-            }
-          }]
+          [
+            remarkMermaidjs,
+            {
+              theme: "base",
+              themeVariables: {
+                primaryColor: "#f2f2f2",
+                primaryTextColor: "#000000",
+                primaryBorderColor: "#0000ff",
+                lineColor: "#0000ff",
+                secondaryColor: "#f9f9f9",
+                tertiaryColor: "#ffffff",
+                background: "#ffffff",
+                mainBkg: "#f2f2f2",
+                secondBkg: "#f9f9f9",
+                tertiaryBkg: "#ffffff",
+                nodeBorder: "#0000ff",
+                clusterBkg: "#f9f9f9",
+                clusterBorder: "#999999",
+                defaultLinkColor: "#0000ff",
+                titleColor: "#000000",
+                edgeLabelBackground: "#ffffff",
+              },
+            },
+          ],
         ],
         rehypePlugins: [],
       },
     });
     return {
-      props: { ...data, mdxSource, content: null, wordCount },
+      props: {
+        ...data,
+        frontmatter: sanitizedFrontmatter,
+        mdxSource,
+        content: null,
+        wordCount,
+      },
     };
   }
 
   const content = await markdownToHtml(data.content || "");
   return {
-    props: { ...data, content, mdxSource: null, wordCount },
+    props: {
+      ...data,
+      frontmatter: sanitizedFrontmatter,
+      content,
+      mdxSource: null,
+      wordCount,
+    },
   };
 };
 

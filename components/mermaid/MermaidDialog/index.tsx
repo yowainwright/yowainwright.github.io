@@ -1,35 +1,41 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
-import { X, ZoomIn, ZoomOut, Download } from 'lucide-react';
-import type { MermaidDialogProps } from '../types';
+import React, { useEffect, useState } from "react";
+import {
+  TransformWrapper,
+  TransformComponent,
+  ReactZoomPanPinchRef,
+} from "react-zoom-pan-pinch";
+import { X, ZoomIn, ZoomOut, Download } from "lucide-react";
+import type { MermaidDialogProps } from "../types";
 
 export const MermaidDialog: React.FC<MermaidDialogProps> = ({
   isOpen,
   onClose,
   svgContent,
-  title
+  title,
 }) => {
-  const [transformRef, setTransformRef] = useState<any>(null);
+  const [transformRef, setTransformRef] = useState<ReactZoomPanPinchRef | null>(
+    null,
+  );
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         onClose();
       }
     };
 
     if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'hidden';
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "unset";
     };
   }, [isOpen, onClose]);
 
@@ -45,20 +51,19 @@ export const MermaidDialog: React.FC<MermaidDialogProps> = ({
     }
   };
 
-
   const handleDownload = () => {
     const parser = new DOMParser();
-    const doc = parser.parseFromString(svgContent, 'image/svg+xml');
+    const doc = parser.parseFromString(svgContent, "image/svg+xml");
     const svg = doc.documentElement;
 
     const serializer = new XMLSerializer();
     const svgString = serializer.serializeToString(svg);
-    const blob = new Blob([svgString], { type: 'image/svg+xml' });
+    const blob = new Blob([svgString], { type: "image/svg+xml" });
     const url = URL.createObjectURL(blob);
 
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = url;
-    link.download = 'mermaid-diagram.svg';
+    link.download = "mermaid-diagram.svg";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -69,7 +74,10 @@ export const MermaidDialog: React.FC<MermaidDialogProps> = ({
 
   return (
     <div className="mermaid-dialog" onClick={onClose}>
-      <div className="mermaid-dialog-content" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="mermaid-dialog-content"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="mermaid-dialog-toolbar">
           <div className="mermaid-dialog-controls">
             <button

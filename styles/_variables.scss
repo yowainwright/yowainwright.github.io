@@ -1,14 +1,20 @@
-// fonts
+// ==============================================
+// Sass Variables for Build-time Values
+// ==============================================
+
+// Layout breakpoints
+$width-x-small: 30rem;
+$width-small: 48rem;
+$width-default: 35rem;
+$width-medium: 62rem;
+
+// Legacy variables (for backwards compatibility)
 $font-family-default: "Roboto", sans-serif;
 $font-family-headline: serif;
-$font-size-default: 1rem !default;
+$spacing-unit: 1rem;
+$spacing-unit-small: 0.5rem;
 
-// spacing
-$spacing-unit: 1rem !default;
-$spacing-unit-small: 0.5rem !default;
-$spacing-unit-large: 2rem;
-
-// measurement sizes (m- prefix)
+// Spacing scale (m- prefix for measurement)
 $m-xs: 0.25rem;
 $m-sm: 0.5rem;
 $m-md: 1rem;
@@ -19,13 +25,7 @@ $m-3xl: 4rem;
 $m-4xl: 5rem;
 $m-5xl: 10rem;
 
-// queries
-$width-default: 35rem !default;
-$width-medium: 62rem !default;
-$width-small: 48rem !default;
-$width-x-small: 30rem !default;
-
-// border-radius
+// Border radius scale
 $radius-sm: 0.25rem;
 $radius-md: 0.5rem;
 $radius-lg: 1rem;
@@ -36,8 +36,9 @@ $radius-full: 100%;
 // CSS Custom Properties for Theme Consistency
 // ============================================
 :root {
-  // Typography
+  // Typography scale
   --font-family-default: "Roboto", sans-serif;
+  --font-family-headline: serif;
 
   --font-size-base: 1rem;
   --font-size-large: 1.2rem;
@@ -99,11 +100,24 @@ $radius-full: 100%;
   --code-language-bg: rgba(59, 130, 246, 0.1);
   --code-language-text: #3b82f6;
 
-  // Spacing
+  // Layout spacing (semantic)
   --spacing-lg: 1.5rem;
 
   // Shadows & Effects
   --shadow-focus: 0 0 0 2px rgba(19, 16, 153, 0.1);
+
+  // Inverse variables for contrast
+  --color-bg-inverse: #040c20;
+  --color-text-inverse: #ffffff;
+  --color-border-inverse: #5b8fa8;
+
+  // Fixed preview colors (never change with theme)
+  --color-preview-light-bg: #ffffff;
+  --color-preview-light-text: #000000;
+  --color-preview-light-border: #999999;
+  --color-preview-dark-bg: #031030;
+  --color-preview-dark-text: #ffffff;
+  --color-preview-dark-border: #5b8fa8;
 
   // Mermaid Chart Colors
   --mermaid-node-fill: var(--color-bg-primary);
@@ -159,7 +173,12 @@ body.js-is-darkmode,
   // Dark mode shadows
   --shadow-focus: 0 0 0 2px rgba(91, 143, 168, 0.1);
 
-    // Mermaid Chart Colors
+  // Inverse variables for contrast
+  --color-bg-inverse: #ffffff;
+  --color-text-inverse: #000000;
+  --color-border-inverse: #999999;
+
+  // Mermaid Chart Colors
   --mermaid-node-fill: var(--color-bg-primary);
   --mermaid-node-stroke: var(--color-border-default);
   --mermaid-text-fill: var(--color-text-primary);

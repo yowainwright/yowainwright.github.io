@@ -26,11 +26,15 @@ export const BarChart = ({
   const state = useContext(GlobalState);
   const isDark = state?.isDarkMode ?? false;
   const colors = isDark ? CHART_COLORS.dark : CHART_COLORS.light;
-  const chartData = data[0]?.data || [];
+  const hasData = data && data.length > 0;
+  const chartData = hasData ? data[0].data || [] : [];
   const zebraColors = [colors.grey, colors.primary];
 
   return (
-    <div style={{ width: "100%", height, padding: "20px 0" }}>
+    <div
+      className="post__chart"
+      style={{ width: "100%", height, padding: "20px 0" }}
+    >
       {title && <div className="chart-title">{title}</div>}
       <ResponsiveContainer width="100%" height="100%">
         <RechartsBarChart data={chartData} margin={CHART_STYLES.margin}>

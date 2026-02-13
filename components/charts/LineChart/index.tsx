@@ -74,7 +74,7 @@ export const LineChart = ({
   const formattedData = formatChartData(data);
 
   return (
-    <div style={{ ...CHART_STYLES.container, height }}>
+    <div className="post__chart" style={{ ...CHART_STYLES.container, height }}>
       {title && <div className="chart-title">{title}</div>}
       <ResponsiveContainer width="100%" height="100%">
         <RechartsLineChart data={formattedData} margin={CHART_STYLES.margin}>

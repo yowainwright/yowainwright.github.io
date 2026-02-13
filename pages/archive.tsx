@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { BasicPost } from "../components/post/basic";
-import { getAllPostsArchive } from "../utils";
+import { getAllPostsArchive } from "../lib/server/markdown";
 interface Post {
   slug: string;
   frontmatter: {

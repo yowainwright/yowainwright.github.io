@@ -1,14 +1,14 @@
-import React from 'react';
-import type { WrappedYAxisLabelProps } from './types';
+import React from "react";
+import type { WrappedYAxisLabelProps } from "./types";
 
 const wrapText = (text: string, maxWidth: number = 100): string[] => {
-  const words = text.split(' ');
+  const words = text.split(" ");
   const lines: string[] = [];
   let currentLine = words[0];
 
   for (let i = 1; i < words.length; i++) {
     const word = words[i];
-    const testLine = currentLine + ' ' + word;
+    const testLine = currentLine + " " + word;
 
     if (testLine.length * 6 < maxWidth) {
       currentLine = testLine;

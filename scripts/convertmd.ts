@@ -2,7 +2,7 @@
 
 import { existsSync, readdirSync, renameSync } from "fs";
 import { extname, join } from "path";
-import { createLogger } from "../lib/logger";
+import { createLogger } from "../lib/server/logger";
 
 const log = createLogger("convertmd");
 
