@@ -5,10 +5,9 @@ import matter from "gray-matter";
 import { ImageResponse } from "@vercel/og";
 import OgImage from "../../components/og";
 import { OG_DIMENSIONS } from "../../components/og/constants";
-import { OUTPUT_FORMATS } from "./constants";
 import { Post } from "./types";
 import { extractChartData } from "./charts";
-import { extractContentForOg, extractAllContentForOg } from "./utils";
+import { extractAllContentForOg } from "./utils";
 
 function getAllPostsForGeneration(): Post[] {
   const contentDir = join(process.cwd(), "content");

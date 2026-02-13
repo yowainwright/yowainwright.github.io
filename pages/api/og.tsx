@@ -14,7 +14,7 @@ export default function handler(req: NextRequest) {
       <OgImage title={title} slug={slug} type={type} />,
       OG_DIMENSIONS,
     );
-  } catch (e) {
+  } catch {
     return new Response("Failed to generate image", {
       status: 500,
     });

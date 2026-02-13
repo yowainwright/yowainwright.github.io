@@ -9,64 +9,6 @@ import {
   MERMAID_SELECTORS,
 } from "../components/mermaid";
 
-const getTextDimensions = (textElement: Element) => {
-  try {
-    const bbox = (textElement as SVGTextElement).getBBox();
-    const bboxExists = bbox !== null;
-    const heightIsValid = bbox?.height > 0;
-    const widthIsValid = bbox?.width > 0;
-    const validDimensions = [bboxExists, heightIsValid, widthIsValid];
-    const hasBbox = validDimensions.every(Boolean);
-
-    if (hasBbox) {
-      return { height: bbox.height, width: bbox.width };
-    }
-  } catch {
-    const computedStyle = window.getComputedStyle(textElement);
-    const fontSize = parseFloat(computedStyle.fontSize) || 14;
-    const textContent = textElement.textContent || "";
-    const textLength = textContent.length;
-    const lineHeight = fontSize * 1.2;
-    const estimatedWidth = textLength * fontSize * 0.6;
-
-    return {
-      height: lineHeight,
-      width: estimatedWidth,
-    };
-  }
-  return { height: 0, width: 0 };
-};
-
-const adjustRectDimensions = (
-  rect: Element,
-  requiredDimensions: { height: number; width: number },
-) => {
-  const currentHeight = parseFloat(rect.getAttribute("height") || "0");
-  const currentWidth = parseFloat(rect.getAttribute("width") || "0");
-
-  const heightNeedsAdjustment = currentHeight < requiredDimensions.height;
-  const widthNeedsAdjustment = currentWidth < requiredDimensions.width;
-
-  if (heightNeedsAdjustment) {
-    rect.setAttribute("height", requiredDimensions.height.toString());
-  }
-
-  if (widthNeedsAdjustment) {
-    const newWidth = requiredDimensions.width.toString();
-    const currentX = parseFloat(rect.getAttribute("x") || "0");
-    const widthDifference = requiredDimensions.width - currentWidth;
-    const xOffset = widthDifference / 2;
-    const newX = currentX - xOffset;
-
-    rect.setAttribute("width", newWidth);
-    rect.setAttribute("x", newX.toString());
-  }
-
-  return {
-    heightAdjusted: heightNeedsAdjustment,
-    widthAdjusted: widthNeedsAdjustment,
-  };
-};
 
 export function useMermaidCharts() {
   const [dialogState, setDialogState] = useState<{
