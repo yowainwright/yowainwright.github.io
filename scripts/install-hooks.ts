@@ -2,7 +2,7 @@
 
 import { existsSync, writeFileSync, chmodSync, mkdirSync } from "fs";
 import { join } from "path";
-import { createLogger } from "../lib/logger";
+import { createLogger } from "../lib/server/logger";
 
 const log = createLogger("install-hooks");
 

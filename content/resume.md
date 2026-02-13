@@ -8,7 +8,7 @@ meta: >-
   living in Los Angeles.
 ---
 
-I’ve been building and maintaining tools to make life a little easier for 15+ years with extensive experience in JavaScript/TypeScript. 
+I’ve been building and maintaining tools to make life a little easier for 15+ years with extensive experience in JavaScript/TypeScript.
 I enjoy and have deployed to production in other languages such as Go, and Python; and work acorss codebases as much as possible with tools such as Kubernetes; always looking to learn more\!
 
 ---
@@ -20,8 +20,8 @@ I enjoy and have deployed to production in other languages such as Go, and Pytho
 Principal Software Engineer
 <time>June 2025-present</time>
 
-- Rebuilt Lokker’s [Privacy Insights product](https://lokker.com/online-privacy-solutions/detection-monitoring/), think DataDog for privacy, using TypeScript, React, Fastify, Bun, and Claude  
-- Refactored [Guardian,](https://lokker.com/online-privacy-solutions/protection-blocking/) a 3rd-party script sanitizer, to be more performant and scalable using TypeScript and Cloudflare workers  
+- Rebuilt Lokker’s [Privacy Insights product](https://lokker.com/online-privacy-solutions/detection-monitoring/), think DataDog for privacy, using TypeScript, React, Fastify, Bun, and Claude
+- Refactored [Guardian,](https://lokker.com/online-privacy-solutions/protection-blocking/) a 3rd-party script sanitizer, to be more performant and scalable using TypeScript and Cloudflare workers
 - Built out observability with Prometheus and Grafana to track product health
 
 ## [GoodRx](https://www.goodrx.com/)
@@ -29,8 +29,8 @@ Principal Software Engineer
 Senior Security Software Engineer/Senior Engineer 2
 <time>December 2021-June 2025</time>
 
-- Kept the dev lifecycle alive by maintaining [Lifecycle](https://github.com/GoodRxOSS/lifecycle), [GoodRx's ephemeral environment tool](https://investors.goodrx.com/news-releases/news-release-details/goodrx-open-sources-lifecycle-support-innovation-software), supporting hundreds of deploys and developers a day in TypeScript, Node.js, Docker, Kubernetes, and AWS.  
-- Built an automated scripting tool for executing security and privacy monitoring scripts using Node, AWS Lambda, and a little React app to ensure it’s working.  
+- Kept the dev lifecycle alive by maintaining [Lifecycle](https://github.com/GoodRxOSS/lifecycle), [GoodRx's ephemeral environment tool](https://investors.goodrx.com/news-releases/news-release-details/goodrx-open-sources-lifecycle-support-innovation-software), supporting hundreds of deploys and developers a day in TypeScript, Node.js, Docker, Kubernetes, and AWS.
+- Built an automated scripting tool for executing security and privacy monitoring scripts using Node, AWS Lambda, and a little React app to ensure it’s working.
 - Implemented and maintained key chunks of GoodRx’s [global opt-out](https://www.goodrx.com/about/privacy/yourprivacychoices) architecture using Go and TypeScript with GraphQL and gRPC protocols, enabling customers to privately manage their data.
 
 ## [Komodo Health](https://www.komodohealth.com/)
@@ -46,17 +46,17 @@ Senior Software Engineer
 Senior Engineer/Engineering Manager
 <time>February 2020-May 2021</time>
 
-- Built a payment platform for big-ticket online purchases.  
-- Set up a monorepo so that the team could collaborate better; frontend (React, TypeScript) and backend (Node.js, TypeScript) really sped up productivity. 
+- Built a payment platform for big-ticket online purchases.
+- Set up a monorepo so that the team could collaborate better; frontend (React, TypeScript) and backend (Node.js, TypeScript) really sped up productivity.
 
 ## [Dollar Shave Club](https://www.dollarshaveclub.com/)
 
 Frontend Software Engineer
 <time>March 2016-February 2020</time>
 
-- Built a headless CMS; helped streamline CI/CD.  
-- Set up content infrastructure that made deploys less painful.  
-- Built a dynamic, internationalized landing page system.  
+- Built a headless CMS; helped streamline CI/CD.
+- Set up content infrastructure that made deploys less painful.
+- Built a dynamic, internationalized landing page system.
 - Released and maintained a bunch of fun open-source products while there: [stickybits](https://github.com/dollarshaveclub/stickybits), [shave](https://github.com/dollarshaveclub/shave), [reframe.js](https://github.com/dollarshaveclub/reframe.js), and more.
 
 ## [Hollywood Reporter](https://www.hollywoodreporter.com)/[Billboard](https://www.billboard.com/)

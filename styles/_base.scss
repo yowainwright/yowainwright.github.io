@@ -1,4 +1,4 @@
-@use "variables";
+@use "variables" as *;
 
 html,
 body {
@@ -19,13 +19,13 @@ body {
 h2,
 ul,
 ol {
-  margin-bottom: variables.$spacing-unit;
+  margin-bottom: $spacing-unit;
 }
 
 ul,
 ol {
   clear: both;
-  margin-top: variables.$spacing-unit;
+  margin-top: $spacing-unit;
   padding-left: 1rem;
 
   li > p {
@@ -46,12 +46,12 @@ h1,
   margin: 0;
   margin-bottom: 1rem;
 
-  @media screen and (min-width: variables.$width-small) {
+  @media screen and (min-width: $width-small) {
     font-size: var(--font-size-3xl);
     margin-bottom: 2rem;
   }
 
-  @media screen and (min-width: variables.$width-medium) {
+  @media screen and (min-width: $width-medium) {
     font-size: var(--font-size-5xl);
   }
 }
@@ -62,7 +62,7 @@ h1,
 
 h2 {
   font-size: var(--font-size-xl);
-  @media screen and (min-width: variables.$width-small) {
+  @media screen and (min-width: $width-small) {
     font-size: calc(var(--font-size-xl) * 1.2);
   }
 }
@@ -75,7 +75,7 @@ h3 {
     font-weight: var(--font-weight-black);
     margin: 3rem auto;
 
-    @media screen and (min-width: variables.$width-small) {
+    @media screen and (min-width: $width-small) {
       font-size: var(--font-size-3xl);
     }
   }
@@ -108,7 +108,7 @@ li {
 
 li {
   line-height: var(--line-height-relaxed);
-  margin-bottom: variables.$spacing-unit-small;
+  margin-bottom: $spacing-unit-small;
 }
 
 p {
@@ -172,7 +172,7 @@ blockquote {
       }
     }
 
-    @media screen and (min-width: variables.$width-small) {
+    @media screen and (min-width: $width-small) {
       line-height: var(--line-height-extra-loose);
       margin: 3rem 0;
     }
@@ -181,7 +181,7 @@ blockquote {
 
 figure {
   margin: 3rem -1.25rem;
-  @media screen and (min-width: variables.$width-small) {
+  @media screen and (min-width: $width-small) {
     margin: 3rem 0;
   }
 }
@@ -232,7 +232,7 @@ table {
   max-width: calc(100vw - 2rem);
   overflow-x: scroll;
 
-  @media screen and (min-width: variables.$width-small) {
+  @media screen and (min-width: $width-small) {
     display: table;
     max-width: 43.75rem; // 700px
     overflow-x: auto;
@@ -267,7 +267,7 @@ tr {
   border-bottom: 1px solid var(--color-border-black);
   padding: 1.5rem 0;
 
-  @media screen and (min-width: variables.$width-small) {
+  @media screen and (min-width: $width-small) {
     border-bottom: 0;
     padding-bottom: 0;
   }
@@ -279,17 +279,17 @@ tr {
   position: relative;
   width: 100%;
 
-  @media screen and (min-width: variables.$width-small) {
+  @media screen and (min-width: $width-small) {
     max-width: 80%;
   }
 
-  @media screen and (min-width: variables.$width-medium) {
+  @media screen and (min-width: $width-medium) {
     max-width: 70%;
   }
 
   &--intro {
     margin-top: 4rem;
-    @media screen and (min-width: variables.$width-small) {
+    @media screen and (min-width: $width-small) {
       margin-top: 0;
     }
   }

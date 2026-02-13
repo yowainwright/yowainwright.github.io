@@ -1,4 +1,4 @@
-@use "variables";
+@use "variables" as *;
 
 .admin {
   max-width: 1200px;
@@ -51,7 +51,7 @@
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
-    font-family: variables.$font-family-default;
+    font-family: $font-family-default;
     font-size: 0.875rem;
 
     &:hover {

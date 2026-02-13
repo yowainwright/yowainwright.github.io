@@ -1,147 +1,147 @@
-import { bemToCSS } from '../../lib/style-generator/bem';
-import type { BEMBlock } from '../../lib/style-generator/types';
+import { bemToCSS } from "../../lib/client/style-generator/bem";
+import type { BEMBlock } from "../../lib/client/style-generator/types";
 
 export const PROCESSING_DELAYS = {
   INITIAL: 200,
   DELAYED: 1000,
   DEBOUNCE: 200,
-  OBSERVER_ROOT_MARGIN: '300px'
+  OBSERVER_ROOT_MARGIN: "300px",
 } as const;
 
 export const MERMAID_SELECTORS = {
-  ALL_SVGS: 'svg',
-  POST_CONTENT: '.post__content',
-  MERMAID_CODE: 'pre code.language-mermaid, code.language-mermaid',
-  MERMAID_PROCESSED: 'mermaid-processed',
-  MERMAID_CONTAINER: 'mermaid-container'
+  ALL_SVGS: "svg",
+  POST_CONTENT: ".post__content",
+  MERMAID_CODE: "pre code.language-mermaid, code.language-mermaid",
+  MERMAID_PROCESSED: "mermaid-processed",
+  MERMAID_CONTAINER: "mermaid-container",
 } as const;
 
 export const MERMAID_BEM: BEMBlock = {
   base: {
-    position: 'relative',
-    margin: '2rem 0',
-    padding: '1.5rem',
-    border: '1px solid var(--color-border-light)',
-    borderRadius: '8px',
-    background: 'var(--color-bg-primary)',
-    cursor: 'pointer',
-    transition: 'all 0.2s ease',
-    overflow: 'hidden'
+    position: "relative",
+    margin: "2rem 0",
+    padding: "1.5rem",
+    border: "1px solid var(--color-border-light)",
+    borderRadius: "8px",
+    background: "var(--color-bg-primary)",
+    cursor: "pointer",
+    transition: "all 0.2s ease",
+    overflow: "hidden",
   },
   elements: {
-    'expand-hint': {
-      position: 'absolute',
-      top: '12px',
-      right: '12px',
-      opacity: '0.6',
-      transition: 'opacity 0.2s ease',
-      pointerEvents: 'none',
-      zIndex: '10'
+    "expand-hint": {
+      position: "absolute",
+      top: "12px",
+      right: "12px",
+      opacity: "0.6",
+      transition: "opacity 0.2s ease",
+      pointerEvents: "none",
+      zIndex: "10",
     },
     content: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: '100%',
-      minHeight: '200px',
-      overflow: 'auto'
-    }
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "100%",
+      minHeight: "200px",
+      overflow: "auto",
+    },
   },
   modifiers: {
     hover: {
-      borderColor: 'var(--color-link-primary)',
-      boxShadow: '0 4px 12px rgba(0, 0, 255, 0.15)'
-    }
-  }
+      borderColor: "var(--color-link-primary)",
+      boxShadow: "0 4px 12px rgba(0, 0, 255, 0.15)",
+    },
+  },
 };
 
 export const MERMAID_DIALOG_BEM: BEMBlock = {
   base: {
-    position: 'fixed',
-    top: '0',
-    left: '0',
-    right: '0',
-    bottom: '0',
-    background: 'rgba(0, 0, 0, 0.85)',
-    zIndex: '1000',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '1rem'
+    position: "fixed",
+    top: "0",
+    left: "0",
+    right: "0",
+    bottom: "0",
+    background: "rgba(0, 0, 0, 0.85)",
+    zIndex: "1000",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "1rem",
   },
   elements: {
     content: {
-      position: 'relative',
-      background: 'var(--color-bg-primary)',
-      borderRadius: '12px',
-      width: '95vw',
-      height: '95vh',
-      maxWidth: '95vw',
-      maxHeight: '95vh',
-      overflow: 'hidden',
-      boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)',
-      display: 'flex',
-      flexDirection: 'column'
+      position: "relative",
+      background: "var(--color-bg-primary)",
+      borderRadius: "12px",
+      width: "95vw",
+      height: "95vh",
+      maxWidth: "95vw",
+      maxHeight: "95vh",
+      overflow: "hidden",
+      boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
+      display: "flex",
+      flexDirection: "column",
     },
     toolbar: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      padding: '1rem',
-      borderBottom: '1px solid var(--color-border-light)',
-      background: 'var(--color-bg-secondary)'
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding: "1rem",
+      borderBottom: "1px solid var(--color-border-light)",
+      background: "var(--color-bg-secondary)",
     },
     controls: {
-      display: 'flex',
-      gap: '0.5rem'
+      display: "flex",
+      gap: "0.5rem",
     },
     button: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      width: '40px',
-      height: '40px',
-      border: '1px solid var(--color-border-light)',
-      borderRadius: '6px',
-      background: 'var(--color-bg-primary)',
-      color: 'var(--color-text-primary)',
-      cursor: 'pointer',
-      transition: 'all 0.2s ease',
-      fontSize: '0'
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "40px",
+      height: "40px",
+      border: "1px solid var(--color-border-light)",
+      borderRadius: "6px",
+      background: "var(--color-bg-primary)",
+      color: "var(--color-text-primary)",
+      cursor: "pointer",
+      transition: "all 0.2s ease",
+      fontSize: "0",
     },
     close: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      width: '40px',
-      height: '40px',
-      border: '1px solid var(--color-border-light)',
-      borderRadius: '6px',
-      background: 'var(--color-bg-primary)',
-      color: 'var(--color-text-primary)',
-      cursor: 'pointer',
-      transition: 'all 0.2s ease',
-      fontSize: '0'
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "40px",
+      height: "40px",
+      border: "1px solid var(--color-border-light)",
+      borderRadius: "6px",
+      background: "var(--color-bg-primary)",
+      color: "var(--color-text-primary)",
+      cursor: "pointer",
+      transition: "all 0.2s ease",
+      fontSize: "0",
     },
-    'svg-container': {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      width: '100%',
-      height: '100%'
-    }
+    "svg-container": {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "100%",
+      height: "100%",
+    },
   },
   modifiers: {
-    'button-hover': {
-      background: 'var(--color-bg-hover)',
-      transform: 'scale(1.05)'
-    }
-  }
+    "button-hover": {
+      background: "var(--color-bg-hover)",
+      transform: "scale(1.05)",
+    },
+  },
 };
 
 export function generateMermaidCSS(): string {
-  const mermaidCSS = bemToCSS('mermaid-chart', MERMAID_BEM);
-  const dialogCSS = bemToCSS('mermaid-dialog', MERMAID_DIALOG_BEM);
+  const mermaidCSS = bemToCSS("mermaid-chart", MERMAID_BEM);
+  const dialogCSS = bemToCSS("mermaid-dialog", MERMAID_DIALOG_BEM);
 
   const additionalCSS = `
 .mermaid-chart:hover .mermaid-chart__expand-hint {
@@ -218,5 +218,5 @@ export function generateMermaidCSS(): string {
 }
 `;
 
-  return [mermaidCSS, dialogCSS, additionalCSS].join('\n\n');
+  return [mermaidCSS, dialogCSS, additionalCSS].join("\n\n");
 }

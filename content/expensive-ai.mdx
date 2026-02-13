@@ -2,15 +2,19 @@
 title: "When the AI Token Gravy Train Stops: My approximately $150 single hour Claude Code Cost Wake-up Call"
 date: "2026-01-21"
 path: "/expensive-ai"
-meta:
-  "This post covers my AI token usage journey and what happened when limitless AI usage hit reality and became limited. I go into my evolution, how it happened, and what I am doing to fix the issue"
+meta: "This post covers my AI token usage journey and what happened when limitless AI usage hit reality and became limited. I go into my evolution, how it happened, and what I am doing to fix the issue"
 categories:
   - code
   - ai
   - claude
 ---
 
-import { TokenCostChart, AgentTaskCostChart, ProjectCostComparisonChart, TokenCostCalculator } from "../components/ai-cost-charts";
+import {
+  TokenCostChart,
+  AgentTaskCostChart,
+  ProjectCostComparisonChart,
+  TokenCostCalculator,
+} from "../components/content/expensive-ai";
 
 As a software engineer in 2026, I use AI all the time.
 My most active Github repository may be Claude config repo.
@@ -27,8 +31,13 @@ And. I've embarrassed myself by submitting pull requests where I've proved that 
 This _is_ new developer tools. Amiright?
 
 <figure>
-    <img src="https://yowainwright.imgix.net/expensive-ai/claude-cost.png" alt="approximate cost of my work on claude per week" />
-  <figcaption>This cost was my Claude Usage actual cost in October 2025</figcaption>
+  <img
+    src="https://yowainwright.imgix.net/expensive-ai/claude-cost.png"
+    alt="approximate cost of my work on claude per week"
+  />
+  <figcaption>
+    This cost was my Claude Usage actual cost in October 2025
+  </figcaption>
 </figure>
 
 ---
@@ -99,6 +108,7 @@ flowchart TD
     J --> K
     K --> L[$150 Hit → Manual Rescue]
 ```
+
 ---
 
 As the messaging got more persistent about my usage, I observed I kept getting shifted to different models—or it felt like it.
@@ -123,7 +133,7 @@ Then two pretty difficult things happened at once.
 
 1. The degraded reactive typescript expert edited code to fix `any` type errors which caused tests to fail, and
 2. Claude told me my usage was fully used up.
-I had to pay more.
+   I had to pay more.
 
 I wasn't too worried. Initially.<br />
 Maybe a little type casting and slightly lower test coverage than I had hoped. But, a benefit of AI engineering is providing proof of what was done is easier.
@@ -215,4 +225,3 @@ The sequential pattern provides more control and deeper understanding for me and
 **An article written by [Nicholas C. Zakas](https://humanwhocodes.com/blog/), code god creator of [eslint](https://eslint.org/) and inspirational person on multiple levels wrote [this post](https://newsletter.humanwhocodes.com/posts/expensive-ai-is-coming) which clear illustrates the issue.
 I'm also continually following [crush](https://github.com/charmbracelet/crush), [ollama](https://ollama.com/), and [opencode](https://opencode.ai/) to try and insure I have some idea of what's going on!
 I used claude writing this. I wrote most of the article by hand and used Claude Code to ensure a decent parallel between my experience and yours could be drawn. I also used Claude to gather data so my problem can be clearer to you.**
-

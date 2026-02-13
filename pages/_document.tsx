@@ -28,10 +28,7 @@ export default function Document() {
           content="Jeffry.in is the daily changelog of Jeffry Wainwright, an engineer living in California."
         />
         <meta property="og:site_name" content="Jeffry.in" />
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"

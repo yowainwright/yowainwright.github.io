@@ -1,8 +1,8 @@
-import { writeFileSync } from 'fs';
-import { join } from 'path';
-import { generateMermaidCSS } from '../components/mermaid/constants';
+import { writeFileSync } from "fs";
+import { join } from "path";
+import { generateMermaidCSS } from "../components/mermaid/constants";
 
-const outputPath = join(process.cwd(), 'styles', '_mermaid.scss');
+const outputPath = join(process.cwd(), "styles", "_mermaid.scss");
 const css = generateMermaidCSS();
 
 const header = `// Auto-generated mermaid styles
@@ -12,4 +12,4 @@ const header = `// Auto-generated mermaid styles
 
 writeFileSync(outputPath, header + css);
 
-console.log('✅ Generated mermaid styles at', outputPath);
+console.log("✅ Generated mermaid styles at", outputPath);

@@ -16,6 +16,17 @@ I've presented at [JS.LA](https://www.youtube.com/watch?v=8YQ8BGSOsyE) on the be
 
 I'm currently a Principal Engineer at [Lokker](https://lokker.com), working on data privacy compliance software.
 
+## Post Structure
+
+New posts follow this organizational pattern:
+
+- `content/[slug].{md,mdx}` // post
+- `components/content/[slug]/` // react components
+- `public/data/[slug].json` // static data
+- `public/assets/[slug]/` // images
+- `public/assets/og/[slug]/` // generated images
+- `scripts/content/[slug]/` // content-specific build scripts
+
 ## Former Work
 
 Formally, I've worked at/on:

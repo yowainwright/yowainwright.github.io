@@ -3,21 +3,24 @@
 
 .mermaid-chart {
   position: relative;
-  margin: 2rem 0; padding: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
   border: 1px solid var(--color-border-light);
   border-radius: 8px;
   background: var(--color-bg-primary);
   cursor: pointer;
-  transition: all 0.2s ease; overflow: hidden;
+  transition: all 0.2s ease;
+  overflow: hidden;
 }
 
 .mermaid-chart__expand-hint {
   position: absolute;
-  top: 12px; right: 12px;
+  top: 12px;
+  right: 12px;
   opacity: 0.6;
-  transition:
-  opacity 0.2s ease;
-  pointer-events: none; z-index: 10;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
 }
 
 .mermaid-chart__content {
@@ -51,8 +54,10 @@
 .mermaid-dialog__content {
   position: relative;
   background: var(--color-bg-primary);
-  border-radius: 12px; width: 95vw;
-  height: 95vh; max-width: 95vw;
+  border-radius: 12px;
+  width: 95vw;
+  height: 95vh;
+  max-width: 95vw;
   max-height: 95vh;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -101,11 +106,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px; height: 40px;
+  width: 40px;
+  height: 40px;
   border: 1px solid var(--color-border-light);
   border-radius: 6px;
   background: var(--color-bg-primary);
-  color: var(--color-text-primary); cursor: pointer;
+  color: var(--color-text-primary);
+  cursor: pointer;
   transition: all 0.2s ease;
   font-size: 0;
 }
@@ -251,7 +258,8 @@
     stroke-width: 2px !important;
   }
 
-  .actor text, text.actor tspan {
+  .actor text,
+  text.actor tspan {
     color: var(--mermaid-text-fill) !important;
     fill: var(--mermaid-text-fill) !important;
   }
@@ -316,4 +324,3 @@
     box-sizing: border-box !important;
   }
 }
-

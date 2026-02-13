@@ -1,0 +1,67 @@
+procs:
+  next:
+    shell: "next dev --port 34729"
+    autostart: true
+    autorestart: true
+
+  css-watch:
+    shell: "sass --watch --style=compressed styles/main.scss:public/assets/jeffry.in.css"
+    autostart: true
+    autorestart: true
+
+  component-styles:
+    shell: "bun scripts/generate-component-styles.ts && echo 'Component styles generated'"
+    autostart: true
+    autorestart: false
+
+  typecheck:
+    shell: "bunx tsc --noEmit --watch --pretty"
+    autostart: true
+    autorestart: true
+
+  next-typecheck:
+    shell: "bunx next lint --fix"
+    autostart: false
+    autorestart: false
+
+  lint-fix:
+    shell: "bunx oxlint --fix ."
+    autostart: false
+    autorestart: false
+
+  prettier-watch:
+    shell: "bunx prettier --write . --watch"
+    autostart: true
+    autorestart: true
+
+  pricing-update:
+    shell: "while true; do bun scripts/update-ai-pricing/index.ts; sleep 3600; done"
+    autostart: false
+    autorestart: true
+
+  clean-build:
+    shell: "rm -rf .next out && echo 'Build cache cleaned'"
+    autostart: false
+    autorestart: false
+
+  clean-all:
+    shell: "rm -rf .next out node_modules && echo 'All dependencies and cache cleaned'"
+    autostart: false
+    autorestart: false
+
+  rebuild-assets:
+    shell: "bun run build:css && bun run build:og && echo 'Assets rebuilt'"
+    autostart: false
+    autorestart: false
+
+  full-rebuild:
+    shell: "rm -rf .next out && bun run build"
+    autostart: false
+    autorestart: false
+
+  generate-screenshots:
+    shell: "bun scripts/generate-og-screenshots/index.ts"
+    autostart: false
+    autorestart: false
+
+hide_keymap_window: false

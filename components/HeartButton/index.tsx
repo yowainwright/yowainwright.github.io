@@ -8,12 +8,18 @@ import {
   DatabaseReference,
 } from "firebase/database";
 import * as Sentry from "@sentry/nextjs";
-import { db } from "../../lib/firebase";
-import { trackLove } from "../../lib/analytics-firebase";
-import { formatCount } from "../../lib/format-count";
+import { db } from "../../lib/client/firebase";
+import { trackLove } from "../../lib/client/analytics-firebase";
+import { formatCount } from "../../lib/client/format-count";
 import { PixelIcon } from "../PixelIcon";
-
-const MAX_CLICKS = 10;
+import {
+  MAX_CLICKS,
+  BASE_PARTICLE_COUNT,
+  PARTICLE_MULTIPLIER,
+  PARTICLE_CLEANUP_DELAY,
+  ANIMATION_DURATION,
+  HEART_SIZE_INCREMENT,
+} from "./constants";
 
 interface HeartButtonProps {
   slug: string;
@@ -38,6 +44,7 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const particleId = useRef(0);
+  const timeoutIds = useRef<Set<NodeJS.Timeout>>(new Set());
 
   const storageKey = `heart-${slug}`;
   const hasMaxed = userClicks >= MAX_CLICKS;
@@ -58,11 +65,16 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
       setIsLoading(false);
     });
 
-    return () => unsubscribe();
+    return () => {
+      unsubscribe();
+      timeoutIds.current.forEach(clearTimeout);
+      timeoutIds.current.clear();
+    };
   }, [slug, storageKey]);
 
   const spawnParticles = (clickCount: number) => {
-    const particleCount = 3 + clickCount * 2;
+    const particleCount =
+      BASE_PARTICLE_COUNT + clickCount * PARTICLE_MULTIPLIER;
     const newParticles: Particle[] = [];
     for (let i = 0; i < particleCount; i++) {
       newParticles.push({
@@ -73,9 +85,11 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
     }
     const newIds = new Set(newParticles.map((p) => p.id));
     setParticles((prev) => [...prev, ...newParticles]);
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setParticles((prev) => prev.filter((p) => !newIds.has(p.id)));
-    }, 800);
+      timeoutIds.current.delete(timeoutId);
+    }, PARTICLE_CLEANUP_DELAY);
+    timeoutIds.current.add(timeoutId);
   };
 
   const handleClick = async () => {
@@ -84,7 +98,11 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
     const newClickCount = userClicks + 1;
     spawnParticles(newClickCount);
     setIsAnimating(true);
-    setTimeout(() => setIsAnimating(false), 150);
+    const animationTimeoutId = setTimeout(
+      () => setIsAnimating(false),
+      ANIMATION_DURATION,
+    );
+    timeoutIds.current.add(animationTimeoutId);
 
     setUserClicks(newClickCount);
     localStorage.setItem(storageKey, String(newClickCount));
@@ -101,7 +119,7 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
   };
 
   const countText = isLoading ? "" : count > 0 ? formatCount(count) : "";
-  const heartSize = hasMaxed ? 2 : 2 + userClicks * 0.15;
+  const heartSize = hasMaxed ? 2 : 2 + userClicks * HEART_SIZE_INCREMENT;
   const hasClicked = userClicks > 0;
   const heartColor = hasClicked ? "#e53935" : "currentColor";
   const buttonClass = `share__button heart-button ${hasClicked ? "heart-button--active" : ""} ${hasMaxed ? "heart-button--maxed" : ""} ${isAnimating ? "heart-button--pulse" : ""}`;

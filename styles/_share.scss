@@ -1,9 +1,9 @@
-@use "variables";
+@use "variables" as *;
 
 .share {
   padding: 0;
 
-  @media screen and (min-width: variables.$width-medium) {
+  @media screen and (min-width: $width-medium) {
     padding: 1rem 0;
   }
 
@@ -12,7 +12,7 @@
     padding: 0;
     text-align: center;
 
-    @media screen and (min-width: variables.$width-medium) {
+    @media screen and (min-width: $width-medium) {
       border-top: 1px solid var(--color-border-default);
       padding: 0.5rem 0;
       margin-top: 0;
@@ -34,7 +34,7 @@
       padding-right: 0;
     }
 
-    @media screen and (min-width: variables.$width-medium) {
+    @media screen and (min-width: $width-medium) {
       padding: 0.5rem 1rem 0 0;
 
       &:last-of-type {
@@ -50,7 +50,7 @@
     background: 0;
     border: 0;
     color: var(--color-link-primary);
-    font-family: variables.$font-family-default;
+    font-family: $font-family-default;
     margin: 0;
 
     .js-is-darkmode & {
@@ -85,7 +85,7 @@
   &__label {
     display: none;
 
-    @media screen and (min-width: variables.$width-medium) {
+    @media screen and (min-width: $width-medium) {
       display: inline;
     }
   }

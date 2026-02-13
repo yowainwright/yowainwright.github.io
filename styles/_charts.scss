@@ -1,4 +1,4 @@
-@use "variables";
+@use "variables" as *;
 
 .metrics-grid {
   display: grid;
@@ -6,7 +6,7 @@
   margin: 2rem 0;
   grid-template-columns: 1fr;
 
-  @media screen and (min-width: variables.$width-medium) {
+  @media screen and (min-width: $width-medium) {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -41,8 +41,6 @@ $chart-container-padding: 20px 0;
   margin-bottom: 0.5rem;
   text-align: center;
 }
-
-
 
 .chart-legend-item {
   font-size: $chart-font-size;

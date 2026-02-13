@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import { getAllPosts, getSinglePost } from "../../utils";
+import { getAllPosts, getSinglePost } from "../../lib/server/markdown";
 import { SITE_URL, DEFAULT_AUTHOR } from "../../components/OgMeta/constants";
 
 const FacebookPreviews = dynamic(

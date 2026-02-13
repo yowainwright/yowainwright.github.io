@@ -1,24 +1,24 @@
-@use "variables";
+@use "variables" as *;
 
 .site-nav {
   background: var(--color-bg-primary);
   border-bottom: 1px solid var(--color-border-default);
   margin: 0 auto;
-  padding: variables.$m-md;
+  padding: $m-md;
   position: sticky;
   top: 0;
   z-index: 3;
 
-  @media screen and (min-width: variables.$width-small) {
+  @media screen and (min-width: $width-small) {
     box-shadow: none;
-    padding: variables.$m-2xl 0 variables.$m-4xl;
+    padding: $m-2xl 0 $m-4xl;
     position: relative;
     border-bottom-width: 0 !important;
-    height: variables.$m-4xl;
+    height: $m-4xl;
   }
 
-  @media screen and (min-width: variables.$width-medium) {
-    height: variables.$m-5xl;
+  @media screen and (min-width: $width-medium) {
+    height: $m-5xl;
   }
 
   &__container {
@@ -28,12 +28,12 @@
     position: relative;
     width: 100%;
 
-    @media screen and (min-width: variables.$width-small) {
+    @media screen and (min-width: $width-small) {
       max-width: 90%;
       margin: 0 auto;
     }
 
-    @media screen and (min-width: variables.$width-small) {
+    @media screen and (min-width: $width-small) {
       max-width: 80%;
     }
   }
@@ -43,14 +43,14 @@
     z-index: 2;
     display: flex;
     flex-direction: column;
-    height: variables.$m-2xl;
+    height: $m-2xl;
     justify-content: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
 
-    @media screen and (min-width: variables.$width-small) {
-      margin-left: variables.$m-2xl;
+    @media screen and (min-width: $width-small) {
+      margin-left: $m-2xl;
     }
   }
 
@@ -83,31 +83,31 @@
       fill: var(--color-text-primary);
     }
 
-    @media screen and (min-width: variables.$width-medium) {
-      width: variables.$m-2xl;
-      height: variables.$m-2xl;
+    @media screen and (min-width: $width-medium) {
+      width: $m-2xl;
+      height: $m-2xl;
     }
   }
 
   &__link {
     color: var(--color-link-nav) !important;
     font-size: 0.9rem;
-    padding: 0 variables.$m-xs;
+    padding: 0 $m-xs;
 
     .js-is-darkmode & {
       color: var(--color-link-hover) !important;
     }
 
-    @media screen and (min-width: variables.$width-x-small) {
+    @media screen and (min-width: $width-x-small) {
       padding: 0 0.75rem;
     }
 
-    @media screen and (min-width: variables.$width-small) {
-      font-size: variables.$m-md;
-      padding: 0 variables.$m-md;
+    @media screen and (min-width: $width-small) {
+      font-size: $m-md;
+      padding: 0 $m-md;
     }
 
-    @media screen and (min-width: variables.$width-medium) {
+    @media screen and (min-width: $width-medium) {
       font-size: 1.2rem;
       padding: 0;
     }
@@ -119,21 +119,21 @@
     display: flex;
     justify-content: space-between;
 
-    @media screen and (min-width: variables.$width-small) {
-      height: variables.$m-4xl;
-      width: calc(100% - #{variables.$m-4xl});
+    @media screen and (min-width: $width-small) {
+      height: $m-4xl;
+      width: calc(100% - #{$m-4xl});
     }
 
-    @media screen and (min-width: variables.$width-medium) {
-      height: variables.$m-5xl;
-      width: calc(100% - #{variables.$m-5xl});
+    @media screen and (min-width: $width-medium) {
+      height: $m-5xl;
+      width: calc(100% - #{$m-5xl});
     }
   }
 }
 
 .logo {
   border: 4px solid var(--color-border-black);
-  border-radius: variables.$radius-full;
+  border-radius: $radius-full;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -147,29 +147,29 @@
     border-color: var(--color-text-primary);
   }
 
-  @media screen and (min-width: variables.$width-small) {
+  @media screen and (min-width: $width-small) {
     border-width: 7px;
-    height: variables.$m-4xl;
-    width: variables.$m-4xl;
+    height: $m-4xl;
+    width: $m-4xl;
   }
 
-  @media screen and (min-width: variables.$width-medium) {
+  @media screen and (min-width: $width-medium) {
     border-width: 10px;
-    height: variables.$m-5xl;
-    width: variables.$m-5xl;
+    height: $m-5xl;
+    width: $m-5xl;
   }
 
   &__title {
-    font-size: variables.$m-xl;
+    font-size: $m-xl;
     margin: 0;
     text-align: center;
     text-transform: uppercase;
 
-    @media screen and (min-width: variables.$width-small) {
-      font-size: variables.$m-2xl;
+    @media screen and (min-width: $width-small) {
+      font-size: $m-2xl;
     }
 
-    @media screen and (min-width: variables.$width-medium) {
+    @media screen and (min-width: $width-medium) {
       font-size: 6rem;
     }
   }

@@ -1,36 +1,36 @@
-@use "variables";
+@use "variables" as *;
 
 .site-footer {
-  padding-top: variables.$m-3xl;
+  padding-top: $m-3xl;
   &__wrapper {
     border-top: 1px solid var(--color-border-default);
     margin: 0 auto;
-    max-width: calc(100% - #{variables.$m-xl});
+    max-width: calc(100% - #{$m-xl});
 
-    @media screen and (min-width: variables.$width-x-small) {
+    @media screen and (min-width: $width-x-small) {
       display: grid;
     }
 
-    @media screen and (min-width: variables.$width-small) {
+    @media screen and (min-width: $width-small) {
       max-width: 80%;
     }
 
-    @media screen and (min-width: variables.$width-medium) {
+    @media screen and (min-width: $width-medium) {
       max-width: 70%;
     }
 
     &--main {
-      padding: variables.$m-3xl 0;
-      column-gap: variables.$m-md;
+      padding: $m-3xl 0;
+      column-gap: $m-md;
 
-      @media screen and (min-width: variables.$width-small) {
+      @media screen and (min-width: $width-small) {
         align-items: start;
-        column-gap: variables.$m-2xl;
-        grid-template-columns: auto variables.$m-5xl auto;
+        column-gap: $m-2xl;
+        grid-template-columns: auto $m-5xl auto;
       }
 
-      @media screen and (min-width: variables.$width-medium) {
-        grid-template-columns: 17rem variables.$m-5xl auto;
+      @media screen and (min-width: $width-medium) {
+        grid-template-columns: 17rem $m-5xl auto;
       }
     }
 
@@ -45,14 +45,14 @@
 
   &__col {
     display: grid;
-    padding-bottom: variables.$m-xl;
+    padding-bottom: $m-xl;
 
-    @media screen and (min-width: variables.$width-medium) {
+    @media screen and (min-width: $width-medium) {
       padding-bottom: 0;
     }
 
     &--social {
-      @media screen and (max-width: variables.$width-small) {
+      @media screen and (max-width: $width-small) {
         display: block;
       }
     }
@@ -61,13 +61,13 @@
       border-top: 1px solid var(--color-border-default);
       grid-column: span 2;
       padding-bottom: 0;
-      padding-top: variables.$m-xl;
+      padding-top: $m-xl;
 
-      @media screen and (min-width: variables.$width-small) {
+      @media screen and (min-width: $width-small) {
         grid-column: span 3;
       }
 
-      @media screen and (min-width: variables.$width-medium) {
+      @media screen and (min-width: $width-medium) {
         border-top: none;
         grid-column: auto;
         padding-top: 0;
@@ -76,16 +76,16 @@
   }
 
   &__title {
-    font-size: variables.$m-lg;
+    font-size: $m-lg;
     text-align: left;
-    margin: 0 0 variables.$m-md;
+    margin: 0 0 $m-md;
 
-    @media screen and (min-width: variables.$width-small) {
-      margin-bottom: variables.$m-2xl;
+    @media screen and (min-width: $width-small) {
+      margin-bottom: $m-2xl;
     }
 
     &--last {
-      padding: variables.$m-lg 0;
+      padding: $m-lg 0;
     }
   }
 
@@ -99,7 +99,7 @@
   &__figure {
     display: grid;
     grid-template-columns: 6rem auto;
-    grid-gap: variables.$m-lg;
+    grid-gap: $m-lg;
   }
 
   &__image {
@@ -130,8 +130,8 @@
     &__item {
       display: inline-block;
       font-size: 1.2rem;
-      margin-right: variables.$m-md;
-      @media screen and (min-width: variables.$width-small) {
+      margin-right: $m-md;
+      @media screen and (min-width: $width-small) {
         display: block;
         margin-right: 0;
       }

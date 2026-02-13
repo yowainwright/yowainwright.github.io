@@ -2,8 +2,8 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { createLogger } from "../lib/logger";
-import { AtProtoClient } from "../lib/atproto";
+import { createLogger } from "../lib/server/logger";
+import { AtProtoClient } from "../lib/server/atproto";
 
 const log = createLogger("atproto-post");
 
