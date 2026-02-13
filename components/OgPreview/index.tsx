@@ -1,5 +1,6 @@
 import React from "react";
 import { Post } from "../../lib/server/markdown/types";
+import { FAVICON_CONFIGS } from "./constants";
 
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 const CDN_URL = "https://yowainwright.imgix.net";
@@ -111,14 +112,6 @@ function OgImageCard({
 }
 
 
-const faviconConfigs = [
-  { size: 16, name: "favicon-16x16.png", label: "16×16 (favicon)" },
-  { size: 32, name: "favicon-32x32.png", label: "32×32 (favicon)" },
-  { size: 96, name: "android-icon-96x96.png", label: "96×96 (Android)" },
-  { size: 144, name: "android-icon-144x144.png", label: "144×144 (Android)" },
-  { size: 180, name: "apple-icon-180x180.png", label: "180×180 (Apple)" },
-  { size: 192, name: "android-icon-192x192.png", label: "192×192 (Android)" },
-];
 
 function FaviconSwiper() {
   return (
@@ -128,7 +121,7 @@ function FaviconSwiper() {
       </div>
       <div className="og-preview__swiper-container">
         <div className="og-preview__swiper-scroll">
-          {faviconConfigs.map((config) => (
+          {FAVICON_CONFIGS.map((config) => (
             <div key={config.size} className="og-preview__swiper-item">
               <div className="og-preview__image-card og-preview__image-card--favicon">
                 <div className="og-preview__favicon-container">
