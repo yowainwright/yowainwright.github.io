@@ -75,11 +75,3 @@ export function useCodeBlocks() {
   return { mountCopyButtons, cleanup };
 }
 
-export function withCodeBlocks<T extends {}>(
-  Component: React.ComponentType<T>,
-) {
-  return function WrappedComponent(props: T) {
-    useCodeBlocks();
-    return <Component {...props} />;
-  };
-}

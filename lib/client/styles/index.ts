@@ -1,5 +1,8 @@
 import type { BEMBlock, CSSProperties } from "./types";
 
+export * from "./constants";
+export * from "./types";
+
 export function toKebabCase(str: string): string {
   return str.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
 }

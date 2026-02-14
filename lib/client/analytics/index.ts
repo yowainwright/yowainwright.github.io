@@ -1,21 +1,10 @@
 import { ref, get, runTransaction, onValue, off } from "firebase/database";
 import * as Sentry from "@sentry/nextjs";
-import { db } from "./firebase";
+import { db } from "../auth";
+import type { AnalyticsData } from "./types";
+import { EMPTY_ANALYTICS } from "./constants";
 
-export interface AnalyticsData {
-  slug: string;
-  views: number;
-  shares: number;
-  comments: number;
-  loves: number;
-}
-
-const EMPTY_ANALYTICS: Omit<AnalyticsData, "slug"> = {
-  views: 0,
-  shares: 0,
-  comments: 0,
-  loves: 0,
-};
+export type { AnalyticsData };
 
 function createAnalyticsData(
   slug: string,

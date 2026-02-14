@@ -4,7 +4,7 @@ import { ChartDisplay } from "../ChartDisplay";
 import { CodeDisplay } from "../CodeDisplay";
 import { MermaidDisplay } from "../MermaidDisplay";
 import { OG_STYLES } from "../constants";
-import { ExtractedContent } from "../../../scripts/generate-og/types";
+import { ExtractedContent } from "../types";
 
 function OgSubtitle({ children }: { children: React.ReactNode }) {
   return <div style={OG_STYLES.subtitle}>{children}</div>;

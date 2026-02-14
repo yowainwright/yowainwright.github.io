@@ -1,7 +1,15 @@
-import { initializeApp, getApps } from "firebase/app";
-import { getDatabase, Database } from "firebase/database";
+export const GITHUB_CLIENT_ID = process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID || "";
 
-const firebaseConfig = {
+export const GITHUB_REDIRECT_URI =
+  typeof window !== "undefined"
+    ? `${window.location.origin}/admin`
+    : "https://jeffry.in/admin";
+
+export const AUTH_API_URL = "https://projects.jeffry.in/api/auth/github/callback";
+
+export const ALLOWED_USERS = ["yowainwright"];
+
+export const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
   databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
@@ -10,15 +18,3 @@ const firebaseConfig = {
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
-
-const isConfigValid = firebaseConfig.apiKey && firebaseConfig.databaseURL;
-
-let db: Database | null = null;
-
-if (isConfigValid) {
-  const app =
-    getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
-  db = getDatabase(app);
-}
-
-export { db };

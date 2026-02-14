@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ShareProps } from "../types";
 import { HeartButton } from "./HeartButton";
 import { PixelIcon } from "./PixelIcon";
-import { trackShare, trackComment } from "../lib/client/analytics-firebase";
+import { trackShare, trackComment } from "../lib/client/analytics";
 
 export const Share = ({
   path,
