@@ -3,9 +3,9 @@ import Link from "next/link";
 import { Moon } from "./svg/Moon";
 import { Sun } from "./svg/Sun";
 import { Search } from "./Search";
-import { DispatchStore, GlobalState } from "../pages/_app";
-import { NavItemProps, IconProps, NavListProps } from "../types";
-import { NAV_ITEMS as navItems } from "../constants";
+import { DispatchStore, GlobalState } from "../../pages/_app";
+import { NavItemProps, IconProps, NavListProps } from "../../types";
+import { NAV_ITEMS as navItems } from "../../constants";
 
 export const Icon = ({ isDarkMode }: IconProps) =>
   isDarkMode ? <Sun /> : <Moon />;

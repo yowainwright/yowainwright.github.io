@@ -126,7 +126,7 @@ function generateScreenshotsForPost(
 function getChangedContentFiles() {
   try {
     const stagedFiles = execSync("git diff --cached --name-only", {
-      encoding: "utf-8"
+      encoding: "utf-8",
     }).trim();
 
     if (!stagedFiles) return [];
@@ -144,21 +144,20 @@ function getMdxPostsNeedingScreenshots() {
   const changedSlugs = getChangedContentFiles();
   const posts = getAllPosts("content");
 
-  return posts
-    .filter((post) => {
-      const postPath = join(process.cwd(), "content", `${post.slug}.mdx`);
-      if (!existsSync(postPath)) return false;
+  return posts.filter((post) => {
+    const postPath = join(process.cwd(), "content", `${post.slug}.mdx`);
+    if (!existsSync(postPath)) return false;
 
-      const outputDir = ensureOutputDir(post.slug, DEFAULT_CONFIG);
-      const existingFiles = existsSync(outputDir)
-        ? readdirSync(outputDir).filter((file) => file.endsWith(".png"))
-        : [];
+    const outputDir = ensureOutputDir(post.slug, DEFAULT_CONFIG);
+    const existingFiles = existsSync(outputDir)
+      ? readdirSync(outputDir).filter((file) => file.endsWith(".png"))
+      : [];
 
-      const hasNoScreenshots = existingFiles.length === 0;
-      const isChanged = changedSlugs.includes(post.slug);
+    const hasNoScreenshots = existingFiles.length === 0;
+    const isChanged = changedSlugs.includes(post.slug);
 
-      return hasNoScreenshots || isChanged;
-    });
+    return hasNoScreenshots || isChanged;
+  });
 }
 
 async function main(): Promise<void> {
@@ -183,24 +182,25 @@ async function main(): Promise<void> {
       const { cleanup } = await startDevServer(port);
       serverCleanup = cleanup;
 
-      await new Promise(resolve => setTimeout(resolve, SERVER_STARTUP_DELAY));
+      await new Promise((resolve) => setTimeout(resolve, SERVER_STARTUP_DELAY));
     } else {
       console.log("📡 Dev server already running");
     }
 
     await new Promise<void>((resolve, reject) => {
-      from(mdxPosts).pipe(
-        concatMap((post) => generateScreenshotsForPost(post.slug)),
-        map(logResults),
-        toArray(),
-        finalize(() => console.log("✨ Screenshot generation complete!")),
-      ).subscribe({
-        next: () => {},
-        error: reject,
-        complete: resolve,
-      });
+      from(mdxPosts)
+        .pipe(
+          concatMap((post) => generateScreenshotsForPost(post.slug)),
+          map(logResults),
+          toArray(),
+          finalize(() => console.log("✨ Screenshot generation complete!")),
+        )
+        .subscribe({
+          next: () => {},
+          error: reject,
+          complete: resolve,
+        });
     });
-
   } catch (error) {
     console.error("Error in screenshot generation:", error);
     throw error;

@@ -5,7 +5,8 @@ export const GITHUB_REDIRECT_URI =
     ? `${window.location.origin}/admin`
     : "https://jeffry.in/admin";
 
-export const AUTH_API_URL = "https://projects.jeffry.in/api/auth/github/callback";
+export const AUTH_API_URL =
+  "https://projects.jeffry.in/api/auth/github/callback";
 
 export const ALLOWED_USERS = ["yowainwright"];
 

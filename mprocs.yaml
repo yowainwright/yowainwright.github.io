@@ -5,7 +5,7 @@ procs:
     autorestart: true
 
   css-watch:
-    shell: "sass --watch --style=compressed styles/main.scss:public/assets/jeffry.in.css"
+    shell: "sass --watch --style=compressed lib/client/styles/scss/main.scss:public/assets/jeffry.in.css"
     autostart: true
     autorestart: true
 

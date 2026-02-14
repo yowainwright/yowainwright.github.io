@@ -1,4 +1,4 @@
-import SinglePostOgPreview from "../../components/OgPreview";
+import SinglePostOgPreview from "../../lib/components/OgPreview";
 import { getSinglePost, getAllPosts } from "../../lib/server/markdown";
 import { Post } from "../../lib/server/markdown/types";
 import { glob } from "glob";

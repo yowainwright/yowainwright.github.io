@@ -9,7 +9,6 @@ import {
   MERMAID_SELECTORS,
 } from "../components/mermaid";
 
-
 export function useMermaidCharts() {
   const [dialogState, setDialogState] = useState<{
     isOpen: boolean;

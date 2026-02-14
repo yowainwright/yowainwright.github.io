@@ -16,7 +16,7 @@ import { GitCommitHorizontal } from "lucide-react";
 import type { LineChartProps, Series } from "../types";
 import { CHART_COLORS, CHART_STYLES } from "../constants";
 import { LabelPosition } from "recharts/types/component/Label";
-import { GlobalState } from "../../../pages/_app";
+import { GlobalState } from "../../../../pages/_app";
 
 const formatChartData = (data: Series[]) => {
   const allPrimaryKeys = [

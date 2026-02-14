@@ -1,6 +1,6 @@
 {
   "title": "AI Model Cost Calculator",
-  "lastUpdated": "2026-02-14T00:17:00.959Z",
+  "lastUpdated": "2026-02-14T01:36:36.343Z",
   "models": {
     "claude-opus-4.5": {
       "input": 28,
@@ -80,5 +80,55 @@
     "gemini-3-ultra": "Gemini 3 Ultra",
     "deepseek-r1": "DeepSeek R1",
     "grok-4.1": "Grok 4.1"
-  }
+  },
+  "agentTaskCosts": [
+    {
+      "label": "Agent Task Costs (per hour of specialized work)",
+      "data": [
+        {
+          "primary": "Simple Agent",
+          "secondary": 2.5
+        },
+        {
+          "primary": "TypeScript Expert",
+          "secondary": 8.5
+        },
+        {
+          "primary": "Principal Engineer",
+          "secondary": 12
+        },
+        {
+          "primary": "QA Lead + Testing",
+          "secondary": 15.5
+        },
+        {
+          "primary": "Multi-Agent Orchestrator",
+          "secondary": 35
+        }
+      ]
+    }
+  ],
+  "totalProjectCosts": [
+    {
+      "label": "Project Development Approaches",
+      "data": [
+        {
+          "primary": "Traditional Solo Development",
+          "secondary": 0
+        },
+        {
+          "primary": "Single LLM Assistant",
+          "secondary": 12
+        },
+        {
+          "primary": "Multi-Agent Team (Sequential)",
+          "secondary": 45
+        },
+        {
+          "primary": "Multi-Agent Team (Parallel)",
+          "secondary": 150
+        }
+      ]
+    }
+  ]
 }

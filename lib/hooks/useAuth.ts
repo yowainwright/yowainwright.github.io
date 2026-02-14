@@ -9,7 +9,7 @@ import {
   handleOAuthCallback,
   isAllowedUser,
   type GitHubUser,
-} from "../lib/client/auth";
+} from "../../lib/client/auth";
 
 export function useAuth() {
   const [user, setUser] = useState<GitHubUser | null>(null);

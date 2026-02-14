@@ -10,27 +10,27 @@ import {
 import { Post } from "../lib/server/markdown/types";
 import { ensureArray } from "../lib/client/utils";
 import { GlobalState } from "./_app";
-import { Share } from "../components/Share";
-import { OgMeta } from "../components/OgMeta";
-import { useCodeBlocks } from "../hooks/useCodeBlocks";
-import { useHeadingAnchors } from "../hooks/useHeadingAnchors";
-import { useScrollDepth, useReadTime } from "../hooks/useAnalytics";
-import { withMermaidCharts } from "../hooks/useMermaidCharts";
+import { Share } from "../lib/components/Share";
+import { OgMeta } from "../lib/components/OgMeta";
+import { useCodeBlocks } from "../lib/hooks/useCodeBlocks";
+import { useHeadingAnchors } from "../lib/hooks/useHeadingAnchors";
+import { useScrollDepth, useReadTime } from "../lib/hooks/useAnalytics";
+import { withMermaidCharts } from "../lib/hooks/useMermaidCharts";
 import { trackView } from "../lib/client/analytics";
-import { InlineSource, SectionSources } from "../components/citations";
+import { InlineSource, SectionSources } from "../lib/components/citations";
 import {
   RiseAndFallChart,
   GlobalGrowthChart,
   WageStagnationChart,
   IndustrialRevolutionChart,
   SWEMetricsGrid,
-} from "../components/content/us-swe-economy-2025";
+} from "../lib/components/content/us-swe-economy-2025";
 import {
   TokenCostChart,
   AgentTaskCostChart,
   ProjectCostComparisonChart,
   TokenCostCalculator,
-} from "../components/content/expensive-ai";
+} from "../lib/components/content/expensive-ai";
 
 const THEME_DARK = "dark";
 const THEME_LIGHT = "light";
