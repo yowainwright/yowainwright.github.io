@@ -18,8 +18,8 @@ import { unified } from "unified";
 import { visit } from "unist-util-visit";
 import type { Element } from "hast";
 import { TransformerNode } from "./types";
-import customDark from "../../../themes/dark.json" with { type: "json" };
-import customLight from "../../../themes/light.json" with { type: "json" };
+import customDark from "../themes/dark.json" with { type: "json" };
+import customLight from "../themes/light.json" with { type: "json" };
 import { TOOLTIP_PATTERN, HEADING_REGEX, COMMENT_PREFIXES } from "./constants";
 import {
   getMarkdownFiles,

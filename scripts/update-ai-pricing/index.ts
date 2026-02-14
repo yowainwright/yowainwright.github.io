@@ -69,6 +69,29 @@ function generateJsonFile(pricingData: PricingData): string {
     reasoningMultipliers: REASONING_MULTIPLIERS,
     inputTokenEfficiency: INPUT_TOKEN_EFFICIENCY,
     modelNames: MODEL_NAMES,
+    agentTaskCosts: [
+      {
+        label: "Agent Task Costs (per hour of specialized work)",
+        data: [
+          { primary: "Simple Agent", secondary: 2.5 },
+          { primary: "TypeScript Expert", secondary: 8.5 },
+          { primary: "Principal Engineer", secondary: 12.0 },
+          { primary: "QA Lead + Testing", secondary: 15.5 },
+          { primary: "Multi-Agent Orchestrator", secondary: 35.0 },
+        ],
+      },
+    ],
+    totalProjectCosts: [
+      {
+        label: "Project Development Approaches",
+        data: [
+          { primary: "Traditional Solo Development", secondary: 0 },
+          { primary: "Single LLM Assistant", secondary: 12 },
+          { primary: "Multi-Agent Team (Sequential)", secondary: 45 },
+          { primary: "Multi-Agent Team (Parallel)", secondary: 150 },
+        ],
+      },
+    ],
   };
 
   return JSON.stringify(jsonData, null, 2);

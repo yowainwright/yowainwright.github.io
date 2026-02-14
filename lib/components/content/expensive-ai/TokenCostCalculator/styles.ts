@@ -1,12 +1,9 @@
-import {
-  bemToCSS,
-  type BEMBlock,
-} from "../../../../lib/client/styles";
+import { bemToCSS, type BEMBlock } from "../../../../client/styles/generator";
 import {
   SPACING,
   TYPOGRAPHY,
   RADIUS,
-} from "../../../../lib/client/styles";
+} from "../../../../client/styles/generator";
 
 const calculator: BEMBlock = {
   base: {

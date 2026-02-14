@@ -74,4 +74,3 @@ export function useCodeBlocks() {
 
   return { mountCopyButtons, cleanup };
 }
-

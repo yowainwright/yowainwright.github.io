@@ -145,7 +145,9 @@ export async function checkServerRunning(port: number): Promise<boolean> {
   }
 }
 
-export function startDevServer(port: number): Promise<{ server: ChildProcess; cleanup: () => void }> {
+export function startDevServer(
+  port: number,
+): Promise<{ server: ChildProcess; cleanup: () => void }> {
   return new Promise((resolve, reject) => {
     console.log(`🚀 Starting dev server on port ${port}...`);
 

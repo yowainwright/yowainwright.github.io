@@ -39,9 +39,6 @@ function getImageVariantLabel(imageName: string): string {
   return `OG ${number}`;
 }
 
-
-
-
 function FaviconSwiper() {
   return (
     <section className="og-preview__swiper-section">

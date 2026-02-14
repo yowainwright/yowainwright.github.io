@@ -14,7 +14,7 @@ import {
 } from "recharts";
 import type { BarChartProps } from "../types";
 import { CHART_COLORS, CHART_STYLES } from "../constants";
-import { GlobalState } from "../../../pages/_app";
+import { GlobalState } from "../../../../pages/_app";
 
 export const BarChart = ({
   data,

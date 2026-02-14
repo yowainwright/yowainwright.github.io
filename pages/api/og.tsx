@@ -1,7 +1,7 @@
 import { ImageResponse } from "@vercel/og";
 import { NextRequest } from "next/server";
-import OgImage from "../../components/og";
-import { OG_DIMENSIONS } from "../../components/og/constants";
+import OgImage from "../../lib/components/og";
+import { OG_DIMENSIONS } from "../../lib/components/og/constants";
 
 export default function handler(req: NextRequest) {
   try {

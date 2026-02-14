@@ -20,7 +20,7 @@
     "build:search": "bun scripts/generate-search-data.ts",
     "build:local": "bun run build:css && next build && bun run build:og && bun run build:rss",
     "build:rss": "bun scripts/rss/index.ts",
-    "build:css": "bun scripts/generate-component-styles.ts && sass --style=compressed styles/main.scss public/assets/jeffry.in.css",
+    "build:css": "bun scripts/generate-component-styles.ts && sass --style=compressed lib/client/styles/scss/main.scss public/assets/jeffry.in.css",
     "build:og": "bun scripts/generate-og-screenshots/index.ts",
     "dev": "mprocs",
     "dev:next": "next dev --port 34729",

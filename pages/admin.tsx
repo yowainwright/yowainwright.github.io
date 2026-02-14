@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "../lib/hooks/useAuth";
 import {
   subscribeToAllAnalytics,
   type AnalyticsData,

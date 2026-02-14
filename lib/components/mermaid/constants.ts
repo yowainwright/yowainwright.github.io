@@ -1,5 +1,5 @@
-import { bemToCSS } from "../../lib/client/styles";
-import type { BEMBlock } from "../../lib/client/styles";
+import { bemToCSS } from "../../client/styles/generator";
+import type { BEMBlock } from "../../client/styles/generator";
 
 export const PROCESSING_DELAYS = {
   INITIAL: 200,

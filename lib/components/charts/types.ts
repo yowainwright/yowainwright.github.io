@@ -34,4 +34,3 @@ export interface ChartSource {
 export interface ChartSourcesProps {
   sources: ChartSource[];
 }
-
