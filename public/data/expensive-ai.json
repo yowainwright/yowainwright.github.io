@@ -1,6 +1,6 @@
 {
   "title": "AI Model Cost Calculator",
-  "lastUpdated": "2026-02-14T01:36:36.343Z",
+  "lastUpdated": "2026-02-14T01:44:53.734Z",
   "models": {
     "claude-opus-4.5": {
       "input": 28,

@@ -1,6 +1,6 @@
 import React from "react";
-import { SOCIAL_ITEMS as socialItems } from "../../constants";
-import { SocialListProps } from "../../types";
+import { SOCIAL_ITEMS as socialItems } from "../constants";
+import { SocialListProps } from "../types";
 
 export const SocialList = ({ items = socialItems }: SocialListProps) => (
   <ul className="social-list">
