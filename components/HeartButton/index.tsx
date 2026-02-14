@@ -8,9 +8,9 @@ import {
   DatabaseReference,
 } from "firebase/database";
 import * as Sentry from "@sentry/nextjs";
-import { db } from "../../lib/client/firebase";
-import { trackLove } from "../../lib/client/analytics-firebase";
-import { formatCount } from "../../lib/client/format-count";
+import { db } from "../../lib/client/auth";
+import { trackLove } from "../../lib/client/analytics";
+import { formatCount } from "../../lib/client/utils";
 import { PixelIcon } from "../PixelIcon";
 import {
   MAX_CLICKS,

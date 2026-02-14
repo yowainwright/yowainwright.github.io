@@ -22,8 +22,6 @@
     "build:rss": "bun scripts/rss/index.ts",
     "build:css": "bun scripts/generate-component-styles.ts && sass --style=compressed styles/main.scss public/assets/jeffry.in.css",
     "build:og": "bun scripts/generate-og-screenshots/index.ts",
-    "build:og:analyze": "bun scripts/og-analyze.ts",
-    "preview:og": "bun scripts/og-preview.ts",
     "dev": "mprocs",
     "dev:next": "next dev --port 34729",
     "format": "bunx prettier --write .",

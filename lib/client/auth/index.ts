@@ -1,17 +1,29 @@
-const GITHUB_CLIENT_ID = process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID || "";
-const GITHUB_REDIRECT_URI =
-  typeof window !== "undefined"
-    ? `${window.location.origin}/admin`
-    : "https://jeffry.in/admin";
-const AUTH_API_URL = "https://projects.jeffry.in/api/auth/github/callback";
+import { initializeApp, getApps } from "firebase/app";
+import { getDatabase, Database } from "firebase/database";
+import type { GitHubUser } from "./types";
+import {
+  GITHUB_CLIENT_ID,
+  GITHUB_REDIRECT_URI,
+  AUTH_API_URL,
+  ALLOWED_USERS,
+  firebaseConfig,
+} from "./constants";
 
-export interface GitHubUser {
-  login: string;
-  avatar_url: string;
-  name: string;
-  email: string;
+// Firebase setup
+const isConfigValid = firebaseConfig.apiKey && firebaseConfig.databaseURL;
+
+let db: Database | null = null;
+
+if (isConfigValid) {
+  const app =
+    getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+  db = getDatabase(app);
 }
 
+export { db };
+export type { GitHubUser };
+
+// Auth functions
 export function initiateGitHubLogin() {
   const params = new URLSearchParams({
     client_id: GITHUB_CLIENT_ID,
@@ -75,8 +87,6 @@ export async function handleOAuthCallback(
   const data = await response.json();
   return { user: data.user, token: data.token };
 }
-
-const ALLOWED_USERS = ["yowainwright"];
 
 export function isAllowedUser(user: GitHubUser): boolean {
   return ALLOWED_USERS.includes(user.login);

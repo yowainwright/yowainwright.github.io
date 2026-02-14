@@ -1,4 +1,4 @@
-import { ExtractedContent } from "../../../scripts/generate-og/types";
+import { ExtractedContent } from "../types";
 
 export interface VisualContentProps {
   content?: ExtractedContent;

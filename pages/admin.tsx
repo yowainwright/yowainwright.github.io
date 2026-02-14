@@ -4,7 +4,7 @@ import { useAuth } from "../hooks/useAuth";
 import {
   subscribeToAllAnalytics,
   type AnalyticsData,
-} from "../lib/client/analytics-firebase";
+} from "../lib/client/analytics";
 
 interface Totals {
   views: number;

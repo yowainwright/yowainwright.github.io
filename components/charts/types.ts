@@ -35,10 +35,3 @@ export interface ChartSourcesProps {
   sources: ChartSource[];
 }
 
-export interface WrappedYAxisLabelProps {
-  value: string;
-  x: number;
-  y: number;
-  maxWidth?: number;
-  fontSize?: number;
-}

@@ -16,7 +16,7 @@ import { useCodeBlocks } from "../hooks/useCodeBlocks";
 import { useHeadingAnchors } from "../hooks/useHeadingAnchors";
 import { useScrollDepth, useReadTime } from "../hooks/useAnalytics";
 import { withMermaidCharts } from "../hooks/useMermaidCharts";
-import { trackView } from "../lib/client/analytics-firebase";
+import { trackView } from "../lib/client/analytics";
 import { InlineSource, SectionSources } from "../components/citations";
 import {
   RiseAndFallChart,
