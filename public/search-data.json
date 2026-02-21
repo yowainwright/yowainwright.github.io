@@ -63,6 +63,13 @@
     "url": "/making-others-feel-good-with-basics/"
   },
   {
+    "title": "Why Pastoralist: Nobody Remembers Why Their Overrides Exist",
+    "description": "This post covers why we built Pastoralist, a tool that tracks, scans, and cleans npm dependency overrides. We looked at 10 major OSS projects and found 60+ untracked overrides across them.",
+    "slug": "why-pastoralist",
+    "type": "post",
+    "url": "/why-pastoralist/"
+  },
+  {
     "title": "Creating beautiful layouts by setting element widths with calc",
     "description": "Use css calc values to set the width of elements within content blocks & create beautiful layouts, for devices especially",
     "slug": "css-pretty-widths-with-calc",
