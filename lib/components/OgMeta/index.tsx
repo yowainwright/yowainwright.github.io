@@ -4,6 +4,7 @@ import {
   SITE_URL,
   DEFAULT_AUTHOR,
   DEFAULT_OG_IMAGE,
+  OG_IMAGE_DIR,
   OG_IMAGE_WIDTH,
   OG_IMAGE_HEIGHT,
   TWITTER_HANDLE,
@@ -20,7 +21,7 @@ function buildUrl(slug?: string): string {
 }
 
 function buildImageUrl(slug?: string): string {
-  const path = slug ? `/og/${slug}/img-1.png` : DEFAULT_OG_IMAGE;
+  const path = slug ? `${OG_IMAGE_DIR}/${slug}/1.png` : DEFAULT_OG_IMAGE;
   return `${SITE_URL}${path}`;
 }
 
