@@ -10,6 +10,16 @@
   },
   "items": [
     {
+      "id": "https://jeffry.in/why-pastoralist",
+      "url": "https://jeffry.in/why-pastoralist",
+      "title": "Why Pastoralist: Nobody Remembers Why Their Overrides Exist",
+      "summary": "This post covers why we built Pastoralist, a tool that tracks, scans, and cleans npm dependency overrides. We looked at 10 major OSS projects and found 60+ untracked overrides across them.",
+      "date_published": "2026-02-20T00:00:00.000Z",
+      "author": {
+        "name": "Jeff Wainwright"
+      }
+    },
+    {
       "id": "https://jeffry.in/expensive-ai",
       "url": "https://jeffry.in/expensive-ai",
       "title": "When the AI Token Gravy Train Stops: My approximately $150 single hour Claude Code Cost Wake-up Call",
@@ -495,16 +505,6 @@
       "title": "Week 8, 2017—Losing a few friends, being sick, transitioning and writing some code",
       "summary": "Week 8, 2017—This week I was sick, lost a few friends and started to do some transitioning.",
       "date_published": "2017-03-05T00:00:00.000Z",
-      "author": {
-        "name": "Jeff Wainwright"
-      }
-    },
-    {
-      "id": "https://jeffry.in/arrow-functions-cont",
-      "url": "https://jeffry.in/arrow-functions-cont",
-      "title": "Arrow Function Notes After Watching ES6 For Everyone, Continued",
-      "summary": "This post reviews some things about arrow functions that I learned from Wes Bos's ES6 for everyone.",
-      "date_published": "2017-03-03T00:00:00.000Z",
       "author": {
         "name": "Jeff Wainwright"
       }

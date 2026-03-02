@@ -5,13 +5,21 @@
     <link>https://jeffry.in</link>
     <description>Jeff Wainwright&apos;s blog about software engineering, life, and everything in between.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Jan 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Feb 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jeffry.in/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://jeffry.in/apple-icon-180x180.png</url>
       <title>Jeffry.in</title>
       <link>https://jeffry.in</link>
     </image>
+    <item>
+      <title>Why Pastoralist: Nobody Remembers Why Their Overrides Exist</title>
+      <link>https://jeffry.in/why-pastoralist</link>
+      <guid isPermaLink="true">https://jeffry.in/why-pastoralist</guid>
+      <description>This post covers why we built Pastoralist, a tool that tracks, scans, and cleans npm dependency overrides. We looked at 10 major OSS projects and found 60+ untracked overrides across them.</description>
+      <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
+      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
+    </item>
     <item>
       <title>When the AI Token Gravy Train Stops: My approximately $150 single hour Claude Code Cost Wake-up Call</title>
       <link>https://jeffry.in/expensive-ai</link>
@@ -402,14 +410,6 @@
       <guid isPermaLink="true">https://jeffry.in/week-8-17</guid>
       <description>Week 8, 2017—This week I was sick, lost a few friends and started to do some transitioning.</description>
       <pubDate>Sun, 05 Mar 2017 00:00:00 GMT</pubDate>
-      <author>yowainwright@gmail.com (Jeff Wainwright)</author>
-    </item>
-    <item>
-      <title>Arrow Function Notes After Watching ES6 For Everyone, Continued</title>
-      <link>https://jeffry.in/arrow-functions-cont</link>
-      <guid isPermaLink="true">https://jeffry.in/arrow-functions-cont</guid>
-      <description>This post reviews some things about arrow functions that I learned from Wes Bos&apos;s ES6 for everyone.</description>
-      <pubDate>Fri, 03 Mar 2017 00:00:00 GMT</pubDate>
       <author>yowainwright@gmail.com (Jeff Wainwright)</author>
     </item>
   </channel>

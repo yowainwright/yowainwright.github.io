@@ -4,12 +4,24 @@
   <link href="https://jeffry.in" rel="alternate" type="text/html"/>
   <link href="https://jeffry.in/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://jeffry.in/</id>
-  <updated>2026-01-21T00:00:00.000Z</updated>
+  <updated>2026-02-20T00:00:00.000Z</updated>
   <subtitle>Jeff Wainwright&apos;s blog about software engineering, life, and everything in between.</subtitle>
   <author>
     <name>Jeff Wainwright</name>
     <email>yowainwright@gmail.com</email>
   </author>
+  <entry>
+    <title>Why Pastoralist: Nobody Remembers Why Their Overrides Exist</title>
+    <link href="https://jeffry.in/why-pastoralist" rel="alternate" type="text/html"/>
+    <id>https://jeffry.in/why-pastoralist</id>
+    <published>2026-02-20T00:00:00.000Z</published>
+    <updated>2026-02-20T00:00:00.000Z</updated>
+    <summary>This post covers why we built Pastoralist, a tool that tracks, scans, and cleans npm dependency overrides. We looked at 10 major OSS projects and found 60+ untracked overrides across them.</summary>
+    <author>
+      <name>Jeff Wainwright</name>
+      <email>yowainwright@gmail.com</email>
+    </author>
+  </entry>
   <entry>
     <title>When the AI Token Gravy Train Stops: My approximately $150 single hour Claude Code Cost Wake-up Call</title>
     <link href="https://jeffry.in/expensive-ai" rel="alternate" type="text/html"/>
@@ -593,18 +605,6 @@
     <published>2017-03-05T00:00:00.000Z</published>
     <updated>2017-03-05T00:00:00.000Z</updated>
     <summary>Week 8, 2017—This week I was sick, lost a few friends and started to do some transitioning.</summary>
-    <author>
-      <name>Jeff Wainwright</name>
-      <email>yowainwright@gmail.com</email>
-    </author>
-  </entry>
-  <entry>
-    <title>Arrow Function Notes After Watching ES6 For Everyone, Continued</title>
-    <link href="https://jeffry.in/arrow-functions-cont" rel="alternate" type="text/html"/>
-    <id>https://jeffry.in/arrow-functions-cont</id>
-    <published>2017-03-03T00:00:00.000Z</published>
-    <updated>2017-03-03T00:00:00.000Z</updated>
-    <summary>This post reviews some things about arrow functions that I learned from Wes Bos&apos;s ES6 for everyone.</summary>
     <author>
       <name>Jeff Wainwright</name>
       <email>yowainwright@gmail.com</email>
