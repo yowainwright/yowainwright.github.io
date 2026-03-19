@@ -1,8 +1,8 @@
 ---
-title: "Why Pastoralist: Nobody Remembers Why Their Overrides Exist"
+title: "Why Pastoralist: Nobody Remembers Why Their Overrides Exist And Now You Don't Need To"
 date: "2026-02-20"
 path: "/why-pastoralist"
-meta: "This post covers why we built Pastoralist, a tool that tracks, scans, and cleans npm dependency overrides. We looked at 10 major OSS projects and found 60+ untracked overrides across them."
+meta: "This post covers why Pastoralist, a tool that tracks, scans, and cleans npm dependency overrides, was built. To hopefully make this clearer to you,  we looked at 10 major OSS projects, found 60+ untracked overrides across them, and create pull requests with pastoralist to fix the issue"
 categories:
   - code
   - security
@@ -55,28 +55,43 @@ I wanted to know how widespread this is. So I looked at the root `package.json` 
 
 | Project | Stars | Field | Overrides | Security-Related |
 |---|---|---|---|---|
-| **n8n** | ~51k | `pnpm.overrides` | 30+ | ~10 (axios, ws, semver, gaxios, multer, pug, nodemailer, form-data, tar-fs) |
-| **Storybook** | ~85k | `resolutions` | 8+ | ~3 (@babel/runtime, @babel/traverse, @babel/types) |
+| **n8n** | ~51k | `pnpm.overrides` | 58 | ~17 (axios, ws, semver, gaxios, multer, pug, nodemailer, form-data, tar-fs, brace-expansion, bn.js, jws) |
+| **Storybook** | ~85k | `resolutions` | 19 | ~3 (@babel/runtime, @babel/traverse, @babel/types) |
 | **Prisma** | ~41k | `pnpm.overrides` | 5 | 5 (form-data, hono, jws, tar-fs, lodash) |
 | **VS Code** | ~167k | `overrides` | 2 | 1 (node-gyp-build) |
 | **React** | ~233k | `resolutions` | 2 | 1 (jsdom) |
 | **React Native** | ~120k | `resolutions` | 3 | 2 (on-headers, compression) |
-| **Supabase** | ~77k | `pnpm.overrides` | 4 | 1 (esbuild) |
+| **Supabase** | ~77k | `pnpm.overrides` | 0 | 0 (cleaned up since initial audit) |
 | **Angular CLI** | ~27k | `overrides` + `resolutions` | 3 | 1 (typescript) |
 | **Gatsby** | ~55k | `resolutions` | 2 | 0 |
-| **Cal.com** | ~34k | `resolutions` | 3+ | 3 (brace-expansion, lodash, tar) |
+| **Cal.com** | ~34k | `resolutions` | 41 | 3+ (brace-expansion, lodash, tar) |
 
-**That's 60+ overrides across 10 projects. None of them document why.**
+**That's 135+ overrides across 10 projects. None of them document why.**
 
 ---
 
 Some observations:
 
-- **n8n** has 30+ overrides. Some are security patches (ws, semver, axios). Some are compatibility pins (date-fns, chokidar, esbuild). Some are forks (`expr-eval@2.0.2` remapped to `npm:expr-eval-fork@3.0.0`). None of this is documented in the `package.json` itself.
+- **n8n** has 58 overrides. Some are security patches (ws, semver, axios). Some are compatibility pins (date-fns, chokidar, esbuild). Some are forks (`expr-eval@2.0.2` remapped to `npm:expr-eval-fork@3.0.0`). None of this is documented in the `package.json` itself.
 - **Prisma** is interesting because _all 5_ of their overrides are security-related. They use `>=` version ranges which suggests "at least this version to patch a CVE." But which CVE? You'd have to go digging.
+- **Supabase** had 4 overrides when this was first written and has since removed all of them--the right outcome, but only possible if you know they're there and why.
 - Even **React**, with just 2 resolutions, doesn't explain why `jsdom` is pinned to `22.1.0`. Is it a security fix? A compatibility issue? A test environment workaround?
 
 The pattern is consistent: overrides go _in_, context stays _out_.
+
+### What's actually still needed?
+
+We ran pastoralist against these same projects to find out how many of those overrides are still doing anything:
+
+| Project | Overrides | Unused |
+|---------|-----------|--------|
+| n8n | 58 | 56 |
+| TanStack Router | 51 | 41 |
+| Cal.com | 41 | 35 |
+| Next.js | 16 | 3 |
+| Prisma | 5 | 5 |
+
+**140 overrides across 5 projects are no longer doing anything.** Prisma is the clearest case: all 5 of their overrides are security patches for packages that have since left their dependency tree. The patches are carrying dead weight and the teams have no way to know without running a tool like pastoralist.
 
 ---
 
@@ -226,6 +241,26 @@ Or add it to `postinstall`:
 ```
 
 Works with npm, yarn, pnpm, and bun. The [docs site](https://yowainwright.github.io/pastoralist/) has interactive demos and StackBlitz sandboxes if you want to try it without installing anything.
+
+---
+
+## How fast is it?
+
+We timed pastoralist against the same projects above, including a full OSV security scan (`--security --provider osv`). No API key, no auth:
+
+| Project | Overrides | Time |
+|---------|-----------|------|
+| n8n | 58 | 416ms |
+| TanStack Router | 51 | 252ms |
+| Cal.com | 41 | 406ms |
+| Storybook | 19 | 177ms |
+| Next.js | 16 | 1,050ms |
+| Prisma | 5 | 196ms |
+| React Router | 0 | 108ms |
+
+Under 500ms for the largest override sets, network call included. Next.js takes ~1s because it also evaluates patch files alongside its overrides. Projects with no overrides clock in under 300ms.
+
+The OSV scan adds almost no overhead — n8n with 58 overrides ran faster with `--security` than without it.
 
 ---
 

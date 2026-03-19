@@ -12,8 +12,8 @@
     {
       "id": "https://jeffry.in/why-pastoralist",
       "url": "https://jeffry.in/why-pastoralist",
-      "title": "Why Pastoralist: Nobody Remembers Why Their Overrides Exist",
-      "summary": "This post covers why we built Pastoralist, a tool that tracks, scans, and cleans npm dependency overrides. We looked at 10 major OSS projects and found 60+ untracked overrides across them.",
+      "title": "Why Pastoralist: Nobody Remembers Why Their Overrides Exist And Now You Don't Need To",
+      "summary": "This post covers why Pastoralist, a tool that tracks, scans, and cleans npm dependency overrides, was built. To hopefully make this clearer to you,  we looked at 10 major OSS projects, found 60+ untracked overrides across them, and create pull requests with pastoralist to fix the issue",
       "date_published": "2026-02-20T00:00:00.000Z",
       "author": {
         "name": "Jeff Wainwright"

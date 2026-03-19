@@ -11,12 +11,12 @@
     <email>yowainwright@gmail.com</email>
   </author>
   <entry>
-    <title>Why Pastoralist: Nobody Remembers Why Their Overrides Exist</title>
+    <title>Why Pastoralist: Nobody Remembers Why Their Overrides Exist And Now You Don&apos;t Need To</title>
     <link href="https://jeffry.in/why-pastoralist" rel="alternate" type="text/html"/>
     <id>https://jeffry.in/why-pastoralist</id>
     <published>2026-02-20T00:00:00.000Z</published>
     <updated>2026-02-20T00:00:00.000Z</updated>
-    <summary>This post covers why we built Pastoralist, a tool that tracks, scans, and cleans npm dependency overrides. We looked at 10 major OSS projects and found 60+ untracked overrides across them.</summary>
+    <summary>This post covers why Pastoralist, a tool that tracks, scans, and cleans npm dependency overrides, was built. To hopefully make this clearer to you,  we looked at 10 major OSS projects, found 60+ untracked overrides across them, and create pull requests with pastoralist to fix the issue</summary>
     <author>
       <name>Jeff Wainwright</name>
       <email>yowainwright@gmail.com</email>
