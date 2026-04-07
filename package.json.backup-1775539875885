@@ -96,23 +96,6 @@
     "@swc/helpers"
   ],
   "pastoralist": {
-    "appendix": {
-      "next@16.2.2": {
-        "dependents": {
-          "Jeffry.in": "next@16.2.2"
-        },
-        "ledger": {
-          "addedDate": "2026-03-16T22:30:42-07:00",
-          "reason": "Security fix: Next.js has Unbounded Memory Consumption via PPR Resume Endpoint  (medium)",
-          "securityChecked": true,
-          "securityCheckDate": "2026-04-07T05:31:15.901Z",
-          "securityProvider": "osv",
-          "cve": "CVE-2025-59472",
-          "severity": "medium",
-          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-5f7q-jpqc-wp7h"
-        }
-      }
-    },
     "security": {
       "enabled": true,
       "provider": "osv",
@@ -120,8 +103,5 @@
       "autoFix": true,
       "severityThreshold": "high"
     }
-  },
-  "overrides": {
-    "next": "16.2.2"
   }
 }
