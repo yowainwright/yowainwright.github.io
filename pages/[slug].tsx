@@ -2,16 +2,21 @@ import React, { useContext, useState, useEffect, Component } from "react";
 import dynamic from "next/dynamic";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import { getSinglePost, getAllPosts, markdownToHtml } from "../utils";
+import { existsSync } from "fs";
+import { join } from "path";
+import { getSinglePost, getAllPosts, markdownToHtml } from "../lib/server/markdown";
+import { Post } from "../lib/server/markdown/types";
+import { ensureArray } from "../lib/client/utils";
 import { GlobalState } from "./_app";
-import { Share } from "../components/Share";
-import { OgMeta } from "../components/OgMeta";
-import { useCodeBlocks } from "../hooks/useCodeBlocks";
-import { useHeadingAnchors } from "../hooks/useHeadingAnchors";
-import { useScrollDepth, useReadTime } from "../hooks/useAnalytics";
-import { withMermaidCharts } from "../hooks/useMermaidCharts";
-import { trackView } from "../lib/analytics-firebase";
-import { InlineSource, SectionSources } from "../components/citations";
+import { Share } from "../lib/components/Share";
+import { OgMeta } from "../lib/components/OgMeta";
+import { useCodeBlocks } from "../lib/hooks/useCodeBlocks";
+import { useHeadingAnchors } from "../lib/hooks/useHeadingAnchors";
+import { useScrollDepth, useReadTime } from "../lib/hooks/useAnalytics";
+import { withMermaidCharts } from "../lib/hooks/useMermaidCharts";
+import { trackView } from "../lib/client/analytics";
+import { InlineSource, SectionSources } from "../lib/components/citations";
+import { DEFAULT_OG_IMAGE } from "../lib/components/OgMeta/constants";
 
 const THEME_DARK = "dark";
 const THEME_LIGHT = "light";
@@ -22,6 +27,7 @@ interface PostProps {
   slug: string;
   isMdx: boolean;
   wordCount: number;
+  ogImage: string;
   frontmatter: {
     date: string;
     title: string;
@@ -46,7 +52,7 @@ const GiscusErrorFallback = () => (
 );
 
 class ErrorBoundary extends Component<{ children: React.ReactNode }, { hasError: boolean }> {
-  constructor(props: any) {
+  constructor(props: { children: React.ReactNode }) {
     super(props);
     this.state = { hasError: false };
   }
@@ -55,7 +61,7 @@ class ErrorBoundary extends Component<{ children: React.ReactNode }, { hasError:
     return { hasError: true };
   }
 
-  componentDidCatch(error: any, errorInfo: any) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     import("@sentry/nextjs").then((Sentry) => {
       Sentry.captureException(error, { extra: errorInfo });
     });
@@ -96,39 +102,45 @@ const GiscusComponent = dynamic(() => import("@giscus/react"), {
 });
 
 const RiseAndFallChart = dynamic(
-  () => import("../components/swe-econ-25").then((mod) => mod.RiseAndFallChart),
+  () => import("../lib/components/content/us-swe-economy-2025").then((mod) => mod.RiseAndFallChart),
   { ssr: false },
 );
 const GlobalGrowthChart = dynamic(
-  () => import("../components/swe-econ-25").then((mod) => mod.GlobalGrowthChart),
+  () =>
+    import("../lib/components/content/us-swe-economy-2025").then((mod) => mod.GlobalGrowthChart),
   { ssr: false },
 );
 const WageStagnationChart = dynamic(
-  () => import("../components/swe-econ-25").then((mod) => mod.WageStagnationChart),
+  () =>
+    import("../lib/components/content/us-swe-economy-2025").then((mod) => mod.WageStagnationChart),
   { ssr: false },
 );
 const IndustrialRevolutionChart = dynamic(
-  () => import("../components/swe-econ-25").then((mod) => mod.IndustrialRevolutionChart),
+  () =>
+    import("../lib/components/content/us-swe-economy-2025").then(
+      (mod) => mod.IndustrialRevolutionChart,
+    ),
   { ssr: false },
 );
 const SWEMetricsGrid = dynamic(
-  () => import("../components/swe-econ-25").then((mod) => mod.SWEMetricsGrid),
+  () => import("../lib/components/content/us-swe-economy-2025").then((mod) => mod.SWEMetricsGrid),
   { ssr: false },
 );
 const TokenCostChart = dynamic(
-  () => import("../components/ai-cost-charts").then((mod) => mod.TokenCostChart),
+  () => import("../lib/components/content/expensive-ai").then((mod) => mod.TokenCostChart),
   { ssr: false },
 );
 const AgentTaskCostChart = dynamic(
-  () => import("../components/ai-cost-charts").then((mod) => mod.AgentTaskCostChart),
+  () => import("../lib/components/content/expensive-ai").then((mod) => mod.AgentTaskCostChart),
   { ssr: false },
 );
 const ProjectCostComparisonChart = dynamic(
-  () => import("../components/ai-cost-charts").then((mod) => mod.ProjectCostComparisonChart),
+  () =>
+    import("../lib/components/content/expensive-ai").then((mod) => mod.ProjectCostComparisonChart),
   { ssr: false },
 );
 const TokenCostCalculator = dynamic(
-  () => import("../components/ai-cost-charts").then((mod) => mod.TokenCostCalculator),
+  () => import("../lib/components/content/expensive-ai").then((mod) => mod.TokenCostCalculator),
   { ssr: false },
 );
 
@@ -217,9 +229,25 @@ const mdxComponents = {
   AgentTaskCostChart,
   ProjectCostComparisonChart,
   TokenCostCalculator,
+  pre: (props) => <pre className="post__code" {...props} />,
+  img: (props) => <img className="post__image" {...props} />,
+  table: (props) => <table className="post__table" {...props} />,
+  figure: ({ children, ...props }) => (
+    <figure {...props}>
+      {typeof children === "string" ? (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: children.replace(/<img /g, '<img class="post__image" '),
+          }}
+        />
+      ) : (
+        children
+      )}
+    </figure>
+  ),
 };
 
-const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostProps) => {
+const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount, ogImage }: PostProps) => {
   const state = useContext(GlobalState);
   useCodeBlocks();
   useHeadingAnchors();
@@ -239,6 +267,7 @@ const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostP
         title={title}
         description={description}
         slug={slug}
+        image={ogImage}
         date={frontmatter?.date || ""}
         tags={frontmatter?.tags}
         wordCount={wordCount}
@@ -292,7 +321,7 @@ export const DateText = ({ date, slug }: DateTextProps) => {
 };
 
 export function getStaticPaths() {
-  const paths = getAllPosts("content").map(({ slug }: any) => `/${slug}`);
+  const paths = getAllPosts("content").map(({ slug }: Post) => `/${slug}`);
   return {
     paths,
     fallback: false,
@@ -305,9 +334,23 @@ interface StaticProps {
   };
 }
 
+function getOgImagePath(slug: string): string {
+  const firstGeneratedImage = join(process.cwd(), "public", "assets", "og", slug, "1.png");
+
+  return existsSync(firstGeneratedImage) ? `/assets/og/${slug}/1.png` : DEFAULT_OG_IMAGE;
+}
+
 export const getStaticProps = async ({ params }: StaticProps) => {
   const data = getSinglePost(params.slug, "content");
   const wordCount = (data.content || "").split(/\s+/).filter(Boolean).length;
+  const ogImage = getOgImagePath(params.slug);
+
+  const sanitizedFrontmatter = {
+    ...data.frontmatter,
+    description: data.frontmatter.description || null,
+    meta: data.frontmatter.meta || null,
+    tags: ensureArray(data.frontmatter.tags),
+  };
 
   if (data.isMdx) {
     const remarkMermaidjs = (await import("remark-mermaidjs")).default;
@@ -343,13 +386,27 @@ export const getStaticProps = async ({ params }: StaticProps) => {
       },
     });
     return {
-      props: { ...data, mdxSource, content: null, wordCount },
+      props: {
+        ...data,
+        frontmatter: sanitizedFrontmatter,
+        mdxSource,
+        content: null,
+        wordCount,
+        ogImage,
+      },
     };
   }
 
   const content = await markdownToHtml(data.content || "");
   return {
-    props: { ...data, content, mdxSource: null, wordCount },
+    props: {
+      ...data,
+      frontmatter: sanitizedFrontmatter,
+      content,
+      mdxSource: null,
+      wordCount,
+      ogImage,
+    },
   };
 };
 

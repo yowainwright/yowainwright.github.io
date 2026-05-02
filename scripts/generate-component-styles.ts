@@ -1,10 +1,13 @@
 #!/usr/bin/env bun
 
-import { writeFile } from 'fs/promises';
-import { join } from 'path';
-import { buildCalculatorStyles } from '../components/ai-cost-charts/TokenCostCalculator/styles';
+import { writeFile } from "fs/promises";
+import { join } from "path";
+import { buildCalculatorStyles } from "../lib/components/content/expensive-ai/TokenCostCalculator/styles";
 
-const STYLES_PATH = join(process.cwd(), 'styles/_calculator.scss');
+const STYLES_PATH = join(
+  process.cwd(),
+  "lib/client/styles/scss/_calculator.scss",
+);
 
 async function generateComponentStyles() {
   const calculatorCSS = buildCalculatorStyles();

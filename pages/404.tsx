@@ -46,12 +46,12 @@ export default function FourZeroFour({
         <meta property="og:url" content={path} />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://jeffry.in/og/default.png" />
+        <meta property="og:image" content="https://jeffry.in/assets/jin-facebook.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="404 | Jeffry.in" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://jeffry.in/og/default.png" />
+        <meta name="twitter:image" content="https://jeffry.in/assets/jin-facebook.jpg" />
         <meta name="twitter:creator" content="@yowainwright" />
         <meta name="fediverse:creator" content="@yowainwright.jeffry.in" />
       </Head>

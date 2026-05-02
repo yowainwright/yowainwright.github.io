@@ -2,7 +2,7 @@
 
 import { existsSync, writeFileSync, chmodSync, mkdirSync } from "fs";
 import { join } from "path";
-import { createLogger } from "../lib/logger";
+import { createLogger } from "../lib/server/logger";
 
 const log = createLogger("install-hooks");
 
@@ -19,7 +19,7 @@ try {
   await $\`bun run lint\`;
 
   // Add any newly generated OG images to the commit
-  await $\`git add public/og\`;
+  await $\`git add public/assets/og\`;
 
   console.log('✓ All pre-commit checks passed');
 } catch (error) {

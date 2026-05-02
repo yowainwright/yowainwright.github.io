@@ -15,6 +15,3 @@ bun = true
 # Environment optimizations
 [env]
 NODE_ENV = "development"
-
-[install.security]
-scanner = "@acme/bun-security-scanner"

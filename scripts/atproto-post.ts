@@ -2,12 +2,13 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { createLogger } from "../lib/logger";
-import { AtProtoClient } from "../lib/atproto";
+import { createLogger } from "../lib/server/logger";
+import { AtProtoClient } from "../lib/server/atproto";
 
 const log = createLogger("atproto-post");
 
-const OG_DIR = path.join(process.cwd(), "public/og");
+const OG_DIR = path.join(process.cwd(), "public/assets/og");
+const DEFAULT_THUMBNAIL = path.join(process.cwd(), "public/assets/jin-facebook.jpg");
 const SITE_URL = "https://jeffry.in";
 
 interface PostManifest {
@@ -56,7 +57,7 @@ const postToAtProto = async (slug: string): Promise<void> => {
   const postManifest = getPostManifest(slug);
   const imagePath = postManifest
     ? path.join(OG_DIR, slug, postManifest.primary)
-    : path.join(OG_DIR, "default.png");
+    : DEFAULT_THUMBNAIL;
 
   const url = `${SITE_URL}/${slug}`;
 
@@ -88,10 +89,7 @@ const listPosts = (): void => {
   log.info({ count: manifest.posts.length }, "available posts");
   for (const post of manifest.posts.slice(0, 20)) {
     const hasOg = fs.existsSync(path.join(OG_DIR, post.slug, "manifest.json"));
-    log.info(
-      { slug: post.slug, title: post.title, date: post.date, hasOg },
-      "post",
-    );
+    log.info({ slug: post.slug, title: post.title, date: post.date, hasOg }, "post");
   }
   log.info({ remaining: manifest.posts.length - 20 }, "more posts available");
 };

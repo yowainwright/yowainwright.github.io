@@ -1,0 +1,140 @@
+@use "variables" as *;
+
+.site-footer {
+  padding-top: $m-3xl;
+  &__wrapper {
+    border-top: 1px solid var(--color-border-default);
+    margin: 0 auto;
+    max-width: calc(100% - #{$m-xl});
+
+    @media screen and (min-width: $width-x-small) {
+      display: grid;
+    }
+
+    @media screen and (min-width: $width-small) {
+      max-width: 80%;
+    }
+
+    @media screen and (min-width: $width-medium) {
+      max-width: 70%;
+    }
+
+    &--main {
+      padding: $m-3xl 0;
+      column-gap: $m-md;
+
+      @media screen and (min-width: $width-small) {
+        align-items: start;
+        column-gap: $m-2xl;
+        grid-template-columns: auto $m-5xl auto;
+      }
+
+      @media screen and (min-width: $width-medium) {
+        grid-template-columns: 17rem $m-5xl auto;
+      }
+    }
+
+    &--last {
+      grid-template-columns: 15.5rem auto;
+    }
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__col {
+    display: grid;
+    padding-bottom: $m-xl;
+
+    @media screen and (min-width: $width-medium) {
+      padding-bottom: 0;
+    }
+
+    &--social {
+      @media screen and (max-width: $width-small) {
+        display: block;
+      }
+    }
+
+    &--self {
+      border-top: 1px solid var(--color-border-default);
+      grid-column: span 2;
+      padding-bottom: 0;
+      padding-top: $m-xl;
+
+      @media screen and (min-width: $width-small) {
+        grid-column: span 3;
+      }
+
+      @media screen and (min-width: $width-medium) {
+        border-top: none;
+        grid-column: auto;
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-size: $m-lg;
+    text-align: left;
+    margin: 0 0 $m-md;
+
+    @media screen and (min-width: $width-small) {
+      margin-bottom: $m-2xl;
+    }
+
+    &--last {
+      padding: $m-lg 0;
+    }
+  }
+
+  &__content,
+  &__figure,
+  &__items {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__figure {
+    display: grid;
+    grid-template-columns: 6rem auto;
+    grid-gap: $m-lg;
+  }
+
+  &__image {
+    border: 1px solid var(--color-border-default);
+    height: auto;
+    width: calc(6rem - 8px);
+  }
+
+  &__caption {
+    border: 0;
+    font-size: 1.2rem;
+    letter-spacing: 0.025rem;
+    max-width: 25rem;
+    padding: 0;
+    width: 100%;
+  }
+
+  &__content {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.social-footer {
+  .social-list {
+    margin: 0;
+
+    &__item {
+      display: inline-block;
+      font-size: 1.2rem;
+      margin-right: $m-md;
+      @media screen and (min-width: $width-small) {
+        display: block;
+        margin-right: 0;
+      }
+    }
+  }
+}

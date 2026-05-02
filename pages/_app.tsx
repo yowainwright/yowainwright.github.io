@@ -1,15 +1,15 @@
 import React, { createContext, useEffect, useReducer } from "react";
 import type { AppProps } from "next/app";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import "../styles/main.scss";
+import "../lib/client/styles/scss/main.scss";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../lib/components/Header";
+import Footer from "../lib/components/Footer";
 import {
   usePageViews,
   useExternalLinks,
   useCodeBlockCopy,
-} from "../hooks/useAnalytics";
+} from "../lib/hooks/useAnalytics";
 
 interface AppState {
   isDarkMode: boolean;

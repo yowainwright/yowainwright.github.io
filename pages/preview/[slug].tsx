@@ -3,32 +3,28 @@
 import { useState } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import { getAllPosts, getSinglePost } from "../../utils";
-import { SITE_URL, DEFAULT_AUTHOR } from "../../components/OgMeta/constants";
+import { existsSync } from "fs";
+import { join } from "path";
+import { getAllPosts, getSinglePost } from "../../lib/server/markdown";
+import { SITE_URL, DEFAULT_AUTHOR, DEFAULT_OG_IMAGE } from "../../lib/components/OgMeta/constants";
 
 const FacebookPreviews = dynamic(
-  () =>
-    import("@automattic/social-previews").then((mod) => mod.FacebookPreviews),
+  () => import("@automattic/social-previews").then((mod) => mod.FacebookPreviews),
   { ssr: false },
 );
 
 const TwitterPreviews = dynamic(
-  () =>
-    import("@automattic/social-previews").then((mod) => mod.TwitterPreviews),
+  () => import("@automattic/social-previews").then((mod) => mod.TwitterPreviews),
   { ssr: false },
 );
 
 const LinkedInPreviews = dynamic(
-  () =>
-    import("@automattic/social-previews").then((mod) => mod.LinkedInPreviews),
+  () => import("@automattic/social-previews").then((mod) => mod.LinkedInPreviews),
   { ssr: false },
 );
 
 const GoogleSearchPreview = dynamic(
-  () =>
-    import("@automattic/social-previews").then(
-      (mod) => mod.GoogleSearchPreview,
-    ),
+  () => import("@automattic/social-previews").then((mod) => mod.GoogleSearchPreview),
   { ssr: false },
 );
 
@@ -43,14 +39,7 @@ interface PreviewPageProps {
   wordCount: number;
 }
 
-const MetaTagsSection = ({
-  title,
-  description,
-  url,
-  imageUrl,
-  date,
-  tags,
-}: PreviewPageProps) => {
+const MetaTagsSection = ({ title, description, url, imageUrl, date, tags }: PreviewPageProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const isoDate = new Date(date).toISOString();
 
@@ -79,10 +68,7 @@ const MetaTagsSection = ({
         <pre style={styles.code}>
           {metaTags.map((tag, i) => (
             <div key={i}>
-              &lt;meta{" "}
-              {tag.property
-                ? `property="${tag.property}"`
-                : `name="${tag.name}"`}{" "}
+              &lt;meta {tag.property ? `property="${tag.property}"` : `name="${tag.name}"`}{" "}
               content="{tag.content}" /&gt;
             </div>
           ))}
@@ -134,9 +120,7 @@ const JsonLdSection = ({
       <button onClick={() => setIsOpen(!isOpen)} style={styles.toggle}>
         {isOpen ? "Hide" : "Show"} JSON-LD Schema
       </button>
-      {isOpen && (
-        <pre style={styles.code}>{JSON.stringify(jsonLd, null, 2)}</pre>
-      )}
+      {isOpen && <pre style={styles.code}>{JSON.stringify(jsonLd, null, 2)}</pre>}
     </div>
   );
 };
@@ -311,9 +295,7 @@ const styles: Record<string, React.CSSProperties> = {
 };
 
 export function getStaticPaths() {
-  const paths = getAllPosts("content").map(
-    ({ slug }: { slug: string }) => `/preview/${slug}`,
-  );
+  const paths = getAllPosts("content").map(({ slug }: { slug: string }) => `/preview/${slug}`);
   return {
     paths,
     fallback: false,
@@ -326,11 +308,16 @@ interface StaticProps {
   };
 }
 
+function getPreviewImageUrl(slug: string): string {
+  const firstGeneratedImage = join(process.cwd(), "public", "assets", "og", slug, "1.png");
+
+  return existsSync(firstGeneratedImage) ? `${SITE_URL}/assets/og/${slug}/1.png` : DEFAULT_OG_IMAGE;
+}
+
 export const getStaticProps = async ({ params }: StaticProps) => {
   const data = getSinglePost(params.slug, "content");
   const wordCount = (data.content || "").split(/\s+/).filter(Boolean).length;
-  const description =
-    data.frontmatter?.description || data.frontmatter?.meta || "";
+  const description = data.frontmatter?.description || data.frontmatter?.meta || "";
 
   return {
     props: {
@@ -338,7 +325,7 @@ export const getStaticProps = async ({ params }: StaticProps) => {
       title: data.frontmatter?.title || "",
       description,
       date: data.frontmatter?.date || "",
-      imageUrl: `${SITE_URL}/og/${params.slug}/img-1.png`,
+      imageUrl: getPreviewImageUrl(params.slug),
       url: `${SITE_URL}/${params.slug}`,
       tags: data.frontmatter?.tags || [],
       wordCount,

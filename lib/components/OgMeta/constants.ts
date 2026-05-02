@@ -1,0 +1,9 @@
+export const SITE_URL = "https://jeffry.in";
+export const DEFAULT_AUTHOR = "Jeff Wainwright";
+export const DEFAULT_SITE_NAME = "Jeffry.in";
+export const DEFAULT_LOCALE = "en_US";
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/assets/jin-facebook.jpg`;
+export const OG_IMAGE_WIDTH = "1200";
+export const OG_IMAGE_HEIGHT = "630";
+export const TWITTER_CREATOR = "@yowainwright";
+export const FEDIVERSE_CREATOR = "@yowainwright.jeffry.in";

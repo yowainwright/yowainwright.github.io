@@ -1,0 +1,158 @@
+@use "variables" as *;
+
+.post {
+  &__section {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: $width-medium) {
+      column-gap: 4rem;
+      grid-template-columns: calc(65% - 2rem) calc(35% - 2rem);
+    }
+  }
+
+  &__header {
+    padding-bottom: 1rem;
+
+    @media screen and (min-width: $width-medium) {
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.6rem;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+
+    time {
+      display: inline;
+      font-size: inherit;
+      font-weight: inherit;
+      letter-spacing: inherit;
+      text-transform: inherit;
+      margin-bottom: 0;
+    }
+  }
+
+  &__time {
+    margin-bottom: 0;
+  }
+
+  &__read-time {
+    &::before {
+      content: "·";
+      margin-right: 0.25rem;
+    }
+  }
+
+  &__article {
+    margin: 3rem auto 0;
+    max-width: calc(100% - 2rem);
+    @media screen and (min-width: $width-small) {
+      margin: 0 auto;
+      max-width: 80%;
+    }
+    @media screen and (min-width: $width-medium) {
+      max-width: 70%;
+    }
+  }
+
+  &__container {
+    max-width: calc(100vw - 3rem);
+  }
+
+  &--headline {
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: $width-small) {
+      margin-bottom: 0;
+    }
+
+    time {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &--full {
+    margin: 4rem auto;
+
+    &:first-of-type {
+      @media screen and (min-width: $width-small) {
+        margin-top: 8rem;
+      }
+    }
+
+    p {
+      margin-bottom: 2.5rem;
+
+      &:first-line {
+        font-weight: 500;
+      }
+
+      @media screen and (min-width: $width-small) {
+        max-width: $width-default;
+      }
+    }
+
+    hr {
+      @media screen and (min-width: $width-small) {
+        margin-top: 3rem;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    img + hr {
+      margin-top: 4rem;
+    }
+  }
+
+  &__title {
+    &--full,
+    &--headline {
+      margin-bottom: 0;
+    }
+
+    &--full {
+      font-size: 1.5rem;
+
+      @media screen and (min-width: $width-small) {
+        margin-bottom: $spacing-unit-small;
+      }
+    }
+
+    &--headline {
+      font-family: $font-family-default;
+      font-size: 1rem;
+    }
+  }
+}
+
+.posts {
+  &--basic {
+    display: grid;
+
+    h2 a {
+      color: var(--color-text-post-link);
+
+      .js-is-darkmode & {
+        color: var(--color-link-hover);
+      }
+    }
+
+    @media screen and (min-width: $width-medium) {
+      grid-template-columns: calc(50% - 1.25rem) calc(50% - 1.25rem);
+      grid-gap: 2.5rem;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

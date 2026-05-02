@@ -1,0 +1,151 @@
+"use client";
+
+import React, { useEffect, useState, useRef } from "react";
+import { ref, get, runTransaction, DatabaseReference } from "firebase/database";
+import * as Sentry from "@sentry/nextjs";
+import { db } from "../../../lib/client/auth";
+import { trackLove } from "../../../lib/client/analytics";
+import { formatCount } from "../../../lib/client/utils";
+import { PixelIcon } from "../PixelIcon";
+import {
+  MAX_CLICKS,
+  BASE_PARTICLE_COUNT,
+  PARTICLE_MULTIPLIER,
+  PARTICLE_CLEANUP_DELAY,
+  ANIMATION_DURATION,
+  HEART_SIZE_INCREMENT,
+} from "./constants";
+
+interface HeartButtonProps {
+  slug: string;
+}
+
+interface Particle {
+  id: number;
+  x: number;
+  y: number;
+}
+
+function getHeartRef(slug: string): DatabaseReference | null {
+  if (!db) return null;
+  return ref(db, `hearts/${slug.replace(/\//g, "_")}`);
+}
+
+export const HeartButton = ({ slug }: HeartButtonProps) => {
+  const [count, setCount] = useState<number>(0);
+  const [userClicks, setUserClicks] = useState<number>(0);
+  const [isLoading, setIsLoading] = useState(true);
+  const [particles, setParticles] = useState<Particle[]>([]);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const particleId = useRef(0);
+  const timeoutIds = useRef<Set<NodeJS.Timeout>>(new Set());
+
+  const storageKey = `heart-${slug}`;
+  const hasMaxed = userClicks >= MAX_CLICKS;
+
+  useEffect(() => {
+    const stored = localStorage.getItem(storageKey);
+    const clicks = stored ? parseInt(stored, 10) : 0;
+    setUserClicks(isNaN(clicks) ? 0 : clicks);
+
+    const dbRef = getHeartRef(slug);
+    if (!dbRef) {
+      setIsLoading(false);
+      return;
+    }
+
+    get(dbRef)
+      .then((snapshot) => {
+        setCount(snapshot.val() ?? 0);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        Sentry.captureException(error, { extra: { slug } });
+        setIsLoading(false);
+      });
+
+    return () => {
+      timeoutIds.current.forEach(clearTimeout);
+      timeoutIds.current.clear();
+    };
+  }, [slug, storageKey]);
+
+  const spawnParticles = (clickCount: number) => {
+    const particleCount = BASE_PARTICLE_COUNT + clickCount * PARTICLE_MULTIPLIER;
+    const newParticles: Particle[] = [];
+    for (let i = 0; i < particleCount; i++) {
+      newParticles.push({
+        id: particleId.current++,
+        x: Math.random() * 60 - 30,
+        y: Math.random() * -20,
+      });
+    }
+    const newIds = new Set(newParticles.map((p) => p.id));
+    setParticles((prev) => [...prev, ...newParticles]);
+    const timeoutId = setTimeout(() => {
+      setParticles((prev) => prev.filter((p) => !newIds.has(p.id)));
+      timeoutIds.current.delete(timeoutId);
+    }, PARTICLE_CLEANUP_DELAY);
+    timeoutIds.current.add(timeoutId);
+  };
+
+  const handleClick = async () => {
+    if (hasMaxed) return;
+
+    const newClickCount = userClicks + 1;
+    spawnParticles(newClickCount);
+    setIsAnimating(true);
+    const animationTimeoutId = setTimeout(() => setIsAnimating(false), ANIMATION_DURATION);
+    timeoutIds.current.add(animationTimeoutId);
+
+    setUserClicks(newClickCount);
+    setCount((current) => current + 1);
+    localStorage.setItem(storageKey, String(newClickCount));
+
+    const dbRef = getHeartRef(slug);
+    if (!dbRef) return;
+
+    const [heartResult, analyticsResult] = await Promise.allSettled([
+      runTransaction(dbRef, (current) => (current ?? 0) + 1),
+      trackLove(slug),
+    ]);
+
+    if (heartResult.status === "rejected") {
+      setCount((current) => Math.max(0, current - 1));
+      Sentry.captureException(heartResult.reason, { extra: { slug } });
+    }
+
+    if (analyticsResult.status === "rejected") {
+      Sentry.captureException(analyticsResult.reason, {
+        extra: { metric: "loves", slug },
+      });
+    }
+  };
+
+  const countText = isLoading ? "" : count > 0 ? formatCount(count) : "";
+  const heartSize = hasMaxed ? 2 : 2 + userClicks * HEART_SIZE_INCREMENT;
+  const hasClicked = userClicks > 0;
+  const heartColor = hasClicked ? "#e53935" : "currentColor";
+  const buttonClass = `share__button heart-button ${hasClicked ? "heart-button--active" : ""} ${hasMaxed ? "heart-button--maxed" : ""} ${isAnimating ? "heart-button--pulse" : ""}`;
+  const ariaLabel = hasMaxed ? `You've loved this post ${MAX_CLICKS} times` : "Love this post";
+
+  return (
+    <button
+      ref={buttonRef}
+      onClick={handleClick}
+      disabled={hasMaxed}
+      className={buttonClass}
+      aria-label={ariaLabel}
+    >
+      <span className="share__label">Love</span>
+      <PixelIcon name="heart" size={heartSize} color={heartColor} />
+      {countText && <span className="share__count">{countText}</span>}
+      {particles.map((p) => (
+        <span key={p.id} className="heart-particle" style={{ left: p.x, top: p.y }}>
+          <PixelIcon name="heart" size={1} color="#e53935" />
+        </span>
+      ))}
+    </button>
+  );
+};
