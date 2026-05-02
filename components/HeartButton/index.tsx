@@ -1,12 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
-import {
-  ref,
-  runTransaction,
-  onValue,
-  DatabaseReference,
-} from "firebase/database";
+import { ref, get, runTransaction, DatabaseReference } from "firebase/database";
 import * as Sentry from "@sentry/nextjs";
 import { db } from "../../lib/firebase";
 import { trackLove } from "../../lib/analytics-firebase";
@@ -53,12 +48,15 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
       return;
     }
 
-    const unsubscribe = onValue(dbRef, (snapshot) => {
-      setCount(snapshot.val() ?? 0);
-      setIsLoading(false);
-    });
-
-    return () => unsubscribe();
+    get(dbRef)
+      .then((snapshot) => {
+        setCount(snapshot.val() ?? 0);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        Sentry.captureException(error, { extra: { slug } });
+        setIsLoading(false);
+      });
   }, [slug, storageKey]);
 
   const spawnParticles = (clickCount: number) => {
@@ -87,16 +85,26 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
     setTimeout(() => setIsAnimating(false), 150);
 
     setUserClicks(newClickCount);
+    setCount((current) => current + 1);
     localStorage.setItem(storageKey, String(newClickCount));
 
     const dbRef = getHeartRef(slug);
     if (!dbRef) return;
 
-    try {
-      await runTransaction(dbRef, (current) => (current ?? 0) + 1);
-      await trackLove(slug);
-    } catch (error) {
-      Sentry.captureException(error, { extra: { slug } });
+    const [heartResult, analyticsResult] = await Promise.allSettled([
+      runTransaction(dbRef, (current) => (current ?? 0) + 1),
+      trackLove(slug),
+    ]);
+
+    if (heartResult.status === "rejected") {
+      setCount((current) => Math.max(0, current - 1));
+      Sentry.captureException(heartResult.reason, { extra: { slug } });
+    }
+
+    if (analyticsResult.status === "rejected") {
+      Sentry.captureException(analyticsResult.reason, {
+        extra: { metric: "loves", slug },
+      });
     }
   };
 
@@ -105,9 +113,7 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
   const hasClicked = userClicks > 0;
   const heartColor = hasClicked ? "#e53935" : "currentColor";
   const buttonClass = `share__button heart-button ${hasClicked ? "heart-button--active" : ""} ${hasMaxed ? "heart-button--maxed" : ""} ${isAnimating ? "heart-button--pulse" : ""}`;
-  const ariaLabel = hasMaxed
-    ? `You've loved this post ${MAX_CLICKS} times`
-    : "Love this post";
+  const ariaLabel = hasMaxed ? `You've loved this post ${MAX_CLICKS} times` : "Love this post";
 
   return (
     <button
@@ -121,11 +127,7 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
       <PixelIcon name="heart" size={heartSize} color={heartColor} />
       {countText && <span className="share__count">{countText}</span>}
       {particles.map((p) => (
-        <span
-          key={p.id}
-          className="heart-particle"
-          style={{ left: p.x, top: p.y }}
-        >
+        <span key={p.id} className="heart-particle" style={{ left: p.x, top: p.y }}>
           <PixelIcon name="heart" size={1} color="#e53935" />
         </span>
       ))}

@@ -11,19 +11,14 @@ const createInitialState = (): SearchState => ({
   searchData: [],
 });
 
-const clampIndex = (index: number, max: number): number =>
-  Math.max(0, Math.min(index, max));
+const clampIndex = (index: number, max: number): number => Math.max(0, Math.min(index, max));
 
-const searchItems = (
-  fuse: Fuse<SearchResult>,
-  query: string,
-): SearchResult[] => {
+const searchItems = (fuse: Fuse<SearchResult>, query: string): SearchResult[] => {
   const searchResults = fuse.search(query);
   return searchResults.slice(0, MAX_RESULTS).map((r) => r.item);
 };
 
-const isOpenShortcut = (e: KeyboardEvent): boolean =>
-  (e.metaKey || e.ctrlKey) && e.key === "k";
+const isOpenShortcut = (e: KeyboardEvent): boolean => (e.metaKey || e.ctrlKey) && e.key === "k";
 
 const isEscapeKey = (e: KeyboardEvent): boolean => e.key === "Escape";
 const isArrowDown = (e: KeyboardEvent): boolean => e.key === "ArrowDown";
@@ -34,24 +29,40 @@ export function useSearch() {
   const [state, setState] = useState<SearchState>(createInitialState);
   const inputRef = useRef<HTMLInputElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
+  const hasLoadedSearchData = useRef(false);
+  const stateRef = useRef(state);
 
-  const fuse = useMemo(
-    () => new Fuse(state.searchData, FUSE_OPTIONS),
-    [state.searchData],
-  );
+  const fuse = useMemo(() => new Fuse(state.searchData, FUSE_OPTIONS), [state.searchData]);
 
   const hasQuery = state.query.length > 0;
-  const hasResults = state.results.length > 0;
-  const canNavigateResults = state.isOpen && hasResults;
 
   useEffect(() => {
+    stateRef.current = state;
+  }, [state]);
+
+  const loadSearchData = useCallback(() => {
+    if (hasLoadedSearchData.current) return;
+    hasLoadedSearchData.current = true;
+
     fetch(SEARCH_DATA_PATH)
-      .then((res) => res.json())
-      .then((data: SearchResult[]) =>
-        setState((prev) => ({ ...prev, searchData: data })),
-      )
-      .catch(console.error);
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Failed to load search data: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((data: SearchResult[]) => setState((prev) => ({ ...prev, searchData: data })))
+      .catch((error) => {
+        hasLoadedSearchData.current = false;
+        console.error(error);
+      });
   }, []);
+
+  useEffect(() => {
+    if (state.isOpen) {
+      loadSearchData();
+    }
+  }, [state.isOpen, loadSearchData]);
 
   useEffect(() => {
     if (!hasQuery) {
@@ -64,9 +75,10 @@ export function useSearch() {
   }, [state.query, fuse, hasQuery]);
 
   const open = useCallback(() => {
+    loadSearchData();
     setState((prev) => ({ ...prev, isOpen: true }));
-    setTimeout(() => inputRef.current?.focus(), 100);
-  }, []);
+    requestAnimationFrame(() => inputRef.current?.focus());
+  }, [loadSearchData]);
 
   const close = useCallback(() => {
     setState((prev) => ({ ...prev, isOpen: false, query: "" }));
@@ -86,18 +98,10 @@ export function useSearch() {
 
   const selectPrev = useCallback(() => {
     setState((prev) => {
-      const prevIndex = clampIndex(
-        prev.selectedIndex - 1,
-        prev.results.length - 1,
-      );
+      const prevIndex = clampIndex(prev.selectedIndex - 1, prev.results.length - 1);
       return { ...prev, selectedIndex: prevIndex };
     });
   }, []);
-
-  const getSelectedResult = useCallback(
-    (): SearchResult | null => state.results[state.selectedIndex] ?? null,
-    [state.results, state.selectedIndex],
-  );
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -114,7 +118,10 @@ export function useSearch() {
         return;
       }
 
-      if (!canNavigateResults) return;
+      const latestState = stateRef.current;
+      const hasLatestResults = latestState.results.length > 0;
+      const canNavigateLatestResults = latestState.isOpen && hasLatestResults;
+      if (!canNavigateLatestResults) return;
 
       const shouldSelectNext = isArrowDown(e);
       if (shouldSelectNext) {
@@ -132,7 +139,7 @@ export function useSearch() {
 
       const shouldNavigate = isEnterKey(e);
       if (shouldNavigate) {
-        const selected = getSelectedResult();
+        const selected = latestState.results[latestState.selectedIndex] ?? null;
         if (selected) {
           window.location.href = selected.url;
         }
@@ -141,21 +148,13 @@ export function useSearch() {
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [
-    canNavigateResults,
-    open,
-    close,
-    selectNext,
-    selectPrev,
-    getSelectedResult,
-  ]);
+  }, [open, close, selectNext, selectPrev]);
 
   useEffect(() => {
     if (!state.isOpen) return;
 
     const handleClickOutside = (e: MouseEvent) => {
-      const clickedOutside =
-        modalRef.current && !modalRef.current.contains(e.target as Node);
+      const clickedOutside = modalRef.current && !modalRef.current.contains(e.target as Node);
       if (clickedOutside) close();
     };
 

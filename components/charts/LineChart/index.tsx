@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext } from "react";
+import React, { useContext, useMemo } from "react";
 import {
   LineChart as RechartsLineChart,
   Line,
@@ -19,24 +19,22 @@ import { LabelPosition } from "recharts/types/component/Label";
 import { GlobalState } from "../../../pages/_app";
 
 const formatChartData = (data: Series[]) => {
-  const allPrimaryKeys = [
-    ...new Set(data.flatMap((s) => s.data.map((d) => d.primary))),
-  ].sort();
+  const allPrimaryKeys = [...new Set(data.flatMap((s) => s.data.map((d) => d.primary)))].sort();
+  const seriesIndexes = data.map((series) => ({
+    label: series.label,
+    valuesByPrimary: new Map(series.data.map((point) => [point.primary, point.secondary])),
+  }));
+
   return allPrimaryKeys.map((primary) => {
     const dataPoint: Record<string, string | number | undefined> = { primary };
-    data.forEach((s) => {
-      const match = s.data.find((d) => d.primary === primary);
-      dataPoint[s.label] = match?.secondary;
+    seriesIndexes.forEach((series) => {
+      dataPoint[series.label] = series.valuesByPrimary.get(primary);
     });
     return dataPoint;
   });
 };
 
-const LegendContent = ({
-  payload,
-}: {
-  payload?: Array<{ color: string; value: string }>;
-}) => (
+const LegendContent = ({ payload }: { payload?: Array<{ color: string; value: string }> }) => (
   <ul>
     {payload?.map((entry, index) => (
       <li
@@ -70,8 +68,8 @@ export const LineChart = ({
   const state = useContext(GlobalState);
   const isDark = state?.isDarkMode ?? false;
   const colors = Object.values(isDark ? CHART_COLORS.dark : CHART_COLORS.light);
-  const series = data.map((s) => s.label);
-  const formattedData = formatChartData(data);
+  const series = useMemo(() => data.map((s) => s.label), [data]);
+  const formattedData = useMemo(() => formatChartData(data), [data]);
 
   return (
     <div style={{ ...CHART_STYLES.container, height }}>
@@ -104,10 +102,7 @@ export const LineChart = ({
             itemStyle={CHART_STYLES.tooltip.item}
             labelStyle={CHART_STYLES.tooltip.label}
           />
-          <Legend
-            verticalAlign={CHART_STYLES.legend.verticalAlign}
-            content={LegendContent}
-          />
+          <Legend verticalAlign={CHART_STYLES.legend.verticalAlign} content={LegendContent} />
           {series.map((seriesLabel, index) => (
             <Line
               key={seriesLabel}

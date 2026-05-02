@@ -7,13 +7,8 @@
   order: -1;
   align-self: start;
   height: 2.5rem;
-  display: none;
-  transition: opacity 0.2s ease-in-out;
-
-  &.is-sticky {
-    display: block;
-    opacity: 1;
-  }
+  display: block;
+  opacity: 1;
 
   @media screen and (min-width: variables.$width-small) {
     top: 0;

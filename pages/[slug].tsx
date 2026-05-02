@@ -12,19 +12,6 @@ import { useScrollDepth, useReadTime } from "../hooks/useAnalytics";
 import { withMermaidCharts } from "../hooks/useMermaidCharts";
 import { trackView } from "../lib/analytics-firebase";
 import { InlineSource, SectionSources } from "../components/citations";
-import {
-  RiseAndFallChart,
-  GlobalGrowthChart,
-  WageStagnationChart,
-  IndustrialRevolutionChart,
-  SWEMetricsGrid,
-} from "../components/swe-econ-25";
-import {
-  TokenCostChart,
-  AgentTaskCostChart,
-  ProjectCostComparisonChart,
-  TokenCostCalculator,
-} from "../components/ai-cost-charts";
 
 const THEME_DARK = "dark";
 const THEME_LIGHT = "light";
@@ -52,19 +39,13 @@ interface GiscusWrapperProps {
 const GiscusErrorFallback = () => (
   <div className="giscus-error">
     <p>Unable to load comments at this time.</p>
-    <button
-      onClick={() => window.location.reload()}
-      className="giscus-error__retry"
-    >
+    <button onClick={() => window.location.reload()} className="giscus-error__retry">
       Retry
     </button>
   </div>
 );
 
-class ErrorBoundary extends Component<
-  { children: React.ReactNode },
-  { hasError: boolean }
-> {
+class ErrorBoundary extends Component<{ children: React.ReactNode }, { hasError: boolean }> {
   constructor(props: any) {
     super(props);
     this.state = { hasError: false };
@@ -114,14 +95,50 @@ const GiscusComponent = dynamic(() => import("@giscus/react"), {
   loading: () => <GiscusLoadingFallback />,
 });
 
+const RiseAndFallChart = dynamic(
+  () => import("../components/swe-econ-25").then((mod) => mod.RiseAndFallChart),
+  { ssr: false },
+);
+const GlobalGrowthChart = dynamic(
+  () => import("../components/swe-econ-25").then((mod) => mod.GlobalGrowthChart),
+  { ssr: false },
+);
+const WageStagnationChart = dynamic(
+  () => import("../components/swe-econ-25").then((mod) => mod.WageStagnationChart),
+  { ssr: false },
+);
+const IndustrialRevolutionChart = dynamic(
+  () => import("../components/swe-econ-25").then((mod) => mod.IndustrialRevolutionChart),
+  { ssr: false },
+);
+const SWEMetricsGrid = dynamic(
+  () => import("../components/swe-econ-25").then((mod) => mod.SWEMetricsGrid),
+  { ssr: false },
+);
+const TokenCostChart = dynamic(
+  () => import("../components/ai-cost-charts").then((mod) => mod.TokenCostChart),
+  { ssr: false },
+);
+const AgentTaskCostChart = dynamic(
+  () => import("../components/ai-cost-charts").then((mod) => mod.AgentTaskCostChart),
+  { ssr: false },
+);
+const ProjectCostComparisonChart = dynamic(
+  () => import("../components/ai-cost-charts").then((mod) => mod.ProjectCostComparisonChart),
+  { ssr: false },
+);
+const TokenCostCalculator = dynamic(
+  () => import("../components/ai-cost-charts").then((mod) => mod.TokenCostCalculator),
+  { ssr: false },
+);
+
 const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   const [hasError] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const theme = isDarkMode ? THEME_DARK : THEME_LIGHT;
 
   useEffect(() => {
-    const hasLoadedBefore =
-      localStorage.getItem("jeffry-in-comments-autoload-enabled") === "true";
+    const hasLoadedBefore = localStorage.getItem("jeffry-in-comments-autoload-enabled") === "true";
 
     if (hasLoadedBefore) {
       setIsInView(true);
@@ -161,10 +178,7 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   if (!isInView) {
     return (
       <div className="giscus-placeholder">
-        <button
-          onClick={() => setIsInView(true)}
-          className="giscus-placeholder__button"
-        >
+        <button onClick={() => setIsInView(true)} className="giscus-placeholder__button">
           Load Comments
         </button>
       </div>
@@ -205,14 +219,7 @@ const mdxComponents = {
   TokenCostCalculator,
 };
 
-const Post = ({
-  content,
-  mdxSource,
-  frontmatter,
-  slug,
-  isMdx,
-  wordCount,
-}: PostProps) => {
+const Post = ({ content, mdxSource, frontmatter, slug, isMdx, wordCount }: PostProps) => {
   const state = useContext(GlobalState);
   useCodeBlocks();
   useHeadingAnchors();
@@ -222,25 +229,6 @@ const Post = ({
   useEffect(() => {
     trackView(slug);
   }, [slug]);
-
-  useEffect(() => {
-    const aside = document.querySelector(".aside");
-    const postSection = document.querySelector(".post__section");
-    if (!aside || !postSection) return;
-
-    const handleScroll = () => {
-      const sectionTop = postSection.getBoundingClientRect().top;
-      if (sectionTop <= 100) {
-        aside.classList.add("is-sticky");
-      } else {
-        aside.classList.remove("is-sticky");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const description = frontmatter?.description || frontmatter?.meta || "";
   const title = frontmatter?.title || "";
@@ -261,9 +249,7 @@ const Post = ({
           <div className="post__meta">
             <DateText date={frontmatter?.date} slug={slug} />
             {estimatedReadTime > 0 && (
-              <span className="post__read-time">
-                {estimatedReadTime} min read
-              </span>
+              <span className="post__read-time">{estimatedReadTime} min read</span>
             )}
           </div>
         </header>
@@ -274,10 +260,7 @@ const Post = ({
                 <MDXRemote {...mdxSource} components={mdxComponents} />
               </div>
             ) : (
-              <div
-                className="post__content"
-                dangerouslySetInnerHTML={{ __html: content || "" }}
-              />
+              <div className="post__content" dangerouslySetInnerHTML={{ __html: content || "" }} />
             )}
             <div className="post__giscus">
               <GiscusWrapper isDarkMode={state?.isDarkMode || false} />
@@ -327,31 +310,34 @@ export const getStaticProps = async ({ params }: StaticProps) => {
   const wordCount = (data.content || "").split(/\s+/).filter(Boolean).length;
 
   if (data.isMdx) {
-    const remarkMermaidjs = (await import('remark-mermaidjs')).default;
+    const remarkMermaidjs = (await import("remark-mermaidjs")).default;
     const mdxSource = await serialize(data.content || "", {
       mdxOptions: {
         remarkPlugins: [
-          [remarkMermaidjs, {
-            theme: 'base',
-            themeVariables: {
-              primaryColor: '#f2f2f2',
-              primaryTextColor: '#000000',
-              primaryBorderColor: '#0000ff',
-              lineColor: '#0000ff',
-              secondaryColor: '#f9f9f9',
-              tertiaryColor: '#ffffff',
-              background: '#ffffff',
-              mainBkg: '#f2f2f2',
-              secondBkg: '#f9f9f9',
-              tertiaryBkg: '#ffffff',
-              nodeBorder: '#0000ff',
-              clusterBkg: '#f9f9f9',
-              clusterBorder: '#999999',
-              defaultLinkColor: '#0000ff',
-              titleColor: '#000000',
-              edgeLabelBackground: '#ffffff'
-            }
-          }]
+          [
+            remarkMermaidjs,
+            {
+              theme: "base",
+              themeVariables: {
+                primaryColor: "#f2f2f2",
+                primaryTextColor: "#000000",
+                primaryBorderColor: "#0000ff",
+                lineColor: "#0000ff",
+                secondaryColor: "#f9f9f9",
+                tertiaryColor: "#ffffff",
+                background: "#ffffff",
+                mainBkg: "#f2f2f2",
+                secondBkg: "#f9f9f9",
+                tertiaryBkg: "#ffffff",
+                nodeBorder: "#0000ff",
+                clusterBkg: "#f9f9f9",
+                clusterBorder: "#999999",
+                defaultLinkColor: "#0000ff",
+                titleColor: "#000000",
+                edgeLabelBackground: "#ffffff",
+              },
+            },
+          ],
         ],
         rehypePlugins: [],
       },
