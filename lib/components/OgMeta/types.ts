@@ -2,6 +2,7 @@ export interface OgMetaProps {
   title?: string;
   description?: string;
   slug?: string;
+  imagePath?: string;
   date?: string;
   tags?: string[];
   wordCount?: number;

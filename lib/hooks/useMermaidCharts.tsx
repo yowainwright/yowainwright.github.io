@@ -2,12 +2,17 @@
 
 import React, { useEffect, useRef, useCallback, useState } from "react";
 import { createRoot } from "react-dom/client";
+import dynamic from "next/dynamic";
 import { Maximize2 } from "lucide-react";
-import {
-  MermaidDialog,
-  PROCESSING_DELAYS,
-  MERMAID_SELECTORS,
-} from "../components/mermaid";
+import { PROCESSING_DELAYS, MERMAID_SELECTORS } from "../components/mermaid/constants";
+
+const MermaidDialog = dynamic(
+  () =>
+    import("../components/mermaid/MermaidDialog").then(
+      (mod) => mod.MermaidDialog,
+    ),
+  { ssr: false },
+);
 
 export function useMermaidCharts() {
   const [dialogState, setDialogState] = useState<{
@@ -159,12 +164,14 @@ export function withMermaidCharts<T extends {}>(
     return (
       <>
         <Component {...props} />
-        <MermaidDialog
-          isOpen={dialogState.isOpen}
-          onClose={closeDialog}
-          svgContent={dialogState.svgContent}
-          title={dialogState.title}
-        />
+        {dialogState.isOpen && (
+          <MermaidDialog
+            isOpen={dialogState.isOpen}
+            onClose={closeDialog}
+            svgContent={dialogState.svgContent}
+            title={dialogState.title}
+          />
+        )}
       </>
     );
   };

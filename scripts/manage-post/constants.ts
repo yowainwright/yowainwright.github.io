@@ -11,7 +11,6 @@ export const DIRECTORIES = {
   COMPONENTS: "components/content",
   DATA: "public/data",
   ASSETS: "public/assets",
-  OG: "public/assets/og",
   SCRIPTS: "scripts/content",
 } as const;
 

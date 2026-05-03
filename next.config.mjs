@@ -1,7 +1,10 @@
 import { withSentryConfig } from "@sentry/nextjs";
 import createMDX from "@next/mdx";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 const isProduction = process.env.NODE_ENV === "production";
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -17,6 +20,9 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
+  turbopack: {
+    root: projectRoot,
+  },
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
 };
 

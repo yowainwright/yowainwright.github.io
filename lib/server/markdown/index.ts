@@ -1,3 +1,6 @@
+import crypto from "node:crypto";
+import fs from "node:fs";
+import path from "node:path";
 import remarkRehype from "remark-rehype";
 import remarkParse from "remark-parse";
 import rehypeShiki from "@shikijs/rehype";
@@ -31,6 +34,13 @@ import {
   sortPostsByDate,
 } from "./utils";
 
+const MARKDOWN_CACHE_VERSION = "markdown-html-v1";
+const MARKDOWN_CACHE_DIR = path.join(
+  process.cwd(),
+  ".cache",
+  "markdown-html",
+);
+
 export const getAllPosts = (folder: string) => {
   const files = getMarkdownFiles(folder);
   const draftFiles = getDraftFiles();
@@ -41,8 +51,8 @@ export const getAllPosts = (folder: string) => {
   return allFiles.map((fileName) => {
     let fileFolder = folder;
 
-    const draftPath = require("path").join(getPath("drafts"), fileName);
-    const isInDrafts = isDev && require("fs").existsSync(draftPath);
+    const draftPath = path.join(getPath("drafts"), fileName);
+    const isInDrafts = isDev && fs.existsSync(draftPath);
     if (isInDrafts) {
       fileFolder = "drafts";
     }
@@ -396,7 +406,24 @@ function getProcessor() {
 }
 
 export const markdownToHtml = async (markdown: string) => {
+  const cacheKey = crypto
+    .createHash("sha256")
+    .update(MARKDOWN_CACHE_VERSION)
+    .update(markdown)
+    .digest("hex");
+  const cachePath = path.join(MARKDOWN_CACHE_DIR, `${cacheKey}.html`);
+  const cachedHtml = fs.existsSync(cachePath)
+    ? fs.readFileSync(cachePath, "utf8")
+    : null;
+
+  if (cachedHtml) return cachedHtml;
+
   const processor = getProcessor();
   const result = await processor.process(markdown);
-  return result.toString();
+  const html = result.toString();
+
+  fs.mkdirSync(MARKDOWN_CACHE_DIR, { recursive: true });
+  fs.writeFileSync(cachePath, html);
+
+  return html;
 };

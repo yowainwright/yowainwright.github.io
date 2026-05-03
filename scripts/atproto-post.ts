@@ -4,73 +4,57 @@ import fs from "node:fs";
 import path from "node:path";
 import { createLogger } from "../lib/server/logger";
 import { AtProtoClient } from "../lib/server/atproto";
+import { getAllPostsArchive, getSinglePost } from "../lib/server/markdown";
+import {
+  DEFAULT_OG_IMAGE,
+  OG_IMAGE_DIR,
+} from "../lib/components/OgMeta/constants";
 
 const log = createLogger("atproto-post");
 
-const OG_DIR = path.join(process.cwd(), "public/og");
 const SITE_URL = "https://jeffry.in";
 
-interface PostManifest {
-  slug: string;
-  title: string;
-  images: string[];
-  primary: string;
-  generatedAt: string;
-}
-
-interface OgManifest {
-  generatedAt: string;
-  posts: Array<{
-    slug: string;
-    title: string;
-    date: string;
-    strategy: string;
-  }>;
-}
-
-const getPostManifest = (slug: string): PostManifest | null => {
-  const manifestPath = path.join(OG_DIR, slug, "manifest.json");
-  if (!fs.existsSync(manifestPath)) return null;
-  return JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+const getPublicAssetPath = (assetPath: string): string | undefined => {
+  const absolutePath = path.join(
+    process.cwd(),
+    "public",
+    assetPath.replace(/^\//, ""),
+  );
+  return fs.existsSync(absolutePath) ? absolutePath : undefined;
 };
 
-const getOgManifest = (): OgManifest | null => {
-  const manifestPath = path.join(OG_DIR, "manifest.json");
-  if (!fs.existsSync(manifestPath)) return null;
-  return JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+const getPostImagePath = (slug: string): string => {
+  const candidateImagePath = `${OG_IMAGE_DIR}/${slug}/1.png`;
+  return getPublicAssetPath(candidateImagePath)
+    ? candidateImagePath
+    : DEFAULT_OG_IMAGE;
 };
 
 const postToAtProto = async (slug: string): Promise<void> => {
-  const ogManifest = getOgManifest();
-  if (!ogManifest) {
-    log.error("OG manifest not found. Run build:og first.");
-    process.exit(1);
-  }
+  const post = getSinglePost(slug, "content");
+  const title = post.frontmatter.title || slug;
+  const description =
+    post.frontmatter.description ||
+    post.frontmatter.meta ||
+    `Posted on ${post.frontmatter.date}`;
+  const imagePath = getPublicAssetPath(getPostImagePath(slug));
 
-  const postInfo = ogManifest.posts.find((p) => p.slug === slug);
-  if (!postInfo) {
-    log.error({ slug }, "Post not found in manifest");
-    process.exit(1);
-  }
-
-  const postManifest = getPostManifest(slug);
-  const imagePath = postManifest
-    ? path.join(OG_DIR, slug, postManifest.primary)
-    : path.join(OG_DIR, "default.png");
-
-  const url = `${SITE_URL}/${slug}`;
+  const url = `${SITE_URL}/${slug}/`;
 
   const client = new AtProtoClient();
   await client.login();
 
-  log.info({ slug, title: postInfo.title }, "posting to AT Protocol");
+  log.info(
+    { slug, title, hasImage: Boolean(imagePath) },
+    "posting to AT Protocol",
+  );
 
   const result = await client.createPost({
-    text: `${postInfo.title}\n\n${url}`,
+    text: `${title}\n\n${url}`,
     embed: {
       uri: url,
-      title: postInfo.title,
-      description: `Posted on ${postInfo.date}`,
+      title,
+      description,
       thumbPath: imagePath,
     },
   });
@@ -79,21 +63,22 @@ const postToAtProto = async (slug: string): Promise<void> => {
 };
 
 const listPosts = (): void => {
-  const manifest = getOgManifest();
-  if (!manifest) {
-    log.error("OG manifest not found. Run build:og first.");
-    process.exit(1);
-  }
+  const posts = getAllPostsArchive("content");
 
-  log.info({ count: manifest.posts.length }, "available posts");
-  for (const post of manifest.posts.slice(0, 20)) {
-    const hasOg = fs.existsSync(path.join(OG_DIR, post.slug, "manifest.json"));
+  log.info({ count: posts.length }, "available posts");
+  for (const post of posts.slice(0, 20)) {
+    const imagePath = getPublicAssetPath(getPostImagePath(post.slug));
     log.info(
-      { slug: post.slug, title: post.title, date: post.date, hasOg },
+      {
+        slug: post.slug,
+        title: post.frontmatter.title,
+        date: post.frontmatter.date,
+        hasImage: Boolean(imagePath),
+      },
       "post",
     );
   }
-  log.info({ remaining: manifest.posts.length - 20 }, "more posts available");
+  log.info({ remaining: posts.length - 20 }, "more posts available");
 };
 
 const main = async () => {

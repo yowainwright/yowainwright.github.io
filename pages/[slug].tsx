@@ -7,39 +7,94 @@ import {
   getAllPosts,
   markdownToHtml,
 } from "../lib/server/markdown";
-import { Post } from "../lib/server/markdown/types";
 import { ensureArray } from "../lib/client/utils";
 import { GlobalState } from "./_app";
 import { Share } from "../lib/components/Share";
 import { OgMeta } from "../lib/components/OgMeta";
+import {
+  DEFAULT_OG_IMAGE,
+  OG_IMAGE_DIR,
+} from "../lib/components/OgMeta/constants";
 import { useCodeBlocks } from "../lib/hooks/useCodeBlocks";
 import { useHeadingAnchors } from "../lib/hooks/useHeadingAnchors";
 import { useScrollDepth, useReadTime } from "../lib/hooks/useAnalytics";
 import { withMermaidCharts } from "../lib/hooks/useMermaidCharts";
 import { trackView } from "../lib/client/analytics";
 import { InlineSource, SectionSources } from "../lib/components/citations";
-import {
-  RiseAndFallChart,
-  GlobalGrowthChart,
-  WageStagnationChart,
-  IndustrialRevolutionChart,
-  SWEMetricsGrid,
-} from "../lib/components/content/us-swe-economy-2025";
-import {
-  TokenCostChart,
-  AgentTaskCostChart,
-  ProjectCostComparisonChart,
-  TokenCostCalculator,
-} from "../lib/components/content/expensive-ai";
 
 const THEME_DARK = "dark";
 const THEME_LIGHT = "light";
+
+const RiseAndFallChart = dynamic(
+  () =>
+    import("../lib/components/content/us-swe-economy-2025").then(
+      (mod) => mod.RiseAndFallChart,
+    ),
+  { ssr: false },
+);
+const GlobalGrowthChart = dynamic(
+  () =>
+    import("../lib/components/content/us-swe-economy-2025").then(
+      (mod) => mod.GlobalGrowthChart,
+    ),
+  { ssr: false },
+);
+const WageStagnationChart = dynamic(
+  () =>
+    import("../lib/components/content/us-swe-economy-2025").then(
+      (mod) => mod.WageStagnationChart,
+    ),
+  { ssr: false },
+);
+const IndustrialRevolutionChart = dynamic(
+  () =>
+    import("../lib/components/content/us-swe-economy-2025").then(
+      (mod) => mod.IndustrialRevolutionChart,
+    ),
+  { ssr: false },
+);
+const SWEMetricsGrid = dynamic(
+  () =>
+    import("../lib/components/content/us-swe-economy-2025").then(
+      (mod) => mod.SWEMetricsGrid,
+    ),
+  { ssr: false },
+);
+const TokenCostChart = dynamic(
+  () =>
+    import("../lib/components/content/expensive-ai").then(
+      (mod) => mod.TokenCostChart,
+    ),
+  { ssr: false },
+);
+const AgentTaskCostChart = dynamic(
+  () =>
+    import("../lib/components/content/expensive-ai").then(
+      (mod) => mod.AgentTaskCostChart,
+    ),
+  { ssr: false },
+);
+const ProjectCostComparisonChart = dynamic(
+  () =>
+    import("../lib/components/content/expensive-ai").then(
+      (mod) => mod.ProjectCostComparisonChart,
+    ),
+  { ssr: false },
+);
+const TokenCostCalculator = dynamic(
+  () =>
+    import("../lib/components/content/expensive-ai").then(
+      (mod) => mod.TokenCostCalculator,
+    ),
+  { ssr: false },
+);
 
 interface PostProps {
   content?: string;
   mdxSource?: MDXRemoteSerializeResult;
   slug: string;
   isMdx: boolean;
+  ogImagePath: string;
   wordCount: number;
   frontmatter: {
     date: string;
@@ -233,6 +288,7 @@ const Post = ({
   frontmatter,
   slug,
   isMdx,
+  ogImagePath,
   wordCount,
 }: PostProps) => {
   const state = useContext(GlobalState);
@@ -273,6 +329,7 @@ const Post = ({
         title={title}
         description={description}
         slug={slug}
+        imagePath={ogImagePath}
         date={frontmatter?.date || ""}
         tags={frontmatter?.tags}
         wordCount={wordCount}
@@ -331,7 +388,7 @@ export const DateText = ({ date, slug }: DateTextProps) => {
 };
 
 export function getStaticPaths() {
-  const paths = getAllPosts("content").map(({ slug }: Post) => `/${slug}`);
+  const paths = getAllPosts("content").map(({ slug }) => `/${slug}`);
   return {
     paths,
     fallback: false,
@@ -346,6 +403,17 @@ interface StaticProps {
 
 export const getStaticProps = async ({ params }: StaticProps) => {
   const data = getSinglePost(params.slug, "content");
+  const fs = await import("node:fs");
+  const path = await import("node:path");
+  const candidateOgImagePath = `${OG_IMAGE_DIR}/${params.slug}/1.png`;
+  const candidatePublicPath = path.join(
+    process.cwd(),
+    "public",
+    candidateOgImagePath.replace(/^\//, ""),
+  );
+  const ogImagePath = fs.existsSync(candidatePublicPath)
+    ? candidateOgImagePath
+    : DEFAULT_OG_IMAGE;
   const wordCount = (data.content || "").split(/\s+/).filter(Boolean).length;
 
   const sanitizedFrontmatter = {
@@ -394,6 +462,7 @@ export const getStaticProps = async ({ params }: StaticProps) => {
         frontmatter: sanitizedFrontmatter,
         mdxSource,
         content: null,
+        ogImagePath,
         wordCount,
       },
     };
@@ -406,6 +475,7 @@ export const getStaticProps = async ({ params }: StaticProps) => {
       frontmatter: sanitizedFrontmatter,
       content,
       mdxSource: null,
+      ogImagePath,
       wordCount,
     },
   };
