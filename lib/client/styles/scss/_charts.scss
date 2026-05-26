@@ -24,6 +24,58 @@
   }
 }
 
+.pastoralist-study-charts {
+  margin: 2rem 0;
+
+  &__summary {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 1.5rem;
+
+    @media screen and (min-width: $width-small) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    div {
+      border-top: 1px solid var(--color-border-light);
+      padding-top: 0.75rem;
+    }
+
+    strong,
+    span {
+      display: block;
+    }
+
+    strong {
+      font-size: 1.6rem;
+      line-height: 1.1;
+    }
+
+    span {
+      color: var(--color-text-secondary);
+      font-size: 0.825rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  &__panel {
+    border: 1px solid var(--color-border-light);
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+
+  &__chart {
+    height: 420px;
+    width: 100%;
+  }
+}
+
 $chart-font-size: 12px;
 $chart-line-height: 1.8;
 $chart-border-radius: 5px;

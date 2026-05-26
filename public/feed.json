@@ -13,7 +13,7 @@
       "id": "https://jeffry.in/why-pastoralist",
       "url": "https://jeffry.in/why-pastoralist",
       "title": "Why Pastoralist: Dependency Overrides Need an Audit Trail",
-      "summary": "Why I built Pastoralist, a tool that tracks, scans, and cleans npm, yarn, pnpm, and bun dependency overrides. I audited 10 major OSS projects, found 135 overrides with no inline rationale, and then tested cleanup against five larger override sets.",
+      "summary": "Why I built Pastoralist, a tool that tracks, scans, and cleans npm, yarn, pnpm, and bun dependency overrides. I audited 10 major OSS projects, found 135 overrides with no inline rationale, tested cleanup against five larger override sets, and then reran the study across fork branches synced on May 25, 2026.",
       "date_published": "2026-02-20T00:00:00.000Z",
       "author": {
         "name": "Jeff Wainwright"

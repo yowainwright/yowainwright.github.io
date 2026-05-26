@@ -39,6 +39,7 @@
     "@next/mdx": "16.0.8",
     "@next/third-parties": "16.2.4",
     "@sentry/nextjs": "10.32.1",
+    "@tanstack/react-table": "8.21.3",
     "firebase": "12.7.0",
     "fuse.js": "7.1.0",
     "lucide-react": "0.542.0",
@@ -50,6 +51,7 @@
     "recharts": "3.3.0",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-slug": "^6.0.0",
+    "remark-gfm": "4.0.1",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {

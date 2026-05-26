@@ -4,14 +4,16 @@ import React, { useState } from "react";
 import { Copy, Check } from "lucide-react";
 
 interface CopyButtonProps {
-  codeId: string;
+  container: HTMLElement;
 }
 
-export default function CopyButton({ codeId }: CopyButtonProps) {
+export default function CopyButton({ container }: CopyButtonProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
-    const codeElement = document.querySelector(`#${codeId} code`);
+    const codeElement = container
+      .closest(".shiki-wrapper")
+      ?.querySelector("pre.shiki code");
     if (!codeElement) return;
 
     const code = codeElement.textContent || "";

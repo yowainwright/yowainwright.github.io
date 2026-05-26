@@ -25,7 +25,26 @@ pre[class*="language-"] > code[class*="language-"] {
 }
 
 .post__content > pre {
+  background: var(--code-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--code-border-radius);
+  color: var(--code-text-light);
+  margin: $m-xl 0;
   overflow-y: auto;
+  padding: $m-lg;
+  white-space: pre;
+
+  code {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    display: block;
+    font-family: var(--font-mono, monospace);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-loose);
+    overflow-x: auto;
+    padding: 0;
+  }
 }
 
 // Basic line styles

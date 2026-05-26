@@ -1,11 +1,27 @@
-import React, { useContext, useState, useEffect, Component } from "react";
+import React, {
+  useContext,
+  useState,
+  useEffect,
+  useMemo,
+  Component,
+} from "react";
 import dynamic from "next/dynamic";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
+import { ArrowDown, ArrowUp, ArrowUpDown, Maximize2, X } from "lucide-react";
+import {
+  flexRender,
+  getCoreRowModel,
+  getSortedRowModel,
+  useReactTable,
+  type ColumnDef,
+  type SortingState,
+} from "@tanstack/react-table";
 import {
   getSinglePost,
   getAllPosts,
   markdownToHtml,
+  getShikiRehypeOptions,
 } from "../lib/server/markdown";
 import { ensureArray } from "../lib/client/utils";
 import { GlobalState } from "./_app";
@@ -88,6 +104,13 @@ const TokenCostCalculator = dynamic(
     ),
   { ssr: false },
 );
+const PastoralistStudyCharts = dynamic(
+  () =>
+    import("../lib/components/content/why-pastoralist").then(
+      (mod) => mod.PastoralistStudyCharts,
+    ),
+  { ssr: false },
+);
 
 interface PostProps {
   content?: string;
@@ -109,6 +132,13 @@ interface PostProps {
 interface GiscusWrapperProps {
   isDarkMode: boolean;
 }
+
+type PostContentBodyProps = {
+  content?: string;
+  isMdx: boolean;
+  mdxSource?: MDXRemoteSerializeResult;
+  setContentElement: React.Dispatch<React.SetStateAction<HTMLDivElement | null>>;
+};
 
 const GiscusErrorFallback = () => (
   <div className="giscus-error">
@@ -252,6 +282,268 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   );
 };
 
+type PostTableRow = {
+  cells: React.ReactNode[];
+  sortValues: string[];
+};
+
+type PostTableProps = React.TableHTMLAttributes<HTMLTableElement> & {
+  "data-title"?: string;
+};
+
+type TableElementProps = {
+  align?: React.CSSProperties["textAlign"];
+  children?: React.ReactNode;
+  style?: React.CSSProperties;
+};
+
+type PostTableColumnMeta = {
+  align?: React.CSSProperties["textAlign"];
+};
+
+const getChildElements = (children: React.ReactNode): React.ReactElement[] =>
+  React.Children.toArray(children).flatMap((child) => {
+    if (!React.isValidElement(child)) return [];
+
+    if (child.type === React.Fragment) {
+      return getChildElements(
+        (child.props as TableElementProps | undefined)?.children,
+      );
+    }
+
+    return [child];
+  });
+
+const isElementTag = (element: React.ReactElement, tagName: string) =>
+  typeof element.type === "string" && element.type === tagName;
+
+const getCellAlign = (props: TableElementProps) =>
+  props.align || props.style?.textAlign;
+
+const getJustifyContent = (align?: React.CSSProperties["textAlign"]) => {
+  if (align === "right") return "flex-end";
+  if (align === "center") return "center";
+  return "flex-start";
+};
+
+const getNodeText = (node: React.ReactNode): string => {
+  if (typeof node === "string" || typeof node === "number") {
+    return String(node);
+  }
+
+  if (Array.isArray(node)) {
+    return node.map(getNodeText).join(" ");
+  }
+
+  if (React.isValidElement(node)) {
+    return getNodeText((node.props as TableElementProps).children);
+  }
+
+  return "";
+};
+
+const getRowCells = (row: React.ReactElement, cellTagNames: string[]) =>
+  getChildElements((row.props as TableElementProps).children)
+    .filter((cell) =>
+      cellTagNames.some((tagName) => isElementTag(cell, tagName)),
+    )
+    .map((cell) => {
+      const props = cell.props as TableElementProps;
+      return {
+        align: getCellAlign(props),
+        content: props.children,
+      };
+    });
+
+const parseMdxTable = (children: React.ReactNode) => {
+  const tableChildren = getChildElements(children);
+  const headerSection = tableChildren.find((child) =>
+    isElementTag(child, "thead"),
+  );
+  const bodySections = tableChildren.filter((child) =>
+    isElementTag(child, "tbody"),
+  );
+
+  const headerRow = headerSection
+    ? getChildElements((headerSection.props as TableElementProps).children).find(
+        (child) => isElementTag(child, "tr"),
+      )
+    : undefined;
+  const headers = headerRow ? getRowCells(headerRow, ["th", "td"]) : [];
+  const bodyRows = bodySections.flatMap((section) =>
+    getChildElements((section.props as TableElementProps).children).filter(
+      (child) => isElementTag(child, "tr"),
+    ),
+  );
+  const rows = bodyRows.map((row) => ({
+    cells: getRowCells(row, ["td", "th"]).map((cell) => cell.content),
+    sortValues: getRowCells(row, ["td", "th"]).map((cell) =>
+      getNodeText(cell.content).trim(),
+    ),
+  }));
+
+  return { headers, rows };
+};
+
+const PostTable = ({
+  className,
+  ...props
+}: PostTableProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [sorting, setSorting] = useState<SortingState>([]);
+  const { children, "data-title": tableTitle, ...tableProps } = props;
+  const tableClassName = ["post__table", className].filter(Boolean).join(" ");
+  const parsedTable = useMemo(
+    () => parseMdxTable(children),
+    [children],
+  );
+  const columns = useMemo<ColumnDef<PostTableRow>[]>(
+    () =>
+      parsedTable.headers.map((header, index) => ({
+        id: `column-${index}`,
+        accessorFn: (row) => row.sortValues[index] || "",
+        header: () => header.content,
+        cell: ({ row }) => row.original.cells[index] || null,
+        meta: { align: header.align },
+      })),
+    [parsedTable.headers],
+  );
+  const table = useReactTable({
+    data: parsedTable.rows,
+    columns,
+    state: { sorting },
+    onSortingChange: setSorting,
+    getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+  });
+
+  const renderTable = () => (
+    <table {...tableProps} className={tableClassName}>
+      <thead>
+        {table.getHeaderGroups().map((headerGroup) => (
+          <tr key={headerGroup.id}>
+            {headerGroup.headers.map((header) => {
+              const meta = header.column.columnDef.meta as PostTableColumnMeta;
+
+              return (
+                <th key={header.id} style={{ textAlign: meta?.align }}>
+                  {header.isPlaceholder ? null : (
+                    <button
+                      type="button"
+                      className="post__table-sort"
+                      style={{
+                        justifyContent: getJustifyContent(meta?.align),
+                      }}
+                      onClick={header.column.getToggleSortingHandler()}
+                    >
+                      <span>
+                        {flexRender(
+                          header.column.columnDef.header,
+                          header.getContext(),
+                        )}
+                      </span>
+                      {header.column.getIsSorted() === "asc" ? (
+                        <ArrowUp size={14} aria-hidden="true" />
+                      ) : null}
+                      {header.column.getIsSorted() === "desc" ? (
+                        <ArrowDown size={14} aria-hidden="true" />
+                      ) : null}
+                      {header.column.getIsSorted() ? null : (
+                        <ArrowUpDown size={14} aria-hidden="true" />
+                      )}
+                    </button>
+                  )}
+                </th>
+              );
+            })}
+          </tr>
+        ))}
+      </thead>
+      <tbody>
+        {table.getRowModel().rows.map((row) => (
+          <tr key={row.id}>
+            {row.getVisibleCells().map((cell) => {
+              const meta = cell.column.columnDef.meta as PostTableColumnMeta;
+
+              return (
+                <td key={cell.id} style={{ textAlign: meta?.align }}>
+                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                </td>
+              );
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+
+  useEffect(() => {
+    if (!isExpanded) return undefined;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsExpanded(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isExpanded]);
+
+  return (
+    <>
+      <div className="post__table-wrapper">
+        <div className="post__table-chrome">
+          {tableTitle ? (
+            <div className="post__table-title">{tableTitle}</div>
+          ) : null}
+          <button
+            type="button"
+            className="post__table-expand"
+            aria-label="View larger table"
+            title="View larger table"
+            onClick={() => setIsExpanded(true)}
+          >
+            <Maximize2 size={16} aria-hidden="true" />
+          </button>
+        </div>
+        <div className="post__table-scroll">{renderTable()}</div>
+      </div>
+      {isExpanded ? (
+        <div
+          className="post__table-dialog"
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setIsExpanded(false)}
+        >
+          <div
+            className="post__table-dialog-content"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="post__table-dialog-header">
+              {tableTitle ? (
+                <div className="post__table-dialog-title">{tableTitle}</div>
+              ) : null}
+              <button
+                type="button"
+                className="post__table-dialog-close"
+                aria-label="Close table"
+                title="Close table"
+                onClick={() => setIsExpanded(false)}
+              >
+                <X size={18} aria-hidden="true" />
+              </button>
+            </div>
+            <div className="post__table-dialog-scroll">
+              <div className="post__table-scroll">{renderTable()}</div>
+            </div>
+          </div>
+        </div>
+      ) : null}
+    </>
+  );
+};
+
 const mdxComponents = {
   InlineSource,
   SectionSources,
@@ -264,10 +556,15 @@ const mdxComponents = {
   AgentTaskCostChart,
   ProjectCostComparisonChart,
   TokenCostCalculator,
-  pre: (props) => <pre className="post__code" {...props} />,
-  img: (props) => <img className="post__image" {...props} />,
-  table: (props) => <table className="post__table" {...props} />,
-  figure: ({ children, ...props }) => (
+  PastoralistStudyCharts,
+  pre: (props: React.HTMLAttributes<HTMLPreElement>) => (
+    <pre className="post__code" {...props} />
+  ),
+  img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
+    <img className="post__image" {...props} />
+  ),
+  table: PostTable,
+  figure: ({ children, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <figure {...props}>
       {typeof children === "string" ? (
         <div
@@ -282,6 +579,112 @@ const mdxComponents = {
   ),
 };
 
+type MdxAstNode = {
+  attributes?: Array<{
+    name?: string;
+    type?: string;
+    value?: unknown;
+  }>;
+  children?: MdxAstNode[];
+  data?: {
+    hProperties?: Record<string, unknown>;
+  };
+  name?: string;
+  type?: string;
+  value?: string;
+};
+
+const getMdxAstText = (node: MdxAstNode): string => {
+  if (typeof node.value === "string") return node.value;
+  if (!node.children) return "";
+
+  return node.children.map(getMdxAstText).join("");
+};
+
+const hasMdxClassName = (node: MdxAstNode, className: string) =>
+  node.attributes?.some(
+    (attribute) =>
+      attribute.name === "className" &&
+      typeof attribute.value === "string" &&
+      attribute.value.split(/\s+/).includes(className),
+  ) || false;
+
+const isMdxTableTitle = (node: MdxAstNode) =>
+  node.type === "mdxJsxFlowElement" &&
+  node.name === "p" &&
+  hasMdxClassName(node, "post__table-title");
+
+function remarkMdxTableTitles() {
+  return (tree: MdxAstNode) => {
+    if (!tree.children) return;
+
+    const children: MdxAstNode[] = [];
+    let pendingTitleNode: MdxAstNode | null = null;
+    let pendingTitle = "";
+
+    tree.children.forEach((node) => {
+      if (isMdxTableTitle(node)) {
+        if (pendingTitleNode) {
+          children.push(pendingTitleNode);
+        }
+
+        pendingTitleNode = node;
+        pendingTitle = getMdxAstText(node).trim();
+        return;
+      }
+
+      if (pendingTitleNode && node.type === "table") {
+        node.data = {
+          ...node.data,
+          hProperties: {
+            ...node.data?.hProperties,
+            "data-title": pendingTitle,
+          },
+        };
+        pendingTitleNode = null;
+        pendingTitle = "";
+        children.push(node);
+        return;
+      }
+
+      if (pendingTitleNode) {
+        children.push(pendingTitleNode);
+        pendingTitleNode = null;
+        pendingTitle = "";
+      }
+
+      children.push(node);
+    });
+
+    if (pendingTitleNode) {
+      children.push(pendingTitleNode);
+    }
+
+    tree.children = children;
+  };
+}
+
+const PostContentBody = React.memo(
+  ({
+    content,
+    isMdx,
+    mdxSource,
+    setContentElement,
+  }: PostContentBodyProps) =>
+    isMdx && mdxSource ? (
+      <div className="post__content" ref={setContentElement}>
+        <MDXRemote {...mdxSource} components={mdxComponents} />
+      </div>
+    ) : (
+      <div
+        className="post__content"
+        ref={setContentElement}
+        dangerouslySetInnerHTML={{ __html: content || "" }}
+      />
+    ),
+);
+PostContentBody.displayName = "PostContentBody";
+
 const Post = ({
   content,
   mdxSource,
@@ -292,8 +695,11 @@ const Post = ({
   wordCount,
 }: PostProps) => {
   const state = useContext(GlobalState);
-  useCodeBlocks();
-  useHeadingAnchors();
+  const [contentElement, setContentElement] = useState<HTMLDivElement | null>(
+    null,
+  );
+  const codeBlockControls = useCodeBlocks(slug, contentElement);
+  const headingAnchorControls = useHeadingAnchors(slug, contentElement);
   useScrollDepth();
   const estimatedReadTime = useReadTime(wordCount);
 
@@ -348,16 +754,14 @@ const Post = ({
         </header>
         <section className="post__section">
           <div className="post__container">
-            {isMdx && mdxSource ? (
-              <div className="post__content">
-                <MDXRemote {...mdxSource} components={mdxComponents} />
-              </div>
-            ) : (
-              <div
-                className="post__content"
-                dangerouslySetInnerHTML={{ __html: content || "" }}
-              />
-            )}
+            <PostContentBody
+              content={content}
+              isMdx={isMdx}
+              mdxSource={mdxSource}
+              setContentElement={setContentElement}
+            />
+            {codeBlockControls}
+            {headingAnchorControls}
             <div className="post__giscus">
               <GiscusWrapper isDarkMode={state?.isDarkMode || false} />
             </div>
@@ -424,10 +828,14 @@ export const getStaticProps = async ({ params }: StaticProps) => {
   };
 
   if (data.isMdx) {
+    const rehypeShiki = (await import("@shikijs/rehype")).default;
+    const remarkGfm = (await import("remark-gfm")).default;
     const remarkMermaidjs = (await import("remark-mermaidjs")).default;
     const mdxSource = await serialize(data.content || "", {
       mdxOptions: {
         remarkPlugins: [
+          remarkGfm,
+          remarkMdxTableTitles,
           [
             remarkMermaidjs,
             {
@@ -453,7 +861,12 @@ export const getStaticProps = async ({ params }: StaticProps) => {
             },
           ],
         ],
-        rehypePlugins: [],
+        rehypePlugins: [
+          [
+            rehypeShiki,
+            getShikiRehypeOptions(),
+          ],
+        ],
       },
     });
     return {
