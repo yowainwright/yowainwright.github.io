@@ -62,7 +62,7 @@
     "@shikijs/transformers": "1.29.2",
     "@types/bun": "latest",
     "@types/jsdom": "27.0.0",
-    "@types/react": "19.2.14",
+    "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3",
     "@vercel/og": "0.8.6",
     "codependence": "0.3.1",
@@ -78,7 +78,7 @@
     "remark-rehype": "11.1.2",
     "rxjs": "7.8.2",
     "sanitize-filename": "1.6.4",
-    "sass": "1.99.0",
+    "sass": "1.100.0",
     "unified": "11.0.5"
   },
   "private": true,
