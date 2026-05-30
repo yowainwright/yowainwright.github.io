@@ -24,7 +24,6 @@ New posts follow this organizational pattern:
 - `components/content/[slug]/` // react components
 - `public/data/[slug].json` // static data
 - `public/assets/[slug]/` // images
-- `public/assets/og/[slug]/` // generated images
 - `scripts/content/[slug]/` // content-specific build scripts
 
 ## Former Work

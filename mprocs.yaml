@@ -50,17 +50,12 @@ procs:
     autorestart: false
 
   rebuild-assets:
-    shell: "bun run build:css && bun run build:og && echo 'Assets rebuilt'"
+    shell: "bun run build:css && echo 'Assets rebuilt'"
     autostart: false
     autorestart: false
 
   full-rebuild:
     shell: "rm -rf .next out && bun run build"
-    autostart: false
-    autorestart: false
-
-  generate-screenshots:
-    shell: "bun scripts/generate-og-screenshots/index.ts"
     autostart: false
     autorestart: false
 

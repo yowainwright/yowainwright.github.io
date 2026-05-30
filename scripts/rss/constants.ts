@@ -11,5 +11,5 @@ export const CONTENT_DIR = path.join(process.cwd(), "content");
 export const OUTPUT_DIR = path.join(process.cwd(), "public");
 
 export const EXCLUDE_SLUGS = ["404"];
-export const SITEMAP_EXCLUDE = ["404", "keystatic"];
+export const SITEMAP_EXCLUDE = ["404"];
 export const MAX_ITEMS = 50;

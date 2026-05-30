@@ -1,5 +1,9 @@
+import crypto from "node:crypto";
+import fs from "node:fs";
+import path from "node:path";
 import remarkRehype from "remark-rehype";
 import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm";
 import rehypeShiki from "@shikijs/rehype";
 import { transformerColorizedBrackets } from "@shikijs/colorized-brackets";
 import {
@@ -31,6 +35,14 @@ import {
   sortPostsByDate,
 } from "./utils";
 
+const MARKDOWN_CACHE_VERSION = "markdown-html-v3";
+const MARKDOWN_CACHE_DIR = path.join(
+  process.cwd(),
+  ".cache",
+  "markdown-html",
+);
+let codeBlockUid = 0;
+
 export const getAllPosts = (folder: string) => {
   const files = getMarkdownFiles(folder);
   const draftFiles = getDraftFiles();
@@ -41,8 +53,8 @@ export const getAllPosts = (folder: string) => {
   return allFiles.map((fileName) => {
     let fileFolder = folder;
 
-    const draftPath = require("path").join(getPath("drafts"), fileName);
-    const isInDrafts = isDev && require("fs").existsSync(draftPath);
+    const draftPath = path.join(getPath("drafts"), fileName);
+    const isInDrafts = isDev && fs.existsSync(draftPath);
     if (isInDrafts) {
       fileFolder = "drafts";
     }
@@ -192,15 +204,13 @@ function transformerCodeWrapper() {
   return {
     name: "code-wrapper",
     root(root) {
-      let codeBlockId = 0;
-
       root.children = root.children.map((node) => {
         const isPreElement = node.type === "element" && node.tagName === "pre";
         const hasShikiClass = node.properties?.class?.includes("shiki");
         const shouldProcess = isPreElement && hasShikiClass;
         if (!shouldProcess) return node;
 
-        const blockId = `code-block-${++codeBlockId}`;
+        const blockId = `code-block-${++codeBlockUid}`;
         const lang =
           node.properties["data-language"] || this.options?.lang || "text";
 
@@ -241,7 +251,6 @@ function transformerCodeWrapper() {
           },
           children: [],
         };
-        headerChildren.push(copyButtonPlaceholder);
 
         const wrapperChildren = [];
 
@@ -350,6 +359,30 @@ function addLazyLoadingToImages() {
 
 let cachedProcessor: ReturnType<typeof unified> | null = null;
 
+export function getShikiRehypeOptions() {
+  return {
+    themes: {
+      dark: customDark,
+      light: customLight,
+    },
+    transformers: [
+      transformerTitle(),
+      transformerNotationDiff(),
+      transformerNotationHighlight(),
+      transformerNotationWordHighlight(),
+      transformerNotationFocus(),
+      transformerNotationErrorLevel(),
+      transformerMetaHighlight(),
+      transformerMetaWordHighlight(),
+      transformerColorizedBrackets(),
+      transformerDiffLines(),
+      transformerTooltip(),
+      transformerLanguageBadge(),
+      transformerCodeWrapper(),
+    ],
+  };
+}
+
 function getProcessor() {
   if (cachedProcessor) {
     return cachedProcessor;
@@ -357,6 +390,7 @@ function getProcessor() {
 
   cachedProcessor = unified()
     .use(remarkParse, { allowDangerousHtml: true })
+    .use(remarkGfm)
     .use(remarkRehype)
     .use(rehypeSlug)
     .use(addHeadingClass)
@@ -369,34 +403,31 @@ function getProcessor() {
       },
       content: [],
     })
-    .use(rehypeShiki, {
-      themes: {
-        dark: customDark,
-        light: customLight,
-      },
-      transformers: [
-        transformerTitle(),
-        transformerNotationDiff(),
-        transformerNotationHighlight(),
-        transformerNotationWordHighlight(),
-        transformerNotationFocus(),
-        transformerNotationErrorLevel(),
-        transformerMetaHighlight(),
-        transformerMetaWordHighlight(),
-        transformerColorizedBrackets(),
-        transformerDiffLines(),
-        transformerTooltip(),
-        transformerLanguageBadge(),
-        transformerCodeWrapper(),
-      ],
-    })
+    .use(rehypeShiki, getShikiRehypeOptions())
     .use(rehypeStringify);
 
   return cachedProcessor;
 }
 
 export const markdownToHtml = async (markdown: string) => {
+  const cacheKey = crypto
+    .createHash("sha256")
+    .update(MARKDOWN_CACHE_VERSION)
+    .update(markdown)
+    .digest("hex");
+  const cachePath = path.join(MARKDOWN_CACHE_DIR, `${cacheKey}.html`);
+  const cachedHtml = fs.existsSync(cachePath)
+    ? fs.readFileSync(cachePath, "utf8")
+    : null;
+
+  if (cachedHtml) return cachedHtml;
+
   const processor = getProcessor();
   const result = await processor.process(markdown);
-  return result.toString();
+  const html = result.toString();
+
+  fs.mkdirSync(MARKDOWN_CACHE_DIR, { recursive: true });
+  fs.writeFileSync(cachePath, html);
+
+  return html;
 };

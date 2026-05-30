@@ -25,9 +25,10 @@ const createComponentName = (slug: string): string => {
 const generateMDXContent = (config: PostConfig): string => {
   const currentDate = new Date().toISOString().split("T")[0];
   const postDate = config.date || currentDate;
-  const hasTags = config.tags && config.tags.length > 0;
+  const tags = config.tags || [];
+  const hasTags = tags.length > 0;
   const tagsString = hasTags
-    ? `tags: [${config.tags.map((tag) => `"${tag}"`).join(", ")}]`
+    ? `tags: [${tags.map((tag) => `"${tag}"`).join(", ")}]`
     : "";
 
   return `---
@@ -110,7 +111,6 @@ ${config.description}
 - \`components/content/${config.slug}/\`
 - \`public/data/${config.slug}${FILE_EXTENSIONS.JSON}\`
 - \`public/assets/${config.slug}/\`
-- \`public/assets/og/${config.slug}/\`
 - \`scripts/content/${config.slug}/\`
 
 ## Development
@@ -126,7 +126,6 @@ const createDirectories = async (slug: string): Promise<void> => {
     join(process.cwd(), DIRECTORIES.COMPONENTS, slug),
     join(process.cwd(), DIRECTORIES.DATA),
     join(process.cwd(), DIRECTORIES.ASSETS, slug),
-    join(process.cwd(), DIRECTORIES.OG, slug),
     join(process.cwd(), DIRECTORIES.SCRIPTS, slug),
   ];
 
@@ -234,10 +233,6 @@ const getRenamePaths = (oldSlug: string, newSlug: string): PostPath[] => {
     {
       from: join(process.cwd(), DIRECTORIES.ASSETS, oldSlug),
       to: join(process.cwd(), DIRECTORIES.ASSETS, newSlug),
-    },
-    {
-      from: join(process.cwd(), DIRECTORIES.OG, oldSlug),
-      to: join(process.cwd(), DIRECTORIES.OG, newSlug),
     },
     {
       from: join(process.cwd(), DIRECTORIES.SCRIPTS, oldSlug),

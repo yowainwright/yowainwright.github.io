@@ -3,7 +3,6 @@ import path from "node:path";
 import matter from "gray-matter";
 import sanitize from "sanitize-filename";
 import {
-  PROJECT_ROOT,
   CONTENT_DIR,
   DRAFTS_DIR,
   EXCLUDED_SLUGS,
@@ -12,14 +11,19 @@ import {
 } from "./constants";
 import { Post } from "./types";
 
-const PATH_MAP = new Map([
-  ["content", CONTENT_DIR],
-  ["drafts", DRAFTS_DIR],
-]);
+const CONTENT_PATH = path.join(process.cwd(), "content");
+const DRAFTS_PATH = path.join(process.cwd(), "drafts");
 
 export const getPath = (folder: string) => {
-  const mappedDir = PATH_MAP.get(folder);
-  return path.join(PROJECT_ROOT, mappedDir || folder);
+  if (folder === CONTENT_DIR) {
+    return CONTENT_PATH;
+  }
+
+  if (folder === DRAFTS_DIR) {
+    return DRAFTS_PATH;
+  }
+
+  throw new Error(`Unsupported markdown folder: ${folder}`);
 };
 
 const tryReadFile = (filePath: string): string | null => {
@@ -57,7 +61,7 @@ export const extractSlugFromFilename = (fileName: string): string => {
   return fileName.split(".")[0];
 };
 
-export const parsePost = (fileName: string, fileFolder: string) => {
+export const parsePost = (fileName: string, fileFolder: string): Post => {
   const source = getFileContent(fileName, fileFolder);
   const slug = extractSlugFromFilename(fileName);
   const { data: frontmatter } = matter(source);
@@ -99,7 +103,7 @@ const trimPostPath = (postPath: string): string => {
   return `/${postPath.split("/")[1]}`;
 };
 
-export const parseSinglePost = (slug: string, folder: string) => {
+export const parseSinglePost = (slug: string, folder: string): Post => {
   const fileFolder = determineFileFolder(slug, folder);
   const { fileName, isMdx } = detectMarkdownType(slug, fileFolder);
 

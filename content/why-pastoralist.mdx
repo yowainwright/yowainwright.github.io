@@ -1,0 +1,362 @@
+---
+title: "Why Pastoralist: Dependency Overrides Need an Audit Trail"
+date: "2026-02-20"
+path: "/why-pastoralist"
+meta: "How Pastoralist can help teams track, scan, and clean npm, yarn, pnpm, and bun dependency overrides, with study notes from OSS projects, cleanup samples, and fork PRs synced on May 25, 2026."
+categories:
+  - code
+  - security
+  - dependencies
+tags: ["Open Source", "npm", "Security", "Dependencies", "Pastoralist"]
+---
+
+import { PastoralistStudyCharts } from "../lib/components/content/why-pastoralist";
+
+Many JavaScript codebases eventually accumulate `overrides` or `resolutions` in `package.json`.
+
+A CVE lands in a transitive dependency so a dependency is pinned to a safer version.
+The PR gets merged. Six months later, the override is still there, but the reason could be gone.
+No one knows so often the override stays.
+
+There are other reasons for overrides but there isn't a clear way to track the reason. Until now.
+Pastoralist provides a set-it-and-forget-it way to manage this issue.
+
+---
+
+## TL;DR
+
+- If your repo uses `overrides`, `resolutions`, or `pnpm.overrides`, [Pastoralist](https://yowainwright.github.io/pastoralist/) can help document why those pins packages exist and whether they still matter.
+- It turns override blocks into a reviewable audit trail, which is useful when a security patch, compatibility workaround, or temporary pin outlives the PR that introduced it.
+- It can help identify stale overrides that no longer match anything in the dependency tree, so cleanup becomes a small review instead of a manual archaeology project.
+- I would appreciate help testing Pastoralist on different package managers, monorepos, and security workflows. Feedback, bug reports, awkward edge cases, and PRs are all useful.
+
+---
+
+## The Problem
+
+A typical `package.json` override block can look like this:
+
+```json
+// [title: package.json - undocumented overrides]
+{
+  "overrides": {
+    "semver": "^7.5.4",
+    "ws": ">=8.17.1",
+    "axios": "1.12.0",
+    "lodash": ">=4.17.23"
+  }
+}
+```
+
+When reviewing that block later, a maintainer usually needs to answer:
+
+1. _Why_ is each override here?
+2. Which packages in your dependency tree actually depend on it?
+3. Is the package still needed?
+4. Did a new CVE show up since you pinned it?
+
+`package.json` alone usually cannot answer those questions. The missing piece is an audit trail.
+
+---
+
+## Quick review of 10 Popular OSS Projects regarding overrides
+
+To get a concrete sample, lets look at the root `package.json` of 10 well-known open source projects and count every `overrides`, `resolutions`, and `pnpm.overrides`.
+
+Stars, dependency trees, and override counts move.
+The useful signal is the pattern: projects add overrides, but the reason rarely lives with the override.
+
+<p className="post__table-title">Initial Override Snapshot</p>
+
+| Project          | Stars | Field                       | Overrides |                  Likely Security-Related |
+| ---------------- | ----: | --------------------------- | --------: | ---------------------------------------: |
+| **n8n**          |  ~51k | `pnpm.overrides`            |        58 |                                      ~17 |
+| **Storybook**    |  ~85k | `resolutions`               |        19 |                                       ~3 |
+| **Prisma**       |  ~41k | `pnpm.overrides`            |         5 | 5 (form-data, hono, jws, tar-fs, lodash) |
+| **VS Code**      | ~167k | `overrides`                 |         2 |                       1 (node-gyp-build) |
+| **React**        | ~233k | `resolutions`               |         2 |                                1 (jsdom) |
+| **React Native** | ~120k | `resolutions`               |         3 |              2 (on-headers, compression) |
+| **Supabase**     |  ~77k | `pnpm.overrides`            |         0 |       0 (cleaned up since initial audit) |
+| **Angular CLI**  |  ~27k | `overrides` + `resolutions` |         3 |                           1 (typescript) |
+| **Gatsby**       |  ~55k | `resolutions`               |         2 |                                        0 |
+| **Cal.com**      |  ~34k | `resolutions`               |        41 |                                       3+ |
+
+**These numbers are a February 20, 2026 snapshot captured with Pastoralist 1.11.0 using Claude.
+In that snapshot, there were 135 overrides across 10 projects. At least 33 looked security-related, or about 24%.
+None of the override entries carried their rationale inline.**
+
+---
+
+These examples show why understanding overrides can be hard to review later:
+
+**n8n** had 58 overrides.
+Some look like security patches (`ws`, `semver`, `axios`).
+Some look like compatibility pins (`date-fns`, `chokidar`, `esbuild`).
+Some are forks (`expr-eval@2.0.2` remapped to `npm:expr-eval-fork@3.0.0`).
+The intent is easier to understand when the history is recorded near the override.
+
+**Prisma** had 5 overrides that all appeared security-related.
+The `>=` ranges suggest "at least this version to patch a CVE," but the CVE context is not visible from the entry itself.
+
+**Supabase** had 4 overrides when this was first written and has since removed all of them.
+That's a useful example of the lifecycle Pastoralist is meant to support: add a pin, keep the context while it is needed, and remove it when it is not.
+
+**React** shows the smaller version of the same issue: the entry pins `jsdom` to `22.1.0`, but the package file does not say whether that was for security, compatibility, or test environment behavior.
+
+The common pattern: override intent often lives outside `package.json`.
+
+### What's actually still needed?
+
+Counting overrides gives a rough view of how much review context may be missing.
+A dependency-aware scan can show which entries still match the current tree.
+
+For a cleanup sample, I ran Pastoralist against five larger override sets to see which overrides were still active in the current dependency tree:
+
+<p className="post__table-title">Unused Override Cleanup Sample</p>
+
+| Project         | Overrides | Unused | Unused % |
+| --------------- | --------: | -----: | -------: |
+| n8n             |        58 |     56 |      97% |
+| TanStack Router |        51 |     41 |      80% |
+| Cal.com         |        41 |     35 |      85% |
+| Next.js         |        16 |      3 |      19% |
+| Prisma          |         5 |      5 |     100% |
+
+**In this sample, 140 of 171 tested overrides no longer matched anything in the current dependency tree, or 82%.**
+
+One useful cleanup case was Prisma: all 5 overrides were security patches for packages that had since left the dependency tree.
+Those entries were not harmful, but they were still carrying old operational context.
+
+---
+
+## Follow-Up: Current Branch Findings
+
+On May 25, 2026, I reran the study against clean fork branches synced from upstream for projects with current root override or resolution surfaces. This skipped older local work branches and opened PRs against my forks rather than the upstream projects.
+
+Pastoralist added an audit trail for **275 override or resolution entries** across **5,252 scanned package manifests**:
+
+The useful output is reviewable in the PR diffs: one Pastoralist run turns a plain override block into a package-by-package ledger that records which dependency still needs the override and why the constraint exists.
+
+<PastoralistStudyCharts />
+
+<p className="post__table-title">Fork PR Study Results</p>
+
+| Project     | Fork PR                                                                          | Upstream ref                      | Entries | Package manifests scanned | Appendix entries |
+| ----------- | -------------------------------------------------------------------------------- | --------------------------------- | ------: | ------------------------: | ---------------: |
+| n8n         | [yowainwright/n8n#3](https://github.com/yowainwright/n8n/pull/3)                 | `n8n-io/n8n@master`               |      79 |                       604 |               79 |
+| Cal.com     | [yowainwright/cal.com#1](https://github.com/yowainwright/cal.com/pull/1)         | `calcom/cal.diy@main`             |      89 |                       375 |               89 |
+| Grafana     | [yowainwright/grafana#1](https://github.com/yowainwright/grafana/pull/1)         | `grafana/grafana@main`            |      26 |                       259 |               26 |
+| Storybook   | [yowainwright/storybook#1](https://github.com/yowainwright/storybook/pull/1)     | `storybookjs/storybook@next`      |      18 |                       433 |               18 |
+| Next.js     | [yowainwright/next.js#1](https://github.com/yowainwright/next.js/pull/1)         | `vercel/next.js@canary`           |      16 |                       340 |               16 |
+| Material UI | [yowainwright/material-ui#1](https://github.com/yowainwright/material-ui/pull/1) | `mui/material-ui@master`          |      13 |                       161 |               13 |
+| Prisma      | [yowainwright/prisma#1](https://github.com/yowainwright/prisma/pull/1)           | `prisma/prisma@main`              |      10 |                       211 |               10 |
+| Nextra      | [yowainwright/nextra#1](https://github.com/yowainwright/nextra/pull/1)           | `shuding/nextra@main`             |       5 |                       102 |                5 |
+| Nimbalyst   | [yowainwright/nimbalyst#1](https://github.com/yowainwright/nimbalyst/pull/1)     | `nimbalyst/nimbalyst@main`        |       4 |                     2,144 |                4 |
+| es-check    | [yowainwright/es-check#413](https://github.com/yowainwright/es-check/pull/413)   | `dollarshaveclub/es-check@master` |       1 |                       446 |                1 |
+
+Two smaller TanStack projects also made good supporting studies:
+
+<p className="post__table-title">TanStack Supporting Studies</p>
+
+| Project           | Fork PR                                                                    | Upstream ref             | Entries | Package manifests scanned | Appendix entries |
+| ----------------- | -------------------------------------------------------------------------- | ------------------------ | ------: | ------------------------: | ---------------: |
+| TanStack Store    | [yowainwright/store#1](https://github.com/yowainwright/store/pull/1)       | `TanStack/store@main`    |       7 |                        61 |                7 |
+| TanStack Devtools | [yowainwright/devtools#1](https://github.com/yowainwright/devtools/pull/1) | `TanStack/devtools@main` |       7 |                       116 |                7 |
+
+The follow-up changed the practical finding from "projects have undocumented overrides" to "the missing operational record can be generated across different dependency graphs." n8n and Cal.com are the largest examples in this sample, but the same pattern appears in framework, database, design-system, docs, and developer-tooling repos.
+
+A few recognizable names are not in this follow-up table. TanStack Router no longer had root overrides or resolutions on the current upstream branch.
+React Router and TanStack Hotkeys need separate validation because their workspace-only override shape triggered removal behavior instead of producing appendix entries.
+That is exactly the kind of edge case where more testing and feedback would help.
+
+---
+
+## What Pastoralist Does
+
+[Pastoralist](https://github.com/yowainwright/pastoralist) is meant to help with this by doing three things:
+
+### 1. Track
+
+When you run `pastoralist`, it scans your overrides and builds an **appendix** that documents each one:
+
+```json
+// [title: package.json - Pastoralist appendix]
+{
+  "pastoralist": {
+    "appendix": {
+      "lodash@>=4.17.23": {
+        "dependents": {
+          "express": "^4.18.0",
+          "async": "^3.2.0"
+        },
+        "ledger": {
+          "reason": "Security vulnerability CVE-2021-23337",
+          "severity": "high",
+          "addedDate": "2025-01-15T00:00:00.000Z"
+        }
+      }
+    }
+  }
+}
+```
+
+The appendix records _why_ an override is there, _what_ depends on it, and _when_ it was added.
+That keeps context with the override instead of relying on memory or old PRs.
+
+### 2. Scan
+
+Pastoralist can check your overrides against vulnerability databases. It ships with support for 4 providers:
+
+- **OSV** (free, no auth required)
+- **GitHub Advisory Database**
+- **Snyk**
+- **Socket**
+
+If a new CVE affects one of your overridden packages, Pastoralist can flag it and help generate a fix. Interactive mode lets you choose which fixes to apply.
+
+### 3. Clean
+
+Overrides that are no longer needed get flagged for removal. If the parent dependency updated and no longer pulls in the vulnerable version, Pastoralist can tell you the override is stale and can be removed after your normal CI checks pass.
+
+This is the maintenance loop Pastoralist is meant to support: overrides can be added quickly during an incident, kept with enough context to review later, and removed when the dependency tree catches up.
+
+---
+
+## Before and After
+
+**Before Pastoralist:** Mystery overrides with no context.
+
+```json
+// [title: package.json - before Pastoralist]
+{
+  "overrides": {
+    "trim": "^0.0.3"
+  }
+}
+```
+
+**After Pastoralist:** Audit trail kept with the override.
+
+```json
+// [title: package.json - after Pastoralist]
+{
+  "overrides": {
+    "trim": "^0.0.3"
+  },
+  "pastoralist": {
+    "appendix": {
+      "trim@^0.0.3": {
+        "dependents": {
+          "remark-parse": "4.0.0"
+        },
+        "ledger": {
+          "addedDate": "2025-01-15T00:00:00.000Z",
+          "reason": "Security vulnerability",
+          "severity": "high",
+          "cve": "CVE-2020-7753"
+        }
+      }
+    }
+  }
+}
+```
+
+---
+
+## CI/CD
+
+Pastoralist ships as a GitHub Action with three modes:
+
+- **`check`** -- Validates overrides are documented and current. Fails on vulnerabilities when `fail-on-security` is enabled.
+- **`update`** -- Updates overrides and the appendix in place.
+- **`pr`** -- Creates a pull request with the changes.
+
+A weekly cron for reviewable override maintenance:
+
+```yml
+# [title: .github/workflows/pastoralist.yml]
+name: pastoralist
+on:
+  schedule:
+    - cron: "0 5 * * 1"
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: yowainwright/pastoralist@v1
+        with:
+          mode: pr
+          check-security: true
+          fail-on-security: true
+```
+
+For CI pipelines, `--quiet --checkSecurity` exits with code 1 if vulnerabilities are found. JSON output is available for programmatic consumption.
+
+---
+
+## Monorepo Support
+
+If your `package.json` has a `workspaces` field, Pastoralist auto-detects it. Set `depPaths: "workspace"` and it scans all workspace packages. The appendix stays in the root so workspace packages stay clean.
+
+---
+
+## Getting Started
+
+```bash
+# [title: Install Pastoralist]
+npm i pastoralist -D
+```
+
+Then run it:
+
+```bash
+# [title: Run Pastoralist]
+npx pastoralist
+```
+
+Or add it to `postinstall`:
+
+```json
+// [title: package.json - postinstall]
+{
+  "scripts": {
+    "postinstall": "pastoralist"
+  }
+}
+```
+
+Works with npm, yarn, pnpm, and bun. The [docs site](https://yowainwright.github.io/pastoralist/) has interactive demos and StackBlitz sandboxes if you want to try it without installing anything.
+
+---
+
+## How fast is it?
+
+For a timing sample, I ran Pastoralist against seven projects, including the cleanup sample above, with a full OSV security scan (`--checkSecurity --securityProvider osv`). No API key, no auth:
+
+<p className="post__table-title">Pastoralist Scan Timing Sample</p>
+
+| Project         | Overrides |    Time |
+| --------------- | --------: | ------: |
+| n8n             |        58 |   416ms |
+| TanStack Router |        51 |   252ms |
+| Cal.com         |        41 |   406ms |
+| Storybook       |        19 |   177ms |
+| Next.js         |        16 | 1,050ms |
+| Prisma          |         5 |   196ms |
+| React Router    |         0 |   108ms |
+
+The median run was 252ms. The three largest override sets all finished under 500ms, network call included. Next.js took 1,050ms because it also evaluates patch files alongside its overrides. React Router had no overrides and finished in 108ms.
+
+The practical takeaway: this is fast enough to run in CI or on a weekly scheduled PR without adding meaningful friction.
+
+---
+
+## Why This Exists
+
+Pastoralist grew out of the same maintenance problem behind my older posts about [building your own Dependabot](/build-your-own-dependabot) and [Snyk and Dependabot ignore configs](/snyk-dependabot-ignore-configs). Those tools are useful for _dependencies_, but override lifecycle management still tends to sit between dependency management and security scanning.
+
+Pastoralist makes that blind spot more reviewable. It is useful today for documenting and cleaning overrides, and I would especially appreciate feedback on package-manager edge cases, workspace layouts, security provider integrations, and CI ergonomics.
+
+If this matches a maintenance problem in your project, try it and let me know where it works or fals short. If your project does not have overrides yet, a clean baseline can make the first emergency pin easier to review later.
+~Thanks!
