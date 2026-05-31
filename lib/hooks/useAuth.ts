@@ -25,13 +25,10 @@ export function useAuth() {
 
       if (code && state) {
         try {
-          const { user: authUser, token: authToken } =
-            await handleOAuthCallback(code, state);
+          const { user: authUser, token: authToken } = await handleOAuthCallback(code, state);
 
           if (!isAllowedUser(authUser)) {
-            setError(
-              "Access denied. You are not authorized to view this page.",
-            );
+            setError("Access denied. You are not authorized to view this page.");
             clearAuth();
             setLoading(false);
             window.history.replaceState({}, "", "/admin");

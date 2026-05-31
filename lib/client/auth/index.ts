@@ -15,8 +15,7 @@ const isConfigValid = firebaseConfig.apiKey && firebaseConfig.databaseURL;
 let db: Database | null = null;
 
 if (isConfigValid) {
-  const app =
-    getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+  const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
   db = getDatabase(app);
 }
 

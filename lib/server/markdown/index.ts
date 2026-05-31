@@ -4,7 +4,7 @@ import path from "node:path";
 import remarkRehype from "remark-rehype";
 import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
-import rehypeShiki from "@shikijs/rehype";
+import rehypeShiki, { type RehypeShikiOptions } from "@shikijs/rehype";
 import { transformerColorizedBrackets } from "@shikijs/colorized-brackets";
 import {
   transformerNotationDiff,
@@ -20,11 +20,21 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { unified } from "unified";
 import { visit } from "unist-util-visit";
-import type { Element } from "hast";
-import { TransformerNode } from "./types";
 import customDark from "../themes/dark.json" with { type: "json" };
 import customLight from "../themes/light.json" with { type: "json" };
 import { TOOLTIP_PATTERN, HEADING_REGEX, COMMENT_PREFIXES } from "./constants";
+import type {
+  MarkdownCodeOptions,
+  MarkdownContent,
+  MarkdownElement,
+  MarkdownElementContent,
+  MarkdownPropertyValue,
+  MarkdownRoot,
+  MarkdownTextNode,
+  MarkdownTheme,
+  MarkdownTransformer,
+  TooltipEntry,
+} from "./types";
 import {
   getMarkdownFiles,
   getDraftFiles,
@@ -36,12 +46,49 @@ import {
 } from "./utils";
 
 const MARKDOWN_CACHE_VERSION = "markdown-html-v3";
-const MARKDOWN_CACHE_DIR = path.join(
-  process.cwd(),
-  ".cache",
-  "markdown-html",
-);
+const MARKDOWN_CACHE_DIR = path.join(process.cwd(), ".cache", "markdown-html");
 let codeBlockUid = 0;
+
+const isElement = (node: MarkdownContent): node is MarkdownElement => node.type === "element";
+
+const isTextNode = (node: MarkdownElementContent): node is MarkdownTextNode => node.type === "text";
+
+const getPropertyStrings = (value: MarkdownPropertyValue | undefined): string[] => {
+  if (Array.isArray(value)) {
+    return value.filter((item): item is string => typeof item === "string");
+  }
+
+  return typeof value === "string" ? [value] : [];
+};
+
+const getPropertyString = (value: MarkdownPropertyValue | undefined): string | undefined => {
+  if (typeof value === "string") return value;
+  if (typeof value === "number") return String(value);
+  return undefined;
+};
+
+const hasClass = (node: MarkdownElement, className: string) => {
+  const classes = [
+    ...getPropertyStrings(node.properties.class),
+    ...getPropertyStrings(node.properties.className),
+  ];
+
+  return classes.includes(className);
+};
+
+const appendClassName = (node: MarkdownElement, className: string) => {
+  node.properties.className = [...getPropertyStrings(node.properties.className), className];
+};
+
+const getFirstText = (element: MarkdownElementContent): string => {
+  if (isTextNode(element)) return element.value;
+  if (isElement(element)) {
+    const firstChild = element.children[0];
+    return firstChild ? getFirstText(firstChild) : "";
+  }
+
+  return "";
+};
 
 export const getAllPosts = (folder: string) => {
   const files = getMarkdownFiles(folder);
@@ -80,26 +127,16 @@ export const getSinglePost = (slug: string, folder: string) => {
   return parseSinglePost(slug, folder);
 };
 
-function transformerDiffLines() {
+function transformerDiffLines(): MarkdownTransformer {
   return {
     name: "diff-lines",
-    code(node: TransformerNode) {
-      node.children?.forEach((line: TransformerNode) => {
-        const hasNoChildren = !line.children || line.children?.length === 0;
-        if (hasNoChildren) return;
+    code(node) {
+      node.children.forEach((line) => {
+        if (!isElement(line)) return;
+        const firstChild = line.children[0];
+        if (!firstChild) return;
 
-        let firstText = "";
-        const getFirstText = (element: TransformerNode): string => {
-          const isText = element.type === "text";
-          if (isText) return element.value;
-          const hasChildren = element.children?.length > 0;
-          if (hasChildren) {
-            return getFirstText(element.children?.[0]);
-          }
-          return "";
-        };
-
-        firstText = getFirstText(line.children[0]);
+        const firstText = getFirstText(firstChild);
 
         const isAddition = firstText.startsWith("+");
         const isRemoval = firstText.startsWith("-");
@@ -107,21 +144,12 @@ function transformerDiffLines() {
 
         if (!shouldProcessDiff) return;
 
-        if (!line.properties) line.properties = {};
-        if (!line.properties?.class) line.properties.class = [];
-
-        const isClassArray = Array.isArray(line.properties?.class);
         const diffType = isAddition ? "add" : "remove";
-
-        if (isClassArray) {
-          line.properties?.class?.push("diff", diffType);
-        } else {
-          line.properties.class = [line.properties?.class, "diff", diffType];
-        }
+        this.addClassToHast(line, ["diff", diffType]);
       });
     },
-    pre(node: TransformerNode, options: { lang?: string }) {
-      const isDiffLanguage = options?.lang === "diff";
+    pre(node) {
+      const isDiffLanguage = this.options.lang === "diff";
       if (isDiffLanguage) {
         node.properties = {
           ...node.properties,
@@ -132,15 +160,15 @@ function transformerDiffLines() {
   };
 }
 
-function transformerTitle() {
+function transformerTitle(): MarkdownTransformer {
   return {
     name: "title",
-    preprocess(code, options) {
+    preprocess(code: string, options: MarkdownCodeOptions) {
       const hasTitle = code.includes("[title:");
       if (!hasTitle) return code;
 
       const lines = code.split("\n");
-      const firstLine = lines[0];
+      const firstLine = lines[0] ?? "";
 
       const titleStart = firstLine.indexOf("[title:");
       const titleEnd = firstLine.indexOf("]", titleStart);
@@ -148,9 +176,7 @@ function transformerTitle() {
       const hasTitleBounds = titleStart !== -1 && titleEnd > titleStart;
       if (!hasTitleBounds) return code;
 
-      const isComment = COMMENT_PREFIXES.some((prefix) =>
-        firstLine.startsWith(prefix),
-      );
+      const isComment = COMMENT_PREFIXES.some((prefix) => firstLine.startsWith(prefix));
 
       const shouldProcessTitle = isComment && options;
       if (!shouldProcessTitle) return code;
@@ -160,12 +186,10 @@ function transformerTitle() {
       return lines.slice(1).join("\n");
     },
     pre(node) {
-      if (!node.properties) node.properties = {};
-
-      const title = node.properties?.title;
+      const title = getPropertyString(node.properties.title);
       if (!title) return;
 
-      const titleNode = {
+      const titleNode: MarkdownElement = {
         type: "element",
         tagName: "div",
         properties: { class: "shiki-title" },
@@ -178,18 +202,18 @@ function transformerTitle() {
   };
 }
 
-function transformerLanguageBadge() {
+function transformerLanguageBadge(): MarkdownTransformer {
   return {
     name: "language-badge",
     root(root) {
       root.children = root.children.map((node) => {
-        const isPreElement = node.type === "element" && node.tagName === "pre";
-        const hasShikiClass = node.properties?.class?.includes("shiki");
+        const isPreElement = isElement(node) && node.tagName === "pre";
+        const hasShikiClass = isPreElement && hasClass(node, "shiki");
         const shouldProcess = isPreElement && hasShikiClass;
         if (!shouldProcess) return node;
 
         const lang =
-          node.properties["data-language"] || this.options?.lang || "text";
+          getPropertyString(node.properties["data-language"]) || this.options.lang || "text";
         node.properties["data-language"] = lang;
 
         return node;
@@ -200,25 +224,25 @@ function transformerLanguageBadge() {
   };
 }
 
-function transformerCodeWrapper() {
+function transformerCodeWrapper(): MarkdownTransformer {
   return {
     name: "code-wrapper",
     root(root) {
       root.children = root.children.map((node) => {
-        const isPreElement = node.type === "element" && node.tagName === "pre";
-        const hasShikiClass = node.properties?.class?.includes("shiki");
+        const isPreElement = isElement(node) && node.tagName === "pre";
+        const hasShikiClass = isPreElement && hasClass(node, "shiki");
         const shouldProcess = isPreElement && hasShikiClass;
         if (!shouldProcess) return node;
 
         const blockId = `code-block-${++codeBlockUid}`;
         const lang =
-          node.properties["data-language"] || this.options?.lang || "text";
+          getPropertyString(node.properties["data-language"]) || this.options.lang || "text";
 
-        let titleElement = null;
-        const codeChildren = [];
+        let titleElement: MarkdownElementContent | null = null;
+        const codeChildren: MarkdownElementContent[] = [];
 
         node.children.forEach((child) => {
-          const isTitle = child.properties?.class === "shiki-title";
+          const isTitle = isElement(child) && hasClass(child, "shiki-title");
           if (isTitle) {
             titleElement = child;
           } else {
@@ -229,20 +253,20 @@ function transformerCodeWrapper() {
         node.children = codeChildren;
         node.properties = { ...node.properties, id: blockId };
 
-        const headerChildren = [];
+        const headerChildren: MarkdownElementContent[] = [];
 
         if (titleElement) {
           headerChildren.push(titleElement);
         }
 
-        const languageBadge = {
+        const languageBadge: MarkdownElement = {
           type: "element",
           tagName: "div",
           properties: { class: "shiki-language" },
           children: [{ type: "text", value: lang.toUpperCase() }],
         };
 
-        const copyButtonPlaceholder = {
+        const copyButtonPlaceholder: MarkdownElement = {
           type: "element",
           tagName: "div",
           properties: {
@@ -252,10 +276,10 @@ function transformerCodeWrapper() {
           children: [],
         };
 
-        const wrapperChildren = [];
+        const wrapperChildren: MarkdownElementContent[] = [];
 
         if (titleElement) {
-          const header = {
+          const header: MarkdownElement = {
             type: "element",
             tagName: "div",
             properties: { class: "shiki-header" },
@@ -273,7 +297,7 @@ function transformerCodeWrapper() {
           tagName: "div",
           properties: { class: "shiki-wrapper" },
           children: wrapperChildren,
-        };
+        } satisfies MarkdownElement;
       });
 
       return root;
@@ -281,89 +305,81 @@ function transformerCodeWrapper() {
   };
 }
 
-function transformerTooltip() {
+function transformerTooltip(): MarkdownTransformer {
+  let tooltips: TooltipEntry[] = [];
+
   return {
     name: "tooltip",
-    preprocess(code) {
-      const tooltips = [];
-      let match;
+    preprocess(code: string) {
+      tooltips = [];
+      let match: RegExpExecArray | null;
 
+      TOOLTIP_PATTERN.lastIndex = 0;
       while ((match = TOOLTIP_PATTERN.exec(code)) !== null) {
+        const word = match[1];
+        const tooltip = match[2];
+        if (!word || !tooltip) continue;
+
         tooltips.push({
-          word: match[1],
-          tooltip: match[2].trim(),
+          word,
+          tooltip: tooltip.trim(),
           full: match[0],
         });
       }
 
-      this.tooltips = tooltips;
+      TOOLTIP_PATTERN.lastIndex = 0;
       return code.replace(TOOLTIP_PATTERN, "$1");
     },
     span(node) {
-      const tooltips = this.tooltips || [];
-      const nodeText = node.children?.[0]?.value;
+      const firstChild = node.children[0];
+      const nodeText = firstChild && isTextNode(firstChild) ? firstChild.value : "";
 
       if (!nodeText) return;
 
-      const matchingTooltip = tooltips.find((t) => nodeText.includes(t.word));
+      const matchingTooltip = tooltips.find((tooltip) => nodeText.includes(tooltip.word));
       if (!matchingTooltip) return;
 
-      const wrapper = {
-        type: "element",
-        tagName: "span",
-        properties: {
-          class: "shiki-tooltip",
-          "data-tooltip": matchingTooltip.tooltip,
-          role: "tooltip",
-          "aria-label": matchingTooltip.tooltip,
-          tabindex: "0",
-        },
-        children: node.children,
+      node.tagName = "span";
+      node.properties = {
+        ...node.properties,
+        class: [...getPropertyStrings(node.properties.class), "shiki-tooltip"],
+        "data-tooltip": matchingTooltip.tooltip,
+        role: "tooltip",
+        "aria-label": matchingTooltip.tooltip,
+        tabindex: "0",
       };
-
-      node.type = wrapper.type;
-      node.tagName = wrapper.tagName;
-      node.properties = { ...node.properties, ...wrapper.properties };
     },
   };
 }
 
 function addHeadingClass() {
-  return (tree: Element) => {
-    visit(tree, "element", (node: Element) => {
+  return (tree: MarkdownRoot) => {
+    visit(tree, "element", (node: MarkdownElement) => {
       const isHeading = HEADING_REGEX.test(node.tagName);
       if (!isHeading) return;
 
-      node.properties = node.properties || {};
-      const classes = node.properties.className || [];
-      const isClassArray = Array.isArray(classes);
-      node.properties.className = isClassArray
-        ? [...classes, "content-header"]
-        : [classes, "content-header"];
+      appendClassName(node, "content-header");
     });
   };
 }
 
 function addLazyLoadingToImages() {
-  return (tree: Element) => {
-    visit(tree, "element", (node: Element) => {
+  return (tree: MarkdownRoot) => {
+    visit(tree, "element", (node: MarkdownElement) => {
       const isImage = node.tagName === "img";
       if (!isImage) return;
 
-      node.properties = node.properties || {};
       node.properties.loading = "lazy";
       node.properties.decoding = "async";
     });
   };
 }
 
-let cachedProcessor: ReturnType<typeof unified> | null = null;
-
-export function getShikiRehypeOptions() {
+export function getShikiRehypeOptions(): RehypeShikiOptions {
   return {
     themes: {
-      dark: customDark,
-      light: customLight,
+      dark: customDark as MarkdownTheme,
+      light: customLight as MarkdownTheme,
     },
     transformers: [
       transformerTitle(),
@@ -383,12 +399,8 @@ export function getShikiRehypeOptions() {
   };
 }
 
-function getProcessor() {
-  if (cachedProcessor) {
-    return cachedProcessor;
-  }
-
-  cachedProcessor = unified()
+function createProcessor() {
+  return unified()
     .use(remarkParse, { allowDangerousHtml: true })
     .use(remarkGfm)
     .use(remarkRehype)
@@ -405,6 +417,14 @@ function getProcessor() {
     })
     .use(rehypeShiki, getShikiRehypeOptions())
     .use(rehypeStringify);
+}
+
+let cachedProcessor: ReturnType<typeof createProcessor> | null = null;
+
+function getProcessor(): ReturnType<typeof createProcessor> {
+  if (!cachedProcessor) {
+    cachedProcessor = createProcessor();
+  }
 
   return cachedProcessor;
 }
@@ -416,9 +436,7 @@ export const markdownToHtml = async (markdown: string) => {
     .update(markdown)
     .digest("hex");
   const cachePath = path.join(MARKDOWN_CACHE_DIR, `${cacheKey}.html`);
-  const cachedHtml = fs.existsSync(cachePath)
-    ? fs.readFileSync(cachePath, "utf8")
-    : null;
+  const cachedHtml = fs.existsSync(cachePath) ? fs.readFileSync(cachePath, "utf8") : null;
 
   if (cachedHtml) return cachedHtml;
 

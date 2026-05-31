@@ -1,23 +1,30 @@
 export const CHART_COLORS = {
   light: {
-    primary: "#3b82f6",
-    success: "#10b981",
-    warning: "#f59e0b",
-    danger: "#ef4444",
-    purple: "#8b5cf6",
-    pink: "#ec4899",
-    grey: "#9ca3af",
+    primary: "var(--chart-series-1)",
+    success: "var(--chart-series-2)",
+    warning: "var(--chart-series-3)",
+    danger: "var(--chart-series-4)",
+    purple: "var(--chart-series-2)",
+    pink: "var(--chart-series-3)",
+    grey: "var(--chart-series-1)",
   },
   dark: {
-    primary: "#60a5fa",
-    success: "#34d399",
-    warning: "#fbbf24",
-    danger: "#f87171",
-    purple: "#a78bfa",
-    pink: "#f472b6",
-    grey: "#6b7280",
+    primary: "var(--chart-series-1)",
+    success: "var(--chart-series-2)",
+    warning: "var(--chart-series-3)",
+    danger: "var(--chart-series-4)",
+    purple: "var(--chart-series-2)",
+    pink: "var(--chart-series-3)",
+    grey: "var(--chart-series-1)",
   },
 };
+
+export const CHART_SERIES_COLORS = [
+  "var(--chart-series-1)",
+  "var(--chart-series-2)",
+  "var(--chart-series-3)",
+  "var(--chart-series-4)",
+];
 
 const fontSize = 12;
 const lineHeight = 1.8;
@@ -38,27 +45,35 @@ const yLabelAngle = -90;
 const yLabelPosition = "insideLeft" as const;
 
 const lineType = "monotone" as const;
-const lineStrokeWidth = 1;
-const lineDotRadius = 2;
+const lineStrokeWidth = 1.5;
+const lineDotRadius = 1.75;
 const lineLabelPosition = "top" as const;
 
 const barMaxSize = 60;
 
-const gridStrokeDasharray = "3 3";
+const gridStrokeDasharray = "2 4";
+const gridStroke = "var(--chart-grid)";
+const axisStroke = "var(--chart-axis)";
+const labelColor = "var(--chart-label)";
 
 const borderRadius = "5px";
-const tooltipBorder = ".1rem solid var(--color-text-primary)";
+const tooltipBorder = "1px solid var(--chart-tooltip-border)";
 
 const backgroundColor = "var(--color-bg-primary)";
 const textColor = "var(--color-text-primary)";
 
 const legendVerticalAlign = "bottom" as const;
+const initialDimension = {
+  width: 800,
+  height: 360,
+};
 
 export const CHART_STYLES = {
   container: {
     width: "100%",
     padding: containerPadding,
   },
+  initialDimension,
   margin: {
     top: marginTop,
     right: marginRight,
@@ -67,6 +82,7 @@ export const CHART_STYLES = {
   },
   grid: {
     strokeDasharray: gridStrokeDasharray,
+    stroke: gridStroke,
   },
   line: {
     type: lineType,
@@ -75,14 +91,17 @@ export const CHART_STYLES = {
     label: {
       position: lineLabelPosition,
       fontSize,
+      color: labelColor,
     },
   },
   bar: {
     maxBarSize: barMaxSize,
   },
   axis: {
+    color: axisStroke,
     fontSize,
     label: {
+      color: labelColor,
       fontSize,
       x: {
         offset: xLabelOffset,
@@ -112,6 +131,7 @@ export const CHART_STYLES = {
       color: textColor,
       border: tooltipBorder,
       padding: tooltipPadding,
+      boxShadow: "none",
     },
     item: {
       fontSize,

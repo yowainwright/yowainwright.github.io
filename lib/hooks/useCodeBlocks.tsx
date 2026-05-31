@@ -9,14 +9,9 @@ import {
 } from "./constants";
 import { usePlaceholderEnhancements } from "./usePlaceholderEnhancements";
 
-export function useCodeBlocks(
-  contentKey: string,
-  contentElement: HTMLElement | null,
-) {
+export function useCodeBlocks(contentKey: string, contentElement: HTMLElement | null) {
   const renderCopyButton = useCallback((element: HTMLElement) => {
-    const codeElement = element
-      .closest(SHIKI_WRAPPER_SELECTOR)
-      ?.querySelector(SHIKI_CODE_SELECTOR);
+    const codeElement = element.closest(SHIKI_WRAPPER_SELECTOR)?.querySelector(SHIKI_CODE_SELECTOR);
 
     if (!codeElement) return null;
     return <CopyButton container={element} />;

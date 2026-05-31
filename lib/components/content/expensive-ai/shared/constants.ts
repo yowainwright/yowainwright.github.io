@@ -1,3 +1,5 @@
+import { EMPTY_EXPENSIVE_AI_CHART_DATA } from "../../../../client/data/expensive-ai";
+
 export const SHARED_CHART_CONSTANTS = {
   LOADING_STATES: {
     SPINNER_SIZE: 16,
@@ -10,4 +12,7 @@ export const SHARED_CHART_CONSTANTS = {
     },
   },
   DATA_SOURCE: "/data/expensive-ai.json",
+  ERROR_HANDLING: {
+    FALLBACK_STATE: EMPTY_EXPENSIVE_AI_CHART_DATA,
+  },
 };

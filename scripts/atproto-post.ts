@@ -5,38 +5,27 @@ import path from "node:path";
 import { createLogger } from "../lib/server/logger";
 import { AtProtoClient } from "../lib/server/atproto";
 import { getAllPostsArchive, getSinglePost } from "../lib/server/markdown";
-import {
-  DEFAULT_OG_IMAGE,
-  OG_IMAGE_DIR,
-} from "../lib/components/OgMeta/constants";
+import { DEFAULT_OG_IMAGE, OG_IMAGE_DIR } from "../lib/components/OgMeta/constants";
 
 const log = createLogger("atproto-post");
 
 const SITE_URL = "https://jeffry.in";
 
 const getPublicAssetPath = (assetPath: string): string | undefined => {
-  const absolutePath = path.join(
-    process.cwd(),
-    "public",
-    assetPath.replace(/^\//, ""),
-  );
+  const absolutePath = path.join(process.cwd(), "public", assetPath.replace(/^\//, ""));
   return fs.existsSync(absolutePath) ? absolutePath : undefined;
 };
 
 const getPostImagePath = (slug: string): string => {
   const candidateImagePath = `${OG_IMAGE_DIR}/${slug}/1.png`;
-  return getPublicAssetPath(candidateImagePath)
-    ? candidateImagePath
-    : DEFAULT_OG_IMAGE;
+  return getPublicAssetPath(candidateImagePath) ? candidateImagePath : DEFAULT_OG_IMAGE;
 };
 
 const postToAtProto = async (slug: string): Promise<void> => {
   const post = getSinglePost(slug, "content");
   const title = post.frontmatter.title || slug;
   const description =
-    post.frontmatter.description ||
-    post.frontmatter.meta ||
-    `Posted on ${post.frontmatter.date}`;
+    post.frontmatter.description || post.frontmatter.meta || `Posted on ${post.frontmatter.date}`;
   const imagePath = getPublicAssetPath(getPostImagePath(slug));
 
   const url = `${SITE_URL}/${slug}/`;
@@ -44,10 +33,7 @@ const postToAtProto = async (slug: string): Promise<void> => {
   const client = new AtProtoClient();
   await client.login();
 
-  log.info(
-    { slug, title, hasImage: Boolean(imagePath) },
-    "posting to AT Protocol",
-  );
+  log.info({ slug, title, hasImage: Boolean(imagePath) }, "posting to AT Protocol");
 
   const result = await client.createPost({
     text: `${title}\n\n${url}`,

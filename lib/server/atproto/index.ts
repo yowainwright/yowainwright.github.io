@@ -1,12 +1,7 @@
 import { AtpAgent, RichText } from "@atproto/api";
 import fs from "node:fs";
 import path from "node:path";
-import type {
-  AtProtoConfig,
-  CreatePostOptions,
-  PostResult,
-  BlobRef,
-} from "./types";
+import type { AtProtoConfig, CreatePostOptions, PostResult, BlobRef } from "./types";
 import { DEFAULT_PDS_URL, MAX_IMAGE_SIZE, DEFAULT_LANGS } from "./constants";
 
 export class AtProtoClient {
@@ -39,9 +34,7 @@ export class AtProtoClient {
     const imageData = fs.readFileSync(absolutePath);
 
     if (imageData.length > MAX_IMAGE_SIZE) {
-      throw new Error(
-        `Image exceeds ${MAX_IMAGE_SIZE} bytes: ${imageData.length}`,
-      );
+      throw new Error(`Image exceeds ${MAX_IMAGE_SIZE} bytes: ${imageData.length}`);
     }
 
     const mimeType = this.getMimeType(absolutePath);
@@ -49,7 +42,7 @@ export class AtProtoClient {
       encoding: mimeType,
     });
 
-    return response.data.blob as BlobRef;
+    return response.data.blob as unknown as BlobRef;
   }
 
   async createPost(options: CreatePostOptions): Promise<PostResult> {

@@ -1,3 +1,4 @@
+export { CitationLink, isCitationLink } from "./CitationLink";
 export { InlineSource } from "./InlineSource";
 export { SectionSources } from "./SectionSources";
 export type { InlineSourceProps } from "./InlineSource/types";

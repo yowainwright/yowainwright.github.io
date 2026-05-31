@@ -5,6 +5,7 @@ import {
   TransformWrapper,
   TransformComponent,
   ReactZoomPanPinchRef,
+  ReactZoomPanPinchContentRef,
 } from "react-zoom-pan-pinch";
 import { X, ZoomIn, ZoomOut, Download } from "lucide-react";
 import type { MermaidDialogProps } from "../types";
@@ -15,9 +16,7 @@ export const MermaidDialog: React.FC<MermaidDialogProps> = ({
   svgContent,
   title,
 }) => {
-  const [transformRef, setTransformRef] = useState<ReactZoomPanPinchRef | null>(
-    null,
-  );
+  const [transformRef, setTransformRef] = useState<ReactZoomPanPinchRef | null>(null);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -74,24 +73,13 @@ export const MermaidDialog: React.FC<MermaidDialogProps> = ({
 
   return (
     <div className="mermaid-dialog" onClick={onClose}>
-      <div
-        className="mermaid-dialog-content"
-        onClick={(e) => e.stopPropagation()}
-      >
+      <div className="mermaid-dialog-content" onClick={(e) => e.stopPropagation()}>
         <div className="mermaid-dialog-toolbar">
           <div className="mermaid-dialog-controls">
-            <button
-              onClick={handleZoomIn}
-              aria-label="Zoom in"
-              className="mermaid-dialog-button"
-            >
+            <button onClick={handleZoomIn} aria-label="Zoom in" className="mermaid-dialog-button">
               <ZoomIn size={18} />
             </button>
-            <button
-              onClick={handleZoomOut}
-              aria-label="Zoom out"
-              className="mermaid-dialog-button"
-            >
+            <button onClick={handleZoomOut} aria-label="Zoom out" className="mermaid-dialog-button">
               <ZoomOut size={18} />
             </button>
             <button
@@ -104,18 +92,16 @@ export const MermaidDialog: React.FC<MermaidDialogProps> = ({
           </div>
           {title && <div className="mermaid-dialog-title">{title}</div>}
           <div className="mermaid-dialog-controls">
-            <button
-              onClick={onClose}
-              aria-label="Close dialog"
-              className="mermaid-dialog-button"
-            >
+            <button onClick={onClose} aria-label="Close dialog" className="mermaid-dialog-button">
               <X size={18} />
             </button>
           </div>
         </div>
 
         <TransformWrapper
-          ref={setTransformRef}
+          ref={(instance: ReactZoomPanPinchContentRef | null) => {
+            setTransformRef(instance as ReactZoomPanPinchRef | null);
+          }}
           initialScale={1.5}
           minScale={0.1}
           maxScale={10}

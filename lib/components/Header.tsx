@@ -7,32 +7,26 @@ import { DispatchStore, GlobalState } from "../../pages/_app";
 import { NavItemProps, IconProps, NavListProps } from "../types";
 import { NAV_ITEMS as navItems } from "../constants";
 
-export const Icon = ({ isDarkMode }: IconProps) =>
-  isDarkMode ? <Sun /> : <Moon />;
+export const Icon = ({ isDarkMode }: IconProps) => (isDarkMode ? <Sun /> : <Moon />);
 
 export function DarkmodeToggle() {
   const state = useContext(GlobalState);
   const dispatch = useContext(DispatchStore);
-  const handleToggle = () =>
-    dispatch({ type: "SET_IS_DARKMODE", payload: !state?.isDarkMode });
+  const isDarkMode = state?.isDarkMode ?? false;
+  const handleToggle = () => {
+    dispatch?.({ type: "SET_IS_DARKMODE", payload: !isDarkMode });
+  };
 
   return (
-    <button
-      className="site-nav__toggle"
-      onClick={handleToggle}
-      title="Toggle Darkmode"
-    >
-      <Icon isDarkMode={state?.isDarkMode} />
+    <button className="site-nav__toggle" onClick={handleToggle} title="Toggle Darkmode">
+      <Icon isDarkMode={isDarkMode} />
     </button>
   );
 }
 
 export const NavItem = ({ alias, componentName, name, path }: NavItemProps) => (
   <li className={`${componentName}__item ${componentName}__item--${alias}`}>
-    <Link
-      className={`${componentName}__link ${componentName}__link--${alias}`}
-      href={path}
-    >
+    <Link className={`${componentName}__link ${componentName}__link--${alias}`} href={path}>
       {name}
     </Link>
   </li>
@@ -42,13 +36,7 @@ export function NavList({ componentName, navItems }: NavListProps) {
   return (
     <ul className={`${componentName}__items`}>
       {navItems.map(({ alias, name, path }) => (
-        <NavItem
-          key={alias}
-          alias={alias}
-          componentName={componentName}
-          name={name}
-          path={path}
-        />
+        <NavItem key={alias} alias={alias} componentName={componentName} name={name} path={path} />
       ))}
     </ul>
   );

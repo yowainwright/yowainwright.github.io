@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext } from "react";
+import React from "react";
 import {
   LineChart as RechartsLineChart,
   Line,
@@ -14,14 +14,14 @@ import {
 } from "recharts";
 import { GitCommitHorizontal } from "lucide-react";
 import type { LineChartProps, Series } from "../types";
-import { CHART_COLORS, CHART_STYLES } from "../constants";
-import { LabelPosition } from "recharts/types/component/Label";
-import { GlobalState } from "../../../../pages/_app";
+import { CHART_SERIES_COLORS, CHART_STYLES } from "../constants";
+import type { LabelPosition } from "recharts/types/component/Label";
 
 const formatChartData = (data: Series[]) => {
-  const allPrimaryKeys = [
-    ...new Set(data.flatMap((s) => s.data.map((d) => d.primary))),
-  ].sort();
+  const allPrimaryKeys = Array.from(
+    new Set(data.flatMap((s) => s.data.map((d) => d.primary))),
+  ).sort();
+
   return allPrimaryKeys.map((primary) => {
     const dataPoint: Record<string, string | number | undefined> = { primary };
     data.forEach((s) => {
@@ -35,9 +35,9 @@ const formatChartData = (data: Series[]) => {
 const LegendContent = ({
   payload,
 }: {
-  payload?: Array<{ color: string; value: string }>;
+  payload?: readonly { color?: string; value?: string }[];
 }) => (
-  <ul>
+  <ul className="chart-legend">
     {payload?.map((entry, index) => (
       <li
         key={`item-${index}`}
@@ -67,35 +67,54 @@ export const LineChart = ({
   yDomain,
   title,
 }: LineChartProps) => {
-  const state = useContext(GlobalState);
-  const isDark = state?.isDarkMode ?? false;
-  const colors = Object.values(isDark ? CHART_COLORS.dark : CHART_COLORS.light);
   const series = data.map((s) => s.label);
   const formattedData = formatChartData(data);
 
   return (
     <div className="post__chart" style={{ ...CHART_STYLES.container, height }}>
       {title && <div className="chart-title">{title}</div>}
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer
+        width="100%"
+        height="100%"
+        initialDimension={CHART_STYLES.initialDimension}
+      >
         <RechartsLineChart data={formattedData} margin={CHART_STYLES.margin}>
-          <CartesianGrid strokeDasharray={CHART_STYLES.grid.strokeDasharray} />
-          <XAxis dataKey="primary" fontSize={CHART_STYLES.axis.fontSize}>
+          <CartesianGrid
+            stroke={CHART_STYLES.grid.stroke}
+            strokeDasharray={CHART_STYLES.grid.strokeDasharray}
+            vertical={false}
+          />
+          <XAxis
+            axisLine={{ stroke: CHART_STYLES.axis.color }}
+            dataKey="primary"
+            fontSize={CHART_STYLES.axis.fontSize}
+            tick={{ fill: CHART_STYLES.axis.color }}
+            tickLine={{ stroke: CHART_STYLES.axis.color }}
+          >
             {primaryLabel && (
               <Label
+                fill={CHART_STYLES.axis.label.color}
+                fontSize={CHART_STYLES.axis.label.fontSize}
                 value={primaryLabel}
                 offset={CHART_STYLES.axis.label.x.offset}
                 position={CHART_STYLES.axis.label.x.position}
-                fontSize={CHART_STYLES.axis.label.fontSize}
               />
             )}
           </XAxis>
-          <YAxis fontSize={CHART_STYLES.axis.fontSize} domain={yDomain}>
+          <YAxis
+            axisLine={{ stroke: CHART_STYLES.axis.color }}
+            domain={yDomain}
+            fontSize={CHART_STYLES.axis.fontSize}
+            tick={{ fill: CHART_STYLES.axis.color }}
+            tickLine={{ stroke: CHART_STYLES.axis.color }}
+          >
             {secondaryLabel && (
               <Label
+                fill={CHART_STYLES.axis.label.color}
+                fontSize={CHART_STYLES.axis.label.fontSize}
                 value={secondaryLabel}
                 angle={CHART_STYLES.axis.label.y.angle}
                 position={CHART_STYLES.axis.label.y.position}
-                fontSize={CHART_STYLES.axis.label.fontSize}
               />
             )}
           </YAxis>
@@ -104,21 +123,23 @@ export const LineChart = ({
             itemStyle={CHART_STYLES.tooltip.item}
             labelStyle={CHART_STYLES.tooltip.label}
           />
-          <Legend
-            verticalAlign={CHART_STYLES.legend.verticalAlign}
-            content={LegendContent}
-          />
+          <Legend verticalAlign={CHART_STYLES.legend.verticalAlign} content={LegendContent} />
           {series.map((seriesLabel, index) => (
             <Line
               key={seriesLabel}
               type={CHART_STYLES.line.type}
               dataKey={seriesLabel}
-              stroke={colors[index % colors.length]}
+              stroke={CHART_SERIES_COLORS[index % CHART_SERIES_COLORS.length]}
               strokeWidth={CHART_STYLES.line.strokeWidth}
-              dot={{ r: CHART_STYLES.line.dotRadius }}
+              dot={{
+                fill: "var(--color-bg-primary)",
+                r: CHART_STYLES.line.dotRadius,
+                strokeWidth: CHART_STYLES.line.strokeWidth,
+              }}
               label={{
                 position: CHART_STYLES.line.label.position as LabelPosition,
                 fontSize: CHART_STYLES.line.label.fontSize,
+                fill: CHART_STYLES.line.label.color,
               }}
             />
           ))}

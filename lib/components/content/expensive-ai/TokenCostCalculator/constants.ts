@@ -1,3 +1,5 @@
+import type { ExpensiveAiData } from "../../../../client/data/expensive-ai";
+
 export const MODEL_PRICING = {
   "claude-opus-4.5": {
     input: 28,
@@ -57,12 +59,23 @@ export const MODEL_NAMES = {
 
 export const LAST_UPDATED = "2026-02-11T03:10:57.337Z";
 
+export const FALLBACK_AI_DATA: ExpensiveAiData = {
+  title: "AI Model Cost Calculator",
+  lastUpdated: LAST_UPDATED,
+  models: MODEL_PRICING,
+  sources: [],
+  reasoningMultipliers: REASONING_MULTIPLIERS,
+  inputTokenEfficiency: INPUT_TOKEN_EFFICIENCY,
+  modelNames: MODEL_NAMES,
+  agentTaskCosts: [],
+  totalProjectCosts: [],
+};
+
 export const STORAGE_KEY = "ai-token-calculator-input";
 export const DEFAULT_TOKENS = 700;
 
 export const GRAMMARS = {
-  DESCRIPTION:
-    "Calculate approximate costs for different AI models based on token usage",
+  DESCRIPTION: "Calculate approximate costs for different AI models based on token usage",
   LABEL: "Input Tokens:",
   INPUT_LABEL: "(500 words ≈ 700 tokens)",
   META_TITLE: "Pricing data",

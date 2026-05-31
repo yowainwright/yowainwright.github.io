@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext } from "react";
+import React from "react";
 import {
   BarChart as RechartsBarChart,
   Bar,
@@ -13,8 +13,7 @@ import {
   Cell,
 } from "recharts";
 import type { BarChartProps } from "../types";
-import { CHART_COLORS, CHART_STYLES } from "../constants";
-import { GlobalState } from "../../../../pages/_app";
+import { CHART_SERIES_COLORS, CHART_STYLES } from "../constants";
 
 export const BarChart = ({
   data,
@@ -22,38 +21,61 @@ export const BarChart = ({
   secondaryLabel = "",
   height = "400px",
   title,
+  yDomain,
 }: BarChartProps) => {
-  const state = useContext(GlobalState);
-  const isDark = state?.isDarkMode ?? false;
-  const colors = isDark ? CHART_COLORS.dark : CHART_COLORS.light;
   const hasData = data && data.length > 0;
   const chartData = hasData ? data[0].data || [] : [];
-  const zebraColors = [colors.grey, colors.primary];
 
   return (
-    <div
-      className="post__chart"
-      style={{ width: "100%", height, padding: "20px 0" }}
-    >
+    <div className="post__chart" style={{ ...CHART_STYLES.container, height }}>
       {title && <div className="chart-title">{title}</div>}
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer
+        width="100%"
+        height="100%"
+        initialDimension={CHART_STYLES.initialDimension}
+      >
         <RechartsBarChart data={chartData} margin={CHART_STYLES.margin}>
-          <CartesianGrid strokeDasharray={CHART_STYLES.grid.strokeDasharray} />
-          <XAxis dataKey="primary" fontSize={CHART_STYLES.axis.fontSize}>
+          <CartesianGrid
+            stroke={CHART_STYLES.grid.stroke}
+            strokeDasharray={CHART_STYLES.grid.strokeDasharray}
+            vertical={false}
+          />
+          <XAxis
+            axisLine={{ stroke: CHART_STYLES.axis.color }}
+            dataKey="primary"
+            fontSize={CHART_STYLES.axis.fontSize}
+            tick={{ fill: CHART_STYLES.axis.color }}
+            tickLine={{ stroke: CHART_STYLES.axis.color }}
+          >
             {primaryLabel && (
               <Label
+                fill={CHART_STYLES.axis.label.color}
+                fontSize={CHART_STYLES.axis.label.fontSize}
                 value={primaryLabel}
-                offset={-10}
-                position="insideBottom"
+                offset={CHART_STYLES.axis.label.x.offset}
+                position={CHART_STYLES.axis.label.x.position}
               />
             )}
           </XAxis>
-          <YAxis fontSize={CHART_STYLES.axis.fontSize}>
+          <YAxis
+            axisLine={{ stroke: CHART_STYLES.axis.color }}
+            domain={yDomain}
+            fontSize={CHART_STYLES.axis.fontSize}
+            tick={{ fill: CHART_STYLES.axis.color }}
+            tickLine={{ stroke: CHART_STYLES.axis.color }}
+          >
             {secondaryLabel && (
-              <Label value={secondaryLabel} angle={-90} position="insideLeft" />
+              <Label
+                angle={CHART_STYLES.axis.label.y.angle}
+                fill={CHART_STYLES.axis.label.color}
+                fontSize={CHART_STYLES.axis.label.fontSize}
+                position={CHART_STYLES.axis.label.y.position}
+                value={secondaryLabel}
+              />
             )}
           </YAxis>
           <Tooltip
+            cursor={{ fill: "var(--chart-hover-fill)" }}
             contentStyle={CHART_STYLES.tooltip.content}
             itemStyle={CHART_STYLES.tooltip.item}
             labelStyle={CHART_STYLES.tooltip.label}
@@ -64,10 +86,14 @@ export const BarChart = ({
             label={{
               position: "top",
               fontSize: CHART_STYLES.line.label.fontSize,
+              fill: CHART_STYLES.line.label.color,
             }}
           >
             {chartData.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={zebraColors[index % 2]} />
+              <Cell
+                key={`cell-${index}-${entry.primary}`}
+                fill={CHART_SERIES_COLORS[index % CHART_SERIES_COLORS.length]}
+              />
             ))}
           </Bar>
         </RechartsBarChart>

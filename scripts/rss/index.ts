@@ -20,7 +20,7 @@ import type { Post, JsonFeed, SitemapEntry } from "./types";
 
 const log = createLogger("generate-rss");
 
-const escapeXml = (str: string): string =>
+export const escapeXml = (str: string): string =>
   str
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -28,10 +28,8 @@ const escapeXml = (str: string): string =>
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&apos;");
 
-const getPosts = (): Post[] => {
-  const files = fs
-    .readdirSync(CONTENT_DIR)
-    .filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
+export const getPosts = (): Post[] => {
+  const files = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
 
   const posts = files
     .map((fileName) => {
@@ -59,7 +57,7 @@ const getPosts = (): Post[] => {
   return posts.sort((a, b) => b.date.getTime() - a.date.getTime());
 };
 
-const buildRssXml = (posts: Post[]): string => {
+export const buildRssXml = (posts: Post[]): string => {
   const latestDate = posts[0]?.date.toUTCString() || new Date().toUTCString();
 
   const items = posts
@@ -95,7 +93,7 @@ const buildRssXml = (posts: Post[]): string => {
 </rss>`;
 };
 
-const buildAtomXml = (posts: Post[]): string => {
+export const buildAtomXml = (posts: Post[]): string => {
   const latestDate = posts[0]?.date.toISOString() || new Date().toISOString();
 
   const entries = posts
@@ -132,7 +130,7 @@ const buildAtomXml = (posts: Post[]): string => {
 </feed>`;
 };
 
-const buildJsonFeed = (posts: Post[]): string => {
+export const buildJsonFeed = (posts: Post[]): string => {
   const items = posts.slice(0, MAX_ITEMS).map((post) => ({
     id: post.url,
     url: post.url,
@@ -160,7 +158,7 @@ const buildJsonFeed = (posts: Post[]): string => {
   return JSON.stringify(feed, null, 2);
 };
 
-const getSitemapEntries = (posts: Post[]): SitemapEntry[] => {
+export const getSitemapEntries = (posts: Post[]): SitemapEntry[] => {
   const staticPages: SitemapEntry[] = [
     { loc: SITE_URL, changefreq: "weekly", priority: 1.0 },
     { loc: `${SITE_URL}/archive`, changefreq: "weekly", priority: 0.8 },
@@ -180,7 +178,7 @@ const getSitemapEntries = (posts: Post[]): SitemapEntry[] => {
   return [...staticPages, ...postEntries];
 };
 
-const buildSitemapXml = (entries: SitemapEntry[]): string => {
+export const buildSitemapXml = (entries: SitemapEntry[]): string => {
   const urls = entries
     .map(
       (entry) => `
@@ -197,7 +195,7 @@ const buildSitemapXml = (entries: SitemapEntry[]): string => {
 </urlset>`;
 };
 
-const buildRobotsTxt = (): string => {
+export const buildRobotsTxt = (): string => {
   return `User-agent: *
 Allow: /
 
@@ -205,7 +203,7 @@ Sitemap: ${SITE_URL}/sitemap.xml
 `;
 };
 
-const main = () => {
+export const main = () => {
   const posts = getPosts();
   log.info({ count: posts.length }, "found posts");
 
@@ -233,4 +231,6 @@ const main = () => {
   log.info("feeds and sitemap generated successfully");
 };
 
-main();
+if (import.meta.main) {
+  main();
+}

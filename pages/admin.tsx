@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import { useAuth } from "../lib/hooks/useAuth";
-import {
-  subscribeToAllAnalytics,
-  type AnalyticsData,
-} from "../lib/client/analytics";
+import { subscribeToAllAnalytics, type AnalyticsData } from "../lib/client/analytics";
 
 interface Totals {
   views: number;
@@ -44,9 +41,7 @@ const Admin = () => {
     return unsubscribe;
   }, [isAuthenticated]);
 
-  const sortedAnalytics = Object.values(analytics).sort(
-    (a, b) => b.views - a.views,
-  );
+  const sortedAnalytics = Object.values(analytics).sort((a, b) => b.views - a.views);
 
   if (loading) {
     return (
@@ -84,10 +79,7 @@ const Admin = () => {
         <div className="admin__login">
           <h1>Admin Dashboard</h1>
           <p>Sign in with GitHub to view analytics.</p>
-          <button
-            onClick={login}
-            className="admin__button admin__button--primary"
-          >
+          <button onClick={login} className="admin__button admin__button--primary">
             Sign in with GitHub
           </button>
         </div>
@@ -104,11 +96,7 @@ const Admin = () => {
       <header className="admin__header">
         <h1>jeffry.in Admin</h1>
         <div className="admin__user">
-          <img
-            src={user?.avatar_url}
-            alt={user?.name}
-            className="admin__avatar"
-          />
+          <img src={user?.avatar_url} alt={user?.name} className="admin__avatar" />
           <span>{user?.name || user?.login}</span>
           <button onClick={logout} className="admin__button">
             Logout
@@ -118,27 +106,19 @@ const Admin = () => {
 
       <section className="admin__stats">
         <div className="admin__stat">
-          <span className="admin__stat-value">
-            {totals.views.toLocaleString()}
-          </span>
+          <span className="admin__stat-value">{totals.views.toLocaleString()}</span>
           <span className="admin__stat-label">Views</span>
         </div>
         <div className="admin__stat">
-          <span className="admin__stat-value">
-            {totals.shares.toLocaleString()}
-          </span>
+          <span className="admin__stat-value">{totals.shares.toLocaleString()}</span>
           <span className="admin__stat-label">Shares</span>
         </div>
         <div className="admin__stat">
-          <span className="admin__stat-value">
-            {totals.comments.toLocaleString()}
-          </span>
+          <span className="admin__stat-value">{totals.comments.toLocaleString()}</span>
           <span className="admin__stat-label">Comments</span>
         </div>
         <div className="admin__stat">
-          <span className="admin__stat-value">
-            {totals.loves.toLocaleString()}
-          </span>
+          <span className="admin__stat-value">{totals.loves.toLocaleString()}</span>
           <span className="admin__stat-label">Loves</span>
         </div>
       </section>
@@ -158,15 +138,8 @@ const Admin = () => {
             {sortedAnalytics.map((item) => (
               <tr key={item.slug}>
                 <td>
-                  <a
-                    href={`/${item.slug}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    /
-                    {item.slug.length > 30
-                      ? `${item.slug.slice(0, 30)}...`
-                      : item.slug}
+                  <a href={`/${item.slug}`} target="_blank" rel="noopener noreferrer">
+                    /{item.slug.length > 30 ? `${item.slug.slice(0, 30)}...` : item.slug}
                   </a>
                 </td>
                 <td>{item.views.toLocaleString()}</td>

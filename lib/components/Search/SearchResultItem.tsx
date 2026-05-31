@@ -12,20 +12,12 @@ const ICONS = {
   project: Code,
 } as const;
 
-export function SearchResultItem({
-  result,
-  isSelected,
-  onSelect,
-}: SearchResultItemProps) {
+export function SearchResultItem({ result, isSelected, onSelect }: SearchResultItemProps) {
   const Icon = ICONS[result.type];
   const selectedClass = isSelected ? "search-result--selected" : "";
 
   return (
-    <a
-      href={result.url}
-      className={`search-result ${selectedClass}`}
-      onClick={onSelect}
-    >
+    <a href={result.url} className={`search-result ${selectedClass}`} onClick={onSelect}>
       <div className="search-result__icon">
         <Icon size={20} />
       </div>

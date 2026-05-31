@@ -10,22 +10,23 @@ categories:
 tags: ["Open Source", "npm", "Security", "Dependencies", "Pastoralist"]
 ---
 
+import { SectionSources } from "../lib/components/citations";
 import { PastoralistStudyCharts } from "../lib/components/content/why-pastoralist";
 
-Many JavaScript codebases eventually accumulate `overrides` or `resolutions` in `package.json`.
+Many JavaScript codebases eventually accumulate overrides or resolutions in package.json.
 
 A CVE lands in a transitive dependency so a dependency is pinned to a safer version.
 The PR gets merged. Six months later, the override is still there, but the reason could be gone.
 No one knows so often the override stays.
 
 There are other reasons for overrides but there isn't a clear way to track the reason. Until now.
-Pastoralist provides a set-it-and-forget-it way to manage this issue.
+[Pastoralist](https://yowainwright.github.io/pastoralist/)[1](https://yowainwright.github.io/pastoralist/) provides a set-it-and-forget-it way to manage this issue.
 
 ---
 
 ## TL;DR
 
-- If your repo uses `overrides`, `resolutions`, or `pnpm.overrides`, [Pastoralist](https://yowainwright.github.io/pastoralist/) can help document why those pins packages exist and whether they still matter.
+- If your repo uses `overrides`, `resolutions`, or `pnpm.overrides`, [Pastoralist](https://yowainwright.github.io/pastoralist/)[1](https://yowainwright.github.io/pastoralist/) can help document why those pins packages exist and whether they still matter.
 - It turns override blocks into a reviewable audit trail, which is useful when a security patch, compatibility workaround, or temporary pin outlives the PR that introduced it.
 - It can help identify stale overrides that no longer match anything in the dependency tree, so cleanup becomes a small review instead of a manual archaeology project.
 - I would appreciate help testing Pastoralist on different package managers, monorepos, and security workflows. Feedback, bug reports, awkward edge cases, and PRs are all useful.
@@ -66,7 +67,7 @@ To get a concrete sample, lets look at the root `package.json` of 10 well-known 
 Stars, dependency trees, and override counts move.
 The useful signal is the pattern: projects add overrides, but the reason rarely lives with the override.
 
-<p className="post__table-title">Initial Override Snapshot</p>
+### Initial Override Snapshot
 
 | Project          | Stars | Field                       | Overrides |                  Likely Security-Related |
 | ---------------- | ----: | --------------------------- | --------: | ---------------------------------------: |
@@ -112,7 +113,7 @@ A dependency-aware scan can show which entries still match the current tree.
 
 For a cleanup sample, I ran Pastoralist against five larger override sets to see which overrides were still active in the current dependency tree:
 
-<p className="post__table-title">Unused Override Cleanup Sample</p>
+### Unused Override Cleanup Sample
 
 | Project         | Overrides | Unused | Unused % |
 | --------------- | --------: | -----: | -------: |
@@ -265,7 +266,7 @@ This is the maintenance loop Pastoralist is meant to support: overrides can be a
 
 ## CI/CD
 
-Pastoralist ships as a GitHub Action with three modes:
+Pastoralist ships as a GitHub Action with three modes[2](https://github.com/yowainwright/pastoralist):
 
 - **`check`** -- Validates overrides are documented and current. Fails on vulnerabilities when `fail-on-security` is enabled.
 - **`update`** -- Updates overrides and the appendix in place.
@@ -334,7 +335,7 @@ Works with npm, yarn, pnpm, and bun. The [docs site](https://yowainwright.github
 
 For a timing sample, I ran Pastoralist against seven projects, including the cleanup sample above, with a full OSV security scan (`--checkSecurity --securityProvider osv`). No API key, no auth:
 
-<p className="post__table-title">Pastoralist Scan Timing Sample</p>
+### Pastoralist Scan Timing Sample
 
 | Project         | Overrides |    Time |
 | --------------- | --------: | ------: |
@@ -360,3 +361,22 @@ Pastoralist makes that blind spot more reviewable. It is useful today for docume
 
 If this matches a maintenance problem in your project, try it and let me know where it works or fals short. If your project does not have overrides yet, a clean baseline can make the first emergency pin easier to review later.
 ~Thanks!
+
+---
+
+## Sources
+
+<SectionSources
+  sources={[
+    {
+      title: "Pastoralist Documentation",
+      author: "Jeffry Wainwright",
+      url: "https://yowainwright.github.io/pastoralist/",
+    },
+    {
+      title: "Pastoralist",
+      publication: "GitHub",
+      url: "https://github.com/yowainwright/pastoralist",
+    },
+  ]}
+/>
