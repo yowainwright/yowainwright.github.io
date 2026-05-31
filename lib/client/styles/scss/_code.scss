@@ -52,6 +52,7 @@ pre[class*="language-"] > code[class*="language-"] {
   background: var(--code-line-bg);
   font-size: var(--font-size-base);
   line-height: var(--line-height-loose);
+  white-space: pre;
 }
 
 // Main Shiki container
@@ -74,6 +75,7 @@ pre[class*="language-"] > code[class*="language-"] {
   width: 100%;
   min-width: 100%;
   table-layout: fixed;
+  white-space: normal;
   counter-reset: step;
   counter-increment: step 0;
 }
