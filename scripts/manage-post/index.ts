@@ -27,9 +27,7 @@ const generateMDXContent = (config: PostConfig): string => {
   const postDate = config.date || currentDate;
   const tags = config.tags || [];
   const hasTags = tags.length > 0;
-  const tagsString = hasTags
-    ? `tags: [${tags.map((tag) => `"${tag}"`).join(", ")}]`
-    : "";
+  const tagsString = hasTags ? `tags: [${tags.map((tag) => `"${tag}"`).join(", ")}]` : "";
 
   return `---
 title: "${config.title}"
@@ -138,20 +136,11 @@ const createPostFiles = async (config: PostConfig): Promise<void> => {
 
   const files = [
     {
-      path: join(
-        process.cwd(),
-        DIRECTORIES.CONTENT,
-        `${slug}${FILE_EXTENSIONS.MDX}`,
-      ),
+      path: join(process.cwd(), DIRECTORIES.CONTENT, `${slug}${FILE_EXTENSIONS.MDX}`),
       content: generateMDXContent(config),
     },
     {
-      path: join(
-        process.cwd(),
-        DIRECTORIES.COMPONENTS,
-        slug,
-        `index${FILE_EXTENSIONS.TS}`,
-      ),
+      path: join(process.cwd(), DIRECTORIES.COMPONENTS, slug, `index${FILE_EXTENSIONS.TS}`),
       content: generateComponentIndex(slug),
     },
     {
@@ -164,29 +153,15 @@ const createPostFiles = async (config: PostConfig): Promise<void> => {
       content: generateExampleComponent(slug),
     },
     {
-      path: join(
-        process.cwd(),
-        DIRECTORIES.DATA,
-        `${slug}${FILE_EXTENSIONS.JSON}`,
-      ),
+      path: join(process.cwd(), DIRECTORIES.DATA, `${slug}${FILE_EXTENSIONS.JSON}`),
       content: generateDataFile(config),
     },
     {
-      path: join(
-        process.cwd(),
-        DIRECTORIES.SCRIPTS,
-        slug,
-        `build${FILE_EXTENSIONS.TS}`,
-      ),
+      path: join(process.cwd(), DIRECTORIES.SCRIPTS, slug, `build${FILE_EXTENSIONS.TS}`),
       content: generateBuildScript(slug),
     },
     {
-      path: join(
-        process.cwd(),
-        DIRECTORIES.SCRIPTS,
-        slug,
-        `README${FILE_EXTENSIONS.MD}`,
-      ),
+      path: join(process.cwd(), DIRECTORIES.SCRIPTS, slug, `README${FILE_EXTENSIONS.MD}`),
       content: generateReadme(config),
     },
   ];
@@ -203,32 +178,16 @@ const createPost = async (config: PostConfig): Promise<void> => {
 const getRenamePaths = (oldSlug: string, newSlug: string): PostPath[] => {
   return [
     {
-      from: join(
-        process.cwd(),
-        DIRECTORIES.CONTENT,
-        `${oldSlug}${FILE_EXTENSIONS.MDX}`,
-      ),
-      to: join(
-        process.cwd(),
-        DIRECTORIES.CONTENT,
-        `${newSlug}${FILE_EXTENSIONS.MDX}`,
-      ),
+      from: join(process.cwd(), DIRECTORIES.CONTENT, `${oldSlug}${FILE_EXTENSIONS.MDX}`),
+      to: join(process.cwd(), DIRECTORIES.CONTENT, `${newSlug}${FILE_EXTENSIONS.MDX}`),
     },
     {
       from: join(process.cwd(), DIRECTORIES.COMPONENTS, oldSlug),
       to: join(process.cwd(), DIRECTORIES.COMPONENTS, newSlug),
     },
     {
-      from: join(
-        process.cwd(),
-        DIRECTORIES.DATA,
-        `${oldSlug}${FILE_EXTENSIONS.JSON}`,
-      ),
-      to: join(
-        process.cwd(),
-        DIRECTORIES.DATA,
-        `${newSlug}${FILE_EXTENSIONS.JSON}`,
-      ),
+      from: join(process.cwd(), DIRECTORIES.DATA, `${oldSlug}${FILE_EXTENSIONS.JSON}`),
+      to: join(process.cwd(), DIRECTORIES.DATA, `${newSlug}${FILE_EXTENSIONS.JSON}`),
     },
     {
       from: join(process.cwd(), DIRECTORIES.ASSETS, oldSlug),
@@ -247,10 +206,7 @@ const moveFile = async (fromPath: string, toPath: string): Promise<void> => {
   await rm(fromPath);
 };
 
-const moveDirectory = async (
-  fromPath: string,
-  toPath: string,
-): Promise<void> => {
+const moveDirectory = async (fromPath: string, toPath: string): Promise<void> => {
   await mkdir(toPath, { recursive: true });
   const files = await readdir(fromPath, { recursive: true });
 
@@ -302,9 +258,7 @@ const getExistingPosts = async (): Promise<string[]> => {
   const files = await readdir(contentDir);
   const mdxPattern = /\.(mdx?|md)$/;
 
-  return files
-    .filter((file) => mdxPattern.test(file))
-    .map((file) => file.replace(mdxPattern, ""));
+  return files.filter((file) => mdxPattern.test(file)).map((file) => file.replace(mdxPattern, ""));
 };
 
 const listPosts = async (): Promise<string[]> => {
@@ -333,11 +287,7 @@ const handleCreateAction = async (): Promise<void> => {
     process.exit(1);
   }
 
-  const mdxPath = join(
-    process.cwd(),
-    DIRECTORIES.CONTENT,
-    `${slug}${FILE_EXTENSIONS.MDX}`,
-  );
+  const mdxPath = join(process.cwd(), DIRECTORIES.CONTENT, `${slug}${FILE_EXTENSIONS.MDX}`);
   const postExists = existsSync(mdxPath);
 
   if (postExists) {
@@ -357,11 +307,14 @@ const handleCreateAction = async (): Promise<void> => {
         .map((tag) => tag.trim())
         .filter(Boolean)
     : [];
+  const titleValue = title || defaultTitle;
+  const defaultDescription = `A post about ${titleValue}`;
+  const descriptionValue = description || defaultDescription;
 
   const config: PostConfig = {
     slug,
-    title: title || defaultTitle,
-    description: description || `A post about ${title || defaultTitle}`,
+    title: titleValue,
+    description: descriptionValue,
     tags,
   };
 

@@ -2,7 +2,8 @@ import React from "react";
 import { ChartSourcesProps } from "../types";
 
 export const ChartSources = ({ sources }: ChartSourcesProps) => {
-  if (!sources || sources.length === 0) return null;
+  if (!sources) return null;
+  if (sources.length === 0) return null;
 
   return (
     <div>

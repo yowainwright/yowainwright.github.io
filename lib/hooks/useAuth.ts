@@ -23,44 +23,45 @@ export function useAuth() {
       const code = params.get("code");
       const state = params.get("state");
 
-      if (code && state) {
-        try {
-          const { user: authUser, token: authToken } =
-            await handleOAuthCallback(code, state);
+      if (code) {
+        if (state) {
+          try {
+            const { user: authUser, token: authToken } = await handleOAuthCallback(code, state);
 
-          if (!isAllowedUser(authUser)) {
-            setError(
-              "Access denied. You are not authorized to view this page.",
-            );
-            clearAuth();
-            setLoading(false);
+            if (!isAllowedUser(authUser)) {
+              setError("Access denied. You are not authorized to view this page.");
+              clearAuth();
+              setLoading(false);
+              window.history.replaceState({}, "", "/admin");
+              return;
+            }
+
+            setAuth(authUser, authToken);
+            setUser(authUser);
+            setToken(authToken);
             window.history.replaceState({}, "", "/admin");
-            return;
+          } catch (err) {
+            setError("Failed to authenticate with GitHub");
+            Sentry.captureException(err);
           }
-
-          setAuth(authUser, authToken);
-          setUser(authUser);
-          setToken(authToken);
-          window.history.replaceState({}, "", "/admin");
-        } catch (err) {
-          setError("Failed to authenticate with GitHub");
-          Sentry.captureException(err);
+          setLoading(false);
+          return;
         }
-        setLoading(false);
-        return;
       }
 
       const storedUser = getStoredUser();
       const storedToken = getStoredToken();
 
-      if (storedUser && storedToken) {
-        if (!isAllowedUser(storedUser)) {
-          clearAuth();
-          setLoading(false);
-          return;
+      if (storedUser) {
+        if (storedToken) {
+          if (!isAllowedUser(storedUser)) {
+            clearAuth();
+            setLoading(false);
+            return;
+          }
+          setUser(storedUser);
+          setToken(storedToken);
         }
-        setUser(storedUser);
-        setToken(storedToken);
       }
 
       setLoading(false);

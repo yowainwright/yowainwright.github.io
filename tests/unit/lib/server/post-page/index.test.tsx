@@ -1,6 +1,4 @@
-import { describe, expect, mock, test } from "bun:test";
-import React from "react";
-import { renderToStaticMarkup } from "react-dom/server";
+import { describe, expect, test } from "bun:test";
 import {
   buildPostStaticPaths,
   buildPostStaticProps,
@@ -9,23 +7,7 @@ import {
   isMdxTableTitle,
   remarkMdxTableTitles,
   type MdxAstNode,
-} from "../lib/server/post-page";
-
-mock.module("next/head", () => ({
-  default: ({ children }: { children?: React.ReactNode }) => <>{children}</>,
-}));
-
-mock.module("next/link", () => ({
-  default: ({
-    children,
-    href,
-    ...props
-  }: React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }) => (
-    <a href={String(href)} {...props}>
-      {children}
-    </a>
-  ),
-}));
+} from "../../../../../lib/server/post-page";
 
 const tableTitleNode: MdxAstNode = {
   type: "mdxJsxFlowElement",
@@ -91,9 +73,7 @@ describe("post page static helpers", () => {
     expect(hasMdxClassName(tableTitleNode, "post__table-title")).toBe(true);
     expect(isMdxTableTitle(tableTitleNode)).toBe(true);
     expect(tree.children?.[0]).toBe(titledTable);
-    expect(titledTable.data?.hProperties?.["data-title"]).toBe(
-      "Pastoralist Study",
-    );
+    expect(titledTable.data?.hProperties?.["data-title"]).toBe("Pastoralist Study");
     expect(tree.children?.[1]).toBe(orphanTitle);
     expect(tree.children?.[2]).toBe(paragraph);
   });
@@ -114,50 +94,7 @@ describe("post page static helpers", () => {
     expect(getMdxAstText(tableHeadingNode)).toBe("Initial Override Snapshot");
     expect(isMdxTableTitle(tableHeadingNode)).toBe(true);
     expect(tree.children?.[0]).toBe(titledTable);
-    expect(titledTable.data?.hProperties?.["data-title"]).toBe(
-      "Initial Override Snapshot",
-    );
+    expect(titledTable.data?.hProperties?.["data-title"]).toBe("Initial Override Snapshot");
     expect(tree.children?.[1]).toBe(paragraph);
-  });
-});
-
-describe("page static props and rendering", () => {
-  test("renders the home page from generated post props", async () => {
-    const { Home, getStaticProps } = await import("../pages/index");
-    const result = await getStaticProps();
-    const posts = result.props.posts.slice(0, 2).map((post) =>
-      Object.assign({}, post, {
-        frontmatter: Object.assign({}, post.frontmatter, {
-          meta: post.frontmatter.meta || "",
-        }),
-      }),
-    );
-    const markup = renderToStaticMarkup(<Home posts={posts} />);
-
-    expect(posts.length).toBeGreaterThan(0);
-    expect(markup).toContain("section--posts");
-    expect(markup).toContain("post--article");
-    expect(markup).toContain(posts[0]?.frontmatter.title);
-  });
-
-  test("renders the archive page from generated archive props", async () => {
-    const { default: Archive, getStaticProps } =
-      await import("../pages/archive");
-    const result = await getStaticProps();
-    const posts = result.props.posts.slice(0, 2).map((post) =>
-      Object.assign({}, post, {
-        frontmatter: Object.assign({}, post.frontmatter, {
-          meta: post.frontmatter.meta || "",
-        }),
-      }),
-    );
-    const markup = renderToStaticMarkup(
-      <Archive posts={posts} title="Archive Test" />,
-    );
-
-    expect(posts.length).toBeGreaterThan(0);
-    expect(markup).toContain("Archive Test");
-    expect(markup).toContain("posts--basic");
-    expect(markup).toContain(posts[0]?.frontmatter.title);
   });
 });

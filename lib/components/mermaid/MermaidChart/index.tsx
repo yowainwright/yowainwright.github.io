@@ -16,13 +16,15 @@ export const MermaidChart: React.FC<MermaidChartProps> = ({
       role="button"
       tabIndex={0}
       onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => {
-        if ((e.key === "Enter" || e.key === " ") && onClick) {
-          e.preventDefault();
-          onClick(
-            e as React.MouseEvent<HTMLDivElement> &
-              React.KeyboardEvent<HTMLDivElement>,
-          );
-        }
+        if (!onClick) return;
+
+        const isEnterKey = e.key === "Enter";
+        const isSpaceKey = e.key === " ";
+        const isActivationKey = isEnterKey || isSpaceKey;
+        if (!isActivationKey) return;
+
+        e.preventDefault();
+        onClick(e as React.MouseEvent<HTMLDivElement> & React.KeyboardEvent<HTMLDivElement>);
       }}
       aria-label="Click to expand diagram"
     >

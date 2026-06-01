@@ -13,14 +13,11 @@ export interface SearchItem {
 const PROJECT_ROOT = process.cwd();
 const CONTENT_DIR = path.join(PROJECT_ROOT, "content");
 const PROJECTS_DIR =
-  process.env.PROJECTS_CONTENT_DIR ||
-  path.join(PROJECT_ROOT, "..", "projects", "content");
+  process.env.PROJECTS_CONTENT_DIR || path.join(PROJECT_ROOT, "..", "projects", "content");
 const OUTPUT_PATH = path.join(PROJECT_ROOT, "public", "search-data.json");
 
 export function getPostsSearchData(contentDir = CONTENT_DIR): SearchItem[] {
-  const files = fs
-    .readdirSync(contentDir)
-    .filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
+  const files = fs.readdirSync(contentDir).filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
 
   const posts: Array<SearchItem | null> = files.map((fileName) => {
     const filePath = path.join(contentDir, fileName);
@@ -31,9 +28,12 @@ export function getPostsSearchData(contentDir = CONTENT_DIR): SearchItem[] {
     const isExcluded = ["404", "resume"].includes(slug);
     if (isExcluded) return null;
 
+    const postDescriptionFallback = frontmatter.description || "";
+    const postDescription = frontmatter.meta || postDescriptionFallback;
+
     return {
       title: frontmatter.title || slug,
-      description: frontmatter.meta || frontmatter.description || "",
+      description: postDescription,
       slug,
       type: "post" as const,
       url: `/${slug}/`,
@@ -43,28 +43,26 @@ export function getPostsSearchData(contentDir = CONTENT_DIR): SearchItem[] {
   return posts.filter((item): item is SearchItem => item !== null);
 }
 
-export function getProjectsSearchData(
-  projectsDir = PROJECTS_DIR,
-): SearchItem[] {
+export function getProjectsSearchData(projectsDir = PROJECTS_DIR): SearchItem[] {
   const projectsExist = fs.existsSync(projectsDir);
   if (!projectsExist) {
     console.log("Projects directory not found, skipping projects.");
     return [];
   }
 
-  const files = fs
-    .readdirSync(projectsDir)
-    .filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
+  const files = fs.readdirSync(projectsDir).filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
 
   return files.map((fileName) => {
     const filePath = path.join(projectsDir, fileName);
     const source = fs.readFileSync(filePath, "utf8");
     const slug = fileName.replace(/\.(md|mdx)$/, "");
     const { data: frontmatter } = matter(source);
+    const projectDescriptionFallback = frontmatter.tagline || "";
+    const projectDescription = frontmatter.description || projectDescriptionFallback;
 
     return {
       title: frontmatter.title || slug,
-      description: frontmatter.description || frontmatter.tagline || "",
+      description: projectDescription,
       slug,
       type: "project" as const,
       url: `https://jeffry.in/projects/${slug}/`,
@@ -72,19 +70,13 @@ export function getProjectsSearchData(
   });
 }
 
-export function buildSearchData(
-  contentDir = CONTENT_DIR,
-  projectsDir = PROJECTS_DIR,
-) {
+export function buildSearchData(contentDir = CONTENT_DIR, projectsDir = PROJECTS_DIR) {
   const posts = getPostsSearchData(contentDir);
   const projects = getProjectsSearchData(projectsDir);
   return posts.concat(projects);
 }
 
-export function writeSearchData(
-  searchData: SearchItem[],
-  outputPath = OUTPUT_PATH,
-) {
+export function writeSearchData(searchData: SearchItem[], outputPath = OUTPUT_PATH) {
   const publicDir = path.dirname(outputPath);
   const publicExists = fs.existsSync(publicDir);
   if (!publicExists) {

@@ -17,19 +17,49 @@ import type { LineChartProps, Series } from "../types";
 import { CHART_SERIES_COLORS, CHART_STYLES } from "../constants";
 import type { LabelPosition } from "recharts/types/component/Label";
 
+type IndexedSeries = {
+  label: string;
+  values: Map<string | number, number>;
+};
+
+type FormattedChartData = Record<string, string | number | undefined>;
+
+const getSeriesPrimaryKeys = (series: Series) => series.data.map((point) => point.primary);
+
+const addSeriesPrimaryKeys = (primaryKeys: Set<string | number>, series: Series) => {
+  for (const primary of getSeriesPrimaryKeys(series)) {
+    primaryKeys.add(primary);
+  }
+  return primaryKeys;
+};
+
+const getIndexedSeries = (series: Series): IndexedSeries => ({
+  label: series.label,
+  values: new Map(series.data.map((point) => [point.primary, point.secondary] as const)),
+});
+
+const addSeriesValue = (
+  dataPoint: FormattedChartData,
+  primary: string | number,
+  series: IndexedSeries,
+) =>
+  Object.assign({}, dataPoint, {
+    [series.label]: series.values.get(primary),
+  });
+
+const formatDataPoint = (primary: string | number, indexedSeries: IndexedSeries[]) =>
+  indexedSeries.reduce<FormattedChartData>(
+    (dataPoint, series) => addSeriesValue(dataPoint, primary, series),
+    { primary },
+  );
+
 const formatChartData = (data: Series[]) => {
   const allPrimaryKeys = Array.from(
-    new Set(data.flatMap((s) => s.data.map((d) => d.primary))),
+    data.reduce(addSeriesPrimaryKeys, new Set<string | number>()),
   ).sort();
+  const indexedSeries = data.map(getIndexedSeries);
 
-  return allPrimaryKeys.map((primary) => {
-    const dataPoint: Record<string, string | number | undefined> = { primary };
-    data.forEach((s) => {
-      const match = s.data.find((d) => d.primary === primary);
-      dataPoint[s.label] = match?.secondary;
-    });
-    return dataPoint;
-  });
+  return allPrimaryKeys.map((primary) => formatDataPoint(primary, indexedSeries));
 };
 
 const LegendContent = ({
@@ -69,9 +99,10 @@ export const LineChart = ({
 }: LineChartProps) => {
   const series = data.map((s) => s.label);
   const formattedData = formatChartData(data);
+  const containerStyle = Object.assign({}, CHART_STYLES.container, { height });
 
   return (
-    <div className="post__chart" style={{ ...CHART_STYLES.container, height }}>
+    <div className="post__chart" style={containerStyle}>
       {title && <div className="chart-title">{title}</div>}
       <ResponsiveContainer
         width="100%"
@@ -123,10 +154,7 @@ export const LineChart = ({
             itemStyle={CHART_STYLES.tooltip.item}
             labelStyle={CHART_STYLES.tooltip.label}
           />
-          <Legend
-            verticalAlign={CHART_STYLES.legend.verticalAlign}
-            content={LegendContent}
-          />
+          <Legend verticalAlign={CHART_STYLES.legend.verticalAlign} content={LegendContent} />
           {series.map((seriesLabel, index) => (
             <Line
               key={seriesLabel}

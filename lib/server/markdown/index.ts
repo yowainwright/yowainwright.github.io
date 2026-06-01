@@ -30,6 +30,7 @@ import type {
   MarkdownElementContent,
   MarkdownPropertyValue,
   MarkdownRoot,
+  MarkdownRootContent,
   MarkdownTextNode,
   MarkdownTheme,
   MarkdownTransformer,
@@ -49,44 +50,37 @@ const MARKDOWN_CACHE_VERSION = "markdown-html-v3";
 const MARKDOWN_CACHE_DIR = path.join(process.cwd(), ".cache", "markdown-html");
 let codeBlockUid = 0;
 
-const isElement = (node: MarkdownContent): node is MarkdownElement =>
-  node.type === "element";
+const isElement = (node: MarkdownContent): node is MarkdownElement => node.type === "element";
 
-const isTextNode = (node: MarkdownElementContent): node is MarkdownTextNode =>
-  node.type === "text";
+const isTextNode = (node: MarkdownElementContent): node is MarkdownTextNode => node.type === "text";
 
-const getPropertyStrings = (
-  value: MarkdownPropertyValue | undefined,
-): string[] => {
+const getPropertyStrings = (value: MarkdownPropertyValue | undefined): string[] => {
   if (Array.isArray(value)) {
     return value.filter((item): item is string => typeof item === "string");
   }
 
-  return typeof value === "string" ? [value] : [];
+  const isStringValue = typeof value === "string";
+  if (isStringValue) return [value];
+
+  return [];
 };
 
-const getPropertyString = (
-  value: MarkdownPropertyValue | undefined,
-): string | undefined => {
+const getPropertyString = (value: MarkdownPropertyValue | undefined): string | undefined => {
   if (typeof value === "string") return value;
   if (typeof value === "number") return String(value);
   return undefined;
 };
 
 const hasClass = (node: MarkdownElement, className: string) => {
-  const classes = [
-    ...getPropertyStrings(node.properties.class),
-    ...getPropertyStrings(node.properties.className),
-  ];
+  const classes = getPropertyStrings(node.properties.class).concat(
+    getPropertyStrings(node.properties.className),
+  );
 
   return classes.includes(className);
 };
 
 const appendClassName = (node: MarkdownElement, className: string) => {
-  node.properties.className = [
-    ...getPropertyStrings(node.properties.className),
-    className,
-  ];
+  node.properties.className = getPropertyStrings(node.properties.className).concat(className);
 };
 
 const getFirstText = (element: MarkdownElementContent): string => {
@@ -106,7 +100,7 @@ export const getAllPosts = (folder: string) => {
 
   const isDev = process.env.NODE_ENV === "development";
 
-  return allFiles.map((fileName) => {
+  const getPostForFile = (fileName: string) => {
     let fileFolder = folder;
 
     const draftPath = path.join(getPath("drafts"), fileName);
@@ -116,7 +110,9 @@ export const getAllPosts = (folder: string) => {
     }
 
     return parsePost(fileName, fileFolder);
-  });
+  };
+
+  return allFiles.map(getPostForFile);
 };
 
 export const getAllPostsArchive = (folder: string) => {
@@ -160,10 +156,9 @@ function transformerDiffLines(): MarkdownTransformer {
     pre(node) {
       const isDiffLanguage = this.options.lang === "diff";
       if (isDiffLanguage) {
-        node.properties = {
-          ...node.properties,
+        node.properties = Object.assign({}, node.properties, {
           "data-language": "diff",
-        };
+        });
       }
     },
   };
@@ -185,15 +180,13 @@ function transformerTitle(): MarkdownTransformer {
       const hasTitleBounds = titleStart !== -1 && titleEnd > titleStart;
       if (!hasTitleBounds) return code;
 
-      const isComment = COMMENT_PREFIXES.some((prefix) =>
-        firstLine.startsWith(prefix),
-      );
+      const isComment = COMMENT_PREFIXES.some((prefix) => firstLine.startsWith(prefix));
 
       const shouldProcessTitle = isComment && options;
       if (!shouldProcessTitle) return code;
 
       const title = firstLine.slice(titleStart + 7, titleEnd).trim();
-      options.meta = { ...options.meta, title };
+      options.meta = Object.assign({}, options.meta, { title });
       return lines.slice(1).join("\n");
     },
     pre(node) {
@@ -207,7 +200,8 @@ function transformerTitle(): MarkdownTransformer {
         children: [{ type: "text", value: title }],
       };
 
-      node.children = [titleNode, ...node.children];
+      const titleChildren: MarkdownElementContent[] = [titleNode];
+      node.children = titleChildren.concat(node.children);
       delete node.properties?.title;
     },
   };
@@ -217,62 +211,102 @@ function transformerLanguageBadge(): MarkdownTransformer {
   return {
     name: "language-badge",
     root(root) {
-      root.children = root.children.map((node) => {
+      const addLanguageToNode = (node: MarkdownRootContent) => {
         const isPreElement = isElement(node) && node.tagName === "pre";
         const hasShikiClass = isPreElement && hasClass(node, "shiki");
         const shouldProcess = isPreElement && hasShikiClass;
         if (!shouldProcess) return node;
 
         const lang =
-          getPropertyString(node.properties["data-language"]) ||
-          this.options.lang ||
-          "text";
+          getPropertyString(node.properties["data-language"]) || this.options.lang || "text";
         node.properties["data-language"] = lang;
 
         return node;
-      });
+      };
+
+      root.children = root.children.map(addLanguageToNode);
 
       return root;
     },
   };
 }
 
+const nextCodeBlockId = () => {
+  codeBlockUid += 1;
+  return `code-block-${codeBlockUid}`;
+};
+
+const splitCodeChildren = (children: MarkdownElementContent[]) =>
+  children.reduce<{
+    codeChildren: MarkdownElementContent[];
+    titleElement: MarkdownElementContent | null;
+  }>(
+    (state, child) => {
+      const isTitle = isElement(child) && hasClass(child, "shiki-title");
+      if (isTitle) {
+        return Object.assign({}, state, { titleElement: child });
+      }
+
+      return Object.assign({}, state, {
+        codeChildren: state.codeChildren.concat(child),
+      });
+    },
+    {
+      codeChildren: [],
+      titleElement: null,
+    },
+  );
+
+const getHeaderChildren = (
+  titleElement: MarkdownElementContent | null,
+): MarkdownElementContent[] => {
+  if (!titleElement) return [];
+  return [titleElement];
+};
+
+const getWrapperChildren = ({
+  copyButtonPlaceholder,
+  languageBadge,
+  node,
+  titleElement,
+}: {
+  copyButtonPlaceholder: MarkdownElement;
+  languageBadge: MarkdownElement;
+  node: MarkdownElement;
+  titleElement: MarkdownElementContent | null;
+}): MarkdownElementContent[] => {
+  const baseChildren: MarkdownElementContent[] = [languageBadge, copyButtonPlaceholder, node];
+  if (!titleElement) return baseChildren;
+
+  const header: MarkdownElement = {
+    type: "element",
+    tagName: "div",
+    properties: { class: "shiki-header" },
+    children: getHeaderChildren(titleElement),
+  };
+
+  const headerChildren: MarkdownElementContent[] = [header];
+  return headerChildren.concat(baseChildren);
+};
+
 function transformerCodeWrapper(): MarkdownTransformer {
   return {
     name: "code-wrapper",
     root(root) {
-      root.children = root.children.map((node) => {
+      const wrapCodeNode = (node: MarkdownRootContent) => {
         const isPreElement = isElement(node) && node.tagName === "pre";
         const hasShikiClass = isPreElement && hasClass(node, "shiki");
         const shouldProcess = isPreElement && hasShikiClass;
         if (!shouldProcess) return node;
 
-        const blockId = `code-block-${++codeBlockUid}`;
+        const blockId = nextCodeBlockId();
         const lang =
-          getPropertyString(node.properties["data-language"]) ||
-          this.options.lang ||
-          "text";
+          getPropertyString(node.properties["data-language"]) || this.options.lang || "text";
 
-        let titleElement: MarkdownElementContent | null = null;
-        const codeChildren: MarkdownElementContent[] = [];
-
-        node.children.forEach((child) => {
-          const isTitle = isElement(child) && hasClass(child, "shiki-title");
-          if (isTitle) {
-            titleElement = child;
-          } else {
-            codeChildren.push(child);
-          }
-        });
+        const { codeChildren, titleElement } = splitCodeChildren(node.children);
 
         node.children = codeChildren;
-        node.properties = { ...node.properties, id: blockId };
-
-        const headerChildren: MarkdownElementContent[] = [];
-
-        if (titleElement) {
-          headerChildren.push(titleElement);
-        }
+        node.properties = Object.assign({}, node.properties, { id: blockId });
 
         const languageBadge: MarkdownElement = {
           type: "element",
@@ -291,21 +325,12 @@ function transformerCodeWrapper(): MarkdownTransformer {
           children: [],
         };
 
-        const wrapperChildren: MarkdownElementContent[] = [];
-
-        if (titleElement) {
-          const header: MarkdownElement = {
-            type: "element",
-            tagName: "div",
-            properties: { class: "shiki-header" },
-            children: headerChildren,
-          };
-          wrapperChildren.push(header);
-        }
-
-        wrapperChildren.push(languageBadge);
-        wrapperChildren.push(copyButtonPlaceholder);
-        wrapperChildren.push(node);
+        const wrapperChildren = getWrapperChildren({
+          copyButtonPlaceholder,
+          languageBadge,
+          node,
+          titleElement,
+        });
 
         return {
           type: "element",
@@ -313,12 +338,41 @@ function transformerCodeWrapper(): MarkdownTransformer {
           properties: { class: "shiki-wrapper" },
           children: wrapperChildren,
         } satisfies MarkdownElement;
-      });
+      };
+
+      root.children = root.children.map(wrapCodeNode);
 
       return root;
     },
   };
 }
+
+const collectTooltipEntries = (code: string): TooltipEntry[] => {
+  let entries: TooltipEntry[] = [];
+  TOOLTIP_PATTERN.lastIndex = 0;
+
+  let match = TOOLTIP_PATTERN.exec(code);
+  while (match !== null) {
+    const word = match[1];
+    const tooltip = match[2];
+    const hasTooltipWord = !!word;
+    const hasTooltipText = !!tooltip;
+    const hasTooltipEntry = hasTooltipWord && hasTooltipText;
+
+    if (hasTooltipEntry) {
+      entries = entries.concat({
+        word,
+        tooltip: tooltip.trim(),
+        full: match[0],
+      });
+    }
+
+    match = TOOLTIP_PATTERN.exec(code);
+  }
+
+  TOOLTIP_PATTERN.lastIndex = 0;
+  return entries;
+};
 
 function transformerTooltip(): MarkdownTransformer {
   let tooltips: TooltipEntry[] = [];
@@ -326,46 +380,28 @@ function transformerTooltip(): MarkdownTransformer {
   return {
     name: "tooltip",
     preprocess(code: string) {
-      tooltips = [];
-      let match: RegExpExecArray | null;
-
-      TOOLTIP_PATTERN.lastIndex = 0;
-      while ((match = TOOLTIP_PATTERN.exec(code)) !== null) {
-        const word = match[1];
-        const tooltip = match[2];
-        if (!word || !tooltip) continue;
-
-        tooltips.push({
-          word,
-          tooltip: tooltip.trim(),
-          full: match[0],
-        });
-      }
+      tooltips = collectTooltipEntries(code);
 
       TOOLTIP_PATTERN.lastIndex = 0;
       return code.replace(TOOLTIP_PATTERN, "$1");
     },
     span(node) {
       const firstChild = node.children[0];
-      const nodeText =
-        firstChild && isTextNode(firstChild) ? firstChild.value : "";
+      const nodeText = firstChild && isTextNode(firstChild) ? firstChild.value : "";
 
       if (!nodeText) return;
 
-      const matchingTooltip = tooltips.find((tooltip) =>
-        nodeText.includes(tooltip.word),
-      );
+      const matchingTooltip = tooltips.find((tooltip) => nodeText.includes(tooltip.word));
       if (!matchingTooltip) return;
 
       node.tagName = "span";
-      node.properties = {
-        ...node.properties,
-        class: [...getPropertyStrings(node.properties.class), "shiki-tooltip"],
+      node.properties = Object.assign({}, node.properties, {
+        class: getPropertyStrings(node.properties.class).concat("shiki-tooltip"),
         "data-tooltip": matchingTooltip.tooltip,
         role: "tooltip",
         "aria-label": matchingTooltip.tooltip,
         tabindex: "0",
-      };
+      });
     },
   };
 }
@@ -454,9 +490,7 @@ export const markdownToHtml = async (markdown: string) => {
     .update(markdown)
     .digest("hex");
   const cachePath = path.join(MARKDOWN_CACHE_DIR, `${cacheKey}.html`);
-  const cachedHtml = fs.existsSync(cachePath)
-    ? fs.readFileSync(cachePath, "utf8")
-    : null;
+  const cachedHtml = fs.existsSync(cachePath) ? fs.readFileSync(cachePath, "utf8") : null;
 
   if (cachedHtml) return cachedHtml;
 

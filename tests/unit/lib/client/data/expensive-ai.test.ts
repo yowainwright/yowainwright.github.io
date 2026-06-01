@@ -4,8 +4,8 @@ import {
   ExpensiveAiDataSchema,
   loadExpensiveAiDataEffect,
   type ExpensiveAiDataError,
-} from "../lib/client/data/expensive-ai";
-import { FALLBACK_AI_DATA } from "../lib/components/content/expensive-ai/TokenCostCalculator/constants";
+} from "../../../../../lib/client/data/expensive-ai";
+import { FALLBACK_AI_DATA } from "../../../../../lib/components/content/expensive-ai/TokenCostCalculator/constants";
 
 const originalFetch = globalThis.fetch;
 
@@ -81,21 +81,15 @@ describe("loadExpensiveAiDataEffect", () => {
       }),
     );
 
-    await expectFailureTag(
-      loadExpensiveAiDataEffect(),
-      "ExpensiveAiFetchError",
-    );
+    await expectFailureTag(loadExpensiveAiDataEffect(), "ExpensiveAiFetchError");
   });
 
   test("fails with a typed validation error for malformed data", async () => {
     globalThis.fetch = mockFetch(
-      Response.json({ ...validExpensiveAiData, models: [] }),
+      Response.json(Object.assign({}, validExpensiveAiData, { models: [] })),
     );
 
-    await expectFailureTag(
-      loadExpensiveAiDataEffect(),
-      "ExpensiveAiValidationError",
-    );
+    await expectFailureTag(loadExpensiveAiDataEffect(), "ExpensiveAiValidationError");
   });
 
   test("keeps calculator fallback data compatible with the schema", async () => {

@@ -2,12 +2,7 @@
 
 import React from "react";
 import type { PixelGrid } from "./constants";
-import {
-  LINK_GRID,
-  COMMENT_GRID,
-  HEART_GRID,
-  HEART_OUTLINE_GRID,
-} from "./constants";
+import { LINK_GRID, COMMENT_GRID, HEART_GRID, HEART_OUTLINE_GRID } from "./constants";
 
 export type IconName = "link" | "comment" | "heart" | "heart-outline";
 
@@ -26,6 +21,29 @@ const GRIDS: Record<IconName, PixelGrid> = {
   "heart-outline": HEART_OUTLINE_GRID,
 };
 
+const isRectElement = (
+  rect: React.ReactElement<SVGElement> | null,
+): rect is React.ReactElement<SVGElement> => rect !== null;
+
+const getPixelRect = (pixel: number, x: number, y: number, color: string) => {
+  if (!pixel) return null;
+
+  return <rect key={`${x}-${y}`} x={x} y={y} width={1} height={1} fill={color} />;
+};
+
+const getRowRects = (row: number[], y: number, color: string) =>
+  row.map((pixel, x) => getPixelRect(pixel, x, y, color)).filter(isRectElement);
+
+const appendRowRects = (
+  rects: React.ReactElement<SVGElement>[],
+  rowRects: React.ReactElement<SVGElement>[],
+) => rects.concat(rowRects);
+
+const getGridRects = (grid: PixelGrid, color: string) =>
+  grid
+    .map((row, y) => getRowRects(row, y, color))
+    .reduce<React.ReactElement<SVGElement>[]>(appendRowRects, []);
+
 export const PixelIcon = ({
   name,
   grid: customGrid,
@@ -38,24 +56,7 @@ export const PixelIcon = ({
   const cols = grid[0].length;
   const width = cols * size;
   const height = rows * size;
-
-  const rects: React.ReactNode[] = [];
-  grid.forEach((row, y) => {
-    row.forEach((pixel, x) => {
-      if (pixel) {
-        rects.push(
-          <rect
-            key={`${x}-${y}`}
-            x={x}
-            y={y}
-            width={1}
-            height={1}
-            fill={color}
-          />,
-        );
-      }
-    });
-  });
+  const rects = getGridRects(grid, color);
 
   return (
     <svg

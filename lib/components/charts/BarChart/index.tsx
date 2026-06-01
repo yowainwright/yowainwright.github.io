@@ -25,9 +25,10 @@ export const BarChart = ({
 }: BarChartProps) => {
   const hasData = data && data.length > 0;
   const chartData = hasData ? data[0].data || [] : [];
+  const containerStyle = Object.assign({}, CHART_STYLES.container, { height });
 
   return (
-    <div className="post__chart" style={{ ...CHART_STYLES.container, height }}>
+    <div className="post__chart" style={containerStyle}>
       {title && <div className="chart-title">{title}</div>}
       <ResponsiveContainer
         width="100%"

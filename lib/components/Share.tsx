@@ -4,11 +4,7 @@ import { HeartButton } from "./HeartButton";
 import { PixelIcon } from "./PixelIcon";
 import { trackShare, trackComment } from "../../lib/client/analytics";
 
-export const Share = ({
-  path,
-  url = "https://jeffry.in",
-  slug,
-}: ShareProps) => {
+export const Share = ({ path, url = "https://jeffry.in", slug }: ShareProps) => {
   const shareLinkText = "Share";
   const copied = "Copied!";
   const [copyText, setCopyText] = useState(shareLinkText);
@@ -16,12 +12,13 @@ export const Share = ({
   const shareUrl = `${url}${path}`;
 
   useEffect(() => {
+    const shouldResetCopyText = !isCopied && copyText !== shareLinkText;
     if (isCopied) {
       const timer = setTimeout(() => {
         setIsCopied(false);
       }, 1000);
       return () => clearTimeout(timer);
-    } else if (!isCopied && copyText !== shareLinkText) {
+    } else if (shouldResetCopyText) {
       setCopyText(shareLinkText);
     }
   }, [copyText, isCopied, setIsCopied, setCopyText, shareLinkText]);

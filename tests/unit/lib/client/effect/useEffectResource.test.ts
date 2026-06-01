@@ -7,7 +7,7 @@ import {
   matchEffectResource,
   useEffectResource,
   type EffectResourceState,
-} from "../lib/client/effect/useEffectResource";
+} from "../../../../../lib/client/effect/useEffectResource";
 
 describe("matchEffectResource", () => {
   const handlers = {
@@ -55,14 +55,11 @@ describe("useEffectResource", () => {
       configurable: true,
     });
 
-    const states: Array<EffectResourceState<string>> = [];
+    let states: Array<EffectResourceState<string>> = [];
 
-    function Probe({
-      resource,
-    }: {
-      resource: Effect.Effect<string, string, never>;
-    }) {
-      states.push(useEffectResource(resource));
+    function Probe({ resource }: { resource: Effect.Effect<string, string, never> }) {
+      const state = useEffectResource(resource);
+      states = states.concat(state);
       return null;
     }
 
@@ -71,32 +68,22 @@ describe("useEffectResource", () => {
     const root = createRoot(container!);
 
     await act(async () => {
-      root.render(
-        React.createElement(Probe, { resource: Effect.succeed("ready") }),
-      );
+      root.render(React.createElement(Probe, { resource: Effect.succeed("ready") }));
     });
     await act(async () => {
       await Promise.resolve();
     });
     await act(async () => {
-      root.render(
-        React.createElement(Probe, { resource: Effect.fail("boom") }),
-      );
+      root.render(React.createElement(Probe, { resource: Effect.fail("boom") }));
     });
     await act(async () => {
       await Promise.resolve();
     });
 
-    expect(
-      states.some(
-        (state) => state.status === "success" && state.data === "ready",
-      ),
-    ).toBe(true);
-    expect(
-      states.some(
-        (state) => state.status === "failure" && state.error.includes("boom"),
-      ),
-    ).toBe(true);
+    expect(states.some((state) => state.status === "success" && state.data === "ready")).toBe(true);
+    expect(states.some((state) => state.status === "failure" && state.error.includes("boom"))).toBe(
+      true,
+    );
 
     await act(async () => {
       root.unmount();

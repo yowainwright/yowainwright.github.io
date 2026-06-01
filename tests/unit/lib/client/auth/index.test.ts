@@ -21,10 +21,7 @@ mock.module("firebase/database", () => ({
     return () => undefined;
   },
   ref: (_database: unknown, path: string) => ({ path }),
-  runTransaction: async (
-    _reference: unknown,
-    updater: (current: number | null) => number,
-  ) => {
+  runTransaction: async (_reference: unknown, updater: (current: number | null) => number) => {
     updater(0);
   },
 }));
@@ -62,7 +59,7 @@ describe("client auth helpers", () => {
   });
 
   test("stores, reads, clears, and authorizes GitHub auth state", async () => {
-    const auth = await import("../lib/client/auth");
+    const auth = await import("../../../../../lib/client/auth");
     const user = {
       login: "yowainwright",
       name: "Jeff",
@@ -76,9 +73,7 @@ describe("client auth helpers", () => {
     expect(auth.getStoredToken()).toBe("token-123");
     expect(auth.isAuthenticated()).toBe(true);
     expect(auth.isAllowedUser(user)).toBe(true);
-    expect(
-      auth.isAllowedUser(Object.assign({}, user, { login: "someone-else" })),
-    ).toBe(false);
+    expect(auth.isAllowedUser(Object.assign({}, user, { login: "someone-else" }))).toBe(false);
 
     auth.clearAuth();
 
@@ -87,7 +82,7 @@ describe("client auth helpers", () => {
   });
 
   test("exchanges an OAuth code only when state matches", async () => {
-    const auth = await import("../lib/client/auth");
+    const auth = await import("../../../../../lib/client/auth");
     const user = {
       login: "yowainwright",
       name: "Jeff",
@@ -98,45 +93,12 @@ describe("client auth helpers", () => {
     sessionStorage.setItem("oauth_state", "state-123");
     globalThis.fetch = mockFetch(Response.json({ user, token: "token-123" }));
 
-    await expect(
-      auth.handleOAuthCallback("code", "wrong-state"),
-    ).rejects.toThrow("Invalid OAuth state");
+    await expect(auth.handleOAuthCallback("code", "wrong-state")).rejects.toThrow(
+      "Invalid OAuth state",
+    );
 
     const result = await auth.handleOAuthCallback("code", "state-123");
 
     expect(result).toEqual({ user, token: "token-123" });
-  });
-});
-
-describe("analytics helpers", () => {
-  beforeEach(() => {
-    setupBrowser();
-  });
-
-  test("returns empty analytics and records session-only events without Firebase", async () => {
-    const analytics = await import("../lib/client/analytics");
-    const slug = "posts/example";
-
-    await analytics.trackView(slug);
-    await analytics.trackView(slug);
-    await analytics.trackComment(slug);
-    await analytics.trackLove(slug);
-    await analytics.trackShare(slug);
-
-    expect(sessionStorage.getItem(`viewed-${slug}`)).toBe("true");
-    expect(sessionStorage.getItem(`commented-${slug}`)).toBe("true");
-    expect(await analytics.getAnalytics(slug)).toEqual({
-      slug,
-      views: 0,
-      shares: 0,
-      comments: 0,
-      loves: 0,
-    });
-
-    const unsubscribe = analytics.subscribeToAllAnalytics((data) => {
-      expect(data).toEqual({});
-    });
-
-    unsubscribe();
   });
 });

@@ -30,12 +30,13 @@ type MetricChartProps = {
 
 const formatNumber = (value: number | string) => Number(value).toLocaleString();
 const formatLabelValue = (value: React.ReactNode) => {
-  if (typeof value !== "number" && typeof value !== "string") return "";
-  return formatNumber(value);
+  if (typeof value === "number") return formatNumber(value);
+  if (typeof value === "string") return formatNumber(value);
+  return "";
 };
 
 const sortByMetric = (metric: MetricKey) =>
-  [...pastoralistStudyMetrics].sort((a, b) => b[metric] - a[metric]);
+  pastoralistStudyMetrics.slice().sort((a, b) => b[metric] - a[metric]);
 
 const MetricChart = ({ data, dataKey, title, label }: MetricChartProps) => (
   <div className="pastoralist-study-charts__panel">
@@ -104,10 +105,7 @@ const MetricChart = ({ data, dataKey, title, label }: MetricChartProps) => (
 
 export const PastoralistStudyCharts = () => (
   <div className="pastoralist-study-charts">
-    <div
-      className="pastoralist-study-charts__summary"
-      aria-label="Pastoralist study totals"
-    >
+    <div className="pastoralist-study-charts__summary" aria-label="Pastoralist study totals">
       <div>
         <strong>{formatNumber(pastoralistStudyTotals.appendixEntries)}</strong>
         <span>appendix entries</span>

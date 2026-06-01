@@ -29,9 +29,7 @@ export const escapeXml = (str: string): string =>
     .replace(/'/g, "&apos;");
 
 export const getPosts = (): Post[] => {
-  const files = fs
-    .readdirSync(CONTENT_DIR)
-    .filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
+  const files = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
 
   const posts = files
     .map((fileName) => {
@@ -45,10 +43,13 @@ export const getPosts = (): Post[] => {
       const date = new Date(frontmatter.date);
       if (isNaN(date.getTime())) return null;
 
+      const fallbackDescription = frontmatter.meta || "";
+      const description = frontmatter.description || fallbackDescription;
+
       return {
         slug,
         title: frontmatter.title || slug,
-        description: frontmatter.description || frontmatter.meta || "",
+        description,
         date,
         url: `${SITE_URL}/${slug}`,
         content: content.slice(0, 500),
@@ -56,7 +57,7 @@ export const getPosts = (): Post[] => {
     })
     .filter((post): post is Post => post !== null);
 
-  return posts.sort((a, b) => b.date.getTime() - a.date.getTime());
+  return posts.slice().sort((a, b) => b.date.getTime() - a.date.getTime());
 };
 
 export const buildRssXml = (posts: Post[]): string => {
@@ -177,7 +178,7 @@ export const getSitemapEntries = (posts: Post[]): SitemapEntry[] => {
       priority: 0.7,
     }));
 
-  return [...staticPages, ...postEntries];
+  return staticPages.concat(postEntries);
 };
 
 export const buildSitemapXml = (entries: SitemapEntry[]): string => {

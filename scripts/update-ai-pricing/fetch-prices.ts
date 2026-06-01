@@ -1,5 +1,5 @@
 import { Data, Effect, Metric } from "effect";
-import type { PricingData, OpenRouterResponse } from "./types";
+import type { PricingData, OpenRouterModel, OpenRouterResponse } from "./types";
 
 const OPENROUTER_MODELS_URL = "https://openrouter.ai/api/v1/models";
 const DOLLARS_PER_MILLION_TOKENS = 1_000_000;
@@ -9,21 +9,15 @@ class PricingFetchError extends Data.TaggedError("PricingFetchError")<{
   readonly reason: unknown;
 }> {}
 
-export const pricingFetchAttempts = Metric.counter(
-  "ai_pricing_fetch_attempts",
-  {
-    description: "Pricing provider fetch attempts",
-    incremental: true,
-  },
-);
+export const pricingFetchAttempts = Metric.counter("ai_pricing_fetch_attempts", {
+  description: "Pricing provider fetch attempts",
+  incremental: true,
+});
 
-export const pricingFetchFailures = Metric.counter(
-  "ai_pricing_fetch_failures",
-  {
-    description: "Pricing provider fetch failures",
-    incremental: true,
-  },
-);
+export const pricingFetchFailures = Metric.counter("ai_pricing_fetch_failures", {
+  description: "Pricing provider fetch failures",
+  incremental: true,
+});
 
 export const pricingModelsLoaded = Metric.counter("ai_pricing_models_loaded", {
   description: "Pricing models loaded into the generated data file",
@@ -37,54 +31,57 @@ const modelMappings = {
   "deepseek/deepseek-r1": "deepseek-r1",
 } as const;
 
-const fetchOpenRouterPricingEffect: Effect.Effect<
-  PricingData,
-  PricingFetchError
-> = Metric.increment(pricingFetchAttempts).pipe(
-  Effect.zipRight(
-    Effect.tryPromise({
-      try: (signal) => fetch(OPENROUTER_MODELS_URL, { signal }),
-      catch: (reason) =>
-        new PricingFetchError({ source: "openrouter.ai", reason }),
-    }),
-  ),
-  Effect.flatMap((response) =>
-    response.ok
-      ? Effect.succeed(response)
-      : Effect.fail(
-          new PricingFetchError({
-            source: "openrouter.ai",
-            reason: `OpenRouter API failed: ${response.status}`,
-          }),
-        ),
-  ),
-  Effect.flatMap((response) =>
-    Effect.tryPromise({
-      try: () => response.json() as Promise<OpenRouterResponse>,
-      catch: (reason) =>
-        new PricingFetchError({ source: "openrouter.ai", reason }),
-    }),
-  ),
-  Effect.map((data) => {
-    const pricing: PricingData = {};
+const getOpenRouterModelPricing = (model: OpenRouterModel): PricingData => {
+  const mappedId = modelMappings[model.id as keyof typeof modelMappings];
+  if (!mappedId) return {};
 
-    data.data.forEach((model) => {
-      const mappedId = modelMappings[model.id as keyof typeof modelMappings];
-      if (!mappedId) return;
+  const input = parseFloat(model.pricing.prompt) * DOLLARS_PER_MILLION_TOKENS;
+  const output = parseFloat(model.pricing.completion) * DOLLARS_PER_MILLION_TOKENS;
+  const pricing: PricingData = {};
 
-      pricing[mappedId] = {
-        input: parseFloat(model.pricing.prompt) * DOLLARS_PER_MILLION_TOKENS,
-        output:
-          parseFloat(model.pricing.completion) * DOLLARS_PER_MILLION_TOKENS,
-        source: "openrouter.ai",
-        lastUpdated: today(),
-      };
-    });
+  pricing[mappedId] = {
+    input,
+    output,
+    source: "openrouter.ai",
+    lastUpdated: today(),
+  };
 
-    return pricing;
-  }),
-  Effect.tapError(() => Metric.increment(pricingFetchFailures)),
-);
+  return pricing;
+};
+
+const mergeOpenRouterModelPricing = (pricing: PricingData, model: OpenRouterModel) =>
+  Object.assign({}, pricing, getOpenRouterModelPricing(model));
+
+const getOpenRouterPricing = (data: OpenRouterResponse) =>
+  data.data.reduce<PricingData>(mergeOpenRouterModelPricing, {});
+
+const fetchOpenRouterPricingEffect: Effect.Effect<PricingData, PricingFetchError> =
+  Metric.increment(pricingFetchAttempts).pipe(
+    Effect.zipRight(
+      Effect.tryPromise({
+        try: (signal) => fetch(OPENROUTER_MODELS_URL, { signal }),
+        catch: (reason) => new PricingFetchError({ source: "openrouter.ai", reason }),
+      }),
+    ),
+    Effect.flatMap((response) =>
+      response.ok
+        ? Effect.succeed(response)
+        : Effect.fail(
+            new PricingFetchError({
+              source: "openrouter.ai",
+              reason: `OpenRouter API failed: ${response.status}`,
+            }),
+          ),
+    ),
+    Effect.flatMap((response) =>
+      Effect.tryPromise({
+        try: () => response.json() as Promise<OpenRouterResponse>,
+        catch: (reason) => new PricingFetchError({ source: "openrouter.ai", reason }),
+      }),
+    ),
+    Effect.map(getOpenRouterPricing),
+    Effect.tapError(() => Metric.increment(pricingFetchFailures)),
+  );
 
 function fallbackPricingEffect(pricing: PricingData) {
   return Metric.increment(pricingFetchAttempts).pipe(Effect.as(pricing));
@@ -134,9 +131,8 @@ function fetchGrokPricingEffect() {
   });
 }
 
-const recoverProvider = (
-  providerEffect: Effect.Effect<PricingData, PricingFetchError>,
-) => providerEffect.pipe(Effect.catchAll(() => Effect.succeed({})));
+const recoverProvider = (providerEffect: Effect.Effect<PricingData, PricingFetchError>) =>
+  providerEffect.pipe(Effect.catchAll(() => Effect.succeed({})));
 
 export const fetchAllPricingEffect: Effect.Effect<PricingData> = Effect.all(
   [
@@ -149,9 +145,7 @@ export const fetchAllPricingEffect: Effect.Effect<PricingData> = Effect.all(
   { concurrency: "unbounded" },
 ).pipe(
   Effect.map((results) => Object.assign({}, ...results)),
-  Effect.tap((pricing) =>
-    Metric.incrementBy(pricingModelsLoaded, Object.keys(pricing).length),
-  ),
+  Effect.tap((pricing) => Metric.incrementBy(pricingModelsLoaded, Object.keys(pricing).length)),
 );
 
 export function fetchAllPricing(): Promise<PricingData> {
