@@ -58,7 +58,7 @@ describe("useEffectResource", () => {
     let states: Array<EffectResourceState<string>> = [];
 
     function Probe({ resource }: { resource: Effect.Effect<string, string, never> }) {
-      const state = useEffectResource(resource);
+      const state = useEffectResource(() => resource, [resource]);
       states = states.concat(state);
       return null;
     }
@@ -84,6 +84,48 @@ describe("useEffectResource", () => {
     expect(states.some((state) => state.status === "failure" && state.error.includes("boom"))).toBe(
       true,
     );
+
+    await act(async () => {
+      root.unmount();
+    });
+  });
+
+  test("does not rerun when callers create Effects inside a stable factory", async () => {
+    const dom = new JSDOM('<div id="root"></div>');
+    Object.defineProperty(globalThis, "window", {
+      value: dom.window,
+      configurable: true,
+    });
+    Object.defineProperty(globalThis, "document", {
+      value: dom.window.document,
+      configurable: true,
+    });
+    Object.defineProperty(globalThis, "IS_REACT_ACT_ENVIRONMENT", {
+      value: true,
+      configurable: true,
+    });
+
+    let states: Array<EffectResourceState<string>> = [];
+
+    function Probe() {
+      const state = useEffectResource(() => Effect.succeed("ready"), []);
+      states = states.concat(state);
+      return null;
+    }
+
+    const container = document.getElementById("root");
+    expect(container).not.toBeNull();
+    const root = createRoot(container!);
+
+    await act(async () => {
+      root.render(React.createElement(Probe));
+    });
+    await act(async () => {
+      await Promise.resolve();
+    });
+
+    expect(states.some((state) => state.status === "success" && state.data === "ready")).toBe(true);
+    expect(states.length).toBeLessThanOrEqual(3);
 
     await act(async () => {
       root.unmount();
