@@ -13,8 +13,10 @@ export const Icon = ({ isDarkMode }: IconProps) =>
 export function DarkmodeToggle() {
   const state = useContext(GlobalState);
   const dispatch = useContext(DispatchStore);
-  const handleToggle = () =>
-    dispatch({ type: "SET_IS_DARKMODE", payload: !state?.isDarkMode });
+  const isDarkMode = state?.isDarkMode ?? false;
+  const handleToggle = () => {
+    dispatch?.({ type: "SET_IS_DARKMODE", payload: !isDarkMode });
+  };
 
   return (
     <button
@@ -22,7 +24,7 @@ export function DarkmodeToggle() {
       onClick={handleToggle}
       title="Toggle Darkmode"
     >
-      <Icon isDarkMode={state?.isDarkMode} />
+      <Icon isDarkMode={isDarkMode} />
     </button>
   );
 }

@@ -1,10 +1,6 @@
-export interface SearchResult {
-  title: string;
-  description: string;
-  slug: string;
-  type: "post" | "project";
-  url: string;
-}
+import type { SearchResultData } from "../../client/data/search";
+
+export type SearchResult = SearchResultData;
 
 export interface SearchState {
   isOpen: boolean;

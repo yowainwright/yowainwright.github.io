@@ -6,17 +6,13 @@ const GA_ID = "G-5BH1F8XBX5";
 declare global {
   interface Window {
     gtag: (...args: unknown[]) => void;
-    dataLayer: unknown[];
+    dataLayer?: unknown[];
   }
 }
 
-export function trackEvent(
-  action: string,
-  category: string,
-  label?: string,
-  value?: number,
-) {
-  if (typeof window === "undefined" || !window.gtag) return;
+export function trackEvent(action: string, category: string, label?: string, value?: number) {
+  if (typeof window === "undefined") return;
+  if (!window.gtag) return;
   window.gtag("event", action, {
     event_category: category,
     event_label: label,
@@ -29,7 +25,8 @@ export function usePageViews() {
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      if (typeof window === "undefined" || !window.gtag) return;
+      if (typeof window === "undefined") return;
+      if (!window.gtag) return;
       window.gtag("config", GA_ID, {
         page_path: url,
       });
@@ -49,26 +46,21 @@ export function useScrollDepth() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = Math.round((scrollTop / docHeight) * 100);
 
       if (scrollPercent > maxDepth.current) {
         maxDepth.current = scrollPercent;
 
         [25, 50, 75, 90, 100].forEach((milestone) => {
-          if (
-            scrollPercent >= milestone &&
-            !milestones.current.has(milestone)
-          ) {
-            milestones.current.add(milestone);
-            trackEvent(
-              "scroll_depth",
-              "engagement",
-              `${milestone}%`,
-              milestone,
-            );
-          }
+          const hasReachedMilestone = scrollPercent >= milestone;
+          if (!hasReachedMilestone) return;
+
+          const hasTrackedMilestone = milestones.current.has(milestone);
+          if (hasTrackedMilestone) return;
+
+          milestones.current.add(milestone);
+          trackEvent("scroll_depth", "engagement", `${milestone}%`, milestone);
         });
       }
     };
@@ -96,18 +88,10 @@ export function useReadTime(wordCount: number) {
     return () => {
       if (tracked.current) return;
       const timeSpent = Math.round((Date.now() - startTime.current) / 1000);
-      const percentRead = Math.min(
-        100,
-        Math.round((timeSpent / (estimatedReadTime * 60)) * 100),
-      );
+      const percentRead = Math.min(100, Math.round((timeSpent / (estimatedReadTime * 60)) * 100));
 
       trackEvent("read_time", "engagement", `${timeSpent}s`, timeSpent);
-      trackEvent(
-        "read_completion",
-        "engagement",
-        `${percentRead}%`,
-        percentRead,
-      );
+      trackEvent("read_completion", "engagement", `${percentRead}%`, percentRead);
       tracked.current = true;
     };
   }, [estimatedReadTime]);
@@ -142,11 +126,14 @@ export function useCodeBlockCopy() {
   useEffect(() => {
     const handleCopy = () => {
       const selection = window.getSelection()?.toString();
-      if (selection && selection.length > 20) {
-        const isCode = document.activeElement?.closest("pre, code");
-        if (isCode) {
-          trackEvent("copy", "code_block", selection.slice(0, 50));
-        }
+      if (!selection) return;
+
+      const hasLongSelection = selection.length > 20;
+      if (!hasLongSelection) return;
+
+      const isCode = document.activeElement?.closest("pre, code");
+      if (isCode) {
+        trackEvent("copy", "code_block", selection.slice(0, 50));
       }
     };
 

@@ -1,12 +1,7 @@
 import { AtpAgent, RichText } from "@atproto/api";
 import fs from "node:fs";
 import path from "node:path";
-import type {
-  AtProtoConfig,
-  CreatePostOptions,
-  PostResult,
-  BlobRef,
-} from "./types";
+import type { AtProtoConfig, CreatePostOptions, PostResult, BlobRef } from "./types";
 import { DEFAULT_PDS_URL, MAX_IMAGE_SIZE, DEFAULT_LANGS } from "./constants";
 
 export class AtProtoClient {
@@ -14,17 +9,28 @@ export class AtProtoClient {
   private config: AtProtoConfig;
 
   constructor(config: Partial<AtProtoConfig> = {}) {
+    const configuredService = config.service || process.env.ATP_PDS_URL;
+    const service = configuredService || DEFAULT_PDS_URL;
+    const configuredIdentifier = config.identifier || process.env.ATP_IDENTIFIER;
+    const identifier = configuredIdentifier || "";
+    const configuredPassword = config.password || process.env.ATP_PASSWORD;
+    const password = configuredPassword || "";
+
     this.config = {
-      service: config.service || process.env.ATP_PDS_URL || DEFAULT_PDS_URL,
-      identifier: config.identifier || process.env.ATP_IDENTIFIER || "",
-      password: config.password || process.env.ATP_PASSWORD || "",
+      service,
+      identifier,
+      password,
     };
 
     this.agent = new AtpAgent({ service: this.config.service });
   }
 
   async login(): Promise<void> {
-    if (!this.config.identifier || !this.config.password) {
+    if (!this.config.identifier) {
+      throw new Error("ATP_IDENTIFIER and ATP_PASSWORD are required");
+    }
+
+    if (!this.config.password) {
       throw new Error("ATP_IDENTIFIER and ATP_PASSWORD are required");
     }
 
@@ -39,9 +45,7 @@ export class AtProtoClient {
     const imageData = fs.readFileSync(absolutePath);
 
     if (imageData.length > MAX_IMAGE_SIZE) {
-      throw new Error(
-        `Image exceeds ${MAX_IMAGE_SIZE} bytes: ${imageData.length}`,
-      );
+      throw new Error(`Image exceeds ${MAX_IMAGE_SIZE} bytes: ${imageData.length}`);
     }
 
     const mimeType = this.getMimeType(absolutePath);
@@ -49,7 +53,7 @@ export class AtProtoClient {
       encoding: mimeType,
     });
 
-    return response.data.blob as BlobRef;
+    return response.data.blob as unknown as BlobRef;
   }
 
   async createPost(options: CreatePostOptions): Promise<PostResult> {

@@ -14,6 +14,7 @@ export interface BarChartProps {
   secondaryLabel?: string;
   height?: string;
   title?: string;
+  yDomain?: [number, number];
 }
 
 export interface LineChartProps {

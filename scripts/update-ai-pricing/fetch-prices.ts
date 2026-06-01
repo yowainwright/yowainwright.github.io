@@ -1,104 +1,153 @@
-import type { PricingData, OpenRouterResponse } from "./types";
+import { Data, Effect, Metric } from "effect";
+import type { PricingData, OpenRouterModel, OpenRouterResponse } from "./types";
 
 const OPENROUTER_MODELS_URL = "https://openrouter.ai/api/v1/models";
+const DOLLARS_PER_MILLION_TOKENS = 1_000_000;
 
-async function fetchOpenRouterPricing(): Promise<Partial<PricingData>> {
-  try {
-    const response = await fetch(OPENROUTER_MODELS_URL);
-    if (!response.ok)
-      throw new Error(`OpenRouter API failed: ${response.status}`);
+class PricingFetchError extends Data.TaggedError("PricingFetchError")<{
+  readonly source: string;
+  readonly reason: unknown;
+}> {}
 
-    const data: OpenRouterResponse = await response.json();
-    const pricing: Partial<PricingData> = {};
+export const pricingFetchAttempts = Metric.counter("ai_pricing_fetch_attempts", {
+  description: "Pricing provider fetch attempts",
+  incremental: true,
+});
 
-    const modelMappings = {
-      "deepseek/deepseek-v3": "deepseek-v3",
-      "deepseek/deepseek-r1": "deepseek-r1",
-    };
+export const pricingFetchFailures = Metric.counter("ai_pricing_fetch_failures", {
+  description: "Pricing provider fetch failures",
+  incremental: true,
+});
 
-    data.data.forEach((model) => {
-      const mappedId = modelMappings[model.id as keyof typeof modelMappings];
-      if (mappedId) {
-        pricing[mappedId] = {
-          input: parseFloat(model.pricing.prompt) * 1000000,
-          output: parseFloat(model.pricing.completion) * 1000000,
-          source: "openrouter.ai",
-          lastUpdated: new Date().toISOString().split("T")[0],
-        };
-      }
-    });
+export const pricingModelsLoaded = Metric.counter("ai_pricing_models_loaded", {
+  description: "Pricing models loaded into the generated data file",
+  incremental: true,
+});
 
-    return pricing;
-  } catch {
-    return {};
-  }
+const today = () => new Date().toISOString().split("T")[0] ?? "";
+
+const modelMappings = {
+  "deepseek/deepseek-v3": "deepseek-v3",
+  "deepseek/deepseek-r1": "deepseek-r1",
+} as const;
+
+const getOpenRouterModelPricing = (model: OpenRouterModel): PricingData => {
+  const mappedId = modelMappings[model.id as keyof typeof modelMappings];
+  if (!mappedId) return {};
+
+  const input = parseFloat(model.pricing.prompt) * DOLLARS_PER_MILLION_TOKENS;
+  const output = parseFloat(model.pricing.completion) * DOLLARS_PER_MILLION_TOKENS;
+  const pricing: PricingData = {};
+
+  pricing[mappedId] = {
+    input,
+    output,
+    source: "openrouter.ai",
+    lastUpdated: today(),
+  };
+
+  return pricing;
+};
+
+const mergeOpenRouterModelPricing = (pricing: PricingData, model: OpenRouterModel) =>
+  Object.assign({}, pricing, getOpenRouterModelPricing(model));
+
+const getOpenRouterPricing = (data: OpenRouterResponse) =>
+  data.data.reduce<PricingData>(mergeOpenRouterModelPricing, {});
+
+const fetchOpenRouterPricingEffect: Effect.Effect<PricingData, PricingFetchError> =
+  Metric.increment(pricingFetchAttempts).pipe(
+    Effect.zipRight(
+      Effect.tryPromise({
+        try: (signal) => fetch(OPENROUTER_MODELS_URL, { signal }),
+        catch: (reason) => new PricingFetchError({ source: "openrouter.ai", reason }),
+      }),
+    ),
+    Effect.flatMap((response) =>
+      response.ok
+        ? Effect.succeed(response)
+        : Effect.fail(
+            new PricingFetchError({
+              source: "openrouter.ai",
+              reason: `OpenRouter API failed: ${response.status}`,
+            }),
+          ),
+    ),
+    Effect.flatMap((response) =>
+      Effect.tryPromise({
+        try: () => response.json() as Promise<OpenRouterResponse>,
+        catch: (reason) => new PricingFetchError({ source: "openrouter.ai", reason }),
+      }),
+    ),
+    Effect.map(getOpenRouterPricing),
+    Effect.tapError(() => Metric.increment(pricingFetchFailures)),
+  );
+
+function fallbackPricingEffect(pricing: PricingData) {
+  return Metric.increment(pricingFetchAttempts).pipe(Effect.as(pricing));
 }
 
-async function fetchAnthropicPricing(): Promise<Partial<PricingData>> {
-  const fallbackPricing: Partial<PricingData> = {
+function fetchAnthropicPricingEffect() {
+  return fallbackPricingEffect({
     "claude-opus-4.5": {
       input: 28.0,
       output: 280.0,
       source: "docs.anthropic.com",
-      lastUpdated: new Date().toISOString().split("T")[0],
+      lastUpdated: today(),
     },
-  };
-
-  return fallbackPricing;
+  });
 }
 
-async function fetchOpenAIPricing(): Promise<Partial<PricingData>> {
-  const fallbackPricing: Partial<PricingData> = {
+function fetchOpenAIPricingEffect() {
+  return fallbackPricingEffect({
     "gpt-5": {
       input: 60.0,
       output: 120.0,
       source: "openai.com",
-      lastUpdated: new Date().toISOString().split("T")[0],
+      lastUpdated: today(),
     },
-  };
-
-  return fallbackPricing;
+  });
 }
 
-async function fetchGooglePricing(): Promise<Partial<PricingData>> {
-  const fallbackPricing: Partial<PricingData> = {
+function fetchGooglePricingEffect() {
+  return fallbackPricingEffect({
     "gemini-3-ultra": {
       input: 8.75,
       output: 87.5,
       source: "cloud.google.com",
-      lastUpdated: new Date().toISOString().split("T")[0],
+      lastUpdated: today(),
     },
-  };
-
-  return fallbackPricing;
+  });
 }
 
-async function fetchGrokPricing(): Promise<Partial<PricingData>> {
-  const fallbackPricing: Partial<PricingData> = {
+function fetchGrokPricingEffect() {
+  return fallbackPricingEffect({
     "grok-4.1": {
       input: 0.2,
       output: 0.5,
       source: "x.ai",
-      lastUpdated: new Date().toISOString().split("T")[0],
+      lastUpdated: today(),
     },
-  };
-
-  return fallbackPricing;
+  });
 }
 
-export async function fetchAllPricing(): Promise<PricingData> {
-  const results = await Promise.allSettled([
-    fetchAnthropicPricing(),
-    fetchOpenAIPricing(),
-    fetchGooglePricing(),
-    fetchGrokPricing(),
-    fetchOpenRouterPricing(),
-  ]);
+const recoverProvider = (providerEffect: Effect.Effect<PricingData, PricingFetchError>) =>
+  providerEffect.pipe(Effect.catchAll(() => Effect.succeed({})));
 
-  return results.reduce((pricing, result) => {
-    if (result.status === "fulfilled") {
-      return { ...pricing, ...result.value };
-    }
-    return pricing;
-  }, {} as PricingData);
+export const fetchAllPricingEffect: Effect.Effect<PricingData> = Effect.all(
+  [
+    fetchAnthropicPricingEffect(),
+    fetchOpenAIPricingEffect(),
+    fetchGooglePricingEffect(),
+    fetchGrokPricingEffect(),
+    recoverProvider(fetchOpenRouterPricingEffect),
+  ],
+  { concurrency: "unbounded" },
+).pipe(
+  Effect.map((results) => Object.assign({}, ...results)),
+  Effect.tap((pricing) => Metric.incrementBy(pricingModelsLoaded, Object.keys(pricing).length)),
+);
+
+export function fetchAllPricing(): Promise<PricingData> {
+  return Effect.runPromise(fetchAllPricingEffect);
 }

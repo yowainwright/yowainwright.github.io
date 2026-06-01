@@ -5,11 +5,7 @@ import "../lib/client/styles/scss/main.scss";
 
 import Header from "../lib/components/Header";
 import Footer from "../lib/components/Footer";
-import {
-  usePageViews,
-  useExternalLinks,
-  useCodeBlockCopy,
-} from "../lib/hooks/useAnalytics";
+import { usePageViews, useExternalLinks, useCodeBlockCopy } from "../lib/hooks/useAnalytics";
 
 interface AppState {
   isDarkMode: boolean;
@@ -21,9 +17,7 @@ type AppAction =
   | { type: "SET_IS_LOADED"; payload: boolean };
 
 export const GlobalState = createContext<AppState | null>(null);
-export const DispatchStore = createContext<React.Dispatch<AppAction> | null>(
-  null,
-);
+export const DispatchStore = createContext<React.Dispatch<AppAction> | null>(null);
 
 export function isLoadingDarkmode(): boolean {
   if (typeof window === "undefined") return false;
@@ -44,9 +38,9 @@ export const initialState: AppState = {
 export function reducer(state: AppState, action: AppAction): AppState {
   switch (action.type) {
     case "SET_IS_DARKMODE":
-      return { ...state, isDarkMode: action.payload };
+      return Object.assign({}, state, { isDarkMode: action.payload });
     case "SET_IS_LOADED":
-      return { ...state, isLoaded: action.payload };
+      return Object.assign({}, state, { isLoaded: action.payload });
     default:
       return state;
   }

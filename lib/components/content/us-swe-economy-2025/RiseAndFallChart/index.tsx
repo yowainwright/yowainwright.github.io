@@ -5,7 +5,9 @@ import { comparisonData, sources } from "./constants";
 
 const LineChart = dynamic(
   () => import("../../../charts").then((mod) => mod.LineChart),
-  { ssr: false },
+  {
+    ssr: false,
+  },
 );
 
 export const RiseAndFallChart = () => (

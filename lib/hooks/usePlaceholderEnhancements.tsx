@@ -2,17 +2,17 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
-import type {
-  PlaceholderEnhancementOptions,
-  PlaceholderTarget,
-} from "./types";
+import type { PlaceholderEnhancementOptions, PlaceholderTarget } from "./types";
 
 const getPlaceholderTargets = (
   contentElement: HTMLElement,
   selector: string,
 ): PlaceholderTarget[] =>
   Array.from(contentElement.querySelectorAll<HTMLElement>(selector)).map(
-    (element, index) => ({ element, index }),
+    (element, index) => ({
+      element,
+      index,
+    }),
   );
 
 export function usePlaceholderEnhancements({

@@ -5,6 +5,7 @@ import {
   TransformWrapper,
   TransformComponent,
   ReactZoomPanPinchRef,
+  ReactZoomPanPinchContentRef,
 } from "react-zoom-pan-pinch";
 import { X, ZoomIn, ZoomOut, Download } from "lucide-react";
 import type { MermaidDialogProps } from "../types";
@@ -115,7 +116,9 @@ export const MermaidDialog: React.FC<MermaidDialogProps> = ({
         </div>
 
         <TransformWrapper
-          ref={setTransformRef}
+          ref={(instance: ReactZoomPanPinchContentRef | null) => {
+            setTransformRef(instance as ReactZoomPanPinchRef | null);
+          }}
           initialScale={1.5}
           minScale={0.1}
           maxScale={10}

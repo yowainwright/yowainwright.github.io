@@ -11,12 +11,16 @@ import {
 
 const LineChart = dynamic(
   () => import("../../../charts").then((mod) => mod.LineChart),
-  { ssr: false },
+  {
+    ssr: false,
+  },
 );
 
 const BarChart = dynamic(
   () => import("../../../charts").then((mod) => mod.BarChart),
-  { ssr: false },
+  {
+    ssr: false,
+  },
 );
 
 export const SWEMetricsGrid = () => (

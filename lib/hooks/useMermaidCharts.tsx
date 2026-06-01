@@ -7,10 +7,7 @@ import { Maximize2 } from "lucide-react";
 import { PROCESSING_DELAYS, MERMAID_SELECTORS } from "../components/mermaid/constants";
 
 const MermaidDialog = dynamic(
-  () =>
-    import("../components/mermaid/MermaidDialog").then(
-      (mod) => mod.MermaidDialog,
-    ),
+  () => import("../components/mermaid/MermaidDialog").then((mod) => mod.MermaidDialog),
   { ssr: false },
 );
 
@@ -40,10 +37,12 @@ export function useMermaidCharts() {
     const mermaidSvgs = Array.from(allSvgs).filter((svg) => {
       const parent = svg.parentElement;
 
-      if (
-        !parent ||
-        parent.classList.contains(MERMAID_SELECTORS.MERMAID_PROCESSED)
-      ) {
+      if (!parent) {
+        return false;
+      }
+
+      const isProcessed = parent.classList.contains(MERMAID_SELECTORS.MERMAID_PROCESSED);
+      if (isProcessed) {
         return false;
       }
 
@@ -55,14 +54,15 @@ export function useMermaidCharts() {
       const ariaRoledescription = svg.getAttribute("aria-roledescription");
       const hasNodes = svg.querySelector(".node, .edgePath, .flowchart-link");
 
-      const isRecharts = parent.className?.includes("recharts-wrapper");
+      const isRecharts = Boolean(parent.className?.includes("recharts-wrapper"));
 
-      const isMermaidChart =
-        (id && id.includes("mermaid")) ||
-        ariaRoledescription === "flowchart-v2" ||
-        hasNodes;
+      const hasMermaidId = id ? id.includes("mermaid") : false;
+      const isFlowchart = ariaRoledescription === "flowchart-v2";
+      const hasMermaidNodes = Boolean(hasNodes);
+      const isMermaidChart = hasMermaidId || isFlowchart || hasMermaidNodes;
+      const shouldProcessChart = isMermaidChart && !isRecharts;
 
-      return isMermaidChart && !isRecharts;
+      return shouldProcessChart;
     });
 
     mermaidSvgs.forEach((svg) => {
@@ -111,15 +111,9 @@ export function useMermaidCharts() {
   }, []);
 
   useEffect(() => {
-    const initialTimer = setTimeout(
-      processMermaidCharts,
-      PROCESSING_DELAYS.INITIAL,
-    );
+    const initialTimer = setTimeout(processMermaidCharts, PROCESSING_DELAYS.INITIAL);
 
-    const delayedTimer = setTimeout(
-      processMermaidCharts,
-      PROCESSING_DELAYS.DELAYED,
-    );
+    const delayedTimer = setTimeout(processMermaidCharts, PROCESSING_DELAYS.DELAYED);
 
     let timeoutId: NodeJS.Timeout;
     const debouncedProcess = () => {
@@ -128,9 +122,7 @@ export function useMermaidCharts() {
     };
 
     if (!observerRef.current) {
-      const contentArea = document.querySelector(
-        MERMAID_SELECTORS.POST_CONTENT,
-      );
+      const contentArea = document.querySelector(MERMAID_SELECTORS.POST_CONTENT);
       const targetNode = contentArea || document.body;
 
       observerRef.current = new MutationObserver(debouncedProcess);
@@ -155,9 +147,7 @@ export function useMermaidCharts() {
   };
 }
 
-export function withMermaidCharts<T extends {}>(
-  Component: React.ComponentType<T>,
-) {
+export function withMermaidCharts<T extends {}>(Component: React.ComponentType<T>) {
   return function WrappedComponent(props: T) {
     const { dialogState, closeDialog } = useMermaidCharts();
 

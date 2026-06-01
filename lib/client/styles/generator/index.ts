@@ -14,21 +14,21 @@ export function propsToCSS(props: CSSProperties): string {
 }
 
 export function bemToCSS(blockName: string, block: BEMBlock): string {
-  const rules: string[] = [];
+  let rules: string[] = [];
 
   if (block.base) {
-    rules.push(`.${blockName} { ${propsToCSS(block.base)}; }`);
+    rules = rules.concat(`.${blockName} { ${propsToCSS(block.base)}; }`);
   }
 
   if (block.elements) {
     for (const [elementName, props] of Object.entries(block.elements)) {
-      rules.push(`.${blockName}__${elementName} { ${propsToCSS(props)}; }`);
+      rules = rules.concat(`.${blockName}__${elementName} { ${propsToCSS(props)}; }`);
     }
   }
 
   if (block.modifiers) {
     for (const [modifierName, props] of Object.entries(block.modifiers)) {
-      rules.push(`.${blockName}--${modifierName} { ${propsToCSS(props)}; }`);
+      rules = rules.concat(`.${blockName}--${modifierName} { ${propsToCSS(props)}; }`);
     }
   }
 

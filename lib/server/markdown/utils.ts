@@ -58,20 +58,24 @@ export const formatDate = (date: string) =>
   new Date(date).toLocaleDateString("en-US", DATE_FORMAT_OPTIONS);
 
 export const extractSlugFromFilename = (fileName: string): string => {
-  return fileName.split(".")[0];
+  return fileName.split(".")[0] ?? fileName;
 };
 
 export const parsePost = (fileName: string, fileFolder: string): Post => {
   const source = getFileContent(fileName, fileFolder);
   const slug = extractSlugFromFilename(fileName);
   const { data: frontmatter } = matter(source);
-  const { date, ...rest } = frontmatter;
+  const { date, path: postPath, title, ...rest } = frontmatter;
+  const dateValue = typeof date === "string" ? date : "";
+  const pathValue = typeof postPath === "string" ? postPath : `/${slug}`;
+  const titleValue = typeof title === "string" ? title : slug;
 
   return {
-    frontmatter: {
-      ...rest,
-      date: formatDate(date),
-    },
+    frontmatter: Object.assign({}, rest, {
+      date: formatDate(dateValue),
+      path: pathValue,
+      title: titleValue,
+    }),
     slug,
   };
 };
@@ -88,10 +92,7 @@ const determineFileFolder = (slug: string, folder: string): string => {
   return draftExists ? "drafts" : folder;
 };
 
-const detectMarkdownType = (
-  slug: string,
-  folder: string,
-): { fileName: string; isMdx: boolean } => {
+const detectMarkdownType = (slug: string, folder: string): { fileName: string; isMdx: boolean } => {
   const mdxPath = path.join(getPath(folder), `${slug}.mdx`);
   const isMdx = fs.existsSync(mdxPath);
   const fileName = `${slug}.${isMdx ? "mdx" : "md"}`;
@@ -100,7 +101,7 @@ const detectMarkdownType = (
 };
 
 const trimPostPath = (postPath: string): string => {
-  return `/${postPath.split("/")[1]}`;
+  return `/${postPath.split("/")[1] ?? postPath}`;
 };
 
 export const parseSinglePost = (slug: string, folder: string): Post => {
@@ -109,26 +110,20 @@ export const parseSinglePost = (slug: string, folder: string): Post => {
 
   const source = getFileContent(fileName, fileFolder);
   const { data: frontmatter, content } = matter(source);
-  const {
-    date,
-    path: postPath,
-    meta,
-    description,
-    title,
-    tags,
-    ...rest
-  } = frontmatter;
+  const { date, path: postPath, meta, description, title, tags, ...rest } = frontmatter;
+  const dateValue = typeof date === "string" ? date : "";
+  const pathValue = typeof postPath === "string" ? postPath : `/${slug}`;
+  const titleValue = typeof title === "string" ? title : slug;
 
   return {
-    frontmatter: {
-      ...rest,
+    frontmatter: Object.assign({}, rest, {
       description,
       meta,
-      title,
+      title: titleValue,
       tags,
-      date: formatDate(date),
-      path: trimPostPath(postPath),
-    },
+      date: formatDate(dateValue),
+      path: trimPostPath(pathValue),
+    }),
     content,
     slug,
     isMdx,
@@ -137,22 +132,23 @@ export const parseSinglePost = (slug: string, folder: string): Post => {
 
 export const getMarkdownFiles = (folder: string) => {
   const contentDir = getPath(folder);
-  return fs
-    .readdirSync(contentDir)
-    .filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
+  return fs.readdirSync(contentDir).filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
 };
 
 export const getDraftFiles = () => {
   const draftsDir = getPath("drafts");
   const isDev = process.env.NODE_ENV === "development";
 
-  if (!isDev || !fs.existsSync(draftsDir)) {
+  if (!isDev) {
     return [];
   }
 
-  return fs
-    .readdirSync(draftsDir)
-    .filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
+  const hasDraftsDir = fs.existsSync(draftsDir);
+  if (!hasDraftsDir) {
+    return [];
+  }
+
+  return fs.readdirSync(draftsDir).filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
 };
 
 export const filterPublishedPosts = (posts: Post[]) => {
@@ -160,7 +156,7 @@ export const filterPublishedPosts = (posts: Post[]) => {
 };
 
 export const sortPostsByDate = (posts: Post[]) => {
-  return [...posts].sort(
-    (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date),
-  );
+  return posts
+    .slice()
+    .sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 };

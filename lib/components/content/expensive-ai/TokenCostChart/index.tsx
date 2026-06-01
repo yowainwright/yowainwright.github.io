@@ -5,7 +5,9 @@ import { tokenCostData, sources, TOKEN_COST_CHART_LABELS } from "./constants";
 
 const BarChart = dynamic(
   () => import("../../../charts").then((mod) => mod.BarChart),
-  { ssr: false },
+  {
+    ssr: false,
+  },
 );
 
 export const TokenCostChart = () => (

@@ -1,5 +1,29 @@
 @use "variables" as *;
 
+:root {
+  --chart-series-1: #6b7280;
+  --chart-series-2: #9ca3af;
+  --chart-series-3: #4b5563;
+  --chart-series-4: #d1d5db;
+  --chart-axis: #9ca3af;
+  --chart-grid: #e5e7eb;
+  --chart-label: #4b5563;
+  --chart-hover-fill: rgba(107, 114, 128, 0.08);
+  --chart-tooltip-border: #e5e7eb;
+}
+
+.js-is-darkmode {
+  --chart-series-1: #d1d5db;
+  --chart-series-2: #9ca3af;
+  --chart-series-3: #f3f4f6;
+  --chart-series-4: #6b7280;
+  --chart-axis: #9ca3af;
+  --chart-grid: rgba(156, 163, 175, 0.28);
+  --chart-label: #e5e7eb;
+  --chart-hover-fill: rgba(209, 213, 219, 0.08);
+  --chart-tooltip-border: rgba(156, 163, 175, 0.35);
+}
+
 .metrics-grid {
   display: grid;
   gap: 1.5rem;
@@ -11,16 +35,17 @@
   }
 
   &__item {
-    border: 1px solid var(--color-border-light);
-    border-radius: 0.5rem;
-    padding: 1rem;
+    border-top: 1px solid var(--chart-grid);
+    padding-top: 0.75rem;
   }
 
   &__title {
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    text-align: center;
+    color: var(--color-text-secondary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: var(--line-height-tight);
+    margin-bottom: 0.25rem;
+    text-align: left;
   }
 }
 
@@ -65,9 +90,8 @@
   }
 
   &__panel {
-    border: 1px solid var(--color-border-light);
-    border-radius: 0.5rem;
-    padding: 1rem;
+    border-top: 1px solid var(--chart-grid);
+    padding-top: 0.75rem;
   }
 
   &__chart {
@@ -88,10 +112,21 @@ $chart-container-padding: 20px 0;
 }
 
 .chart-title {
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: var(--line-height-tight);
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .chart-legend-item {
@@ -108,7 +143,7 @@ $chart-container-padding: 20px 0;
     background-color: var(--color-bg-primary) !important;
     border-radius: $chart-border-radius;
     color: var(--color-text-primary);
-    border: 0.1rem solid var(--color-text-primary) !important;
+    border: 1px solid var(--chart-tooltip-border) !important;
     padding: $chart-tooltip-padding;
   }
 }
