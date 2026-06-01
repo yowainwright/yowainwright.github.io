@@ -9,13 +9,19 @@ import {
   sources,
 } from "./constants";
 
-const LineChart = dynamic(() => import("../../../charts").then((mod) => mod.LineChart), {
-  ssr: false,
-});
+const LineChart = dynamic(
+  () => import("../../../charts").then((mod) => mod.LineChart),
+  {
+    ssr: false,
+  },
+);
 
-const BarChart = dynamic(() => import("../../../charts").then((mod) => mod.BarChart), {
-  ssr: false,
-});
+const BarChart = dynamic(
+  () => import("../../../charts").then((mod) => mod.BarChart),
+  {
+    ssr: false,
+  },
+);
 
 export const SWEMetricsGrid = () => (
   <>

@@ -266,9 +266,11 @@ table {
   margin: 0 0 $m-sm;
 }
 
-.post__table-title {
+.post__table-title,
+.content h3.post__table-title {
   color: var(--color-text-primary);
   flex: 1;
+  font-family: var(--font-family-default);
   font-size: 1rem;
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-tight);
@@ -337,16 +339,13 @@ table {
   align-items: center;
   background: var(--color-bg-primary);
   border: 1px solid var(--color-border-light);
+  border-radius: $radius-sm;
   color: var(--color-text-primary);
   cursor: pointer;
   display: inline-flex;
-  justify-content: center;
-}
-
-.post__table-expand {
-  border-radius: $radius-sm;
   flex: 0 0 auto;
   height: 2rem;
+  justify-content: center;
   margin-left: auto;
   width: 2rem;
   z-index: 1;
@@ -378,21 +377,7 @@ table {
 .post__table-dialog-header {
   border-bottom: 1px solid var(--color-border-light);
   justify-content: space-between;
-  padding: $m-md $m-lg;
-}
-
-.post__table-dialog-title {
-  color: var(--color-text-primary);
-  font-size: 1rem;
-  font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-tight);
-}
-
-.post__table-dialog-close {
-  border-radius: $radius-full;
-  flex: 0 0 auto;
-  height: 2.25rem;
-  width: 2.25rem;
+  padding: 1rem;
 }
 
 .post__table-dialog-scroll {

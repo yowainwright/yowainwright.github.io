@@ -13,11 +13,14 @@ export interface SearchItem {
 const PROJECT_ROOT = process.cwd();
 const CONTENT_DIR = path.join(PROJECT_ROOT, "content");
 const PROJECTS_DIR =
-  process.env.PROJECTS_CONTENT_DIR || path.join(PROJECT_ROOT, "..", "projects", "content");
+  process.env.PROJECTS_CONTENT_DIR ||
+  path.join(PROJECT_ROOT, "..", "projects", "content");
 const OUTPUT_PATH = path.join(PROJECT_ROOT, "public", "search-data.json");
 
 export function getPostsSearchData(contentDir = CONTENT_DIR): SearchItem[] {
-  const files = fs.readdirSync(contentDir).filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
+  const files = fs
+    .readdirSync(contentDir)
+    .filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
 
   const posts: Array<SearchItem | null> = files.map((fileName) => {
     const filePath = path.join(contentDir, fileName);
@@ -40,14 +43,18 @@ export function getPostsSearchData(contentDir = CONTENT_DIR): SearchItem[] {
   return posts.filter((item): item is SearchItem => item !== null);
 }
 
-export function getProjectsSearchData(projectsDir = PROJECTS_DIR): SearchItem[] {
+export function getProjectsSearchData(
+  projectsDir = PROJECTS_DIR,
+): SearchItem[] {
   const projectsExist = fs.existsSync(projectsDir);
   if (!projectsExist) {
     console.log("Projects directory not found, skipping projects.");
     return [];
   }
 
-  const files = fs.readdirSync(projectsDir).filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
+  const files = fs
+    .readdirSync(projectsDir)
+    .filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
 
   return files.map((fileName) => {
     const filePath = path.join(projectsDir, fileName);
@@ -65,13 +72,19 @@ export function getProjectsSearchData(projectsDir = PROJECTS_DIR): SearchItem[] 
   });
 }
 
-export function buildSearchData(contentDir = CONTENT_DIR, projectsDir = PROJECTS_DIR) {
+export function buildSearchData(
+  contentDir = CONTENT_DIR,
+  projectsDir = PROJECTS_DIR,
+) {
   const posts = getPostsSearchData(contentDir);
   const projects = getProjectsSearchData(projectsDir);
   return posts.concat(projects);
 }
 
-export function writeSearchData(searchData: SearchItem[], outputPath = OUTPUT_PATH) {
+export function writeSearchData(
+  searchData: SearchItem[],
+  outputPath = OUTPUT_PATH,
+) {
   const publicDir = path.dirname(outputPath);
   const publicExists = fs.existsSync(publicDir);
   if (!publicExists) {

@@ -19,10 +19,13 @@ const defineGlobal = (name: string, value: unknown) => {
 };
 
 const setupDom = (bodyHtml: string, url = "https://jeffry.in/post") => {
-  const dom = new JSDOM(`<!doctype html><html><body>${bodyHtml}</body></html>`, {
-    pretendToBeVisual: true,
-    url,
-  });
+  const dom = new JSDOM(
+    `<!doctype html><html><body>${bodyHtml}</body></html>`,
+    {
+      pretendToBeVisual: true,
+      url,
+    },
+  );
 
   defineGlobal("window", dom.window);
   defineGlobal("document", dom.window.document);
@@ -89,7 +92,8 @@ describe("DOM enhancement hooks", () => {
       configurable: true,
     });
 
-    const contentElement = document.querySelector<HTMLElement>(".post__content");
+    const contentElement =
+      document.querySelector<HTMLElement>(".post__content");
     expect(contentElement).not.toBeNull();
 
     function Probe() {
@@ -117,8 +121,12 @@ describe("DOM enhancement hooks", () => {
     expect(headingAnchor).not.toBeNull();
 
     await act(async () => {
-      copyButton?.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true }));
-      headingAnchor?.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true }));
+      copyButton?.dispatchEvent(
+        new dom.window.MouseEvent("click", { bubbles: true }),
+      );
+      headingAnchor?.dispatchEvent(
+        new dom.window.MouseEvent("click", { bubbles: true }),
+      );
       await Promise.resolve();
     });
 
@@ -167,11 +175,14 @@ describe("DOM enhancement hooks", () => {
     });
 
     const mermaidShell = document.querySelector<HTMLElement>(".diagram-shell");
-    const rechartsShell = document.querySelector<HTMLElement>(".recharts-wrapper");
+    const rechartsShell =
+      document.querySelector<HTMLElement>(".recharts-wrapper");
 
     expect(mermaidShell?.classList.contains("mermaid-chart")).toBe(true);
     expect(mermaidShell?.classList.contains("mermaid-processed")).toBe(true);
-    expect(mermaidShell?.querySelector(".mermaid-chart__expand-hint")).not.toBeNull();
+    expect(
+      mermaidShell?.querySelector(".mermaid-chart__expand-hint"),
+    ).not.toBeNull();
     expect(rechartsShell?.classList.contains("mermaid-chart")).toBe(false);
 
     await act(async () => {

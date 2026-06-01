@@ -16,7 +16,18 @@ interface SearchModalProps {
 }
 
 export const SearchModal = forwardRef<HTMLDivElement, SearchModalProps>(
-  ({ query, results, searchData, selectedIndex, inputRef, onQueryChange, onClose }, ref) => {
+  (
+    {
+      query,
+      results,
+      searchData,
+      selectedIndex,
+      inputRef,
+      onQueryChange,
+      onClose,
+    },
+    ref,
+  ) => {
     const hasQuery = query.length > 0;
     const hasResults = results.length > 0;
     const showEmpty = hasQuery && !hasResults;
@@ -29,9 +40,15 @@ export const SearchModal = forwardRef<HTMLDivElement, SearchModalProps>(
         <div className="search-results">
           {showEmpty && <SearchEmpty />}
           {showResults && (
-            <SearchResults results={results} selectedIndex={selectedIndex} onSelect={onClose} />
+            <SearchResults
+              results={results}
+              selectedIndex={selectedIndex}
+              onSelect={onClose}
+            />
           )}
-          {showSuggestions && <SearchSuggestions searchData={searchData} onSelect={onClose} />}
+          {showSuggestions && (
+            <SearchSuggestions searchData={searchData} onSelect={onClose} />
+          )}
         </div>
       </div>
     );

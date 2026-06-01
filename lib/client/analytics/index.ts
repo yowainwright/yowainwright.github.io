@@ -6,7 +6,10 @@ import { EMPTY_ANALYTICS } from "./constants";
 
 export type { AnalyticsData };
 
-function createAnalyticsData(slug: string, data?: Record<string, number>): AnalyticsData {
+function createAnalyticsData(
+  slug: string,
+  data?: Record<string, number>,
+): AnalyticsData {
   if (!data) {
     return { slug, ...EMPTY_ANALYTICS };
   }
@@ -97,7 +100,10 @@ export function subscribeToAllAnalytics(
 
     for (const [sanitizedSlug, metrics] of Object.entries(rawData)) {
       const slug = sanitizedSlug.replace(/_/g, "/");
-      result[slug] = createAnalyticsData(slug, metrics as Record<string, number>);
+      result[slug] = createAnalyticsData(
+        slug,
+        metrics as Record<string, number>,
+      );
     }
 
     callback(result);

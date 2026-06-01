@@ -98,7 +98,10 @@ describe("search data generation helpers", () => {
       path.join(contentDir, "first-post.mdx"),
       "---\ntitle: First Post\nmeta: Searchable post\n---\nBody",
     );
-    fs.writeFileSync(path.join(contentDir, "resume.md"), "---\ntitle: Resume\n---\nHidden");
+    fs.writeFileSync(
+      path.join(contentDir, "resume.md"),
+      "---\ntitle: Resume\n---\nHidden",
+    );
     fs.writeFileSync(
       path.join(projectsDir, "first-project.md"),
       "---\ntitle: First Project\ntagline: Searchable project\n---\nBody",
@@ -112,7 +115,10 @@ describe("search data generation helpers", () => {
 
     expect(posts).toHaveLength(1);
     expect(projects).toHaveLength(1);
-    expect(searchData.map((item) => item.slug)).toEqual(["first-post", "first-project"]);
+    expect(searchData.map((item) => item.slug)).toEqual([
+      "first-post",
+      "first-project",
+    ]);
     expect(JSON.parse(fs.readFileSync(outputPath, "utf8"))).toEqual(searchData);
   });
 

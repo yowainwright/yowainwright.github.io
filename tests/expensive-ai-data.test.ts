@@ -81,13 +81,21 @@ describe("loadExpensiveAiDataEffect", () => {
       }),
     );
 
-    await expectFailureTag(loadExpensiveAiDataEffect(), "ExpensiveAiFetchError");
+    await expectFailureTag(
+      loadExpensiveAiDataEffect(),
+      "ExpensiveAiFetchError",
+    );
   });
 
   test("fails with a typed validation error for malformed data", async () => {
-    globalThis.fetch = mockFetch(Response.json({ ...validExpensiveAiData, models: [] }));
+    globalThis.fetch = mockFetch(
+      Response.json({ ...validExpensiveAiData, models: [] }),
+    );
 
-    await expectFailureTag(loadExpensiveAiDataEffect(), "ExpensiveAiValidationError");
+    await expectFailureTag(
+      loadExpensiveAiDataEffect(),
+      "ExpensiveAiValidationError",
+    );
   });
 
   test("keeps calculator fallback data compatible with the schema", async () => {

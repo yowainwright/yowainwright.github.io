@@ -1,6 +1,9 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import { Cause, Effect, Exit, Option } from "effect";
-import { loadSearchDataEffect, type SearchDataError } from "../lib/client/data/search";
+import {
+  loadSearchDataEffect,
+  type SearchDataError,
+} from "../lib/client/data/search";
 
 const originalFetch = globalThis.fetch;
 

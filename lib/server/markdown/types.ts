@@ -1,5 +1,9 @@
 import type { Element, ElementContent, Root } from "hast";
-import type { CodeToHastOptions, ShikiTransformer, ThemeRegistrationAny } from "shiki";
+import type {
+  CodeToHastOptions,
+  ShikiTransformer,
+  ThemeRegistrationAny,
+} from "shiki";
 
 export interface PostFrontmatter {
   date: string;

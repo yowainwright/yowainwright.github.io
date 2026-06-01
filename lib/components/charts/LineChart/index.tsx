@@ -123,7 +123,10 @@ export const LineChart = ({
             itemStyle={CHART_STYLES.tooltip.item}
             labelStyle={CHART_STYLES.tooltip.label}
           />
-          <Legend verticalAlign={CHART_STYLES.legend.verticalAlign} content={LegendContent} />
+          <Legend
+            verticalAlign={CHART_STYLES.legend.verticalAlign}
+            content={LegendContent}
+          />
           {series.map((seriesLabel, index) => (
             <Line
               key={seriesLabel}

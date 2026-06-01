@@ -19,14 +19,21 @@ export default function Document() {
           content="jeffry, wainwright, jeffry wainwright, code, programmer, artist, athlete, developer, engineer"
         />
         <meta name="theme-color" content="#007cf0" />
-        <link rel="manifest" href="https://yowainwright.imgix.net/manifest.json" />
+        <link
+          rel="manifest"
+          href="https://yowainwright.imgix.net/manifest.json"
+        />
         <meta
           name="description"
           content="Jeffry.in is the daily changelog of Jeffry Wainwright, an engineer living in California."
         />
         <meta property="og:site_name" content="Jeffry.in" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
           rel="stylesheet"

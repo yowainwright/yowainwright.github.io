@@ -14,7 +14,9 @@ const getTextContent = (children: React.ReactNode): string => {
   }
 
   if (React.isValidElement(children)) {
-    return getTextContent((children.props as { children?: React.ReactNode }).children);
+    return getTextContent(
+      (children.props as { children?: React.ReactNode }).children,
+    );
   }
 
   return "";

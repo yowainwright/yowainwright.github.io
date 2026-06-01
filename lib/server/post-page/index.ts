@@ -3,11 +3,22 @@ import path from "node:path";
 import { serialize } from "next-mdx-remote/serialize";
 import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { ensureArray } from "../../client/utils";
-import { DEFAULT_OG_IMAGE, OG_IMAGE_DIR } from "../../components/OgMeta/constants";
-import { getAllPosts, getSinglePost, getShikiRehypeOptions, markdownToHtml } from "../markdown";
+import {
+  DEFAULT_OG_IMAGE,
+  OG_IMAGE_DIR,
+} from "../../components/OgMeta/constants";
+import {
+  getAllPosts,
+  getSinglePost,
+  getShikiRehypeOptions,
+  markdownToHtml,
+} from "../markdown";
 import type { PostFrontmatter } from "../markdown/types";
 
-export type PostPageFrontmatter = Omit<PostFrontmatter, "description" | "meta"> & {
+export type PostPageFrontmatter = Omit<
+  PostFrontmatter,
+  "description" | "meta"
+> & {
   description: string | null;
   meta: string | null;
   tags: string[];
@@ -33,6 +44,7 @@ export type MdxAstNode = {
   data?: {
     hProperties?: Record<string, unknown>;
   };
+  depth?: number;
   name?: string;
   type?: string;
   value?: string;
@@ -53,10 +65,15 @@ export const hasMdxClassName = (node: MdxAstNode, className: string) =>
       attribute.value.split(/\s+/).includes(className),
   ) || false;
 
-export const isMdxTableTitle = (node: MdxAstNode) =>
-  node.type === "mdxJsxFlowElement" &&
-  node.name === "p" &&
-  hasMdxClassName(node, "post__table-title");
+export const isMdxTableTitle = (node: MdxAstNode) => {
+  const isLegacyTableTitle =
+    node.type === "mdxJsxFlowElement" &&
+    node.name === "p" &&
+    hasMdxClassName(node, "post__table-title");
+  const isHeadingTableTitle = node.type === "heading" && node.depth === 3;
+
+  return isLegacyTableTitle || isHeadingTableTitle;
+};
 
 type MdxTableTitleState = {
   children: MdxAstNode[];
@@ -96,7 +113,8 @@ const processMdxTableTitleNode = (
     };
   }
 
-  const isTitledTable = state.pendingTitleNode !== null && node.type === "table";
+  const isTitledTable =
+    state.pendingTitleNode !== null && node.type === "table";
   if (isTitledTable) {
     attachTableTitle(node, state.pendingTitle);
 
@@ -138,10 +156,14 @@ const getPostOgImagePath = (slug: string) => {
     candidateOgImagePath.replace(/^\//, ""),
   );
 
-  return fs.existsSync(candidatePublicPath) ? candidateOgImagePath : DEFAULT_OG_IMAGE;
+  return fs.existsSync(candidatePublicPath)
+    ? candidateOgImagePath
+    : DEFAULT_OG_IMAGE;
 };
 
-const sanitizeFrontmatter = (frontmatter: PostFrontmatter): PostPageFrontmatter =>
+const sanitizeFrontmatter = (
+  frontmatter: PostFrontmatter,
+): PostPageFrontmatter =>
   Object.assign({}, frontmatter, {
     description: frontmatter.description || null,
     meta: frontmatter.meta || null,

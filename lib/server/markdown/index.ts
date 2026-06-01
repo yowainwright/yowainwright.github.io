@@ -49,11 +49,15 @@ const MARKDOWN_CACHE_VERSION = "markdown-html-v3";
 const MARKDOWN_CACHE_DIR = path.join(process.cwd(), ".cache", "markdown-html");
 let codeBlockUid = 0;
 
-const isElement = (node: MarkdownContent): node is MarkdownElement => node.type === "element";
+const isElement = (node: MarkdownContent): node is MarkdownElement =>
+  node.type === "element";
 
-const isTextNode = (node: MarkdownElementContent): node is MarkdownTextNode => node.type === "text";
+const isTextNode = (node: MarkdownElementContent): node is MarkdownTextNode =>
+  node.type === "text";
 
-const getPropertyStrings = (value: MarkdownPropertyValue | undefined): string[] => {
+const getPropertyStrings = (
+  value: MarkdownPropertyValue | undefined,
+): string[] => {
   if (Array.isArray(value)) {
     return value.filter((item): item is string => typeof item === "string");
   }
@@ -61,7 +65,9 @@ const getPropertyStrings = (value: MarkdownPropertyValue | undefined): string[] 
   return typeof value === "string" ? [value] : [];
 };
 
-const getPropertyString = (value: MarkdownPropertyValue | undefined): string | undefined => {
+const getPropertyString = (
+  value: MarkdownPropertyValue | undefined,
+): string | undefined => {
   if (typeof value === "string") return value;
   if (typeof value === "number") return String(value);
   return undefined;
@@ -77,7 +83,10 @@ const hasClass = (node: MarkdownElement, className: string) => {
 };
 
 const appendClassName = (node: MarkdownElement, className: string) => {
-  node.properties.className = [...getPropertyStrings(node.properties.className), className];
+  node.properties.className = [
+    ...getPropertyStrings(node.properties.className),
+    className,
+  ];
 };
 
 const getFirstText = (element: MarkdownElementContent): string => {
@@ -176,7 +185,9 @@ function transformerTitle(): MarkdownTransformer {
       const hasTitleBounds = titleStart !== -1 && titleEnd > titleStart;
       if (!hasTitleBounds) return code;
 
-      const isComment = COMMENT_PREFIXES.some((prefix) => firstLine.startsWith(prefix));
+      const isComment = COMMENT_PREFIXES.some((prefix) =>
+        firstLine.startsWith(prefix),
+      );
 
       const shouldProcessTitle = isComment && options;
       if (!shouldProcessTitle) return code;
@@ -213,7 +224,9 @@ function transformerLanguageBadge(): MarkdownTransformer {
         if (!shouldProcess) return node;
 
         const lang =
-          getPropertyString(node.properties["data-language"]) || this.options.lang || "text";
+          getPropertyString(node.properties["data-language"]) ||
+          this.options.lang ||
+          "text";
         node.properties["data-language"] = lang;
 
         return node;
@@ -236,7 +249,9 @@ function transformerCodeWrapper(): MarkdownTransformer {
 
         const blockId = `code-block-${++codeBlockUid}`;
         const lang =
-          getPropertyString(node.properties["data-language"]) || this.options.lang || "text";
+          getPropertyString(node.properties["data-language"]) ||
+          this.options.lang ||
+          "text";
 
         let titleElement: MarkdownElementContent | null = null;
         const codeChildren: MarkdownElementContent[] = [];
@@ -332,11 +347,14 @@ function transformerTooltip(): MarkdownTransformer {
     },
     span(node) {
       const firstChild = node.children[0];
-      const nodeText = firstChild && isTextNode(firstChild) ? firstChild.value : "";
+      const nodeText =
+        firstChild && isTextNode(firstChild) ? firstChild.value : "";
 
       if (!nodeText) return;
 
-      const matchingTooltip = tooltips.find((tooltip) => nodeText.includes(tooltip.word));
+      const matchingTooltip = tooltips.find((tooltip) =>
+        nodeText.includes(tooltip.word),
+      );
       if (!matchingTooltip) return;
 
       node.tagName = "span";
@@ -436,7 +454,9 @@ export const markdownToHtml = async (markdown: string) => {
     .update(markdown)
     .digest("hex");
   const cachePath = path.join(MARKDOWN_CACHE_DIR, `${cacheKey}.html`);
-  const cachedHtml = fs.existsSync(cachePath) ? fs.readFileSync(cachePath, "utf8") : null;
+  const cachedHtml = fs.existsSync(cachePath)
+    ? fs.readFileSync(cachePath, "utf8")
+    : null;
 
   if (cachedHtml) return cachedHtml;
 

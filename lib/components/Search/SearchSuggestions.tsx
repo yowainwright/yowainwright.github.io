@@ -14,7 +14,12 @@ interface SuggestionSectionProps {
   onSelect: () => void;
 }
 
-function SuggestionSection({ label, items, icon: Icon, onSelect }: SuggestionSectionProps) {
+function SuggestionSection({
+  label,
+  items,
+  icon: Icon,
+  onSelect,
+}: SuggestionSectionProps) {
   const hasItems = items.length > 0;
   if (!hasItems) return null;
 
@@ -22,7 +27,12 @@ function SuggestionSection({ label, items, icon: Icon, onSelect }: SuggestionSec
     <div className="search-suggestions__section">
       <div className="search-suggestions__label">{label}</div>
       {items.map((item) => (
-        <a key={item.slug} href={item.url} className="search-suggestion" onClick={onSelect}>
+        <a
+          key={item.slug}
+          href={item.url}
+          className="search-suggestion"
+          onClick={onSelect}
+        >
           <Icon size={16} />
           <span>{item.title}</span>
         </a>
@@ -31,7 +41,10 @@ function SuggestionSection({ label, items, icon: Icon, onSelect }: SuggestionSec
   );
 }
 
-export function SearchSuggestions({ searchData, onSelect }: SearchSuggestionsProps) {
+export function SearchSuggestions({
+  searchData,
+  onSelect,
+}: SearchSuggestionsProps) {
   const recentPosts = searchData
     .filter((item) => item.type === "post")
     .slice(0, RECENT_ITEMS_COUNT);
@@ -49,7 +62,12 @@ export function SearchSuggestions({ searchData, onSelect }: SearchSuggestionsPro
         icon={Clock}
         onSelect={onSelect}
       />
-      <SuggestionSection label="Projects" items={recentProjects} icon={Code} onSelect={onSelect} />
+      <SuggestionSection
+        label="Projects"
+        items={recentProjects}
+        icon={Code}
+        onSelect={onSelect}
+      />
     </div>
   );
 }

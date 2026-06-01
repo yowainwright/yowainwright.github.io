@@ -21,7 +21,8 @@ export const TokenCostCalculator = () => {
     onSuccess: (data) => data,
   });
   const calculations = useMemo(
-    () => (aiData ? Effect.runSync(calculateCostsEffect(inputTokens, aiData)) : []),
+    () =>
+      aiData ? Effect.runSync(calculateCostsEffect(inputTokens, aiData)) : [],
     [aiData, inputTokens],
   );
 
@@ -37,7 +38,9 @@ export const TokenCostCalculator = () => {
 
   const handleTokenChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
-    const nextTokens = Effect.runSync(Effect.either(parseTokenInputEffect(inputValue)));
+    const nextTokens = Effect.runSync(
+      Effect.either(parseTokenInputEffect(inputValue)),
+    );
 
     if (Either.isRight(nextTokens)) {
       setInputTokens(nextTokens.right);
@@ -60,7 +63,9 @@ export const TokenCostCalculator = () => {
       <div className="calculator__input-section">
         <label htmlFor="token-input" className="calculator__label">
           {GRAMMARS.LABEL}
-          <span className="calculator__helper-text">{GRAMMARS.INPUT_LABEL}</span>
+          <span className="calculator__helper-text">
+            {GRAMMARS.INPUT_LABEL}
+          </span>
         </label>
         <input
           id="token-input"
@@ -78,20 +83,38 @@ export const TokenCostCalculator = () => {
         <table className="calculator__table post__table">
           <thead>
             <tr>
-              <th className="calculator__table-cell calculator__table-header">Model</th>
-              <th className="calculator__table-cell calculator__table-header">Output Tokens</th>
-              <th className="calculator__table-cell calculator__table-header">Input Cost</th>
-              <th className="calculator__table-cell calculator__table-header">Output Cost</th>
-              <th className="calculator__table-cell calculator__table-header">Total Cost</th>
+              <th className="calculator__table-cell calculator__table-header">
+                Model
+              </th>
+              <th className="calculator__table-cell calculator__table-header">
+                Output Tokens
+              </th>
+              <th className="calculator__table-cell calculator__table-header">
+                Input Cost
+              </th>
+              <th className="calculator__table-cell calculator__table-header">
+                Output Cost
+              </th>
+              <th className="calculator__table-cell calculator__table-header">
+                Total Cost
+              </th>
             </tr>
           </thead>
           <tbody>
             {calculations.map((calc) => (
               <tr key={calc.modelId}>
-                <td className="calculator__table-cell calculator__model-name">{calc.modelName}</td>
-                <td className="calculator__table-cell">{calc.outputTokens.toLocaleString()}</td>
-                <td className="calculator__table-cell">${calc.inputCost.toFixed(4)}</td>
-                <td className="calculator__table-cell">${calc.outputCost.toFixed(4)}</td>
+                <td className="calculator__table-cell calculator__model-name">
+                  {calc.modelName}
+                </td>
+                <td className="calculator__table-cell">
+                  {calc.outputTokens.toLocaleString()}
+                </td>
+                <td className="calculator__table-cell">
+                  ${calc.inputCost.toFixed(4)}
+                </td>
+                <td className="calculator__table-cell">
+                  ${calc.outputCost.toFixed(4)}
+                </td>
                 <td className="calculator__table-cell calculator__total-cost">
                   ${calc.totalCost.toFixed(4)}
                 </td>
@@ -114,7 +137,10 @@ export const TokenCostCalculator = () => {
           {aiData?.lastUpdated ? (
             new Date(aiData.lastUpdated).toLocaleDateString()
           ) : (
-            <Loader2 size={8} style={{ animation: "spin 1s linear infinite" }} />
+            <Loader2
+              size={8}
+              style={{ animation: "spin 1s linear infinite" }}
+            />
           )}
         </p>
         <p className="calculator__helper-note">{GRAMMARS.META_DESCRIPTION}</p>

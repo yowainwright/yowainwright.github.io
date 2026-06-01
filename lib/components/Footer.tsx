@@ -8,14 +8,19 @@ const PORTRAIT_URL =
 const currentYear = new Date().getFullYear();
 
 export const Footer = () => (
-  <footer className="site-footer" role="contentinfo" itemType="http://schema.org/WPFooter">
+  <footer
+    className="site-footer"
+    role="contentinfo"
+    itemType="http://schema.org/WPFooter"
+  >
     <section className="site-footer__wrapper site-footer__wrapper--main">
       <article className="site-footer__col site-footer__col--contact">
         <h3 className="site-footer__title">Contact</h3>
         <address className="site-footer__address">
           <p className="site-footer__content">Happy to chat, learn, help!</p>
           <p className="site-footer__content">
-            <a href="mailto:yowainwright@gmail.com">yowainwright@gmail.com</a>, Los Angeles, CA
+            <a href="mailto:yowainwright@gmail.com">yowainwright@gmail.com</a>,
+            Los Angeles, CA
           </p>
         </address>
       </article>

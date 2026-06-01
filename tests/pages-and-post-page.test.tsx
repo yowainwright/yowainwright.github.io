@@ -40,6 +40,12 @@ const tableTitleNode: MdxAstNode = {
   ],
 };
 
+const tableHeadingNode: MdxAstNode = {
+  type: "heading",
+  depth: 3,
+  children: [{ type: "text", value: "Initial Override Snapshot" }],
+};
+
 describe("post page static helpers", () => {
   test("builds static paths from content posts", () => {
     const result = buildPostStaticPaths("content");
@@ -85,9 +91,33 @@ describe("post page static helpers", () => {
     expect(hasMdxClassName(tableTitleNode, "post__table-title")).toBe(true);
     expect(isMdxTableTitle(tableTitleNode)).toBe(true);
     expect(tree.children?.[0]).toBe(titledTable);
-    expect(titledTable.data?.hProperties?.["data-title"]).toBe("Pastoralist Study");
+    expect(titledTable.data?.hProperties?.["data-title"]).toBe(
+      "Pastoralist Study",
+    );
     expect(tree.children?.[1]).toBe(orphanTitle);
     expect(tree.children?.[2]).toBe(paragraph);
+  });
+
+  test("attaches a preceding h3 heading as table title metadata", () => {
+    const titledTable: MdxAstNode = { type: "table" };
+    const paragraph: MdxAstNode = {
+      type: "paragraph",
+      children: [{ type: "text", value: "Body" }],
+    };
+    const tree: MdxAstNode = {
+      type: "root",
+      children: [tableHeadingNode, titledTable, paragraph],
+    };
+
+    remarkMdxTableTitles()(tree);
+
+    expect(getMdxAstText(tableHeadingNode)).toBe("Initial Override Snapshot");
+    expect(isMdxTableTitle(tableHeadingNode)).toBe(true);
+    expect(tree.children?.[0]).toBe(titledTable);
+    expect(titledTable.data?.hProperties?.["data-title"]).toBe(
+      "Initial Override Snapshot",
+    );
+    expect(tree.children?.[1]).toBe(paragraph);
   });
 });
 
@@ -111,7 +141,8 @@ describe("page static props and rendering", () => {
   });
 
   test("renders the archive page from generated archive props", async () => {
-    const { default: Archive, getStaticProps } = await import("../pages/archive");
+    const { default: Archive, getStaticProps } =
+      await import("../pages/archive");
     const result = await getStaticProps();
     const posts = result.props.posts.slice(0, 2).map((post) =>
       Object.assign({}, post, {
@@ -120,7 +151,9 @@ describe("page static props and rendering", () => {
         }),
       }),
     );
-    const markup = renderToStaticMarkup(<Archive posts={posts} title="Archive Test" />);
+    const markup = renderToStaticMarkup(
+      <Archive posts={posts} title="Archive Test" />,
+    );
 
     expect(posts.length).toBeGreaterThan(0);
     expect(markup).toContain("Archive Test");

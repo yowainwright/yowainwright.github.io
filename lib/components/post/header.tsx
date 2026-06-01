@@ -7,7 +7,11 @@ interface PostHeaderProps {
   date?: string;
 }
 
-export const PostHeader = ({ title = "", path = "", date = "" }: PostHeaderProps) => (
+export const PostHeader = ({
+  title = "",
+  path = "",
+  date = "",
+}: PostHeaderProps) => (
   <header>
     <h2>
       <Link href={path}>{title}</Link>

@@ -56,8 +56,12 @@ describe("presentational components", () => {
   });
 
   test("renders normalized chart containers and titles", () => {
-    const barMarkup = renderToStaticMarkup(<BarChart data={chartData} title="Bar Title" />);
-    const lineMarkup = renderToStaticMarkup(<LineChart data={chartData} title="Line Title" />);
+    const barMarkup = renderToStaticMarkup(
+      <BarChart data={chartData} title="Bar Title" />,
+    );
+    const lineMarkup = renderToStaticMarkup(
+      <LineChart data={chartData} title="Line Title" />,
+    );
 
     expect(barMarkup).toContain("post__chart");
     expect(barMarkup).toContain("Bar Title");
@@ -66,7 +70,9 @@ describe("presentational components", () => {
   });
 
   test("renders pixel icons from named and custom grids", () => {
-    const namedMarkup = renderToStaticMarkup(<PixelIcon name="heart" size={3} color="#f00" />);
+    const namedMarkup = renderToStaticMarkup(
+      <PixelIcon name="heart" size={3} color="#f00" />,
+    );
     const customMarkup = renderToStaticMarkup(
       <PixelIcon
         grid={[
@@ -84,7 +90,11 @@ describe("presentational components", () => {
   test("renders search states and suggestions", () => {
     const postResult = searchData[0]!;
     const selectedMarkup = renderToStaticMarkup(
-      <SearchResultItem result={postResult} isSelected onSelect={() => undefined} />,
+      <SearchResultItem
+        result={postResult}
+        isSelected
+        onSelect={() => undefined}
+      />,
     );
     const suggestionsMarkup = renderToStaticMarkup(
       <SearchSuggestions searchData={searchData} onSelect={() => undefined} />,

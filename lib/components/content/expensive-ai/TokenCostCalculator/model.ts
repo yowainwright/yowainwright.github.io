@@ -2,7 +2,10 @@ import { Data, Effect, Schema } from "effect";
 import type { ExpensiveAiData } from "../../../../client/data/expensive-ai";
 import { DEFAULT_TOKENS } from "./constants";
 
-export const TokenCountSchema = Schema.Number.pipe(Schema.int(), Schema.nonNegative());
+export const TokenCountSchema = Schema.Number.pipe(
+  Schema.int(),
+  Schema.nonNegative(),
+);
 
 export const ModelCalculationSchema = Schema.Struct({
   modelId: Schema.String,
@@ -16,7 +19,9 @@ export const ModelCalculationSchema = Schema.Struct({
 export const ModelCalculationsSchema = Schema.Array(ModelCalculationSchema);
 
 export type TokenCount = Schema.Schema.Type<typeof TokenCountSchema>;
-export type ModelCalculationData = Schema.Schema.Type<typeof ModelCalculationSchema>;
+export type ModelCalculationData = Schema.Schema.Type<
+  typeof ModelCalculationSchema
+>;
 
 export class TokenInputError extends Data.TaggedError("TokenInputError")<{
   readonly input: string;
@@ -39,14 +44,18 @@ export const parseTokenInputEffect = (
   }
 
   if (!/^\d+$/.test(input)) {
-    return Effect.fail(new TokenInputError({ input, reason: "Expected numeric input" }));
+    return Effect.fail(
+      new TokenInputError({ input, reason: "Expected numeric input" }),
+    );
   }
 
   const cleanValue = input.replace(/^0+/, "") || "0";
   return decodeTokenCount(parseInt(cleanValue, 10), input);
 };
 
-export const DEFAULT_TOKEN_COUNT = Effect.runSync(parseTokenInputEffect(String(DEFAULT_TOKENS)));
+export const DEFAULT_TOKEN_COUNT = Effect.runSync(
+  parseTokenInputEffect(String(DEFAULT_TOKENS)),
+);
 
 export const readStoredTokenCountEffect = (
   storageKey: string,
@@ -92,6 +101,8 @@ export const calculateCostsEffect = (
       })
       .sort((a, b) => a.totalCost - b.totalCost),
   ).pipe(
-    Effect.flatMap((calculations) => Schema.decodeUnknown(ModelCalculationsSchema)(calculations)),
+    Effect.flatMap((calculations) =>
+      Schema.decodeUnknown(ModelCalculationsSchema)(calculations),
+    ),
     Effect.orDie,
   );

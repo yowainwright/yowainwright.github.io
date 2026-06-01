@@ -8,7 +8,12 @@ import {
   OG_IMAGE_HEIGHT,
   TWITTER_HANDLE,
 } from "./constants";
-import type { OgMetaProps, OgMetaTagProps, NameMetaTagProps, JsonLdInput } from "./types";
+import type {
+  OgMetaProps,
+  OgMetaTagProps,
+  NameMetaTagProps,
+  JsonLdInput,
+} from "./types";
 
 function buildUrl(slug?: string): string {
   return slug ? `${SITE_URL}/${slug}` : SITE_URL;
@@ -28,7 +33,14 @@ function toIsoDate(date?: string): string {
   }
 }
 
-function buildJsonLd({ title, description, url, imageUrl, isoDate, wordCount }: JsonLdInput) {
+function buildJsonLd({
+  title,
+  description,
+  url,
+  imageUrl,
+  isoDate,
+  wordCount,
+}: JsonLdInput) {
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -92,10 +104,18 @@ function OgImageTags({ imageUrl }: { imageUrl: string }) {
   );
 }
 
-function ArticleTags({ isoDate, tags }: { isoDate: string; tags: readonly string[] }) {
+function ArticleTags({
+  isoDate,
+  tags,
+}: {
+  isoDate: string;
+  tags: readonly string[];
+}) {
   return (
     <>
-      {isoDate && <PropertyMeta property="article:published_time" content={isoDate} />}
+      {isoDate && (
+        <PropertyMeta property="article:published_time" content={isoDate} />
+      )}
       {tags.map((tag) => (
         <PropertyMeta key={tag} property="article:tag" content={tag} />
       ))}
@@ -125,7 +145,10 @@ function TwitterTags({
 
 function JsonLdScript({ data }: { data: Record<string, unknown> }) {
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
   );
 }
 
@@ -155,7 +178,11 @@ export function OgMeta({
       <OgCoreTags title={title} description={description} url={url} />
       <OgImageTags imageUrl={imageUrl} />
       <ArticleTags isoDate={isoDate} tags={tags} />
-      <TwitterTags title={title} description={description} imageUrl={imageUrl} />
+      <TwitterTags
+        title={title}
+        description={description}
+        imageUrl={imageUrl}
+      />
       <JsonLdScript data={jsonLd} />
     </Head>
   );

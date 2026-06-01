@@ -2,7 +2,12 @@
 
 import React from "react";
 import type { PixelGrid } from "./constants";
-import { LINK_GRID, COMMENT_GRID, HEART_GRID, HEART_OUTLINE_GRID } from "./constants";
+import {
+  LINK_GRID,
+  COMMENT_GRID,
+  HEART_GRID,
+  HEART_OUTLINE_GRID,
+} from "./constants";
 
 export type IconName = "link" | "comment" | "heart" | "heart-outline";
 
@@ -38,7 +43,16 @@ export const PixelIcon = ({
   grid.forEach((row, y) => {
     row.forEach((pixel, x) => {
       if (pixel) {
-        rects.push(<rect key={`${x}-${y}`} x={x} y={y} width={1} height={1} fill={color} />);
+        rects.push(
+          <rect
+            key={`${x}-${y}`}
+            x={x}
+            y={y}
+            width={1}
+            height={1}
+            fill={color}
+          />,
+        );
       }
     });
   });

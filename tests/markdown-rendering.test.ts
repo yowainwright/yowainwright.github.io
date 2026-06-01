@@ -44,7 +44,9 @@ describe("markdown utils", () => {
     const post = parsePost("why-pastoralist.mdx", "content");
     const singlePost = parseSinglePost("why-pastoralist", "content");
 
-    expect(extractSlugFromFilename("why-pastoralist.mdx")).toBe("why-pastoralist");
+    expect(extractSlugFromFilename("why-pastoralist.mdx")).toBe(
+      "why-pastoralist",
+    );
     expect(post.slug).toBe("why-pastoralist");
     expect(post.frontmatter.path).toBe("/why-pastoralist");
     expect(singlePost.content).toContain("Pastoralist");
@@ -80,7 +82,9 @@ describe("markdown utils", () => {
     ];
 
     const publishedPosts = filterPublishedPosts(posts);
-    const sortedSlugs = sortPostsByDate(publishedPosts).map((post) => post.slug);
+    const sortedSlugs = sortPostsByDate(publishedPosts).map(
+      (post) => post.slug,
+    );
 
     expect(publishedPosts.map((post) => post.slug)).toEqual(["older", "newer"]);
     expect(sortedSlugs).toEqual(["newer", "older"]);

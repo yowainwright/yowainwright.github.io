@@ -13,14 +13,19 @@ const createInitialState = (): SearchState => ({
   searchData: [],
 });
 
-const clampIndex = (index: number, max: number): number => Math.max(0, Math.min(index, max));
+const clampIndex = (index: number, max: number): number =>
+  Math.max(0, Math.min(index, max));
 
-const searchItems = (fuse: Fuse<SearchResult>, query: string): SearchResult[] => {
+const searchItems = (
+  fuse: Fuse<SearchResult>,
+  query: string,
+): SearchResult[] => {
   const searchResults = fuse.search(query);
   return searchResults.slice(0, MAX_RESULTS).map((r) => r.item);
 };
 
-const isOpenShortcut = (e: KeyboardEvent): boolean => (e.metaKey || e.ctrlKey) && e.key === "k";
+const isOpenShortcut = (e: KeyboardEvent): boolean =>
+  (e.metaKey || e.ctrlKey) && e.key === "k";
 
 const isEscapeKey = (e: KeyboardEvent): boolean => e.key === "Escape";
 const isArrowDown = (e: KeyboardEvent): boolean => e.key === "ArrowDown";
@@ -33,7 +38,10 @@ export function useSearch() {
   const modalRef = useRef<HTMLDivElement>(null);
   const searchDataResource = useSearchData();
 
-  const fuse = useMemo(() => new Fuse(state.searchData, FUSE_OPTIONS), [state.searchData]);
+  const fuse = useMemo(
+    () => new Fuse(state.searchData, FUSE_OPTIONS),
+    [state.searchData],
+  );
 
   const hasQuery = state.query.length > 0;
   const hasResults = state.results.length > 0;
@@ -82,7 +90,10 @@ export function useSearch() {
 
   const selectPrev = useCallback(() => {
     setState((prev) => {
-      const prevIndex = clampIndex(prev.selectedIndex - 1, prev.results.length - 1);
+      const prevIndex = clampIndex(
+        prev.selectedIndex - 1,
+        prev.results.length - 1,
+      );
       return { ...prev, selectedIndex: prevIndex };
     });
   }, []);
@@ -134,13 +145,21 @@ export function useSearch() {
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [canNavigateResults, open, close, selectNext, selectPrev, getSelectedResult]);
+  }, [
+    canNavigateResults,
+    open,
+    close,
+    selectNext,
+    selectPrev,
+    getSelectedResult,
+  ]);
 
   useEffect(() => {
     if (!state.isOpen) return;
 
     const handleClickOutside = (e: MouseEvent) => {
-      const clickedOutside = modalRef.current && !modalRef.current.contains(e.target as Node);
+      const clickedOutside =
+        modalRef.current && !modalRef.current.contains(e.target as Node);
       if (clickedOutside) close();
     };
 

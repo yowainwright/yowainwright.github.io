@@ -3,9 +3,12 @@ import dynamic from "next/dynamic";
 import { ChartSources } from "../../../charts";
 import { data, sources } from "./constants";
 
-const LineChart = dynamic(() => import("../../../charts").then((mod) => mod.LineChart), {
-  ssr: false,
-});
+const LineChart = dynamic(
+  () => import("../../../charts").then((mod) => mod.LineChart),
+  {
+    ssr: false,
+  },
+);
 
 export const WageStagnationChart = () => (
   <>
