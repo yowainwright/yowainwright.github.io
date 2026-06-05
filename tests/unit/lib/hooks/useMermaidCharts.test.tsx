@@ -1,7 +1,11 @@
 import { afterEach, describe, expect, mock, test } from "bun:test";
 import React, { act } from "react";
 import { useMermaidCharts } from "../../../../lib/hooks/useMermaidCharts";
-import { cleanupMountedRoots, createMountedRoot, setupDom } from "../../test-utils/react-dom";
+import {
+  cleanupMountedRoots,
+  createMountedRoot,
+  setupDom,
+} from "../../test-utils/react-dom";
 
 mock.module("next/dynamic", () => ({
   default: () => () => null,
@@ -51,11 +55,14 @@ describe("useMermaidCharts", () => {
     });
 
     const mermaidShell = document.querySelector<HTMLElement>(".diagram-shell");
-    const rechartsShell = document.querySelector<HTMLElement>(".recharts-wrapper");
+    const rechartsShell =
+      document.querySelector<HTMLElement>(".recharts-wrapper");
 
     expect(mermaidShell?.classList.contains("mermaid-chart")).toBe(true);
     expect(mermaidShell?.classList.contains("mermaid-processed")).toBe(true);
-    expect(mermaidShell?.querySelector(".mermaid-chart__expand-hint")).not.toBeNull();
+    expect(
+      mermaidShell?.querySelector(".mermaid-chart__expand-hint"),
+    ).not.toBeNull();
     expect(rechartsShell?.classList.contains("mermaid-chart")).toBe(false);
 
     await act(async () => {

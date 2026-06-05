@@ -22,12 +22,16 @@ class PricingFileError extends Data.TaggedError("PricingFileError")<{
   readonly reason: unknown;
 }> {}
 
-class PricingCacheParseError extends Data.TaggedError("PricingCacheParseError")<{
+class PricingCacheParseError extends Data.TaggedError(
+  "PricingCacheParseError",
+)<{
   readonly path: string;
   readonly reason: unknown;
 }> {}
 
-class PricingUnavailableError extends Data.TaggedError("PricingUnavailableError")<{
+class PricingUnavailableError extends Data.TaggedError(
+  "PricingUnavailableError",
+)<{
   readonly reason: string;
 }> {}
 
@@ -150,13 +154,15 @@ function generateJsonFile(pricingData: PricingData): string {
 const readTextFileEffect = (filePath: string) =>
   Effect.tryPromise({
     try: () => readFile(filePath, "utf-8"),
-    catch: (reason) => new PricingFileError({ operation: "read", path: filePath, reason }),
+    catch: (reason) =>
+      new PricingFileError({ operation: "read", path: filePath, reason }),
   });
 
 const writeTextFileEffect = (filePath: string, content: string) =>
   Effect.tryPromise({
     try: () => writeFile(filePath, content),
-    catch: (reason) => new PricingFileError({ operation: "write", path: filePath, reason }),
+    catch: (reason) =>
+      new PricingFileError({ operation: "write", path: filePath, reason }),
   });
 
 const selectPricingData = (parsed: unknown): PricingData => {
@@ -193,7 +199,9 @@ const loadPricingDataEffect = (filePath: string) =>
 
 const loadCachedPricingEffect = loadPricingDataEffect(CACHE_PATH).pipe(
   Effect.tap(() => Metric.increment(pricingCacheHits)),
-  Effect.catchAll(() => Metric.increment(pricingCacheMisses).pipe(Effect.as(null))),
+  Effect.catchAll(() =>
+    Metric.increment(pricingCacheMisses).pipe(Effect.as(null)),
+  ),
 );
 
 const loadGeneratedPricingEffect = loadPricingDataEffect(JSON_PATH).pipe(
@@ -211,7 +219,9 @@ const loadPreviousPricingEffect = Effect.all([
 
 const mergeWithPreviousPricingEffect = (pricing: PricingData) =>
   loadPreviousPricingEffect.pipe(
-    Effect.map((previousPricing) => Object.assign({}, previousPricing, pricing)),
+    Effect.map((previousPricing) =>
+      Object.assign({}, previousPricing, pricing),
+    ),
   );
 
 const saveCachedPricingEffect = (pricing: PricingData) =>
@@ -230,10 +240,13 @@ const writeCachedPricingEffect: Effect.Effect<"cache", UpdatePricingError> =
     Effect.flatMap(
       (cached): Effect.Effect<"cache", UpdatePricingError> =>
         cached
-          ? writeGeneratedPricingEffect(cached).pipe(Effect.as("cache" as const))
+          ? writeGeneratedPricingEffect(cached).pipe(
+              Effect.as("cache" as const),
+            )
           : Effect.fail(
               new PricingUnavailableError({
-                reason: "No live pricing data or cached pricing data was available.",
+                reason:
+                  "No live pricing data or cached pricing data was available.",
               }),
             ),
     ),
@@ -244,7 +257,9 @@ const saveMergedPricingEffect = (mergedPricing: PricingData) =>
     Effect.zipRight(writeGeneratedPricingEffect(mergedPricing)),
   );
 
-const writeFreshPricing = (pricing: PricingData): Effect.Effect<"fresh", UpdatePricingError> => {
+const writeFreshPricing = (
+  pricing: PricingData,
+): Effect.Effect<"fresh", UpdatePricingError> => {
   if (Object.keys(pricing).length === 0) {
     return Effect.fail(
       new PricingUnavailableError({
@@ -262,8 +277,12 @@ const writeFreshPricing = (pricing: PricingData): Effect.Effect<"fresh", UpdateP
 const writeFreshPricingEffect: Effect.Effect<"fresh", UpdatePricingError> =
   fetchAllPricingEffect.pipe(Effect.flatMap(writeFreshPricing));
 
-const updatePricingEffect: Effect.Effect<UpdatePricingSource, UpdatePricingError> =
-  writeFreshPricingEffect.pipe(Effect.catchAll(() => writeCachedPricingEffect));
+const updatePricingEffect: Effect.Effect<
+  UpdatePricingSource,
+  UpdatePricingError
+> = writeFreshPricingEffect.pipe(
+  Effect.catchAll(() => writeCachedPricingEffect),
+);
 
 const logMetricsEffect = (source: UpdatePricingSource) =>
   Effect.all([
@@ -303,7 +322,9 @@ const logMetricsEffect = (source: UpdatePricingSource) =>
     ),
   );
 
-Effect.runPromiseExit(updatePricingEffect.pipe(Effect.tap(logMetricsEffect))).then((exit) => {
+Effect.runPromiseExit(
+  updatePricingEffect.pipe(Effect.tap(logMetricsEffect)),
+).then((exit) => {
   if (Exit.isSuccess(exit)) return;
 
   log.error({ cause: Cause.pretty(exit.cause) }, "pricing update failed");

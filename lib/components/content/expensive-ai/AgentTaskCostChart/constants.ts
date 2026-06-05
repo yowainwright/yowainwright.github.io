@@ -6,7 +6,9 @@ export const AGENT_TASK_CHART_LABELS = {
 };
 
 export const AGENT_DESCRIPTIONS = {
-  CONTEXT: "These costs represent real Claude Code agent usage from my development workflow",
-  AGENTS_USED: "QA Lead Agent, TypeScript Expert, Principal Engineer, Fastify Expert",
+  CONTEXT:
+    "These costs represent real Claude Code agent usage from my development workflow",
+  AGENTS_USED:
+    "QA Lead Agent, TypeScript Expert, Principal Engineer, Fastify Expert",
   PATTERN: "Orchestrator pattern with specialized agent roles",
 };

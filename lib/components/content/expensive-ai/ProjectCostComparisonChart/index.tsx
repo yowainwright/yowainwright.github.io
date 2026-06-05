@@ -8,9 +8,12 @@ import { useExpensiveAiData } from "../../../../hooks/useExpensiveAiData";
 import { PROJECT_COMPARISON_LABELS } from "./constants";
 import { SHARED_CHART_CONSTANTS } from "../shared/constants";
 
-const BarChart = dynamic(() => import("../../../charts").then((mod) => mod.BarChart), {
-  ssr: false,
-});
+const BarChart = dynamic(
+  () => import("../../../charts").then((mod) => mod.BarChart),
+  {
+    ssr: false,
+  },
+);
 
 const ChartLoading = () => (
   <div style={SHARED_CHART_CONSTANTS.LOADING_STATES.CONTAINER_STYLE}>
@@ -24,7 +27,11 @@ const ChartLoading = () => (
   </div>
 );
 
-const ProjectComparisonChartContent = ({ chartData }: { chartData: ExpensiveAiChartData }) => {
+const ProjectComparisonChartContent = ({
+  chartData,
+}: {
+  chartData: ExpensiveAiChartData;
+}) => {
   const hasTotalProjectCosts =
     chartData.totalProjectCosts && Array.isArray(chartData.totalProjectCosts);
   const hasSources = chartData.sources && Array.isArray(chartData.sources);
@@ -54,6 +61,8 @@ export const ProjectCostComparisonChart = () => {
         chartData={SHARED_CHART_CONSTANTS.ERROR_HANDLING.FALLBACK_STATE}
       />
     ),
-    onSuccess: (chartData) => <ProjectComparisonChartContent chartData={chartData} />,
+    onSuccess: (chartData) => (
+      <ProjectComparisonChartContent chartData={chartData} />
+    ),
   });
 };

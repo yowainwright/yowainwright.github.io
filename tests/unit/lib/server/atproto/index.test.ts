@@ -2,7 +2,11 @@ import { afterEach, describe, expect, test } from "bun:test";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { AtProtoClient, DEFAULT_LANGS, MAX_IMAGE_SIZE } from "../../../../../lib/server/atproto";
+import {
+  AtProtoClient,
+  DEFAULT_LANGS,
+  MAX_IMAGE_SIZE,
+} from "../../../../../lib/server/atproto";
 import type { BlobRef } from "../../../../../lib/server/atproto";
 
 let tempFiles: string[] = [];
@@ -30,7 +34,9 @@ describe("AtProtoClient", () => {
   test("requires credentials before login", async () => {
     const client = new AtProtoClient();
 
-    await expect(client.login()).rejects.toThrow("ATP_IDENTIFIER and ATP_PASSWORD are required");
+    await expect(client.login()).rejects.toThrow(
+      "ATP_IDENTIFIER and ATP_PASSWORD are required",
+    );
   });
 
   test("uploads images with detected MIME types and rejects oversized files", async () => {
@@ -60,7 +66,9 @@ describe("AtProtoClient", () => {
 
     await expect(client.uploadImage(imagePath)).resolves.toEqual(blob);
     expect(calls).toEqual([{ encoding: "image/png", size: 4 }]);
-    await expect(client.uploadImage(oversizedPath)).rejects.toThrow("Image exceeds");
+    await expect(client.uploadImage(oversizedPath)).rejects.toThrow(
+      "Image exceeds",
+    );
   });
 
   test("creates posts with default language metadata", async () => {

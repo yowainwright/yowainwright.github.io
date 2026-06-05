@@ -8,9 +8,12 @@ import { useExpensiveAiData } from "../../../../hooks/useExpensiveAiData";
 import { AGENT_TASK_CHART_LABELS } from "./constants";
 import { SHARED_CHART_CONSTANTS } from "../shared/constants";
 
-const BarChart = dynamic(() => import("../../../charts").then((mod) => mod.BarChart), {
-  ssr: false,
-});
+const BarChart = dynamic(
+  () => import("../../../charts").then((mod) => mod.BarChart),
+  {
+    ssr: false,
+  },
+);
 
 const ChartLoading = () => (
   <div style={SHARED_CHART_CONSTANTS.LOADING_STATES.CONTAINER_STYLE}>
@@ -24,8 +27,13 @@ const ChartLoading = () => (
   </div>
 );
 
-const AgentTaskChartContent = ({ chartData }: { chartData: ExpensiveAiChartData }) => {
-  const hasAgentTaskCosts = chartData.agentTaskCosts && Array.isArray(chartData.agentTaskCosts);
+const AgentTaskChartContent = ({
+  chartData,
+}: {
+  chartData: ExpensiveAiChartData;
+}) => {
+  const hasAgentTaskCosts =
+    chartData.agentTaskCosts && Array.isArray(chartData.agentTaskCosts);
   const hasSources = chartData.sources && Array.isArray(chartData.sources);
 
   return (
@@ -49,7 +57,9 @@ export const AgentTaskCostChart = () => {
   return matchEffectResource(resource, {
     onLoading: () => <ChartLoading />,
     onFailure: () => (
-      <AgentTaskChartContent chartData={SHARED_CHART_CONSTANTS.ERROR_HANDLING.FALLBACK_STATE} />
+      <AgentTaskChartContent
+        chartData={SHARED_CHART_CONSTANTS.ERROR_HANDLING.FALLBACK_STATE}
+      />
     ),
     onSuccess: (chartData) => <AgentTaskChartContent chartData={chartData} />,
   });

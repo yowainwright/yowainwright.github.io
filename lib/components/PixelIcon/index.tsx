@@ -2,7 +2,12 @@
 
 import React from "react";
 import type { PixelGrid } from "./constants";
-import { LINK_GRID, COMMENT_GRID, HEART_GRID, HEART_OUTLINE_GRID } from "./constants";
+import {
+  LINK_GRID,
+  COMMENT_GRID,
+  HEART_GRID,
+  HEART_OUTLINE_GRID,
+} from "./constants";
 
 export type IconName = "link" | "comment" | "heart" | "heart-outline";
 
@@ -28,7 +33,9 @@ const isRectElement = (
 const getPixelRect = (pixel: number, x: number, y: number, color: string) => {
   if (!pixel) return null;
 
-  return <rect key={`${x}-${y}`} x={x} y={y} width={1} height={1} fill={color} />;
+  return (
+    <rect key={`${x}-${y}`} x={x} y={y} width={1} height={1} fill={color} />
+  );
 };
 
 const getRowRects = (row: number[], y: number, color: string) =>

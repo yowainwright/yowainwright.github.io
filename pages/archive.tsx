@@ -17,7 +17,13 @@ interface PostsRowProps {
 
 const PostsRow = ({ posts }: PostsRowProps): React.ReactNode =>
   posts.map(({ slug, frontmatter: { date, meta, title } }: Post) => (
-    <BasicPost key={slug} date={date} description={meta} path={slug} title={title} />
+    <BasicPost
+      key={slug}
+      date={date}
+      description={meta}
+      path={slug}
+      title={title}
+    />
   ));
 
 interface ArchiveProps {
@@ -25,7 +31,10 @@ interface ArchiveProps {
   title: string;
 }
 
-export default function Archive({ posts, title = "Archive | Jeffry.in" }: ArchiveProps) {
+export default function Archive({
+  posts,
+  title = "Archive | Jeffry.in",
+}: ArchiveProps) {
   return (
     <main className="main">
       <Head>
@@ -34,7 +43,11 @@ export default function Archive({ posts, title = "Archive | Jeffry.in" }: Archiv
           property="og:description"
           content="A full list of blog posts written by Jeffry Wainwright, a human person who enjoys building software, open source, being outside, and trying to live life with purpose."
         />
-        <link rel="canonical" href="https://jeffry.in/archive/" itemProp="url" />
+        <link
+          rel="canonical"
+          href="https://jeffry.in/archive/"
+          itemProp="url"
+        />
         <meta property="og:url" content="https://jeffry.in/archive/" />
         <meta property="og:title" content={`${title}`} />
         <meta property="og:type" content="website" />
@@ -48,7 +61,9 @@ export default function Archive({ posts, title = "Archive | Jeffry.in" }: Archiv
         <meta name="fediverse:creator" content="@yowainwright.jeffry.in" />
       </Head>
       <section className="section section--intro">
-        <h1>Article archive: I have been writing for a while. Enjoy scrolling!</h1>
+        <h1>
+          Article archive: I have been writing for a while. Enjoy scrolling!
+        </h1>
       </section>
       <section className="section section--posts">
         <div className="posts--basic">

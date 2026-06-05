@@ -25,7 +25,9 @@ class SearchDataHttpError extends Data.TaggedError("SearchDataHttpError")<{
   readonly status: number;
 }> {}
 
-class SearchDataValidationError extends Data.TaggedError("SearchDataValidationError")<{
+class SearchDataValidationError extends Data.TaggedError(
+  "SearchDataValidationError",
+)<{
   readonly path: string;
   readonly reason: unknown;
 }> {}
@@ -35,20 +37,29 @@ export type SearchDataError =
   | SearchDataHttpError
   | SearchDataValidationError;
 
-export const searchDataLoadAttempts = Metric.counter("search_data_load_attempts", {
-  description: "Search data load attempts",
-  incremental: true,
-});
+export const searchDataLoadAttempts = Metric.counter(
+  "search_data_load_attempts",
+  {
+    description: "Search data load attempts",
+    incremental: true,
+  },
+);
 
-export const searchDataLoadFailures = Metric.counter("search_data_load_failures", {
-  description: "Search data load failures",
-  incremental: true,
-});
+export const searchDataLoadFailures = Metric.counter(
+  "search_data_load_failures",
+  {
+    description: "Search data load failures",
+    incremental: true,
+  },
+);
 
-export const searchDataLoadSuccesses = Metric.counter("search_data_load_successes", {
-  description: "Search data load successes",
-  incremental: true,
-});
+export const searchDataLoadSuccesses = Metric.counter(
+  "search_data_load_successes",
+  {
+    description: "Search data load successes",
+    incremental: true,
+  },
+);
 
 export const loadSearchDataEffect = (
   path = DEFAULT_SEARCH_DATA_PATH,
@@ -63,7 +74,9 @@ export const loadSearchDataEffect = (
     Effect.flatMap((response) =>
       response.ok
         ? Effect.succeed(response)
-        : Effect.fail(new SearchDataHttpError({ path, status: response.status })),
+        : Effect.fail(
+            new SearchDataHttpError({ path, status: response.status }),
+          ),
     ),
     Effect.flatMap((response) =>
       Effect.tryPromise({
@@ -73,7 +86,9 @@ export const loadSearchDataEffect = (
     ),
     Effect.flatMap((json) =>
       Schema.decodeUnknown(SearchDataSchema)(json).pipe(
-        Effect.mapError((reason) => new SearchDataValidationError({ path, reason })),
+        Effect.mapError(
+          (reason) => new SearchDataValidationError({ path, reason }),
+        ),
       ),
     ),
     Effect.tap(() => Metric.increment(searchDataLoadSuccesses)),

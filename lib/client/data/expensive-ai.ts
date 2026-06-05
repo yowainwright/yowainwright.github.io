@@ -50,9 +50,13 @@ export const ExpensiveAiDataSchema = Schema.Struct({
 });
 
 export type ExpensiveAiData = Schema.Schema.Type<typeof ExpensiveAiDataSchema>;
-export type ExpensiveAiChartData = Schema.Schema.Type<typeof ExpensiveAiChartDataSchema>;
+export type ExpensiveAiChartData = Schema.Schema.Type<
+  typeof ExpensiveAiChartDataSchema
+>;
 
-export const EMPTY_EXPENSIVE_AI_CHART_DATA = Schema.decodeUnknownSync(ExpensiveAiChartDataSchema)({
+export const EMPTY_EXPENSIVE_AI_CHART_DATA = Schema.decodeUnknownSync(
+  ExpensiveAiChartDataSchema,
+)({
   sources: [],
   agentTaskCosts: [],
   totalProjectCosts: [],
@@ -68,7 +72,9 @@ class ExpensiveAiHttpError extends Data.TaggedError("ExpensiveAiHttpError")<{
   readonly status: number;
 }> {}
 
-class ExpensiveAiValidationError extends Data.TaggedError("ExpensiveAiValidationError")<{
+class ExpensiveAiValidationError extends Data.TaggedError(
+  "ExpensiveAiValidationError",
+)<{
   readonly path: string;
   readonly reason: unknown;
 }> {}
@@ -78,20 +84,29 @@ export type ExpensiveAiDataError =
   | ExpensiveAiHttpError
   | ExpensiveAiValidationError;
 
-export const expensiveAiDataLoadAttempts = Metric.counter("expensive_ai_data_load_attempts", {
-  description: "Expensive AI data load attempts",
-  incremental: true,
-});
+export const expensiveAiDataLoadAttempts = Metric.counter(
+  "expensive_ai_data_load_attempts",
+  {
+    description: "Expensive AI data load attempts",
+    incremental: true,
+  },
+);
 
-export const expensiveAiDataLoadFailures = Metric.counter("expensive_ai_data_load_failures", {
-  description: "Expensive AI data load failures",
-  incremental: true,
-});
+export const expensiveAiDataLoadFailures = Metric.counter(
+  "expensive_ai_data_load_failures",
+  {
+    description: "Expensive AI data load failures",
+    incremental: true,
+  },
+);
 
-export const expensiveAiDataLoadSuccesses = Metric.counter("expensive_ai_data_load_successes", {
-  description: "Expensive AI data load successes",
-  incremental: true,
-});
+export const expensiveAiDataLoadSuccesses = Metric.counter(
+  "expensive_ai_data_load_successes",
+  {
+    description: "Expensive AI data load successes",
+    incremental: true,
+  },
+);
 
 export const loadExpensiveAiDataEffect = (
   path = DEFAULT_DATA_PATH,
@@ -106,7 +121,9 @@ export const loadExpensiveAiDataEffect = (
     Effect.flatMap((response) =>
       response.ok
         ? Effect.succeed(response)
-        : Effect.fail(new ExpensiveAiHttpError({ path, status: response.status })),
+        : Effect.fail(
+            new ExpensiveAiHttpError({ path, status: response.status }),
+          ),
     ),
     Effect.flatMap((response) =>
       Effect.tryPromise({
@@ -116,7 +133,9 @@ export const loadExpensiveAiDataEffect = (
     ),
     Effect.flatMap((json) =>
       Schema.decodeUnknown(ExpensiveAiDataSchema)(json).pipe(
-        Effect.mapError((reason) => new ExpensiveAiValidationError({ path, reason })),
+        Effect.mapError(
+          (reason) => new ExpensiveAiValidationError({ path, reason }),
+        ),
       ),
     ),
     Effect.tap(() => Metric.increment(expensiveAiDataLoadSuccesses)),

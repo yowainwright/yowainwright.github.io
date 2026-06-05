@@ -22,13 +22,17 @@ export function bemToCSS(blockName: string, block: BEMBlock): string {
 
   if (block.elements) {
     for (const [elementName, props] of Object.entries(block.elements)) {
-      rules = rules.concat(`.${blockName}__${elementName} { ${propsToCSS(props)}; }`);
+      rules = rules.concat(
+        `.${blockName}__${elementName} { ${propsToCSS(props)}; }`,
+      );
     }
   }
 
   if (block.modifiers) {
     for (const [modifierName, props] of Object.entries(block.modifiers)) {
-      rules = rules.concat(`.${blockName}--${modifierName} { ${propsToCSS(props)}; }`);
+      rules = rules.concat(
+        `.${blockName}--${modifierName} { ${propsToCSS(props)}; }`,
+      );
     }
   }
 

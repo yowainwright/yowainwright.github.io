@@ -11,7 +11,9 @@ export default function CopyButton({ container }: CopyButtonProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
-    const codeElement = container.closest(".shiki-wrapper")?.querySelector("pre.shiki code");
+    const codeElement = container
+      .closest(".shiki-wrapper")
+      ?.querySelector("pre.shiki code");
     if (!codeElement) return;
 
     const code = codeElement.textContent || "";

@@ -24,7 +24,10 @@ export const MermaidChart: React.FC<MermaidChartProps> = ({
         if (!isActivationKey) return;
 
         e.preventDefault();
-        onClick(e as React.MouseEvent<HTMLDivElement> & React.KeyboardEvent<HTMLDivElement>);
+        onClick(
+          e as React.MouseEvent<HTMLDivElement> &
+            React.KeyboardEvent<HTMLDivElement>,
+        );
       }}
       aria-label="Click to expand diagram"
     >

@@ -86,7 +86,9 @@ describe("post page static helpers", () => {
     expect(hasMdxClassName(tableTitleNode, "post__table-title")).toBe(true);
     expect(isMdxTableTitle(tableTitleNode)).toBe(true);
     expect(tree.children?.[0]).toBe(titledTable);
-    expect(titledTable.data?.hProperties?.["data-title"]).toBe("Pastoralist Study");
+    expect(titledTable.data?.hProperties?.["data-title"]).toBe(
+      "Pastoralist Study",
+    );
     expect(tree.children?.[1]).toBe(orphanTitle);
     expect(tree.children?.[2]).toBe(paragraph);
   });
@@ -107,7 +109,9 @@ describe("post page static helpers", () => {
     expect(getMdxAstText(tableHeadingNode)).toBe("Initial Override Snapshot");
     expect(isMdxTableTitle(tableHeadingNode)).toBe(true);
     expect(tree.children?.[0]).toBe(titledTable);
-    expect(titledTable.data?.hProperties?.["data-title"]).toBe("Initial Override Snapshot");
+    expect(titledTable.data?.hProperties?.["data-title"]).toBe(
+      "Initial Override Snapshot",
+    );
     expect(tree.children?.[1]).toBe(paragraph);
   });
 });

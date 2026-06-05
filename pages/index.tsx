@@ -39,7 +39,10 @@ export const Home = ({ posts }: HomeProps) => {
         <meta name="fediverse:creator" content="@yowainwright.jeffry.in" />
       </Head>
       <section className="section section--intro">
-        <h1>I used to stand for something but now it is just because someone stole my chair.</h1>
+        <h1>
+          I used to stand for something but now it is just because someone stole
+          my chair.
+        </h1>
       </section>
       <section className="section section--posts">
         <div className="posts--basic">
@@ -49,7 +52,9 @@ export const Home = ({ posts }: HomeProps) => {
                 <h2>
                   <Link href={post.slug}>{post.frontmatter?.title}</Link>
                 </h2>
-                <time dateTime={post.frontmatter?.date}>{post.frontmatter?.date}</time>
+                <time dateTime={post.frontmatter?.date}>
+                  {post.frontmatter?.date}
+                </time>
               </header>
               <p>
                 {post.frontmatter?.meta}

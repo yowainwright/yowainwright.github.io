@@ -15,7 +15,9 @@ const chartData = [
 
 describe("LineChart", () => {
   test("renders normalized chart containers and titles", () => {
-    const markup = renderToStaticMarkup(<LineChart data={chartData} title="Line Title" />);
+    const markup = renderToStaticMarkup(
+      <LineChart data={chartData} title="Line Title" />,
+    );
 
     expect(markup).toContain("post__chart");
     expect(markup).toContain("Line Title");

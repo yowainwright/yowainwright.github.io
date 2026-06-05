@@ -71,7 +71,8 @@ export const getFrontmatterDateValue = (date: unknown): string => {
 export const formatDate = (date: unknown) => {
   const dateValue = getFrontmatterDateValue(date);
   const dateOnlyMatch =
-    dateValue.match(DATE_ONLY_REGEX) || dateValue.match(UTC_MIDNIGHT_DATE_REGEX);
+    dateValue.match(DATE_ONLY_REGEX) ||
+    dateValue.match(UTC_MIDNIGHT_DATE_REGEX);
 
   if (dateOnlyMatch) {
     const [, year, month, day] = dateOnlyMatch;
@@ -116,7 +117,10 @@ const determineFileFolder = (slug: string, folder: string): string => {
   return draftExists ? "drafts" : folder;
 };
 
-const detectMarkdownType = (slug: string, folder: string): { fileName: string; isMdx: boolean } => {
+const detectMarkdownType = (
+  slug: string,
+  folder: string,
+): { fileName: string; isMdx: boolean } => {
   const mdxPath = path.join(getPath(folder), `${slug}.mdx`);
   const isMdx = fs.existsSync(mdxPath);
   const fileName = `${slug}.${isMdx ? "mdx" : "md"}`;
@@ -134,7 +138,15 @@ export const parseSinglePost = (slug: string, folder: string): Post => {
 
   const source = getFileContent(fileName, fileFolder);
   const { data: frontmatter, content } = matter(source);
-  const { date, path: postPath, meta, description, title, tags, ...rest } = frontmatter;
+  const {
+    date,
+    path: postPath,
+    meta,
+    description,
+    title,
+    tags,
+    ...rest
+  } = frontmatter;
   const pathValue = typeof postPath === "string" ? postPath : `/${slug}`;
   const titleValue = typeof title === "string" ? title : slug;
 
@@ -155,7 +167,9 @@ export const parseSinglePost = (slug: string, folder: string): Post => {
 
 export const getMarkdownFiles = (folder: string) => {
   const contentDir = getPath(folder);
-  return fs.readdirSync(contentDir).filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
+  return fs
+    .readdirSync(contentDir)
+    .filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
 };
 
 export const getDraftFiles = () => {
@@ -171,7 +185,9 @@ export const getDraftFiles = () => {
     return [];
   }
 
-  return fs.readdirSync(draftsDir).filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
+  return fs
+    .readdirSync(draftsDir)
+    .filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
 };
 
 export const filterPublishedPosts = (posts: Post[]) => {
@@ -181,5 +197,7 @@ export const filterPublishedPosts = (posts: Post[]) => {
 export const sortPostsByDate = (posts: Post[]) => {
   return posts
     .slice()
-    .sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+    .sort(
+      (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date),
+    );
 };

@@ -1,7 +1,11 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import React, { act } from "react";
 import { useCodeBlocks } from "../../../../lib/hooks/useCodeBlocks";
-import { cleanupMountedRoots, createMountedRoot, setupDom } from "../../test-utils/react-dom";
+import {
+  cleanupMountedRoots,
+  createMountedRoot,
+  setupDom,
+} from "../../test-utils/react-dom";
 
 afterEach(async () => {
   await cleanupMountedRoots();
@@ -27,7 +31,8 @@ describe("useCodeBlocks", () => {
       configurable: true,
     });
 
-    const contentElement = document.querySelector<HTMLElement>(".post__content");
+    const contentElement =
+      document.querySelector<HTMLElement>(".post__content");
     expect(contentElement).not.toBeNull();
 
     function Probe() {
@@ -43,7 +48,9 @@ describe("useCodeBlocks", () => {
     expect(copyButton).not.toBeNull();
 
     await act(async () => {
-      copyButton?.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true }));
+      copyButton?.dispatchEvent(
+        new dom.window.MouseEvent("click", { bubbles: true }),
+      );
       await Promise.resolve();
     });
 

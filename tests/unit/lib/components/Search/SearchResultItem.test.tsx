@@ -15,7 +15,11 @@ const postResult: SearchResult = {
 describe("SearchResultItem", () => {
   test("renders selected search result state", () => {
     const markup = renderToStaticMarkup(
-      <SearchResultItem result={postResult} isSelected onSelect={() => undefined} />,
+      <SearchResultItem
+        result={postResult}
+        isSelected
+        onSelect={() => undefined}
+      />,
     );
 
     expect(markup).toContain("search-result--selected");

@@ -3,9 +3,12 @@ import dynamic from "next/dynamic";
 import { ChartSources } from "../../../charts";
 import { tokenCostData, sources, TOKEN_COST_CHART_LABELS } from "./constants";
 
-const BarChart = dynamic(() => import("../../../charts").then((mod) => mod.BarChart), {
-  ssr: false,
-});
+const BarChart = dynamic(
+  () => import("../../../charts").then((mod) => mod.BarChart),
+  {
+    ssr: false,
+  },
+);
 
 export const TokenCostChart = () => (
   <>
