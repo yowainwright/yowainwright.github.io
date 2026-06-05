@@ -24,9 +24,13 @@ type IndexedSeries = {
 
 type FormattedChartData = Record<string, string | number | undefined>;
 
-const getSeriesPrimaryKeys = (series: Series) => series.data.map((point) => point.primary);
+const getSeriesPrimaryKeys = (series: Series) =>
+  series.data.map((point) => point.primary);
 
-const addSeriesPrimaryKeys = (primaryKeys: Set<string | number>, series: Series) => {
+const addSeriesPrimaryKeys = (
+  primaryKeys: Set<string | number>,
+  series: Series,
+) => {
   for (const primary of getSeriesPrimaryKeys(series)) {
     primaryKeys.add(primary);
   }
@@ -35,7 +39,9 @@ const addSeriesPrimaryKeys = (primaryKeys: Set<string | number>, series: Series)
 
 const getIndexedSeries = (series: Series): IndexedSeries => ({
   label: series.label,
-  values: new Map(series.data.map((point) => [point.primary, point.secondary] as const)),
+  values: new Map(
+    series.data.map((point) => [point.primary, point.secondary] as const),
+  ),
 });
 
 const addSeriesValue = (
@@ -47,7 +53,10 @@ const addSeriesValue = (
     [series.label]: series.values.get(primary),
   });
 
-const formatDataPoint = (primary: string | number, indexedSeries: IndexedSeries[]) =>
+const formatDataPoint = (
+  primary: string | number,
+  indexedSeries: IndexedSeries[],
+) =>
   indexedSeries.reduce<FormattedChartData>(
     (dataPoint, series) => addSeriesValue(dataPoint, primary, series),
     { primary },
@@ -59,7 +68,9 @@ const formatChartData = (data: Series[]) => {
   ).sort();
   const indexedSeries = data.map(getIndexedSeries);
 
-  return allPrimaryKeys.map((primary) => formatDataPoint(primary, indexedSeries));
+  return allPrimaryKeys.map((primary) =>
+    formatDataPoint(primary, indexedSeries),
+  );
 };
 
 const LegendContent = ({
@@ -154,7 +165,10 @@ export const LineChart = ({
             itemStyle={CHART_STYLES.tooltip.item}
             labelStyle={CHART_STYLES.tooltip.label}
           />
-          <Legend verticalAlign={CHART_STYLES.legend.verticalAlign} content={LegendContent} />
+          <Legend
+            verticalAlign={CHART_STYLES.legend.verticalAlign}
+            content={LegendContent}
+          />
           {series.map((seriesLabel, index) => (
             <Line
               key={seriesLabel}

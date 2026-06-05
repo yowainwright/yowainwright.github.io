@@ -20,7 +20,8 @@ mock.module("next/link", () => ({
 
 describe("Archive page", () => {
   test("renders the archive page from generated archive props", async () => {
-    const { default: Archive, getStaticProps } = await import("../../../pages/archive");
+    const { default: Archive, getStaticProps } =
+      await import("../../../pages/archive");
     const result = await getStaticProps();
     const posts = result.props.posts.slice(0, 2).map((post) =>
       Object.assign({}, post, {
@@ -29,7 +30,9 @@ describe("Archive page", () => {
         }),
       }),
     );
-    const markup = renderToStaticMarkup(<Archive posts={posts} title="Archive Test" />);
+    const markup = renderToStaticMarkup(
+      <Archive posts={posts} title="Archive Test" />,
+    );
 
     expect(posts.length).toBeGreaterThan(0);
     expect(markup).toContain("Archive Test");

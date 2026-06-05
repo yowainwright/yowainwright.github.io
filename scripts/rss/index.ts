@@ -29,7 +29,9 @@ export const escapeXml = (str: string): string =>
     .replace(/'/g, "&apos;");
 
 export const getPosts = (): Post[] => {
-  const files = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
+  const files = fs
+    .readdirSync(CONTENT_DIR)
+    .filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
 
   const posts = files
     .map((fileName) => {

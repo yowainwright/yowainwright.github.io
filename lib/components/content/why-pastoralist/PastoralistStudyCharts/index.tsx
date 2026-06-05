@@ -105,7 +105,10 @@ const MetricChart = ({ data, dataKey, title, label }: MetricChartProps) => (
 
 export const PastoralistStudyCharts = () => (
   <div className="pastoralist-study-charts">
-    <div className="pastoralist-study-charts__summary" aria-label="Pastoralist study totals">
+    <div
+      className="pastoralist-study-charts__summary"
+      aria-label="Pastoralist study totals"
+    >
       <div>
         <strong>{formatNumber(pastoralistStudyTotals.appendixEntries)}</strong>
         <span>appendix entries</span>

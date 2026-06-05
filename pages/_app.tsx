@@ -5,7 +5,11 @@ import "../lib/client/styles/scss/main.scss";
 
 import Header from "../lib/components/Header";
 import Footer from "../lib/components/Footer";
-import { usePageViews, useExternalLinks, useCodeBlockCopy } from "../lib/hooks/useAnalytics";
+import {
+  usePageViews,
+  useExternalLinks,
+  useCodeBlockCopy,
+} from "../lib/hooks/useAnalytics";
 
 interface AppState {
   isDarkMode: boolean;
@@ -17,7 +21,9 @@ type AppAction =
   | { type: "SET_IS_LOADED"; payload: boolean };
 
 export const GlobalState = createContext<AppState | null>(null);
-export const DispatchStore = createContext<React.Dispatch<AppAction> | null>(null);
+export const DispatchStore = createContext<React.Dispatch<AppAction> | null>(
+  null,
+);
 
 export function isLoadingDarkmode(): boolean {
   if (typeof window === "undefined") return false;

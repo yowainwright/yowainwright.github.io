@@ -8,6 +8,7 @@ import {
   OG_IMAGE_DIR,
 } from "../../components/OgMeta/constants";
 import {
+  addHeadingClass,
   getAllPosts,
   getSinglePost,
   getShikiRehypeOptions,
@@ -191,6 +192,9 @@ export const buildPostStaticProps = async (
     const rehypeShiki = (await import("@shikijs/rehype")).default;
     const remarkGfm = (await import("remark-gfm")).default;
     const remarkMermaidjs = (await import("remark-mermaidjs")).default;
+    const rehypeSlug = (await import("rehype-slug")).default;
+    const rehypeAutolinkHeadings = (await import("rehype-autolink-headings"))
+      .default;
     const mdxSource = await serialize(data.content || "", {
       mdxOptions: {
         remarkPlugins: [
@@ -221,7 +225,22 @@ export const buildPostStaticProps = async (
             },
           ],
         ],
-        rehypePlugins: [[rehypeShiki, getShikiRehypeOptions()]],
+        rehypePlugins: [
+          rehypeSlug,
+          addHeadingClass,
+          [
+            rehypeAutolinkHeadings,
+            {
+              behavior: "append",
+              properties: {
+                className: ["heading-icon-placeholder"],
+                ariaLabel: "Link to section",
+              },
+              content: [],
+            },
+          ],
+          [rehypeShiki, getShikiRehypeOptions()],
+        ],
       },
     });
 

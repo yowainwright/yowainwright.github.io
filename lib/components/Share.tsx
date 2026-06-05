@@ -4,7 +4,11 @@ import { HeartButton } from "./HeartButton";
 import { PixelIcon } from "./PixelIcon";
 import { trackShare, trackComment } from "../../lib/client/analytics";
 
-export const Share = ({ path, url = "https://jeffry.in", slug }: ShareProps) => {
+export const Share = ({
+  path,
+  url = "https://jeffry.in",
+  slug,
+}: ShareProps) => {
   const shareLinkText = "Share";
   const copied = "Copied!";
   const [copyText, setCopyText] = useState(shareLinkText);

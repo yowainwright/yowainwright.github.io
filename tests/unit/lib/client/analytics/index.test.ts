@@ -19,7 +19,10 @@ mock.module("firebase/database", () => ({
     return () => undefined;
   },
   ref: (_database: unknown, path: string) => ({ path }),
-  runTransaction: async (_reference: unknown, updater: (current: number | null) => number) => {
+  runTransaction: async (
+    _reference: unknown,
+    updater: (current: number | null) => number,
+  ) => {
     updater(0);
   },
 }));

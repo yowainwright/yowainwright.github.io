@@ -1,7 +1,12 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
-import { ref, runTransaction, onValue, DatabaseReference } from "firebase/database";
+import {
+  ref,
+  runTransaction,
+  onValue,
+  DatabaseReference,
+} from "firebase/database";
 import * as Sentry from "@sentry/nextjs";
 import { db } from "../../../lib/client/auth";
 import { trackLove } from "../../../lib/client/analytics";
@@ -34,7 +39,9 @@ const getParticle = (id: number): Particle => {
 };
 
 const getParticles = (startId: number, particleCount: number) =>
-  Array.from({ length: particleCount }, (_, index) => getParticle(startId + index));
+  Array.from({ length: particleCount }, (_, index) =>
+    getParticle(startId + index),
+  );
 
 const getCountText = (isLoading: boolean, count: number) => {
   if (isLoading) return "";
@@ -84,7 +91,8 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
   }, [slug, storageKey]);
 
   const spawnParticles = (clickCount: number) => {
-    const particleCount = BASE_PARTICLE_COUNT + clickCount * PARTICLE_MULTIPLIER;
+    const particleCount =
+      BASE_PARTICLE_COUNT + clickCount * PARTICLE_MULTIPLIER;
     const startParticleId = particleId.current;
     const newParticles = getParticles(startParticleId, particleCount);
     particleId.current = startParticleId + particleCount;
@@ -103,7 +111,10 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
     const newClickCount = userClicks + 1;
     spawnParticles(newClickCount);
     setIsAnimating(true);
-    const animationTimeoutId = setTimeout(() => setIsAnimating(false), ANIMATION_DURATION);
+    const animationTimeoutId = setTimeout(
+      () => setIsAnimating(false),
+      ANIMATION_DURATION,
+    );
     timeoutIds.current.add(animationTimeoutId);
 
     setUserClicks(newClickCount);
@@ -125,7 +136,9 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
   const hasClicked = userClicks > 0;
   const heartColor = hasClicked ? "#e53935" : "currentColor";
   const buttonClass = `share__button heart-button ${hasClicked ? "heart-button--active" : ""} ${hasMaxed ? "heart-button--maxed" : ""} ${isAnimating ? "heart-button--pulse" : ""}`;
-  const ariaLabel = hasMaxed ? `You've loved this post ${MAX_CLICKS} times` : "Love this post";
+  const ariaLabel = hasMaxed
+    ? `You've loved this post ${MAX_CLICKS} times`
+    : "Love this post";
 
   return (
     <button
@@ -139,7 +152,11 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
       <PixelIcon name="heart" size={heartSize} color={heartColor} />
       {countText && <span className="share__count">{countText}</span>}
       {particles.map((p) => (
-        <span key={p.id} className="heart-particle" style={{ left: p.x, top: p.y }}>
+        <span
+          key={p.id}
+          className="heart-particle"
+          style={{ left: p.x, top: p.y }}
+        >
           <PixelIcon name="heart" size={1} color="#e53935" />
         </span>
       ))}

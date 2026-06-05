@@ -18,15 +18,23 @@ export type EffectResourceState<A> =
       readonly error: string;
     };
 
-type EffectResourceSuccess<A> = Extract<EffectResourceState<A>, { readonly status: "success" }>;
+type EffectResourceSuccess<A> = Extract<
+  EffectResourceState<A>,
+  { readonly status: "success" }
+>;
 
-type EffectResourceFailure<A> = Extract<EffectResourceState<A>, { readonly status: "failure" }>;
+type EffectResourceFailure<A> = Extract<
+  EffectResourceState<A>,
+  { readonly status: "failure" }
+>;
 
-const isResourceSuccess = <A>(state: EffectResourceState<A>): state is EffectResourceSuccess<A> =>
-  state.status === "success";
+const isResourceSuccess = <A>(
+  state: EffectResourceState<A>,
+): state is EffectResourceSuccess<A> => state.status === "success";
 
-const isResourceFailure = <A>(state: EffectResourceState<A>): state is EffectResourceFailure<A> =>
-  state.status === "failure";
+const isResourceFailure = <A>(
+  state: EffectResourceState<A>,
+): state is EffectResourceFailure<A> => state.status === "failure";
 
 const initialResourceState = {
   status: "idle",
@@ -47,7 +55,8 @@ export function useEffectResource<A, E>(
   createResource: EffectResourceFactory<A, E>,
   dependencies: DependencyList = [],
 ): EffectResourceState<A> {
-  const [state, setState] = useState<EffectResourceState<A>>(initialResourceState);
+  const [state, setState] =
+    useState<EffectResourceState<A>>(initialResourceState);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -56,20 +65,22 @@ export function useEffectResource<A, E>(
 
     setState({ status: "loading", data: null, error: null });
 
-    Effect.runPromiseExit(resource, { signal: controller.signal }).then((exit) => {
-      if (!isMounted) return;
+    Effect.runPromiseExit(resource, { signal: controller.signal }).then(
+      (exit) => {
+        if (!isMounted) return;
 
-      if (Exit.isSuccess(exit)) {
-        setState({ status: "success", data: exit.value, error: null });
-        return;
-      }
+        if (Exit.isSuccess(exit)) {
+          setState({ status: "success", data: exit.value, error: null });
+          return;
+        }
 
-      setState({
-        status: "failure",
-        data: null,
-        error: Cause.pretty(exit.cause),
-      });
-    });
+        setState({
+          status: "failure",
+          data: null,
+          error: Cause.pretty(exit.cause),
+        });
+      },
+    );
 
     return () => {
       isMounted = false;

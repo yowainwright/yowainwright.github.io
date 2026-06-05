@@ -3,19 +3,49 @@ import { createRoot, type Root } from "react-dom/client";
 import { JSDOM } from "jsdom";
 
 let mountedRoots: Root[] = [];
+let activeDom: JSDOM | null = null;
+const originalGlobalDescriptors = new Map<
+  string,
+  PropertyDescriptor | undefined
+>();
 
 const defineGlobal = (name: string, value: unknown) => {
+  if (!originalGlobalDescriptors.has(name)) {
+    originalGlobalDescriptors.set(
+      name,
+      Object.getOwnPropertyDescriptor(globalThis, name),
+    );
+  }
+
   Object.defineProperty(globalThis, name, {
     value,
     configurable: true,
   });
 };
 
+const restoreDomGlobals = () => {
+  for (const [name, descriptor] of originalGlobalDescriptors) {
+    if (descriptor) {
+      Object.defineProperty(globalThis, name, descriptor);
+    } else {
+      Reflect.deleteProperty(globalThis, name);
+    }
+  }
+
+  originalGlobalDescriptors.clear();
+};
+
 export const setupDom = (bodyHtml: string, url = "https://jeffry.in/post") => {
-  const dom = new JSDOM(`<!doctype html><html><body>${bodyHtml}</body></html>`, {
-    pretendToBeVisual: true,
-    url,
-  });
+  activeDom?.window.close();
+
+  const dom = new JSDOM(
+    `<!doctype html><html><body>${bodyHtml}</body></html>`,
+    {
+      pretendToBeVisual: true,
+      url,
+    },
+  );
+  activeDom = dom;
 
   defineGlobal("window", dom.window);
   defineGlobal("document", dom.window.document);
@@ -56,4 +86,8 @@ export const cleanupMountedRoots = async () => {
       }),
     ),
   );
+
+  activeDom?.window.close();
+  activeDom = null;
+  restoreDomGlobals();
 };
