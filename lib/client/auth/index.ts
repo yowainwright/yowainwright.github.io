@@ -13,6 +13,8 @@ import {
 const isConfigValid = firebaseConfig.apiKey && firebaseConfig.databaseURL;
 
 let db: Database | null = null;
+let currentUser: GitHubUser | null = null;
+let currentToken: string | null = null;
 
 if (isConfigValid) {
   const app =
@@ -37,22 +39,27 @@ export function initiateGitHubLogin() {
 }
 
 export function getStoredUser(): GitHubUser | null {
-  if (typeof window === "undefined") return null;
-  const stored = localStorage.getItem("github_user");
-  return stored ? JSON.parse(stored) : null;
+  return currentUser;
 }
 
 export function getStoredToken(): string | null {
-  if (typeof window === "undefined") return null;
-  return localStorage.getItem("github_token");
+  return currentToken;
 }
 
 export function setAuth(user: GitHubUser, token: string) {
-  localStorage.setItem("github_user", JSON.stringify(user));
-  localStorage.setItem("github_token", token);
+  currentUser = user;
+  currentToken = token;
+
+  if (typeof window === "undefined") return;
+  localStorage.removeItem("github_user");
+  localStorage.removeItem("github_token");
 }
 
 export function clearAuth() {
+  currentUser = null;
+  currentToken = null;
+
+  if (typeof window === "undefined") return;
   localStorage.removeItem("github_user");
   localStorage.removeItem("github_token");
   sessionStorage.removeItem("oauth_state");
