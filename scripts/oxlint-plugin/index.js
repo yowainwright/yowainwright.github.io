@@ -61,21 +61,17 @@ function isExpressionContainer(node) {
 
 function isSkippedExpressionRoot(expression) {
   const shouldSkip =
-    isFunctionNode(expression) ||
-    isExpressionContainer(expression) ||
-    isJsxNode(expression);
+    isFunctionNode(expression) || isExpressionContainer(expression) || isJsxNode(expression);
   return shouldSkip;
 }
 
 function getOperatorWeight(node) {
   if (READABILITY_OPERATOR_NODE_TYPES.has(String(node.type))) return 1;
   const isComparisonExpression =
-    node.type === "BinaryExpression" &&
-    COMPARISON_OPERATORS.has(String(node.operator));
+    node.type === "BinaryExpression" && COMPARISON_OPERATORS.has(String(node.operator));
   if (isComparisonExpression) return 1;
 
-  const isNegationExpression =
-    node.type === "UnaryExpression" && node.operator === "!";
+  const isNegationExpression = node.type === "UnaryExpression" && node.operator === "!";
   if (isNegationExpression) return 1;
   return 0;
 }
@@ -92,10 +88,7 @@ function getComputedValueOperatorWeight(node) {
 
 function countChildOperators(child, root) {
   if (Array.isArray(child)) {
-    return child.reduce(
-      (sum, item) => sum + countChildOperators(item, root),
-      0,
-    );
+    return child.reduce((sum, item) => sum + countChildOperators(item, root), 0);
   }
   if (!isRecord(child)) return 0;
   return countOperatorNode(child, root);
@@ -103,8 +96,7 @@ function countChildOperators(child, root) {
 
 function countOperatorNode(node, root) {
   if (isFunctionBoundary(node, root)) return 0;
-  const isNestedContainer =
-    node !== root && (isExpressionContainer(node) || isJsxNode(node));
+  const isNestedContainer = node !== root && (isExpressionContainer(node) || isJsxNode(node));
   if (isNestedContainer) return 0;
   const childCount = Object.entries(node).reduce((sum, [key, child]) => {
     if (SKIP_KEYS.has(key)) return sum;
@@ -124,10 +116,7 @@ function countIfConditionOperatorNode(node, root) {
 
 function countIfConditionChildOperators(child, root) {
   if (Array.isArray(child)) {
-    return child.reduce(
-      (sum, item) => sum + countIfConditionChildOperators(item, root),
-      0,
-    );
+    return child.reduce((sum, item) => sum + countIfConditionChildOperators(item, root), 0);
   }
   if (!isRecord(child)) return 0;
   return countIfConditionOperatorNode(child, root);
@@ -144,10 +133,7 @@ function countComputedValueOperatorNode(node, root) {
 
 function countComputedValueChildOperators(child, root) {
   if (Array.isArray(child)) {
-    return child.reduce(
-      (sum, item) => sum + countComputedValueChildOperators(item, root),
-      0,
-    );
+    return child.reduce((sum, item) => sum + countComputedValueChildOperators(item, root), 0);
   }
   if (!isRecord(child)) return 0;
   return countComputedValueOperatorNode(child, root);
@@ -324,8 +310,7 @@ function getSideEffectParent(node) {
 function isStandaloneSideEffect(node) {
   const parent = getSideEffectParent(node);
   if (isExpressionStatement(parent)) return true;
-  const isForUpdateSideEffect =
-    isForUpdateExpression(parent) && parent.update === node;
+  const isForUpdateSideEffect = isForUpdateExpression(parent) && parent.update === node;
   return isForUpdateSideEffect;
 }
 
@@ -507,9 +492,7 @@ function containsTernary(node) {
 }
 
 function hasNestedTernary(node) {
-  return [node.test, node.consequent, node.alternate].some(
-    childContainsTernary,
-  );
+  return [node.test, node.consequent, node.alternate].some(childContainsTernary);
 }
 
 function createNoComplexTernaries(context) {
@@ -614,10 +597,7 @@ export const noQuadraticPatterns = defineRule(
   createNoQuadraticPatterns,
 );
 
-export const hoistIfOperators = defineRule(
-  HOIST_IF_OPERATORS_META,
-  createHoistIfOperators,
-);
+export const hoistIfOperators = defineRule(HOIST_IF_OPERATORS_META, createHoistIfOperators);
 
 export const noHiddenSideEffects = defineRule(
   NO_HIDDEN_SIDE_EFFECTS_META,
@@ -629,15 +609,9 @@ export const noStandaloneArrayMutations = defineRule(
   createNoStandaloneArrayMutations,
 );
 
-export const noComputedValues = defineRule(
-  NO_COMPUTED_VALUES_META,
-  createNoComputedValues,
-);
+export const noComputedValues = defineRule(NO_COMPUTED_VALUES_META, createNoComputedValues);
 
-export const noComplexTernaries = defineRule(
-  NO_COMPLEX_TERNARIES_META,
-  createNoComplexTernaries,
-);
+export const noComplexTernaries = defineRule(NO_COMPLEX_TERNARIES_META, createNoComplexTernaries);
 
 export const preferConcatObjectAssign = defineRule(
   PREFER_CONCAT_OBJECT_ASSIGN_META,

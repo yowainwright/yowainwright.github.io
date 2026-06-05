@@ -60,13 +60,7 @@ export const LOOP_TYPES = new Set([
   "WhileStatement",
 ]);
 
-export const SEARCH_METHODS = new Set([
-  "filter",
-  "find",
-  "includes",
-  "indexOf",
-  "some",
-]);
+export const SEARCH_METHODS = new Set(["filter", "find", "includes", "indexOf", "some"]);
 
 export const ITERATION_METHODS = new Set([
   "every",
@@ -119,8 +113,7 @@ export const ARRAY_MUTATING_METHODS = new Set([
 export const MAX_EXPRESSION_OPERATORS_META = {
   type: "suggestion",
   docs: {
-    description:
-      "Limit readable-complexity operators inside a single expression.",
+    description: "Limit readable-complexity operators inside a single expression.",
     recommended: true,
   },
   schema: [
@@ -139,16 +132,14 @@ export const MAX_EXPRESSION_OPERATORS_META = {
 export const NO_QUADRATIC_PATTERNS_META = {
   type: "suggestion",
   docs: {
-    description:
-      "Flag nested loops, search-in-loop, and nested array iteration patterns.",
+    description: "Flag nested loops, search-in-loop, and nested array iteration patterns.",
     recommended: true,
   },
   schema: [],
   messages: {
     nestedIteration:
       "Nested array iteration (.{{outer}}() containing .{{inner}}()) is likely O(n^2). Consider restructuring.",
-    nestedLoop:
-      "Nested loop detected. Consider using a Map or Set for lookups.",
+    nestedLoop: "Nested loop detected. Consider using a Map or Set for lookups.",
     searchInLoop:
       "Array search method .{{method}}() inside a loop is likely O(n^2). Consider using a Map or Set.",
   },
@@ -157,8 +148,7 @@ export const NO_QUADRATIC_PATTERNS_META = {
 export const HOIST_IF_OPERATORS_META = {
   type: "suggestion",
   docs: {
-    description:
-      "Prefer named boolean expressions before operator-heavy if statements.",
+    description: "Prefer named boolean expressions before operator-heavy if statements.",
     recommended: true,
   },
   schema: [
@@ -177,8 +167,7 @@ export const HOIST_IF_OPERATORS_META = {
 export const NO_HIDDEN_SIDE_EFFECTS_META = {
   type: "suggestion",
   docs: {
-    description:
-      "Flag side effects hidden inside expressions and side-effect-free callbacks.",
+    description: "Flag side effects hidden inside expressions and side-effect-free callbacks.",
     recommended: true,
   },
   schema: [],
@@ -193,8 +182,7 @@ export const NO_HIDDEN_SIDE_EFFECTS_META = {
 export const NO_STANDALONE_ARRAY_MUTATIONS_META = {
   type: "suggestion",
   docs: {
-    description:
-      "Avoid standalone array mutations when a composable expression is clearer.",
+    description: "Avoid standalone array mutations when a composable expression is clearer.",
     recommended: true,
   },
   schema: [],
@@ -235,8 +223,7 @@ export const PREFER_CONCAT_OBJECT_ASSIGN_META = {
   },
   schema: [],
   messages: {
-    arraySpread:
-      "Prefer Array#concat over array literal spread so array composition is explicit.",
+    arraySpread: "Prefer Array#concat over array literal spread so array composition is explicit.",
     objectSpread:
       "Prefer Object.assign with an empty target over object literal spread so object composition is explicit.",
   },
@@ -245,8 +232,7 @@ export const PREFER_CONCAT_OBJECT_ASSIGN_META = {
 export const NO_COMPLEX_TERNARIES_META = {
   type: "suggestion",
   docs: {
-    description:
-      "Keep ternaries simple enough to read without extracting branches.",
+    description: "Keep ternaries simple enough to read without extracting branches.",
     recommended: true,
   },
   schema: [
@@ -259,7 +245,6 @@ export const NO_COMPLEX_TERNARIES_META = {
   messages: {
     tooMany:
       "Ternary has {{count}} readability operators (max {{max}}). Extract named branches or use an if statement.",
-    nested:
-      "Nested ternary detected. Extract named branches or use an if statement.",
+    nested: "Nested ternary detected. Extract named branches or use an if statement.",
   },
 };

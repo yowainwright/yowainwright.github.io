@@ -32,6 +32,8 @@ export function useMermaidCharts() {
   }, []);
 
   const processMermaidCharts = useCallback(() => {
+    if (typeof document === "undefined") return;
+
     const allSvgs = document.querySelectorAll(MERMAID_SELECTORS.ALL_SVGS);
 
     const mermaidSvgs = Array.from(allSvgs).filter((svg) => {
@@ -115,9 +117,9 @@ export function useMermaidCharts() {
 
     const delayedTimer = setTimeout(processMermaidCharts, PROCESSING_DELAYS.DELAYED);
 
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
     const debouncedProcess = () => {
-      clearTimeout(timeoutId);
+      if (timeoutId) clearTimeout(timeoutId);
       timeoutId = setTimeout(processMermaidCharts, PROCESSING_DELAYS.DEBOUNCE);
     };
 
@@ -135,6 +137,7 @@ export function useMermaidCharts() {
     return () => {
       clearTimeout(initialTimer);
       clearTimeout(delayedTimer);
+      if (timeoutId) clearTimeout(timeoutId);
       cleanup();
     };
   }, [processMermaidCharts, cleanup]);

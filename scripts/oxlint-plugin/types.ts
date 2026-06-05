@@ -1,7 +1,4 @@
-export type RuleMessageData = Record<
-  string,
-  string | number | boolean | bigint | null | undefined
->;
+export type RuleMessageData = Record<string, string | number | boolean | bigint | null | undefined>;
 
 export type UntypedNode = Record<string, unknown>;
 
@@ -20,10 +17,7 @@ export interface RuleContext {
   report(report: RuleReport): void;
 }
 
-export type RuleListener = Record<
-  string,
-  ((node: ASTNode) => void) | undefined
->;
+export type RuleListener = Record<string, ((node: ASTNode) => void) | undefined>;
 
 export type RuleCreator = (context: RuleContext) => RuleListener;
 

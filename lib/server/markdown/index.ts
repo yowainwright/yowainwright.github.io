@@ -406,7 +406,7 @@ function transformerTooltip(): MarkdownTransformer {
   };
 }
 
-function addHeadingClass() {
+export function addHeadingClass() {
   return (tree: MarkdownRoot) => {
     visit(tree, "element", (node: MarkdownElement) => {
       const isHeading = HEADING_REGEX.test(node.tagName);

@@ -8,12 +8,10 @@ const getPlaceholderTargets = (
   contentElement: HTMLElement,
   selector: string,
 ): PlaceholderTarget[] =>
-  Array.from(contentElement.querySelectorAll<HTMLElement>(selector)).map(
-    (element, index) => ({
-      element,
-      index,
-    }),
-  );
+  Array.from(contentElement.querySelectorAll<HTMLElement>(selector)).map((element, index) => ({
+    element,
+    index,
+  }));
 
 export function usePlaceholderEnhancements({
   contentElement,
@@ -24,9 +22,7 @@ export function usePlaceholderEnhancements({
   const [targets, setTargets] = useState<PlaceholderTarget[]>([]);
 
   useEffect(() => {
-    setTargets(
-      contentElement ? getPlaceholderTargets(contentElement, selector) : [],
-    );
+    setTargets(contentElement ? getPlaceholderTargets(contentElement, selector) : []);
   }, [contentElement, contentKey, selector]);
 
   return useMemo(
@@ -35,9 +31,7 @@ export function usePlaceholderEnhancements({
         const child = render(element, index);
         if (!child) return [];
 
-        return [
-          createPortal(child, element, `${contentKey}:${selector}:${index}`),
-        ];
+        return [createPortal(child, element, `${contentKey}:${selector}:${index}`)];
       }),
     [contentKey, render, selector, targets],
   );

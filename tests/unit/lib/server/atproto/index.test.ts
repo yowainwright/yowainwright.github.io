@@ -46,7 +46,10 @@ describe("AtProtoClient", () => {
     Object.assign(client, {
       agent: {
         uploadBlob: async (data: Buffer, options: { encoding: string }) => {
-          calls = calls.concat({ encoding: options.encoding, size: data.length });
+          calls = calls.concat({
+            encoding: options.encoding,
+            size: data.length,
+          });
           return { data: { blob } };
         },
       },

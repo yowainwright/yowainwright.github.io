@@ -13,6 +13,8 @@ import { Post } from "./types";
 
 const CONTENT_PATH = path.join(process.cwd(), "content");
 const DRAFTS_PATH = path.join(process.cwd(), "drafts");
+const DATE_ONLY_REGEX = /^(\d{4})-(\d{2})-(\d{2})$/;
+const UTC_MIDNIGHT_DATE_REGEX = /^(\d{4})-(\d{2})-(\d{2})T00:00:00\.000Z$/;
 
 export const getPath = (folder: string) => {
   if (folder === CONTENT_DIR) {
@@ -54,8 +56,31 @@ export const getFileContent = (filename: string, folder: string): string => {
   throw new Error(`File not found: ${filename} in ${folder}`);
 };
 
-export const formatDate = (date: string) =>
-  new Date(date).toLocaleDateString("en-US", DATE_FORMAT_OPTIONS);
+export const getFrontmatterDateValue = (date: unknown): string => {
+  if (typeof date === "string") return date;
+
+  const isValidDate = date instanceof Date && !Number.isNaN(date.getTime());
+
+  if (isValidDate) {
+    return date.toISOString();
+  }
+
+  return "";
+};
+
+export const formatDate = (date: unknown) => {
+  const dateValue = getFrontmatterDateValue(date);
+  const dateOnlyMatch =
+    dateValue.match(DATE_ONLY_REGEX) || dateValue.match(UTC_MIDNIGHT_DATE_REGEX);
+
+  if (dateOnlyMatch) {
+    const [, year, month, day] = dateOnlyMatch;
+    const localDate = new Date(Number(year), Number(month) - 1, Number(day));
+    return localDate.toLocaleDateString("en-US", DATE_FORMAT_OPTIONS);
+  }
+
+  return new Date(dateValue).toLocaleDateString("en-US", DATE_FORMAT_OPTIONS);
+};
 
 export const extractSlugFromFilename = (fileName: string): string => {
   return fileName.split(".")[0] ?? fileName;
@@ -66,13 +91,12 @@ export const parsePost = (fileName: string, fileFolder: string): Post => {
   const slug = extractSlugFromFilename(fileName);
   const { data: frontmatter } = matter(source);
   const { date, path: postPath, title, ...rest } = frontmatter;
-  const dateValue = typeof date === "string" ? date : "";
   const pathValue = typeof postPath === "string" ? postPath : `/${slug}`;
   const titleValue = typeof title === "string" ? title : slug;
 
   return {
     frontmatter: Object.assign({}, rest, {
-      date: formatDate(dateValue),
+      date: formatDate(date),
       path: pathValue,
       title: titleValue,
     }),
@@ -111,7 +135,6 @@ export const parseSinglePost = (slug: string, folder: string): Post => {
   const source = getFileContent(fileName, fileFolder);
   const { data: frontmatter, content } = matter(source);
   const { date, path: postPath, meta, description, title, tags, ...rest } = frontmatter;
-  const dateValue = typeof date === "string" ? date : "";
   const pathValue = typeof postPath === "string" ? postPath : `/${slug}`;
   const titleValue = typeof title === "string" ? title : slug;
 
@@ -121,7 +144,7 @@ export const parseSinglePost = (slug: string, folder: string): Post => {
       meta,
       title: titleValue,
       tags,
-      date: formatDate(dateValue),
+      date: formatDate(date),
       path: trimPostPath(pathValue),
     }),
     content,

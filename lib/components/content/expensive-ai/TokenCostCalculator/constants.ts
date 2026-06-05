@@ -75,8 +75,7 @@ export const STORAGE_KEY = "ai-token-calculator-input";
 export const DEFAULT_TOKENS = 700;
 
 export const GRAMMARS = {
-  DESCRIPTION:
-    "Calculate approximate costs for different AI models based on token usage",
+  DESCRIPTION: "Calculate approximate costs for different AI models based on token usage",
   LABEL: "Input Tokens:",
   INPUT_LABEL: "(500 words ≈ 700 tokens)",
   META_TITLE: "Pricing data",

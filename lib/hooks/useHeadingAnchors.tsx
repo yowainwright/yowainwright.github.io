@@ -5,10 +5,7 @@ import HeadingAnchor from "../components/HeadingAnchor";
 import { HEADING_ANCHOR_PLACEHOLDER_SELECTOR } from "./constants";
 import { usePlaceholderEnhancements } from "./usePlaceholderEnhancements";
 
-export function useHeadingAnchors(
-  contentKey: string,
-  contentElement: HTMLElement | null,
-) {
+export function useHeadingAnchors(contentKey: string, contentElement: HTMLElement | null) {
   const renderHeadingAnchor = useCallback((element: HTMLElement) => {
     const headingId = element.getAttribute("href")?.replace("#", "");
 

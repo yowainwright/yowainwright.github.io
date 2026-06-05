@@ -53,6 +53,19 @@ describe("post page static helpers", () => {
     expect(props.ogImagePath).toMatch(/\.png$/);
   });
 
+  test("builds MDX post props with heading ids and anchor placeholders", async () => {
+    const result = await buildPostStaticProps("why-pastoralist", "content");
+    const props = result.props;
+    const compiledSource = props.mdxSource?.compiledSource || "";
+
+    expect(props.slug).toBe("why-pastoralist");
+    expect(props.isMdx).toBe(true);
+    expect(props.content).toBeNull();
+    expect(compiledSource).toContain('id: "the-problem"');
+    expect(compiledSource).toContain('className: "content-header"');
+    expect(compiledSource).toContain("heading-icon-placeholder");
+  });
+
   test("attaches MDX table title metadata only to the following table", () => {
     const titledTable: MdxAstNode = { type: "table" };
     const orphanTitle: MdxAstNode = Object.assign({}, tableTitleNode, {

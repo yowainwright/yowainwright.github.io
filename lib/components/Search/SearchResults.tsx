@@ -7,11 +7,7 @@ interface SearchResultsProps {
   onSelect: () => void;
 }
 
-export function SearchResults({
-  results,
-  selectedIndex,
-  onSelect,
-}: SearchResultsProps) {
+export function SearchResults({ results, selectedIndex, onSelect }: SearchResultsProps) {
   return (
     <div className="search-results-list">
       {results.map((result, index) => (
