@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(~/.claude/bin/sync sync-project)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

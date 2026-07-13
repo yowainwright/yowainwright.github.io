@@ -1,0 +1,108 @@
+{
+  "$comment": "All ${VAR} interpolations are sourced from op:// via scripts/managers/mcp.sh. See tmpl/.op-env.tmpl for the mapping. NEVER paste raw secrets here.",
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory@2026.1.26"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@2.1.8"]
+    },
+    "executeautomation-playwright-server": {
+      "command": "npx",
+      "args": ["-y", "@executeautomation/playwright-mcp-server@1.0.12"]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github@2025.4.8"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      }
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking@2025.12.18"]
+    },
+    "tavily": {
+      "command": "npx",
+      "args": ["-y", "tavily-mcp@0.2.18"],
+      "env": {
+        "TAVILY_API_KEY": "${TAVILY_API_KEY}"
+      }
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search@0.6.2"],
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem@0.6.4", "."]
+    },
+    "serena": {
+      "command": "uvx",
+      "args": ["serena", "--tool-use-behavior", "auto", "--disable-execute-shell-command"]
+    },
+    "ast-grep": {
+      "command": "uvx",
+      "args": ["ast-grep-mcp", "--read-only"]
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@0.21.0"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@0.0.70"]
+    },
+    "socket": {
+      "command": "npx",
+      "args": ["-y", "@socketsecurity/mcp@0.0.17"],
+      "env": {
+        "SOCKET_API_KEY": "${SOCKET_API_KEY}"
+      }
+    }
+  },
+  "servers": {
+    "greptile": {
+      "transport": "http",
+      "url": "https://api.greptile.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${GREPTILE_API_KEY}"
+      }
+    },
+    "cloudflare": {
+      "transport": "http",
+      "url": "https://mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-observability": {
+      "transport": "http",
+      "url": "https://observability.mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-bindings": {
+      "transport": "http",
+      "url": "https://bindings.mcp.cloudflare.com/mcp"
+    },
+    "shaders": {
+      "transport": "http",
+      "url": "https://shaders.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${SHADERS_API_KEY}"
+      }
+    },
+    "datadog": {
+      "transport": "http",
+      "url": "https://mcp.${DATADOG_SITE}/api/unstable/mcp-server/mcp?toolsets=all",
+      "headers": {
+        "DD-API-KEY": "${DATADOG_API_KEY}",
+        "DD-APPLICATION-KEY": "${DATADOG_APP_KEY}"
+      }
+    }
+  },
+  "environment": {
+    "ENABLE_TOOL_SEARCH": "auto:5"
+  }
+}
