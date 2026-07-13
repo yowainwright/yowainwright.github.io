@@ -18,6 +18,8 @@ drafts/
 .sentryclirc
 
 # Claude Code local settings (personal overrides)
+.agents/
+.claude.backup/
 .claude/settings.local.json
 .claude/
 CLAUDE.md
