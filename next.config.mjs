@@ -3,30 +3,32 @@ import createMDX from "@next/mdx";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+const isProduction = process.env.NODE_ENV === "production";
 const projectRoot = path.dirname(fileURLToPath(import.meta.url));
+const productionConfig = isProduction ? { output: "export" } : {};
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
-  images: {
-    unoptimized: true,
+const nextConfig = Object.assign(
+  {},
+  {
+    typescript: {
+      ignoreBuildErrors: true,
+    },
+    trailingSlash: true,
+    basePath: "",
+    sassOptions: {
+      includePaths: [],
+    },
+    compress: true,
+    poweredByHeader: false,
+    generateEtags: true,
+    turbopack: {
+      root: projectRoot,
+    },
+    pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  trailingSlash: true,
-  basePath: "",
-  sassOptions: {
-    includePaths: [],
-  },
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: true,
-  turbopack: {
-    root: projectRoot,
-  },
-  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
-};
+  productionConfig,
+);
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,

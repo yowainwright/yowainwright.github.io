@@ -27,10 +27,9 @@ jobs:
         with:
           bun-version: 1.2.15
       - run: bun install --ignore-scripts
-      - name: Build static site
-        run: bun run build
+      - name: Build my App
+        run: bun run build && touch ./out/.nojekyll
         env:
-          PROJECTS_CONTENT_DIR: projects/content
           NEXT_PUBLIC_FIREBASE_API_KEY: ${{ secrets.NEXT_PUBLIC_FIREBASE_API_KEY }}
           NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: ${{ secrets.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}
           NEXT_PUBLIC_FIREBASE_DATABASE_URL: ${{ secrets.NEXT_PUBLIC_FIREBASE_DATABASE_URL }}
