@@ -19,3 +19,4 @@ jobs:
       - run: pnpm run build
         env:
           CI: true
+          MERMAID_BROWSER_PATH: /usr/bin/google-chrome
