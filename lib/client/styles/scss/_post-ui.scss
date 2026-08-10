@@ -1,0 +1,64 @@
+@use "variables" as *;
+
+.post-ui__stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-ui__stack--small {
+  gap: $m-sm;
+}
+
+.post-ui__stack--medium {
+  gap: $m-md;
+}
+
+.post-ui__stack--large {
+  gap: $m-lg;
+}
+
+.post-ui__text {
+  margin: 0;
+}
+
+.post-ui__metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: $m-md;
+  margin: 0;
+}
+
+.post-ui__metric {
+  padding: $m-md;
+  border: 1px solid var(--color-border-light);
+  border-radius: $radius-md;
+
+  dt,
+  p {
+    margin: 0;
+  }
+
+  dd {
+    margin: $m-xs 0;
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+  }
+}
+
+.post-ui__callout {
+  padding: $m-md;
+  border-inline-start: 4px solid var(--color-border-default);
+  background: var(--color-bg-secondary);
+
+  p {
+    margin: $m-xs 0 0;
+  }
+}
+
+.post-ui__callout--warning {
+  border-inline-start-color: #c87800;
+}
+
+.post-ui__callout--positive {
+  border-inline-start-color: #27834a;
+}

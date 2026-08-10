@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, test } from "bun:test";
+import { afterEach, describe, expect, test } from "vitest";
 import { fetchAllPricing } from "../../../../scripts/update-ai-pricing/fetch-prices";
 
 const originalFetch = globalThis.fetch;

@@ -77,18 +77,16 @@ const SWEMetricsGrid = dynamic(
     ),
   { ssr: false },
 );
+const PostUI = dynamic(
+  () => import("../lib/components/PostUI").then((mod) => mod.PostUI),
+  { ssr: false },
+);
 const TokenCostChart = dynamic(
-  () =>
-    import("../lib/components/content/expensive-ai").then(
-      (mod) => mod.TokenCostChart,
-    ),
+  () => import("../lib/components/content/expensive-ai").then((mod) => mod.TokenCostChart),
   { ssr: false },
 );
 const AgentTaskCostChart = dynamic(
-  () =>
-    import("../lib/components/content/expensive-ai").then(
-      (mod) => mod.AgentTaskCostChart,
-    ),
+  () => import("../lib/components/content/expensive-ai").then((mod) => mod.AgentTaskCostChart),
   { ssr: false },
 );
 const ProjectCostComparisonChart = dynamic(
@@ -99,10 +97,7 @@ const ProjectCostComparisonChart = dynamic(
   { ssr: false },
 );
 const TokenCostCalculator = dynamic(
-  () =>
-    import("../lib/components/content/expensive-ai").then(
-      (mod) => mod.TokenCostCalculator,
-    ),
+  () => import("../lib/components/content/expensive-ai").then((mod) => mod.TokenCostCalculator),
   { ssr: false },
 );
 const PastoralistStudyCharts = dynamic(
@@ -131,10 +126,7 @@ type PostContentBodyProps = {
 const GiscusErrorFallback = () => (
   <div className="giscus-error">
     <p>Unable to load comments at this time.</p>
-    <button
-      onClick={() => window.location.reload()}
-      className="giscus-error__retry"
-    >
+    <button onClick={() => window.location.reload()} className="giscus-error__retry">
       Retry
     </button>
   </div>
@@ -242,10 +234,7 @@ const GiscusWrapper = ({ isDarkMode }: GiscusWrapperProps) => {
   if (!isInView) {
     return (
       <div className="giscus-placeholder">
-        <button
-          onClick={() => setIsInView(true)}
-          className="giscus-placeholder__button"
-        >
+        <button onClick={() => setIsInView(true)} className="giscus-placeholder__button">
           Load Comments
         </button>
       </div>
@@ -455,9 +444,7 @@ const PostTable = ({ className, ...props }: PostTableProps) => {
           }}
           onClick={header.column.getToggleSortingHandler()}
         >
-          <span>
-            {flexRender(header.column.columnDef.header, header.getContext())}
-          </span>
+          <span>{flexRender(header.column.columnDef.header, header.getContext())}</span>
           {renderSortIcon(header)}
         </button>
       </th>
@@ -502,9 +489,7 @@ const PostTable = ({ className, ...props }: PostTableProps) => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isExpanded]);
 
-  const tableTitleElement = tableTitle ? (
-    <h3 className="post__table-title">{tableTitle}</h3>
-  ) : null;
+  const tableTitleElement = tableTitle ? <h3 className="post__table-title">{tableTitle}</h3> : null;
 
   const renderExpandedDialog = () => {
     if (!isExpanded) return null;
@@ -516,10 +501,7 @@ const PostTable = ({ className, ...props }: PostTableProps) => {
         aria-modal="true"
         onClick={() => setIsExpanded(false)}
       >
-        <div
-          className="post__table-dialog-content"
-          onClick={(event) => event.stopPropagation()}
-        >
+        <div className="post__table-dialog-content" onClick={(event) => event.stopPropagation()}>
           <div className="post__table-dialog-header">
             {tableTitleElement}
             <button
@@ -571,14 +553,13 @@ const mdxComponents = {
   WageStagnationChart,
   IndustrialRevolutionChart,
   SWEMetricsGrid,
+  PostUI,
   TokenCostChart,
   AgentTaskCostChart,
   ProjectCostComparisonChart,
   TokenCostCalculator,
   PastoralistStudyCharts,
-  pre: (props: React.HTMLAttributes<HTMLPreElement>) => (
-    <pre className="post__code" {...props} />
-  ),
+  pre: (props: React.HTMLAttributes<HTMLPreElement>) => <pre className="post__code" {...props} />,
   img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
     <img className="post__image" {...props} />
   ),
@@ -676,9 +657,7 @@ const Post = ({
           <div className="post__meta">
             <DateText date={frontmatter?.date} slug={slug} />
             {estimatedReadTime > 0 && (
-              <span className="post__read-time">
-                {estimatedReadTime} min read
-              </span>
+              <span className="post__read-time">{estimatedReadTime} min read</span>
             )}
           </div>
         </header>

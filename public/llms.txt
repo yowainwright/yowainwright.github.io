@@ -1,0 +1,26 @@
+# Jeffry.in
+
+> Personal website and blog of Jeff Wainwright, a Principal Engineer writing about software engineering, open source, AI, developer tooling, and life.
+
+The site contains original articles and tutorials. Publication dates appear on each article. Use the archive for the complete catalog and the JSON feed for machine-readable metadata.
+
+## About
+
+- [About Jeff Wainwright](https://jeffry.in/about/)
+- [Resume](https://jeffry.in/resume/)
+
+## Selected Articles
+
+- [Why Pastoralist](https://jeffry.in/why-pastoralist/): Research and tooling for dependency overrides.
+- [When the AI Token Gravy Train Stops](https://jeffry.in/expensive-ai/): Analysis of AI coding-agent token costs.
+- [Being a US-based Software Engineer in 2025](https://jeffry.in/us-swe-economy-2025/): Data-driven employment and wage trends.
+- [Shiki Syntax Highlighting](https://jeffry.in/shiki-syntax/): Advanced syntax highlighting for Markdown.
+
+## Indexes
+
+- [Article Archive](https://jeffry.in/archive/)
+- [JSON Feed](https://jeffry.in/feed.json)
+
+## Optional
+
+- [Source Repository](https://github.com/yowainwright/yowainwright.github.io)

@@ -17,22 +17,29 @@
   "main": "README.md",
   "scripts": {
     "prebuild": "playwright install chromium --with-deps",
-    "build": "bun run update-pricing && bun run build:css && bun run build:search && next build && bun run build:rss",
-    "update-pricing": "bun scripts/update-ai-pricing/index.ts",
-    "build:search": "bun scripts/generate-search-data.ts",
-    "build:local": "bun run build:css && next build && bun run build:rss",
-    "build:rss": "bun scripts/rss/index.ts",
-    "build:css": "bun scripts/generate-component-styles.ts && sass --style=compressed lib/client/styles/scss/main.scss public/assets/jeffry.in.css",
+    "build": "nub scripts/run-task.ts build",
+    "update-pricing": "nub scripts/update-ai-pricing/index.ts",
+    "build:search": "nub scripts/generate-search-data.ts",
+    "build:local": "nub scripts/run-task.ts build-local",
+    "build:rss": "nub scripts/rss/index.ts",
+    "build:css": "nub scripts/run-task.ts build-css",
+    "post-ui:prompt": "nub scripts/generate-post-ui-prompt.ts",
+    "post-ui:validate": "nub scripts/validate-post-ui-spec.ts",
     "dev": "mprocs",
     "dev:next": "next dev --port 34729",
+    "dev:css": "nub scripts/run-task.ts dev-css",
+    "generate:component-styles": "nub scripts/generate-component-styles.ts",
+    "typecheck:watch": "tsc --noEmit --watch --pretty",
+    "watch:pricing": "nub scripts/watch-ai-pricing.ts",
+    "full-rebuild": "nub scripts/run-task.ts full-rebuild",
     "format": "oxfmt --write \"**/*.{js,jsx,ts,tsx}\" \"!node_modules/**\" \"!public/**\" \"!out/**\" \"!tmp/**\" \"!content/**\" --threads=1",
     "format:check": "oxfmt --check \"**/*.{js,jsx,ts,tsx}\" \"!node_modules/**\" \"!public/**\" \"!out/**\" \"!tmp/**\" \"!content/**\" --threads=1",
     "lint": "oxlint -c .oxlintrc.json .",
     "lint:fix": "oxlint -c .oxlintrc.json . --fix",
-    "test": "bun test",
-    "prepare": "bun scripts/install-hooks.ts && bun run update && bun run maintain",
+    "test": "vitest run",
+    "prepare": "nub scripts/install-hooks.ts",
     "start": "next start",
-    "update": "bun run update:packages && bun run update:actions",
+    "update": "nub scripts/run-task.ts update",
     "update:packages": "codependence --config package.json --update",
     "update:actions": "codependence --config .codependencerc --update",
     "maintain": "pastoralist"
@@ -41,6 +48,8 @@
     "@atproto/api": "0.18.9",
     "@automattic/social-previews": "3.0.0",
     "@giscus/react": "3.1.0",
+    "@json-render/core": "0.19.0",
+    "@json-render/react": "0.19.0",
     "@keystatic/core": "0.5.48",
     "@keystatic/next": "5.0.4",
     "@mdx-js/loader": "3.1.1",
@@ -54,7 +63,7 @@
     "fuse.js": "7.1.0",
     "lucide-react": "0.542.0",
     "next": "16.2.10",
-    "next-mdx-remote": "5.0.0",
+    "next-mdx-remote": "6.0.0",
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "react-zoom-pan-pinch": "3.7.0",
@@ -64,11 +73,13 @@
     "unist-util-visit": "5.1.0"
   },
   "devDependencies": {
+    "@nubjs/nub": "0.7.5",
     "@shikijs/colorized-brackets": "1.29.2",
     "@shikijs/rehype": "1.29.2",
     "@shikijs/transformers": "1.29.2",
-    "@types/bun": "latest",
+    "@types/hast": "3.0.5",
     "@types/jsdom": "27.0.0",
+    "@types/node": "26.2.0",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "@vercel/og": "0.8.6",
@@ -89,21 +100,25 @@
     "rxjs": "7.8.2",
     "sanitize-filename": "1.6.4",
     "sass": "1.101.0",
-    "unified": "11.0.5"
+    "shiki": "1.29.2",
+    "unified": "11.0.5",
+    "vitest": "4.1.10"
   },
   "peerDependencies": {
     "typescript": "5.8.3"
   },
-  "overrides": {
-    "@grpc/grpc-js": "1.9.16",
-    "next-mdx-remote": "6.0.0",
-    "protobufjs": "7.6.4",
-    "undici": "7.28.0"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "26.7.0",
+      "onFail": "download"
+    }
   },
   "engines": {
-    "bun": ">=1.0.0"
+    "node": ">=26.0.0",
+    "pnpm": ">=11.18.0 <12.0.0"
   },
-  "packageManager": "bun@1.3.9",
+  "packageManager": "pnpm@11.18.0",
   "codependence": {
     "mode": "verbose",
     "codependencies": [
@@ -129,23 +144,6 @@
   },
   "pastoralist": {
     "appendix": {
-      "next-mdx-remote@6.0.0": {
-        "dependents": {
-          "Jeffry.in": "next-mdx-remote@5.0.0"
-        },
-        "ledger": {
-          "addedDate": "2026-05-30T02:26:29.617Z",
-          "reason": "Security fix: next-mdx-remote affected by arbitrary code execution in React server-side rendering of untrusted MDX content (high)",
-          "securityChecked": true,
-          "securityCheckDate": "2026-05-30T02:26:29.617Z",
-          "securityProvider": "osv",
-          "severity": "high",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0969",
-          "cves": [
-            "CVE-2026-0969"
-          ]
-        }
-      },
       "protobufjs@7.6.4": {
         "dependents": {
           "Jeffry.in": "protobufjs (required by @grpc/proto-loader)"
@@ -211,10 +209,5 @@
       "autoFix": true,
       "severityThreshold": "high"
     }
-  },
-  "trustedDependencies": [
-    "@next/swc",
-    "@swc/core",
-    "@swc/helpers"
-  ]
+  }
 }

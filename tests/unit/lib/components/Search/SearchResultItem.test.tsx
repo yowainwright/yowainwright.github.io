@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "vitest";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { SearchResultItem } from "../../../../../lib/components/Search/SearchResultItem";
@@ -15,11 +15,7 @@ const postResult: SearchResult = {
 describe("SearchResultItem", () => {
   test("renders selected search result state", () => {
     const markup = renderToStaticMarkup(
-      <SearchResultItem
-        result={postResult}
-        isSelected
-        onSelect={() => undefined}
-      />,
+      <SearchResultItem result={postResult} isSelected onSelect={() => undefined} />,
     );
 
     expect(markup).toContain("search-result--selected");

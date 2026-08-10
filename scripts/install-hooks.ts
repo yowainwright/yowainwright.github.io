@@ -1,4 +1,4 @@
-#!/usr/bin/env bun
+#!/usr/bin/env -S nub
 
 import { existsSync, writeFileSync, chmodSync, mkdirSync } from "fs";
 import { join } from "path";
@@ -8,58 +8,47 @@ const log = createLogger("install-hooks");
 
 const HOOKS_DIR = ".git/hooks";
 
-const PRE_COMMIT = `#!/usr/bin/env bun
+const PRE_COMMIT = `#!/usr/bin/env sh
+set -eu
 
-import { $ } from 'bun';
-
-console.log('Running pre-commit checks...');
-
-try {
-  await $\`bun run build:local\`;
-  await $\`bun run lint\`;
-
-  console.log('✓ All pre-commit checks passed');
-} catch (error) {
-  console.error('✗ Pre-commit checks failed');
-  process.exit(1);
-}
+printf '%s\\n' 'Running pre-commit checks...'
+nub run build:local
+nub run lint
+printf '%s\\n' 'All pre-commit checks passed'
 `;
 
-const COMMIT_MSG = `#!/usr/bin/env bun
+const COMMIT_MSG = `#!/usr/bin/env sh
+set -eu
 
-import { readFileSync } from 'fs';
+commit_msg=$(cat "$1")
+pattern='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\\(.+\\))?: .{1,}'
 
-const commitMsgFile = process.argv[2];
-const commitMsg = readFileSync(commitMsgFile, 'utf-8').trim();
+if ! printf '%s' "$commit_msg" | grep -Eq "$pattern"; then
+  printf '%s\\n' 'Invalid commit message format' >&2
+  printf '%s\\n' 'Expected format: <type>(<scope>): <message>' >&2
+  printf 'Received: %s\\n' "$commit_msg" >&2
+  exit 1
+fi
 
-const conventionalCommitPattern = /^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\\(.+\\))?: .{1,}/;
-
-if (!conventionalCommitPattern.test(commitMsg)) {
-  console.error('✗ Invalid commit message format');
-  console.error('Expected format: <type>(<scope>): <message>');
-  console.error('Types: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert');
-  console.error(\`Received: \${commitMsg}\`);
-  process.exit(1);
-}
-
-console.log('✓ Commit message is valid');
+printf '%s\\n' 'Commit message is valid'
 `;
 
-const POST_MERGE = `#!/usr/bin/env bun
+const POST_MERGE = `#!/usr/bin/env sh
+set -eu
 
-import { $ } from 'bun';
+printf '%s\\n' 'Running post-merge checks...'
+changed_files=$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD)
 
-console.log('Running post-merge checks...');
-
-const lockfileChanged = await $\`git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD\`.text();
-
-if (lockfileChanged.includes('bun.lock') || lockfileChanged.includes('package.json')) {
-  console.log('Dependencies changed, running bun install...');
-  await $\`bun install\`;
-  console.log('✓ Dependencies updated');
-} else {
-  console.log('✓ No dependency changes detected');
-}
+case "$changed_files" in
+  *pnpm-lock.yaml*|*package.json*)
+    printf '%s\\n' 'Dependencies changed, running nub install...'
+    nub install
+    printf '%s\\n' 'Dependencies updated'
+    ;;
+  *)
+    printf '%s\\n' 'No dependency changes detected'
+    ;;
+esac
 `;
 
 const HOOKS = {

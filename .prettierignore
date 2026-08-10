@@ -9,4 +9,4 @@ node_modules/
 # Generated files
 *.min.css
 *.min.js
-bun.lock
+pnpm-lock.yaml

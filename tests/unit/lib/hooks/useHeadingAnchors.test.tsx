@@ -1,11 +1,7 @@
-import { afterEach, describe, expect, test } from "bun:test";
+import { afterEach, describe, expect, test } from "vitest";
 import React, { act } from "react";
 import { useHeadingAnchors } from "../../../../lib/hooks/useHeadingAnchors";
-import {
-  cleanupMountedRoots,
-  createMountedRoot,
-  setupDom,
-} from "../../test-utils/react-dom";
+import { cleanupMountedRoots, createMountedRoot, setupDom } from "../../test-utils/react-dom";
 
 afterEach(async () => {
   await cleanupMountedRoots();
@@ -31,8 +27,7 @@ describe("useHeadingAnchors", () => {
       configurable: true,
     });
 
-    const contentElement =
-      document.querySelector<HTMLElement>(".post__content");
+    const contentElement = document.querySelector<HTMLElement>(".post__content");
     expect(contentElement).not.toBeNull();
 
     function Probe() {
@@ -48,9 +43,7 @@ describe("useHeadingAnchors", () => {
     expect(headingAnchor).not.toBeNull();
 
     await act(async () => {
-      headingAnchor?.dispatchEvent(
-        new dom.window.MouseEvent("click", { bubbles: true }),
-      );
+      headingAnchor?.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true }));
       await Promise.resolve();
     });
 

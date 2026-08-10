@@ -1,13 +1,11 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "vitest";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { PixelIcon } from "../../../../../lib/components/PixelIcon";
 
 describe("PixelIcon", () => {
   test("renders pixel icons from named and custom grids", () => {
-    const namedMarkup = renderToStaticMarkup(
-      <PixelIcon name="heart" size={3} color="#f00" />,
-    );
+    const namedMarkup = renderToStaticMarkup(<PixelIcon name="heart" size={3} color="#f00" />);
     const customMarkup = renderToStaticMarkup(
       <PixelIcon
         grid={[

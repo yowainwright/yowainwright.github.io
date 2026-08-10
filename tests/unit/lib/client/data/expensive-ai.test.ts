@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, test } from "bun:test";
+import { afterEach, describe, expect, test } from "vitest";
 import { Cause, Effect, Exit, Option, Schema } from "effect";
 import {
   ExpensiveAiDataSchema,
@@ -81,10 +81,7 @@ describe("loadExpensiveAiDataEffect", () => {
       }),
     );
 
-    await expectFailureTag(
-      loadExpensiveAiDataEffect(),
-      "ExpensiveAiFetchError",
-    );
+    await expectFailureTag(loadExpensiveAiDataEffect(), "ExpensiveAiFetchError");
   });
 
   test("fails with a typed validation error for malformed data", async () => {
@@ -92,10 +89,7 @@ describe("loadExpensiveAiDataEffect", () => {
       Response.json(Object.assign({}, validExpensiveAiData, { models: [] })),
     );
 
-    await expectFailureTag(
-      loadExpensiveAiDataEffect(),
-      "ExpensiveAiValidationError",
-    );
+    await expectFailureTag(loadExpensiveAiDataEffect(), "ExpensiveAiValidationError");
   });
 
   test("keeps calculator fallback data compatible with the schema", async () => {

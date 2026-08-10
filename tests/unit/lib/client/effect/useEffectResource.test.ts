@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "vitest";
 import { Effect } from "effect";
 import { JSDOM } from "jsdom";
 import React, { act } from "react";
@@ -57,11 +57,7 @@ describe("useEffectResource", () => {
 
     let states: Array<EffectResourceState<string>> = [];
 
-    function Probe({
-      resource,
-    }: {
-      resource: Effect.Effect<string, string, never>;
-    }) {
+    function Probe({ resource }: { resource: Effect.Effect<string, string, never> }) {
       const state = useEffectResource(() => resource, [resource]);
       states = states.concat(state);
       return null;
@@ -72,32 +68,22 @@ describe("useEffectResource", () => {
     const root = createRoot(container!);
 
     await act(async () => {
-      root.render(
-        React.createElement(Probe, { resource: Effect.succeed("ready") }),
-      );
+      root.render(React.createElement(Probe, { resource: Effect.succeed("ready") }));
     });
     await act(async () => {
       await Promise.resolve();
     });
     await act(async () => {
-      root.render(
-        React.createElement(Probe, { resource: Effect.fail("boom") }),
-      );
+      root.render(React.createElement(Probe, { resource: Effect.fail("boom") }));
     });
     await act(async () => {
       await Promise.resolve();
     });
 
-    expect(
-      states.some(
-        (state) => state.status === "success" && state.data === "ready",
-      ),
-    ).toBe(true);
-    expect(
-      states.some(
-        (state) => state.status === "failure" && state.error.includes("boom"),
-      ),
-    ).toBe(true);
+    expect(states.some((state) => state.status === "success" && state.data === "ready")).toBe(true);
+    expect(states.some((state) => state.status === "failure" && state.error.includes("boom"))).toBe(
+      true,
+    );
 
     await act(async () => {
       root.unmount();
@@ -138,11 +124,7 @@ describe("useEffectResource", () => {
       await Promise.resolve();
     });
 
-    expect(
-      states.some(
-        (state) => state.status === "success" && state.data === "ready",
-      ),
-    ).toBe(true);
+    expect(states.some((state) => state.status === "success" && state.data === "ready")).toBe(true);
     expect(states.length).toBeLessThanOrEqual(3);
 
     await act(async () => {

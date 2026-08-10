@@ -9,8 +9,9 @@ categories:
   - claude
 ---
 
+import { PostUI } from "../lib/components/PostUI";
+import expensiveAiTokenCost from "../lib/components/PostUI/specs/expensive-ai-token-cost.json";
 import {
-  TokenCostChart,
   AgentTaskCostChart,
   ProjectCostComparisonChart,
   TokenCostCalculator,
@@ -64,7 +65,7 @@ well, fair—_why put in the effort when my Max plan will be better?_ DHH is sma
 What I pay approximately per query - your approximate baseline before adding agents.
 This is not a session but one question in a session.
 
-<TokenCostChart />
+<PostUI spec={expensiveAiTokenCost} />
 
 ---
 
