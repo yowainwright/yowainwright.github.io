@@ -1,4 +1,4 @@
-#!/usr/bin/env -S nub
+#!/usr/bin/env -S pnpm exec tsx
 
 import { existsSync, writeFileSync, chmodSync, mkdirSync } from "fs";
 import { join } from "path";
@@ -12,8 +12,8 @@ const PRE_COMMIT = `#!/usr/bin/env sh
 set -eu
 
 printf '%s\\n' 'Running pre-commit checks...'
-nub run build:local
-nub run lint
+pnpm run build:local
+pnpm run lint
 printf '%s\\n' 'All pre-commit checks passed'
 `;
 
@@ -41,8 +41,8 @@ changed_files=$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD)
 
 case "$changed_files" in
   *pnpm-lock.yaml*|*package.json*)
-    printf '%s\\n' 'Dependencies changed, running nub install...'
-    nub install
+    printf '%s\\n' 'Dependencies changed, running pnpm install...'
+    pnpm install
     printf '%s\\n' 'Dependencies updated'
     ;;
   *)

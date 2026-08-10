@@ -1,4 +1,4 @@
-#!/usr/bin/env -S nub
+#!/usr/bin/env -S pnpm exec tsx
 
 import { writeFile } from "fs/promises";
 import { join } from "path";

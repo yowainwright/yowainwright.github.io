@@ -9,18 +9,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Setup Nub and Node
-        uses: nubjs/setup-nub@v0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+      - name: Setup Node
+        uses: actions/setup-node@v6
         with:
-          nub-version: 0.7.5
+          node-version-file: .node-version
+          cache: pnpm
       - name: Install dependencies
-        run: nub install --frozen-lockfile --ignore-scripts
+        run: pnpm install --frozen-lockfile --ignore-scripts
       - name: Update dependencies and actions
-        run: nub run update
+        run: pnpm run update
       - name: Update dependency overrides
-        run: nub run maintain
+        run: pnpm run maintain
       - name: Update lockfile
-        run: nub install --ignore-scripts
+        run: pnpm install --ignore-scripts
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
         with:

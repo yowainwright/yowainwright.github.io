@@ -77,10 +77,6 @@ const SWEMetricsGrid = dynamic(
     ),
   { ssr: false },
 );
-const PostUI = dynamic(
-  () => import("../lib/components/PostUI").then((mod) => mod.PostUI),
-  { ssr: false },
-);
 const TokenCostChart = dynamic(
   () => import("../lib/components/content/expensive-ai").then((mod) => mod.TokenCostChart),
   { ssr: false },
@@ -553,7 +549,6 @@ const mdxComponents = {
   WageStagnationChart,
   IndustrialRevolutionChart,
   SWEMetricsGrid,
-  PostUI,
   TokenCostChart,
   AgentTaskCostChart,
   ProjectCostComparisonChart,

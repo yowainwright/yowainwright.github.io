@@ -1,4 +1,4 @@
-#!/usr/bin/env -S nub
+#!/usr/bin/env -S pnpm exec tsx
 
 import { mkdir, readFile, writeFile, readdir, stat, rm } from "fs/promises";
 import { join } from "path";
@@ -84,7 +84,7 @@ const generateDataFile = (config: PostConfig): string => {
 const generateBuildScript = (slug: string): string => {
   const functionName = createComponentName(slug);
 
-  return `#!/usr/bin/env -S nub
+  return `#!/usr/bin/env -S pnpm exec tsx
 
 import { writeFile } from 'fs/promises';
 import { join } from 'path';
@@ -114,7 +114,7 @@ ${config.description}
 ## Development
 
 \`\`\`bash
-nub scripts/content/${config.slug}/build${FILE_EXTENSIONS.TS}
+pnpm exec tsx scripts/content/${config.slug}/build${FILE_EXTENSIONS.TS}
 \`\`\`
 `;
 };

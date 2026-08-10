@@ -3,16 +3,6 @@ engineStrict: true
 saveExact: true
 minimumReleaseAge: 1440
 minimumReleaseAgeStrict: true
-minimumReleaseAgeExclude:
-  - "@nubjs/nub"
-  - '@nubjs/nub-darwin-arm64@0.7.5'
-  - '@nubjs/nub-darwin-x64@0.7.5'
-  - '@nubjs/nub-linux-arm64-musl@0.7.5'
-  - '@nubjs/nub-linux-arm64@0.7.5'
-  - '@nubjs/nub-linux-x64-musl@0.7.5'
-  - '@nubjs/nub-linux-x64@0.7.5'
-  - '@nubjs/nub-win32-arm64@0.7.5'
-  - '@nubjs/nub-win32-x64@0.7.5'
 enableGlobalVirtualStore: false
 
 overrides:

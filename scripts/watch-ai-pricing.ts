@@ -1,11 +1,11 @@
-#!/usr/bin/env -S nub
+#!/usr/bin/env -S pnpm exec tsx
 
 import { execFileSync } from "node:child_process";
 
 const UPDATE_INTERVAL_MS = 60 * 60 * 1000;
 
 const updatePricing = (): void => {
-  execFileSync("nub", ["scripts/update-ai-pricing/index.ts"], {
+  execFileSync("pnpm", ["exec", "tsx", "scripts/update-ai-pricing/index.ts"], {
     stdio: "inherit",
   });
 };

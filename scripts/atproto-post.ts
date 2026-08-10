@@ -1,4 +1,4 @@
-#!/usr/bin/env -S nub
+#!/usr/bin/env -S pnpm exec tsx
 
 import fs from "node:fs";
 import path from "node:path";
@@ -84,7 +84,7 @@ const main = async () => {
     }
   }
 
-  log.info("usage: nub scripts/atproto-post.ts <command>");
+  log.info("usage: pnpm exec tsx scripts/atproto-post.ts <command>");
   log.info("commands: list, post <slug>");
   log.info("env: ATP_PDS_URL, ATP_IDENTIFIER, ATP_PASSWORD");
 };

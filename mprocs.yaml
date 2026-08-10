@@ -1,41 +1,41 @@
 procs:
   next:
-    shell: "nub run dev:next"
+    shell: "pnpm run dev:next"
     autostart: true
     autorestart: true
 
   css-watch:
-    shell: "nub run dev:css"
+    shell: "pnpm run dev:css"
     autostart: true
     autorestart: true
 
   component-styles:
-    shell: "nub run generate:component-styles"
+    shell: "pnpm run generate:component-styles"
     autostart: true
     autorestart: false
 
   typecheck:
-    shell: "nub run typecheck:watch"
+    shell: "pnpm run typecheck:watch"
     autostart: true
     autorestart: true
 
   next-typecheck:
-    shell: "nub run lint:fix"
+    shell: "pnpm run lint:fix"
     autostart: false
     autorestart: false
 
   lint-fix:
-    shell: "nub run lint:fix"
+    shell: "pnpm run lint:fix"
     autostart: false
     autorestart: false
 
   format:
-    shell: "nub run format"
+    shell: "pnpm run format"
     autostart: false
     autorestart: false
 
   pricing-update:
-    shell: "nub run watch:pricing"
+    shell: "pnpm run watch:pricing"
     autostart: false
     autorestart: true
 
@@ -50,12 +50,12 @@ procs:
     autorestart: false
 
   rebuild-assets:
-    shell: "nub run build:css"
+    shell: "pnpm run build:css"
     autostart: false
     autorestart: false
 
   full-rebuild:
-    shell: "nub run full-rebuild"
+    shell: "pnpm run full-rebuild"
     autostart: false
     autorestart: false
 

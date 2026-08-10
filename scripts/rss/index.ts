@@ -1,4 +1,4 @@
-#!/usr/bin/env -S nub
+#!/usr/bin/env -S pnpm exec tsx
 
 import fs from "node:fs";
 import path from "node:path";

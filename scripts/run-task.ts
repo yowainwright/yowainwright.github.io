@@ -1,4 +1,4 @@
-#!/usr/bin/env -S nub
+#!/usr/bin/env -S pnpm exec tsx
 
 import { execFileSync } from "node:child_process";
 import { rmSync } from "node:fs";
@@ -8,16 +8,16 @@ const run = (command: string, args: string[]): void => {
 };
 
 const runScript = (script: string): void => {
-  run("nub", ["run", script]);
+  run("pnpm", ["run", script]);
 };
 
 const runFile = (file: string): void => {
-  run("nub", [file]);
+  run("pnpm", ["exec", "tsx", file]);
 };
 
 const runBinary = (binary: string, args: string[]): void => {
-  const commandArgs = [binary].concat(args);
-  run("nubx", commandArgs);
+  const commandArgs = ["exec", binary].concat(args);
+  run("pnpm", commandArgs);
 };
 
 const build = (): void => {

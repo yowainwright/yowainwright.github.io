@@ -22,13 +22,16 @@ jobs:
         with:
           repository: yowainwright/projects
           path: projects
-      - name: Setup Nub and Node
-        uses: nubjs/setup-nub@v0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+      - name: Setup Node
+        uses: actions/setup-node@v6
         with:
-          nub-version: 0.7.5
-      - run: nub install --frozen-lockfile --ignore-scripts
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --ignore-scripts
       - name: Build my App
-        run: nub run build
+        run: pnpm run build
         env:
           NEXT_PUBLIC_FIREBASE_API_KEY: ${{ secrets.NEXT_PUBLIC_FIREBASE_API_KEY }}
           NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: ${{ secrets.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}
