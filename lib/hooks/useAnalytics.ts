@@ -10,12 +10,7 @@ declare global {
   }
 }
 
-export function trackEvent(
-  action: string,
-  category: string,
-  label?: string,
-  value?: number,
-) {
+export function trackEvent(action: string, category: string, label?: string, value?: number) {
   if (typeof window === "undefined") return;
   if (!window.gtag) return;
   window.gtag("event", action, {
@@ -49,11 +44,18 @@ export function useScrollDepth() {
   const milestones = useRef<Set<number>>(new Set());
 
   useEffect(() => {
-    const handleScroll = () => {
+    let documentHeight = 0;
+    let animationFrame = 0;
+
+    const updateDocumentHeight = () => {
+      documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    };
+
+    const trackScrollDepth = () => {
+      if (documentHeight <= 0) return;
+
       const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+      const scrollPercent = Math.round((scrollTop / documentHeight) * 100);
 
       if (scrollPercent > maxDepth.current) {
         maxDepth.current = scrollPercent;
@@ -71,8 +73,24 @@ export function useScrollDepth() {
       }
     };
 
+    const handleScroll = () => {
+      if (animationFrame) return;
+
+      animationFrame = window.requestAnimationFrame(() => {
+        animationFrame = 0;
+        trackScrollDepth();
+      });
+    };
+
+    const resizeObserver = new ResizeObserver(updateDocumentHeight);
+    resizeObserver.observe(document.documentElement);
+    updateDocumentHeight();
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      resizeObserver.disconnect();
+      window.cancelAnimationFrame(animationFrame);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -94,18 +112,10 @@ export function useReadTime(wordCount: number) {
     return () => {
       if (tracked.current) return;
       const timeSpent = Math.round((Date.now() - startTime.current) / 1000);
-      const percentRead = Math.min(
-        100,
-        Math.round((timeSpent / (estimatedReadTime * 60)) * 100),
-      );
+      const percentRead = Math.min(100, Math.round((timeSpent / (estimatedReadTime * 60)) * 100));
 
       trackEvent("read_time", "engagement", `${timeSpent}s`, timeSpent);
-      trackEvent(
-        "read_completion",
-        "engagement",
-        `${percentRead}%`,
-        percentRead,
-      );
+      trackEvent("read_completion", "engagement", `${percentRead}%`, percentRead);
       tracked.current = true;
     };
   }, [estimatedReadTime]);

@@ -1,75 +1,50 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import Fuse from "fuse.js";
-import { matchEffectResource } from "../../client/effect/useEffectResource";
 import { useSearchData } from "../../hooks/useSearchData";
 import type { SearchResult, SearchState } from "./types";
 import { FUSE_OPTIONS, MAX_RESULTS } from "./constants";
 
 const createInitialState = (): SearchState => ({
-  isOpen: false,
   query: "",
   results: [],
   selectedIndex: 0,
-  searchData: [],
 });
 
-const clampIndex = (index: number, max: number): number =>
-  Math.max(0, Math.min(index, max));
+const clampIndex = (index: number, max: number): number => Math.max(0, Math.min(index, max));
 
-const updateSearchState = (
-  state: SearchState,
-  updates: Partial<SearchState>,
-): SearchState => Object.assign({}, state, updates);
+const updateSearchState = (state: SearchState, updates: Partial<SearchState>): SearchState =>
+  Object.assign({}, state, updates);
 
-const searchItems = (
-  fuse: Fuse<SearchResult>,
-  query: string,
-): SearchResult[] => {
+const searchItems = (fuse: Fuse<SearchResult>, query: string): SearchResult[] => {
   const searchResults = fuse.search(query);
   return searchResults.slice(0, MAX_RESULTS).map((r) => r.item);
 };
-
-const isOpenShortcut = (e: KeyboardEvent): boolean =>
-  (e.metaKey || e.ctrlKey) && e.key === "k";
 
 const isEscapeKey = (e: KeyboardEvent): boolean => e.key === "Escape";
 const isArrowDown = (e: KeyboardEvent): boolean => e.key === "ArrowDown";
 const isArrowUp = (e: KeyboardEvent): boolean => e.key === "ArrowUp";
 const isEnterKey = (e: KeyboardEvent): boolean => e.key === "Enter";
 
-export function useSearch() {
+export function useSearch(onClose: () => void) {
   const [state, setState] = useState<SearchState>(createInitialState);
   const inputRef = useRef<HTMLInputElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
-  const searchDataResource = useSearchData();
+  const searchData = useSearchData();
 
-  const fuse = useMemo(
-    () => new Fuse(state.searchData, FUSE_OPTIONS),
-    [state.searchData],
-  );
+  const fuse = useMemo(() => new Fuse(searchData, FUSE_OPTIONS), [searchData]);
 
   const hasQuery = state.query.length > 0;
   const hasResults = state.results.length > 0;
-  const canNavigateResults = state.isOpen && hasResults;
+  const canNavigateResults = hasResults;
 
   useEffect(() => {
-    matchEffectResource(searchDataResource, {
-      onLoading: () => undefined,
-      onFailure: (error) => console.error(error),
-      onSuccess: (searchData) => {
-        const nextSearchData = searchData.slice();
-        setState((prev) =>
-          updateSearchState(prev, { searchData: nextSearchData }),
-        );
-      },
-    });
-  }, [searchDataResource]);
+    const focusTimer = window.setTimeout(() => inputRef.current?.focus(), 100);
+    return () => window.clearTimeout(focusTimer);
+  }, []);
 
   useEffect(() => {
     if (!hasQuery) {
-      setState((prev) =>
-        updateSearchState(prev, { results: [], selectedIndex: 0 }),
-      );
+      setState((prev) => updateSearchState(prev, { results: [], selectedIndex: 0 }));
       return;
     }
 
@@ -77,14 +52,9 @@ export function useSearch() {
     setState((prev) => updateSearchState(prev, { results, selectedIndex: 0 }));
   }, [state.query, fuse, hasQuery]);
 
-  const open = useCallback(() => {
-    setState((prev) => updateSearchState(prev, { isOpen: true }));
-    setTimeout(() => inputRef.current?.focus(), 100);
-  }, []);
-
   const close = useCallback(() => {
-    setState((prev) => updateSearchState(prev, { isOpen: false, query: "" }));
-  }, []);
+    onClose();
+  }, [onClose]);
 
   const setQuery = useCallback((query: string) => {
     setState((prev) => updateSearchState(prev, { query }));
@@ -100,10 +70,7 @@ export function useSearch() {
 
   const selectPrev = useCallback(() => {
     setState((prev) => {
-      const prevIndex = clampIndex(
-        prev.selectedIndex - 1,
-        prev.results.length - 1,
-      );
+      const prevIndex = clampIndex(prev.selectedIndex - 1, prev.results.length - 1);
       return updateSearchState(prev, { selectedIndex: prevIndex });
     });
   }, []);
@@ -115,13 +82,6 @@ export function useSearch() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      const shouldOpen = isOpenShortcut(e);
-      if (shouldOpen) {
-        e.preventDefault();
-        open();
-        return;
-      }
-
       const shouldClose = isEscapeKey(e);
       if (shouldClose) {
         close();
@@ -155,21 +115,11 @@ export function useSearch() {
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [
-    canNavigateResults,
-    open,
-    close,
-    selectNext,
-    selectPrev,
-    getSelectedResult,
-  ]);
+  }, [canNavigateResults, close, selectNext, selectPrev, getSelectedResult]);
 
   useEffect(() => {
-    if (!state.isOpen) return;
-
     const handleClickOutside = (e: MouseEvent) => {
-      const clickedOutside =
-        modalRef.current && !modalRef.current.contains(e.target as Node);
+      const clickedOutside = modalRef.current && !modalRef.current.contains(e.target as Node);
       if (clickedOutside) close();
     };
 
@@ -180,13 +130,13 @@ export function useSearch() {
       document.removeEventListener("mousedown", handleClickOutside);
       document.body.style.overflow = "";
     };
-  }, [state.isOpen, close]);
+  }, [close]);
 
   return {
     state,
+    searchData,
     inputRef,
     modalRef,
-    open,
     close,
     setQuery,
   };

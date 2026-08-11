@@ -18,6 +18,7 @@ export const MERMAID_SELECTORS = {
 
 export const MERMAID_BEM: BEMBlock = {
   base: {
+    display: "block",
     position: "relative",
     margin: "2rem 0",
     padding: "1.5rem",
@@ -27,6 +28,7 @@ export const MERMAID_BEM: BEMBlock = {
     cursor: "pointer",
     transition: "all 0.2s ease",
     overflow: "hidden",
+    textDecoration: "none",
   },
   elements: {
     "expand-hint": {
@@ -185,6 +187,13 @@ export function generateMermaidCSS(): string {
   max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
+}
+
+.mermaid-chart .mermaid-diagram {
+  display: block;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
 }
 

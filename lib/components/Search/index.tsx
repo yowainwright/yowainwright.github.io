@@ -1,40 +1,33 @@
-import { useState, useEffect } from "react";
-import { createPortal } from "react-dom";
-import { useSearch } from "./useSearch";
+import { useCallback, useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import { SearchTrigger } from "./SearchTrigger";
-import { SearchModal } from "./SearchModal";
+
+const SearchDialog = dynamic(() => import("./SearchDialog"), { ssr: false });
+
+const isSearchShortcut = (event: KeyboardEvent) =>
+  (event.metaKey || event.ctrlKey) && event.key === "k";
 
 export function Search() {
-  const [mounted, setMounted] = useState(false);
-  const { state, inputRef, modalRef, open, close, setQuery } = useSearch();
+  const [isOpen, setIsOpen] = useState(false);
+  const open = useCallback(() => setIsOpen(true), []);
+  const close = useCallback(() => setIsOpen(false), []);
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (!isSearchShortcut(event)) return;
+
+      event.preventDefault();
+      open();
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [open]);
 
   return (
     <>
       <SearchTrigger onClick={open} />
-      {mounted &&
-        state.isOpen &&
-        createPortal(
-          <>
-            <div className="search-backdrop" onClick={close} />
-            <div className="search-modal-container">
-              <SearchModal
-                ref={modalRef}
-                query={state.query}
-                results={state.results}
-                searchData={state.searchData}
-                selectedIndex={state.selectedIndex}
-                inputRef={inputRef}
-                onQueryChange={setQuery}
-                onClose={close}
-              />
-            </div>
-          </>,
-          document.body,
-        )}
+      {isOpen && <SearchDialog onClose={close} />}
     </>
   );
 }

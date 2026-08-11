@@ -1,332 +1,10 @@
 [
   {
-    "title": "Javascript Closure all wrapped up & why",
-    "description": "Understanding Javascript Closure & what it does",
-    "slug": "js-closure",
-    "type": "post",
-    "url": "/js-closure/"
-  },
-  {
-    "title": "First Post in Bit, This Is Why",
-    "description": "I stopped posting on this blog in September last year, 2017. It was an easy decision to make then. There were specific reasons I stopped, but I couldn't articulate them.",
-    "slug": "first-post-in-a-bit",
-    "type": "post",
-    "url": "/first-post-in-a-bit/"
-  },
-  {
-    "title": "Setting update Gatsby Development on an M1 Mac Mini",
-    "description": "A post providing context into setting up an M1 Mac for Gatsby development and 1 happy path to get up and running with Gatsby on a M1 Mac fast!",
-    "slug": "m1-chip-gatsby-setup",
-    "type": "post",
-    "url": "/m1-chip-gatsby-setup/"
-  },
-  {
-    "title": "Understanding the basics parts of a CLI command",
-    "description": "This brief article digs into the basics of most CLI commands including a summary of the commands's name, arguments, options, and actions.",
-    "slug": "cli-program-basic-parts",
-    "type": "post",
-    "url": "/cli-program-basic-parts/"
-  },
-  {
-    "title": "Arrow Function Notes  After Watching ES6 For Everyone",
-    "description": "This post reviews some things about arrow functions that I learned from Wes Bos's ES6 for everyone.",
-    "slug": "arrow-functions",
-    "type": "post",
-    "url": "/arrow-functions/"
-  },
-  {
-    "title": "Week 7, 2017—Transitioning and Climbing to Higher Heights and Deeper Turns",
-    "description": "Week 7, 2017—This week I'm beginning to climbing more consistently and catch waves more consistently.",
-    "slug": "week-7-17",
-    "type": "post",
-    "url": "/week-7-17/"
-  },
-  {
-    "title": "Week 15, was about being a good friend, surfing and gaining momentum on another open source project.",
-    "description": "Week 15, I was trying to be a good friend, surf, and gain momentum on StickyBits—an open source project I did.",
-    "slug": "week-15-17",
-    "type": "post",
-    "url": "/week-15-17/"
-  },
-  {
-    "title": "Javascript for loop & the argument key word",
-    "description": "Javascript for loop & the argument key word defined & why it is misunderstood",
-    "slug": "js-argument-key-word",
-    "type": "post",
-    "url": "/js-argument-key-word/"
-  },
-  {
-    "title": "Moments Between Words—Simple Communication and Observations of Quick Ways To Make Others Feel Good",
-    "description": "This post observes how different communication can be from intent to reception. It focuses on observations on simple comunications.",
-    "slug": "making-others-feel-good-with-basics",
-    "type": "post",
-    "url": "/making-others-feel-good-with-basics/"
-  },
-  {
-    "title": "Why Pastoralist: Dependency Overrides Need an Audit Trail",
-    "description": "How Pastoralist can help teams track, scan, and clean npm, yarn, pnpm, and bun dependency overrides, with study notes from OSS projects, cleanup samples, and fork PRs synced on May 25, 2026.",
-    "slug": "why-pastoralist",
-    "type": "post",
-    "url": "/why-pastoralist/"
-  },
-  {
-    "title": "Creating beautiful layouts by setting element widths with calc",
-    "description": "Use css calc values to set the width of elements within content blocks & create beautiful layouts, for devices especially",
-    "slug": "css-pretty-widths-with-calc",
-    "type": "post",
-    "url": "/css-pretty-widths-with-calc/"
-  },
-  {
-    "title": "Reenvisioning branded content at Dollar Shave Club",
-    "description": "Reenvisioning branded content at Dollar Shave Club.",
-    "slug": "branded-content",
-    "type": "post",
-    "url": "/branded-content/"
-  },
-  {
-    "title": "Week 17, dealing with an ankle injury and using an observer and/or a mediator pattern",
-    "description": "Week 17, I was dealing with an ankle injury and using an observer to fix race conditions",
-    "slug": "week-17-17",
-    "type": "post",
-    "url": "/week-17-17/"
-  },
-  {
-    "title": "Week 5, 2017—Analytics Tech and Viewing Ocean Caves",
-    "description": "Week 5, 2017—I was able to work on analytics for a current project and see Ocean Caves at Leo Carillo State Beach.",
-    "slug": "week-5-17",
-    "type": "post",
-    "url": "/week-5-17/"
-  },
-  {
-    "title": "TypeScript Init—Getting A Test Driven TypeScript Repository Setup",
-    "description": "This post documents getting setup with TypeScript—just beyond the Gettings Started TypeScript Tutorials. In this Post I will go through setting up a Test Driven TypeScript project.",
-    "slug": "getting-setup-with-ts",
-    "type": "post",
-    "url": "/getting-setup-with-ts/"
-  },
-  {
-    "title": "Using ES6 Function Destructuring with JavaScript Plugin Options",
-    "description": "This post explains how to use ES6 function destructuring for more readable JavaScript Plugin Options.",
-    "slug": "destructing-function-opts",
-    "type": "post",
-    "url": "/destructing-function-opts/"
-  },
-  {
-    "title": "Shiki Syntax Highlighting: More features for markdown",
-    "description": "Comprehensive Shiki syntax highlighting implementation with custom themes, diff notation, line highlighting, focus modes, error annotations, interactive copy buttons, and optimized Sass architecture using a scalable variable system.",
-    "slug": "shiki-syntax",
-    "type": "post",
-    "url": "/shiki-syntax/"
-  },
-  {
-    "title": "Week 13, 2017—camping above Ojai on Highway 33, surfing and other things",
-    "description": "Week 13, I am doing it—camping above Ojai, surfing and finding to code.",
-    "slug": "week-13-17",
-    "type": "post",
-    "url": "/week-13-17/"
-  },
-  {
-    "title": "Week 1, 2017—the weather was rainy but the surf was great!",
-    "description": "This post summarizes week 1 of 2017",
-    "slug": "week-1-17",
-    "type": "post",
-    "url": "/week-1-17/"
-  },
-  {
-    "title": "Enabling Intelligent Tab Completion in Zsh without High Memory Usage",
-    "description": "This post provides quick tips on how to enable Zsh Tab Completion to provide intelligent completion in Zsh without the bloat.",
-    "slug": "lightweight-intelligent-completion-in-zsh",
-    "type": "post",
-    "url": "/lightweight-intelligent-completion-in-zsh/"
-  },
-  {
-    "title": "Understanding Javascript Objects - static objects to classes",
-    "description": "Understanding JavaScript Objects, from static objects to classes",
-    "slug": "js-objects",
-    "type": "post",
-    "url": "/js-objects/"
-  },
-  {
-    "title": "JavaScript is relatable",
-    "description": "JavaScript is for the people because it is relatable and usable.",
-    "slug": "js-is-relatable",
-    "type": "post",
-    "url": "/js-is-relatable/"
-  },
-  {
     "title": "The 2000s are no longer a teenager, starting out 2020",
     "description": "This post summarizes my first days of 2020 with brief reflections on 2019, what I learned which included Functional Programming, TypeScript, nervous system healing and awareness",
     "slug": "2000s-not-a-teenager",
     "type": "post",
     "url": "/2000s-not-a-teenager/"
-  },
-  {
-    "title": "How To Execute Node Commands To Test With Jest",
-    "description": "This post is a quick summary of running node script execution tests with Jest.",
-    "slug": "jest-exec-test",
-    "type": "post",
-    "url": "/jest-exec-test/"
-  },
-  {
-    "title": "Quick Tutorial: Run Intel Mac Cmds On Your M1 Mac Like a Boss In 5 Minutes",
-    "description": "This document describes solving M1 Mac vs Intel Mac terminal command discrepancies by creating a copy of your terminal and setting it up to run Intel Mac terminal commands using Rosetta.",
-    "slug": "m1-intel-terminal-cmds-like-a-boss",
-    "type": "post",
-    "url": "/m1-intel-terminal-cmds-like-a-boss/"
-  },
-  {
-    "title": "Arrow Function Notes After Watching ES6 For Everyone, Continued",
-    "description": "This post reviews some things about arrow functions that I learned from Wes Bos's ES6 for everyone.",
-    "slug": "arrow-functions-cont",
-    "type": "post",
-    "url": "/arrow-functions-cont/"
-  },
-  {
-    "title": "Week 3, 2017—Releasing ScrollDir, working on interpersonal growth and surfing",
-    "description": "This post summarizes week 3 of 2017. ScrollDir was released and the weather was better so more surfing",
-    "slug": "week-3-17",
-    "type": "post",
-    "url": "/week-3-17/"
-  },
-  {
-    "title": "Week 11, 2017—Got Some Good Surfing In and Felt More Comfortable On My New Project",
-    "description": "Week 11, 2017 was fair. I got some good surfing time on a new fun board and I felt more comfortable in my new position at work.",
-    "slug": "week-11-17",
-    "type": "post",
-    "url": "/week-11-17/"
-  },
-  {
-    "title": "Can Code Review Etiquette be a thing? Here are some starter thoughts on it.",
-    "description": "Code Review Etiquette is an important for code quality, engineer happiness, and engineer growth—but is never talked about?",
-    "slug": "code-review-etiquette",
-    "type": "post",
-    "url": "/code-review-etiquette/"
-  },
-  {
-    "title": "When the AI Token Gravy Train Stops: My approximately $150 single hour Claude Code Cost Wake-up Call",
-    "description": "This post covers my AI token usage journey and what happened when limitless AI usage hit reality and became limited. I go into my evolution, how it happened, and what I am doing to fix the issue",
-    "slug": "expensive-ai",
-    "type": "post",
-    "url": "/expensive-ai/"
-  },
-  {
-    "title": "Rant: HTML is easy and that's why we all write it wrong!",
-    "description": "Rant post  about potential gains from understanding and being more thoughtful when writing html.",
-    "slug": "html-is-easy",
-    "type": "post",
-    "url": "/html-is-easy/"
-  },
-  {
-    "title": "All about Sticky Navs & what happens to them on devices",
-    "description": "Creating a sticky nav that works while scrolling is a difficult issue that must be solved, many sites navigations are set to fixed position",
-    "slug": "device-stickybits-on-scroll",
-    "type": "post",
-    "url": "/device-stickybits-on-scroll/"
-  },
-  {
-    "title": "Some great memories have Lauren in the foreground",
-    "description": "Recently, I lost a friend. Lauren Schlueter was a friend of mine who helped me through laughter. She was a historian, a teacher and a comedian.",
-    "slug": "losing-a-friend",
-    "type": "post",
-    "url": "/losing-a-friend/"
-  },
-  {
-    "title": "Reframing content responsively with Reframe.js",
-    "description": "Reframing content, one of the most important things to present well on a content site is embedded content.",
-    "slug": "reframing-content",
-    "type": "post",
-    "url": "/reframing-content/"
-  },
-  {
-    "title": "Week 16, great surfing week and feeling tired from feeling busy",
-    "description": "Week 16, I had a great week surfing and felt pretty tired besides that.",
-    "slug": "week-16-17",
-    "type": "post",
-    "url": "/week-16-17/"
-  },
-  {
-    "title": "Week 4, 2017—Great surfing and improving negotiation skills",
-    "description": "This post summarizes week 4 of 2017. Southern California had a lot of good surfing",
-    "slug": "week-4-17",
-    "type": "post",
-    "url": "/week-4-17/"
-  },
-  {
-    "title": "Week 6, 2017—Looking for rainbows in the rain, shipping analytics and best friends",
-    "description": "Week 6, 2017—This week we shipped analytics at work. I had some of my best friends in town and we surfed and explored some spots in Malibu.",
-    "slug": "week-6-17",
-    "type": "post",
-    "url": "/week-6-17/"
-  },
-  {
-    "title": "Week 14, releasing analytics updates and my first trip South in 2017",
-    "description": "Week 14, I'm releasing a new analytics product and I was able to stay in Encinitas which  for the weekend.",
-    "slug": "week-14-17",
-    "type": "post",
-    "url": "/week-14-17/"
-  },
-  {
-    "title": "Popular JavaScript tools in (mid) 2017",
-    "description": "JavaScript tools in 2017 as defined by Jeff Wainwright for the context of blog posts.",
-    "slug": "javascript-software-mid-2017",
-    "type": "post",
-    "url": "/javascript-software-mid-2017/"
-  },
-  {
-    "title": "Less used & known CSS selectors, aka attribute selectors",
-    "description": "Less known CSS selectors, aka attribute selectors",
-    "slug": "css-less-known-selectors",
-    "type": "post",
-    "url": "/css-less-known-selectors/"
-  },
-  {
-    "title": "2017 Labor Day Week in Dallas",
-    "description": "This year I, Jeff Wainwright, spent Labor Day in Dallas with friends.",
-    "slug": "labor-day-week",
-    "type": "post",
-    "url": "/labor-day-week/"
-  },
-  {
-    "title": "Watching the sunset from Malaga Cove, waiting for ships to come in",
-    "description": "Malaga Cove in Palos Verdes, California is a great spot to catch the sunset. At sunset, it's a place were families, couples, and sometimes dreamers go to watch the sunset. At sunset on Sunday, I watched one particular person stare longly against the sunset. It appeared they were waiting for their ships to come in.",
-    "slug": "ships-coming-in",
-    "type": "post",
-    "url": "/ships-coming-in/"
-  },
-  {
-    "title": "Normalize.css, or not? Here are some considerations",
-    "description": "Normalizing CSS has been a default part of front-end projects for years. This post questions that and provides some points on why normalizing css may not be needed.",
-    "slug": "normalize-css-or-not",
-    "type": "post",
-    "url": "/normalize-css-or-not/"
-  },
-  {
-    "title": "Listening to what is most important to others is hard. What if there was a highlighter for spoken words?",
-    "description": "This post discusses how hard it for listeners to fully understand what a speaker is communicating. Misinterpretation happens often. What verbal tools can be used to improve interpretation? Perhaps, imagining a spoken word highlighter pen so that speakers could highlight their key points could help.",
-    "slug": "if-i-had-a-highlighter",
-    "type": "post",
-    "url": "/if-i-had-a-highlighter/"
-  },
-  {
-    "title": "Week 34, Finding Fun In Nature Again After A Few Months Away",
-    "description": "Week 34, I was able to do some trail running after a few months of not running",
-    "slug": "week-34-17",
-    "type": "post",
-    "url": "/week-34-17/"
-  },
-  {
-    "title": "Week 2, 2017—run, rocks, rain; I couldn't surf but I definitely played in the rain",
-    "description": "This post summarizes week 2 of 2017. It included a little surfing, rock climbing, running and definitely a lot of programming.",
-    "slug": "week-2-17",
-    "type": "post",
-    "url": "/week-2-17/"
-  },
-  {
-    "title": "Week 12, 2017—getting the opportunity to listen see a new place",
-    "description": "Week 12, I was given the opportunity to catch up with some people I care about and visit Wrightwood, CA for the first time.",
-    "slug": "week-12-17",
-    "type": "post",
-    "url": "/week-12-17/"
   },
   {
     "title": "The 4 Categories of Frontend JavaScript Projects",
@@ -336,32 +14,25 @@
     "url": "/4-categories-js-projects/"
   },
   {
-    "title": "Happy Birthday, a project to say happy birthday",
-    "description": "A post which creates letters with the body that spell out Happy Birthday!",
-    "slug": "happy-birthday",
+    "title": "About me, Jeff Wainwright, a husband, dad, and software engineer in Los Angeles",
+    "description": "This is the About page of, me, Jeff Wainwright, \"yowainwright\" on the internet. I'm a husband, dad, software engineer, artist, and person who enjoys athletics, living in Los Angeles.",
+    "slug": "about",
     "type": "post",
-    "url": "/happy-birthday/"
+    "url": "/about/"
   },
   {
-    "title": "Making a CSS Font Partial",
-    "description": "Making a maintainable CSS font partial.",
-    "slug": "css-font-partial",
+    "title": "Arrow Function Notes After Watching ES6 For Everyone, Continued",
+    "description": "This post reviews some things about arrow functions that I learned from Wes Bos's ES6 for everyone.",
+    "slug": "arrow-functions-cont",
     "type": "post",
-    "url": "/css-font-partial/"
+    "url": "/arrow-functions-cont/"
   },
   {
-    "title": "GMR a road cycling paradise",
-    "description": "Glendora Mountain Road is a road cycling paradise",
-    "slug": "glendora-mountain-road",
+    "title": "Arrow Function Notes  After Watching ES6 For Everyone",
+    "description": "This post reviews some things about arrow functions that I learned from Wes Bos's ES6 for everyone.",
+    "slug": "arrow-functions",
     "type": "post",
-    "url": "/glendora-mountain-road/"
-  },
-  {
-    "title": "Digging into Sinon Fake Server Methods",
-    "description": "Digging into Sinon Fake Server Methods and how to use them.",
-    "slug": "sinon-fake-server-methods",
-    "type": "post",
-    "url": "/sinon-fake-server-methods/"
+    "url": "/arrow-functions/"
   },
   {
     "title": "Art Lived, A Story Of How A Painting Was Given, Lost & Found",
@@ -371,102 +42,11 @@
     "url": "/art-lived/"
   },
   {
-    "title": "Debugging email share links",
-    "description": "Email share links are often disregarded as simple but there are a few challenges to be aware of",
-    "slug": "email-share-link",
+    "title": "Reenvisioning branded content at Dollar Shave Club",
+    "description": "Reenvisioning branded content at Dollar Shave Club.",
+    "slug": "branded-content",
     "type": "post",
-    "url": "/email-share-link/"
-  },
-  {
-    "title": "A 'little deep' dive into Dependabot and Snyk Ingore Configs",
-    "description": "This article focuses on Snyk and Dependabots' ignore configs (ignores) from a DevX perspective.",
-    "slug": "snyk-dependabot-ignore-configs",
-    "type": "post",
-    "url": "/snyk-dependabot-ignore-configs/"
-  },
-  {
-    "title": "Friction and the Beauty it can create",
-    "description": "Friction sculpted this range of land. What devastation?—What destruction led to this moment? I cannot even comprehend! But, I appreciate that somehow, after it all, it is so beautiful.",
-    "slug": "friction",
-    "type": "post",
-    "url": "/friction/"
-  },
-  {
-    "title": "Quick Thought: Does it feel like JavaScript and Node are in a strange place?",
-    "description": "It feels sorta like JavaScript and Node are in a weird place. They've greatly improved but are we using them for things we shouldn't?",
-    "slug": "js-node-strange-place",
-    "type": "post",
-    "url": "/js-node-strange-place/"
-  },
-  {
-    "title": "It's amazing the way that things change and William Kentridge",
-    "description": "It's amazing the way things change. I, Jeff Wainwright, discuss myself and the first time I saw a William Kentridge exhibit",
-    "slug": "things-change-william-kentridge",
-    "type": "post",
-    "url": "/things-change-william-kentridge/"
-  },
-  {
-    "title": "Glide Carousel, a easy to use slider for Semantic UI",
-    "description": "This is a demo on how to use the Glide Carousel with Semantic UI",
-    "slug": "glide-carousel",
-    "type": "post",
-    "url": "/glide-carousel/"
-  },
-  {
-    "title": "Week 18, a trip to the North West to celebrate my sister's birthday",
-    "description": "Week 18, a trip to the North West to celebrate my sister's birthday",
-    "slug": "week-18-17",
-    "type": "post",
-    "url": "/week-18-17/"
-  },
-  {
-    "title": "Week 8, 2017—Losing a few friends, being sick, transitioning and writing some code",
-    "description": "Week 8, 2017—This week I was sick, lost a few friends and started to do some transitioning.",
-    "slug": "week-8-17",
-    "type": "post",
-    "url": "/week-8-17/"
-  },
-  {
-    "title": "Being a US-based Software Engineer in 2025; is it what it used to be?",
-    "description": "The quick article provides a data-driven look at US-based software engineering employment trends in 2025: relating current swe trends, recent swe trends, pre-covid, and US job labor trends over the last 45 years.",
-    "slug": "us-swe-economy-2025",
-    "type": "post",
-    "url": "/us-swe-economy-2025/"
-  },
-  {
-    "title": "A-ha Moments Writing Simple JavaScript Plugins",
-    "description": "Moments writing JavaScript Plugins",
-    "slug": "making-a-js-plugin",
-    "type": "post",
-    "url": "/making-a-js-plugin/"
-  },
-  {
-    "title": "Discussing Javascript Scope, let's keep it between us",
-    "description": "Discussing Javascript Scope & terms that are discussed when talking about it",
-    "slug": "js-scope",
-    "type": "post",
-    "url": "/js-scope/"
-  },
-  {
-    "title": "Week 33, laying low but focused",
-    "description": "Laying low but staying focused on coding, running and writing.",
-    "slug": "laying-low",
-    "type": "post",
-    "url": "/laying-low/"
-  },
-  {
-    "title": "Document Cookies Are a Useful Tool With A Simple API With Some Nunaces",
-    "description": "This brief artice covers nuances of document.cookie and how to use it to store and access data.",
-    "slug": "document-cookie-nuances",
-    "type": "post",
-    "url": "/document-cookie-nuances/"
-  },
-  {
-    "title": "Hanging out around White Rock Lake",
-    "description": "Hanging out around White Rock Lake",
-    "slug": "white-rock-lake",
-    "type": "post",
-    "url": "/white-rock-lake/"
+    "url": "/branded-content/"
   },
   {
     "title": "Quick Tutorial: Build A Basic Dependency Manager Like Dependabot In 5 Minutes",
@@ -476,18 +56,18 @@
     "url": "/build-your-own-dependabot/"
   },
   {
-    "title": "Week 20, code more, surf more—managing time for happiness",
-    "description": "Week 20, figuring out how to code more and surf more—what makes me happy",
-    "slug": "week-20-17",
+    "title": "Understanding the basics parts of a CLI command",
+    "description": "This brief article digs into the basics of most CLI commands including a summary of the commands's name, arguments, options, and actions.",
+    "slug": "cli-program-basic-parts",
     "type": "post",
-    "url": "/week-20-17/"
+    "url": "/cli-program-basic-parts/"
   },
   {
-    "title": "Template Strings and Template Tagging After Watching ES6 For Everyone",
-    "description": "This post summarizes my notes on template strings and template tagging after watching Wes Bos's ES6 For Everyone",
-    "slug": "js-template-strings",
+    "title": "Can Code Review Etiquette be a thing? Here are some starter thoughts on it.",
+    "description": "Code Review Etiquette is an important for code quality, engineer happiness, and engineer growth—but is never talked about?",
+    "slug": "code-review-etiquette",
     "type": "post",
-    "url": "/js-template-strings/"
+    "url": "/code-review-etiquette/"
   },
   {
     "title": "Creating Aliases on a Mac",
@@ -497,60 +77,67 @@
     "url": "/creating-aliases-mac/"
   },
   {
-    "title": "You're an Ortiz, how I gained family & through them things changed for the better",
-    "description": "A short story about moving out of the a bad situation & into a good one",
-    "slug": "youre-an-ortiz",
+    "title": "Making a CSS Font Partial",
+    "description": "Making a maintainable CSS font partial.",
+    "slug": "css-font-partial",
     "type": "post",
-    "url": "/youre-an-ortiz/"
+    "url": "/css-font-partial/"
   },
   {
-    "title": "About me, Jeff Wainwright, a husband, dad, and software engineer in Los Angeles",
-    "description": "This is the About page of, me, Jeff Wainwright, \"yowainwright\" on the internet. I'm a husband, dad, software engineer, artist, and person who enjoys athletics, living in Los Angeles.",
-    "slug": "about",
+    "title": "Less used & known CSS selectors, aka attribute selectors",
+    "description": "Less known CSS selectors, aka attribute selectors",
+    "slug": "css-less-known-selectors",
     "type": "post",
-    "url": "/about/"
+    "url": "/css-less-known-selectors/"
   },
   {
-    "title": "Creating private information in JavaScript",
-    "description": "Creating a private information in JavaScript to be used in future functions",
-    "slug": "js-private-information",
+    "title": "Creating beautiful layouts by setting element widths with calc",
+    "description": "Use css calc values to set the width of elements within content blocks & create beautiful layouts, for devices especially",
+    "slug": "css-pretty-widths-with-calc",
     "type": "post",
-    "url": "/js-private-information/"
+    "url": "/css-pretty-widths-with-calc/"
   },
   {
-    "title": "Week 9, 2017—Getting Back to Surfing, Changing Teams and Feeling Beta",
-    "description": "Week 9, 2017—This week I was feeling pretty beta after changing teams, recovering from being sick and getting back to surfing.",
-    "slug": "week-9-17",
+    "title": "Using ES6 Function Destructuring with JavaScript Plugin Options",
+    "description": "This post explains how to use ES6 function destructuring for more readable JavaScript Plugin Options.",
+    "slug": "destructing-function-opts",
     "type": "post",
-    "url": "/week-9-17/"
+    "url": "/destructing-function-opts/"
   },
   {
-    "title": "Javascript's keyword this; THIS is what I'm talking about!",
-    "description": "This post goes into Javascript's keyword this, how it is defined & why it is misunderstood",
-    "slug": "js-keyword-this",
+    "title": "All about Sticky Navs & what happens to them on devices",
+    "description": "Creating a sticky nav that works while scrolling is a difficult issue that must be solved, many sites navigations are set to fixed position",
+    "slug": "device-stickybits-on-scroll",
     "type": "post",
-    "url": "/js-keyword-this/"
+    "url": "/device-stickybits-on-scroll/"
   },
   {
-    "title": "Switching Static Site Generators",
-    "description": "Switching Site Generators, hiccups in between, and why I switched to Gatsby",
-    "slug": "switching-site-generators",
+    "title": "Document Cookies Are a Useful Tool With A Simple API With Some Nunaces",
+    "description": "This brief artice covers nuances of document.cookie and how to use it to store and access data.",
+    "slug": "document-cookie-nuances",
     "type": "post",
-    "url": "/switching-site-generators/"
+    "url": "/document-cookie-nuances/"
   },
   {
-    "title": "Updating Git Tags That Have Been Pushed",
-    "description": "This post instructs how to update git tags after they've been pushed",
-    "slug": "git-tag-update",
+    "title": "Debugging email share links",
+    "description": "Email share links are often disregarded as simple but there are a few challenges to be aware of",
+    "slug": "email-share-link",
     "type": "post",
-    "url": "/git-tag-update/"
+    "url": "/email-share-link/"
   },
   {
-    "title": "Week 19, mislabeled mountains and other things I enjoy",
-    "description": "Week 19, mislabeled mountains and other things I enjoy.",
-    "slug": "week-19-17",
+    "title": "When the AI Token Gravy Train Stops: My approximately $150 single hour Claude Code Cost Wake-up Call",
+    "description": "This post covers my AI token usage journey and what happened when limitless AI usage hit reality and became limited. I go into my evolution, how it happened, and what I am doing to fix the issue",
+    "slug": "expensive-ai",
     "type": "post",
-    "url": "/week-19-17/"
+    "url": "/expensive-ai/"
+  },
+  {
+    "title": "First Post in Bit, This Is Why",
+    "description": "I stopped posting on this blog in September last year, 2017. It was an easy decision to make then. There were specific reasons I stopped, but I couldn't articulate them.",
+    "slug": "first-post-in-a-bit",
+    "type": "post",
+    "url": "/first-post-in-a-bit/"
   },
   {
     "title": "AWW—A Formula For Writing Git Commits",
@@ -560,10 +147,423 @@
     "url": "/formula-for-commits/"
   },
   {
+    "title": "Friction and the Beauty it can create",
+    "description": "Friction sculpted this range of land. What devastation?—What destruction led to this moment? I cannot even comprehend! But, I appreciate that somehow, after it all, it is so beautiful.",
+    "slug": "friction",
+    "type": "post",
+    "url": "/friction/"
+  },
+  {
+    "title": "TypeScript Init—Getting A Test Driven TypeScript Repository Setup",
+    "description": "This post documents getting setup with TypeScript—just beyond the Gettings Started TypeScript Tutorials. In this Post I will go through setting up a Test Driven TypeScript project.",
+    "slug": "getting-setup-with-ts",
+    "type": "post",
+    "url": "/getting-setup-with-ts/"
+  },
+  {
+    "title": "Updating Git Tags That Have Been Pushed",
+    "description": "This post instructs how to update git tags after they've been pushed",
+    "slug": "git-tag-update",
+    "type": "post",
+    "url": "/git-tag-update/"
+  },
+  {
+    "title": "GMR a road cycling paradise",
+    "description": "Glendora Mountain Road is a road cycling paradise",
+    "slug": "glendora-mountain-road",
+    "type": "post",
+    "url": "/glendora-mountain-road/"
+  },
+  {
+    "title": "Glide Carousel, a easy to use slider for Semantic UI",
+    "description": "This is a demo on how to use the Glide Carousel with Semantic UI",
+    "slug": "glide-carousel",
+    "type": "post",
+    "url": "/glide-carousel/"
+  },
+  {
+    "title": "Happy Birthday, a project to say happy birthday",
+    "description": "A post which creates letters with the body that spell out Happy Birthday!",
+    "slug": "happy-birthday",
+    "type": "post",
+    "url": "/happy-birthday/"
+  },
+  {
+    "title": "Rant: HTML is easy and that's why we all write it wrong!",
+    "description": "Rant post  about potential gains from understanding and being more thoughtful when writing html.",
+    "slug": "html-is-easy",
+    "type": "post",
+    "url": "/html-is-easy/"
+  },
+  {
+    "title": "Listening to what is most important to others is hard. What if there was a highlighter for spoken words?",
+    "description": "This post discusses how hard it for listeners to fully understand what a speaker is communicating. Misinterpretation happens often. What verbal tools can be used to improve interpretation? Perhaps, imagining a spoken word highlighter pen so that speakers could highlight their key points could help.",
+    "slug": "if-i-had-a-highlighter",
+    "type": "post",
+    "url": "/if-i-had-a-highlighter/"
+  },
+  {
+    "title": "Popular JavaScript tools in (mid) 2017",
+    "description": "JavaScript tools in 2017 as defined by Jeff Wainwright for the context of blog posts.",
+    "slug": "javascript-software-mid-2017",
+    "type": "post",
+    "url": "/javascript-software-mid-2017/"
+  },
+  {
+    "title": "How To Execute Node Commands To Test With Jest",
+    "description": "This post is a quick summary of running node script execution tests with Jest.",
+    "slug": "jest-exec-test",
+    "type": "post",
+    "url": "/jest-exec-test/"
+  },
+  {
+    "title": "Javascript for loop & the argument key word",
+    "description": "Javascript for loop & the argument key word defined & why it is misunderstood",
+    "slug": "js-argument-key-word",
+    "type": "post",
+    "url": "/js-argument-key-word/"
+  },
+  {
+    "title": "Javascript Closure all wrapped up & why",
+    "description": "Understanding Javascript Closure & what it does",
+    "slug": "js-closure",
+    "type": "post",
+    "url": "/js-closure/"
+  },
+  {
+    "title": "JavaScript is relatable",
+    "description": "JavaScript is for the people because it is relatable and usable.",
+    "slug": "js-is-relatable",
+    "type": "post",
+    "url": "/js-is-relatable/"
+  },
+  {
+    "title": "Javascript's keyword this; THIS is what I'm talking about!",
+    "description": "This post goes into Javascript's keyword this, how it is defined & why it is misunderstood",
+    "slug": "js-keyword-this",
+    "type": "post",
+    "url": "/js-keyword-this/"
+  },
+  {
+    "title": "Quick Thought: Does it feel like JavaScript and Node are in a strange place?",
+    "description": "It feels sorta like JavaScript and Node are in a weird place. They've greatly improved but are we using them for things we shouldn't?",
+    "slug": "js-node-strange-place",
+    "type": "post",
+    "url": "/js-node-strange-place/"
+  },
+  {
+    "title": "Understanding Javascript Objects - static objects to classes",
+    "description": "Understanding JavaScript Objects, from static objects to classes",
+    "slug": "js-objects",
+    "type": "post",
+    "url": "/js-objects/"
+  },
+  {
+    "title": "Creating private information in JavaScript",
+    "description": "Creating a private information in JavaScript to be used in future functions",
+    "slug": "js-private-information",
+    "type": "post",
+    "url": "/js-private-information/"
+  },
+  {
+    "title": "Discussing Javascript Scope, let's keep it between us",
+    "description": "Discussing Javascript Scope & terms that are discussed when talking about it",
+    "slug": "js-scope",
+    "type": "post",
+    "url": "/js-scope/"
+  },
+  {
+    "title": "Template Strings and Template Tagging After Watching ES6 For Everyone",
+    "description": "This post summarizes my notes on template strings and template tagging after watching Wes Bos's ES6 For Everyone",
+    "slug": "js-template-strings",
+    "type": "post",
+    "url": "/js-template-strings/"
+  },
+  {
+    "title": "2017 Labor Day Week in Dallas",
+    "description": "This year I, Jeff Wainwright, spent Labor Day in Dallas with friends.",
+    "slug": "labor-day-week",
+    "type": "post",
+    "url": "/labor-day-week/"
+  },
+  {
+    "title": "Week 33, laying low but focused",
+    "description": "Laying low but staying focused on coding, running and writing.",
+    "slug": "laying-low",
+    "type": "post",
+    "url": "/laying-low/"
+  },
+  {
     "title": "Let the dream live! Unless dreams have actionable plans, they're not real—so let them live if they bring happiness.",
     "description": "Pragmatism has often told me that dreams cannot become real unless they're followed by an actionable plan. I've share this logic with friends when they tell me an unrealistic dream and to my surprise, 'thanks' was not the typical response. Responses tended to be negative. Dreams are often just that, dreams. Let then live if they make others happy.",
     "slug": "let-the-dream-live",
     "type": "post",
     "url": "/let-the-dream-live/"
+  },
+  {
+    "title": "Enabling Intelligent Tab Completion in Zsh without High Memory Usage",
+    "description": "This post provides quick tips on how to enable Zsh Tab Completion to provide intelligent completion in Zsh without the bloat.",
+    "slug": "lightweight-intelligent-completion-in-zsh",
+    "type": "post",
+    "url": "/lightweight-intelligent-completion-in-zsh/"
+  },
+  {
+    "title": "Some great memories have Lauren in the foreground",
+    "description": "Recently, I lost a friend. Lauren Schlueter was a friend of mine who helped me through laughter. She was a historian, a teacher and a comedian.",
+    "slug": "losing-a-friend",
+    "type": "post",
+    "url": "/losing-a-friend/"
+  },
+  {
+    "title": "Setting update Gatsby Development on an M1 Mac Mini",
+    "description": "A post providing context into setting up an M1 Mac for Gatsby development and 1 happy path to get up and running with Gatsby on a M1 Mac fast!",
+    "slug": "m1-chip-gatsby-setup",
+    "type": "post",
+    "url": "/m1-chip-gatsby-setup/"
+  },
+  {
+    "title": "Quick Tutorial: Run Intel Mac Cmds On Your M1 Mac Like a Boss In 5 Minutes",
+    "description": "This document describes solving M1 Mac vs Intel Mac terminal command discrepancies by creating a copy of your terminal and setting it up to run Intel Mac terminal commands using Rosetta.",
+    "slug": "m1-intel-terminal-cmds-like-a-boss",
+    "type": "post",
+    "url": "/m1-intel-terminal-cmds-like-a-boss/"
+  },
+  {
+    "title": "A-ha Moments Writing Simple JavaScript Plugins",
+    "description": "Moments writing JavaScript Plugins",
+    "slug": "making-a-js-plugin",
+    "type": "post",
+    "url": "/making-a-js-plugin/"
+  },
+  {
+    "title": "Moments Between Words—Simple Communication and Observations of Quick Ways To Make Others Feel Good",
+    "description": "This post observes how different communication can be from intent to reception. It focuses on observations on simple comunications.",
+    "slug": "making-others-feel-good-with-basics",
+    "type": "post",
+    "url": "/making-others-feel-good-with-basics/"
+  },
+  {
+    "title": "Normalize.css, or not? Here are some considerations",
+    "description": "Normalizing CSS has been a default part of front-end projects for years. This post questions that and provides some points on why normalizing css may not be needed.",
+    "slug": "normalize-css-or-not",
+    "type": "post",
+    "url": "/normalize-css-or-not/"
+  },
+  {
+    "title": "Reframing content responsively with Reframe.js",
+    "description": "Reframing content, one of the most important things to present well on a content site is embedded content.",
+    "slug": "reframing-content",
+    "type": "post",
+    "url": "/reframing-content/"
+  },
+  {
+    "title": "Shiki Syntax Highlighting: More features for markdown",
+    "description": "Comprehensive Shiki syntax highlighting implementation with custom themes, diff notation, line highlighting, focus modes, error annotations, interactive copy buttons, and optimized Sass architecture using a scalable variable system.",
+    "slug": "shiki-syntax",
+    "type": "post",
+    "url": "/shiki-syntax/"
+  },
+  {
+    "title": "Watching the sunset from Malaga Cove, waiting for ships to come in",
+    "description": "Malaga Cove in Palos Verdes, California is a great spot to catch the sunset. At sunset, it's a place were families, couples, and sometimes dreamers go to watch the sunset. At sunset on Sunday, I watched one particular person stare longly against the sunset. It appeared they were waiting for their ships to come in.",
+    "slug": "ships-coming-in",
+    "type": "post",
+    "url": "/ships-coming-in/"
+  },
+  {
+    "title": "Digging into Sinon Fake Server Methods",
+    "description": "Digging into Sinon Fake Server Methods and how to use them.",
+    "slug": "sinon-fake-server-methods",
+    "type": "post",
+    "url": "/sinon-fake-server-methods/"
+  },
+  {
+    "title": "A 'little deep' dive into Dependabot and Snyk Ingore Configs",
+    "description": "This article focuses on Snyk and Dependabots' ignore configs (ignores) from a DevX perspective.",
+    "slug": "snyk-dependabot-ignore-configs",
+    "type": "post",
+    "url": "/snyk-dependabot-ignore-configs/"
+  },
+  {
+    "title": "Switching Static Site Generators",
+    "description": "Switching Site Generators, hiccups in between, and why I switched to Gatsby",
+    "slug": "switching-site-generators",
+    "type": "post",
+    "url": "/switching-site-generators/"
+  },
+  {
+    "title": "It's amazing the way that things change and William Kentridge",
+    "description": "It's amazing the way things change. I, Jeff Wainwright, discuss myself and the first time I saw a William Kentridge exhibit",
+    "slug": "things-change-william-kentridge",
+    "type": "post",
+    "url": "/things-change-william-kentridge/"
+  },
+  {
+    "title": "Being a US-based Software Engineer in 2025; is it what it used to be?",
+    "description": "The quick article provides a data-driven look at US-based software engineering employment trends in 2025: relating current swe trends, recent swe trends, pre-covid, and US job labor trends over the last 45 years.",
+    "slug": "us-swe-economy-2025",
+    "type": "post",
+    "url": "/us-swe-economy-2025/"
+  },
+  {
+    "title": "Week 1, 2017—the weather was rainy but the surf was great!",
+    "description": "This post summarizes week 1 of 2017",
+    "slug": "week-1-17",
+    "type": "post",
+    "url": "/week-1-17/"
+  },
+  {
+    "title": "Week 11, 2017—Got Some Good Surfing In and Felt More Comfortable On My New Project",
+    "description": "Week 11, 2017 was fair. I got some good surfing time on a new fun board and I felt more comfortable in my new position at work.",
+    "slug": "week-11-17",
+    "type": "post",
+    "url": "/week-11-17/"
+  },
+  {
+    "title": "Week 12, 2017—getting the opportunity to listen see a new place",
+    "description": "Week 12, I was given the opportunity to catch up with some people I care about and visit Wrightwood, CA for the first time.",
+    "slug": "week-12-17",
+    "type": "post",
+    "url": "/week-12-17/"
+  },
+  {
+    "title": "Week 13, 2017—camping above Ojai on Highway 33, surfing and other things",
+    "description": "Week 13, I am doing it—camping above Ojai, surfing and finding to code.",
+    "slug": "week-13-17",
+    "type": "post",
+    "url": "/week-13-17/"
+  },
+  {
+    "title": "Week 14, releasing analytics updates and my first trip South in 2017",
+    "description": "Week 14, I'm releasing a new analytics product and I was able to stay in Encinitas which  for the weekend.",
+    "slug": "week-14-17",
+    "type": "post",
+    "url": "/week-14-17/"
+  },
+  {
+    "title": "Week 15, was about being a good friend, surfing and gaining momentum on another open source project.",
+    "description": "Week 15, I was trying to be a good friend, surf, and gain momentum on StickyBits—an open source project I did.",
+    "slug": "week-15-17",
+    "type": "post",
+    "url": "/week-15-17/"
+  },
+  {
+    "title": "Week 16, great surfing week and feeling tired from feeling busy",
+    "description": "Week 16, I had a great week surfing and felt pretty tired besides that.",
+    "slug": "week-16-17",
+    "type": "post",
+    "url": "/week-16-17/"
+  },
+  {
+    "title": "Week 17, dealing with an ankle injury and using an observer and/or a mediator pattern",
+    "description": "Week 17, I was dealing with an ankle injury and using an observer to fix race conditions",
+    "slug": "week-17-17",
+    "type": "post",
+    "url": "/week-17-17/"
+  },
+  {
+    "title": "Week 18, a trip to the North West to celebrate my sister's birthday",
+    "description": "Week 18, a trip to the North West to celebrate my sister's birthday",
+    "slug": "week-18-17",
+    "type": "post",
+    "url": "/week-18-17/"
+  },
+  {
+    "title": "Week 19, mislabeled mountains and other things I enjoy",
+    "description": "Week 19, mislabeled mountains and other things I enjoy.",
+    "slug": "week-19-17",
+    "type": "post",
+    "url": "/week-19-17/"
+  },
+  {
+    "title": "Week 2, 2017—run, rocks, rain; I couldn't surf but I definitely played in the rain",
+    "description": "This post summarizes week 2 of 2017. It included a little surfing, rock climbing, running and definitely a lot of programming.",
+    "slug": "week-2-17",
+    "type": "post",
+    "url": "/week-2-17/"
+  },
+  {
+    "title": "Week 20, code more, surf more—managing time for happiness",
+    "description": "Week 20, figuring out how to code more and surf more—what makes me happy",
+    "slug": "week-20-17",
+    "type": "post",
+    "url": "/week-20-17/"
+  },
+  {
+    "title": "Week 3, 2017—Releasing ScrollDir, working on interpersonal growth and surfing",
+    "description": "This post summarizes week 3 of 2017. ScrollDir was released and the weather was better so more surfing",
+    "slug": "week-3-17",
+    "type": "post",
+    "url": "/week-3-17/"
+  },
+  {
+    "title": "Week 34, Finding Fun In Nature Again After A Few Months Away",
+    "description": "Week 34, I was able to do some trail running after a few months of not running",
+    "slug": "week-34-17",
+    "type": "post",
+    "url": "/week-34-17/"
+  },
+  {
+    "title": "Week 4, 2017—Great surfing and improving negotiation skills",
+    "description": "This post summarizes week 4 of 2017. Southern California had a lot of good surfing",
+    "slug": "week-4-17",
+    "type": "post",
+    "url": "/week-4-17/"
+  },
+  {
+    "title": "Week 5, 2017—Analytics Tech and Viewing Ocean Caves",
+    "description": "Week 5, 2017—I was able to work on analytics for a current project and see Ocean Caves at Leo Carillo State Beach.",
+    "slug": "week-5-17",
+    "type": "post",
+    "url": "/week-5-17/"
+  },
+  {
+    "title": "Week 6, 2017—Looking for rainbows in the rain, shipping analytics and best friends",
+    "description": "Week 6, 2017—This week we shipped analytics at work. I had some of my best friends in town and we surfed and explored some spots in Malibu.",
+    "slug": "week-6-17",
+    "type": "post",
+    "url": "/week-6-17/"
+  },
+  {
+    "title": "Week 7, 2017—Transitioning and Climbing to Higher Heights and Deeper Turns",
+    "description": "Week 7, 2017—This week I'm beginning to climbing more consistently and catch waves more consistently.",
+    "slug": "week-7-17",
+    "type": "post",
+    "url": "/week-7-17/"
+  },
+  {
+    "title": "Week 8, 2017—Losing a few friends, being sick, transitioning and writing some code",
+    "description": "Week 8, 2017—This week I was sick, lost a few friends and started to do some transitioning.",
+    "slug": "week-8-17",
+    "type": "post",
+    "url": "/week-8-17/"
+  },
+  {
+    "title": "Week 9, 2017—Getting Back to Surfing, Changing Teams and Feeling Beta",
+    "description": "Week 9, 2017—This week I was feeling pretty beta after changing teams, recovering from being sick and getting back to surfing.",
+    "slug": "week-9-17",
+    "type": "post",
+    "url": "/week-9-17/"
+  },
+  {
+    "title": "Hanging out around White Rock Lake",
+    "description": "Hanging out around White Rock Lake",
+    "slug": "white-rock-lake",
+    "type": "post",
+    "url": "/white-rock-lake/"
+  },
+  {
+    "title": "Why Pastoralist: Dependency Overrides Need an Audit Trail",
+    "description": "How Pastoralist can help teams track, scan, and clean npm, yarn, pnpm, and bun dependency overrides, with study notes from OSS projects, cleanup samples, and fork PRs synced on May 25, 2026.",
+    "slug": "why-pastoralist",
+    "type": "post",
+    "url": "/why-pastoralist/"
+  },
+  {
+    "title": "You're an Ortiz, how I gained family & through them things changed for the better",
+    "description": "A short story about moving out of the a bad situation & into a good one",
+    "slug": "youre-an-ortiz",
+    "type": "post",
+    "url": "/youre-an-ortiz/"
   }
 ]

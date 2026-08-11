@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useReducer } from "react";
 import type { AppProps } from "next/app";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "../lib/client/styles/scss/main.scss";
+import { roboto } from "../lib/client/styles/fonts";
 
 import Header from "../lib/components/Header";
 import Footer from "../lib/components/Footer";
@@ -82,9 +83,11 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <DispatchStore.Provider value={dispatch}>
       <GlobalState.Provider value={state}>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
+        <div className={roboto.className}>
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+        </div>
         <GoogleAnalytics gaId="G-5BH1F8XBX5" />
       </GlobalState.Provider>
     </DispatchStore.Provider>
