@@ -1,14 +1,22 @@
 #!/usr/bin/env -S pnpm exec tsx
 
-import { existsSync, writeFileSync, chmodSync, mkdirSync } from "fs";
-import { join } from "path";
+import {
+  chmodSync,
+  existsSync,
+  mkdirSync,
+  readFileSync,
+  writeFileSync,
+} from "node:fs";
+import { join } from "node:path";
 import { createLogger } from "../lib/server/logger";
 
 const log = createLogger("install-hooks");
 
 const HOOKS_DIR = ".git/hooks";
+const MANAGED_HOOK_MARKER = "managed_by=scripts/install-hooks.ts";
 
 const PRE_COMMIT = `#!/usr/bin/env sh
+${MANAGED_HOOK_MARKER}
 set -eu
 
 printf '%s\\n' 'Running pre-commit checks...'
@@ -18,6 +26,7 @@ printf '%s\\n' 'All pre-commit checks passed'
 `;
 
 const COMMIT_MSG = `#!/usr/bin/env sh
+${MANAGED_HOOK_MARKER}
 set -eu
 
 commit_msg=$(cat "$1")
@@ -34,6 +43,7 @@ printf '%s\\n' 'Commit message is valid'
 `;
 
 const POST_MERGE = `#!/usr/bin/env sh
+${MANAGED_HOOK_MARKER}
 set -eu
 
 printf '%s\\n' 'Running post-merge checks...'
@@ -57,6 +67,47 @@ const HOOKS = {
   "post-merge": POST_MERGE,
 };
 
+type HookName = keyof typeof HOOKS;
+
+const LEGACY_BUN_MARKERS: Record<HookName, string> = {
+  "pre-commit": "bun run build:local",
+  "commit-msg": "conventionalCommitPattern",
+  "post-merge": "Dependencies changed, running bun install",
+};
+
+const writeHook = (hookPath: string, hookContent: string) => {
+  writeFileSync(hookPath, hookContent, { mode: 0o755 });
+  chmodSync(hookPath, 0o755);
+};
+
+const isManagedHook = (hookName: HookName, hookContent: string) => {
+  const isCurrentHook = hookContent.includes(MANAGED_HOOK_MARKER);
+  const isLegacyBunHook = hookContent.startsWith("#!/usr/bin/env bun");
+  const hasLegacyMarker = hookContent.includes(LEGACY_BUN_MARKERS[hookName]);
+  const isKnownLegacyHook = isLegacyBunHook && hasLegacyMarker;
+
+  return isCurrentHook || isKnownLegacyHook;
+};
+
+const syncHook = (hookName: HookName) => {
+  const hookPath = join(HOOKS_DIR, hookName);
+  const hookContent = HOOKS[hookName];
+
+  if (!existsSync(hookPath)) {
+    writeHook(hookPath, hookContent);
+    return "installed";
+  }
+
+  const existingContent = readFileSync(hookPath, "utf8");
+  const shouldUpdate =
+    isManagedHook(hookName, existingContent) && existingContent !== hookContent;
+
+  if (!shouldUpdate) return "skipped";
+
+  writeHook(hookPath, hookContent);
+  return "updated";
+};
+
 const installHooks = (): void => {
   const isCI = process.env.CI === "true";
   if (isCI) {
@@ -70,45 +121,15 @@ const installHooks = (): void => {
     return;
   }
 
-  const hooksDir = HOOKS_DIR;
-  if (!existsSync(hooksDir)) {
-    mkdirSync(hooksDir, { recursive: true });
-  }
+  mkdirSync(HOOKS_DIR, { recursive: true });
 
-  let installed = 0;
-  let skipped = 0;
+  const hookNames = Object.keys(HOOKS) as HookName[];
+  const actions = hookNames.map(syncHook);
+  const installed = actions.filter((action) => action === "installed").length;
+  const updated = actions.filter((action) => action === "updated").length;
+  const skipped = actions.filter((action) => action === "skipped").length;
 
-  const hookNames = Object.keys(HOOKS) as Array<keyof typeof HOOKS>;
-  for (const hookName of hookNames) {
-    const hookPath = join(hooksDir, hookName);
-    const hookExists = existsSync(hookPath);
-
-    if (hookExists) {
-      skipped = skipped + 1;
-      continue;
-    }
-
-    const hookContent = HOOKS[hookName];
-    writeFileSync(hookPath, hookContent, { mode: 0o755 });
-    chmodSync(hookPath, 0o755);
-    installed = installed + 1;
-    log.info({ hook: hookName }, "installed hook");
-  }
-
-  const hasInstalledHooks = installed > 0;
-  if (hasInstalledHooks) {
-    log.info({ count: installed }, "installed git hooks");
-  }
-
-  const hasSkippedHooks = skipped > 0;
-  if (hasSkippedHooks) {
-    log.info({ count: skipped }, "skipped existing hooks");
-  }
-
-  const hasNoChanges = installed === 0 && skipped === 0;
-  if (hasNoChanges) {
-    log.info("no hooks to install");
-  }
+  log.info({ installed, updated, skipped }, "synchronized git hooks");
 };
 
 installHooks();
