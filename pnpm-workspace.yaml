@@ -8,7 +8,7 @@ enableGlobalVirtualStore: false
 overrides:
   "@grpc/grpc-js": "1.9.16"
   protobufjs: "7.6.4"
-  undici: "7.28.0"
+  undici: "7.29.0"
 
 onlyBuiltDependencies:
   - "@next/swc"
