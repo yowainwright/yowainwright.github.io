@@ -3,10 +3,7 @@ import path from "node:path";
 import { serialize } from "next-mdx-remote/serialize";
 import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { ensureArray } from "../../client/utils";
-import {
-  DEFAULT_OG_IMAGE,
-  OG_IMAGE_DIR,
-} from "../../components/OgMeta/constants";
+import { DEFAULT_OG_IMAGE, OG_IMAGE_DIR } from "../../components/OgMeta/constants";
 import {
   addHeadingClass,
   getAllPosts,
@@ -15,11 +12,9 @@ import {
   markdownToHtml,
 } from "../markdown";
 import type { PostFrontmatter } from "../markdown/types";
+import { remarkMermaidAssets } from "../markdown/remark-mermaid-assets";
 
-export type PostPageFrontmatter = Omit<
-  PostFrontmatter,
-  "description" | "meta"
-> & {
+export type PostPageFrontmatter = Omit<PostFrontmatter, "description" | "meta"> & {
   description: string | null;
   meta: string | null;
   tags: string[];
@@ -114,8 +109,7 @@ const processMdxTableTitleNode = (
     };
   }
 
-  const isTitledTable =
-    state.pendingTitleNode !== null && node.type === "table";
+  const isTitledTable = state.pendingTitleNode !== null && node.type === "table";
   if (isTitledTable) {
     attachTableTitle(node, state.pendingTitle);
 
@@ -157,14 +151,10 @@ const getPostOgImagePath = (slug: string) => {
     candidateOgImagePath.replace(/^\//, ""),
   );
 
-  return fs.existsSync(candidatePublicPath)
-    ? candidateOgImagePath
-    : DEFAULT_OG_IMAGE;
+  return fs.existsSync(candidatePublicPath) ? candidateOgImagePath : DEFAULT_OG_IMAGE;
 };
 
-const sanitizeFrontmatter = (
-  frontmatter: PostFrontmatter,
-): PostPageFrontmatter =>
+const sanitizeFrontmatter = (frontmatter: PostFrontmatter): PostPageFrontmatter =>
   Object.assign({}, frontmatter, {
     description: frontmatter.description || null,
     meta: frontmatter.meta || null,
@@ -197,40 +187,14 @@ export const buildPostStaticProps = async (
   if (data.isMdx) {
     const rehypeShiki = (await import("@shikijs/rehype")).default;
     const remarkGfm = (await import("remark-gfm")).default;
-    const remarkMermaidjs = (await import("remark-mermaidjs")).default;
     const rehypeSlug = (await import("rehype-slug")).default;
-    const rehypeAutolinkHeadings = (await import("rehype-autolink-headings"))
-      .default;
+    const rehypeAutolinkHeadings = (await import("rehype-autolink-headings")).default;
     const mdxSource = await serialize(data.content || "", {
       mdxOptions: {
         remarkPlugins: [
           remarkGfm,
           remarkMdxTableTitles,
-          [
-            remarkMermaidjs,
-            {
-              launchOptions: getMermaidLaunchOptions(),
-              theme: "base",
-              themeVariables: {
-                primaryColor: "#f2f2f2",
-                primaryTextColor: "#000000",
-                primaryBorderColor: "#0000ff",
-                lineColor: "#0000ff",
-                secondaryColor: "#f9f9f9",
-                tertiaryColor: "#ffffff",
-                background: "#ffffff",
-                mainBkg: "#f2f2f2",
-                secondBkg: "#f9f9f9",
-                tertiaryBkg: "#ffffff",
-                nodeBorder: "#0000ff",
-                clusterBkg: "#f9f9f9",
-                clusterBorder: "#999999",
-                defaultLinkColor: "#0000ff",
-                titleColor: "#000000",
-                edgeLabelBackground: "#ffffff",
-              },
-            },
-          ],
+          [remarkMermaidAssets, { launchOptions: getMermaidLaunchOptions() }],
         ],
         rehypePlugins: [
           rehypeSlug,

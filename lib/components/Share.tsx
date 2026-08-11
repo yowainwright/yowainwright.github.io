@@ -1,14 +1,41 @@
 import React, { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import { ShareProps } from "../types";
-import { HeartButton } from "./HeartButton";
+import { scheduleIdleTask } from "../client/idle";
 import { PixelIcon } from "./PixelIcon";
-import { trackShare, trackComment } from "../../lib/client/analytics";
 
-export const Share = ({
-  path,
-  url = "https://jeffry.in",
-  slug,
-}: ShareProps) => {
+const HeartButton = dynamic(() => import("./HeartButton").then((module) => module.HeartButton), {
+  ssr: false,
+});
+
+const trackShare = async (slug: string) => {
+  const analytics = await import("../client/analytics");
+  await analytics.trackShare(slug);
+};
+
+const trackComment = async (slug: string) => {
+  const analytics = await import("../client/analytics");
+  await analytics.trackComment(slug);
+};
+
+const DeferredHeartButton = ({ slug }: { slug: string }) => {
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => scheduleIdleTask(() => setIsReady(true)), []);
+
+  if (!isReady) {
+    return (
+      <button className="share__button heart-button" aria-label="Love this post">
+        <span className="share__label">Love</span>
+        <PixelIcon name="heart" size={2} />
+      </button>
+    );
+  }
+
+  return <HeartButton slug={slug} />;
+};
+
+export const Share = ({ path, url = "https://jeffry.in", slug }: ShareProps) => {
   const shareLinkText = "Share";
   const copied = "Copied!";
   const [copyText, setCopyText] = useState(shareLinkText);
@@ -32,7 +59,7 @@ export const Share = ({
     setIsCopied(true);
     setCopyText(copied);
     if (slug) {
-      trackShare(slug);
+      void trackShare(slug);
     }
   };
 
@@ -43,7 +70,7 @@ export const Share = ({
       giscusElement.scrollIntoView({ behavior: "smooth" });
     }
     if (slug) {
-      trackComment(slug);
+      void trackComment(slug);
     }
   };
 
@@ -58,7 +85,7 @@ export const Share = ({
           <span className="share__label">Comment</span>
           <PixelIcon name="comment" size={2} />
         </button>
-        {slug && <HeartButton slug={slug} />}
+        {slug && <DeferredHeartButton slug={slug} />}
       </nav>
     </section>
   );
