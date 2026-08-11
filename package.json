@@ -211,5 +211,10 @@
       "severityThreshold": "high",
       "strict": true
     }
+  },
+  "overrides": {
+    "@grpc/grpc-js": "1.9.16",
+    "protobufjs": "7.6.4",
+    "undici": "7.28.0"
   }
 }
