@@ -5,7 +5,8 @@ const SEARCH_DATA_PATH = "/search-data.json";
 let searchDataPromise: Promise<SearchResult[]> | null = null;
 
 const isSearchResult = (value: unknown): value is SearchResult => {
-  if (!value || typeof value !== "object") return false;
+  const isObject = Boolean(value) && typeof value === "object";
+  if (!isObject) return false;
 
   const result = value as Record<string, unknown>;
   const hasValidType = result.type === "post" || result.type === "project";

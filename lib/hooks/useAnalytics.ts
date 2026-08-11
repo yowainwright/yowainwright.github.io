@@ -52,6 +52,8 @@ export function useScrollDepth() {
     };
 
     const trackScrollDepth = () => {
+      if (documentHeight <= 0) return;
+
       const scrollTop = window.scrollY;
       const scrollPercent = Math.round((scrollTop / documentHeight) * 100);
 

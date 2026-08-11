@@ -98,7 +98,7 @@ const createDiagramLink = (assetUrl: string, image: Image): Link => ({
   data: {
     hProperties: {
       className: ["mermaid-chart"],
-      rel: "noopener noreferrer",
+      rel: ["noopener", "noreferrer"],
       target: "_blank",
     },
   },

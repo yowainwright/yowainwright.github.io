@@ -14,6 +14,9 @@ const nextConfig = Object.assign(
     typescript: {
       ignoreBuildErrors: true,
     },
+    experimental: {
+      useTypeScriptCli: true,
+    },
     trailingSlash: true,
     basePath: "",
     sassOptions: {

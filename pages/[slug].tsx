@@ -90,7 +90,8 @@ const deferPostView = (slug: string) => scheduleIdleTask(() => void trackPostVie
 const observeStickyAside = () => {
   const aside = document.querySelector(".aside");
   const postHeader = document.querySelector(".post__header");
-  if (!aside || !postHeader) return;
+  const isMissingStickyElement = !aside || !postHeader;
+  if (isMissingStickyElement) return;
 
   const updateStickyState: IntersectionObserverCallback = ([entry]) => {
     if (!entry) return;
