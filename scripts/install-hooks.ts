@@ -1,12 +1,6 @@
 #!/usr/bin/env -S pnpm exec tsx
 
-import {
-  chmodSync,
-  existsSync,
-  mkdirSync,
-  readFileSync,
-  writeFileSync,
-} from "node:fs";
+import { chmodSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { createLogger } from "../lib/server/logger";
 
@@ -68,11 +62,20 @@ const HOOKS = {
 };
 
 type HookName = keyof typeof HOOKS;
+type HookFingerprint = {
+  checksum: number;
+  length: number;
+};
 
-const LEGACY_BUN_MARKERS: Record<HookName, string> = {
-  "pre-commit": "bun run build:local",
-  "commit-msg": "conventionalCommitPattern",
-  "post-merge": "Dependencies changed, running bun install",
+const LEGACY_HOOK_FINGERPRINTS: Record<HookName, HookFingerprint[]> = {
+  "pre-commit": [
+    { checksum: 3110674589, length: 291 },
+    { checksum: 3996017543, length: 382 },
+    { checksum: 237759147, length: 375 },
+    { checksum: 3879112420, length: 284 },
+  ],
+  "commit-msg": [{ checksum: 3584248908, length: 648 }],
+  "post-merge": [{ checksum: 2275438918, length: 471 }],
 };
 
 const writeHook = (hookPath: string, hookContent: string) => {
@@ -80,11 +83,35 @@ const writeHook = (hookPath: string, hookContent: string) => {
   chmodSync(hookPath, 0o755);
 };
 
-const isManagedHook = (hookName: HookName, hookContent: string) => {
+const updateChecksum = (checksum: number, character: string) => {
+  const characterCode = character.charCodeAt(0);
+  const mixedChecksum = checksum ^ characterCode;
+  const multipliedChecksum = Math.imul(mixedChecksum, 16777619);
+
+  return multipliedChecksum >>> 0;
+};
+
+const getHookFingerprint = (hookContent: string): HookFingerprint => {
+  const characters = Array.from(hookContent);
+  const checksum = characters.reduce(updateChecksum, 2166136261);
+
+  return { checksum, length: hookContent.length };
+};
+
+const matchesFingerprint = (fingerprint: HookFingerprint, candidate: HookFingerprint) => {
+  const hasMatchingChecksum = fingerprint.checksum === candidate.checksum;
+  const hasMatchingLength = fingerprint.length === candidate.length;
+
+  return hasMatchingChecksum && hasMatchingLength;
+};
+
+export const isManagedHook = (hookName: HookName, hookContent: string) => {
   const isCurrentHook = hookContent.includes(MANAGED_HOOK_MARKER);
-  const isLegacyBunHook = hookContent.startsWith("#!/usr/bin/env bun");
-  const hasLegacyMarker = hookContent.includes(LEGACY_BUN_MARKERS[hookName]);
-  const isKnownLegacyHook = isLegacyBunHook && hasLegacyMarker;
+  const hookFingerprint = getHookFingerprint(hookContent);
+  const legacyFingerprints = LEGACY_HOOK_FINGERPRINTS[hookName];
+  const isKnownLegacyHook = legacyFingerprints.some((legacyFingerprint) =>
+    matchesFingerprint(hookFingerprint, legacyFingerprint),
+  );
 
   return isCurrentHook || isKnownLegacyHook;
 };
@@ -99,8 +126,7 @@ const syncHook = (hookName: HookName) => {
   }
 
   const existingContent = readFileSync(hookPath, "utf8");
-  const shouldUpdate =
-    isManagedHook(hookName, existingContent) && existingContent !== hookContent;
+  const shouldUpdate = isManagedHook(hookName, existingContent) && existingContent !== hookContent;
 
   if (!shouldUpdate) return "skipped";
 
