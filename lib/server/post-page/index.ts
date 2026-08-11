@@ -171,6 +171,12 @@ const sanitizeFrontmatter = (
     tags: ensureArray(frontmatter.tags),
   });
 
+const getMermaidLaunchOptions = () => {
+  const executablePath = process.env.MERMAID_BROWSER_PATH;
+
+  return executablePath ? { executablePath } : undefined;
+};
+
 export const buildPostStaticPaths = (contentDir = "content") => {
   const paths = getAllPosts(contentDir).map(({ slug }) => `/${slug}`);
   return {
@@ -203,6 +209,7 @@ export const buildPostStaticProps = async (
           [
             remarkMermaidjs,
             {
+              launchOptions: getMermaidLaunchOptions(),
               theme: "base",
               themeVariables: {
                 primaryColor: "#f2f2f2",

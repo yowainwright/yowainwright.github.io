@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "vitest";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { BarChart } from "../../../../../../lib/components/charts/BarChart";
@@ -15,9 +15,7 @@ const chartData = [
 
 describe("BarChart", () => {
   test("renders normalized chart containers and titles", () => {
-    const markup = renderToStaticMarkup(
-      <BarChart data={chartData} title="Bar Title" />,
-    );
+    const markup = renderToStaticMarkup(<BarChart data={chartData} title="Bar Title" />);
 
     expect(markup).toContain("post__chart");
     expect(markup).toContain("Bar Title");

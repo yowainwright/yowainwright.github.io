@@ -1,14 +1,14 @@
-import { afterEach, beforeEach, describe, expect, mock, test } from "bun:test";
+import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { JSDOM } from "jsdom";
 
 const originalFetch = globalThis.fetch;
 
-mock.module("firebase/app", () => ({
+vi.mock("firebase/app", () => ({
   getApps: () => [],
   initializeApp: () => ({}),
 }));
 
-mock.module("firebase/database", () => ({
+vi.mock("firebase/database", () => ({
   Database: class Database {},
   getDatabase: () => ({}),
   get: async () => ({ val: () => null }),
@@ -21,10 +21,7 @@ mock.module("firebase/database", () => ({
     return () => undefined;
   },
   ref: (_database: unknown, path: string) => ({ path }),
-  runTransaction: async (
-    _reference: unknown,
-    updater: (current: number | null) => number,
-  ) => {
+  runTransaction: async (_reference: unknown, updater: (current: number | null) => number) => {
     updater(0);
   },
 }));
@@ -76,9 +73,7 @@ describe("client auth helpers", () => {
     expect(auth.getStoredToken()).toBe("token-123");
     expect(auth.isAuthenticated()).toBe(true);
     expect(auth.isAllowedUser(user)).toBe(true);
-    expect(
-      auth.isAllowedUser(Object.assign({}, user, { login: "someone-else" })),
-    ).toBe(false);
+    expect(auth.isAllowedUser(Object.assign({}, user, { login: "someone-else" }))).toBe(false);
 
     auth.clearAuth();
 
@@ -98,9 +93,9 @@ describe("client auth helpers", () => {
     sessionStorage.setItem("oauth_state", "state-123");
     globalThis.fetch = mockFetch(Response.json({ user, token: "token-123" }));
 
-    await expect(
-      auth.handleOAuthCallback("code", "wrong-state"),
-    ).rejects.toThrow("Invalid OAuth state");
+    await expect(auth.handleOAuthCallback("code", "wrong-state")).rejects.toThrow(
+      "Invalid OAuth state",
+    );
 
     const result = await auth.handleOAuthCallback("code", "state-123");
 

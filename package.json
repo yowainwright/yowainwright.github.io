@@ -16,23 +16,28 @@
   "type": "module",
   "main": "README.md",
   "scripts": {
-    "prebuild": "playwright install chromium --with-deps",
-    "build": "bun run update-pricing && bun run build:css && bun run build:search && next build && bun run build:rss",
-    "update-pricing": "bun scripts/update-ai-pricing/index.ts",
-    "build:search": "bun scripts/generate-search-data.ts",
-    "build:local": "bun run build:css && next build && bun run build:rss",
-    "build:rss": "bun scripts/rss/index.ts",
-    "build:css": "bun scripts/generate-component-styles.ts && sass --style=compressed lib/client/styles/scss/main.scss public/assets/jeffry.in.css",
+    "build": "tsx scripts/run-task.ts build",
+    "update-pricing": "tsx scripts/update-ai-pricing/index.ts",
+    "build:search": "tsx scripts/generate-search-data.ts",
+    "build:local": "tsx scripts/run-task.ts build-local",
+    "build:rss": "tsx scripts/rss/index.ts",
+    "build:css": "tsx scripts/run-task.ts build-css",
+    "playwright:install": "playwright install chromium --with-deps",
     "dev": "mprocs",
     "dev:next": "next dev --port 34729",
+    "dev:css": "tsx scripts/run-task.ts dev-css",
+    "generate:component-styles": "tsx scripts/generate-component-styles.ts",
+    "typecheck:watch": "tsc --noEmit --watch --pretty",
+    "watch:pricing": "tsx scripts/watch-ai-pricing.ts",
+    "full-rebuild": "tsx scripts/run-task.ts full-rebuild",
     "format": "oxfmt --write \"**/*.{js,jsx,ts,tsx}\" \"!node_modules/**\" \"!public/**\" \"!out/**\" \"!tmp/**\" \"!content/**\" --threads=1",
     "format:check": "oxfmt --check \"**/*.{js,jsx,ts,tsx}\" \"!node_modules/**\" \"!public/**\" \"!out/**\" \"!tmp/**\" \"!content/**\" --threads=1",
     "lint": "oxlint -c .oxlintrc.json .",
     "lint:fix": "oxlint -c .oxlintrc.json . --fix",
-    "test": "bun test",
-    "prepare": "bun scripts/install-hooks.ts && bun run update && bun run maintain",
+    "test": "vitest run",
+    "prepare": "tsx scripts/install-hooks.ts",
     "start": "next start",
-    "update": "bun run update:packages && bun run update:actions",
+    "update": "tsx scripts/run-task.ts update",
     "update:packages": "codependence --config package.json --update",
     "update:actions": "codependence --config .codependencerc --update",
     "maintain": "pastoralist"
@@ -54,7 +59,7 @@
     "fuse.js": "7.1.0",
     "lucide-react": "0.542.0",
     "next": "16.3.0",
-    "next-mdx-remote": "5.0.0",
+    "next-mdx-remote": "6.0.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "react-zoom-pan-pinch": "3.7.0",
@@ -67,8 +72,9 @@
     "@shikijs/colorized-brackets": "1.29.2",
     "@shikijs/rehype": "1.29.2",
     "@shikijs/transformers": "1.29.2",
-    "@types/bun": "latest",
+    "@types/hast": "3.0.5",
     "@types/jsdom": "27.0.0",
+    "@types/node": "26.2.0",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.4",
     "@vercel/og": "0.8.6",
@@ -77,7 +83,7 @@
     "jsdom": "28.0.0",
     "oxfmt": "0.50.0",
     "oxlint": "1.67.0",
-    "pastoralist": "1.12.16",
+    "pastoralist": "1.13.0",
     "pino": "10.1.0",
     "pino-pretty": "13.1.3",
     "playwright": "1.57.0",
@@ -89,21 +95,26 @@
     "rxjs": "7.8.2",
     "sanitize-filename": "1.6.4",
     "sass": "1.102.0",
-    "unified": "11.0.5"
+    "shiki": "1.29.2",
+    "tsx": "4.23.1",
+    "unified": "11.0.5",
+    "vitest": "4.1.10"
   },
   "peerDependencies": {
     "typescript": "5.8.3"
   },
-  "overrides": {
-    "@grpc/grpc-js": "1.9.16",
-    "next-mdx-remote": "6.0.0",
-    "protobufjs": "7.6.4",
-    "undici": "7.28.0"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "26.7.0",
+      "onFail": "download"
+    }
   },
   "engines": {
-    "bun": ">=1.0.0"
+    "node": ">=26.0.0",
+    "pnpm": ">=11.18.0 <12.0.0"
   },
-  "packageManager": "bun@1.3.9",
+  "packageManager": "pnpm@11.18.0",
   "codependence": {
     "mode": "verbose",
     "codependencies": [
@@ -128,24 +139,9 @@
     ]
   },
   "pastoralist": {
+    "overrideSource": "pnpm-workspace.yaml",
+    "checkSecurity": true,
     "appendix": {
-      "next-mdx-remote@6.0.0": {
-        "dependents": {
-          "Jeffry.in": "next-mdx-remote@5.0.0"
-        },
-        "ledger": {
-          "addedDate": "2026-05-30T02:26:29.617Z",
-          "reason": "Security fix: next-mdx-remote affected by arbitrary code execution in React server-side rendering of untrusted MDX content (high)",
-          "securityChecked": true,
-          "securityCheckDate": "2026-05-30T02:26:29.617Z",
-          "securityProvider": "osv",
-          "severity": "high",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0969",
-          "cves": [
-            "CVE-2026-0969"
-          ]
-        }
-      },
       "protobufjs@7.6.4": {
         "dependents": {
           "Jeffry.in": "protobufjs (required by @grpc/proto-loader)"
@@ -206,16 +202,14 @@
     },
     "security": {
       "enabled": true,
-      "provider": "osv",
+      "provider": [
+        "osv",
+        "npm"
+      ],
       "interactive": false,
       "autoFix": true,
-      "severityThreshold": "high"
+      "severityThreshold": "high",
+      "strict": true
     }
-  },
-  "trustedDependencies": [
-    "@next/swc",
-    "@swc/core",
-    "@swc/helpers"
-  ],
-  "optionalDependencies": {}
+  }
 }

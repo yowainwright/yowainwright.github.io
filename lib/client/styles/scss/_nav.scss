@@ -92,6 +92,7 @@
   &__link {
     color: var(--color-link-nav) !important;
     font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
     padding: 0 $m-xs;
 
     .js-is-darkmode & {

@@ -1,12 +1,12 @@
-import { beforeEach, describe, expect, mock, test } from "bun:test";
+import { beforeEach, describe, expect, test, vi } from "vitest";
 import { JSDOM } from "jsdom";
 
-mock.module("firebase/app", () => ({
+vi.mock("firebase/app", () => ({
   getApps: () => [],
   initializeApp: () => ({}),
 }));
 
-mock.module("firebase/database", () => ({
+vi.mock("firebase/database", () => ({
   Database: class Database {},
   getDatabase: () => ({}),
   get: async () => ({ val: () => null }),
@@ -19,10 +19,7 @@ mock.module("firebase/database", () => ({
     return () => undefined;
   },
   ref: (_database: unknown, path: string) => ({ path }),
-  runTransaction: async (
-    _reference: unknown,
-    updater: (current: number | null) => number,
-  ) => {
+  runTransaction: async (_reference: unknown, updater: (current: number | null) => number) => {
     updater(0);
   },
 }));

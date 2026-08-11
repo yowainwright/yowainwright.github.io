@@ -1,0 +1,19 @@
+nodeVersion: 26.7.0
+engineStrict: true
+saveExact: true
+minimumReleaseAge: 1440
+minimumReleaseAgeStrict: true
+enableGlobalVirtualStore: false
+
+overrides:
+  "@grpc/grpc-js": "1.9.16"
+  protobufjs: "7.6.4"
+  undici: "7.28.0"
+
+onlyBuiltDependencies:
+  - "@next/swc"
+  - "@swc/core"
+  - "@swc/helpers"
+
+minimumReleaseAgeExclude:
+  - pastoralist@1.13.0

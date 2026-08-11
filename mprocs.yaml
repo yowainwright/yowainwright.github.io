@@ -1,41 +1,41 @@
 procs:
   next:
-    shell: "next dev --port 34729"
+    shell: "pnpm run dev:next"
     autostart: true
     autorestart: true
 
   css-watch:
-    shell: "sass --watch --style=compressed lib/client/styles/scss/main.scss:public/assets/jeffry.in.css"
+    shell: "pnpm run dev:css"
     autostart: true
     autorestart: true
 
   component-styles:
-    shell: "bun scripts/generate-component-styles.ts && echo 'Component styles generated'"
+    shell: "pnpm run generate:component-styles"
     autostart: true
     autorestart: false
 
   typecheck:
-    shell: "bunx tsc --noEmit --watch --pretty"
+    shell: "pnpm run typecheck:watch"
     autostart: true
     autorestart: true
 
   next-typecheck:
-    shell: "bunx next lint --fix"
+    shell: "pnpm run lint:fix"
     autostart: false
     autorestart: false
 
   lint-fix:
-    shell: "bunx oxlint --fix ."
+    shell: "pnpm run lint:fix"
     autostart: false
     autorestart: false
 
-  prettier-watch:
-    shell: "bunx prettier --write . --watch"
-    autostart: true
-    autorestart: true
+  format:
+    shell: "pnpm run format"
+    autostart: false
+    autorestart: false
 
   pricing-update:
-    shell: "while true; do bun scripts/update-ai-pricing/index.ts; sleep 3600; done"
+    shell: "pnpm run watch:pricing"
     autostart: false
     autorestart: true
 
@@ -50,12 +50,12 @@ procs:
     autorestart: false
 
   rebuild-assets:
-    shell: "bun run build:css && echo 'Assets rebuilt'"
+    shell: "pnpm run build:css"
     autostart: false
     autorestart: false
 
   full-rebuild:
-    shell: "rm -rf .next out && bun run build"
+    shell: "pnpm run full-rebuild"
     autostart: false
     autorestart: false
 

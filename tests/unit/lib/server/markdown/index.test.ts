@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "vitest";
 import { markdownToHtml } from "../../../../../lib/server/markdown";
 
 describe("markdownToHtml", () => {

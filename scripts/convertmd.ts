@@ -1,4 +1,4 @@
-#!/usr/bin/env bun
+#!/usr/bin/env -S pnpm exec tsx
 
 import { existsSync, readdirSync, renameSync } from "fs";
 import { extname, join } from "path";
@@ -9,7 +9,7 @@ const log = createLogger("convertmd");
 const directory = process.argv[2];
 
 if (!directory) {
-  log.error("usage: bun scripts/convertmd.ts <directory>");
+  log.error("usage: pnpm exec tsx scripts/convertmd.ts <directory>");
   process.exit(1);
 }
 

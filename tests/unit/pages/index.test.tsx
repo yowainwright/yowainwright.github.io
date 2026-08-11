@@ -1,12 +1,12 @@
-import { describe, expect, mock, test } from "bun:test";
+import { describe, expect, test, vi } from "vitest";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 
-mock.module("next/head", () => ({
+vi.mock("next/head", () => ({
   default: ({ children }: { children?: React.ReactNode }) => <>{children}</>,
 }));
 
-mock.module("next/link", () => ({
+vi.mock("next/link", () => ({
   default: ({
     children,
     href,

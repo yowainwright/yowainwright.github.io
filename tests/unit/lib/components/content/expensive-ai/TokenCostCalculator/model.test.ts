@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "vitest";
 import { Cause, Effect, Exit, Option } from "effect";
 import { FALLBACK_AI_DATA } from "../../../../../../../lib/components/content/expensive-ai/TokenCostCalculator/constants";
 import {
@@ -30,15 +30,10 @@ describe("parseTokenInputEffect", () => {
 describe("calculateCostsEffect", () => {
   test("returns schema-validated model calculations sorted by total cost", () => {
     const calculations = Effect.runSync(
-      calculateCostsEffect(
-        Effect.runSync(parseTokenInputEffect("1000")),
-        FALLBACK_AI_DATA,
-      ),
+      calculateCostsEffect(Effect.runSync(parseTokenInputEffect("1000")), FALLBACK_AI_DATA),
     );
 
     expect(calculations[0]?.modelId).toBe("grok-4.1");
-    expect(
-      calculations.every((calculation) => calculation.totalCost >= 0),
-    ).toBe(true);
+    expect(calculations.every((calculation) => calculation.totalCost >= 0)).toBe(true);
   });
 });
