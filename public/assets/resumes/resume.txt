@@ -1,6 +1,9 @@
 ﻿Jeffry Wainwright
-Principal Software Engineer @ Lokker.com 
-Santa Monica, CA, June 2025-current
+Staff Software Engineer @ Tenex.ai
+Remote, CA, February 2026-present
+
+Principal Software Engineer @ Lokker.com
+Santa Monica, CA, June 2025-February 2026
 yowainwright@gmail.com | jeffry.in | LinkedIn  | GitHub
 I’ve been building and maintaining tools to make life a little easier for 15+ years with extensive experience in JavaScript/TypeScript. I do moonlight with Go, Python, and Kubernetes; always looking to learn more!
 Professional Experience
@@ -22,7 +25,7 @@ Senior Software Engineer | June 2021-December 2021
 Currency | Santa Monica, CA
 Senior Software Engineer/Engineering Manager | February 2020-June 2021
       * Built a payment platform for big-ticket online purchases.
-      * Set up a monorepo so that the team could collaborate better; frontend (React, TypeScript) and backend (Node.js, TypeScript) really sped up productivity. 
+      * Set up a monorepo so that the team could collaborate better; frontend (React, TypeScript) and backend (Node.js, TypeScript) really sped up productivity.
 Dollar Shave Club | Venice, CA
 Frontend Engineer | March 2016-February 2020
       * Built a headless CMS; helped streamline CI/CD.
