@@ -11,9 +11,6 @@ const productionConfig = isProduction ? { output: "export" } : {};
 const nextConfig = Object.assign(
   {},
   {
-    typescript: {
-      ignoreBuildErrors: true,
-    },
     experimental: {
       useTypeScriptCli: true,
     },
