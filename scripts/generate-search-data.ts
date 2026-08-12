@@ -14,7 +14,7 @@ const PROJECT_ROOT = process.cwd();
 const CONTENT_DIR = path.join(PROJECT_ROOT, "content");
 const PROJECTS_DIR =
   process.env.PROJECTS_CONTENT_DIR ||
-  path.join(PROJECT_ROOT, "..", "projects", "content");
+  path.join(PROJECT_ROOT, "projects", "content");
 const OUTPUT_PATH = path.join(PROJECT_ROOT, "public", "search-data.json");
 
 export function getPostsSearchData(contentDir = CONTENT_DIR): SearchItem[] {
