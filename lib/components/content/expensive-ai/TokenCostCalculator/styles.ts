@@ -1,9 +1,5 @@
 import { bemToCSS, type BEMBlock } from "../../../../client/styles/generator";
-import {
-  SPACING,
-  TYPOGRAPHY,
-  RADIUS,
-} from "../../../../client/styles/generator";
+import { SPACING, TYPOGRAPHY, RADIUS } from "../../../../client/styles/generator";
 
 const calculator: BEMBlock = {
   base: {
@@ -17,7 +13,7 @@ const calculator: BEMBlock = {
     },
     title: {
       fontSize: TYPOGRAPHY.fontSize.xl,
-      fontWeight: TYPOGRAPHY.fontWeight.semibold,
+      fontWeight: TYPOGRAPHY.fontWeight.bold,
       marginBottom: SPACING.sm,
       color: "var(--color-text-primary)",
     },
@@ -38,7 +34,7 @@ const calculator: BEMBlock = {
     "helper-text": {
       color: "var(--color-text-muted)",
       marginLeft: SPACING.sm,
-      fontWeight: TYPOGRAPHY.fontWeight.normal,
+      fontWeight: TYPOGRAPHY.fontWeight.regular,
     },
     input: {
       padding: SPACING.md,
@@ -63,7 +59,7 @@ const calculator: BEMBlock = {
     },
     "table-header": {
       backgroundColor: "var(--color-bg-secondary)",
-      fontWeight: TYPOGRAPHY.fontWeight.semibold,
+      fontWeight: TYPOGRAPHY.fontWeight.medium,
       color: "var(--color-text-primary)",
       fontSize: TYPOGRAPHY.fontSize.base,
     },
@@ -78,7 +74,7 @@ const calculator: BEMBlock = {
       fontWeight: TYPOGRAPHY.fontWeight.medium,
     },
     "total-cost": {
-      fontWeight: TYPOGRAPHY.fontWeight.semibold,
+      fontWeight: TYPOGRAPHY.fontWeight.bold,
       color: "var(--color-primary)",
     },
     footer: {

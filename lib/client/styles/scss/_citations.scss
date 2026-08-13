@@ -24,7 +24,7 @@
   color: var(--color-text-secondary);
 
   &__title {
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
     margin-bottom: $m-sm;
   }
 

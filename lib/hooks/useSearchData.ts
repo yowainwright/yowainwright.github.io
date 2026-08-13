@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { SearchResult } from "../components/Search/types";
 
 const SEARCH_DATA_PATH = "/search-data.json";
+const SEARCH_RESULT_TYPES = new Set(["page", "post", "project"]);
 let searchDataPromise: Promise<SearchResult[]> | null = null;
 
 const isSearchResult = (value: unknown): value is SearchResult => {
@@ -9,11 +10,15 @@ const isSearchResult = (value: unknown): value is SearchResult => {
   if (!isObject) return false;
 
   const result = value as Record<string, unknown>;
-  const hasValidType = result.type === "post" || result.type === "project";
-  const stringFields = ["title", "description", "slug", "url"];
+  const hasValidType = typeof result.type === "string" && SEARCH_RESULT_TYPES.has(result.type);
+  const stringFields = ["content", "title", "description", "slug", "url"];
   const hasValidStrings = stringFields.every((field) => typeof result[field] === "string");
+  const hasValidTags =
+    Array.isArray(result.tags) && result.tags.every((tag) => typeof tag === "string");
 
-  return hasValidType && hasValidStrings;
+  if (!hasValidType) return false;
+  if (!hasValidStrings) return false;
+  return hasValidTags;
 };
 
 const parseSearchData = (value: unknown): SearchResult[] => {

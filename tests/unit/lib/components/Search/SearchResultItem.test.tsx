@@ -5,9 +5,11 @@ import { SearchResultItem } from "../../../../../lib/components/Search/SearchRes
 import type { SearchResult } from "../../../../../lib/components/Search/types";
 
 const postResult: SearchResult = {
+  content: "Post body",
   title: "A Post",
   description: "Post description",
   slug: "a-post",
+  tags: ["Testing"],
   type: "post",
   url: "/a-post/",
 };

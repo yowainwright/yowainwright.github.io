@@ -152,7 +152,7 @@ code .line {
 
 // Title in header
 .shiki-title {
-  font-weight: 600;
+  font-weight: var(--font-weight-medium);
   color: var(--color-text-primary);
   font-size: 0.875rem;
   font-family: var(--font-mono, monospace);
@@ -172,7 +172,7 @@ code .line {
   font-size: 0.75rem;
   border-radius: $radius-sm;
   font-family: var(--font-mono, monospace);
-  font-weight: 600;
+  font-weight: var(--font-weight-medium);
   letter-spacing: 0.05em;
 }
 
@@ -361,7 +361,7 @@ code .line {
     content: "+" counter(step);
     background: var(--code-add-bg-strong) !important;
     color: var(--code-add-text) !important;
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
   }
 }
 
@@ -374,7 +374,7 @@ code .line {
     content: "-" counter(step);
     background: var(--code-remove-bg-strong) !important;
     color: var(--code-remove-text) !important;
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
   }
 }
 
@@ -387,7 +387,7 @@ code .line {
       content: "+" counter(step);
       background: var(--code-add-bg-strong) !important;
       color: var(--code-add-text) !important;
-      font-weight: 600;
+      font-weight: var(--font-weight-bold);
     }
   }
 
@@ -399,7 +399,7 @@ code .line {
       content: "-" counter(step);
       background: var(--code-remove-bg-strong) !important;
       color: var(--code-remove-text) !important;
-      font-weight: 600;
+      font-weight: var(--font-weight-bold);
     }
   }
 }

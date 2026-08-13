@@ -55,6 +55,7 @@ export function reducer(state: AppState, action: AppAction): AppState {
 
 export default function App({ Component, pageProps }: AppProps) {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const appClassName = `${roboto.className} app-shell`;
 
   usePageViews();
   useExternalLinks();
@@ -83,7 +84,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <DispatchStore.Provider value={dispatch}>
       <GlobalState.Provider value={state}>
-        <div className={roboto.className}>
+        <div className={appClassName}>
           <Header />
           <Component {...pageProps} />
           <Footer />

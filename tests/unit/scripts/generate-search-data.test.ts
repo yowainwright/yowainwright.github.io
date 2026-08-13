@@ -37,12 +37,31 @@ describe("search data generation helpers", () => {
     fs.mkdirSync(projectsDir);
     fs.writeFileSync(
       path.join(contentDir, "first-post.mdx"),
-      "---\ntitle: First Post\nmeta: Searchable post\n---\nBody",
+      [
+        "---",
+        "title: First Post",
+        "meta: Searchable post",
+        "tags: [Search, TypeScript]",
+        "---",
+        'import { Hidden } from "./hidden";',
+        "",
+        "## Body heading",
+        "",
+        "A unique phrase with [linked text](https://example.com).",
+        "",
+        "```ts",
+        "const indexedCode = true;",
+        "```",
+      ].join("\n"),
     );
-    fs.writeFileSync(path.join(contentDir, "resume.md"), "---\ntitle: Resume\n---\nHidden");
+    fs.writeFileSync(path.join(contentDir, "404.md"), "---\ntitle: Missing\n---\nHidden");
+    fs.writeFileSync(
+      path.join(contentDir, "resume.md"),
+      "---\ntitle: Resume\ncategories: [Career]\n---\nPlatform architecture",
+    );
     fs.writeFileSync(
       path.join(projectsDir, "first-project.md"),
-      "---\ntitle: First Project\ntagline: Searchable project\n---\nBody",
+      "---\ntitle: First Project\ntagline: Searchable project\ntags: [OSS]\n---\nProject body",
     );
 
     const posts = getPostsSearchData(contentDir);
@@ -51,9 +70,20 @@ describe("search data generation helpers", () => {
 
     writeSearchData(searchData, outputPath);
 
-    expect(posts).toHaveLength(1);
+    const post = posts.find((item) => item.slug === "first-post");
+    const resume = posts.find((item) => item.slug === "resume");
+
+    expect(posts).toHaveLength(2);
     expect(projects).toHaveLength(1);
-    expect(searchData.map((item) => item.slug)).toEqual(["first-post", "first-project"]);
+    expect(searchData.map((item) => item.slug)).toEqual(["first-post", "resume", "first-project"]);
+    expect(post?.content).toContain("Body heading A unique phrase with linked text");
+    expect(post?.content).toContain("const indexedCode = true;");
+    expect(post?.content).not.toContain("Hidden");
+    expect(post?.tags).toEqual(["Search", "TypeScript"]);
+    expect(resume?.type).toBe("page");
+    expect(resume?.tags).toEqual(["Career"]);
+    expect(projects[0]?.content).toBe("Project body");
+    expect(projects[0]?.tags).toEqual(["OSS"]);
     expect(JSON.parse(fs.readFileSync(outputPath, "utf8"))).toEqual(searchData);
   });
 

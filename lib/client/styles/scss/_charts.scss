@@ -42,7 +42,7 @@
   &__title {
     color: var(--color-text-secondary);
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     line-height: var(--line-height-tight);
     margin-bottom: 0.25rem;
     text-align: left;
@@ -114,7 +114,7 @@ $chart-container-padding: 20px 0;
 .chart-title {
   color: var(--color-text-secondary);
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   line-height: var(--line-height-tight);
   margin-bottom: 0.25rem;
   text-align: left;

@@ -2,8 +2,15 @@ import type { IFuseOptions } from "fuse.js";
 import type { SearchResult } from "./types";
 
 export const FUSE_OPTIONS: IFuseOptions<SearchResult> = {
-  keys: ["title", "description"],
+  keys: [
+    { name: "title", weight: 0.45 },
+    { name: "description", weight: 0.25 },
+    { name: "tags", weight: 0.15 },
+    { name: "content", weight: 0.1 },
+    { name: "slug", weight: 0.05 },
+  ],
   threshold: 0.3,
+  ignoreLocation: true,
   includeScore: true,
 };
 

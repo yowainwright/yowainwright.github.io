@@ -1,8 +1,10 @@
 export interface SearchResult {
+  content: string;
   title: string;
   description: string;
   slug: string;
-  type: "post" | "project";
+  tags: string[];
+  type: "page" | "post" | "project";
   url: string;
 }
 

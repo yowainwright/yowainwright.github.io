@@ -38,10 +38,9 @@ export const TYPOGRAPHY = {
     xxl: "32px",
   },
   fontWeight: {
-    normal: "400",
-    medium: "500",
-    semibold: "600",
-    bold: "700",
+    regular: "var(--font-weight-regular)",
+    medium: "var(--font-weight-medium)",
+    bold: "var(--font-weight-bold)",
   },
   lineHeight: "1.5",
 } as const;
