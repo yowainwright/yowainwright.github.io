@@ -1,8 +1,8 @@
 import { describe, expect, test } from "vitest";
 import Fuse from "fuse.js";
-import { FUSE_OPTIONS } from "../../../../../lib/components/Search/constants";
-import { searchItems } from "../../../../../lib/components/Search/searchItems";
-import type { SearchResult } from "../../../../../lib/components/Search/types";
+import { FUSE_OPTIONS } from "./constants";
+import type { SearchResult } from "./types";
+import { isSearchShortcut, searchItems } from "./utils";
 
 const createResult = (updates: Partial<SearchResult>): SearchResult =>
   Object.assign(
@@ -17,7 +17,13 @@ const createResult = (updates: Partial<SearchResult>): SearchResult =>
     updates,
   );
 
-describe("search options", () => {
+describe("Search utilities", () => {
+  test("recognizes the search keyboard shortcut", () => {
+    const event = { ctrlKey: false, key: "k", metaKey: true };
+
+    expect(isSearchShortcut(event)).toBe(true);
+  });
+
   test("matches tags and slugs", () => {
     const result = createResult({
       slug: "why-pastoralist",
