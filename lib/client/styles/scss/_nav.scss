@@ -52,13 +52,26 @@
     @media screen and (min-width: $width-small) {
       margin-left: $m-2xl;
     }
+
+    &--about,
+    &--resume {
+      display: none;
+
+      @media screen and (min-width: $width-small) {
+        display: flex;
+      }
+    }
   }
 
   &__items {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
+
+    @media screen and (min-width: $width-small) {
+      justify-content: space-around;
+    }
   }
 
   &__actions {
@@ -119,6 +132,7 @@
     align-self: flex-end;
     display: flex;
     justify-content: space-between;
+    width: calc(100% - 2.5rem);
 
     @media screen and (min-width: $width-small) {
       height: $m-4xl;

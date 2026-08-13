@@ -27,7 +27,7 @@
   &__link {
     display: inline-block;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     padding: 0 1rem 0 0;
 
     &:last-of-type {
@@ -76,7 +76,7 @@
 
   &__count {
     font-size: 0.65rem;
-    font-weight: 600;
+    font-weight: var(--font-weight-medium);
     align-self: flex-start;
     margin-top: -0.25rem;
     margin-left: -0.15rem;
