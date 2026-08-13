@@ -15,6 +15,9 @@ export interface SearchItem {
   url: string;
 }
 
+export type SearchMetadata = Omit<SearchItem, "content">;
+export type SearchContentData = Record<string, string>;
+
 type SearchNode = Node & {
   alt?: unknown;
   children?: SearchNode[];
@@ -31,7 +34,8 @@ const PROJECT_ROOT = process.cwd();
 const CONTENT_DIR = path.join(PROJECT_ROOT, "content");
 const PROJECTS_DIR =
   process.env.PROJECTS_CONTENT_DIR || path.join(PROJECT_ROOT, "projects", "content");
-const OUTPUT_PATH = path.join(PROJECT_ROOT, "public", "search-data.json");
+const SEARCH_DATA_OUTPUT_PATH = path.join(PROJECT_ROOT, "public", "search-data.json");
+const SEARCH_CONTENT_OUTPUT_PATH = path.join(PROJECT_ROOT, "public", "search-content.json");
 
 const getLiteralText = (node: SearchNode): string =>
   typeof node.value === "string" ? node.value : "";
@@ -152,14 +156,46 @@ export function buildSearchData(contentDir = CONTENT_DIR, projectsDir = PROJECTS
   return posts.concat(projects);
 }
 
-export function writeSearchData(searchData: SearchItem[], outputPath = OUTPUT_PATH) {
+const toSearchMetadata = (item: SearchItem): SearchMetadata => ({
+  title: item.title,
+  description: item.description,
+  slug: item.slug,
+  tags: item.tags,
+  type: item.type,
+  url: item.url,
+});
+
+const toSearchContentEntry = ({ url, content }: SearchItem): [string, string] => {
+  const normalizedContent = content.toLowerCase();
+  return [url, normalizedContent];
+};
+
+export const getSearchMetadata = (searchData: SearchItem[]): SearchMetadata[] =>
+  searchData.map(toSearchMetadata);
+
+export const getSearchContentData = (searchData: SearchItem[]): SearchContentData =>
+  Object.fromEntries(searchData.map(toSearchContentEntry));
+
+const writeJson = (value: unknown, outputPath: string) => {
   const publicDir = path.dirname(outputPath);
   const publicExists = fs.existsSync(publicDir);
   if (!publicExists) {
     fs.mkdirSync(publicDir, { recursive: true });
   }
 
-  fs.writeFileSync(outputPath, JSON.stringify(searchData, null, 2));
+  fs.writeFileSync(outputPath, JSON.stringify(value));
+};
+
+export function writeSearchData(
+  searchData: SearchItem[],
+  outputPath = SEARCH_DATA_OUTPUT_PATH,
+  contentOutputPath = path.join(
+    path.dirname(outputPath),
+    path.basename(SEARCH_CONTENT_OUTPUT_PATH),
+  ),
+) {
+  writeJson(getSearchMetadata(searchData), outputPath);
+  writeJson(getSearchContentData(searchData), contentOutputPath);
 }
 
 export function main() {

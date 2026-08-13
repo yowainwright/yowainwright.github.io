@@ -6,7 +6,6 @@ import type { SearchResult } from "../../../../../lib/components/Search/types";
 
 const searchData: SearchResult[] = [
   {
-    content: "Post body",
     title: "A Post",
     description: "Post description",
     slug: "a-post",
@@ -15,7 +14,6 @@ const searchData: SearchResult[] = [
     url: "/a-post/",
   },
   {
-    content: "Project body",
     title: "A Project",
     description: "Project description",
     slug: "a-project",

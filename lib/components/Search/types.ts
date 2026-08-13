@@ -1,5 +1,4 @@
 export interface SearchResult {
-  content: string;
   title: string;
   description: string;
   slug: string;
@@ -7,6 +6,8 @@ export interface SearchResult {
   type: "page" | "post" | "project";
   url: string;
 }
+
+export type SearchContentData = Record<string, string>;
 
 export interface SearchState {
   query: string;

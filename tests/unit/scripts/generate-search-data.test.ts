@@ -4,6 +4,8 @@ import os from "node:os";
 import path from "node:path";
 import {
   buildSearchData,
+  getSearchContentData,
+  getSearchMetadata,
   getPostsSearchData,
   getProjectsSearchData,
   writeSearchData,
@@ -32,6 +34,7 @@ describe("search data generation helpers", () => {
     const contentDir = path.join(rootDir, "content");
     const projectsDir = path.join(rootDir, "projects");
     const outputPath = path.join(rootDir, "public", "search-data.json");
+    const contentOutputPath = path.join(rootDir, "public", "search-content.json");
 
     fs.mkdirSync(contentDir);
     fs.mkdirSync(projectsDir);
@@ -84,7 +87,10 @@ describe("search data generation helpers", () => {
     expect(resume?.tags).toEqual(["Career"]);
     expect(projects[0]?.content).toBe("Project body");
     expect(projects[0]?.tags).toEqual(["OSS"]);
-    expect(JSON.parse(fs.readFileSync(outputPath, "utf8"))).toEqual(searchData);
+    expect(JSON.parse(fs.readFileSync(outputPath, "utf8"))).toEqual(getSearchMetadata(searchData));
+    expect(JSON.parse(fs.readFileSync(contentOutputPath, "utf8"))).toEqual(
+      getSearchContentData(searchData),
+    );
   });
 
   test("returns no project results when the projects directory is absent", () => {

@@ -3,7 +3,6 @@ import { Data, Effect, Metric, Schema } from "effect";
 const DEFAULT_SEARCH_DATA_PATH = "/search-data.json";
 
 export const SearchResultSchema = Schema.Struct({
-  content: Schema.String,
   title: Schema.String,
   description: Schema.String,
   slug: Schema.String,

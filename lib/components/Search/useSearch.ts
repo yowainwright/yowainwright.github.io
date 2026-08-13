@@ -2,7 +2,8 @@ import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import Fuse from "fuse.js";
 import { useSearchData } from "../../hooks/useSearchData";
 import type { SearchResult, SearchState } from "./types";
-import { FUSE_OPTIONS, MAX_RESULTS } from "./constants";
+import { FUSE_OPTIONS } from "./constants";
+import { searchItems } from "./searchItems";
 
 const createInitialState = (): SearchState => ({
   query: "",
@@ -15,11 +16,6 @@ const clampIndex = (index: number, max: number): number => Math.max(0, Math.min(
 const updateSearchState = (state: SearchState, updates: Partial<SearchState>): SearchState =>
   Object.assign({}, state, updates);
 
-const searchItems = (fuse: Fuse<SearchResult>, query: string): SearchResult[] => {
-  const searchResults = fuse.search(query);
-  return searchResults.slice(0, MAX_RESULTS).map((r) => r.item);
-};
-
 const isEscapeKey = (e: KeyboardEvent): boolean => e.key === "Escape";
 const isArrowDown = (e: KeyboardEvent): boolean => e.key === "ArrowDown";
 const isArrowUp = (e: KeyboardEvent): boolean => e.key === "ArrowUp";
@@ -29,11 +25,11 @@ export function useSearch(onClose: () => void) {
   const [state, setState] = useState<SearchState>(createInitialState);
   const inputRef = useRef<HTMLInputElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
-  const searchData = useSearchData();
+  const hasQuery = state.query.trim().length > 0;
+  const { searchData, searchContent } = useSearchData(hasQuery);
 
   const fuse = useMemo(() => new Fuse(searchData, FUSE_OPTIONS), [searchData]);
 
-  const hasQuery = state.query.length > 0;
   const hasResults = state.results.length > 0;
   const canNavigateResults = hasResults;
 
@@ -48,9 +44,9 @@ export function useSearch(onClose: () => void) {
       return;
     }
 
-    const results = searchItems(fuse, state.query);
+    const results = searchItems(fuse, searchData, searchContent, state.query);
     setState((prev) => updateSearchState(prev, { results, selectedIndex: 0 }));
-  }, [state.query, fuse, hasQuery]);
+  }, [state.query, fuse, hasQuery, searchData, searchContent]);
 
   const close = useCallback(() => {
     onClose();

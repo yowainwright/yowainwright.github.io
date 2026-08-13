@@ -32,7 +32,6 @@ describe("loadSearchDataEffect", () => {
     globalThis.fetch = mockFetch(
       Response.json([
         {
-          content: "Dependency audit trails",
           title: "Pastoralist",
           description: "A post",
           slug: "why-pastoralist",
@@ -53,7 +52,6 @@ describe("loadSearchDataEffect", () => {
     globalThis.fetch = mockFetch(
       Response.json([
         {
-          content: "Broken body",
           title: "Broken",
           description: "Nope",
           slug: "broken",
