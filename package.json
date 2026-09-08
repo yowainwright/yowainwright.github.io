@@ -35,6 +35,7 @@
     "lint": "oxlint -c .oxlintrc.json .",
     "lint:fix": "oxlint -c .oxlintrc.json . --fix",
     "test": "vitest run",
+    "skills:install": "tsx scripts/install-skills.ts",
     "prepare": "tsx scripts/install-hooks.ts",
     "start": "next start",
     "update": "tsx scripts/run-task.ts update",
