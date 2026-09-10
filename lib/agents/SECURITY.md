@@ -1,4 +1,4 @@
-# Walter skill review
+# Blog skill review
 
 Reviewed 2026-09-08. Scope: the skill text, supporting references, licenses,
 repository trees, available commit history, and public issues/PRs in the two
@@ -8,10 +8,10 @@ the prose will pass an AI detector.
 
 ## Reviewed revisions
 
-| Source | Commit | Skills | License |
-| --- | --- | ---: | --- |
-| [no-slop-ai-humanizer-rewriter](https://github.com/walterwritesai/no-slop-ai-humanizer-rewriter/tree/ef668580dc8782b7241b16ea77ae513737602616) | `ef668580dc8782b7241b16ea77ae513737602616` | 2 | CC BY-ND 4.0 |
-| [walter-skills](https://github.com/walterwritesai/walter-skills/tree/d043f4c5b21155f8c6b389d64010561af5ce5979) | `d043f4c5b21155f8c6b389d64010561af5ce5979` | 12 | MIT |
+| Source                                                                                                                                         | Commit                                     | Skills | License      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | -----: | ------------ |
+| [no-slop-ai-humanizer-rewriter](https://github.com/walterwritesai/no-slop-ai-humanizer-rewriter/tree/ef668580dc8782b7241b16ea77ae513737602616) | `ef668580dc8782b7241b16ea77ae513737602616` |      2 | CC BY-ND 4.0 |
+| [walter-skills](https://github.com/walterwritesai/walter-skills/tree/d043f4c5b21155f8c6b389d64010561af5ce5979)                                 | `d043f4c5b21155f8c6b389d64010561af5ce5979` |     12 | MIT          |
 
 [sources.json](sources.json) records every installed file's source path, byte
 count, and SHA-256 hash. The repository trees contained only directories and
@@ -66,6 +66,11 @@ of author identity or safe instructions.
 
 ## Installer controls and validation
 
+Local dependency installation invokes hook and default skill setup through
+`prepare`. CI skips this combined setup. Explicit `skills:install` remains
+available, including in CI. The twelve Walter MCP workflows still require their
+separate opt-in flag.
+
 The installer downloads individual files from fixed HTTPS GitHub URLs at the
 reviewed commits. It does not use a registry, clone repositories, extract an
 archive, execute upstream code, install packages, configure MCP, or submit prose.
@@ -93,3 +98,53 @@ benchmark or detector test was run.
 Keep the host's normal approval and network controls in place. Markdown
 instructions are not a sandbox. Review upstream changes again before updating
 the pins or hashes.
+
+## Orwell local source
+
+Reviewed 2026-09-08. The global `~/.agents/skills/orwell-writing/SKILL.md` matches
+Jeff's private Agent Sync source at
+`tmpl/skills/orwell-writing/SKILL.md`, whose latest file change is commit
+`5f9a966b08266663a8e9cabbce06c13ea4450686`. The reviewed file is 2,387 bytes with
+SHA-256 `5f9d288651e17e494d164781b3a6be82739ade57632a7ce99dd7ba4b9cb91912`.
+The source repository declares MIT licensing. No private source text is added
+to tracked files here.
+
+The instructions preserve meaning, facts, voice, and structure while editing
+for concrete, concise language. They contain no executable code, tool or service
+requirements, or instructions to obtain credentials. They allow breaking a
+style rule when clarity or precision requires it. The installer reads only this
+reviewed local file, verifies its size and hash, rejects symlink sources and
+conflicting destinations, and creates an ignored copy and Claude discovery link.
+
+## Optional review runner
+
+The commit hook selects Skip, Quick, or Deep for staged blog content. Default
+noninteractive operation skips the agent, and an unanswered interactive prompt
+expires after 30 seconds. Explicit review modes are available for automation.
+The hook never installs skills or invokes Walter MCP.
+
+The review prompt reads changed prose from `git diff --cached`; Deep adds index
+blobs and the eight approved voice samples from `HEAD`, excluding posts under
+review. Unstaged post bodies are not read. Git commands use argument arrays,
+and content diffs disable external diff drivers and text conversion. Inputs are
+marked as review material, with embedded instructions to be ignored. This
+prompt framing is an instruction, not proof against prompt injection.
+
+Codex runs with `--sandbox read-only`, `-a never`, and `--ephemeral`. Shell,
+browser, computer use, apps, plugins, web search, multi-agent work, and automatic
+skill MCP installation are disabled. `--ignore-user-config` avoids loading
+global integrations while retaining existing authentication; normal execution
+rules are not bypassed. The supplied prompt goes to the configured Codex
+service when a review is selected. These controls are not an audit of the
+Codex runtime or of future project configuration.
+
+Context is capped at 256 KiB. Quick and Deep runs have two- and ten-minute time
+limits, respectively. Process errors and timeouts report an incomplete review.
+Editorial findings do not block commits and are not auto-applied. The checks
+assess the supplied prose and evidence; they do not perform external fact checks
+or establish human authorship.
+
+Focused tests cover mode selection, staged-content isolation, committed sample
+selection, missing guidance, context limits, runner arguments, process failure,
+and timeout handling. Runner tests use a fake subprocess; no live model review
+or writing-quality benchmark was performed during setup.

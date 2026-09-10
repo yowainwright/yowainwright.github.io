@@ -1,8 +1,8 @@
-#!/usr/bin/env -S pnpm exec tsx
-
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import {
+  chmodSync,
+  existsSync,
   lstatSync,
   mkdirSync,
   readFileSync,
@@ -10,24 +10,39 @@ import {
   symlinkSync,
   writeFileSync,
 } from "node:fs";
-import { dirname, join, resolve } from "node:path";
-import { fileURLToPath, pathToFileURL } from "node:url";
-import manifest from "../lib/agents/sources.json";
-import { createLogger } from "../lib/server/logger";
+import { dirname, join } from "node:path";
+import manifest from "../../lib/agents/sources.json";
+import { createLogger } from "../../lib/server/logger";
+import {
+  CHECKSUM_PRIME,
+  CHECKSUM_SEED,
+  DOWNLOAD_TIMEOUT_MS,
+  HOOKS,
+  HOOKS_DIR,
+  INSTALL_USAGE,
+  LEGACY_HOOK_FINGERPRINTS,
+  MANAGED_HOOK_MARKER,
+  MAX_BYTES,
+  MAX_SKILL_NAME_LENGTH,
+  REPOSITORIES,
+} from "./constants";
+import type {
+  Download,
+  FileEntry,
+  HookAction,
+  HookFingerprint,
+  HookName,
+  InstallOptions,
+  LocalSkill,
+  PlannedFile,
+  Skill,
+  SkillFile,
+  SkillLink,
+  Source,
+  VerifiedFile,
+} from "./types";
 
-type Source = (typeof manifest.sources)[number];
-type Skill = Source["skills"][number];
-type FileEntry = Skill["files"][number];
-type Download = typeof fetch;
-type PlannedFile = { path: string; url: string; entry: FileEntry };
-type SkillLink = { path: string; target: string };
-
-const log = createLogger("install-skills");
-const MAX_BYTES = 64 * 1024;
-const REPOSITORIES = new Set([
-  "walterwritesai/no-slop-ai-humanizer-rewriter",
-  "walterwritesai/walter-skills",
-]);
+const log = createLogger("install-hooks");
 
 const digest = (bytes: Uint8Array) => createHash("sha256").update(bytes).digest("hex");
 const stat = (path: string) => lstatSync(path, { throwIfNoEntry: false });
@@ -55,7 +70,7 @@ const makeParents = (root: string, path: string) => {
   });
 };
 
-const checkFile = (root: string, file: PlannedFile) => {
+const checkFile = (root: string, file: SkillFile) => {
   checkParents(root, file.path);
   const path = join(root, file.path);
   const entry = stat(path);
@@ -86,7 +101,7 @@ const validateFile = (entry: FileEntry) => {
 
 const planSkill = (source: Source, skill: Skill): PlannedFile[] => {
   assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(skill.name), "Unsafe skill name");
-  assert(skill.name.length <= 64, "Skill name is too long");
+  assert(skill.name.length <= MAX_SKILL_NAME_LENGTH, "Skill name is too long");
   const targets = skill.files.map((entry) => entry.target);
   assert(targets.includes("SKILL.md"), "Missing SKILL.md");
   assert(targets.includes("LICENSE"), "Missing license");
@@ -127,31 +142,37 @@ const readBody = async (response: Response, limit: number) => {
   }
 };
 
+const verifyBytes = (bytes: Buffer, entry: FileEntry) => {
+  assert.equal(bytes.length, entry.bytes, `File size differs: ${entry.source}`);
+  assert.equal(digest(bytes), entry.sha256, `Checksum differs: ${entry.source}`);
+};
+
 export const downloadFile = async (file: PlannedFile, download: Download = fetch) => {
-  const signal = AbortSignal.timeout(15_000);
+  const signal = AbortSignal.timeout(DOWNLOAD_TIMEOUT_MS);
   const response = await download(file.url, { redirect: "error", signal });
   assert(response.ok, `Download failed (${response.status}): ${file.entry.source}`);
   const bytes = await readBody(response, file.entry.bytes);
-  assert.equal(bytes.length, file.entry.bytes, `File size differs: ${file.entry.source}`);
-  assert.equal(digest(bytes), file.entry.sha256, `Checksum differs: ${file.entry.source}`);
+  verifyBytes(bytes, file.entry);
   return { file, bytes };
 };
 
 const skillNames = (source: Source) => source.skills.map((skill) => skill.name);
 
+const claudeLink = (name: string): SkillLink => {
+  const path = `.claude/skills/${name}`;
+  const target = `../../.agents/skills/${name}`;
+  return { path, target };
+};
+
 const skillLinks = (sources: Source[]): SkillLink[] => {
   const names = sources.flatMap(skillNames);
   assert.equal(new Set(names).size, names.length, "Duplicate skill names");
   const humanizer = { path: ".agents/skills/humanizer", target: "../../lib/agents/humanizer" };
-  const links = names.concat("humanizer").map((name) => {
-    const path = `.claude/skills/${name}`;
-    const target = `../../.agents/skills/${name}`;
-    return { path, target };
-  });
+  const links = names.concat("humanizer").map(claudeLink);
   return [humanizer].concat(links);
 };
 
-const writeDownload = (root: string, result: Awaited<ReturnType<typeof downloadFile>>) => {
+const writeDownload = (root: string, result: VerifiedFile) => {
   const { file, bytes } = result;
   if (checkFile(root, file)) return;
   makeParents(root, file.path);
@@ -199,27 +220,133 @@ export const installSkills = async (
   return sources.flatMap(skillNames);
 };
 
-const main = async () => {
-  const args = process.argv.slice(2);
-  assert(
-    args.every((arg) => arg === "--include-walter-mcp"),
-    "Unknown option",
-  );
-  const includeWalter = args.includes("--include-walter-mcp");
-  const sources = manifest.sources.filter((source) => !source.requiresWalterMcp || includeWalter);
-  const root = fileURLToPath(new URL("../", import.meta.url));
-  const installed = await installSkills(root, sources);
-  log.info({ installed }, "Skills installed in ignored provider directories");
-  if (includeWalter)
-    log.warn(
-      "Walter workflows require a separately configured MCP service; using it sends drafts to Walter",
-    );
+const readLocalFile = (sourceRoot: string, name: string, entry: FileEntry): VerifiedFile => {
+  validateFile(entry);
+  checkParents(sourceRoot, entry.source);
+  const source = join(sourceRoot, entry.source);
+  const sourceStat = stat(source);
+  assert(sourceStat, `Missing reviewed global skill: ${source}`);
+  assert(sourceStat.isFile(), `Expected a regular skill file: ${source}`);
+  assert.equal(sourceStat.size, entry.bytes, `File size differs: ${entry.source}`);
+  const bytes = readFileSync(source);
+  verifyBytes(bytes, entry);
+  const path = `.agents/skills/${name}/${entry.target}`;
+  const file = { path, entry };
+  return { file, bytes };
 };
 
-const entryPoint = process.argv[1] && pathToFileURL(resolve(process.argv[1])).href;
-if (entryPoint === import.meta.url) {
-  main().catch((error: Error) => {
-    log.error(error, "Skill installation failed");
-    process.exitCode = 1;
-  });
-}
+const readLocalSkill = (sourceRoot: string, skill: LocalSkill) => {
+  assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(skill.name), "Unsafe local skill name");
+  assert(skill.name.length <= MAX_SKILL_NAME_LENGTH, "Skill name is too long");
+  return skill.files.map((entry) => readLocalFile(sourceRoot, skill.name, entry));
+};
+
+export const installLocalSkills = (
+  root: string,
+  sourceRoot: string,
+  skills = manifest.localSkills,
+) => {
+  const verified = skills.flatMap((skill) => readLocalSkill(sourceRoot, skill));
+  const names = skills.map((skill) => skill.name);
+  const links = names.map(claudeLink);
+  verified.forEach(({ file }) => checkFile(root, file));
+  links.forEach((link) => checkLink(root, link));
+  verified.forEach((result) => writeDownload(root, result));
+  links.forEach((link) => writeLink(root, link));
+  return names;
+};
+
+const writeHook = (hookPath: string, hookContent: string) => {
+  writeFileSync(hookPath, hookContent, { mode: 0o755 });
+  chmodSync(hookPath, 0o755);
+};
+
+const updateChecksum = (checksum: number, character: string) => {
+  const characterCode = character.charCodeAt(0);
+  const mixedChecksum = checksum ^ characterCode;
+  const multipliedChecksum = Math.imul(mixedChecksum, CHECKSUM_PRIME);
+
+  return multipliedChecksum >>> 0;
+};
+
+const getHookFingerprint = (hookContent: string): HookFingerprint => {
+  const characters = Array.from(hookContent);
+  const checksum = characters.reduce(updateChecksum, CHECKSUM_SEED);
+
+  return { checksum, length: hookContent.length };
+};
+
+const matchesFingerprint = (fingerprint: HookFingerprint, candidate: HookFingerprint) => {
+  const hasMatchingChecksum = fingerprint.checksum === candidate.checksum;
+  const hasMatchingLength = fingerprint.length === candidate.length;
+
+  return hasMatchingChecksum && hasMatchingLength;
+};
+
+export const isManagedHook = (hookName: HookName, hookContent: string) => {
+  const isCurrentHook = hookContent.includes(MANAGED_HOOK_MARKER);
+  const hookFingerprint = getHookFingerprint(hookContent);
+  const legacyFingerprints = LEGACY_HOOK_FINGERPRINTS[hookName];
+  const isKnownLegacyHook = legacyFingerprints.some((legacyFingerprint) =>
+    matchesFingerprint(hookFingerprint, legacyFingerprint),
+  );
+
+  return isCurrentHook || isKnownLegacyHook;
+};
+
+const syncHook = (hookName: HookName): HookAction => {
+  const hookPath = join(HOOKS_DIR, hookName);
+  const hookContent = HOOKS[hookName];
+
+  if (!existsSync(hookPath)) {
+    writeHook(hookPath, hookContent);
+    return "installed";
+  }
+
+  const existingContent = readFileSync(hookPath, "utf8");
+  const shouldUpdate = isManagedHook(hookName, existingContent) && existingContent !== hookContent;
+
+  if (!shouldUpdate) return "skipped";
+
+  writeHook(hookPath, hookContent);
+  return "updated";
+};
+
+const shouldInstallHooks = () => {
+  if (process.env.CI === "true") {
+    log.info("CI detected, skipping hook installation");
+    return false;
+  }
+  if (!existsSync(".git")) {
+    log.info("not a git repository, skipping hook installation");
+    return false;
+  }
+  return true;
+};
+
+const summarizeHooks = (actions: HookAction[]) => {
+  const installed = actions.filter((action) => action === "installed").length;
+  const updated = actions.filter((action) => action === "updated").length;
+  const skipped = actions.filter((action) => action === "skipped").length;
+  return { installed, updated, skipped };
+};
+
+export const installHooks = (): void => {
+  if (!shouldInstallHooks()) return;
+  mkdirSync(HOOKS_DIR, { recursive: true });
+  const hookNames = Object.keys(HOOKS) as HookName[];
+  const actions = hookNames.map(syncHook);
+  const summary = summarizeHooks(actions);
+  log.info(summary, "synchronized git hooks");
+};
+
+export const readOptions = ([target, ...args]: string[]): InstallOptions => {
+  const singleTarget = target === "hooks" || target === "skills";
+  const validTarget = target === "all" || singleTarget;
+  assert(validTarget, INSTALL_USAGE);
+  const validFlags = args.every((arg) => arg === "--include-walter-mcp");
+  const skillFlags = target === "skills" && validFlags;
+  assert(args.length === 0 || skillFlags, INSTALL_USAGE);
+  const includeWalter = args.includes("--include-walter-mcp");
+  return { target, includeWalter };
+};

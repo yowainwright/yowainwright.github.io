@@ -1,4 +1,17 @@
 {
+  "localSkills": [
+    {
+      "name": "orwell-writing",
+      "files": [
+        {
+          "source": "orwell-writing/SKILL.md",
+          "target": "SKILL.md",
+          "sha256": "5f9d288651e17e494d164781b3a6be82739ade57632a7ce99dd7ba4b9cb91912",
+          "bytes": 2387
+        }
+      ]
+    }
+  ],
   "sources": [
     {
       "repository": "walterwritesai/no-slop-ai-humanizer-rewriter",

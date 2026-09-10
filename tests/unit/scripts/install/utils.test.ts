@@ -11,7 +11,12 @@ import {
 } from "node:fs";
 import { dirname, join } from "node:path";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
-import { installSkills } from "../../../scripts/install-skills";
+import {
+  installLocalSkills,
+  installSkills,
+  isManagedHook,
+  readOptions,
+} from "../../../../scripts/install/utils";
 
 const name = "walter-writes-writer";
 const text = `---\nname: ${name}\ndescription: A fixture skill.\n---\n`;
@@ -33,21 +38,68 @@ let root: string;
 const download = vi.fn<typeof fetch>();
 const skillPath = (file = "SKILL.md") => join(root, ".agents/skills", name, file);
 
-beforeEach(() => {
-  const cache = join(process.cwd(), ".cache");
-  mkdirSync(cache, { recursive: true });
-  root = mkdtempSync(join(cache, "install-skills-test-"));
-  const humanizer = join(root, "lib/agents/humanizer");
-  mkdirSync(humanizer, { recursive: true });
-  writeFileSync(join(humanizer, "SKILL.md"), "Keep Jeff's custom skill");
-  download.mockReset().mockImplementation(async () => new Response(bytes));
-});
+describe("installer options", () => {
+  test("selects hooks or skills without opting in to Walter MCP", () => {
+    expect(readOptions(["all"])).toEqual({ target: "all", includeWalter: false });
+    expect(readOptions(["hooks"])).toEqual({ target: "hooks", includeWalter: false });
+    expect(readOptions(["skills"])).toEqual({ target: "skills", includeWalter: false });
+    expect(readOptions(["skills", "--include-walter-mcp"])).toEqual({
+      target: "skills",
+      includeWalter: true,
+    });
+  });
 
-afterEach(() => {
-  rmSync(root, { recursive: true, force: true });
+  test.each([
+    [],
+    ["unknown"],
+    ["hooks", "--include-walter-mcp"],
+    ["all", "--include-walter-mcp"],
+    ["skills", "--unknown"],
+  ])("rejects invalid installer arguments: %j", (...args) => {
+    expect(() => readOptions(args)).toThrow("Usage:");
+  });
 });
 
 describe("installSkills", () => {
+  beforeEach(() => {
+    const cache = join(process.cwd(), ".cache");
+    mkdirSync(cache, { recursive: true });
+    root = mkdtempSync(join(cache, "install-skills-test-"));
+    const humanizer = join(root, "lib/agents/humanizer");
+    mkdirSync(humanizer, { recursive: true });
+    writeFileSync(join(humanizer, "SKILL.md"), "Keep Jeff's custom skill");
+    download.mockReset().mockImplementation(async () => new Response(bytes));
+  });
+
+  afterEach(() => {
+    rmSync(root, { recursive: true, force: true });
+  });
+
+  test("copies a reviewed global skill into ignored provider paths", () => {
+    const globalSkills = join(root, "global-skills");
+    const source = "writer/SKILL.md";
+    mkdirSync(join(globalSkills, "writer"), { recursive: true });
+    writeFileSync(join(globalSkills, source), bytes);
+    const files = [{ source, target: "SKILL.md", sha256, bytes: bytes.length }];
+    const skills = [{ name: "orwell-writing", files }];
+    expect(installLocalSkills(root, globalSkills, skills)).toEqual(["orwell-writing"]);
+    const installed = join(root, ".agents/skills/orwell-writing/SKILL.md");
+    expect(readFileSync(installed, "utf8")).toBe(text);
+    expect(readFileSync(join(root, ".claude/skills/orwell-writing/SKILL.md"), "utf8")).toBe(text);
+    expect(download).not.toHaveBeenCalled();
+  });
+
+  test("refuses an unreviewed change to a global skill", () => {
+    const globalSkills = join(root, "global-skills");
+    const source = "writer/SKILL.md";
+    mkdirSync(join(globalSkills, "writer"), { recursive: true });
+    writeFileSync(join(globalSkills, source), Buffer.alloc(bytes.length, 120));
+    const files = [{ source, target: "SKILL.md", sha256, bytes: bytes.length }];
+    const skills = [{ name: "orwell-writing", files }];
+    expect(() => installLocalSkills(root, globalSkills, skills)).toThrow("Checksum differs");
+    expect(existsSync(join(root, ".agents"))).toBe(false);
+  });
+
   test("installs exact bytes and provider links, then reruns without downloads", async () => {
     await expect(installSkills(root, sources(), download)).resolves.toEqual([name]);
     expect(readFileSync(skillPath(), "utf8")).toBe(text);
@@ -129,5 +181,49 @@ describe("installSkills", () => {
     unsafe[0].revision = "main";
     await expect(installSkills(root, unsafe, download)).rejects.toThrow("pinned commit");
     expect(download).not.toHaveBeenCalled();
+  });
+});
+
+const checkMark = String.fromCharCode(0x2713);
+const legacyPostMerge = [
+  "#!/usr/bin/env bun",
+  "",
+  "import { $ } from 'bun';",
+  "",
+  "console.log('Running post-merge checks...');",
+  "",
+  "const lockfileChanged = await $`git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD`.text();",
+  "",
+  "if (lockfileChanged.includes('bun.lock') || lockfileChanged.includes('package.json')) {",
+  "  console.log('Dependencies changed, running bun install...');",
+  "  await $`bun install`;",
+  `  console.log('${checkMark} Dependencies updated');`,
+  "} else {",
+  `  console.log('${checkMark} No dependency changes detected');`,
+  "}",
+  "",
+].join("\n");
+
+describe("isManagedHook", () => {
+  test("recognizes an unmodified legacy hook", () => {
+    expect(isManagedHook("post-merge", legacyPostMerge)).toBe(true);
+  });
+
+  test("preserves a customized legacy hook", () => {
+    const customHook = `${legacyPostMerge}pnpm run custom-check\n`;
+
+    expect(isManagedHook("post-merge", customHook)).toBe(false);
+  });
+
+  test("recognizes hooks with the current marker", () => {
+    const hookContent = ["#!/usr/bin/env sh", "managed_by=scripts/install-hooks.ts"].join("\n");
+
+    expect(isManagedHook("pre-commit", hookContent)).toBe(true);
+  });
+
+  test("preserves custom shell hooks", () => {
+    const hookContent = ["#!/usr/bin/env sh", "pnpm run test"].join("\n");
+
+    expect(isManagedHook("pre-commit", hookContent)).toBe(false);
   });
 });
