@@ -1,0 +1,294 @@
+{
+  "sources": [
+    {
+      "repository": "walterwritesai/no-slop-ai-humanizer-rewriter",
+      "revision": "ef668580dc8782b7241b16ea77ae513737602616",
+      "license": "CC-BY-ND-4.0",
+      "requiresWalterMcp": false,
+      "skills": [
+        {
+          "name": "walter-writes-humanizer",
+          "files": [
+            {
+              "source": "humanizer/SKILL.md",
+              "target": "SKILL.md",
+              "sha256": "a70e7b45558ce4015d6372d694a66f53f3c6e4c0c019ebe25f214604c2344738",
+              "bytes": 7354
+            },
+            {
+              "source": "humanizer/references/phrases.md",
+              "target": "references/phrases.md",
+              "sha256": "304a6cf2a83632b6e58aceb3149bfe13c87ef81408398fcdfb42f688663bd655",
+              "bytes": 5674
+            },
+            {
+              "source": "humanizer/references/structures.md",
+              "target": "references/structures.md",
+              "sha256": "a4f087385f72fe7bd07a25e50cf0ea2342d030d340f10970f3edc117fa38eaca",
+              "bytes": 3317
+            },
+            {
+              "source": "humanizer/references/examples.md",
+              "target": "references/examples.md",
+              "sha256": "628092b82327655636f8551887ef3de479c47f72cb893cfd3918becdf885269c",
+              "bytes": 4702
+            },
+            {
+              "source": "LICENSE",
+              "target": "LICENSE",
+              "sha256": "241925d641ef461518c25627086637d8bff446dfc0f2cb9f12fbc13acbc960cb",
+              "bytes": 884
+            }
+          ]
+        },
+        {
+          "name": "walter-writes-writer",
+          "files": [
+            {
+              "source": "writer/SKILL.md",
+              "target": "SKILL.md",
+              "sha256": "502f5fb19994042b873d99ca9103f65d3ebdc2b992c1cd988507f9cb6179897d",
+              "bytes": 6334
+            },
+            {
+              "source": "writer/references/phrases.md",
+              "target": "references/phrases.md",
+              "sha256": "304a6cf2a83632b6e58aceb3149bfe13c87ef81408398fcdfb42f688663bd655",
+              "bytes": 5674
+            },
+            {
+              "source": "writer/references/structures.md",
+              "target": "references/structures.md",
+              "sha256": "31c592ea8f93fcc30d98ae16c33136dd9920d738807d8a465b2a062d0d2a6036",
+              "bytes": 4207
+            },
+            {
+              "source": "writer/references/examples.md",
+              "target": "references/examples.md",
+              "sha256": "628092b82327655636f8551887ef3de479c47f72cb893cfd3918becdf885269c",
+              "bytes": 4702
+            },
+            {
+              "source": "LICENSE",
+              "target": "LICENSE",
+              "sha256": "241925d641ef461518c25627086637d8bff446dfc0f2cb9f12fbc13acbc960cb",
+              "bytes": 884
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "walterwritesai/walter-skills",
+      "revision": "d043f4c5b21155f8c6b389d64010561af5ce5979",
+      "license": "MIT",
+      "requiresWalterMcp": true,
+      "skills": [
+        {
+          "name": "walter-agency-qc",
+          "files": [
+            {
+              "source": "skills/agency-qc/SKILL.md",
+              "target": "SKILL.md",
+              "sha256": "4dfa53a9f633396a3bb81f0ba518b887338c6c815fc93250870717825bfead5d",
+              "bytes": 1528
+            },
+            {
+              "source": "LICENSE",
+              "target": "LICENSE",
+              "sha256": "f17c3e3781f7f788c605400ac843fdf44ef1710bb6cd9b2d8528546e109ea685",
+              "bytes": 1073
+            }
+          ]
+        },
+        {
+          "name": "walter-brand-voice-adapter",
+          "files": [
+            {
+              "source": "skills/brand-voice-adapter/SKILL.md",
+              "target": "SKILL.md",
+              "sha256": "50522221f7a8c069bbaafc7c6d89571400bbeeba1490d44dd18f83040bc75633",
+              "bytes": 1406
+            },
+            {
+              "source": "LICENSE",
+              "target": "LICENSE",
+              "sha256": "f17c3e3781f7f788c605400ac843fdf44ef1710bb6cd9b2d8528546e109ea685",
+              "bytes": 1073
+            }
+          ]
+        },
+        {
+          "name": "walter-content-refresh",
+          "files": [
+            {
+              "source": "skills/content-refresh/SKILL.md",
+              "target": "SKILL.md",
+              "sha256": "d67caf7642919d6d4659c99c4a1a2fd9fb9deade03a1baafe689e69316c77d8a",
+              "bytes": 1309
+            },
+            {
+              "source": "LICENSE",
+              "target": "LICENSE",
+              "sha256": "f17c3e3781f7f788c605400ac843fdf44ef1710bb6cd9b2d8528546e109ea685",
+              "bytes": 1073
+            }
+          ]
+        },
+        {
+          "name": "walter-docs-writer",
+          "files": [
+            {
+              "source": "skills/docs-writer/SKILL.md",
+              "target": "SKILL.md",
+              "sha256": "6e24b32df1300480b4c9cfde9517f3c00c072aabd30646e85cde214a79fc5f32",
+              "bytes": 1601
+            },
+            {
+              "source": "LICENSE",
+              "target": "LICENSE",
+              "sha256": "f17c3e3781f7f788c605400ac843fdf44ef1710bb6cd9b2d8528546e109ea685",
+              "bytes": 1073
+            }
+          ]
+        },
+        {
+          "name": "walter-ecommerce",
+          "files": [
+            {
+              "source": "skills/ecommerce/SKILL.md",
+              "target": "SKILL.md",
+              "sha256": "3f84a7f199c9fd916719fa15fdfe59d1585f30dd0f6a4c8d5f9a6a56bb320e21",
+              "bytes": 1634
+            },
+            {
+              "source": "LICENSE",
+              "target": "LICENSE",
+              "sha256": "f17c3e3781f7f788c605400ac843fdf44ef1710bb6cd9b2d8528546e109ea685",
+              "bytes": 1073
+            }
+          ]
+        },
+        {
+          "name": "walter-lead-magnet-writer",
+          "files": [
+            {
+              "source": "skills/lead-magnet-writer/SKILL.md",
+              "target": "SKILL.md",
+              "sha256": "c3c24159316e8025ef484ff66cd72d58fb5f7a3b2c6f99e0c1aadc1889081622",
+              "bytes": 1411
+            },
+            {
+              "source": "LICENSE",
+              "target": "LICENSE",
+              "sha256": "f17c3e3781f7f788c605400ac843fdf44ef1710bb6cd9b2d8528546e109ea685",
+              "bytes": 1073
+            }
+          ]
+        },
+        {
+          "name": "walter-local-seo",
+          "files": [
+            {
+              "source": "skills/local-seo/SKILL.md",
+              "target": "SKILL.md",
+              "sha256": "c14cfdea867f504ff133a59d0c59743d8125dfe266746e69aa290c3f76ffe9a4",
+              "bytes": 1617
+            },
+            {
+              "source": "LICENSE",
+              "target": "LICENSE",
+              "sha256": "f17c3e3781f7f788c605400ac843fdf44ef1710bb6cd9b2d8528546e109ea685",
+              "bytes": 1073
+            }
+          ]
+        },
+        {
+          "name": "walter-newsletter-writer",
+          "files": [
+            {
+              "source": "skills/newsletter-writer/SKILL.md",
+              "target": "SKILL.md",
+              "sha256": "ad3892b8c8987132f5f5743534b1711dbb7c5cdd93f5645f028d5ee6f7ee3ada",
+              "bytes": 1265
+            },
+            {
+              "source": "LICENSE",
+              "target": "LICENSE",
+              "sha256": "f17c3e3781f7f788c605400ac843fdf44ef1710bb6cd9b2d8528546e109ea685",
+              "bytes": 1073
+            }
+          ]
+        },
+        {
+          "name": "walter-programmatic-seo",
+          "files": [
+            {
+              "source": "skills/programmatic-seo/SKILL.md",
+              "target": "SKILL.md",
+              "sha256": "ea911ab0ddf4b19036340cf727d5eb6f752db5cd961950dc78e7d089b854d864",
+              "bytes": 1368
+            },
+            {
+              "source": "LICENSE",
+              "target": "LICENSE",
+              "sha256": "f17c3e3781f7f788c605400ac843fdf44ef1710bb6cd9b2d8528546e109ea685",
+              "bytes": 1073
+            }
+          ]
+        },
+        {
+          "name": "walter-content-repurposer",
+          "files": [
+            {
+              "source": "skills/repurposer/SKILL.md",
+              "target": "SKILL.md",
+              "sha256": "31909d1a895ff8c0e6c50f523e92d770762896ebc43b7e7f3f26f818bbeef5c5",
+              "bytes": 1515
+            },
+            {
+              "source": "LICENSE",
+              "target": "LICENSE",
+              "sha256": "f17c3e3781f7f788c605400ac843fdf44ef1710bb6cd9b2d8528546e109ea685",
+              "bytes": 1073
+            }
+          ]
+        },
+        {
+          "name": "walter-seo-writer",
+          "files": [
+            {
+              "source": "skills/seo-writer/SKILL.md",
+              "target": "SKILL.md",
+              "sha256": "a956b9511353304195e7c660827ea8a9c723ae62dc92a114387ef02793bf01e3",
+              "bytes": 1665
+            },
+            {
+              "source": "LICENSE",
+              "target": "LICENSE",
+              "sha256": "f17c3e3781f7f788c605400ac843fdf44ef1710bb6cd9b2d8528546e109ea685",
+              "bytes": 1073
+            }
+          ]
+        },
+        {
+          "name": "walter-social-media",
+          "files": [
+            {
+              "source": "skills/social-media/SKILL.md",
+              "target": "SKILL.md",
+              "sha256": "35eaff2df1127b98e21ee07db20a0102051d8c8bafcb7170e88f7baad2cccbcd",
+              "bytes": 1450
+            },
+            {
+              "source": "LICENSE",
+              "target": "LICENSE",
+              "sha256": "f17c3e3781f7f788c605400ac843fdf44ef1710bb6cd9b2d8528546e109ea685",
+              "bytes": 1073
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
