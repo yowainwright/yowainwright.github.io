@@ -24,7 +24,7 @@ export function highlightStep(root: HTMLElement | null, lines: number[] = []) {
     line.classList.toggle("scrolly-code-highlight", highlighted);
   });
   if (lines.length === 0) {
-    root?.dispatchEvent(new Event("code-tooltip-step", { bubbles: true }));
+    root?.dispatchEvent(new Event("scroll-tooltip-step", { bubbles: true }));
     return;
   }
   const viewport = root?.querySelector<HTMLElement>(".scrolly-code__frames");
@@ -33,7 +33,7 @@ export function highlightStep(root: HTMLElement | null, lines: number[] = []) {
   if (!canScroll) return;
   const offset = target.getBoundingClientRect().top - viewport.getBoundingClientRect().top;
   viewport.scrollTop += offset - 80;
-  root?.dispatchEvent(new Event("code-tooltip-step", { bubbles: true }));
+  root?.dispatchEvent(new Event("scroll-tooltip-step", { bubbles: true }));
 }
 
 export function observeSteps(root: HTMLElement | null, onSelect: (index: number) => void) {

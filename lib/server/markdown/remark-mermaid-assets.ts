@@ -9,6 +9,7 @@ import {
 } from "mermaid-isomorphic";
 import type { Code, Image, Link, Paragraph, Parent, Root } from "mdast";
 import type { Node } from "unist";
+import { getMermaidThemeCss } from "./mermaid-theme";
 
 const PUBLIC_ASSET_PATH = "/assets/mermaid";
 const MERMAID_CONFIG = {
@@ -63,10 +64,11 @@ const getMermaidInstances = (parent: Parent): MermaidInstance[] =>
     return directInstances.concat(nestedInstances);
   });
 
-const getAssetName = (source: string) => {
+const getAssetName = (source: string, themeCss: string) => {
   const hash = createHash("sha256")
     .update(source)
     .update(JSON.stringify(MERMAID_CONFIG))
+    .update(themeCss)
     .digest("hex")
     .slice(0, 16);
   return `${hash}.svg`;
@@ -75,13 +77,18 @@ const getAssetName = (source: string) => {
 const getAltText = (result: RenderResult) =>
   result.title || result.description || "Mermaid diagram";
 
-const createDiagramImage = (assetUrl: string, result: RenderResult): Image => ({
+const createDiagramImage = (
+  assetUrl: string,
+  darkAssetUrl: string,
+  result: RenderResult,
+): Image => ({
   type: "image",
   url: assetUrl,
   alt: getAltText(result),
   data: {
     hProperties: {
       className: ["post__image", "mermaid-diagram"],
+      "data-dark-src": darkAssetUrl,
       decoding: "async",
       height: result.height,
       loading: "lazy",
@@ -90,7 +97,7 @@ const createDiagramImage = (assetUrl: string, result: RenderResult): Image => ({
   },
 });
 
-const createDiagramLink = (assetUrl: string, image: Image): Link => ({
+const createDiagramLink = (assetUrl: string, darkAssetUrl: string, image: Image): Link => ({
   type: "link",
   url: assetUrl,
   title: "Open diagram in a new tab",
@@ -98,15 +105,16 @@ const createDiagramLink = (assetUrl: string, image: Image): Link => ({
   data: {
     hProperties: {
       className: ["mermaid-chart"],
+      "data-dark-href": darkAssetUrl,
       rel: ["noopener", "noreferrer"],
       target: "_blank",
     },
   },
 });
 
-const createDiagramNode = (assetUrl: string, result: RenderResult) => {
-  const image = createDiagramImage(assetUrl, result);
-  const link = createDiagramLink(assetUrl, image);
+const createDiagramNode = (assetUrl: string, darkAssetUrl: string, result: RenderResult) => {
+  const image = createDiagramImage(assetUrl, darkAssetUrl, result);
+  const link = createDiagramLink(assetUrl, darkAssetUrl, image);
   const paragraph: Paragraph = { type: "paragraph", children: [link] };
   return paragraph;
 };
@@ -118,24 +126,35 @@ const getRenderResult = (result: PromiseSettledResult<RenderResult>, index: numb
   });
 };
 
-const writeDiagramAsset = async (assetDirectory: string, source: string, result: RenderResult) => {
-  const assetName = getAssetName(source);
+const writeDiagramAsset = async (
+  assetDirectory: string,
+  source: string,
+  result: RenderResult,
+  themeCss: string,
+) => {
+  const assetName = getAssetName(source, themeCss);
   const assetPath = path.join(assetDirectory, assetName);
   const assetUrl = `${PUBLIC_ASSET_PATH}/${assetName}`;
-  await writeFile(assetPath, result.svg, "utf8");
-  return createDiagramNode(assetUrl, result);
+  const svg = result.svg.replace("</svg>", `<style>${themeCss}</style></svg>`);
+  await writeFile(assetPath, svg, "utf8");
+  return assetUrl;
 };
 
 const writeDiagramAssets = (
   assetDirectory: string,
   sources: string[],
   results: PromiseSettledResult<RenderResult>[],
+  themeCss: { light: string; dark: string },
 ) =>
   Promise.all(
-    results.map((result, index) => {
+    results.map(async (result, index) => {
       const renderResult = getRenderResult(result, index);
       const source = sources[index] || "";
-      return writeDiagramAsset(assetDirectory, source, renderResult);
+      const [light, dark] = await Promise.all([
+        writeDiagramAsset(assetDirectory, source, renderResult, themeCss.light),
+        writeDiagramAsset(assetDirectory, source, renderResult, themeCss.dark),
+      ]);
+      return createDiagramNode(light, dark, renderResult);
     }),
   );
 
@@ -152,10 +171,13 @@ const renderMermaidAssets = async (tree: Root, render: MermaidRenderer) => {
   if (instances.length === 0) return;
 
   const sources = instances.map(({ node }) => node.value);
+  const light = getMermaidThemeCss("light");
+  const dark = getMermaidThemeCss("dark");
+  const themeCss = { light, dark };
   const results = await render(sources, { mermaidConfig: MERMAID_CONFIG });
   const assetDirectory = path.join(process.cwd(), "public", PUBLIC_ASSET_PATH);
   await mkdir(assetDirectory, { recursive: true });
-  const diagrams = await writeDiagramAssets(assetDirectory, sources, results);
+  const diagrams = await writeDiagramAssets(assetDirectory, sources, results, themeCss);
   replaceDiagramNodes(instances, diagrams);
 };
 

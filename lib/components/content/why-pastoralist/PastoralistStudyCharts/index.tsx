@@ -13,17 +13,15 @@ import {
   type TooltipContentProps,
 } from "recharts";
 import { CHART_SERIES_COLORS, CHART_STYLES } from "../../../charts/constants";
-import { pastoralistStudyMetrics, type PastoralistStudyMetric } from "./constants";
+import { pastoralistCleanupMetrics } from "./constants";
 
-type ProjectTickProps = { x?: number; y?: number; payload?: { value: string } };
-
-const entryColor = CHART_SERIES_COLORS[0];
-const manifestColor = CHART_SERIES_COLORS[1];
-const studyData = pastoralistStudyMetrics.slice().sort((a, b) => b.entries - a.entries);
+const unusedColor = CHART_SERIES_COLORS[0];
+const overrideColor = CHART_SERIES_COLORS[1];
+const studyData = pastoralistCleanupMetrics;
 
 export const PastoralistStudyCharts = () => (
   <div className="pastoralist-study-charts">
-    <div className="chart-title">Audit entries over manifests scanned</div>
+    <div className="chart-title">Unused overrides out of total overrides</div>
     <StudyChart />
   </div>
 );
@@ -40,14 +38,14 @@ function StudyChart() {
       >
         <RechartsBarChart data={studyData} layout="vertical" margin={margin}>
           <CartesianGrid
-            xAxisId="manifests"
-            yAxisId="entries"
+            xAxisId="overrides"
+            yAxisId="unused"
             horizontal={false}
             stroke={CHART_STYLES.grid.stroke}
             strokeDasharray={CHART_STYLES.grid.strokeDasharray}
           />
           <StudyAxes />
-          <Tooltip<number, string> axisId="entries" content={StudyTooltip} cursor={cursor} />
+          <Tooltip<number, string> axisId="unused" content={StudyTooltip} cursor={cursor} />
           <StudyBars />
         </RechartsBarChart>
       </ResponsiveContainer>
@@ -62,34 +60,35 @@ function StudyAxes() {
     height: 40,
     fontSize: CHART_STYLES.axis.fontSize,
   };
-  const manifestsTick = { fill: manifestColor };
-  const manifestsLabel = {
-    value: "Manifests scanned",
+  const overridesTick = { fill: overrideColor };
+  const projectTick = { fill: "var(--color-text-primary)", fontSize: 12 };
+  const overridesLabel = {
+    value: "Total overrides",
     position: "bottom" as const,
     offset: 10,
-    fill: manifestColor,
+    fill: overrideColor,
     fontSize: 12,
   };
   return (
     <>
       <XAxis
         {...axis}
-        xAxisId="manifests"
-        tick={manifestsTick}
-        stroke={manifestColor}
-        label={manifestsLabel}
+        xAxisId="overrides"
+        tick={overridesTick}
+        stroke={overrideColor}
+        label={overridesLabel}
       />
       <YAxis
-        yAxisId="entries"
+        yAxisId="unused"
         type="category"
         dataKey="project"
         width={140}
         interval={0}
-        tick={<ProjectTick />}
+        tick={projectTick}
         tickLine={false}
         axisLine={false}
       />
-      <YAxis yAxisId="manifests" type="category" dataKey="project" hide />
+      <YAxis yAxisId="overrides" type="category" dataKey="project" width={0} hide />
     </>
   );
 }
@@ -98,29 +97,29 @@ function StudyBars() {
   return (
     <>
       <Bar
-        className="study-manifests"
-        dataKey="packageManifests"
-        name="Manifests scanned"
-        xAxisId="manifests"
-        yAxisId="manifests"
-        fill={manifestColor}
+        className="study-overrides"
+        dataKey="overrides"
+        name="Total overrides"
+        xAxisId="overrides"
+        yAxisId="overrides"
+        fill={overrideColor}
         fillOpacity={0.25}
         barSize={22}
         isAnimationActive={false}
       />
       <Bar
-        className="study-entries"
-        dataKey="entries"
-        name="Audit entries"
-        xAxisId="manifests"
-        yAxisId="entries"
-        fill={entryColor}
+        className="study-unused"
+        dataKey="unused"
+        name="Unused overrides"
+        xAxisId="overrides"
+        yAxisId="unused"
+        fill={unusedColor}
         barSize={12}
         minPointSize={2}
         isAnimationActive={false}
       >
         <LabelList
-          dataKey="entries"
+          dataKey="unused"
           position="right"
           formatter={formatLabelValue}
           fill={CHART_STYLES.line.label.color}
@@ -131,41 +130,6 @@ function StudyBars() {
   );
 }
 
-function ProjectTick({ x = 0, y = 0, payload }: ProjectTickProps) {
-  const metric = studyData.find((entry) => entry.project === payload?.value);
-  if (!metric) return null;
-  const href = getRepositoryUrl(metric);
-  const transform = `translate(${x}, ${y})`;
-  const label = `${metric.project} repository (${metric.upstreamRef})`;
-  const prLabel = `${metric.project} study PR (${metric.upstreamRef})`;
-  return (
-    <g transform={transform}>
-      <a
-        className="study-project-link"
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={label}
-      >
-        <text x={-30} dy="0.32em" textAnchor="end" fontSize={12}>
-          {metric.project}
-        </text>
-      </a>
-      <a
-        className="study-pr-link"
-        href={metric.prUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={prLabel}
-      >
-        <text x={-4} dy="0.32em" textAnchor="end" fontSize={10}>
-          PR
-        </text>
-      </a>
-    </g>
-  );
-}
-
 function StudyTooltip({ active, label }: TooltipContentProps<number, string>) {
   const metric = studyData.find((entry) => entry.project === label);
   const visible = active && metric;
@@ -173,16 +137,10 @@ function StudyTooltip({ active, label }: TooltipContentProps<number, string>) {
   return (
     <div className="pastoralist-study-charts__tooltip" style={CHART_STYLES.tooltip.content}>
       <strong>{metric.project}</strong>
-      <div>Audit entries: {formatNumber(metric.entries)}</div>
-      <div>Manifests scanned: {formatNumber(metric.packageManifests)}</div>
-      <small>{metric.upstreamRef}</small>
+      <div>Total overrides: {formatNumber(metric.overrides)}</div>
+      <div>Unused overrides: {formatNumber(metric.unused)}</div>
     </div>
   );
-}
-
-function getRepositoryUrl(metric: PastoralistStudyMetric) {
-  const repository = metric.upstreamRef.split("@")[0];
-  return `https://github.com/${repository}`;
 }
 
 function formatLabelValue(value: React.ReactNode) {

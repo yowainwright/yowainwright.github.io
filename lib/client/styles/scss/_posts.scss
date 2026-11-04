@@ -1,6 +1,16 @@
 @use "variables" as *;
 
 .post {
+  &__content {
+    --color-link-primary: var(--color-text-secondary);
+    --color-link-visited: var(--color-text-secondary);
+    --color-link-hover: var(--color-text-secondary);
+
+    a {
+      color: var(--color-link-primary);
+    }
+  }
+
   &__section {
     position: relative;
     display: grid;

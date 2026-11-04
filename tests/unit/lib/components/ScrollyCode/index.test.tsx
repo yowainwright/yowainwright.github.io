@@ -6,6 +6,7 @@ import rehypeShiki from "@shikijs/rehype";
 import { getShikiRehypeOptions } from "../../../../../lib/server/markdown";
 import { buildPostStaticProps } from "../../../../../lib/server/post-page";
 import { ScrollyCode } from "../../../../../lib/components/ScrollyCode";
+import { InfoBlock } from "../../../../../lib/components/InfoBlock";
 import { cleanupMountedRoots, createMountedRoot, setupDom } from "../../../test-utils/react-dom";
 
 afterEach(async () => {
@@ -51,7 +52,7 @@ test("fades the previous explanation before showing the next and highlights code
       </pre>
     </ScrollyCode>,
   );
-  const popup = document.querySelector<HTMLElement>(".code-tooltip-content")!;
+  const popup = document.querySelector<HTMLElement>(".scroll-tooltip__content")!;
   const buttons = document.querySelectorAll<HTMLButtonElement>("nav button");
   expect(popup.querySelector(".code-tooltip-token")?.textContent).toBe("semver");
   await act(async () => buttons[1].click());
@@ -72,6 +73,7 @@ test("renders the actual post with two field walkthroughs and the before/after w
   const { props } = await buildPostStaticProps("why-pastoralist", "content");
   const components = {
     ScrollyCode,
+    InfoBlock,
     PastoralistStudyCharts: () => null,
     SectionSources: () => null,
   };

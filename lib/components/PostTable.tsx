@@ -3,15 +3,22 @@ import { Maximize2, X } from "lucide-react";
 
 type PostTableProps = React.TableHTMLAttributes<HTMLTableElement> & {
   "data-title"?: string;
+  "data-caption"?: string;
 };
 
 type TableViewProps = {
   className: string;
   props: React.TableHTMLAttributes<HTMLTableElement>;
+  caption?: string;
 };
 
-const TableView = ({ className, props }: TableViewProps) => (
-  <table {...props} className={className} />
+const TableView = ({ className, props, caption }: TableViewProps) => (
+  <figure className="post__table-figure">
+    <div className="post__table-scroll">
+      <table {...props} className={className} />
+    </div>
+    {caption && <figcaption className="post__table-caption">{caption}</figcaption>}
+  </figure>
 );
 
 const getTitle = (title?: string) => {
@@ -27,6 +34,7 @@ const ExpandedTable = ({
   onClose,
   props,
   title,
+  caption,
 }: TableViewProps & {
   isOpen: boolean;
   onClose: () => void;
@@ -50,9 +58,7 @@ const ExpandedTable = ({
           </button>
         </div>
         <div className="post__table-dialog-scroll">
-          <div className="post__table-scroll">
-            <TableView className={className} props={props} />
-          </div>
+          <TableView className={className} props={props} caption={caption} />
         </div>
       </div>
     </div>
@@ -61,7 +67,7 @@ const ExpandedTable = ({
 
 export default function PostTable({ className, ...props }: PostTableProps) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const { "data-title": tableTitle, ...tableProps } = props;
+  const { "data-title": tableTitle, "data-caption": caption, ...tableProps } = props;
   const tableClassName = ["post__table", className].filter(Boolean).join(" ");
   const title = getTitle(tableTitle);
   const open = () => setIsExpanded(true);
@@ -91,9 +97,7 @@ export default function PostTable({ className, ...props }: PostTableProps) {
             <Maximize2 size={16} aria-hidden="true" />
           </button>
         </div>
-        <div className="post__table-scroll">
-          <TableView className={tableClassName} props={tableProps} />
-        </div>
+        <TableView className={tableClassName} props={tableProps} caption={caption} />
       </div>
       <ExpandedTable
         className={tableClassName}
@@ -101,6 +105,7 @@ export default function PostTable({ className, ...props }: PostTableProps) {
         onClose={close}
         props={tableProps}
         title={title}
+        caption={caption}
       />
     </>
   );

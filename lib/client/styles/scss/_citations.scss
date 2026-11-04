@@ -21,7 +21,7 @@
 .sources {
   font-size: 0.875rem;
   margin-top: $m-lg;
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
 
   &__title {
     font-weight: var(--font-weight-bold);
@@ -36,6 +36,7 @@
 
   &__item {
     margin-bottom: $m-xs;
+    scroll-margin-top: 7rem;
   }
 
   &__author {

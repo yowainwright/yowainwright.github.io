@@ -55,18 +55,8 @@
   padding-top: 0.75rem;
 
   &__chart {
-    height: 480px;
+    height: 300px;
     width: 100%;
-  }
-
-  .recharts-yAxis a text {
-    fill: var(--color-link-primary);
-    text-decoration: underline;
-  }
-
-  a:focus-visible {
-    outline: 2px solid var(--color-link-primary);
-    outline-offset: 3px;
   }
 
   &__tooltip {

@@ -11,7 +11,7 @@ test("shows the active field during scrolling without stealing focus and respect
       <span class="line scrolly-code-highlight"><button class="shiki-tooltip">first</button></span>
       <span class="line"><button class="shiki-tooltip">second</button></span>
     </section></div>
-    <span class="shiki-tooltip" data-tooltip-auto data-tooltip-step="0" data-tooltip="First explanation"></span>
+    <span class="scroll-tooltip" data-tooltip-auto data-tooltip-step="0" data-tooltip="First explanation"></span>
   </div></article>`);
   const content = document.querySelector<HTMLElement>("#post");
   const viewport = document.querySelector<HTMLElement>(".scrolly-code__frames")!;
@@ -40,16 +40,16 @@ test("shows the active field during scrolling without stealing focus and respect
   lines[1].classList.add("scrolly-code-highlight");
   tip.dataset.tooltipStep = "1";
   tip.dataset.tooltip = "Second explanation";
-  content?.dispatchEvent(new dom.window.Event("code-tooltip-step"));
+  content?.dispatchEvent(new dom.window.Event("scroll-tooltip-step"));
   expect(tip.hasAttribute("data-tooltip-open")).toBe(true);
   expect(tip.dataset.tooltip).toBe("Second explanation");
   expect(tip.style.getPropertyValue("--tooltip-y")).not.toBe(firstPosition);
   expect(document.activeElement).toBe(document.body);
   tip.dataset.tooltipAnchor = "first";
-  content?.dispatchEvent(new dom.window.Event("code-tooltip-step"));
+  content?.dispatchEvent(new dom.window.Event("scroll-tooltip-step"));
   expect(tip.style.getPropertyValue("--tooltip-y")).toBe(firstPosition);
   delete tip.dataset.tooltipAnchor;
-  content?.dispatchEvent(new dom.window.Event("code-tooltip-step"));
+  content?.dispatchEvent(new dom.window.Event("scroll-tooltip-step"));
   expect(tip.style.getPropertyValue("--tooltip-y")).not.toBe(firstPosition);
   Object.defineProperty(dom.window, "innerWidth", { value: 320, configurable: true });
   window.dispatchEvent(new dom.window.Event("resize"));

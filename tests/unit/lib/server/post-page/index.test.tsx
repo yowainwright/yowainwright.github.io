@@ -64,6 +64,9 @@ describe("post page static helpers", () => {
     expect(compiledSource).toContain('id: "the-problem-with-overrides"');
     expect(compiledSource).toContain('className: "content-header"');
     expect(compiledSource).toContain("heading-icon-placeholder");
+    expect(compiledSource).toContain(
+      '"data-caption": "These five projects had 171 overrides before cleanup."',
+    );
   });
 
   test("attaches MDX table title metadata only to the following table", () => {
@@ -109,5 +112,19 @@ describe("post page static helpers", () => {
     expect(tree.children?.[0]).toBe(titledTable);
     expect(titledTable.data?.hProperties?.["data-title"]).toBe("Initial Override Snapshot");
     expect(tree.children?.[1]).toBe(paragraph);
+  });
+
+  test("attaches an adjacent figcaption to its table and preserves unrelated captions", () => {
+    const table: MdxAstNode = { type: "table" };
+    const caption: MdxAstNode = {
+      type: "mdxJsxFlowElement",
+      name: "figcaption",
+      children: [{ type: "text", value: "Sample totals." }],
+    };
+    const paragraph: MdxAstNode = { type: "paragraph" };
+    const tree: MdxAstNode = { type: "root", children: [table, caption, paragraph, caption] };
+    remarkMdxTableTitles()(tree);
+    expect(table.data?.hProperties?.["data-caption"]).toBe("Sample totals.");
+    expect(tree.children).toEqual([table, paragraph, caption]);
   });
 });

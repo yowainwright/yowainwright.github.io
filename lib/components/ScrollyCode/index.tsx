@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useId, useRef, useState, type KeyboardEvent } from "react";
+import { Tooltip } from "../Tooltip";
 import {
   getFrames,
   getNavigationIndex,
@@ -9,12 +10,7 @@ import {
   observeSteps,
   scrollToStep,
 } from "./utils";
-import type {
-  StepButtonProps,
-  TooltipContentProps,
-  ScrollyCodeProps,
-  ScrollyCodeViewProps,
-} from "./types";
+import type { StepButtonProps, ScrollyCodeProps, ScrollyCodeViewProps } from "./types";
 
 export function ScrollyCode({ children, steps }: ScrollyCodeProps) {
   const root = useRef<HTMLDivElement>(null);
@@ -92,7 +88,14 @@ function CodePanel(props: ScrollyCodeViewProps) {
   const note = frames[activeIndex]?.props["data-note"] ?? "";
   const content = frames[activeIndex]?.props.children;
   const anchor = frames[activeIndex]?.props["data-anchor"];
-  const tooltip = { note, content, step: activeIndex };
+  const tooltipParts = getTooltipParts(note, content).map(({ text, code }, index) => {
+    const className = code ? "code-tooltip-token" : undefined;
+    return (
+      <span key={index} className={className}>
+        {text}
+      </span>
+    );
+  });
   const position = `${activeIndex + 1} / ${frames.length}`;
   return (
     <div className="scrolly-code__track" style={trackStyle}>
@@ -108,46 +111,10 @@ function CodePanel(props: ScrollyCodeViewProps) {
             {note}
           </p>
         </div>
-        <span
-          className="shiki-tooltip scrolly-code__tooltip"
-          data-tooltip-auto=""
-          data-tooltip-step={activeIndex}
-          data-tooltip-anchor={anchor}
-          data-tooltip={note}
-          aria-hidden="true"
-        >
-          <TooltipContent {...tooltip} />
-        </span>
+        <Tooltip className="scrolly-code__tooltip" step={activeIndex} data-tooltip-anchor={anchor}>
+          {tooltipParts}
+        </Tooltip>
       </div>
     </div>
-  );
-}
-
-function TooltipContent({ note, content, step }: TooltipContentProps) {
-  const popup = useRef<HTMLSpanElement>(null);
-  const [display, setDisplay] = useState({ note, content, step });
-  const exiting = display.step !== step;
-  useEffect(() => {
-    popup.current?.dispatchEvent(new Event("code-tooltip-step", { bubbles: true }));
-  }, [display.step]);
-  useEffect(() => {
-    if (display.step === step) return;
-    const reduced = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
-    const delay = reduced ? 0 : 180;
-    const timer = setTimeout(() => setDisplay({ note, content, step }), delay);
-    return () => clearTimeout(timer);
-  }, [note, content, step, display.step]);
-  const parts = getTooltipParts(display.note, display.content).map(({ text, code }, index) => {
-    const className = code ? "code-tooltip-token" : undefined;
-    return (
-      <span key={index} className={className}>
-        {text}
-      </span>
-    );
-  });
-  return (
-    <span className="code-tooltip-content" data-exiting={exiting} ref={popup}>
-      {parts}
-    </span>
   );
 }

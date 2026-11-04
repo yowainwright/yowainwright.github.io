@@ -1,0 +1,139 @@
+@use "variables" as *;
+
+@property --scroll-tooltip-border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: true;
+}
+
+.scroll-tooltip {
+  --tooltip-surface: var(--code-bg);
+  --tooltip-border: conic-gradient(
+    from var(--scroll-tooltip-border-angle),
+    #ec4899, #ef4444, #eab308, #22c55e, #06b6d4, #3b82f6, #8b5cf6, #ec4899
+  );
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+
+  &[data-tooltip-open] {
+    animation: scroll-tooltip-border-rotate 6s linear infinite;
+  }
+
+  .scroll-tooltip__content {
+    position: fixed;
+    top: var(--tooltip-y);
+    left: var(--tooltip-x);
+    transform: translate(-50%, -100%);
+    padding: 0.75rem 1rem;
+    background:
+      linear-gradient(var(--tooltip-surface), var(--tooltip-surface)) padding-box,
+      var(--tooltip-border) border-box;
+    color: var(--color-text-primary);
+    border: 2px solid transparent;
+    border-radius: $radius-md;
+    font-size: var(--font-size-base);
+    white-space: normal;
+    line-height: var(--line-height-loose);
+    font-family: inherit;
+    z-index: 9999;
+    box-shadow: 0 2px 4px color-mix(in srgb, var(--color-text-primary) 10%, transparent);
+    pointer-events: none;
+    width: var(--tooltip-width, min(18rem, calc(100vw - 2rem)));
+    box-sizing: border-box;
+    text-align: left;
+    opacity: 0;
+    scale: 0.95;
+    visibility: hidden;
+    transform-origin: center bottom;
+    transition: opacity 180ms ease-in-out, scale 180ms ease-in-out, visibility 0s 180ms;
+  }
+
+  &[data-tooltip-auto]::before {
+    content: "";
+    position: fixed;
+    left: var(--tooltip-arrow-x);
+    top: calc(var(--tooltip-y) - 2px);
+    width: 0.875rem;
+    height: 0.875rem;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    background:
+      linear-gradient(var(--tooltip-surface), var(--tooltip-surface)) padding-box,
+      var(--tooltip-border) border-box;
+    transform: translate(-50%, -50%) rotate(45deg);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 180ms ease-in-out, visibility 0s 180ms;
+  }
+
+  &[data-tooltip-open] .scroll-tooltip__content {
+    opacity: 1;
+    scale: 1;
+    visibility: visible;
+    transition-delay: 0s;
+    animation: scroll-tooltip-pop-in 500ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  &[data-tooltip-open]::before {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+
+  &[data-tooltip-open] .scroll-tooltip__content[data-exiting="true"] {
+    animation: none;
+    opacity: 0;
+    scale: 0.95;
+  }
+
+  &:has(.scroll-tooltip__content[data-exiting="true"])::before {
+    opacity: 0;
+  }
+
+  &[data-tooltip-placement="bottom"] .scroll-tooltip__content {
+    transform: translateX(-50%);
+    transform-origin: center top;
+  }
+
+  &[data-tooltip-placement="bottom"]::before {
+    top: calc(var(--tooltip-y) + 2px);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+
+  &[data-tooltip-placement="right"] .scroll-tooltip__content {
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+
+  &[data-tooltip-placement="right"]::before {
+    top: var(--tooltip-arrow-y);
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+  }
+}
+
+@keyframes scroll-tooltip-border-rotate {
+  to { --scroll-tooltip-border-angle: 1turn; }
+}
+
+@keyframes scroll-tooltip-pop-in {
+  0% { scale: 0; opacity: 0; }
+  60% { scale: 1.08; opacity: 1; }
+  80% { scale: 0.95; }
+  100% { scale: 1; opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-tooltip[data-tooltip-open],
+  .scroll-tooltip .scroll-tooltip__content,
+  .scroll-tooltip::before {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+

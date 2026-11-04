@@ -7,6 +7,6 @@ export type Source = {
 };
 
 export interface SectionSourcesProps {
-  sources: Source[];
+  sources: Source[] | string;
   title?: string;
 }

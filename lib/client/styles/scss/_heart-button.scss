@@ -3,12 +3,13 @@
   gap: 0.35rem;
   cursor: pointer;
 
-  &--active {
-    color: #e53935;
-  }
-
+  &--active,
   &--maxed {
     color: #e53935;
+
+    .js-is-darkmode & {
+      color: #e53935;
+    }
   }
 
   &--pulse {

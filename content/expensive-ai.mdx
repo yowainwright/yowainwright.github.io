@@ -9,6 +9,8 @@ categories:
   - claude
 ---
 
+import { SectionSources } from "../lib/components/citations";
+
 import {
   AgentTaskCostChart,
   ProjectCostComparisonChart,
@@ -19,7 +21,7 @@ import {
 As a software engineer in 2026, I use AI all the time.
 My most active GitHub repository may be my Claude config repo.
 Most days now, I'm there adding rules, telling Claude to make one comment
-[_louder_](https://www.anthropic.com/engineering/claude-code-best-practices#a-create-claudemd-files),
+_louder_[1](#source-1),
 updating hooks, rules, and agents to handle more use cases.
 Managing how I make Claude Code write code like me—or, even better, write code better than me—is something I feel it's worthwhile to spend time on.
 
@@ -46,7 +48,7 @@ These _are_ new developer tools. Amiright?
 However, despite this handshake that I've had with these smart, naive decepticons, there has been a problem looming.
 Well, one problem for the subject of this post.
 The problem of tokens, or, what matters to me,
-the [cost-per-token](https://artificialanalysis.ai/models/comparisons/deepseek-v3-1-reasoning-vs-claude-4-opus)—which,
+the cost-per-token[2](#source-2)—which,
 I had been told, could be a lot.
 This cost had felt abstract to me since we, engineers (for this post's context), all started using chat a few years ago.
 I'd heard about effects on the environment and power grid. However, it's a weird abstraction.
@@ -54,7 +56,7 @@ I'm at home typing on my computer as I have always done. It's weird to think tha
 
 Until 48 hours ago, I'd looked at my usage and thought,
 _This is a crazy cost per acquisition_. In prep, I had done minor shifts to manage my AI infrastructure.
-But, I'd also read DHH's post ["Local LLMs are how nerds now justify a big computer they don't need"](https://world.hey.com/dhh/local-llms-are-how-nerds-now-justify-a-big-computer-they-don-t-need-af2fcb7b) and,
+But, I'd also read DHH's post "Local LLMs are how nerds now justify a big computer they don't need"[3](#source-3) and,
 well, fair—_why put in the effort when my Max plan will be better?_ DHH is smart, and so are the people that are building these models, so back to Claude.
 
 ---
@@ -215,6 +217,51 @@ The sequential pattern provides more control and deeper understanding for me and
 
 ---
 
-[Nicholas C. Zakas](https://humanwhocodes.com/blog/), code god creator of [eslint](https://eslint.org/) and an inspirational person on multiple levels, wrote [this post](https://newsletter.humanwhocodes.com/posts/expensive-ai-is-coming) which clearly illustrates the issue.
-I'm also continually following [Crush](https://github.com/charmbracelet/crush), [ollama](https://ollama.com/), and [opencode](https://opencode.ai/) to try and ensure I have some idea of what's going on!
+Nicholas C. Zakas[4](#source-4), code god creator of eslint[5](#source-5) and an inspirational person on multiple levels, wrote this post[6](#source-6) which clearly illustrates the issue.
+I'm also continually following Crush[7](#source-7), ollama[8](#source-8), and opencode[9](#source-9) to try and ensure I have some idea of what's going on!
 I used Claude writing this. I wrote most of the article by hand and used Claude Code to ensure a decent parallel between my experience and yours could be drawn. I also used Claude to gather data so my problem can be clearer to you.
+
+---
+
+## Sources
+
+<SectionSources
+  sources='[
+  {
+    "title": "Claude Code best practices",
+    "url": "https://www.anthropic.com/engineering/claude-code-best-practices#a-create-claudemd-files"
+  },
+  {
+    "title": "DeepSeek V3.1 Reasoning vs. Claude 4 Opus",
+    "url": "https://artificialanalysis.ai/models/comparisons/deepseek-v3-1-reasoning-vs-claude-4-opus"
+  },
+  {
+    "title": "Local LLMs are how nerds now justify a big computer they don’t need",
+    "url": "https://world.hey.com/dhh/local-llms-are-how-nerds-now-justify-a-big-computer-they-don-t-need-af2fcb7b"
+  },
+  {
+    "title": "Nicholas C. Zakas",
+    "url": "https://humanwhocodes.com/blog/"
+  },
+  {
+    "title": "ESLint",
+    "url": "https://eslint.org/"
+  },
+  {
+    "title": "Expensive AI Is Coming",
+    "url": "https://newsletter.humanwhocodes.com/posts/expensive-ai-is-coming"
+  },
+  {
+    "title": "Crush",
+    "url": "https://github.com/charmbracelet/crush"
+  },
+  {
+    "title": "Ollama",
+    "url": "https://ollama.com/"
+  },
+  {
+    "title": "OpenCode",
+    "url": "https://opencode.ai/"
+  }
+]'
+/>

@@ -46,6 +46,12 @@ export type MdxAstNode = {
   value?: string;
 };
 
+type MdxTableTitleState = {
+  children: MdxAstNode[];
+  pendingTitle: string;
+  pendingTitleNode: MdxAstNode | null;
+};
+
 export const getMdxAstText = (node: MdxAstNode): string => {
   if (typeof node.value === "string") return node.value;
   if (!node.children) return "";
@@ -71,16 +77,10 @@ export const isMdxTableTitle = (node: MdxAstNode) => {
   return isLegacyTableTitle || isHeadingTableTitle;
 };
 
-type MdxTableTitleState = {
-  children: MdxAstNode[];
-  pendingTitle: string;
-  pendingTitleNode: MdxAstNode | null;
-};
-
-const attachTableTitle = (node: MdxAstNode, pendingTitle: string) => {
+const attachTableMetadata = (node: MdxAstNode, name: string, value: string) => {
   node.data = Object.assign({}, node.data, {
     hProperties: Object.assign({}, node.data?.hProperties, {
-      "data-title": pendingTitle,
+      [name]: value,
     }),
   });
 };
@@ -99,6 +99,15 @@ const processMdxTableTitleNode = (
   state: MdxTableTitleState,
   node: MdxAstNode,
 ): MdxTableTitleState => {
+  const previous = state.children.at(-1);
+  const isCaption = node.type === "mdxJsxFlowElement" && node.name === "figcaption";
+  const followsTable = previous?.type === "table";
+  const isTableCaption = isCaption && followsTable;
+  if (isTableCaption) {
+    attachTableMetadata(previous, "data-caption", getMdxAstText(node).trim());
+    return state;
+  }
+
   if (isMdxTableTitle(node)) {
     const flushedState = flushPendingTitle(state);
 
@@ -111,7 +120,7 @@ const processMdxTableTitleNode = (
 
   const isTitledTable = state.pendingTitleNode !== null && node.type === "table";
   if (isTitledTable) {
-    attachTableTitle(node, state.pendingTitle);
+    attachTableMetadata(node, "data-title", state.pendingTitle);
 
     return {
       children: state.children.concat(node),
