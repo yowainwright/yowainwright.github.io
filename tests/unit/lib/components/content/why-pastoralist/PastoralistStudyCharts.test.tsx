@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { afterEach, expect, test, vi } from "vitest";
-import React, { type ReactElement } from "react";
+import React, { act, type ReactElement } from "react";
 import { PastoralistStudyCharts } from "../../../../../../lib/components/content/why-pastoralist/PastoralistStudyCharts";
 import { pastoralistCleanupMetrics } from "../../../../../../lib/components/content/why-pastoralist/PastoralistStudyCharts/constants";
 import { cleanupMountedRoots, createMountedRoot, setupDom } from "../../../../test-utils/react-dom";
@@ -18,12 +18,17 @@ vi.mock("recharts", async (importOriginal) => {
 });
 
 afterEach(async () => {
+  await act(async () => vi.runOnlyPendingTimers());
   await cleanupMountedRoots();
+  vi.clearAllTimers();
+  vi.useRealTimers();
   vi.unstubAllGlobals();
 });
 
 test("uses the cleanup tables’ five projects and counts on one shared scale", async () => {
-  setupDom("");
+  vi.useFakeTimers();
+  const dom = setupDom("");
+  vi.stubGlobal("cancelAnimationFrame", dom.window.cancelAnimationFrame.bind(dom.window));
   class ResizeObserver {
     observe() {}
     unobserve() {}
