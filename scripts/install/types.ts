@@ -2,7 +2,6 @@ import type manifest from "../../lib/agents/sources.json";
 
 export type Source = (typeof manifest.sources)[number];
 export type Skill = Source["skills"][number];
-export type LocalSkill = (typeof manifest.localSkills)[number];
 export type FileEntry = Skill["files"][number];
 export type Download = typeof fetch;
 export type SkillFile = { path: string; entry: FileEntry };

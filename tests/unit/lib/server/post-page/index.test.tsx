@@ -61,7 +61,7 @@ describe("post page static helpers", () => {
     expect(props.slug).toBe("why-pastoralist");
     expect(props.isMdx).toBe(true);
     expect(props.content).toBeNull();
-    expect(compiledSource).toContain('id: "the-problem"');
+    expect(compiledSource).toContain('id: "the-problem-with-overrides"');
     expect(compiledSource).toContain('className: "content-header"');
     expect(compiledSource).toContain("heading-icon-placeholder");
   });

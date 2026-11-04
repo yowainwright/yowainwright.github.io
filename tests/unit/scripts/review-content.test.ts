@@ -17,7 +17,6 @@ vi.mock("node:child_process", () => ({ spawn: vi.fn(), execFileSync: vi.fn() }))
 
 const GUIDANCE = [
   "lib/agents/review.md",
-  ".agents/skills/orwell-writing/SKILL.md",
   "lib/agents/humanizer/SKILL.md",
   "lib/agents/humanizer/references/voice.md",
   ".agents/skills/walter-writes-humanizer/SKILL.md",
@@ -77,7 +76,8 @@ describe("review context", () => {
     putFile("content/my post.mdx", "UNSTAGED PRIVATE DRAFT");
     const prompt = buildReviewPrompt(root, "quick", ["content/my post.mdx"], git);
     expect(prompt).toContain("STAGED DIFF");
-    expect(prompt).toContain("orwell-writing");
+    expect(prompt).toContain("lib/agents/humanizer/SKILL.md");
+    expect(prompt).toContain("walter-writes-humanizer");
     expect(prompt).not.toContain("UNSTAGED PRIVATE DRAFT");
     expect(prompt).not.toContain("STAGED POST");
     expect(git).toHaveBeenCalledTimes(1);
@@ -97,7 +97,7 @@ describe("review context", () => {
   });
 
   test("requires installed writing guidance", () => {
-    rmSync(join(root, ".agents/skills/orwell-writing/SKILL.md"));
+    rmSync(join(root, ".agents/skills/walter-writes-humanizer/SKILL.md"));
     expect(() => buildReviewPrompt(root, "quick", ["content/post.md"], git)).toThrow(
       "skills:install",
     );

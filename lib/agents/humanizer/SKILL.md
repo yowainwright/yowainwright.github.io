@@ -42,6 +42,9 @@ If suitable samples are unavailable or the intended voice is unclear, ask Jeff.
   preferences outrank habits found in older samples.
 - Fix accidental spelling and grammar without reproducing errors as personality.
   Leave effective prose alone. Do not flatten every post into short sentences.
+- Keep wording Jeff has approved and carry his corrections forward. Revisit it
+  only when he asks or new evidence reveals a factual error; flag the error first.
+  A spelling-and-grammar request does not authorize a style rewrite.
 - Keep code blocks, inline code, commands, paths, frontmatter, MDX imports,
   JSX/HTML markup, component props, data, and link targets unchanged.
   Flag suspected technical errors separately; a style pass does not verify facts.
@@ -63,6 +66,9 @@ Naming a file alone does not authorize rewriting it. Preview changes first;
 apply them only when Jeff authorizes those edits. Existing authorization in the
 conversation is sufficient. Edit only the requested target, preserving other
 changes; keep the sample posts read-only.
+When working sentence by sentence, agreement approves the latest proposed edit,
+not a rewrite of surrounding prose. Ask one focused question when missing facts
+would otherwise require guessing.
 
 This skill needs no registry, package installation, external rewriting service,
 or model training. Read samples locally; do not upload them elsewhere.

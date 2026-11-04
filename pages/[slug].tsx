@@ -67,6 +67,10 @@ const PastoralistStudyCharts = dynamic(
 );
 const PostTable = dynamic(() => import("../lib/components/PostTable"));
 
+const ScrollyCode = dynamic(() =>
+  import("../lib/components/ScrollyCode").then((mod) => mod.ScrollyCode),
+);
+
 type PostProps = PostPageProps;
 
 interface GiscusWrapperProps {
@@ -267,6 +271,7 @@ const mdxComponents = {
   ProjectCostComparisonChart,
   TokenCostCalculator,
   PastoralistStudyCharts,
+  ScrollyCode,
   pre: (props: React.HTMLAttributes<HTMLPreElement>) => <pre className="post__code" {...props} />,
   img: PostImage,
   table: PostTable,

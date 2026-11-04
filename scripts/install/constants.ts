@@ -1,10 +1,7 @@
-import { homedir } from "node:os";
-import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { HookFingerprint, HookName } from "./types";
 
 export const ROOT = fileURLToPath(new URL("../../", import.meta.url));
-export const GLOBAL_SKILLS = join(homedir(), ".agents/skills");
 export const DOWNLOAD_TIMEOUT_MS = 15_000;
 export const MAX_SKILL_NAME_LENGTH = 64;
 export const CHECKSUM_SEED = 2166136261;

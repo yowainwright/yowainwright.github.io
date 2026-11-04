@@ -27,7 +27,6 @@ const VOICE_SAMPLES = [
   "content/let-the-dream-live.md",
 ];
 const REVIEW_SKILLS = [
-  ".agents/skills/orwell-writing/SKILL.md",
   "lib/agents/humanizer/SKILL.md",
   "lib/agents/humanizer/references/voice.md",
   ".agents/skills/walter-writes-humanizer/SKILL.md",

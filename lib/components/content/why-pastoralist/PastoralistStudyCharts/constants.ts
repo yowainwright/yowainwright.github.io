@@ -105,18 +105,3 @@ export const pastoralistStudyMetrics: PastoralistStudyMetric[] = [
     prUrl: "https://github.com/yowainwright/es-check/pull/413",
   },
 ];
-
-export const pastoralistStudyTotals = pastoralistStudyMetrics.reduce(
-  (totals, metric) => ({
-    entries: totals.entries + metric.entries,
-    packageManifests: totals.packageManifests + metric.packageManifests,
-    appendixEntries: totals.appendixEntries + metric.appendixEntries,
-    pullRequests: totals.pullRequests + 1,
-  }),
-  {
-    entries: 0,
-    packageManifests: 0,
-    appendixEntries: 0,
-    pullRequests: 0,
-  },
-);

@@ -7,7 +7,7 @@ primary guide for Jeff's voice.
 
 See [Writing skills](SKILLS.md) for what each skill does and when to use it.
 
-Local `pnpm install` sets up Git hooks, Humanizer, Orwell, and the two Walter
+Local `pnpm install` sets up Git hooks, Humanizer, and the two Walter
 writing skills through `prepare`. CI skips this agent setup. To rerun only skill
 installation from the repository root:
 
@@ -19,12 +19,6 @@ This downloads `walter-writes-humanizer` and `walter-writes-writer` directly fro
 [Walter's no-slop repository](https://github.com/walterwritesai/no-slop-ai-humanizer-rewriter/tree/ef668580dc8782b7241b16ea77ae513737602616).
 It preserves the files and attribution license exactly. Their strict style rules
 and example rewrites need judgment; see the review before using them on a post.
-
-The installer also copies the reviewed `orwell-writing/SKILL.md` from
-`~/.agents/skills/`. That global skill must already exist and match the byte count
-and hash in [sources.json](sources.json). Its source is Jeff's private Agent Sync
-setup; the installer neither fetches that repository nor stores its text in Git.
-A missing or changed global copy stops Orwell's installation with an error.
 
 To also install the 12 workflows from
 [Walter Skills](https://github.com/walterwritesai/walter-skills/tree/d043f4c5b21155f8c6b389d64010561af5ce5979):
@@ -40,7 +34,7 @@ instructions only. It does not configure MCP, provide credentials, or send draft
 ## What belongs in Git
 
 Keep the installer, source manifest, review prompt, review notes, and custom
-Humanizer source in Git. Installed third-party and Orwell skill files live in
+Humanizer source in Git. Installed third-party skill files live in
 the ignored `.agents/skills/` directory.
 The installer creates ignored `.claude/skills/` links to the same skills and
 connects the custom Humanizer for both directories.
@@ -69,6 +63,29 @@ Both installers use `scripts/install/index.ts`: `skills:install` selects `skills
 and the package's `prepare` lifecycle selects `all` for hooks and skills. Supporting functions,
 constants, and types live alongside it in `utils.ts`, `constants.ts`, and `types.ts`.
 
+## Optional local prose check
+
+For a local spelling, grammar, and wordiness check of one working-tree post:
+
+```sh
+pnpm run review:prose content/why-pastoralist.mdx
+```
+
+This uses [Harper](https://github.com/Automattic/harper) and
+[write-good](https://github.com/btford/write-good), following the résumé project's
+local review approach. Both run locally with installed packages; no drafts leave
+the machine. Findings include the original line and column and are advisory.
+The command never edits files. Exit status `0` means the review completed, even
+with suggestions; `2` means it failed or received invalid arguments.
+
+The Markdown/MDX parser excludes frontmatter, code, imports, expressions,
+components (including their text), tables, blockquotes, and link targets.
+Formatting and excluded content can limit grammar context. These checks do not
+verify facts, judge Jeff's voice, or measure human authorship.
+
+The dependencies are development-only. This command runs only when requested;
+it is not attached to builds, hooks, or the site's runtime.
+
 ## Optional pre-commit review
 
 The managed pre-commit hook offers a writing review when blog Markdown or MDX
@@ -93,8 +110,8 @@ apps, plugins, and web search and skips user configuration to avoid loading
 global MCP integrations. Choosing Quick or Deep sends the supplied review
 context to Codex using your existing account. No Walter service is used.
 
-[The prompt](review.md) combines Orwell's clarity rules, the custom Humanizer's
-voice guidance, and Walter's editing checklist. Findings are advisory; the review
+[The prompt](review.md) combines the custom Humanizer's voice guidance and
+Walter's editing checklist. Findings are advisory; the review
 does not rewrite or stage files. A failed or timed-out run stops that commit
 attempt with an error; `BLOG_REVIEW=skip` bypasses the optional review. Deep checks
 argument, consistency, clarity, voice, and filler. It flags claims needing

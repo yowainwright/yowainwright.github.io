@@ -8,11 +8,13 @@ import {
   SHIKI_WRAPPER_SELECTOR,
 } from "./constants";
 import { usePlaceholderEnhancements } from "./usePlaceholderEnhancements";
+import { useCodeTooltips } from "./useCodeTooltips";
 
 export function useCodeBlocks(
   contentKey: string,
   contentElement: HTMLElement | null,
 ) {
+  useCodeTooltips(contentElement);
   const renderCopyButton = useCallback((element: HTMLElement) => {
     const codeElement = element
       .closest(SHIKI_WRAPPER_SELECTOR)

@@ -99,23 +99,6 @@ Keep the host's normal approval and network controls in place. Markdown
 instructions are not a sandbox. Review upstream changes again before updating
 the pins or hashes.
 
-## Orwell local source
-
-Reviewed 2026-09-08. The global `~/.agents/skills/orwell-writing/SKILL.md` matches
-Jeff's private Agent Sync source at
-`tmpl/skills/orwell-writing/SKILL.md`, whose latest file change is commit
-`5f9a966b08266663a8e9cabbce06c13ea4450686`. The reviewed file is 2,387 bytes with
-SHA-256 `5f9d288651e17e494d164781b3a6be82739ade57632a7ce99dd7ba4b9cb91912`.
-The source repository declares MIT licensing. No private source text is added
-to tracked files here.
-
-The instructions preserve meaning, facts, voice, and structure while editing
-for concrete, concise language. They contain no executable code, tool or service
-requirements, or instructions to obtain credentials. They allow breaking a
-style rule when clarity or precision requires it. The installer reads only this
-reviewed local file, verifies its size and hash, rejects symlink sources and
-conflicting destinations, and creates an ignored copy and Claude discovery link.
-
 ## Optional review runner
 
 The commit hook selects Skip, Quick, or Deep for staged blog content. Default

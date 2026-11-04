@@ -110,6 +110,21 @@ code .line {
 }
 
 // Span color inheritance
+.shiki[data-language="bash"] code .line {
+  display: block;
+  padding-inline: 1rem;
+
+  &::before {
+    content: none;
+    display: none;
+    counter-increment: none;
+  }
+
+  > span:first-of-type {
+    padding-left: 0;
+  }
+}
+
 .shiki span {
   color: inherit;
 }
@@ -262,9 +277,27 @@ code .line {
   }
 }
 
+@property --code-tooltip-border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: true;
+}
+
 // Tooltip
 .shiki-tooltip {
+  --tooltip-surface: var(--code-bg);
+  --tooltip-border: conic-gradient(
+    from var(--code-tooltip-border-angle),
+    #ec4899, #ef4444, #eab308, #22c55e, #06b6d4, #3b82f6, #8b5cf6, #ec4899
+  );
   position: relative;
+  appearance: none;
+  border: 0;
+  border-radius: 2px;
+  padding: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-color: rgba(139, 92, 246, 0.6);
@@ -277,8 +310,8 @@ code .line {
     text-decoration-color: rgba(167, 139, 250, 0.7);
   }
 
-  &:hover,
-  &:focus {
+  &[data-tooltip-open] {
+    animation: code-tooltip-border-rotate 6s linear infinite;
     text-decoration-color: rgba(139, 92, 246, 0.9);
 
     .js-is-darkmode & {
@@ -286,54 +319,131 @@ code .line {
     }
   }
 
-  &:hover::after,
-  &:focus::after {
-    content: attr(data-tooltip);
+  .code-tooltip-content {
     position: fixed;
-    bottom: auto;
-    left: 50%;
-    transform: translate(-50%, -100%) translateY(-8px);
-    padding: $m-sm $m-md;
-    background: var(--color-bg-secondary);
+    top: var(--tooltip-y);
+    left: var(--tooltip-x);
+    transform: translate(-50%, -100%);
+    padding: 0.75rem 1rem;
+    background:
+      linear-gradient(var(--tooltip-surface), var(--tooltip-surface)) padding-box,
+      var(--tooltip-border) border-box;
     color: var(--color-text-primary);
-    border: 1px solid var(--color-border-light);
+    border: 2px solid transparent;
     border-radius: $radius-md;
-    font-size: 0.875rem;
-    white-space: nowrap;
+    font-size: var(--font-size-base);
+    white-space: normal;
+    line-height: var(--line-height-loose);
+    font-family: inherit;
     z-index: 9999;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 4px color-mix(in srgb, var(--color-text-primary) 10%, transparent);
     pointer-events: none;
-    max-width: 300px;
-    text-align: center;
-
-    .js-is-darkmode & {
-      background: rgba(30, 41, 59, 0.98);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    }
+    width: var(--tooltip-width, min(18rem, calc(100vw - 2rem)));
+    box-sizing: border-box;
+    text-align: left;
+    opacity: 0;
+    scale: 0.95;
+    visibility: hidden;
+    transform-origin: center bottom;
+    transition: opacity 180ms ease-in-out, scale 180ms ease-in-out, visibility 0s 180ms;
   }
 
-  &:hover::before,
-  &:focus::before {
+  &[data-tooltip-auto]::before {
     content: "";
     position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid var(--color-bg-secondary);
-    z-index: 9999;
+    left: var(--tooltip-arrow-x);
+    top: calc(var(--tooltip-y) - 2px);
+    width: 0.875rem;
+    height: 0.875rem;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    background:
+      linear-gradient(var(--tooltip-surface), var(--tooltip-surface)) padding-box,
+      var(--tooltip-border) border-box;
+    transform: translate(-50%, -50%) rotate(45deg);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 180ms ease-in-out, visibility 0s 180ms;
+  }
 
-    .js-is-darkmode & {
-      border-top-color: rgba(30, 41, 59, 0.98);
-    }
+  &[data-tooltip-open] .code-tooltip-content {
+    opacity: 1;
+    scale: 1;
+    visibility: visible;
+    transition-delay: 0s;
+    animation: code-tooltip-pop-in 500ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  &[data-tooltip-open]::before {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+
+  &[data-tooltip-open] .code-tooltip-content[data-exiting="true"] {
+    animation: none;
+    opacity: 0;
+    scale: 0.95;
+  }
+
+  &:has(.code-tooltip-content[data-exiting="true"])::before {
+    opacity: 0;
+  }
+
+  &[data-tooltip-placement="bottom"] .code-tooltip-content {
+    transform: translateX(-50%);
+    transform-origin: center top;
+  }
+
+  &[data-tooltip-placement="bottom"]::before {
+    top: calc(var(--tooltip-y) + 2px);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+
+  &[data-tooltip-placement="right"] .code-tooltip-content {
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+
+  &[data-tooltip-placement="right"]::before {
+    top: var(--tooltip-arrow-y);
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
   }
 
   &:focus-visible {
     outline: 2px solid rgba(139, 92, 246, 0.5);
     outline-offset: 2px;
     border-radius: 2px;
+  }
+
+  .code-tooltip-token {
+    color: inherit;
+    background: var(--code-highlight-bg);
+    border-radius: 2px;
+  }
+}
+
+@keyframes code-tooltip-border-rotate {
+  to { --code-tooltip-border-angle: 1turn; }
+}
+
+@keyframes code-tooltip-pop-in {
+  0% { scale: 0; opacity: 0; }
+  60% { scale: 1.08; opacity: 1; }
+  80% { scale: 0.95; }
+  100% { scale: 1; opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shiki-tooltip[data-tooltip-open],
+  .shiki-tooltip .code-tooltip-content,
+  .shiki-tooltip::before {
+    animation: none !important;
+    transition: none !important;
   }
 }
 

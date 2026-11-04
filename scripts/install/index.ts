@@ -4,16 +4,14 @@ import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import manifest from "../../lib/agents/sources.json";
 import { createLogger } from "../../lib/server/logger";
-import { GLOBAL_SKILLS, ROOT } from "./constants";
-import { installHooks, installLocalSkills, installSkills, readOptions } from "./utils";
+import { ROOT } from "./constants";
+import { installHooks, installSkills, readOptions } from "./utils";
 
 const log = createLogger("install");
 
 const installBlogSkills = async (includeWalter: boolean) => {
   const sources = manifest.sources.filter((source) => !source.requiresWalterMcp || includeWalter);
-  const remoteSkills = await installSkills(ROOT, sources);
-  const localSkills = installLocalSkills(ROOT, GLOBAL_SKILLS);
-  const installed = remoteSkills.concat(localSkills);
+  const installed = await installSkills(ROOT, sources);
   log.info({ installed }, "Skills installed in ignored provider directories");
   if (!includeWalter) return;
   log.warn(

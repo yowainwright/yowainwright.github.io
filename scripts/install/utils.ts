@@ -11,7 +11,6 @@ import {
   writeFileSync,
 } from "node:fs";
 import { dirname, join } from "node:path";
-import manifest from "../../lib/agents/sources.json";
 import { createLogger } from "../../lib/server/logger";
 import {
   CHECKSUM_PRIME,
@@ -33,7 +32,6 @@ import type {
   HookFingerprint,
   HookName,
   InstallOptions,
-  LocalSkill,
   PlannedFile,
   Skill,
   SkillFile,
@@ -218,42 +216,6 @@ export const installSkills = async (
   results.forEach((result) => writeDownload(root, result));
   links.forEach((link) => writeLink(root, link));
   return sources.flatMap(skillNames);
-};
-
-const readLocalFile = (sourceRoot: string, name: string, entry: FileEntry): VerifiedFile => {
-  validateFile(entry);
-  checkParents(sourceRoot, entry.source);
-  const source = join(sourceRoot, entry.source);
-  const sourceStat = stat(source);
-  assert(sourceStat, `Missing reviewed global skill: ${source}`);
-  assert(sourceStat.isFile(), `Expected a regular skill file: ${source}`);
-  assert.equal(sourceStat.size, entry.bytes, `File size differs: ${entry.source}`);
-  const bytes = readFileSync(source);
-  verifyBytes(bytes, entry);
-  const path = `.agents/skills/${name}/${entry.target}`;
-  const file = { path, entry };
-  return { file, bytes };
-};
-
-const readLocalSkill = (sourceRoot: string, skill: LocalSkill) => {
-  assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(skill.name), "Unsafe local skill name");
-  assert(skill.name.length <= MAX_SKILL_NAME_LENGTH, "Skill name is too long");
-  return skill.files.map((entry) => readLocalFile(sourceRoot, skill.name, entry));
-};
-
-export const installLocalSkills = (
-  root: string,
-  sourceRoot: string,
-  skills = manifest.localSkills,
-) => {
-  const verified = skills.flatMap((skill) => readLocalSkill(sourceRoot, skill));
-  const names = skills.map((skill) => skill.name);
-  const links = names.map(claudeLink);
-  verified.forEach(({ file }) => checkFile(root, file));
-  links.forEach((link) => checkLink(root, link));
-  verified.forEach((result) => writeDownload(root, result));
-  links.forEach((link) => writeLink(root, link));
-  return names;
 };
 
 const writeHook = (hookPath: string, hookContent: string) => {
