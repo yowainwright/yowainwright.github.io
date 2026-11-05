@@ -14,6 +14,7 @@ vi.mock("../../../../../lib/server/markdown/mermaid-theme", () => ({
 let directory: string;
 
 beforeEach(() => {
+  mkdirSync(path.join(process.cwd(), "tmp"), { recursive: true });
   directory = mkdtempSync(path.join(process.cwd(), "tmp", "build-cache-test-"));
   ["lib/server/markdown", "lib/server/themes", "lib/server/post-page", "lib/client/styles/scss", "public/assets/mermaid"]
     .forEach((folder) => mkdirSync(path.join(directory, folder), { recursive: true }));
