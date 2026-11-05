@@ -13,6 +13,7 @@ import {
 } from "../markdown";
 import type { PostFrontmatter } from "../markdown/types";
 import { remarkMermaidAssets } from "../markdown/remark-mermaid-assets";
+import { hasDiagramAssets, isRecord, withBuildCache } from "../markdown/build-cache";
 
 export type PostPageFrontmatter = Omit<PostFrontmatter, "description" | "meta"> & {
   description: string | null;
@@ -198,7 +199,8 @@ export const buildPostStaticProps = async (
     const remarkGfm = (await import("remark-gfm")).default;
     const rehypeSlug = (await import("rehype-slug")).default;
     const rehypeAutolinkHeadings = (await import("rehype-autolink-headings")).default;
-    const mdxSource = await serialize(data.content || "", {
+    const source = data.content || "";
+    const compile = () => serialize(source, {
       mdxOptions: {
         remarkPlugins: [
           remarkGfm,
@@ -223,6 +225,7 @@ export const buildPostStaticProps = async (
         ],
       },
     });
+    const mdxSource = await withBuildCache("mdx", source, compile, isCachedMdxSource);
 
     return {
       props: Object.assign({}, data, {
@@ -248,3 +251,12 @@ export const buildPostStaticProps = async (
     }),
   };
 };
+
+function isCachedMdxSource(value: unknown): value is MDXRemoteSerializeResult {
+  if (!isRecord(value)) return false;
+  const source = value.compiledSource;
+  const hasSource = typeof source === "string";
+  if (!hasSource) return false;
+  const hasMetadata = isRecord(value.scope) && isRecord(value.frontmatter);
+  return hasMetadata && hasDiagramAssets(source);
+}

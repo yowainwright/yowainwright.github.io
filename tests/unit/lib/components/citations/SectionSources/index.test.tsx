@@ -7,6 +7,7 @@ import { readFileSync } from "node:fs";
 import { buildPostStaticProps } from "../../../../../../lib/server/post-page";
 import { ScrollyCode } from "../../../../../../lib/components/ScrollyCode";
 import { InfoBlock } from "../../../../../../lib/components/InfoBlock";
+import { Tooltip } from "../../../../../../lib/components/Tooltip";
 import { CitationLink } from "../../../../../../lib/components/citations/CitationLink";
 import { SectionSources } from "../../../../../../lib/components/citations/SectionSources";
 import { InlineSource } from "../../../../../../lib/components/citations/InlineSource";
@@ -28,6 +29,7 @@ describe("SectionSources", () => {
       InlineSource,
       ScrollyCode,
       InfoBlock,
+      Tooltip,
       a: CitationLink,
       RiseAndFallChart: () => null,
       GlobalGrowthChart: () => null,
@@ -44,6 +46,16 @@ describe("SectionSources", () => {
     const document = dom.window.document;
     expect(document.querySelectorAll(".sources__item")).toHaveLength(count);
     expect(document.querySelectorAll(".sources__link")).toHaveLength(count);
+    expect(document.querySelectorAll(".sources__description")).toHaveLength(count);
+    expect(document.querySelector(".sources > .sources__list")?.children).toHaveLength(3);
+    expect(document.querySelector(".sources__more[open]")).toBeNull();
+    expect(document.querySelector(".sources__more ol")?.getAttribute("start")).toBe("4");
+    const numbers = Array.from(document.querySelectorAll(".sources__number"), (item: Element) => item.textContent);
+    expect(numbers).toEqual(Array.from({ length: count }, (_, index) => String(index + 1)));
+    document.querySelectorAll(".sources__link").forEach((link: HTMLAnchorElement) => {
+      const domain = new URL(link.href).hostname.replace(/^www\./, "");
+      expect(link.nextElementSibling?.textContent).toContain(domain);
+    });
     document.querySelectorAll('.citation__link[href^="#"]').forEach((link: Element) => {
       const href = link.getAttribute("href") ?? "";
       expect(document.querySelector(href)).not.toBeNull();
@@ -76,11 +88,16 @@ describe("SectionSources", () => {
       {
         title: "First Source",
         url: "https://example.com/first",
+        description: "Evidence for the first claim.",
       },
       {
         title: "Second Source",
         publication: "Example Journal",
         url: "https://example.com/second",
+      },
+      {
+        title: "Third Source",
+        url: "https://example.com/third",
       },
     ];
 
@@ -96,8 +113,11 @@ describe("SectionSources", () => {
     );
 
     expect(getCitationLabels(markup)).toEqual(["1", "2"]);
-    expect(markup).toContain('<ol class="sources__list">');
+    expect(markup).toContain('<ol class="sources__list" role="list">');
     expect(markup).toContain('href="https://example.com/first"');
     expect(markup).toContain('href="https://example.com/second"');
+    expect(markup).toContain("Evidence for the first claim.");
+    expect(markup).toContain("Example Journal, example.com");
+    expect(markup).not.toContain("sources__more");
   });
 });

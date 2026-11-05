@@ -12,7 +12,7 @@ import {
 } from "./utils";
 import type { StepButtonProps, ScrollyCodeProps, ScrollyCodeViewProps } from "./types";
 
-export function ScrollyCode({ children, steps }: ScrollyCodeProps) {
+export function ScrollyCode({ children, title, steps }: ScrollyCodeProps) {
   const root = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const panelId = useId();
@@ -25,9 +25,9 @@ export function ScrollyCode({ children, steps }: ScrollyCodeProps) {
     setActiveIndex(index);
     scrollToStep(root.current, index);
   };
-  const view = { frames, activeIndex, panelId, onSelect, sharedCode };
+  const view = { frames, activeIndex, panelId, onSelect, sharedCode, title };
   return (
-    <div className="scrolly-code" ref={root} aria-label="Code walkthrough">
+    <div className="scrolly-code" ref={root} aria-label={title || "Code walkthrough"}>
       <CodePanel {...view} />
     </div>
   );
@@ -68,7 +68,7 @@ function handleNavigationKey(event: KeyboardEvent<HTMLElement>, props: ScrollyCo
 }
 
 function CodePanel(props: ScrollyCodeViewProps) {
-  const { frames, activeIndex, panelId, sharedCode } = props;
+  const { frames, activeIndex, panelId, sharedCode, title } = props;
   const height = `${frames.length * 70}vh`;
   const trackStyle = { "--scrolly-code-height": height } as React.CSSProperties;
   const gridTemplateRows = `repeat(${frames.length}, 1fr)`;
@@ -103,6 +103,7 @@ function CodePanel(props: ScrollyCodeViewProps) {
         {markers}
       </div>
       <div className="scrolly-code__panel" id={panelId}>
+        {title && <h3 className="scrolly-code__title">{title}</h3>}
         <Navigation {...props} />
         <div className="scrolly-code__content">
           <div className="scrolly-code__position">Example walkthrough · {position}</div>

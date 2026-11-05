@@ -71,8 +71,12 @@ function refreshAutoTooltip(
   const compact = window.matchMedia?.("(max-width: 599px)").matches ?? false;
   if (compact) return closeTooltips(root);
   const tips = Array.from(root.querySelectorAll<HTMLElement>("[data-tooltip-auto]"));
-  const candidates = tips.map((trigger) => getTooltipAnchor(trigger, resolveAnchor));
-  const candidate = candidates.find((item) => item && isVisibleAnchor(item));
+  const candidates = tips.flatMap((trigger) => {
+    const item = getTooltipAnchor(trigger, root, resolveAnchor);
+    return item ? [item] : [];
+  });
+  const visible = candidates.filter(isVisibleAnchor);
+  const [candidate] = visible.toSorted((a, b) => getCenterDistance(a) - getCenterDistance(b));
   if (!candidate) return closeTooltips(root);
   const { trigger } = candidate;
   const isDismissed = dismissed.get(trigger) === trigger.dataset.tooltipStep;
@@ -82,9 +86,18 @@ function refreshAutoTooltip(
   trigger.setAttribute("data-tooltip-open", "");
 }
 
-function getTooltipAnchor(trigger: HTMLElement, resolveAnchor?: AnchorResolver) {
+function getCenterDistance({ anchor }: TooltipAnchor) {
+  const rect = anchor.getBoundingClientRect();
+  const center = rect.top + rect.height / 2;
+  const distance = Math.abs(center - window.innerHeight / 2);
+  return distance;
+}
+
+function getTooltipAnchor(trigger: HTMLElement, root: HTMLElement, resolveAnchor?: AnchorResolver) {
   const id = trigger.dataset.tooltipTarget;
-  const anchor = id ? trigger.ownerDocument.getElementById(id) : null;
+  const selector = trigger.dataset.tooltipSelector;
+  const selected = selector ? root.querySelector(selector) : null;
+  const anchor = id ? trigger.ownerDocument.getElementById(id) : selected;
   const resolved = anchor ? { anchor } : resolveAnchor?.(trigger);
   if (!resolved) return null;
   return Object.assign({ trigger }, resolved);

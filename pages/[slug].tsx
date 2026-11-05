@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
 import { GlobalState } from "./_app";
 import { Share } from "../lib/components/Share";
+import { Tooltip } from "../lib/components/Tooltip";
 import { OgMeta } from "../lib/components/OgMeta";
 import { useCodeBlocks } from "../lib/hooks/useCodeBlocks";
 import { useHeadingAnchors } from "../lib/hooks/useHeadingAnchors";
@@ -296,6 +297,7 @@ const mdxComponents = {
   PastoralistStudyCharts,
   ScrollyCode,
   InfoBlock,
+  Tooltip,
   pre: (props: React.HTMLAttributes<HTMLPreElement>) => <pre className="post__code" {...props} />,
   img: PostImage,
   table: PostTable,

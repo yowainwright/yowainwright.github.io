@@ -10,9 +10,10 @@ export type StepProps = {
 
 export type FieldStep = { title: string; note: string; lines: number[]; anchor?: string };
 
-export type ScrollyCodeProps = { children: ReactNode; steps?: FieldStep[] | string };
+export type ScrollyCodeProps = { children: ReactNode; title?: string; steps?: FieldStep[] | string };
 
 export type ScrollyCodeViewProps = {
+  title?: string;
   frames: ReactElement<StepProps>[];
   activeIndex: number;
   panelId: string;

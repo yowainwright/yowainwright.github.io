@@ -5,9 +5,10 @@ import React, { useEffect, useRef, useState, type HTMLAttributes } from "react";
 type TooltipProps = {
   step: string | number;
   targetId?: string;
+  targetSelector?: string;
 } & HTMLAttributes<HTMLSpanElement>;
 
-export function Tooltip({ children, step, targetId, className = "", ...attributes }: TooltipProps) {
+export function Tooltip({ children, step, targetId, targetSelector, className = "", ...attributes }: TooltipProps) {
   const popup = useRef<HTMLSpanElement>(null);
   const [display, setDisplay] = useState({ children, step });
   const exiting = display.step !== step;
@@ -30,6 +31,7 @@ export function Tooltip({ children, step, targetId, className = "", ...attribute
       data-tooltip-auto=""
       data-tooltip-step={step}
       data-tooltip-target={targetId}
+      data-tooltip-selector={targetSelector}
       aria-hidden="true"
     >
       <span className="scroll-tooltip__content" data-exiting={exiting} ref={popup}>

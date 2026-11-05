@@ -51,7 +51,7 @@ This was just the start though and, hopefully, below I can get you excited about
 
 A typical `package.json` override block can look like this:
 
-<ScrollyCode steps='[
+<ScrollyCode title="Let’s Observe Some Overrides and See How It’s Unclear Why They’re There" steps='[
   {
     "title": "Overrides",
     "note": "These rules tell the package manager which dependency versions to use. They don’t explain why each rule was added.",
@@ -128,6 +128,10 @@ To prove why Pastoralist is cool and how it can help out with overrides and CVE 
 
 <figcaption>These five projects had 171 overrides before cleanup.</figcaption>
 
+<Tooltip step="override-snapshot" targetSelector=".post__table-wrapper">
+These popular projects have plenty of overrides, but the entries don’t tell us why they’re there.
+</Tooltip>
+
 ---
 
 **n8n** had 58 overrides: some for security patches (`ws`, `semver`, `axios`), some compatibility pins (`date-fns`, `chokidar`, `esbuild`), some forks (`expr-eval@2.0.2` remapped to `npm:expr-eval-fork@3.0.0`).
@@ -139,19 +143,14 @@ The `>=` ranges suggest "at least this version to patch a CVE," but the CVE cont
 
 To demonstrate Pastoralist’s cleanup, I ran it on the same five projects. I wanted to see if it could find overrides that no longer matched their dependency trees.
 
-### Unused Override Cleanup Sample
-
-| Project | Overrides | Unused | Unused % |
-| ------- | --------: | -----: | -------: |
-| **n8n**[4](#source-4) | 58 | 56 | 97% |
-| **TanStack Router**[5](#source-5) | 51 | 41 | 80% |
-| **Cal.com**[6](#source-6) | 41 | 35 | 85% |
-| **Next.js**[7](#source-7) | 16 | 3 | 19% |
-| **Prisma**[8](#source-8) | 5 | 5 | 100% |
-
-<figcaption>In this sample, 140 of 171 tested overrides no longer matched anything in the current dependency tree, or 82%!</figcaption>
-
+<figure>
 <PastoralistStudyCharts />
+<figcaption className="post__table-caption">In this sample, 140 of 171 tested overrides no longer matched anything in the current dependency tree, or 82%!</figcaption>
+</figure>
+
+<Tooltip step="override-cleanup" targetSelector=".pastoralist-study-charts">
+Pastoralist found 140 overrides that no longer matched anything in these projects’ dependency trees!
+</Tooltip>
 
 In Prisma, all 5 overrides were security patches for packages that had since left the dependency tree!
 So many of these overrides appear to be outdated!
@@ -162,11 +161,11 @@ So many of these overrides appear to be outdated!
 
 Pastoralist[2](#source-2) helps you with overrides in 3 key ways.
 
-### 1. Track
+### 1. Track: Understand Each Override
 
-When you run `pastoralist`, it scans your overrides and builds an **appendix** that documents each one:
+Pastoralist investigates each override to understand the dependency and records that context in its **appendix**:
 
-<ScrollyCode steps='[
+<ScrollyCode title="Pastoralist Records Why Each Override Exists and What Depends on It" steps='[
   {
     "title": "Appendix",
     "note": "The tracking records for your overrides.",
@@ -237,24 +236,21 @@ When you run `pastoralist`, it scans your overrides and builds an **appendix** t
 
 The appendix records _why_ an override is there, _what_ depends on it, and _when_ it was added.
 
-### 2. Scan
+### 2. Scan: Check Security and Usage
 
-Pastoralist can check your overrides against vulnerability databases using six providers: OSV (free, no auth required), GitHub Advisory Database, npm audit, Snyk (experimental), Socket (experimental), and Spektion (experimental).
+Pastoralist checks your dependencies for known security issues. It also checks whether your overrides still match the dependency tree. Security scanning supports six providers: OSV (free, no auth required), GitHub Advisory Database, npm audit, Snyk (experimental), Socket (experimental), and Spektion (experimental).
 
 Pastoralist can add overrides for CVEs automatically with `--checkSecurity --forceSecurityRefactor`. It also supports patches you add yourself. Interactive mode lets you choose which fixes to apply.
 
-### 3. Clean
+### 3. Clean: Update the Appendix and Overrides
 
-Overrides that are no longer needed get flagged for removal. If the parent dependency updated and no longer pulls in the vulnerable version, Pastoralist can tell you the override is stale and can be removed after your normal CI checks pass.
-
-React Router and TanStack Hotkeys need separate validation because their workspace-only override shape triggered removal behavior instead of producing appendix entries.
-I'd appreciate help testing these cases.
+Pastoralist updates its appendix and overrides based on dependency context, security findings, and usage. Use `--remove-unused` to remove verified unused entries from both, then run your normal CI checks.
 
 ---
 
 ## Before and After
 
-<ScrollyCode>
+<ScrollyCode title="With the Following Flow, Observe How Pastoralist Adds Context for Why Each Override Exists">
 
 <section data-title="Before" data-anchor="6.11.2" data-note="The project overrides qs, which Express depends on. There’s no tracking record yet.">
 
@@ -332,61 +328,73 @@ It's not a black box. It's built with FOSS APIs like OSV[9](#source-9), node:fs[
   sources='[
   {
     "title": "Pastoralist Documentation",
+    "description": "Usage and configuration reference for the commands shown in this post.",
     "author": "Jeffry Wainwright",
     "url": "https://jeffry.in/pastoralist/"
   },
   {
     "title": "Pastoralist",
+    "description": "Source code for the override tracking, security scans, and cleanup discussed here.",
     "publication": "GitHub",
     "url": "https://github.com/yowainwright/pastoralist"
   },
   {
     "title": "Jeff Wainwright",
+    "description": "My GitHub profile, where I maintain Pastoralist.",
     "publication": "GitHub",
     "url": "https://github.com/yowainwright"
   },
   {
     "title": "n8n",
+    "description": "The n8n repository used in the five-project override review.",
     "url": "https://github.com/n8n-io/n8n",
     "publication": "GitHub"
   },
   {
     "title": "TanStack Router",
+    "description": "The TanStack Router repository used in the override cleanup sample.",
     "url": "https://github.com/TanStack/router",
     "publication": "GitHub"
   },
   {
     "title": "Cal.com",
+    "description": "The Cal.com repository used to check whether its resolutions were still needed.",
     "url": "https://github.com/calcom/cal.com",
     "publication": "GitHub"
   },
   {
     "title": "Next.js",
+    "description": "The Next.js repository included in the override cleanup sample.",
     "url": "https://github.com/vercel/next.js",
     "publication": "GitHub"
   },
   {
     "title": "Prisma",
+    "description": "The project where all five tested overrides no longer matched the dependency tree.",
     "url": "https://github.com/prisma/prisma",
     "publication": "GitHub"
   },
   {
     "title": "OSV",
+    "description": "The vulnerability database used by Pastoralist for its default security checks.",
     "url": "https://github.com/google/osv.dev",
     "publication": "GitHub"
   },
   {
     "title": "node:fs",
+    "description": "Node.js documentation for the file-system APIs used by Pastoralist.",
     "url": "https://nodejs.org/api/fs.html",
     "publication": "Node.js"
   },
   {
     "title": "TUI modules",
+    "description": "The Pastoralist code behind its terminal interface.",
     "url": "https://github.com/yowainwright/pastoralist/tree/main/src/dx",
     "publication": "GitHub"
   },
   {
     "title": "probability algorithms",
+    "description": "The selection algorithm Pastoralist uses when considering security fixes.",
     "url": "https://jeffry.in/pastoralist/docs/security/#best-case-portfolio-selection",
     "publication": "Pastoralist Documentation"
   }

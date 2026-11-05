@@ -73,6 +73,12 @@
     overflow: hidden;
   }
 
+  h3.scrolly-code__title {
+    grid-column: 1 / -1;
+    margin: 0;
+    background: var(--color-bg-primary);
+  }
+
   &__position {
     padding: 0.75rem 1rem;
     border-bottom: 1px solid var(--color-border-light);
@@ -143,6 +149,10 @@
 }
 
 @media (max-width: 599px) {
+  .scrolly-code h3.scrolly-code__title {
+    margin-bottom: 1rem;
+  }
+
   .scrolly-code__track {
     height: auto;
     min-height: 0;

@@ -7,6 +7,7 @@ import { getShikiRehypeOptions } from "../../../../../lib/server/markdown";
 import { buildPostStaticProps } from "../../../../../lib/server/post-page";
 import { ScrollyCode } from "../../../../../lib/components/ScrollyCode";
 import { InfoBlock } from "../../../../../lib/components/InfoBlock";
+import { Tooltip } from "../../../../../lib/components/Tooltip";
 import { cleanupMountedRoots, createMountedRoot, setupDom } from "../../../test-utils/react-dom";
 
 afterEach(async () => {
@@ -74,6 +75,7 @@ test("renders the actual post with two field walkthroughs and the before/after w
   const components = {
     ScrollyCode,
     InfoBlock,
+    Tooltip,
     PastoralistStudyCharts: () => null,
     SectionSources: () => null,
   };
@@ -81,6 +83,11 @@ test("renders the actual post with two field walkthroughs and the before/after w
   await createMountedRoot(<MDXRemote {...props.mdxSource} components={components} />);
   const walks = Array.from(document.querySelectorAll(".scrolly-code"));
   expect(walks).toHaveLength(3);
+  expect(walks.map((walk) => walk.querySelector(".scrolly-code__panel > h3")?.textContent)).toEqual([
+    "Let’s Observe Some Overrides and See How It’s Unclear Why They’re There",
+    "Pastoralist Records Why Each Override Exists and What Depends on It",
+    "With the Following Flow, Observe How Pastoralist Adds Context for Why Each Override Exists",
+  ]);
   expect(walks.map((walk) => walk.querySelectorAll("nav button").length)).toEqual([5, 5, 3]);
   expect(walks[0].querySelectorAll("pre code")).toHaveLength(1);
   expect(walks[1].querySelectorAll("pre code")).toHaveLength(1);

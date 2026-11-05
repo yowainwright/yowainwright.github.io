@@ -7,10 +7,8 @@ import {
   CartesianGrid,
   LabelList,
   ResponsiveContainer,
-  Tooltip,
   XAxis,
   YAxis,
-  type TooltipContentProps,
 } from "recharts";
 import { CHART_SERIES_COLORS, CHART_STYLES } from "../../../charts/constants";
 import { pastoralistCleanupMetrics } from "./constants";
@@ -28,7 +26,6 @@ export const PastoralistStudyCharts = () => (
 
 function StudyChart() {
   const margin = { top: 4, right: 36, bottom: 20, left: 4 };
-  const cursor = { fill: "var(--chart-hover-fill)" };
   return (
     <div className="pastoralist-study-charts__chart">
       <ResponsiveContainer
@@ -45,7 +42,6 @@ function StudyChart() {
             strokeDasharray={CHART_STYLES.grid.strokeDasharray}
           />
           <StudyAxes />
-          <Tooltip axisId="unused" content={StudyTooltip} cursor={cursor} />
           <StudyBars />
         </RechartsBarChart>
       </ResponsiveContainer>
@@ -127,19 +123,6 @@ function StudyBars() {
         />
       </Bar>
     </>
-  );
-}
-
-function StudyTooltip({ active, label }: Pick<TooltipContentProps<number, string>, "active" | "label">) {
-  const metric = studyData.find((entry) => entry.project === label);
-  const visible = active && metric;
-  if (!visible) return null;
-  return (
-    <div className="pastoralist-study-charts__tooltip" style={CHART_STYLES.tooltip.content}>
-      <strong>{metric.project}</strong>
-      <div>Total overrides: {formatNumber(metric.overrides)}</div>
-      <div>Unused overrides: {formatNumber(metric.unused)}</div>
-    </div>
   );
 }
 

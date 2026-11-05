@@ -42,6 +42,13 @@ test("anchors shared tooltips to table cells and SVG chart marks as they scroll 
   expect(tips[0].hasAttribute("data-tooltip-open")).toBe(true);
   expect(tips[0].style.getPropertyValue("--tooltip-x")).toBe("132px");
   expect(tips[1].hasAttribute("data-tooltip-open")).toBe(false);
+  mark.getBoundingClientRect = () => new dom.window.DOMRect(40, 370, 200, 20);
+  window.dispatchEvent(new dom.window.Event("scroll"));
+  expect(document.querySelectorAll("[data-tooltip-open]")).toHaveLength(1);
+  expect(tips[1].hasAttribute("data-tooltip-open")).toBe(true);
+  mark.getBoundingClientRect = () => new dom.window.DOMRect(40, 1000, 200, 20);
+  window.dispatchEvent(new dom.window.Event("scroll"));
+  expect(tips[0].hasAttribute("data-tooltip-open")).toBe(true);
   cell.getBoundingClientRect = () => new dom.window.DOMRect(40, -30, 80, 24);
   mark.getBoundingClientRect = () => new dom.window.DOMRect(40, 220, 200, 20);
   window.dispatchEvent(new dom.window.Event("scroll"));
@@ -58,4 +65,26 @@ test("anchors shared tooltips to table cells and SVG chart marks as they scroll 
   await act(async () => root.unmount());
   window.dispatchEvent(new dom.window.Event("scroll"));
   expect(document.querySelector(".scroll-tooltip")).toBeNull();
+});
+
+test("resolves a table or chart selector inside the article only", async () => {
+  const dom = setupDom('<div class="snapshot"></div>');
+  function Example() {
+    const [article, setArticle] = React.useState<HTMLElement | null>(null);
+    useScrollTooltips(article);
+    return (
+      <article ref={setArticle}>
+        <table className="snapshot"><tbody><tr><td>58</td></tr></tbody></table>
+        <Tooltip step="table" targetSelector=".snapshot">Unexplained overrides</Tooltip>
+      </article>
+    );
+  }
+  const root = await createMountedRoot(<Example />);
+  const table = document.querySelector("table")!;
+  table.getBoundingClientRect = () => new dom.window.DOMRect(40, 200, 200, 100);
+  const tip = document.querySelector<HTMLElement>(".scroll-tooltip")!;
+  window.dispatchEvent(new dom.window.Event("scroll"));
+  expect(tip.hasAttribute("data-tooltip-open")).toBe(true);
+  expect(tip.style.getPropertyValue("--tooltip-x")).toBe("252px");
+  await act(async () => root.unmount());
 });

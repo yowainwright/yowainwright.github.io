@@ -1,4 +1,4 @@
-import { createHash } from "node:crypto";
+import { existsSync } from "node:fs";
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import {
@@ -10,6 +10,7 @@ import {
 import type { Code, Image, Link, Paragraph, Parent, Root } from "mdast";
 import type { Node } from "unist";
 import { getMermaidThemeCss } from "./mermaid-theme";
+import { getBuildCacheKey, isRecord, withBuildCache } from "./build-cache";
 
 const PUBLIC_ASSET_PATH = "/assets/mermaid";
 const MERMAID_CONFIG = {
@@ -65,12 +66,8 @@ const getMermaidInstances = (parent: Parent): MermaidInstance[] =>
   });
 
 const getAssetName = (source: string, themeCss: string) => {
-  const hash = createHash("sha256")
-    .update(source)
-    .update(JSON.stringify(MERMAID_CONFIG))
-    .update(themeCss)
-    .digest("hex")
-    .slice(0, 16);
+  const input = JSON.stringify([source, MERMAID_CONFIG, themeCss]);
+  const hash = getBuildCacheKey("mermaid-svg", input).slice(0, 16);
   return `${hash}.svg`;
 };
 
@@ -135,6 +132,7 @@ const writeDiagramAsset = async (
   const assetName = getAssetName(source, themeCss);
   const assetPath = path.join(assetDirectory, assetName);
   const assetUrl = `${PUBLIC_ASSET_PATH}/${assetName}`;
+  if (existsSync(assetPath)) return assetUrl;
   const svg = result.svg.replace("</svg>", `<style>${themeCss}</style></svg>`);
   await writeFile(assetPath, svg, "utf8");
   return assetUrl;
@@ -143,12 +141,11 @@ const writeDiagramAsset = async (
 const writeDiagramAssets = (
   assetDirectory: string,
   sources: string[],
-  results: PromiseSettledResult<RenderResult>[],
+  results: RenderResult[],
   themeCss: { light: string; dark: string },
 ) =>
   Promise.all(
-    results.map(async (result, index) => {
-      const renderResult = getRenderResult(result, index);
+    results.map(async (renderResult, index) => {
       const source = sources[index] || "";
       const [light, dark] = await Promise.all([
         writeDiagramAsset(assetDirectory, source, renderResult, themeCss.light),
@@ -174,7 +171,11 @@ const renderMermaidAssets = async (tree: Root, render: MermaidRenderer) => {
   const light = getMermaidThemeCss("light");
   const dark = getMermaidThemeCss("dark");
   const themeCss = { light, dark };
-  const results = await render(sources, { mermaidConfig: MERMAID_CONFIG });
+  const input = JSON.stringify([sources, MERMAID_CONFIG]);
+  const results = await withBuildCache("mermaid", input, async () => {
+    const rendered = await render(sources, { mermaidConfig: MERMAID_CONFIG });
+    return rendered.map(getRenderResult);
+  }, (value): value is RenderResult[] => isCachedRenderResults(value, sources.length));
   const assetDirectory = path.join(process.cwd(), "public", PUBLIC_ASSET_PATH);
   await mkdir(assetDirectory, { recursive: true });
   const diagrams = await writeDiagramAssets(assetDirectory, sources, results, themeCss);
@@ -185,3 +186,18 @@ export const remarkMermaidAssets = (options: CreateMermaidRendererOptions = {}) 
   const render = createMermaidRenderer(options);
   return (tree: Root) => renderMermaidAssets(tree, render);
 };
+
+function isCachedRenderResults(value: unknown, count: number): value is RenderResult[] {
+  if (!Array.isArray(value)) return false;
+  const valid = value.length === count && value.every(isCachedRenderResult);
+  return valid;
+}
+
+function isCachedRenderResult(result: unknown): result is RenderResult {
+  if (!isRecord(result)) return false;
+  const hasSvg = typeof result.svg === "string";
+  const hasId = typeof result.id === "string";
+  const hasDimensions = typeof result.width === "number" && typeof result.height === "number";
+  const valid = hasSvg && hasId && hasDimensions;
+  return valid;
+}

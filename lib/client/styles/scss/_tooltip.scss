@@ -33,7 +33,7 @@
     color: var(--color-text-primary);
     border: 2px solid transparent;
     border-radius: $radius-md;
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-large);
     white-space: normal;
     line-height: var(--line-height-loose);
     font-family: inherit;
@@ -48,6 +48,12 @@
     visibility: hidden;
     transform-origin: center bottom;
     transition: opacity 180ms ease-in-out, scale 180ms ease-in-out, visibility 0s 180ms;
+
+    p {
+      font-size: inherit;
+      line-height: inherit;
+      margin: 0;
+    }
   }
 
   &[data-tooltip-auto]::before {
