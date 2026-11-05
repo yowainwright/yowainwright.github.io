@@ -30,10 +30,10 @@ test("shows the active field during scrolling without stealing focus and respect
   expect(tip.dataset.tooltipPlacement).toBe("right");
   expect(tip.style.getPropertyValue("--tooltip-x")).toBe("162px");
   const firstPosition = tip.style.getPropertyValue("--tooltip-y");
-  window.dispatchEvent(new dom.window.Event("scroll"));
+  await scrollWindow(dom);
   expect(tip.hasAttribute("data-tooltip-open")).toBe(true);
   document.dispatchEvent(new dom.window.KeyboardEvent("keydown", { key: "Escape" }));
-  window.dispatchEvent(new dom.window.Event("scroll"));
+  await scrollWindow(dom);
   expect(tip.hasAttribute("data-tooltip-open")).toBe(false);
   const lines = document.querySelectorAll(".line");
   lines[0].classList.remove("scrolly-code-highlight");
@@ -68,7 +68,7 @@ test("shows the active field during scrolling without stealing focus and respect
   window.dispatchEvent(new dom.window.Event("resize"));
   expect(tip.hasAttribute("data-tooltip-open")).toBe(true);
   fields[1].getBoundingClientRect = () => new dom.window.DOMRect(50, -100, 100, 20);
-  window.dispatchEvent(new dom.window.Event("scroll"));
+  await scrollWindow(dom);
   expect(tip.hasAttribute("data-tooltip-open")).toBe(false);
 });
 
@@ -91,6 +91,11 @@ test("hover, focus, and tapping a code token do not open a tooltip", async () =>
   expect(trigger.hasAttribute("data-tooltip-open")).toBe(false);
   trigger.click();
   expect(trigger.hasAttribute("data-tooltip-open")).toBe(false);
-  window.dispatchEvent(new dom.window.Event("scroll"));
+  await scrollWindow(dom);
   expect(trigger.hasAttribute("data-tooltip-open")).toBe(false);
 });
+
+async function scrollWindow(dom: ReturnType<typeof setupDom>) {
+  window.dispatchEvent(new dom.window.Event("scroll"));
+  await new Promise<void>((resolve) => window.requestAnimationFrame(() => resolve()));
+}
