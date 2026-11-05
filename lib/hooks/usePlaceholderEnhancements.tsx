@@ -4,17 +4,6 @@ import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import type { PlaceholderEnhancementOptions, PlaceholderTarget } from "./types";
 
-const getPlaceholderTargets = (
-  contentElement: HTMLElement,
-  selector: string,
-): PlaceholderTarget[] =>
-  Array.from(contentElement.querySelectorAll<HTMLElement>(selector)).map(
-    (element, index) => ({
-      element,
-      index,
-    }),
-  );
-
 export function usePlaceholderEnhancements({
   contentElement,
   contentKey,
@@ -24,9 +13,23 @@ export function usePlaceholderEnhancements({
   const [targets, setTargets] = useState<PlaceholderTarget[]>([]);
 
   useEffect(() => {
-    setTargets(
-      contentElement ? getPlaceholderTargets(contentElement, selector) : [],
-    );
+    if (!contentElement) {
+      setTargets([]);
+      return;
+    }
+    const refresh = () => {
+      const next = getPlaceholderTargets(contentElement, selector);
+      setTargets((previous) => {
+        const sameElements =
+          previous.length === next.length &&
+          previous.every((target, index) => target.element === next[index].element);
+        return sameElements ? previous : next;
+      });
+    };
+    refresh();
+    const observer = new MutationObserver(refresh);
+    observer.observe(contentElement, { childList: true, subtree: true });
+    return () => observer.disconnect();
   }, [contentElement, contentKey, selector]);
 
   return useMemo(
@@ -35,10 +38,17 @@ export function usePlaceholderEnhancements({
         const child = render(element, index);
         if (!child) return [];
 
-        return [
-          createPortal(child, element, `${contentKey}:${selector}:${index}`),
-        ];
+        return [createPortal(child, element, `${contentKey}:${selector}:${index}`)];
       }),
     [contentKey, render, selector, targets],
   );
 }
+
+const getPlaceholderTargets = (
+  contentElement: HTMLElement,
+  selector: string,
+): PlaceholderTarget[] =>
+  Array.from(contentElement.querySelectorAll<HTMLElement>(selector)).map((element, index) => ({
+    element,
+    index,
+  }));

@@ -17,3 +17,6 @@ onlyBuiltDependencies:
 
 minimumReleaseAgeExclude:
   - pastoralist@1.13.0
+
+allowBuilds:
+  '@firebase/util': false

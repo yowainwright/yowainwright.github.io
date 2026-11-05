@@ -1,4 +1,4 @@
-import { withSentryConfig } from "@sentry/nextjs";
+import { withSentryConfig } from "@sentry/nextjs/config";
 import createMDX from "@next/mdx";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -11,6 +11,7 @@ const productionConfig = isProduction ? { output: "export" } : {};
 const nextConfig = Object.assign(
   {},
   {
+    agentRules: false,
     experimental: {
       useTypeScriptCli: true,
     },

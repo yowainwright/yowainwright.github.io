@@ -55,7 +55,7 @@ test("uses the cleanup tables’ five projects and counts on one shared scale", 
     unused,
   }));
   expect(chartMetrics).toEqual(tableMetrics);
-  const labels = document.querySelectorAll(".recharts-yAxis text");
+  const labels = document.querySelectorAll(".recharts-yAxis-tick-labels text");
   expect(Array.from(labels).map((label) => label.textContent)).toEqual(
     chartMetrics.map((metric) => metric.project),
   );

@@ -45,7 +45,7 @@ function StudyChart() {
             strokeDasharray={CHART_STYLES.grid.strokeDasharray}
           />
           <StudyAxes />
-          <Tooltip<number, string> axisId="unused" content={StudyTooltip} cursor={cursor} />
+          <Tooltip axisId="unused" content={StudyTooltip} cursor={cursor} />
           <StudyBars />
         </RechartsBarChart>
       </ResponsiveContainer>
@@ -130,7 +130,7 @@ function StudyBars() {
   );
 }
 
-function StudyTooltip({ active, label }: TooltipContentProps<number, string>) {
+function StudyTooltip({ active, label }: Pick<TooltipContentProps<number, string>, "active" | "label">) {
   const metric = studyData.find((entry) => entry.project === label);
   const visible = active && metric;
   if (!visible) return null;

@@ -7,7 +7,7 @@ export const SearchResultSchema = Schema.Struct({
   description: Schema.String,
   slug: Schema.String,
   tags: Schema.Array(Schema.String),
-  type: Schema.Literal("page", "post", "project"),
+  type: Schema.Literals(["page", "post", "project"]),
   url: Schema.String,
 });
 
@@ -54,8 +54,8 @@ export const searchDataLoadSuccesses = Metric.counter("search_data_load_successe
 export const loadSearchDataEffect = (
   path = DEFAULT_SEARCH_DATA_PATH,
 ): Effect.Effect<SearchData, SearchDataError, never> =>
-  Metric.increment(searchDataLoadAttempts).pipe(
-    Effect.zipRight(
+  Metric.update(searchDataLoadAttempts, 1).pipe(
+    Effect.andThen(
       Effect.tryPromise({
         try: (signal) => fetch(path, { signal }),
         catch: (reason) => new SearchDataFetchError({ path, reason }),
@@ -73,10 +73,10 @@ export const loadSearchDataEffect = (
       }),
     ),
     Effect.flatMap((json) =>
-      Schema.decodeUnknown(SearchDataSchema)(json).pipe(
+      Schema.decodeUnknownEffect(SearchDataSchema)(json).pipe(
         Effect.mapError((reason) => new SearchDataValidationError({ path, reason })),
       ),
     ),
-    Effect.tap(() => Metric.increment(searchDataLoadSuccesses)),
-    Effect.tapError(() => Metric.increment(searchDataLoadFailures)),
+    Effect.tap(() => Metric.update(searchDataLoadSuccesses, 1)),
+    Effect.tapError(() => Metric.update(searchDataLoadFailures, 1)),
   );
