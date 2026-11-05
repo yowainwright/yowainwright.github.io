@@ -6,6 +6,9 @@ import { JSDOM } from "jsdom";
 import { readFileSync } from "node:fs";
 import { buildPostStaticProps } from "../../../../../../lib/server/post-page";
 import { ScrollyCode } from "../../../../../../lib/components/ScrollyCode";
+import { OverrideExample } from "../../../../../../lib/components/content/why-pastoralist/OverrideExample";
+import { AppendixExample } from "../../../../../../lib/components/content/why-pastoralist/AppendixExample";
+import { BeforeAfterExample } from "../../../../../../lib/components/content/why-pastoralist/BeforeAfterExample";
 import { InfoBlock } from "../../../../../../lib/components/InfoBlock";
 import { Tooltip } from "../../../../../../lib/components/Tooltip";
 import { CitationLink } from "../../../../../../lib/components/citations/CitationLink";
@@ -19,7 +22,7 @@ const getCitationLabels = (markup: string) =>
 describe("SectionSources", () => {
   test.each([
     ["us-swe-economy-2025", 10],
-    ["why-pastoralist", 12],
+    ["why-pastoralist", 9],
     ["expensive-ai", 9],
   ] as const)("renders %s sources through the actual MDX compiler", async (slug, count) => {
     const { props } = await buildPostStaticProps(slug, "content");
@@ -28,6 +31,9 @@ describe("SectionSources", () => {
       SectionSources,
       InlineSource,
       ScrollyCode,
+      OverrideExample,
+      AppendixExample,
+      BeforeAfterExample,
       InfoBlock,
       Tooltip,
       a: CitationLink,

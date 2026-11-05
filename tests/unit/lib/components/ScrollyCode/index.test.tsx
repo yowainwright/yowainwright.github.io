@@ -6,6 +6,9 @@ import rehypeShiki from "@shikijs/rehype";
 import { getShikiRehypeOptions } from "../../../../../lib/server/markdown";
 import { buildPostStaticProps } from "../../../../../lib/server/post-page";
 import { ScrollyCode } from "../../../../../lib/components/ScrollyCode";
+import { OverrideExample } from "../../../../../lib/components/content/why-pastoralist/OverrideExample";
+import { AppendixExample } from "../../../../../lib/components/content/why-pastoralist/AppendixExample";
+import { BeforeAfterExample } from "../../../../../lib/components/content/why-pastoralist/BeforeAfterExample";
 import { InfoBlock } from "../../../../../lib/components/InfoBlock";
 import { Tooltip } from "../../../../../lib/components/Tooltip";
 import { cleanupMountedRoots, createMountedRoot, setupDom } from "../../../test-utils/react-dom";
@@ -74,6 +77,9 @@ test("renders the actual post with two field walkthroughs and the before/after w
   const { props } = await buildPostStaticProps("why-pastoralist", "content");
   const components = {
     ScrollyCode,
+    OverrideExample,
+    AppendixExample,
+    BeforeAfterExample,
     InfoBlock,
     Tooltip,
     PastoralistStudyCharts: () => null,
@@ -84,9 +90,9 @@ test("renders the actual post with two field walkthroughs and the before/after w
   const walks = Array.from(document.querySelectorAll(".scrolly-code"));
   expect(walks).toHaveLength(3);
   expect(walks.map((walk) => walk.querySelector(".scrolly-code__panel > h3")?.textContent)).toEqual([
-    "The JSON Object Below Provides Various Common Overrides So We Can Level Set Why It's Unclear Why They're There",
-    "Pastoralist Provides Value By Tracking Why Each Override Exists and What Depends on It",
-    "With the Following Flow, Observe How Pastoralist Adds Context for Why Each Override Exists",
+    "Why Are These Overrides Here?",
+    "What Pastoralist Records",
+    "Before and After Running Pastoralist",
   ]);
   expect(walks.map((walk) => walk.querySelectorAll("nav button").length)).toEqual([5, 5, 3]);
   expect(walks[0].querySelectorAll("pre code")).toHaveLength(1);
