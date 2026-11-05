@@ -4,7 +4,6 @@ import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
 import { GlobalState } from "./_app";
 import { Share } from "../lib/components/Share";
 import { Tooltip } from "../lib/components/Tooltip";
-import { DeferredContent } from "../lib/components/DeferredContent";
 import { OgMeta } from "../lib/components/OgMeta";
 import { useCodeBlocks } from "../lib/hooks/useCodeBlocks";
 import { useHeadingAnchors } from "../lib/hooks/useHeadingAnchors";
@@ -22,50 +21,50 @@ const THEME_LIGHT = "light";
 
 const RiseAndFallChart = dynamic(
   () => import("../lib/components/content/us-swe-economy-2025").then((mod) => mod.RiseAndFallChart),
-  { ssr: false },
+  { ssr: false, loading: ChartPlaceholder },
 );
 const GlobalGrowthChart = dynamic(
   () =>
     import("../lib/components/content/us-swe-economy-2025").then((mod) => mod.GlobalGrowthChart),
-  { ssr: false },
+  { ssr: false, loading: ChartPlaceholder },
 );
 const WageStagnationChart = dynamic(
   () =>
     import("../lib/components/content/us-swe-economy-2025").then((mod) => mod.WageStagnationChart),
-  { ssr: false },
+  { ssr: false, loading: ChartPlaceholder },
 );
 const IndustrialRevolutionChart = dynamic(
   () =>
     import("../lib/components/content/us-swe-economy-2025").then(
       (mod) => mod.IndustrialRevolutionChart,
     ),
-  { ssr: false },
+  { ssr: false, loading: ChartPlaceholder },
 );
 const SWEMetricsGrid = dynamic(
   () => import("../lib/components/content/us-swe-economy-2025").then((mod) => mod.SWEMetricsGrid),
-  { ssr: false },
+  { ssr: false, loading: ChartPlaceholder },
 );
 const TokenCostChart = dynamic(
   () => import("../lib/components/content/expensive-ai").then((mod) => mod.TokenCostChart),
-  { ssr: false },
+  { ssr: false, loading: ChartPlaceholder },
 );
 const AgentTaskCostChart = dynamic(
   () => import("../lib/components/content/expensive-ai").then((mod) => mod.AgentTaskCostChart),
-  { ssr: false },
+  { ssr: false, loading: ChartPlaceholder },
 );
 const ProjectCostComparisonChart = dynamic(
   () =>
     import("../lib/components/content/expensive-ai").then((mod) => mod.ProjectCostComparisonChart),
-  { ssr: false },
+  { ssr: false, loading: ChartPlaceholder },
 );
 const TokenCostCalculator = dynamic(
   () => import("../lib/components/content/expensive-ai").then((mod) => mod.TokenCostCalculator),
-  { ssr: false },
+  { ssr: false, loading: ChartPlaceholder },
 );
 const PastoralistStudyCharts = dynamic(
   () =>
     import("../lib/components/content/why-pastoralist").then((mod) => mod.PastoralistStudyCharts),
-  { ssr: false },
+  { ssr: false, loading: ChartPlaceholder },
 );
 const PostTable = dynamic(() => import("../lib/components/PostTable"));
 const InfoBlock = dynamic(() => import("../lib/components/InfoBlock").then((mod) => mod.InfoBlock));
@@ -286,16 +285,16 @@ const mdxComponents = {
   a: PostLink,
   InlineSource,
   SectionSources,
-  RiseAndFallChart: deferUntilVisible(RiseAndFallChart),
-  GlobalGrowthChart: deferUntilVisible(GlobalGrowthChart),
-  WageStagnationChart: deferUntilVisible(WageStagnationChart),
-  IndustrialRevolutionChart: deferUntilVisible(IndustrialRevolutionChart),
-  SWEMetricsGrid: deferUntilVisible(SWEMetricsGrid),
-  TokenCostChart: deferUntilVisible(TokenCostChart),
-  AgentTaskCostChart: deferUntilVisible(AgentTaskCostChart),
-  ProjectCostComparisonChart: deferUntilVisible(ProjectCostComparisonChart),
-  TokenCostCalculator: deferUntilVisible(TokenCostCalculator),
-  PastoralistStudyCharts: deferUntilVisible(PastoralistStudyCharts),
+  RiseAndFallChart,
+  GlobalGrowthChart,
+  WageStagnationChart,
+  IndustrialRevolutionChart,
+  SWEMetricsGrid,
+  TokenCostChart,
+  AgentTaskCostChart,
+  ProjectCostComparisonChart,
+  TokenCostCalculator,
+  PastoralistStudyCharts,
   ScrollyCode,
   InfoBlock,
   Tooltip,
@@ -317,10 +316,8 @@ const mdxComponents = {
   ),
 };
 
-function deferUntilVisible(Component: React.ComponentType) {
-  return function DeferredChart() {
-    return <DeferredContent><Component /></DeferredContent>;
-  };
+function ChartPlaceholder() {
+  return <div style={{ minHeight: 400 }} aria-busy="true" aria-label="Loading chart" />;
 }
 
 const PostContentBody = React.memo(
