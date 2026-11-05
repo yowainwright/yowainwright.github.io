@@ -7,7 +7,7 @@ categories:
   - code
   - security
   - dependencies
-tags: ["Open Source", "npm", "Security", "Dependencies", "Pastoralist"]
+tags: ["open source", "npm", "security", "dependencies", "pastoralist"]
 ---
 
 import { SectionSources } from "../lib/components/citations";
@@ -51,38 +51,38 @@ This was just the start though and, hopefully, below I can get you excited about
 
 A typical `package.json` override block can look like this:
 
-<ScrollyCode title="Let’s Observe Some Overrides and See How It’s Unclear Why They’re There" steps='[
+<ScrollyCode title="The JSON Object Below Provides Various Common Overrides So We Can Level Set Why It's Unclear Why They're There" steps='[
   {
     "title": "Overrides",
-    "note": "These rules tell the package manager which dependency versions to use. They don’t explain why each rule was added.",
+    "note": "These rules tell the package manager which dependency versions to use but they do not explain why each override was added.",
     "lines": [
       2
     ]
   },
   {
     "title": "semver",
-    "note": "Allows semver 7.5.4 through the remaining 7.x releases. Which dependency needed this override?",
+    "note": "This allows semver 7.5.4 through the remaining 7.x releases but we do not know which dependency needed this override.",
     "lines": [
       3
     ]
   },
   {
     "title": "ws",
-    "note": "Allows ws 8.17.1 or later, including later major versions. The minimum version doesn’t tell us what issue it addressed.",
+    "note": "This allows ws 8.17.1 or later but the minimum version does not tell us what issue it addressed.",
     "lines": [
       4
     ]
   },
   {
     "title": "axios",
-    "note": "Pins axios to exactly 1.12.0. Why this version?",
+    "note": "This pins axios to exactly 1.12.0 but why?",
     "lines": [
       5
     ]
   },
   {
     "title": "lodash",
-    "note": "Allows lodash 4.17.23 or later. Does anything in the project still need this override?",
+    "note": "This allows lodash 4.17.23 or later but do we know if the override is needed?",
     "lines": [
       6
     ]
@@ -102,13 +102,6 @@ A typical `package.json` override block can look like this:
 ```
 
 </ScrollyCode>
-
-When reviewing that block later, a maintainer usually needs to answer:
-
-1. _Why_ is each override here?
-2. Which packages in your dependency tree actually depend on it?
-3. Is the package still needed?
-4. Did a new CVE show up since you pinned it?
 
 ---
 
@@ -137,7 +130,6 @@ These popular projects have plenty of overrides, but the entries don’t tell us
 **n8n** had 58 overrides: some for security patches (`ws`, `semver`, `axios`), some compatibility pins (`date-fns`, `chokidar`, `esbuild`), some forks (`expr-eval@2.0.2` remapped to `npm:expr-eval-fork@3.0.0`).
 
 **Prisma** had 5 overrides that all appeared security-related.
-The `>=` ranges suggest "at least this version to patch a CVE," but the CVE context is not visible from the entry itself.
 
 ### Are all of those overrides still needed?
 
@@ -165,24 +157,24 @@ Pastoralist[2](#source-2) helps you with overrides in 3 key ways.
 
 Pastoralist investigates each override to understand the dependency and records that context in its **appendix**:
 
-<ScrollyCode title="Pastoralist Records Why Each Override Exists and What Depends on It" steps='[
+<ScrollyCode title="Pastoralist Provides Value By Tracking Why Each Override Exists and What Depends on It" steps='[
   {
     "title": "Appendix",
-    "note": "The tracking records for your overrides.",
+    "note": "The Appendix is an object which records the reasoning for your overrides.",
     "lines": [
       3
     ]
   },
   {
     "title": "Override",
-    "note": "This record belongs to the lodash override at the specified version range.",
+    "note": "This record maps to the specified versions of an override.",
     "lines": [
       4
     ]
   },
   {
     "title": "Dependents",
-    "note": "The packages that use this dependency. The names in this example are illustrative.",
+    "note": "This defines the packages that rely on this range of this override.",
     "lines": [
       5,
       6,
@@ -193,7 +185,7 @@ Pastoralist investigates each override to understand the dependency and records 
   {
     "title": "Ledger",
     "anchor": "Security vulnerability CVE-2021-23337",
-    "note": "Tracking details for this override. Security findings or a maintainer can supply additional context.",
+    "note": "The ledger tracks details for the override, such as security findings and context supplied by a maintainer.",
     "lines": [
       9,
       10,
@@ -204,7 +196,7 @@ Pastoralist investigates each override to understand the dependency and records 
   },
   {
     "title": "Added",
-    "note": "When Pastoralist first recorded this override. The override itself may be older.",
+    "note": "The addedDate tracks when this Override was first recorded with the exact data listed. The override itself may be older.",
     "lines": [
       12
     ]
@@ -315,10 +307,14 @@ Reasons can come from security findings or be supplied by the maintainer.
 
 ## Conclusion
 
-There is a key thing I don't want you to miss. Pastoralist checks for security issues, documents your overrides, and cleans up the ones you no longer need. All in one command: `npx pastoralist --checkSecurity --forceSecurityRefactor --remove-unused`.
-It's not a black box. It's built with FOSS APIs like OSV[9](#source-9), node:fs[10](#source-10), a few bespoke TUI modules[11](#source-11), and probability algorithms[12](#source-12).
+There are a few key things I don't want you to miss in this article!
 
-~Thanks!
+1. Pastoralist checks for security issues and can add overrides using "best case" algorithms to reduce security risk.
+2. It also documents why your overrides exist and cleans up the overrides if they are no longer needed.
+3. It does this all in one command: `npx pastoralist --checkSecurity --forceSecurityRefactor --remove-unused`.
+
+Pastoralist is not a black box. It's built with FOSS APIs like OSV[9](#source-9), node:fs[10](#source-10), a few bespoke TUI modules[11](#source-11), and probability algorithms[12](#source-12).
+I think it provides a great and free way to keep your project more secure and know why very quickly.
 
 ---
 
@@ -328,7 +324,7 @@ It's not a black box. It's built with FOSS APIs like OSV[9](#source-9), node:fs[
   sources='[
   {
     "title": "Pastoralist Documentation",
-    "description": "Usage and configuration reference for the commands shown in this post.",
+    "description": "This is the Pastoralist Docs Site. It provides the API, examples, and more things for you and your agents to work quickly.",
     "author": "Jeffry Wainwright",
     "url": "https://jeffry.in/pastoralist/"
   },
@@ -346,13 +342,13 @@ It's not a black box. It's built with FOSS APIs like OSV[9](#source-9), node:fs[
   },
   {
     "title": "n8n",
-    "description": "The n8n repository used in the five-project override review.",
+    "description": "n8n is a project I use to automate tool usage and was used in this article to demo override improvements.",
     "url": "https://github.com/n8n-io/n8n",
     "publication": "GitHub"
   },
   {
     "title": "TanStack Router",
-    "description": "The TanStack Router repository used in the override cleanup sample.",
+    "description": "The TanStack Router repository was used in the override cleanup sample along with n8n and others.",
     "url": "https://github.com/TanStack/router",
     "publication": "GitHub"
   },
@@ -376,7 +372,7 @@ It's not a black box. It's built with FOSS APIs like OSV[9](#source-9), node:fs[
   },
   {
     "title": "OSV",
-    "description": "The vulnerability database used by Pastoralist for its default security checks.",
+    "description": "The default vulnerability database used by Pastoralist for its security checks; created and owned by Google.",
     "url": "https://github.com/google/osv.dev",
     "publication": "GitHub"
   },

@@ -84,8 +84,8 @@ test("renders the actual post with two field walkthroughs and the before/after w
   const walks = Array.from(document.querySelectorAll(".scrolly-code"));
   expect(walks).toHaveLength(3);
   expect(walks.map((walk) => walk.querySelector(".scrolly-code__panel > h3")?.textContent)).toEqual([
-    "Let’s Observe Some Overrides and See How It’s Unclear Why They’re There",
-    "Pastoralist Records Why Each Override Exists and What Depends on It",
+    "The JSON Object Below Provides Various Common Overrides So We Can Level Set Why It's Unclear Why They're There",
+    "Pastoralist Provides Value By Tracking Why Each Override Exists and What Depends on It",
     "With the Following Flow, Observe How Pastoralist Adds Context for Why Each Override Exists",
   ]);
   expect(walks.map((walk) => walk.querySelectorAll("nav button").length)).toEqual([5, 5, 3]);

@@ -22,6 +22,14 @@ function attachTooltips(root: HTMLElement, resolveAnchor?: AnchorResolver) {
   const dismissed = new WeakMap<HTMLElement, string>();
   const close = () => closeTooltips(root);
   const refresh = () => refreshAutoTooltip(root, dismissed, resolveAnchor);
+  let frame = 0;
+  const scroll = () => {
+    if (frame) return;
+    frame = window.requestAnimationFrame(() => {
+      frame = 0;
+      refresh();
+    });
+  };
   const dismiss = () => {
     root.querySelectorAll<HTMLElement>("[data-tooltip-auto][data-tooltip-open]").forEach((tip) => {
       dismissed.set(tip, tip.dataset.tooltipStep ?? "");
@@ -39,10 +47,16 @@ function attachTooltips(root: HTMLElement, resolveAnchor?: AnchorResolver) {
   document.addEventListener("keydown", keydown);
   document.addEventListener("pointerdown", outside);
   root.addEventListener("scroll-tooltip-step", refresh);
-  window.addEventListener("scroll", refresh, true);
+  window.addEventListener("scroll", scroll, true);
   window.addEventListener("resize", refresh);
+  const observer = new MutationObserver(scroll);
+  observer.observe(root, { childList: true, subtree: true });
   refresh();
-  return () => detachTooltips(root, { close, keydown, outside, refresh });
+  return () => {
+    observer.disconnect();
+    window.cancelAnimationFrame(frame);
+    detachTooltips(root, { close, keydown, outside, refresh, scroll });
+  };
 }
 
 function detachTooltips(
@@ -52,13 +66,14 @@ function detachTooltips(
     keydown: (event: KeyboardEvent) => void;
     outside: (event: PointerEvent) => void;
     refresh: () => void;
+    scroll: () => void;
   },
 ) {
-  const { close, keydown, outside, refresh } = handlers;
+  const { close, keydown, outside, refresh, scroll } = handlers;
   document.removeEventListener("keydown", keydown);
   document.removeEventListener("pointerdown", outside);
   root.removeEventListener("scroll-tooltip-step", refresh);
-  window.removeEventListener("scroll", refresh, true);
+  window.removeEventListener("scroll", scroll, true);
   window.removeEventListener("resize", refresh);
   close();
 }

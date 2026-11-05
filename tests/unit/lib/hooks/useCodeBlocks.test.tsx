@@ -17,6 +17,7 @@ describe("useCodeBlocks", () => {
       value: { writeText },
     });
     const disconnect = vi.spyOn(dom.window.MutationObserver.prototype, "disconnect");
+    const observe = vi.spyOn(dom.window.MutationObserver.prototype, "observe");
     const contentElement = document.querySelector<HTMLElement>(".post__content")!;
     function Probe() {
       return useCodeBlocks("delayed-post", contentElement);
@@ -44,7 +45,7 @@ describe("useCodeBlocks", () => {
     await act(async () => {
       root.unmount();
     });
-    expect(disconnect).toHaveBeenCalledOnce();
+    expect(new Set(disconnect.mock.contexts)).toEqual(new Set(observe.mock.contexts));
     await act(async () => {
       contentElement.innerHTML = code;
     });

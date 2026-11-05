@@ -4,6 +4,7 @@ import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
 import { GlobalState } from "./_app";
 import { Share } from "../lib/components/Share";
 import { Tooltip } from "../lib/components/Tooltip";
+import { DeferredContent } from "../lib/components/DeferredContent";
 import { OgMeta } from "../lib/components/OgMeta";
 import { useCodeBlocks } from "../lib/hooks/useCodeBlocks";
 import { useHeadingAnchors } from "../lib/hooks/useHeadingAnchors";
@@ -285,16 +286,16 @@ const mdxComponents = {
   a: PostLink,
   InlineSource,
   SectionSources,
-  RiseAndFallChart,
-  GlobalGrowthChart,
-  WageStagnationChart,
-  IndustrialRevolutionChart,
-  SWEMetricsGrid,
-  TokenCostChart,
-  AgentTaskCostChart,
-  ProjectCostComparisonChart,
-  TokenCostCalculator,
-  PastoralistStudyCharts,
+  RiseAndFallChart: deferUntilVisible(RiseAndFallChart),
+  GlobalGrowthChart: deferUntilVisible(GlobalGrowthChart),
+  WageStagnationChart: deferUntilVisible(WageStagnationChart),
+  IndustrialRevolutionChart: deferUntilVisible(IndustrialRevolutionChart),
+  SWEMetricsGrid: deferUntilVisible(SWEMetricsGrid),
+  TokenCostChart: deferUntilVisible(TokenCostChart),
+  AgentTaskCostChart: deferUntilVisible(AgentTaskCostChart),
+  ProjectCostComparisonChart: deferUntilVisible(ProjectCostComparisonChart),
+  TokenCostCalculator: deferUntilVisible(TokenCostCalculator),
+  PastoralistStudyCharts: deferUntilVisible(PastoralistStudyCharts),
   ScrollyCode,
   InfoBlock,
   Tooltip,
@@ -315,6 +316,12 @@ const mdxComponents = {
     </figure>
   ),
 };
+
+function deferUntilVisible(Component: React.ComponentType) {
+  return function DeferredChart() {
+    return <DeferredContent><Component /></DeferredContent>;
+  };
+}
 
 const PostContentBody = React.memo(
   ({ content, isMdx, mdxSource, setContentElement }: PostContentBodyProps) =>
