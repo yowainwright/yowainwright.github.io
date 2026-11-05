@@ -30,6 +30,15 @@ jobs:
           node-version-file: .node-version
           cache: pnpm
       - run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Cache compiled posts and diagrams
+        uses: actions/cache@v6
+        with:
+          path: |
+            .cache/compiled-content
+            public/assets/mermaid
+          key: ${{ runner.os }}-post-compile-v1-${{ hashFiles('pnpm-lock.yaml', '.node-version') }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-post-compile-v1-${{ hashFiles('pnpm-lock.yaml', '.node-version') }}-
       - name: Build my App
         run: pnpm run build
         env:

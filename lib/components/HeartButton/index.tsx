@@ -133,9 +133,8 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
 
   const countText = getCountText(isLoading, count);
   const heartSize = hasMaxed ? 2 : 2 + userClicks * HEART_SIZE_INCREMENT;
-  const hasClicked = userClicks > 0;
-  const heartColor = hasClicked ? "#e53935" : "currentColor";
-  const buttonClass = `share__button heart-button ${hasClicked ? "heart-button--active" : ""} ${hasMaxed ? "heart-button--maxed" : ""} ${isAnimating ? "heart-button--pulse" : ""}`;
+  const isLoved = count > 0 || userClicks > 0;
+  const buttonClass = `share__button heart-button ${isLoved ? "heart-button--active" : ""} ${hasMaxed ? "heart-button--maxed" : ""} ${isAnimating ? "heart-button--pulse" : ""}`;
   const ariaLabel = hasMaxed
     ? `You've loved this post ${MAX_CLICKS} times`
     : "Love this post";
@@ -149,7 +148,7 @@ export const HeartButton = ({ slug }: HeartButtonProps) => {
       aria-label={ariaLabel}
     >
       <span className="share__label">Love</span>
-      <PixelIcon name="heart" size={heartSize} color={heartColor} />
+      <PixelIcon name="heart" size={heartSize} />
       {countText && <span className="share__count">{countText}</span>}
       {particles.map((p) => (
         <span

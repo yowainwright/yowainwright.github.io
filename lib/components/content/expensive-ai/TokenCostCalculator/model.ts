@@ -2,9 +2,8 @@ import { Data, Effect, Schema } from "effect";
 import type { ExpensiveAiData } from "../../../../client/data/expensive-ai";
 import { DEFAULT_TOKENS } from "./constants";
 
-export const TokenCountSchema = Schema.Number.pipe(
-  Schema.int(),
-  Schema.nonNegative(),
+export const TokenCountSchema = Schema.Int.pipe(
+  Schema.check(Schema.isGreaterThanOrEqualTo(0)),
 );
 
 export const ModelCalculationSchema = Schema.Struct({
@@ -32,7 +31,7 @@ const decodeTokenCount = (
   value: number,
   input = String(value),
 ): Effect.Effect<TokenCount, TokenInputError, never> =>
-  Schema.decodeUnknown(TokenCountSchema)(value).pipe(
+  Schema.decodeUnknownEffect(TokenCountSchema)(value).pipe(
     Effect.mapError((reason) => new TokenInputError({ input, reason })),
   );
 
@@ -64,7 +63,7 @@ export const readStoredTokenCountEffect = (
     Effect.flatMap((stored) =>
       stored ? parseTokenInputEffect(stored) : decodeTokenCount(DEFAULT_TOKENS),
     ),
-    Effect.catchAll(() => decodeTokenCount(DEFAULT_TOKENS)),
+    Effect.catch(() => decodeTokenCount(DEFAULT_TOKENS)),
     Effect.orDie,
   );
 
@@ -102,7 +101,7 @@ export const calculateCostsEffect = (
       .sort((a, b) => a.totalCost - b.totalCost),
   ).pipe(
     Effect.flatMap((calculations) =>
-      Schema.decodeUnknown(ModelCalculationsSchema)(calculations),
+      Schema.decodeUnknownEffect(ModelCalculationsSchema)(calculations),
     ),
     Effect.orDie,
   );

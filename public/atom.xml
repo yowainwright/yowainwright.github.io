@@ -16,7 +16,7 @@
     <id>https://jeffry.in/why-pastoralist</id>
     <published>2026-02-20T00:00:00.000Z</published>
     <updated>2026-02-20T00:00:00.000Z</updated>
-    <summary>How Pastoralist can help teams track, scan, and clean npm, yarn, pnpm, and bun dependency overrides, with study notes from OSS projects, cleanup samples, and fork PRs synced on May 25, 2026.</summary>
+    <summary>How Pastoralist can help teams track, scan, and clean npm, yarn, pnpm, and bun dependency overrides, with a cleanup sample from five OSS projects.</summary>
     <author>
       <name>Jeff Wainwright</name>
       <email>yowainwright@gmail.com</email>

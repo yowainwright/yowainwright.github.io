@@ -13,6 +13,7 @@ import {
 } from "../markdown";
 import type { PostFrontmatter } from "../markdown/types";
 import { remarkMermaidAssets } from "../markdown/remark-mermaid-assets";
+import { hasDiagramAssets, isRecord, withBuildCache } from "../markdown/build-cache";
 
 export type PostPageFrontmatter = Omit<PostFrontmatter, "description" | "meta"> & {
   description: string | null;
@@ -46,6 +47,12 @@ export type MdxAstNode = {
   value?: string;
 };
 
+type MdxTableTitleState = {
+  children: MdxAstNode[];
+  pendingTitle: string;
+  pendingTitleNode: MdxAstNode | null;
+};
+
 export const getMdxAstText = (node: MdxAstNode): string => {
   if (typeof node.value === "string") return node.value;
   if (!node.children) return "";
@@ -71,16 +78,10 @@ export const isMdxTableTitle = (node: MdxAstNode) => {
   return isLegacyTableTitle || isHeadingTableTitle;
 };
 
-type MdxTableTitleState = {
-  children: MdxAstNode[];
-  pendingTitle: string;
-  pendingTitleNode: MdxAstNode | null;
-};
-
-const attachTableTitle = (node: MdxAstNode, pendingTitle: string) => {
+const attachTableMetadata = (node: MdxAstNode, name: string, value: string) => {
   node.data = Object.assign({}, node.data, {
     hProperties: Object.assign({}, node.data?.hProperties, {
-      "data-title": pendingTitle,
+      [name]: value,
     }),
   });
 };
@@ -99,6 +100,15 @@ const processMdxTableTitleNode = (
   state: MdxTableTitleState,
   node: MdxAstNode,
 ): MdxTableTitleState => {
+  const previous = state.children.at(-1);
+  const isCaption = node.type === "mdxJsxFlowElement" && node.name === "figcaption";
+  const followsTable = previous?.type === "table";
+  const isTableCaption = isCaption && followsTable;
+  if (isTableCaption) {
+    attachTableMetadata(previous, "data-caption", getMdxAstText(node).trim());
+    return state;
+  }
+
   if (isMdxTableTitle(node)) {
     const flushedState = flushPendingTitle(state);
 
@@ -111,7 +121,7 @@ const processMdxTableTitleNode = (
 
   const isTitledTable = state.pendingTitleNode !== null && node.type === "table";
   if (isTitledTable) {
-    attachTableTitle(node, state.pendingTitle);
+    attachTableMetadata(node, "data-title", state.pendingTitle);
 
     return {
       children: state.children.concat(node),
@@ -189,7 +199,8 @@ export const buildPostStaticProps = async (
     const remarkGfm = (await import("remark-gfm")).default;
     const rehypeSlug = (await import("rehype-slug")).default;
     const rehypeAutolinkHeadings = (await import("rehype-autolink-headings")).default;
-    const mdxSource = await serialize(data.content || "", {
+    const source = data.content || "";
+    const compile = () => serialize(source, {
       mdxOptions: {
         remarkPlugins: [
           remarkGfm,
@@ -214,6 +225,7 @@ export const buildPostStaticProps = async (
         ],
       },
     });
+    const mdxSource = await withBuildCache("mdx", source, compile, isCachedMdxSource);
 
     return {
       props: Object.assign({}, data, {
@@ -239,3 +251,12 @@ export const buildPostStaticProps = async (
     }),
   };
 };
+
+function isCachedMdxSource(value: unknown): value is MDXRemoteSerializeResult {
+  if (!isRecord(value)) return false;
+  const source = value.compiledSource;
+  const hasSource = typeof source === "string";
+  if (!hasSource) return false;
+  const hasMetadata = isRecord(value.scope) && isRecord(value.frontmatter);
+  return hasMetadata && hasDiagramAssets(source);
+}

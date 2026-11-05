@@ -67,8 +67,8 @@ const getOpenRouterPricing = (data: OpenRouterResponse) =>
 const fetchOpenRouterPricingEffect: Effect.Effect<
   PricingData,
   PricingFetchError
-> = Metric.increment(pricingFetchAttempts).pipe(
-  Effect.zipRight(
+> = Metric.update(pricingFetchAttempts, 1).pipe(
+  Effect.andThen(
     Effect.tryPromise({
       try: (signal) => fetch(OPENROUTER_MODELS_URL, { signal }),
       catch: (reason) =>
@@ -93,11 +93,11 @@ const fetchOpenRouterPricingEffect: Effect.Effect<
     }),
   ),
   Effect.map(getOpenRouterPricing),
-  Effect.tapError(() => Metric.increment(pricingFetchFailures)),
+  Effect.tapError(() => Metric.update(pricingFetchFailures, 1)),
 );
 
 function fallbackPricingEffect(pricing: PricingData) {
-  return Metric.increment(pricingFetchAttempts).pipe(Effect.as(pricing));
+  return Metric.update(pricingFetchAttempts, 1).pipe(Effect.as(pricing));
 }
 
 function fetchAnthropicPricingEffect() {
@@ -146,7 +146,7 @@ function fetchGrokPricingEffect() {
 
 const recoverProvider = (
   providerEffect: Effect.Effect<PricingData, PricingFetchError>,
-) => providerEffect.pipe(Effect.catchAll(() => Effect.succeed({})));
+) => providerEffect.pipe(Effect.catch(() => Effect.succeed({})));
 
 export const fetchAllPricingEffect: Effect.Effect<PricingData> = Effect.all(
   [
@@ -160,7 +160,7 @@ export const fetchAllPricingEffect: Effect.Effect<PricingData> = Effect.all(
 ).pipe(
   Effect.map((results) => Object.assign({}, ...results)),
   Effect.tap((pricing) =>
-    Metric.incrementBy(pricingModelsLoaded, Object.keys(pricing).length),
+    Metric.update(pricingModelsLoaded, Object.keys(pricing).length),
   ),
 );
 

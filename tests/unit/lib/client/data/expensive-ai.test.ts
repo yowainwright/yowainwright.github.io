@@ -46,7 +46,7 @@ const expectFailureTag = async (
   expect(Exit.isFailure(exit)).toBe(true);
   if (!Exit.isFailure(exit)) return;
 
-  const failure = Cause.failureOption(exit.cause);
+  const failure = Cause.findErrorOption(exit.cause);
   expect(Option.isSome(failure)).toBe(true);
   if (!Option.isSome(failure)) return;
 
@@ -94,7 +94,7 @@ describe("loadExpensiveAiDataEffect", () => {
 
   test("keeps calculator fallback data compatible with the schema", async () => {
     const decoded = await Effect.runPromise(
-      Schema.decodeUnknown(ExpensiveAiDataSchema)(FALLBACK_AI_DATA),
+      Schema.decodeUnknownEffect(ExpensiveAiDataSchema)(FALLBACK_AI_DATA),
     );
 
     expect(decoded.models["gpt-5"]?.source).toBe("openai.com");

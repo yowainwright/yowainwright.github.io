@@ -1,0 +1,25 @@
+.info-block {
+  position: relative;
+  background: transparent;
+  border: 1px solid var(--code-highlight-border);
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  padding: 3rem 1rem 1rem;
+
+  h4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0.25rem 0.75rem;
+    border-radius: calc(0.5rem - 1px) 0 0.5rem 0;
+    background: var(--code-highlight-border);
+    color: var(--color-text-inverse);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+  }
+
+  p {
+    margin: 0;
+  }
+}

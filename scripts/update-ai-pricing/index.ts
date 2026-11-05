@@ -192,12 +192,12 @@ const loadPricingDataEffect = (filePath: string) =>
   );
 
 const loadCachedPricingEffect = loadPricingDataEffect(CACHE_PATH).pipe(
-  Effect.tap(() => Metric.increment(pricingCacheHits)),
-  Effect.catchAll(() => Metric.increment(pricingCacheMisses).pipe(Effect.as(null))),
+  Effect.tap(() => Metric.update(pricingCacheHits, 1)),
+  Effect.catch(() => Metric.update(pricingCacheMisses, 1).pipe(Effect.as(null))),
 );
 
 const loadGeneratedPricingEffect = loadPricingDataEffect(JSON_PATH).pipe(
-  Effect.catchAll(() => Effect.succeed(null)),
+  Effect.catch(() => Effect.succeed(null)),
 );
 
 const loadPreviousPricingEffect = Effect.all([
@@ -216,13 +216,13 @@ const mergeWithPreviousPricingEffect = (pricing: PricingData) =>
 
 const saveCachedPricingEffect = (pricing: PricingData) =>
   writeTextFileEffect(CACHE_PATH, JSON.stringify(pricing, null, 2)).pipe(
-    Effect.tap(() => Metric.increment(pricingCacheWrites)),
-    Effect.catchAll(() => Effect.void),
+    Effect.tap(() => Metric.update(pricingCacheWrites, 1)),
+    Effect.catch(() => Effect.void),
   );
 
 const writeGeneratedPricingEffect = (pricing: PricingData) =>
   writeTextFileEffect(JSON_PATH, generateJsonFile(pricing)).pipe(
-    Effect.tap(() => Metric.increment(pricingOutputWrites)),
+    Effect.tap(() => Metric.update(pricingOutputWrites, 1)),
   );
 
 const writeCachedPricingEffect: Effect.Effect<"cache", UpdatePricingError> =
@@ -241,7 +241,7 @@ const writeCachedPricingEffect: Effect.Effect<"cache", UpdatePricingError> =
 
 const saveMergedPricingEffect = (mergedPricing: PricingData) =>
   saveCachedPricingEffect(mergedPricing).pipe(
-    Effect.zipRight(writeGeneratedPricingEffect(mergedPricing)),
+    Effect.andThen(writeGeneratedPricingEffect(mergedPricing)),
   );
 
 const writeFreshPricing = (pricing: PricingData): Effect.Effect<"fresh", UpdatePricingError> => {
@@ -263,7 +263,7 @@ const writeFreshPricingEffect: Effect.Effect<"fresh", UpdatePricingError> =
   fetchAllPricingEffect.pipe(Effect.flatMap(writeFreshPricing));
 
 const updatePricingEffect: Effect.Effect<UpdatePricingSource, UpdatePricingError> =
-  writeFreshPricingEffect.pipe(Effect.catchAll(() => writeCachedPricingEffect));
+  writeFreshPricingEffect.pipe(Effect.catch(() => writeCachedPricingEffect));
 
 const logMetricsEffect = (source: UpdatePricingSource) =>
   Effect.all([

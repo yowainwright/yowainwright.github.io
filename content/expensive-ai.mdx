@@ -9,6 +9,8 @@ categories:
   - claude
 ---
 
+import { SectionSources } from "../lib/components/citations";
+
 import {
   AgentTaskCostChart,
   ProjectCostComparisonChart,
@@ -17,17 +19,17 @@ import {
 } from "../lib/components/content/expensive-ai";
 
 As a software engineer in 2026, I use AI all the time.
-My most active GitHub repository may be Claude config repo.
-Most days now, I'm there adding rules, telling Claude to make one comment,
-[_louder_](https://www.anthropic.com/engineering/claude-code-best-practices#a-create-claudemd-files),
+My most active GitHub repository may be my Claude config repo.
+Most days now, I'm there adding rules, telling Claude to make one comment
+_louder_[1](#source-1),
 updating hooks, rules, and agents to handle more use cases.
 Managing how I make Claude Code write code like me—or, even better, write code better than me—is something I feel it's worthwhile to spend time on.
 
 While Anthropic has been willing to lose ~$1k USD a month on my Claude Max plan,
 I have been willing to lose $200 USD on my Claude Max plan. The relationship has been decent.
-I've deployed basic apis that would have taken me a few weeks to write in a few hours.
+I've deployed basic APIs that would have taken me a few weeks to write in a few hours.
 And I've embarrassed myself by submitting pull requests where I've proved that true _does_ equal true 1000 times.
-This _is_ new developer tools. Amiright?
+These _are_ new developer tools. Amiright?
 
 <figure>
   <img
@@ -46,7 +48,7 @@ This _is_ new developer tools. Amiright?
 However, despite this handshake that I've had with these smart, naive decepticons, there has been a problem looming.
 Well, one problem for the subject of this post.
 The problem of tokens, or, what matters to me,
-the [cost-per-token](https://artificialanalysis.ai/models/comparisons/deepseek-v3-1-reasoning-vs-claude-4-opus)—which,
+the cost-per-token[2](#source-2)—which,
 I had been told, could be a lot.
 This cost had felt abstract to me since we, engineers (for this post's context), all started using chat a few years ago.
 I'd heard about effects on the environment and power grid. However, it's a weird abstraction.
@@ -54,8 +56,8 @@ I'm at home typing on my computer as I have always done. It's weird to think tha
 
 Until 48 hours ago, I'd looked at my usage and thought,
 _This is a crazy cost per acquisition_. In prep, I had done minor shifts to manage my AI infrastructure.
-But, I'd also read DHH's post ["Local LLMs are how nerds now justify a big computer they don't need"](https://world.hey.com/dhh/local-llms-are-how-nerds-now-justify-a-big-computer-they-don-t-need-af2fcb7b) and,
-well, fair—_why put in the effort when my Max plan will be better?_ DHH is smart and so are the people that are building these models so, back to Claude.
+But, I'd also read DHH's post "Local LLMs are how nerds now justify a big computer they don't need"[3](#source-3) and,
+well, fair—_why put in the effort when my Max plan will be better?_ DHH is smart, and so are the people that are building these models, so back to Claude.
 
 ---
 
@@ -68,14 +70,14 @@ This is not a session but one question in a session.
 
 ---
 
-Then, 48 hours ago, I started to get a message in bright yellow at the bottom of my Claude code prompts.
+Then, 48 hours ago, I started to get a message in bright yellow at the bottom of my Claude Code prompts.
 "Your usage is about to run out". It was concerning because I had a major project with a deadline looming for the next day.
 
-> You may see where this is going. And, you may be thinking to yourself already, "If this guy can code, "What's the problem?".
+> You may see where this is going. And, you may be thinking to yourself already, "If this guy can code, what's the problem?"
 > Well, **the problem is**, I have been building this project's features like a foreman.
 
 For this project, I spent time writing my architectural plan, crafting agents to work together to assist in completing major pieces of the project.
-My intended role was that of a foreman where I expected to take pieces of the project but major chunks of work went to different agents.
+My intended role was that of a foreman where I expected to take pieces of the project, but major chunks of work went to different agents.
 
 Since Claude Code came out, honing ways to instruct Claude to write code with my coding essence or in ways that most benefit my work has been my objective.
 And for the last month, I have been honing an orchestrator agent flow where I've prompted a few superhero agents and they largely execute on tasks and I am a man in the middle overseeing the work.
@@ -107,8 +109,8 @@ flowchart TD
 ---
 
 As the messages became more persistent about my usage, I observed that I kept getting shifted to different models—or it felt like it.
-I had my QA Lead agent working with my typescript expert agent getting code coverage up.
-I had my principal engineer working with my fastify expert ensuring caching was optimal.
+I had my QA Lead agent working with my TypeScript expert agent getting code coverage up.
+I had my principal engineer working with my Fastify expert ensuring caching was optimal.
 But the quality was starting to degrade. I felt like I was going to have to jump ship.
 So close to the deadline, anxiety was setting in.
 
@@ -126,21 +128,21 @@ My orchestrated agent costs - how specialized instructions multiply token usage.
 
 Then two pretty difficult things happened at once.
 
-1. The degraded reactive typescript expert edited code to fix `any` type errors which caused tests to fail, and
+1. The degraded reactive TypeScript expert edited code to fix `any` type errors which caused tests to fail, and
 2. Claude told me my usage was fully used up.
    I had to pay more.
 
 I wasn't too worried. Initially.<br />
-Maybe a little type casting and slightly lower test coverage than I had hoped. But, a benefit of AI engineering is providing proof of what was done is easier.
-However, alongside providing proof easier, it is also far more important!
+Maybe a little type casting and slightly lower test coverage than I had hoped. But, a benefit of AI engineering is that providing proof of what was done is easier.
+However, alongside providing proof being easier, it is also far more important!
 I find I need to provide proof to myself, then my team—especially when a large portion of the code was fully written by an agent.
 
 Anyway, it turned out my situation was worse than I had thought.
-While my typescript reactive expert was fixing the hundreds of `any` types, the fastify expert had done something for caching AND,
+While my TypeScript reactive expert was fixing the hundreds of `any` types, the Fastify expert had done something for caching AND,
 well, the whole thing stopped working in a matter of minutes.
-The gist of the issue was small—a few key type hints were extremely off leading to a new endpoint missing a header value and thus, failing.
-Although small, it was a tough problem. It was fun to ramp up on a large product with far less context than what I would have had pre-2022 but it was not where I wanted to be pre-product review.
-Stressed out, I paid $150 and put in a few hours of deep work to get things back on track; missing a product review I'd hoped to have.
+The gist of the issue was small—a few key type hints were extremely off, leading to a new endpoint missing a header value and thus failing.
+Although small, it was a tough problem. It was fun to ramp up on a large product with far less context than what I would have had pre-2022, but it was not where I wanted to be pre-product review.
+Stressed out, I paid $150 and put in a few hours of deep work to get things back on track, missing a product review I'd hoped to have.
 This may read like low friction, but this was just me—no team, just me handling all of that deadline stress.
 
 I'm sure you can empathize or, perhaps, know what I could have done better. Please share.
@@ -172,8 +174,8 @@ Calculate your own potential burn rate - my $150 hour started with these same 'r
 ## Conclusion
 
 It was really fun to fully code again. I didn't feel obsolete. I felt like a builder.
-It was stressful to have a 95% done API and a 95% done new app flow but the train got chugging.
-If coding _is_ becoming an art, then I am happy to call my keyboard a paint brush!
+It was stressful to have a 95% done API and a 95% done new app flow, but the train got chugging.
+If coding _is_ becoming an art, then I am happy to call my keyboard a paintbrush!
 And, I do appreciate the new craft. I do hope that as a human I get to participate in the fun parts of this tooling.
 Currently, for this project, I felt like I was replacing a team, including all the stress of a team's deadline, leaving the fun UI and API mocks to Claude.
 It's confusing; definitely more to learn.
@@ -215,6 +217,69 @@ The sequential pattern provides more control and deeper understanding for me and
 
 ---
 
-An article written by [Nicholas C. Zakas](https://humanwhocodes.com/blog/), code god creator of [eslint](https://eslint.org/) and inspirational person on multiple levels wrote [this post](https://newsletter.humanwhocodes.com/posts/expensive-ai-is-coming) which clearly illustrates the issue.
-I'm also continually following [Crush](https://github.com/charmbracelet/crush), [ollama](https://ollama.com/), and [opencode](https://opencode.ai/) to try and ensure I have some idea of what's going on!
-I used Claude writing this. I wrote most of the article by hand and used Claude Code to ensure a decent parallel between my experience and yours could be drawn. I also used Claude to gather data so my problem can be clearer to you.\*\*
+Nicholas C. Zakas[4](#source-4), code god creator of eslint[5](#source-5) and an inspirational person on multiple levels, wrote this post[6](#source-6) which clearly illustrates the issue.
+I'm also continually following Crush[7](#source-7), ollama[8](#source-8), and opencode[9](#source-9) to try and ensure I have some idea of what's going on!
+I used Claude writing this. I wrote most of the article by hand and used Claude Code to ensure a decent parallel between my experience and yours could be drawn. I also used Claude to gather data so my problem can be clearer to you.
+
+---
+
+## Sources
+
+<SectionSources
+  sources='[
+  {
+    "title": "Claude Code best practices",
+    "publication": "Anthropic",
+    "description": "The guidance behind my use of CLAUDE.md files to steer coding agents.",
+    "url": "https://www.anthropic.com/engineering/claude-code-best-practices#a-create-claudemd-files"
+  },
+  {
+    "title": "DeepSeek V3.1 Reasoning vs. Claude 4 Opus",
+    "publication": "Artificial Analysis",
+    "description": "The model comparison linked in my discussion of token costs.",
+    "url": "https://artificialanalysis.ai/models/comparisons/deepseek-v3-1-reasoning-vs-claude-4-opus"
+  },
+  {
+    "title": "Local LLMs are how nerds now justify a big computer they don’t need",
+    "author": "DHH",
+    "description": "The DHH post that made me question whether running models locally was worth the effort.",
+    "url": "https://world.hey.com/dhh/local-llms-are-how-nerds-now-justify-a-big-computer-they-don-t-need-af2fcb7b"
+  },
+  {
+    "title": "Nicholas C. Zakas",
+    "author": "Nicholas C. Zakas",
+    "description": "The developer whose writing helped frame my concerns about AI costs.",
+    "url": "https://humanwhocodes.com/blog/"
+  },
+  {
+    "title": "ESLint",
+    "publication": "ESLint",
+    "description": "The JavaScript linting project I mention when introducing Nicholas C. Zakas.",
+    "url": "https://eslint.org/"
+  },
+  {
+    "title": "Expensive AI Is Coming",
+    "author": "Nicholas C. Zakas",
+    "description": "The post by Nicholas C. Zakas that connects with my experience of rising AI costs.",
+    "url": "https://newsletter.humanwhocodes.com/posts/expensive-ai-is-coming"
+  },
+  {
+    "title": "Crush",
+    "publication": "Charmbracelet",
+    "description": "One of the coding tools I am following as I look beyond Claude Code.",
+    "url": "https://github.com/charmbracelet/crush"
+  },
+  {
+    "title": "Ollama",
+    "publication": "Ollama",
+    "description": "One of the tools I am following for running models locally.",
+    "url": "https://ollama.com/"
+  },
+  {
+    "title": "OpenCode",
+    "publication": "OpenCode",
+    "description": "Another coding tool I am watching as I reconsider my AI workflow.",
+    "url": "https://opencode.ai/"
+  }
+]'
+/>

@@ -54,7 +54,7 @@
     height: 2.5rem;
 
     .js-is-darkmode & {
-      border-color: var(--color-border-default);
+      border-color: var(--color-text-secondary);
     }
 
     @media screen and (min-width: $width-small) {
@@ -63,7 +63,7 @@
     }
 
     @media screen and (min-width: $width-medium) {
-      border: 1px solid var(--color-border-default);
+      border: 1px solid var(--color-text-secondary);
       border-radius: 2rem;
       margin: 0;
       padding: 0;

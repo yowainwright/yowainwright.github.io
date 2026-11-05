@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { Loader2 } from "lucide-react";
-import { Effect, Either } from "effect";
+import { Effect, Result } from "effect";
 import { matchEffectResource } from "../../../../client/effect/useEffectResource";
 import { useExpensiveAiData } from "../../../../hooks/useExpensiveAiData";
 import { FALLBACK_AI_DATA, GRAMMARS, STORAGE_KEY } from "./constants";
@@ -39,11 +39,11 @@ export const TokenCostCalculator = () => {
   const handleTokenChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
     const nextTokens = Effect.runSync(
-      Effect.either(parseTokenInputEffect(inputValue)),
+      Effect.result(parseTokenInputEffect(inputValue)),
     );
 
-    if (Either.isRight(nextTokens)) {
-      setInputTokens(nextTokens.right);
+    if (Result.isSuccess(nextTokens)) {
+      setInputTokens(nextTokens.success);
     }
   };
 

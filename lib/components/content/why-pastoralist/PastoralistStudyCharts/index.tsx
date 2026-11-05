@@ -5,136 +5,133 @@ import {
   BarChart as RechartsBarChart,
   Bar,
   CartesianGrid,
-  Cell,
   LabelList,
   ResponsiveContainer,
-  Tooltip,
   XAxis,
   YAxis,
 } from "recharts";
 import { CHART_SERIES_COLORS, CHART_STYLES } from "../../../charts/constants";
-import {
-  pastoralistStudyMetrics,
-  pastoralistStudyTotals,
-  type PastoralistStudyMetric,
-} from "./constants";
+import { pastoralistCleanupMetrics } from "./constants";
 
-type MetricKey = "entries" | "packageManifests";
+const unusedColor = CHART_SERIES_COLORS[0];
+const overrideColor = CHART_SERIES_COLORS[1];
+const studyData = pastoralistCleanupMetrics;
 
-type MetricChartProps = {
-  data: PastoralistStudyMetric[];
-  dataKey: MetricKey;
-  title: string;
-  label: string;
-};
+export const PastoralistStudyCharts = () => (
+  <div className="pastoralist-study-charts">
+    <div className="chart-title">Unused overrides out of total overrides</div>
+    <StudyChart />
+  </div>
+);
 
-const formatNumber = (value: number | string) => Number(value).toLocaleString();
-const formatLabelValue = (value: React.ReactNode) => {
-  if (typeof value === "number") return formatNumber(value);
-  if (typeof value === "string") return formatNumber(value);
-  return "";
-};
-
-const sortByMetric = (metric: MetricKey) =>
-  pastoralistStudyMetrics.slice().sort((a, b) => b[metric] - a[metric]);
-
-const MetricChart = ({ data, dataKey, title, label }: MetricChartProps) => (
-  <div className="pastoralist-study-charts__panel">
-    <div className="chart-title">{title}</div>
+function StudyChart() {
+  const margin = { top: 4, right: 36, bottom: 20, left: 4 };
+  return (
     <div className="pastoralist-study-charts__chart">
       <ResponsiveContainer
         width="100%"
         height="100%"
         initialDimension={CHART_STYLES.initialDimension}
       >
-        <RechartsBarChart
-          data={data}
-          layout="vertical"
-          margin={{ top: 4, right: 44, bottom: 0, left: 4 }}
-        >
+        <RechartsBarChart data={studyData} layout="vertical" margin={margin}>
           <CartesianGrid
+            xAxisId="overrides"
+            yAxisId="unused"
             horizontal={false}
             stroke={CHART_STYLES.grid.stroke}
             strokeDasharray={CHART_STYLES.grid.strokeDasharray}
           />
-          <XAxis
-            type="number"
-            allowDecimals={false}
-            axisLine={{ stroke: CHART_STYLES.axis.color }}
-            fontSize={CHART_STYLES.axis.fontSize}
-            tick={{ fill: CHART_STYLES.axis.color }}
-            tickLine={{ stroke: CHART_STYLES.axis.color }}
-          />
-          <YAxis
-            type="category"
-            dataKey="project"
-            width={112}
-            axisLine={{ stroke: CHART_STYLES.axis.color }}
-            fontSize={CHART_STYLES.axis.fontSize}
-            tick={{ fill: CHART_STYLES.axis.color }}
-            tickLine={{ stroke: CHART_STYLES.axis.color }}
-          />
-          <Tooltip
-            cursor={{ fill: "var(--chart-hover-fill)" }}
-            formatter={(value: number) => [formatNumber(value), label]}
-            labelFormatter={(project) => `${project}`}
-            contentStyle={CHART_STYLES.tooltip.content}
-            itemStyle={CHART_STYLES.tooltip.item}
-            labelStyle={CHART_STYLES.tooltip.label}
-          />
-          <Bar dataKey={dataKey} maxBarSize={18}>
-            {data.map((entry, index) => (
-              <Cell
-                key={`${dataKey}-${entry.project}`}
-                fill={CHART_SERIES_COLORS[index % CHART_SERIES_COLORS.length]}
-              />
-            ))}
-            <LabelList
-              dataKey={dataKey}
-              position="right"
-              formatter={formatLabelValue}
-              fill={CHART_STYLES.line.label.color}
-              fontSize={CHART_STYLES.line.label.fontSize}
-            />
-          </Bar>
+          <StudyAxes />
+          <StudyBars />
         </RechartsBarChart>
       </ResponsiveContainer>
     </div>
-  </div>
-);
+  );
+}
 
-export const PastoralistStudyCharts = () => (
-  <div className="pastoralist-study-charts">
-    <div
-      className="pastoralist-study-charts__summary"
-      aria-label="Pastoralist study totals"
-    >
-      <div>
-        <strong>{formatNumber(pastoralistStudyTotals.appendixEntries)}</strong>
-        <span>appendix entries</span>
-      </div>
-      <div>
-        <strong>{formatNumber(pastoralistStudyTotals.packageManifests)}</strong>
-        <span>manifests scanned</span>
-      </div>
-      <div>
-        <strong>{formatNumber(pastoralistStudyTotals.pullRequests)}</strong>
-        <span>fork PRs</span>
-      </div>
-    </div>
-    <div className="pastoralist-study-charts__grid">
-      <MetricChart
-        data={sortByMetric("entries")}
-        dataKey="entries"
-        title="Audit Entries Created"
-        label="entries"
+function StudyAxes() {
+  const axis = {
+    type: "number" as const,
+    allowDecimals: false,
+    height: 40,
+    fontSize: CHART_STYLES.axis.fontSize,
+  };
+  const overridesTick = { fill: overrideColor };
+  const projectTick = { fill: "var(--color-text-primary)", fontSize: 12 };
+  const overridesLabel = {
+    value: "Total overrides",
+    position: "bottom" as const,
+    offset: 10,
+    fill: overrideColor,
+    fontSize: 12,
+  };
+  return (
+    <>
+      <XAxis
+        {...axis}
+        xAxisId="overrides"
+        tick={overridesTick}
+        stroke={overrideColor}
+        label={overridesLabel}
       />
-      <MetricChart
-        data={sortByMetric("packageManifests")}
-        dataKey="packageManifests"
-        title="Package Manifests Scanned"
-        label="manifests"
+      <YAxis
+        yAxisId="unused"
+        type="category"
+        dataKey="project"
+        width={140}
+        interval={0}
+        tick={projectTick}
+        tickLine={false}
+        axisLine={false}
       />
-    </div>
-  </div>
-);
+      <YAxis yAxisId="overrides" type="category" dataKey="project" width={0} hide />
+    </>
+  );
+}
+
+function StudyBars() {
+  return (
+    <>
+      <Bar
+        className="study-overrides"
+        dataKey="overrides"
+        name="Total overrides"
+        xAxisId="overrides"
+        yAxisId="overrides"
+        fill={overrideColor}
+        fillOpacity={0.25}
+        barSize={22}
+        isAnimationActive={false}
+      />
+      <Bar
+        className="study-unused"
+        dataKey="unused"
+        name="Unused overrides"
+        xAxisId="overrides"
+        yAxisId="unused"
+        fill={unusedColor}
+        barSize={12}
+        minPointSize={2}
+        isAnimationActive={false}
+      >
+        <LabelList
+          dataKey="unused"
+          position="right"
+          formatter={formatLabelValue}
+          fill={CHART_STYLES.line.label.color}
+          fontSize={CHART_STYLES.line.label.fontSize}
+        />
+      </Bar>
+    </>
+  );
+}
+
+function formatLabelValue(value: React.ReactNode) {
+  if (typeof value === "number") return formatNumber(value);
+  if (typeof value === "string") return formatNumber(value);
+  return "";
+}
+
+function formatNumber(value: number | string) {
+  return Number(value).toLocaleString();
+}

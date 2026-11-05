@@ -46,7 +46,7 @@ import {
   sortPostsByDate,
 } from "./utils";
 
-const MARKDOWN_CACHE_VERSION = "markdown-html-v3";
+const MARKDOWN_CACHE_VERSION = "markdown-html-v5";
 const MARKDOWN_CACHE_DIR = path.join(process.cwd(), ".cache", "markdown-html");
 let codeBlockUid = 0;
 
@@ -64,7 +64,7 @@ const getPropertyStrings = (
   }
 
   const isStringValue = typeof value === "string";
-  if (isStringValue) return [value];
+  if (isStringValue) return value.split(/\s+/).filter(Boolean);
 
   return [];
 };
@@ -415,15 +415,14 @@ function transformerTooltip(): MarkdownTransformer {
       );
       if (!matchingTooltip) return;
 
-      node.tagName = "span";
+      node.tagName = "button";
       node.properties = Object.assign({}, node.properties, {
         class: getPropertyStrings(node.properties.class).concat(
           "shiki-tooltip",
         ),
         "data-tooltip": matchingTooltip.tooltip,
-        role: "tooltip",
-        "aria-label": matchingTooltip.tooltip,
-        tabindex: "0",
+        type: "button",
+        "aria-label": `${nodeText}: ${matchingTooltip.tooltip}`,
       });
     },
   };

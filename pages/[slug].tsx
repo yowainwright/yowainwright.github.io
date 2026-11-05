@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
 import { GlobalState } from "./_app";
 import { Share } from "../lib/components/Share";
+import { Tooltip } from "../lib/components/Tooltip";
 import { OgMeta } from "../lib/components/OgMeta";
 import { useCodeBlocks } from "../lib/hooks/useCodeBlocks";
 import { useHeadingAnchors } from "../lib/hooks/useHeadingAnchors";
@@ -66,6 +67,11 @@ const PastoralistStudyCharts = dynamic(
   { ssr: false },
 );
 const PostTable = dynamic(() => import("../lib/components/PostTable"));
+const InfoBlock = dynamic(() => import("../lib/components/InfoBlock").then((mod) => mod.InfoBlock));
+
+const ScrollyCode = dynamic(() =>
+  import("../lib/components/ScrollyCode").then((mod) => mod.ScrollyCode),
+);
 
 type PostProps = PostPageProps;
 
@@ -242,19 +248,41 @@ const PostImage = ({
   className,
   decoding,
   loading,
+  src,
+  "data-dark-src": darkSrc,
   ...props
-}: React.ImgHTMLAttributes<HTMLImageElement>) => {
+}: React.ImgHTMLAttributes<HTMLImageElement> & { "data-dark-src"?: string }) => {
+  const state = useContext(GlobalState);
+  const useDarkImage = state?.isDarkMode && darkSrc;
+  const imageSrc = useDarkImage ? darkSrc : src;
   const imageClassName = ["post__image", className].filter(Boolean).join(" ");
   const decodingMode = decoding || "async";
   const loadingMode = loading || "lazy";
 
   return (
-    <img {...props} className={imageClassName} decoding={decodingMode} loading={loadingMode} />
+    <img
+      {...props}
+      src={imageSrc}
+      className={imageClassName}
+      decoding={decodingMode}
+      loading={loadingMode}
+    />
   );
 };
 
+const PostLink = ({
+  href,
+  "data-dark-href": darkHref,
+  ...props
+}: React.AnchorHTMLAttributes<HTMLAnchorElement> & { "data-dark-href"?: string }) => {
+  const state = useContext(GlobalState);
+  const useDarkLink = state?.isDarkMode && darkHref;
+  const linkHref = useDarkLink ? darkHref : href;
+  return <CitationLink {...props} href={linkHref} />;
+};
+
 const mdxComponents = {
-  a: CitationLink,
+  a: PostLink,
   InlineSource,
   SectionSources,
   RiseAndFallChart,
@@ -267,6 +295,9 @@ const mdxComponents = {
   ProjectCostComparisonChart,
   TokenCostCalculator,
   PastoralistStudyCharts,
+  ScrollyCode,
+  InfoBlock,
+  Tooltip,
   pre: (props: React.HTMLAttributes<HTMLPreElement>) => <pre className="post__code" {...props} />,
   img: PostImage,
   table: PostTable,

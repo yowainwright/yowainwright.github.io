@@ -21,7 +21,8 @@
 .sources {
   font-size: 0.875rem;
   margin-top: $m-lg;
-  color: var(--color-text-secondary);
+  padding-bottom: 2rem;
+  color: var(--color-text-primary);
 
   &__title {
     font-weight: var(--font-weight-bold);
@@ -29,20 +30,33 @@
   }
 
   &__list {
+    position: relative;
     margin: 0;
-    padding-left: $m-lg;
+    padding: 0;
+    list-style: none;
     line-height: var(--line-height-relaxed);
   }
 
   &__item {
-    margin-bottom: $m-xs;
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 1rem;
+    scroll-margin-top: 7rem;
+    border-bottom: 1px solid var(--color-border-light);
   }
 
-  &__author {
-    // author name before title
+  &__number {
+    font-size: 0.875rem;
+    font-variant-numeric: tabular-nums;
   }
 
   &__link {
+    display: block;
+    font-weight: var(--font-weight-medium);
+    overflow-wrap: anywhere;
     color: var(--color-link-primary);
     text-decoration: none;
 
@@ -52,11 +66,68 @@
     }
   }
 
-  &__publication {
-    font-style: italic;
+  p.sources__metadata,
+  p.sources__description {
+    margin: 0.25rem 0 0;
+    color: var(--color-text-primary);
+    font-size: 1rem;
+    line-height: var(--line-height-relaxed);
+    overflow-wrap: anywhere;
   }
 
-  &__date {
-    // date styling
+  p.sources__metadata {
+    font-size: 0.875rem;
+  }
+
+  &:has(> .sources__more:not([open])) > .sources__list::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 1px;
+    left: 0;
+    height: 8rem;
+    background: linear-gradient(to bottom, transparent, var(--color-bg-primary));
+    backdrop-filter: blur(2px);
+    mask-image: linear-gradient(to bottom, transparent, #000);
+    pointer-events: none;
+  }
+
+  &__more {
+    position: relative;
+    padding-bottom: 1.375rem;
+  }
+
+  &__more > summary {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    min-height: 2.75rem;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid var(--color-border-light);
+    border-radius: $radius-md;
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:hover {
+      color: var(--color-text-secondary);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-text-secondary);
+      outline-offset: 2px;
+    }
   }
 }

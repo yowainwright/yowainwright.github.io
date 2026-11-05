@@ -34,17 +34,11 @@ export const ExpensiveAiChartDataSchema = Schema.Struct({
 export const ExpensiveAiDataSchema = Schema.Struct({
   title: Schema.String,
   lastUpdated: Schema.String,
-  models: Schema.Record({ key: Schema.String, value: ModelPricingSchema }),
+  models: Schema.Record(Schema.String, ModelPricingSchema),
   sources: Schema.Array(SourceSchema),
-  reasoningMultipliers: Schema.Record({
-    key: Schema.String,
-    value: Schema.Number,
-  }),
-  inputTokenEfficiency: Schema.Record({
-    key: Schema.String,
-    value: Schema.Number,
-  }),
-  modelNames: Schema.Record({ key: Schema.String, value: Schema.String }),
+  reasoningMultipliers: Schema.Record(Schema.String, Schema.Number),
+  inputTokenEfficiency: Schema.Record(Schema.String, Schema.Number),
+  modelNames: Schema.Record(Schema.String, Schema.String),
   agentTaskCosts: Schema.Array(ChartSeriesSchema),
   totalProjectCosts: Schema.Array(ChartSeriesSchema),
 });
@@ -111,8 +105,8 @@ export const expensiveAiDataLoadSuccesses = Metric.counter(
 export const loadExpensiveAiDataEffect = (
   path = DEFAULT_DATA_PATH,
 ): Effect.Effect<ExpensiveAiData, ExpensiveAiDataError, never> =>
-  Metric.increment(expensiveAiDataLoadAttempts).pipe(
-    Effect.zipRight(
+  Metric.update(expensiveAiDataLoadAttempts, 1).pipe(
+    Effect.andThen(
       Effect.tryPromise({
         try: (signal) => fetch(path, { signal }),
         catch: (reason) => new ExpensiveAiFetchError({ path, reason }),
@@ -132,12 +126,12 @@ export const loadExpensiveAiDataEffect = (
       }),
     ),
     Effect.flatMap((json) =>
-      Schema.decodeUnknown(ExpensiveAiDataSchema)(json).pipe(
+      Schema.decodeUnknownEffect(ExpensiveAiDataSchema)(json).pipe(
         Effect.mapError(
           (reason) => new ExpensiveAiValidationError({ path, reason }),
         ),
       ),
     ),
-    Effect.tap(() => Metric.increment(expensiveAiDataLoadSuccesses)),
-    Effect.tapError(() => Metric.increment(expensiveAiDataLoadFailures)),
+    Effect.tap(() => Metric.update(expensiveAiDataLoadSuccesses, 1)),
+    Effect.tapError(() => Metric.update(expensiveAiDataLoadFailures, 1)),
   );

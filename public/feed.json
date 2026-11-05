@@ -13,7 +13,7 @@
       "id": "https://jeffry.in/why-pastoralist",
       "url": "https://jeffry.in/why-pastoralist",
       "title": "Why Pastoralist: Dependency Overrides Need an Audit Trail",
-      "summary": "How Pastoralist can help teams track, scan, and clean npm, yarn, pnpm, and bun dependency overrides, with study notes from OSS projects, cleanup samples, and fork PRs synced on May 25, 2026.",
+      "summary": "How Pastoralist can help teams track, scan, and clean npm, yarn, pnpm, and bun dependency overrides, with a cleanup sample from five OSS projects.",
       "date_published": "2026-02-20T00:00:00.000Z",
       "author": {
         "name": "Jeff Wainwright"

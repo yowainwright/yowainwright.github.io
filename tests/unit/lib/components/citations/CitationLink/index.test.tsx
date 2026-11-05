@@ -37,4 +37,10 @@ describe("CitationLink", () => {
 
     expect(markup).toBe('<a href="https://example.com/docs">Pastoralist</a>');
   });
+
+  test("keeps source-list citation jumps in the same tab", () => {
+    const markup = renderToStaticMarkup(<CitationLink href="#source-1">1</CitationLink>);
+    expect(markup).toContain('href="#source-1"');
+    expect(markup).toContain('target="_self"');
+  });
 });

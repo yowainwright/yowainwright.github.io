@@ -51,52 +51,18 @@
 
 .pastoralist-study-charts {
   margin: 2rem 0;
-
-  &__summary {
-    display: grid;
-    gap: 0.75rem;
-    grid-template-columns: 1fr;
-    margin-bottom: 1.5rem;
-
-    @media screen and (min-width: $width-small) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    div {
-      border-top: 1px solid var(--color-border-light);
-      padding-top: 0.75rem;
-    }
-
-    strong,
-    span {
-      display: block;
-    }
-
-    strong {
-      font-size: 1.6rem;
-      line-height: 1.1;
-    }
-
-    span {
-      color: var(--color-text-secondary);
-      font-size: 0.825rem;
-    }
-  }
-
-  &__grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: 1fr;
-  }
-
-  &__panel {
-    border-top: 1px solid var(--chart-grid);
-    padding-top: 0.75rem;
-  }
+  border-top: 1px solid var(--chart-grid);
+  padding-top: 0.75rem;
 
   &__chart {
-    height: 420px;
+    height: 300px;
     width: 100%;
+  }
+
+  &__tooltip {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.6;
   }
 }
 

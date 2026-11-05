@@ -60,16 +60,16 @@ $radius-full: 100%;
   // Light Mode Colors (Default)
   // Backgrounds
   --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f9f9f9;
+  --color-bg-secondary: #f6f8fa;
   --color-bg-tertiary: #f0f0f0;
-  --color-bg-table-header: #f3f2fd;
-  --color-bg-table-row: #f9f9f9;
+  --color-bg-table-header: var(--color-bg-secondary);
+  --color-bg-table-row: var(--color-bg-secondary);
   --color-bg-hover: #f2f2f2;
 
   // Text
   --color-text-primary: #000000;
   --color-text-secondary: #666666;
-  --color-text-table-header: #282094;
+  --color-text-table-header: var(--color-text-primary);
   --color-text-post-link: #0a086e;
 
   // Links
@@ -84,8 +84,8 @@ $radius-full: 100%;
   --color-border-black: #000000;
 
   // Code Block Specific
-  --code-bg: #f9f9f9;
-  --code-line-bg: #f9f9f9;
+  --code-bg: var(--color-bg-primary);
+  --code-line-bg: var(--code-bg);
   --code-line-number: #777777;
   --code-border-radius: 1rem;
   --code-text-light: #4a90e2;
@@ -95,8 +95,8 @@ $radius-full: 100%;
   --code-remove-bg: rgba(239, 68, 68, 0.15);
   --code-remove-bg-strong: rgba(239, 68, 68, 0.25);
   --code-remove-text: #ef4444;
-  --code-highlight-bg: rgba(59, 130, 246, 0.1);
-  --code-highlight-border: #3b82f6;
+  --code-highlight-bg: var(--color-bg-secondary);
+  --code-highlight-border: var(--color-text-primary);
   --code-language-bg: rgba(59, 130, 246, 0.1);
   --code-language-text: #3b82f6;
 
@@ -107,17 +107,17 @@ $radius-full: 100%;
   --shadow-focus: 0 0 0 2px rgba(19, 16, 153, 0.1);
 
   // Inverse variables for contrast
-  --color-bg-inverse: #040c20;
+  --color-bg-inverse: #0d1117;
   --color-text-inverse: #ffffff;
-  --color-border-inverse: #5b8fa8;
+  --color-border-inverse: #30363d;
 
   // Fixed preview colors (never change with theme)
   --color-preview-light-bg: #ffffff;
   --color-preview-light-text: #000000;
   --color-preview-light-border: #999999;
-  --color-preview-dark-bg: #031030;
+  --color-preview-dark-bg: #0d1117;
   --color-preview-dark-text: #ffffff;
-  --color-preview-dark-border: #5b8fa8;
+  --color-preview-dark-border: #30363d;
 
   // Mermaid Chart Colors
   --mermaid-node-fill: var(--color-bg-primary);
@@ -132,17 +132,17 @@ $radius-full: 100%;
 body.js-is-darkmode,
 .js-is-darkmode {
   // Backgrounds
-  --color-bg-primary: #040c20;
-  --color-bg-secondary: #031030;
-  --color-bg-tertiary: #2a3f4d;
-  --color-bg-table-header: #031030;
-  --color-bg-table-row: rgba(91, 143, 168, 0.05);
-  --color-bg-hover: rgba(91, 143, 168, 0.1);
+  --color-bg-primary: #0d1117;
+  --color-bg-secondary: #161b22;
+  --color-bg-tertiary: #21262d;
+  --color-bg-table-header: var(--color-bg-secondary);
+  --color-bg-table-row: var(--color-bg-secondary);
+  --color-bg-hover: var(--color-bg-tertiary);
 
   // Text
   --color-text-primary: #ffffff;
   --color-text-secondary: #b3d8e5;
-  --color-text-table-header: #b3d8e5;
+  --color-text-table-header: var(--color-text-primary);
   --color-text-post-link: #f2ee98;
 
   // Links
@@ -152,26 +152,26 @@ body.js-is-darkmode,
   --color-link-nav: #f2ee98;
 
   // Borders
-  --color-border-default: #5b8fa8;
-  --color-border-light: rgba(91, 143, 168, 0.2);
+  --color-border-default: #30363d;
+  --color-border-light: #21262d;
   --color-border-black: #ffffff;
 
   // Code block specific (dark mode)
-  --code-bg: #031030;
-  --code-line-bg: #031030;
-  --code-line-number: #b3d8e5;
+  --code-bg: var(--color-bg-primary);
+  --code-line-bg: var(--code-bg);
+  --code-line-number: var(--color-text-secondary);
   --code-text-light: #7ec8e3;
   --code-add-bg: rgba(34, 197, 94, 0.2);
   --code-add-bg-strong: rgba(34, 197, 94, 0.3);
   --code-remove-bg: rgba(239, 68, 68, 0.2);
   --code-remove-bg-strong: rgba(239, 68, 68, 0.3);
-  --code-highlight-bg: rgba(59, 130, 246, 0.15);
-  --code-highlight-border: #60a5fa;
+  --code-highlight-bg: var(--color-bg-secondary);
+  --code-highlight-border: var(--color-text-secondary);
   --code-language-bg: rgba(59, 130, 246, 0.2);
   --code-language-text: #60a5fa;
 
   // Dark mode shadows
-  --shadow-focus: 0 0 0 2px rgba(91, 143, 168, 0.1);
+  --shadow-focus: 0 0 0 2px rgba(139, 148, 158, 0.2);
 
   // Inverse variables for contrast
   --color-bg-inverse: #ffffff;

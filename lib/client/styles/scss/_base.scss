@@ -262,12 +262,9 @@ table {
 }
 
 .post__table-wrapper {
-  border: 1px solid var(--color-border-light);
-  border-radius: 0.5rem;
   box-sizing: border-box;
   margin: $spacing-unit 0 $m-xl;
   max-width: 100%;
-  padding: 1rem;
   position: relative;
 }
 
@@ -315,6 +312,18 @@ table {
   overflow-x: auto;
 }
 
+.post__table-figure {
+  margin: 0;
+}
+
+.post__table-caption {
+  color: var(--color-text-primary);
+  font-size: 0.875rem;
+  max-width: none;
+  padding-top: 1rem;
+  text-align: center;
+}
+
 .post__content td,
 .post__content th {
   font-size: 1rem;
@@ -359,8 +368,8 @@ table {
 .post__table-expand,
 .post__table-dialog-close {
   align-items: center;
-  background: var(--color-bg-primary);
-  border: 1px solid var(--color-border-light);
+  background: transparent;
+  border: 0;
   border-radius: $radius-sm;
   color: var(--color-text-primary);
   cursor: pointer;
