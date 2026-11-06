@@ -13,34 +13,34 @@ tags: ["open source", "npm", "security", "dependencies", "pastoralist"]
 import { SectionSources } from "../lib/components/citations";
 import { AppendixExample, BeforeAfterExample, OverrideExample, PastoralistStudyCharts } from "../lib/components/content/why-pastoralist";
 
-A few years ago, I had to fix CVE security issues on a project. One way to address those CVEs was with overrides.
-Overrides let you tell your package manager which dependency versions to use, but they don't explain why those versions were chosen.
+A few years ago, I had to fix CVE security issues in a project. One way to address CVEs was with overrides.
+Overrides let you tell your package manager which dependency versions of package to use,
+but they don't explain why those dependency override versions were chosen.
 
-Lots of overrides. I didn't know why they were there, whether they could be removed, or what might happen if I added more.
-It felt like a problem that, if unsolved, would lead me to the same situation again.
+On the project I was working on, there were lots of overrides. I didn't know why they were there, whether they could be removed,
+or what might happen if I added more. It felt like a problem that, if unsolved, would lead me to the same situation again.
 
-So, I decided I wanted to build a little logic for our team's overrides.
-My idea was to add an object to a `package.json` which explained why each override was there.
-This was a win, way better than what we had but still a bit unfulfilling.
-I thought we could make providing context to overrides easier and this spawned Pastoralist[1](#source-1).
+This was the start of Pastoralist[1](#source-1).
+I initially built a little logic for the dependency overrides in the project I was working on.
+The logic allowed me to add and lint an object to a `package.json` which explained why each override was there.
+This was a win. It way better than what we had but still a bit unfulfilling and error prone.
+I thought I could make providing context to overrides easier and this spawned Pastoralist[1](#source-1).
+Recording why an dependency override was there is helpful, but I also wanted to know whether it was still needed.
 
-Recording why an override was there helped, but I also wanted to know whether we still needed it.
-
-<InfoBlock title="Questions Pastoralist Answers">
-  <p>Is the package that needed the override still used in the project? Is there a newer version of that package? If we updated it, would we still need the override?</p>
+<InfoBlock title="Questions I wanted to answer with Pastoralist">
+  <p>Is the dependency that needed the dependency override still used in the project? Is there a newer version of that dependency that is overriden? If we updated the override's dependent, would we still need it?</p>
 </InfoBlock>
 
-In the original repo where I was fixing CVEs, Pastoralist was a huge optimization.
-CVEs went down, we knew why the overrides were there, and we could do that work in seconds instead of hours or more.
-Below, I will go over Pastoralist and how it answers the questions above for you.
+Below, I will go over Pastoralist and how it answers the questions above for you. Maybe, it can do even more!
 
 ---
 
 ## The Problem with Overrides
 
-Overrides are a simple, powerful tool. But the more we added, the harder they became to maintain.
+Dependency overrides are a simple, powerful, but blunt tool. The more you add, the harder they are to maintain.
+Without git and dependency tree information, you have no idea why they are there and neither does the rest of your team.
 
-A typical `package.json` override block can look like this:
+Lets see how this confusion looks in the example `package.json` overrides object below:
 
 <OverrideExample>
 
@@ -58,18 +58,18 @@ A typical `package.json` override block can look like this:
 
 </OverrideExample>
 
-We can see which versions these overrides allow, but not why they were chosen or whether anything still needs them.
-
 ---
 
 ## Quick review of overrides in five OSS projects
 
-Let's look at some large projects which use overrides and see what Pastoralist can do.
-The table shows how many overrides each project had. The chart shows how many Pastoralist found were no longer used.
+Now that hopefully you have some understand of how overrides can get confusing,
+let's look at five popular projects that use overrides to see if they have issues and see what Pastoralist can do to to help.
+
+The table shows how many overrides each project has.
 
 ### Initial Override Snapshot
 
-| Project | Field | Overrides |
+| Project | Active Overrides Field | Overrides |
 | ------- | ----- | --------: |
 | **n8n**[4](#source-4) | `pnpm.overrides` | 58 |
 | **TanStack Router**[5](#source-5) | `pnpm.overrides` | 51 |
@@ -86,12 +86,11 @@ These popular projects have plenty of overrides, but the entries don’t tell us
 ---
 
 **n8n** had 58 overrides: some for security patches (`ws`, `semver`, `axios`), some compatibility pins (`date-fns`, `chokidar`, `esbuild`), some forks (`expr-eval@2.0.2` remapped to `npm:expr-eval-fork@3.0.0`).
-
 **Prisma** had 5 overrides that all appeared security-related.
 
 ### Are all of those overrides still needed?
 
-To demonstrate Pastoralist’s cleanup, I ran it on the same five projects. I wanted to see if it could find overrides that no longer matched their dependency trees.
+Now lets see if Pastoralist can help.
 
 <figure>
 <PastoralistStudyCharts />
@@ -102,9 +101,12 @@ To demonstrate Pastoralist’s cleanup, I ran it on the same five projects. I wa
 Pastoralist found 140 overrides that no longer matched anything in these projects’ dependency trees!
 </Tooltip>
 
-Pastoralist found unused overrides in all five projects. And, that's just the start.
-In Prisma, all 5 overrides appeared security-related, but none still matched anything in the dependency tree.
-This was a cleanup of existing overrides. Pastoralist can also help with ongoing maintenance by checking for CVEs and adding overrides to address them.
+Pastoralist found unused overrides in all five projects! And, that's just the start.
+For example, in Prisma, all 5 overrides appearing security-related. None still matched anything in the dependency tree.
+Pastoralist can removed them.
+
+Pastoralist is not just for one time use either.
+Pastoralist can also help with ongoing maintenance by checking for CVEs and adding overrides to address them.
 
 ---
 
@@ -114,9 +116,9 @@ Let's look into how Pastoralist works.
 
 Pastoralist[2](#source-2) helps you with overrides in 3 key ways.
 
-### 1. Track: Understand Each Override
+### 1. Tracking: Understand Each Override
 
-Pastoralist investigates each override to understand the dependency and records that context in its **appendix**:
+Pastoralist trackes each override. It investigates it to understand the dependency and records that context in its **appendix**:
 
 <AppendixExample>
 
@@ -147,19 +149,23 @@ The appendix records _why_ an override is there, _what_ depends on it, and _when
 
 ### 2. Scan: Check Security and Usage
 
-Pastoralist checks your dependencies for known security issues. It also checks whether your overrides still match the dependency tree. Security scanning supports six providers: OSV[9](#source-9) (free, no auth required), GitHub Advisory Database, npm audit, Snyk (experimental), Socket (experimental), and Spektion (experimental).
-
-Pastoralist can add overrides for CVEs automatically with `--checkSecurity --forceSecurityRefactor`. It also supports patches you add yourself. Interactive mode lets you choose which fixes to apply.
+Pastoralist checks your dependencies for known security issues.
+It also checks whether your overrides still match the dependency tree.
+Security scanning supports six providers: OSV[9](#source-9) (free, no auth required), GitHub Advisory Database, npm audit, Snyk (experimental), Socket (experimental), and Spektion (experimental).
+Pastoralist can add overrides for CVEs automatically with `--checkSecurity --forceSecurityRefactor`.
+It also supports patches you add yourself. Interactive mode lets you choose which fixes to apply.
 
 ### 3. Clean: Update the Appendix and Overrides
 
-Pastoralist updates its appendix and overrides based on dependency context, security findings, and usage. Use `--remove-unused` to remove verified unused entries from both, then run your normal CI checks.
+Pastoralist updates its appendix and overrides object based on dependency context, security findings, and usage.
+Use `--remove-unused` to remove verified unused entries from both the overrides object and the pastoralist object, then run your normal CI checks.
 
 ---
 
 ## Before and After
 
-This example records the existing override, its dependents, and when Pastoralist first recorded it. It does not add a reason. Reasons can come from security findings or be supplied by the maintainer.
+This example records the existing override, its dependents, and when Pastoralist first recorded it.
+It does not add a reason. Reasons can come from security findings or are supplied by the maintainer.
 
 <BeforeAfterExample>
 
@@ -229,13 +235,13 @@ There are a few key things I don't want you to miss in this article!
 
 1. Overrides are a good tool for pinning dependency versions.
 2. Pastoralist checks for security issues and can add dependency overrides to fix them.
-3. Pastoralist documents why your overrides exist and cleans up the overrides if they are no longer needed.
-4. Pastoralist works in one command: `npx pastoralist --checkSecurity --forceSecurityRefactor --remove-unused`.
+3. Pastoralist documents why your dependency overrides exist and cleans them up if they are no longer needed.
+4. Pastoralist works with one cli command: `npx pastoralist --checkSecurity --forceSecurityRefactor --remove-unused`.
 
 Pastoralist has been saving me a lot of time. I am still improving it but it's already giving me joy.
-Please give it a star and try it out. Maybe it could save you a lot of time too?!
+Please give Pastoralist a star and try it out. Maybe it could save you a lot of time too?!
 
-_If you want more detail on overrides, reach out and I will be happy to write more articles or assist, depending on the question_.
+If you want more detail on overrides, reach out and I will be happy to write more articles or assist.
 
 ---
 
