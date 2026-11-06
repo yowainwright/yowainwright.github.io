@@ -6,12 +6,15 @@
     ".github/workflows/*.yaml"
   ],
   "codependencies": [
-    { "actions/checkout": "v7" },
-    { "pnpm/action-setup": "v6" },
-    { "actions/setup-node": "v6" },
-    { "actions/configure-pages": "v6" },
-    { "actions/upload-pages-artifact": "v5" },
-    { "actions/deploy-pages": "v5" },
-    { "peter-evans/create-pull-request": "v8" }
+    "actions/checkout",
+    "pnpm/action-setup",
+    "actions/setup-node",
+    "actions/cache",
+    "actions/configure-pages",
+    "actions/upload-pages-artifact",
+    "actions/deploy-pages",
+    "peter-evans/create-pull-request",
+    { "github/codeql-action/init": "33d7b85da1a04171e211befe2c739303b9a4c066" },
+    { "github/codeql-action/analyze": "33d7b85da1a04171e211befe2c739303b9a4c066" }
   ]
 }
