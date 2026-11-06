@@ -72,6 +72,15 @@ const InfoBlock = dynamic(() => import("../lib/components/InfoBlock").then((mod)
 const ScrollyCode = dynamic(() =>
   import("../lib/components/ScrollyCode").then((mod) => mod.ScrollyCode),
 );
+const OverrideExample = dynamic(() =>
+  import("../lib/components/content/why-pastoralist/OverrideExample").then((mod) => mod.OverrideExample),
+);
+const AppendixExample = dynamic(() =>
+  import("../lib/components/content/why-pastoralist/AppendixExample").then((mod) => mod.AppendixExample),
+);
+const BeforeAfterExample = dynamic(() =>
+  import("../lib/components/content/why-pastoralist/BeforeAfterExample").then((mod) => mod.BeforeAfterExample),
+);
 
 type PostProps = PostPageProps;
 
@@ -295,6 +304,9 @@ const mdxComponents = {
   ProjectCostComparisonChart,
   TokenCostCalculator,
   PastoralistStudyCharts,
+  OverrideExample,
+  AppendixExample,
+  BeforeAfterExample,
   ScrollyCode,
   InfoBlock,
   Tooltip,
