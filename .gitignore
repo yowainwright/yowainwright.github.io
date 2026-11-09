@@ -17,8 +17,23 @@ drafts/
 # Sentry
 .sentryclirc
 
+# Downloaded third-party skills
+/.agents/skills/walter-writes-humanizer/
+/.agents/skills/walter-writes-writer/
+/.agents/skills/walter-agency-qc/
+/.agents/skills/walter-brand-voice-adapter/
+/.agents/skills/walter-content-refresh/
+/.agents/skills/walter-docs-writer/
+/.agents/skills/walter-ecommerce/
+/.agents/skills/walter-lead-magnet-writer/
+/.agents/skills/walter-local-seo/
+/.agents/skills/walter-newsletter-writer/
+/.agents/skills/walter-programmatic-seo/
+/.agents/skills/walter-content-repurposer/
+/.agents/skills/walter-seo-writer/
+/.agents/skills/walter-social-media/
+
 # Claude Code local settings (personal overrides)
-.agents
 .claude.backup/
 .claude/settings.local.json
 .claude/

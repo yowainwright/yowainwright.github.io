@@ -165,9 +165,7 @@ const claudeLink = (name: string): SkillLink => {
 const skillLinks = (sources: Source[]): SkillLink[] => {
   const names = sources.flatMap(skillNames);
   assert.equal(new Set(names).size, names.length, "Duplicate skill names");
-  const humanizer = { path: ".agents/skills/humanizer", target: "../../lib/agents/humanizer" };
-  const links = names.concat("humanizer").map(claudeLink);
-  return [humanizer].concat(links);
+  return names.concat("humanizer", "site-quality").map(claudeLink);
 };
 
 const writeDownload = (root: string, result: VerifiedFile) => {
@@ -208,7 +206,11 @@ export const installSkills = async (
   const files = sources.flatMap(sourceFiles);
   assert.equal(new Set(files.map((file) => file.path)).size, files.length, "Duplicate targets");
   const links = skillLinks(sources);
-  assert(stat(join(root, "lib/agents/humanizer/SKILL.md"))?.isFile(), "Missing blog Humanizer");
+  assert(stat(join(root, ".agents/skills/humanizer/SKILL.md"))?.isFile(), "Missing blog Humanizer");
+  assert(
+    stat(join(root, ".agents/skills/site-quality/SKILL.md"))?.isFile(),
+    "Missing site quality skill",
+  );
   files.forEach((file) => checkFile(root, file));
   links.forEach((link) => checkLink(root, link));
   const missing = files.filter((file) => !checkFile(root, file));

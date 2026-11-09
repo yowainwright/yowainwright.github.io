@@ -27,12 +27,12 @@ const VOICE_SAMPLES = [
   "content/let-the-dream-live.md",
 ];
 const REVIEW_SKILLS = [
-  "lib/agents/humanizer/SKILL.md",
-  "lib/agents/humanizer/references/voice.md",
+  ".agents/skills/humanizer/SKILL.md",
+  ".agents/skills/humanizer/references/voice.md",
   ".agents/skills/walter-writes-humanizer/SKILL.md",
 ];
 const DEEP_REFERENCES = [
-  "lib/agents/humanizer/references/humanizer.md",
+  ".agents/skills/humanizer/references/humanizer.md",
   ".agents/skills/walter-writes-humanizer/references/phrases.md",
   ".agents/skills/walter-writes-humanizer/references/structures.md",
   ".agents/skills/walter-writes-humanizer/references/examples.md",

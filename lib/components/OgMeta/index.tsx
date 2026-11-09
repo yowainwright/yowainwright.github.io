@@ -8,15 +8,72 @@ import {
   OG_IMAGE_HEIGHT,
   TWITTER_HANDLE,
 } from "./constants";
-import type {
-  OgMetaProps,
-  OgMetaTagProps,
-  NameMetaTagProps,
-  JsonLdInput,
-} from "./types";
+import type { OgMetaProps, JsonLdInput } from "./types";
+
+export function OgMeta({
+  title = "",
+  description = "",
+  slug,
+  imagePath,
+  date,
+  tags = [],
+  wordCount,
+}: OgMetaProps) {
+  const url = buildUrl(slug);
+  const imageUrl = buildImageUrl(imagePath);
+  const isoDate = toIsoDate(date);
+  const schemaType = getSchemaType(slug);
+  const isBlogPosting = schemaType === "BlogPosting";
+  const ogType = isBlogPosting ? "article" : "website";
+  const publishedTime = isBlogPosting && isoDate;
+  const articleTags = isBlogPosting ? tags : [];
+  const jsonLd = buildJsonLd({
+    schemaType,
+    title,
+    description,
+    url,
+    imageUrl,
+    isoDate,
+    wordCount,
+  });
+
+  const jsonLdHtml = JSON.stringify(jsonLd).replace(/</g, "\\u003c");
+
+  return (
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <link rel="canonical" href={url} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:image:width" content={OG_IMAGE_WIDTH} />
+      <meta property="og:image:height" content={OG_IMAGE_HEIGHT} />
+      <meta property="og:image:alt" content={title} />
+      {publishedTime && <meta property="article:published_time" content={isoDate} />}
+      {articleTags.map((tag) => (
+        <meta key={tag} property="article:tag" content={tag} />
+      ))}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={imageUrl} />
+      <meta name="twitter:creator" content={TWITTER_HANDLE} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml }} />
+    </Head>
+  );
+}
+
+function getSchemaType(slug?: string): JsonLdInput["schemaType"] {
+  if (slug === "about") return "AboutPage";
+  if (slug === "resume") return "ProfilePage";
+  return "BlogPosting";
+}
 
 function buildUrl(slug?: string): string {
-  return slug ? `${SITE_URL}/${slug}` : SITE_URL;
+  return slug ? `${SITE_URL}/${slug}/` : `${SITE_URL}/`;
 }
 
 function buildImageUrl(imagePath?: string): string {
@@ -34,6 +91,7 @@ function toIsoDate(date?: string): string {
 }
 
 function buildJsonLd({
+  schemaType,
   title,
   description,
   url,
@@ -43,12 +101,11 @@ function buildJsonLd({
 }: JsonLdInput) {
   const baseJsonLd = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": schemaType,
     headline: title,
     description,
     image: imageUrl,
     datePublished: isoDate,
-    dateModified: isoDate,
     author: {
       "@type": "Person",
       name: DEFAULT_AUTHOR,
@@ -62,129 +119,9 @@ function buildJsonLd({
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     inLanguage: "en-US",
   };
-  const wordCountJsonLd = wordCount ? { wordCount } : {};
-  return Object.assign({}, baseJsonLd, wordCountJsonLd);
-}
-
-function PropertyMeta({ property, content }: OgMetaTagProps) {
-  if (!content) return null;
-  return <meta property={property} content={content} />;
-}
-
-function NameMeta({ name, content }: NameMetaTagProps) {
-  if (!content) return null;
-  return <meta name={name} content={content} />;
-}
-
-function OgCoreTags({
-  title,
-  description,
-  url,
-}: {
-  title: string;
-  description: string;
-  url: string;
-}) {
-  return (
-    <>
-      <PropertyMeta property="og:title" content={title} />
-      <PropertyMeta property="og:description" content={description} />
-      <PropertyMeta property="og:url" content={url} />
-      <PropertyMeta property="og:type" content="article" />
-    </>
-  );
-}
-
-function OgImageTags({ imageUrl }: { imageUrl: string }) {
-  return (
-    <>
-      <PropertyMeta property="og:image" content={imageUrl} />
-      <PropertyMeta property="og:image:width" content={OG_IMAGE_WIDTH} />
-      <PropertyMeta property="og:image:height" content={OG_IMAGE_HEIGHT} />
-    </>
-  );
-}
-
-function ArticleTags({
-  isoDate,
-  tags,
-}: {
-  isoDate: string;
-  tags: readonly string[];
-}) {
-  return (
-    <>
-      {isoDate && (
-        <PropertyMeta property="article:published_time" content={isoDate} />
-      )}
-      {tags.map((tag) => (
-        <PropertyMeta key={tag} property="article:tag" content={tag} />
-      ))}
-    </>
-  );
-}
-
-function TwitterTags({
-  title,
-  description,
-  imageUrl,
-}: {
-  title: string;
-  description: string;
-  imageUrl: string;
-}) {
-  return (
-    <>
-      <NameMeta name="twitter:card" content="summary_large_image" />
-      <NameMeta name="twitter:title" content={title} />
-      <NameMeta name="twitter:description" content={description} />
-      <NameMeta name="twitter:image" content={imageUrl} />
-      <NameMeta name="twitter:creator" content={TWITTER_HANDLE} />
-    </>
-  );
-}
-
-function JsonLdScript({ data }: { data: Record<string, unknown> }) {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
-  );
-}
-
-export function OgMeta({
-  title = "",
-  description = "",
-  slug,
-  imagePath,
-  date,
-  tags = [],
-  wordCount,
-}: OgMetaProps) {
-  const url = buildUrl(slug);
-  const imageUrl = buildImageUrl(imagePath);
-  const isoDate = toIsoDate(date);
-  const jsonLd = buildJsonLd({
-    title,
-    description,
-    url,
-    imageUrl,
-    isoDate,
-    wordCount,
-  });
-
-  return (
-    <Head>
-      <OgCoreTags title={title} description={description} url={url} />
-      <OgImageTags imageUrl={imageUrl} />
-      <ArticleTags isoDate={isoDate} tags={tags} />
-      <TwitterTags
-        title={title}
-        description={description}
-        imageUrl={imageUrl}
-      />
-      <JsonLdScript data={jsonLd} />
-    </Head>
-  );
+  const isBlogPosting = schemaType === "BlogPosting";
+  const includeWordCount = isBlogPosting && Boolean(wordCount);
+  const wordCountJsonLd = includeWordCount ? { wordCount } : {};
+  const subjectJsonLd = isBlogPosting ? {} : { mainEntity: baseJsonLd.author };
+  return Object.assign({}, baseJsonLd, wordCountJsonLd, subjectJsonLd);
 }

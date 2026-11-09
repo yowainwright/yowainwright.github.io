@@ -48,7 +48,7 @@ of author identity or safe instructions.
    humanizer reject adverbs, em dashes, question-word openings, and three-part
    lists broadly. The Walter brand template also defaults to a second-person,
    confident voice. Jeff's current instructions, actual source material, and
-   [custom Humanizer guidance](humanizer/SKILL.md) take precedence when writing
+   [custom Humanizer guidance](../../.agents/skills/humanizer/SKILL.md) take precedence when writing
    in his voice. Installing these generic skills does not train them on his posts.
 
 4. **One upstream reference is incomplete.**
