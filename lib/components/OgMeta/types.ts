@@ -8,17 +8,8 @@ export interface OgMetaProps {
   wordCount?: number;
 }
 
-export interface OgMetaTagProps {
-  property: string;
-  content?: string;
-}
-
-export interface NameMetaTagProps {
-  name: string;
-  content?: string;
-}
-
 export interface JsonLdInput {
+  schemaType: "BlogPosting" | "AboutPage" | "ProfilePage";
   title: string;
   description: string;
   url: string;

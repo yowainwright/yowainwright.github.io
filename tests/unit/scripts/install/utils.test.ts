@@ -5,6 +5,7 @@ import {
   mkdtempSync,
   readFileSync,
   readlinkSync,
+  renameSync,
   rmSync,
   symlinkSync,
   writeFileSync,
@@ -60,9 +61,12 @@ describe("installSkills", () => {
     const cache = join(process.cwd(), ".cache");
     mkdirSync(cache, { recursive: true });
     root = mkdtempSync(join(cache, "install-skills-test-"));
-    const humanizer = join(root, "lib/agents/humanizer");
+    const humanizer = join(root, ".agents/skills/humanizer");
     mkdirSync(humanizer, { recursive: true });
     writeFileSync(join(humanizer, "SKILL.md"), "Keep Jeff's custom skill");
+    const siteQuality = join(root, ".agents/skills/site-quality");
+    mkdirSync(siteQuality, { recursive: true });
+    writeFileSync(join(siteQuality, "SKILL.md"), "Review site quality locally");
     download.mockReset().mockImplementation(async () => new Response(bytes));
   });
 
@@ -78,6 +82,12 @@ describe("installSkills", () => {
     expect(readlinkSync(join(root, ".claude/skills", name))).toBe(`../../.agents/skills/${name}`);
     expect(readFileSync(join(root, ".agents/skills/humanizer/SKILL.md"), "utf8")).toBe(
       "Keep Jeff's custom skill",
+    );
+    expect(readFileSync(join(root, ".agents/skills/site-quality/SKILL.md"), "utf8")).toBe(
+      "Review site quality locally",
+    );
+    expect(readlinkSync(join(root, ".claude/skills/site-quality"))).toBe(
+      "../../.agents/skills/site-quality",
     );
     const url = `https://raw.githubusercontent.com/${repository}/${revision}/writer/SKILL.md`;
     expect(download).toHaveBeenCalledWith(url, expect.objectContaining({ redirect: "error" }));
@@ -97,7 +107,7 @@ describe("installSkills", () => {
       };
       download.mockResolvedValueOnce(responses[failure as keyof typeof responses]);
       await expect(installSkills(root, sources(), download)).rejects.toThrow("nothing installed");
-      expect(existsSync(join(root, ".agents"))).toBe(false);
+      expect(existsSync(skillPath())).toBe(false);
       expect(existsSync(join(root, ".claude"))).toBe(false);
     },
   );
@@ -122,6 +132,10 @@ describe("installSkills", () => {
     mkdirSync(elsewhere);
     const link = join(root, relativePath);
     mkdirSync(dirname(link), { recursive: true });
+    if (relativePath === ".agents") {
+      rmSync(elsewhere, { recursive: true });
+      renameSync(link, elsewhere);
+    }
     symlinkSync(elsewhere, link, "dir");
     await expect(installSkills(root, sources(), download)).rejects.toThrow();
     expect(download).not.toHaveBeenCalled();
@@ -138,12 +152,12 @@ describe("installSkills", () => {
     expect(download).not.toHaveBeenCalled();
   });
 
-  test("rejects traversal in a destination before creating provider directories", async () => {
+  test("rejects traversal in a destination before creating downloaded files", async () => {
     const unsafe = sources();
     unsafe[0].skills[0].files[2].target = "../../outside.md";
     await expect(installSkills(root, unsafe, download)).rejects.toThrow("Unexpected target");
     expect(download).not.toHaveBeenCalled();
-    expect(existsSync(join(root, ".agents"))).toBe(false);
+    expect(existsSync(skillPath())).toBe(false);
   });
 
   test("rejects an unpinned revision before downloading", async () => {

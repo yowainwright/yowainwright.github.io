@@ -17,10 +17,10 @@ vi.mock("node:child_process", () => ({ spawn: vi.fn(), execFileSync: vi.fn() }))
 
 const GUIDANCE = [
   "lib/agents/review.md",
-  "lib/agents/humanizer/SKILL.md",
-  "lib/agents/humanizer/references/voice.md",
+  ".agents/skills/humanizer/SKILL.md",
+  ".agents/skills/humanizer/references/voice.md",
   ".agents/skills/walter-writes-humanizer/SKILL.md",
-  "lib/agents/humanizer/references/humanizer.md",
+  ".agents/skills/humanizer/references/humanizer.md",
   ".agents/skills/walter-writes-humanizer/references/phrases.md",
   ".agents/skills/walter-writes-humanizer/references/structures.md",
   ".agents/skills/walter-writes-humanizer/references/examples.md",
@@ -76,7 +76,7 @@ describe("review context", () => {
     putFile("content/my post.mdx", "UNSTAGED PRIVATE DRAFT");
     const prompt = buildReviewPrompt(root, "quick", ["content/my post.mdx"], git);
     expect(prompt).toContain("STAGED DIFF");
-    expect(prompt).toContain("lib/agents/humanizer/SKILL.md");
+    expect(prompt).toContain(".agents/skills/humanizer/SKILL.md");
     expect(prompt).toContain("walter-writes-humanizer");
     expect(prompt).not.toContain("UNSTAGED PRIVATE DRAFT");
     expect(prompt).not.toContain("STAGED POST");

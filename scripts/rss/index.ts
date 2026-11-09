@@ -163,22 +163,23 @@ export const buildJsonFeed = (posts: Post[]): string => {
 
 export const getSitemapEntries = (posts: Post[]): SitemapEntry[] => {
   const staticPages: SitemapEntry[] = [
-    { loc: SITE_URL, changefreq: "weekly", priority: 1.0 },
-    { loc: `${SITE_URL}/archive`, changefreq: "weekly", priority: 0.8 },
-    { loc: `${SITE_URL}/about`, changefreq: "monthly", priority: 0.7 },
-    { loc: `${SITE_URL}/resume`, changefreq: "monthly", priority: 0.7 },
+    { loc: `${SITE_URL}/`, changefreq: "weekly", priority: 1.0 },
+    { loc: `${SITE_URL}/archive/`, changefreq: "weekly", priority: 0.8 },
+    { loc: `${SITE_URL}/about/`, changefreq: "monthly", priority: 0.7 },
+    { loc: `${SITE_URL}/resume/`, changefreq: "monthly", priority: 0.7 },
   ];
 
   const postEntries: SitemapEntry[] = posts
     .filter((post) => !SITEMAP_EXCLUDE.includes(post.slug))
-    .map((post) => ({
-      loc: post.url,
-      lastmod: post.date.toISOString().split("T")[0],
-      changefreq: "monthly" as const,
-      priority: 0.7,
-    }));
+    .map((post) => {
+      const loc = post.url.replace(/\/?$/, "/");
+      const lastmod = post.date.toISOString().split("T")[0];
+      return { loc, lastmod, changefreq: "monthly" as const, priority: 0.7 };
+    });
 
-  return staticPages.concat(postEntries);
+  const entries = staticPages.concat(postEntries);
+  const entriesByUrl = new Map(entries.map((entry) => [entry.loc, entry]));
+  return Array.from(entriesByUrl.values());
 };
 
 export const buildSitemapXml = (entries: SitemapEntry[]): string => {

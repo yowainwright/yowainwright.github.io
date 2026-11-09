@@ -19,14 +19,7 @@ export default function Document() {
           content="jeffry, wainwright, jeffry wainwright, code, programmer, artist, athlete, developer, engineer"
         />
         <meta name="theme-color" content="#007cf0" />
-        <link
-          rel="manifest"
-          href="https://yowainwright.imgix.net/manifest.json"
-        />
-        <meta
-          name="description"
-          content="Jeffry.in is the daily changelog of Jeffry Wainwright, an engineer living in California."
-        />
+        <link rel="manifest" href="https://yowainwright.imgix.net/manifest.json" />
         <meta property="og:site_name" content="Jeffry.in" />
         <link rel="icon" href="/favicon.ico" />
         <link

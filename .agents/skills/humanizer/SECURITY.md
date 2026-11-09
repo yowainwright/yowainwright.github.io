@@ -1,8 +1,8 @@
 # Humanizer security review
 
 Reviewed 2026-09-07 for the approved blog skill in
-`lib/agents/humanizer/`. Local Codex discovery uses the ignored
-`.agents/skills/humanizer` symlink pointing to this directory.
+`.agents/skills/humanizer/`, the tracked repository skill directory.
+Claude discovery uses the ignored `.claude/skills/humanizer` symlink to it.
 
 ## Source and integrity
 

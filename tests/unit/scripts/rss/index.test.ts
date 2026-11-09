@@ -60,4 +60,27 @@ describe("RSS, Atom, JSON feed, and sitemap builders", () => {
     expect(contentPosts.some((post) => post.slug === "404")).toBe(false);
     expect(timestamps).toEqual(sortedTimestamps);
   });
+
+  test("uses canonical trailing slashes and deduplicates static pages and posts", () => {
+    const about = Object.assign({}, posts[0], { slug: "about", url: "https://jeffry.in/about" });
+    const resume = Object.assign({}, posts[0], {
+      slug: "resume",
+      url: "https://jeffry.in/resume/",
+    });
+    const repeatedPost = Object.assign({}, posts[0], { url: "https://jeffry.in/first/" });
+    const entries = getSitemapEntries(posts.concat(about, resume, repeatedPost));
+    const urls = entries.map((entry) => entry.loc);
+
+    expect(urls).toEqual([
+      "https://jeffry.in/",
+      "https://jeffry.in/archive/",
+      "https://jeffry.in/about/",
+      "https://jeffry.in/resume/",
+      "https://jeffry.in/first/",
+    ]);
+    expect(entries.find((entry) => entry.loc === "https://jeffry.in/about/")?.lastmod).toBe(
+      "2026-01-02",
+    );
+    expect(posts[0].url).toBe("https://jeffry.in/first");
+  });
 });

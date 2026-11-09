@@ -1,13 +1,16 @@
 # Blog agents
 
-This directory holds the blog's custom [Humanizer](humanizer/SKILL.md), the
-[reviewed sources](sources.json) for third-party skills, and their
-[security review](SECURITY.md). Humanizer is the only custom skill; use it as the
-primary guide for Jeff's voice.
+Custom skills live directly in the tracked `.agents/skills/` directory:
+[Humanizer](../../.agents/skills/humanizer/SKILL.md) guides prose edits, and
+[site-quality](../../.agents/skills/site-quality/SKILL.md) checks metadata, image
+delivery, and measured performance.
+
+This directory holds the [reviewed third-party sources](sources.json),
+[security review](SECURITY.md), and [prose review prompt](review.md).
 
 See [Writing skills](SKILLS.md) for what each skill does and when to use it.
 
-Local `pnpm install` sets up Git hooks, Humanizer, and the two Walter
+Local `pnpm install` sets up Git hooks, Claude links, and the two Walter
 writing skills through `prepare`. CI skips this agent setup. To rerun only skill
 installation from the repository root:
 
@@ -33,11 +36,10 @@ instructions only. It does not configure MCP, provide credentials, or send draft
 
 ## What belongs in Git
 
-Keep the installer, source manifest, review prompt, review notes, and custom
-Humanizer source in Git. Installed third-party skill files live in
-the ignored `.agents/skills/` directory.
-The installer creates ignored `.claude/skills/` links to the same skills and
-connects the custom Humanizer for both directories.
+Keep custom skills in `.agents/skills/` in Git alongside the installer, source
+manifest, review prompt, and review notes. Downloaded third-party skill folders
+are individually ignored in `.gitignore`. The installer preserves custom skills
+and creates ignored `.claude/skills/` links to both custom and downloaded skills.
 
 | Agents                                                                                                                                                                                  | Discovery directory |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
