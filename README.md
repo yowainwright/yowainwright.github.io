@@ -31,9 +31,8 @@ Formally, I've worked at/on:
 
 ## Runtime and static hosting
 
-The default build uses [Vinext](https://github.com/cloudflare/vinext) and
-[TanStack Redact](https://tanstack.com/redact/latest/docs/vinext). React remains
-the server renderer; Redact renders in the browser. Existing `next/*` imports stay.
+The default build uses [Vinext](https://github.com/cloudflare/vinext) with React
+on the server and in the browser. Existing `next/*` imports stay.
 GitHub Pages deploys the static export from `dist/client/`.
 
 Development uses mprocs, pinned in `mise.toml`. Run `mise install` once before
@@ -46,9 +45,8 @@ pnpm run dev
 ```
 
 `build:local` generates CSS, search data, feeds, and sitemap before exporting.
-`build` also refreshes AI pricing. For runtime comparisons, `build:vinext` uses
-native React in the browser and `build:redact` uses Redact. These two commands
-only bundle existing generated assets. `dev:next` remains available for comparison.
+`build` also refreshes AI pricing. `build:vinext` only bundles existing generated
+assets. `dev:next` remains available for comparison.
 
 Browser tests cover theme hydration, search, static and dynamic navigation,
 browser history, metadata, charts, and code-copy controls. Third-party requests

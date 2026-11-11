@@ -1,3 +1,161 @@
+---
+lockfileVersion: '9.0'
+
+importers:
+
+  .:
+    configDependencies: {}
+    packageManagerDependencies:
+      pnpm:
+        specifier: 12.18.0
+        version: 12.18.0
+
+packages:
+
+  '@pnpm/exe.android-arm64@12.18.0':
+    resolution: {integrity: sha512-fOF6IwgvnUKEmVedGqiAsNPfN2Ry8GvaqzSQOiF3RJFbpBfPKO/6YT54s1GjToyYinRxw9preHHPe4y2N3SzhA==}
+    cpu: [arm64]
+    os: [android]
+
+  '@pnpm/exe.android-x64@12.18.0':
+    resolution: {integrity: sha512-6OiolnaCsB3/GcJ9XNrenbUH3zFHRJ+5QynrMUUEyThbgnnCzWxa199hpQlOmxN4rAXuYQ0IYgWFNUZxyzg31Q==}
+    cpu: [x64]
+    os: [android]
+
+  '@pnpm/exe.darwin-arm64@12.18.0':
+    resolution: {integrity: sha512-zkq+4YzVIX39ETYLyC3W7LY7MpHEU/J3nRhHl4i2yPld2Cf2+rEKRh3ejJ4AmaQ77HHJLCktY4Z3jq0fpcxFXg==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@pnpm/exe.darwin-x64@12.18.0':
+    resolution: {integrity: sha512-qMsL9qx92unOTa6hgkfiTJv8ceZaTx0IQg7InhYDVX2ZrTECujaVEEVypnJK5m3eGUsP1KD7Y4qIgleCwfRsYw==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@pnpm/exe.freebsd-x64@12.18.0':
+    resolution: {integrity: sha512-/9vy/4ms52cU4MjZ5NhHd6N2d9L9W0kARf5/ff2tweAHu0VeUzs/0qp/7ZHFuddm2Wa/m0AKQoPum9AVUCqKsw==}
+    cpu: [x64]
+    os: [freebsd]
+
+  '@pnpm/exe.linux-arm64-musl@12.18.0':
+    resolution: {integrity: sha512-Vp+TIMPPyackVCXkOdEKH/RmAn/r07EcIyrgZYQK7VrkksqZOie0GnWIx+85mPqeFEYCRtXIZAFJ9L4ceTndDg==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@pnpm/exe.linux-arm64@12.18.0':
+    resolution: {integrity: sha512-2dpyVBCHT+FfpuQh9i+7MXAqNWYLCvD5vYr5p6Eimxoga8USLnjbUgyj72AOrO0hjc5ri3TEFP3jiyBHjkSZpQ==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-ppc64@12.18.0':
+    resolution: {integrity: sha512-BBOOOfNJ2QwIIya3eKqOjiN4WNTszfRz7HCvw9XggcT7+ftMjNP8XJ/GfW+ltCBeUFR9d8WBVsr2m/NLjX2CZQ==}
+    cpu: [ppc64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-riscv64@12.18.0':
+    resolution: {integrity: sha512-7kMN77xSOYJX8GPSH5RbNAc5oM61LMmcSUukDDUwllnZPXm8GRPskCNsTWy8SCw01Kr1FB+5SwGNMiTdiziLNQ==}
+    cpu: [riscv64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-s390x@12.18.0':
+    resolution: {integrity: sha512-htuSCpEcmDzhKoJqXbPkvfr176dBHU0QIF5mWcRiqxRXAB/1JoYiMYotfjWpk+ztgpB9qlx4XnWlLFAf7gzc6g==}
+    cpu: [s390x]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-x64-musl@12.18.0':
+    resolution: {integrity: sha512-Uj+vzfIQ62kDP10x36yHZIXVs5ohdNtiPYwn5FhCLlNScHPo0OAI+ShGDtLofiBXKE7umu71Jmjm7N8a8zVcDw==}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@pnpm/exe.linux-x64@12.18.0':
+    resolution: {integrity: sha512-OJ+X2wcraldCwj75pCIerWARQSRpdfj0eBTs/2ODyhfeW46ylOnjTIE/GKra6Mn6E72/gBmXS8igrUioa+F9fQ==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.win32-arm64@12.18.0':
+    resolution: {integrity: sha512-wEY6jiACGcbhhi5yD59doHqNTndS7AaujaPmtWAu1DKkHru2hy5fJ9yUGecW72Ypaw2/I3BEprfMOopap2NQtw==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@pnpm/exe.win32-x64@12.18.0':
+    resolution: {integrity: sha512-5FJkghO7RLRkQpWxeVEygW9XsmnNuxzPfXbgwFWCHsFyFhpDn/vOdL88ToQEM0Kt5igdW5s6U0/IDH8Dvkt3pg==}
+    cpu: [x64]
+    os: [win32]
+
+  pnpm@12.18.0:
+    resolution: {integrity: sha512-nXiC1dyCFH7PxOBiqjSDTgrQKWcQoYN6ERWuASEn02txCeMhrBWYod0KZVl2gbHpmRfhLtDXSerpEYeUM2O+sw==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+snapshots:
+
+  '@pnpm/exe.android-arm64@12.18.0':
+    optional: true
+
+  '@pnpm/exe.android-x64@12.18.0':
+    optional: true
+
+  '@pnpm/exe.darwin-arm64@12.18.0':
+    optional: true
+
+  '@pnpm/exe.darwin-x64@12.18.0':
+    optional: true
+
+  '@pnpm/exe.freebsd-x64@12.18.0':
+    optional: true
+
+  '@pnpm/exe.linux-arm64-musl@12.18.0':
+    optional: true
+
+  '@pnpm/exe.linux-arm64@12.18.0':
+    optional: true
+
+  '@pnpm/exe.linux-ppc64@12.18.0':
+    optional: true
+
+  '@pnpm/exe.linux-riscv64@12.18.0':
+    optional: true
+
+  '@pnpm/exe.linux-s390x@12.18.0':
+    optional: true
+
+  '@pnpm/exe.linux-x64-musl@12.18.0':
+    optional: true
+
+  '@pnpm/exe.linux-x64@12.18.0':
+    optional: true
+
+  '@pnpm/exe.win32-arm64@12.18.0':
+    optional: true
+
+  '@pnpm/exe.win32-x64@12.18.0':
+    optional: true
+
+  pnpm@12.18.0:
+    optionalDependencies:
+      '@pnpm/exe.android-arm64': 12.18.0
+      '@pnpm/exe.android-x64': 12.18.0
+      '@pnpm/exe.darwin-arm64': 12.18.0
+      '@pnpm/exe.darwin-x64': 12.18.0
+      '@pnpm/exe.freebsd-x64': 12.18.0
+      '@pnpm/exe.linux-arm64': 12.18.0
+      '@pnpm/exe.linux-arm64-musl': 12.18.0
+      '@pnpm/exe.linux-ppc64': 12.18.0
+      '@pnpm/exe.linux-riscv64': 12.18.0
+      '@pnpm/exe.linux-s390x': 12.18.0
+      '@pnpm/exe.linux-x64': 12.18.0
+      '@pnpm/exe.linux-x64-musl': 12.18.0
+      '@pnpm/exe.win32-arm64': 12.18.0
+      '@pnpm/exe.win32-x64': 12.18.0
+
+---
 lockfileVersion: '9.0'
 
 settings:
@@ -106,9 +264,6 @@ importers:
       '@shikijs/transformers':
         specifier: 4.6.0
         version: 4.6.0
-      '@tanstack/redact':
-        specifier: 0.3.1
-        version: 0.3.1(next@16.4.5(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(babel-plugin-macros@3.1.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sass@1.107.1))(vinext@1.3.0(patch_hash=33b2c8bccfd0a1243268f0850ef69d74b6c57162fc833d5597ba2fa11cbea992)(fa9c243d22ae06b859c80c2a5ffaa47f))(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(sass@1.107.1)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.1))
       '@types/hast':
         specifier: 3.0.5
         version: 3.0.5
@@ -139,9 +294,6 @@ importers:
       '@vitejs/plugin-react':
         specifier: 6.1.2
         version: 6.1.2(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(sass@1.107.1)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.1))
-      '@vitejs/plugin-rsc':
-        specifier: 0.5.38
-        version: 0.5.38(react-dom@19.3.1(react@19.3.1))(react-server-dom-webpack@19.3.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(webpack@5.109.2(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.32)))(react@19.3.1)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(sass@1.107.1)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.1))
       codependence:
         specifier: 1.0.16
         version: 1.0.16
@@ -178,9 +330,6 @@ importers:
       playwright:
         specifier: 1.64.1
         version: 1.64.1
-      react-server-dom-webpack:
-        specifier: 19.3.1
-        version: 19.3.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(webpack@5.109.2(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.32))
       rehype-stringify:
         specifier: 10.0.1
         version: 10.0.1
@@ -2468,23 +2617,6 @@ packages:
 
   '@tannin/sprintf@1.3.4':
     resolution: {integrity: sha512-Kypdet5L0Hhkfbdkn2QREczNTjCXhiAnouRINyAePy1lZKHD/zcwiqN93HC7i/vVCAuzNAlp+wuT4yOZ5icOSQ==}
-
-  '@tanstack/redact@0.3.1':
-    resolution: {integrity: sha512-8A4SWi2RluvHj5j3/mifSPkUrhvmBLvvVXzM2DU7eTafvcWRXFLA/8cMe7ivZAbL7W1FMKZjitnIoP0sYIAWJA==}
-    peerDependencies:
-      '@cloudflare/vite-plugin': 1.65.0
-      next: ~15.5.0 || ~16.0.0 || ~16.1.0 || ~16.2.0 || ~16.3.0 || ~16.4.0
-      vinext: 1.3.0
-      vite: 8.3.5
-    peerDependenciesMeta:
-      '@cloudflare/vite-plugin':
-        optional: true
-      next:
-        optional: true
-      vinext:
-        optional: true
-      vite:
-        optional: true
 
   '@toeverything/y-indexeddb@0.10.0-canary.9':
     resolution: {integrity: sha512-3hzktNuOaXut/RgRjKNeqQura1zeYF+tSLSlWDc0rDBOrEpwD/1EOpKVCbgtl8ke7f4oinLfgBNk4HcwqaQUYQ==}
@@ -6909,6 +7041,7 @@ snapshots:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
+    optional: true
 
   '@jridgewell/sourcemap-codec@1.6.0': {}
 
@@ -7993,16 +8126,6 @@ snapshots:
 
   '@tannin/sprintf@1.3.4': {}
 
-  '@tanstack/redact@0.3.1(next@16.4.5(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(babel-plugin-macros@3.1.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sass@1.107.1))(vinext@1.3.0(patch_hash=33b2c8bccfd0a1243268f0850ef69d74b6c57162fc833d5597ba2fa11cbea992)(fa9c243d22ae06b859c80c2a5ffaa47f))(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(sass@1.107.1)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.1))':
-    dependencies:
-      '@jridgewell/remapping': 2.3.5
-      acorn: 8.19.0
-      magic-string: 0.30.21
-    optionalDependencies:
-      next: 16.4.5(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(babel-plugin-macros@3.1.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sass@1.107.1)
-      vinext: 1.3.0(patch_hash=33b2c8bccfd0a1243268f0850ef69d74b6c57162fc833d5597ba2fa11cbea992)(fa9c243d22ae06b859c80c2a5ffaa47f)
-      vite: 8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(sass@1.107.1)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.1)
-
   '@toeverything/y-indexeddb@0.10.0-canary.9(yjs@13.6.33)':
     dependencies:
       idb: 7.1.1
@@ -8167,7 +8290,8 @@ snapshots:
       parse5: 8.1.0
       undici-types: 8.12.3
 
-  '@types/json-schema@7.0.15': {}
+  '@types/json-schema@7.0.15':
+    optional: true
 
   '@types/linkify-it@5.0.0':
     optional: true
@@ -8363,6 +8487,7 @@ snapshots:
       vitefu: 1.1.3(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(sass@1.107.1)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.1))
     optionalDependencies:
       react-server-dom-webpack: 19.3.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(webpack@5.109.2(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.32))
+    optional: true
 
   '@vitest/mocker@5.1.0(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(sass@1.107.1)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.1))':
     dependencies:
@@ -8379,20 +8504,26 @@ snapshots:
     dependencies:
       '@webassemblyjs/helper-numbers': 1.13.2
       '@webassemblyjs/helper-wasm-bytecode': 1.13.2
+    optional: true
 
-  '@webassemblyjs/floating-point-hex-parser@1.13.2': {}
+  '@webassemblyjs/floating-point-hex-parser@1.13.2':
+    optional: true
 
-  '@webassemblyjs/helper-api-error@1.13.2': {}
+  '@webassemblyjs/helper-api-error@1.13.2':
+    optional: true
 
-  '@webassemblyjs/helper-buffer@1.14.1': {}
+  '@webassemblyjs/helper-buffer@1.14.1':
+    optional: true
 
   '@webassemblyjs/helper-numbers@1.13.2':
     dependencies:
       '@webassemblyjs/floating-point-hex-parser': 1.13.2
       '@webassemblyjs/helper-api-error': 1.13.2
       '@xtuc/long': 4.2.2
+    optional: true
 
-  '@webassemblyjs/helper-wasm-bytecode@1.13.2': {}
+  '@webassemblyjs/helper-wasm-bytecode@1.13.2':
+    optional: true
 
   '@webassemblyjs/helper-wasm-section@1.14.1':
     dependencies:
@@ -8400,16 +8531,20 @@ snapshots:
       '@webassemblyjs/helper-buffer': 1.14.1
       '@webassemblyjs/helper-wasm-bytecode': 1.13.2
       '@webassemblyjs/wasm-gen': 1.14.1
+    optional: true
 
   '@webassemblyjs/ieee754@1.13.2':
     dependencies:
       '@xtuc/ieee754': 1.2.0
+    optional: true
 
   '@webassemblyjs/leb128@1.13.2':
     dependencies:
       '@xtuc/long': 4.2.2
+    optional: true
 
-  '@webassemblyjs/utf8@1.13.2': {}
+  '@webassemblyjs/utf8@1.13.2':
+    optional: true
 
   '@webassemblyjs/wasm-edit@1.14.1':
     dependencies:
@@ -8421,6 +8556,7 @@ snapshots:
       '@webassemblyjs/wasm-opt': 1.14.1
       '@webassemblyjs/wasm-parser': 1.14.1
       '@webassemblyjs/wast-printer': 1.14.1
+    optional: true
 
   '@webassemblyjs/wasm-gen@1.14.1':
     dependencies:
@@ -8429,6 +8565,7 @@ snapshots:
       '@webassemblyjs/ieee754': 1.13.2
       '@webassemblyjs/leb128': 1.13.2
       '@webassemblyjs/utf8': 1.13.2
+    optional: true
 
   '@webassemblyjs/wasm-opt@1.14.1':
     dependencies:
@@ -8436,6 +8573,7 @@ snapshots:
       '@webassemblyjs/helper-buffer': 1.14.1
       '@webassemblyjs/wasm-gen': 1.14.1
       '@webassemblyjs/wasm-parser': 1.14.1
+    optional: true
 
   '@webassemblyjs/wasm-parser@1.14.1':
     dependencies:
@@ -8445,11 +8583,13 @@ snapshots:
       '@webassemblyjs/ieee754': 1.13.2
       '@webassemblyjs/leb128': 1.13.2
       '@webassemblyjs/utf8': 1.13.2
+    optional: true
 
   '@webassemblyjs/wast-printer@1.14.1':
     dependencies:
       '@webassemblyjs/ast': 1.14.1
       '@xtuc/long': 4.2.2
+    optional: true
 
   '@wordpress/a11y@5.1.0':
     dependencies:
@@ -8746,9 +8886,11 @@ snapshots:
 
   '@wordpress/warning@4.1.0': {}
 
-  '@xtuc/ieee754@1.2.0': {}
+  '@xtuc/ieee754@1.2.0':
+    optional: true
 
-  '@xtuc/long@4.2.2': {}
+  '@xtuc/long@4.2.2':
+    optional: true
 
   acorn-jsx@5.3.2(acorn@8.19.0):
     dependencies:
@@ -8757,6 +8899,7 @@ snapshots:
   acorn-loose@8.5.2:
     dependencies:
       acorn: 8.19.0
+    optional: true
 
   acorn@8.19.0: {}
 
@@ -8765,11 +8908,13 @@ snapshots:
   ajv-formats@2.1.1(ajv@8.20.0):
     optionalDependencies:
       ajv: 8.20.0
+    optional: true
 
   ajv-keywords@5.1.0(ajv@8.20.0):
     dependencies:
       ajv: 8.20.0
       fast-deep-equal: 3.1.3
+    optional: true
 
   ajv@8.20.0:
     dependencies:
@@ -8777,6 +8922,7 @@ snapshots:
       fast-uri: 3.1.9
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
+    optional: true
 
   ansi-regex@5.0.1: {}
 
@@ -8843,8 +8989,10 @@ snapshots:
       electron-to-chromium: 1.5.403
       node-releases: 2.0.53
       update-browserslist-db: 1.3.0(browserslist@4.28.8)
+    optional: true
 
-  buffer-from@1.1.2: {}
+  buffer-from@1.1.2:
+    optional: true
 
   callsites@3.1.0:
     optional: true
@@ -8907,7 +9055,8 @@ snapshots:
     dependencies:
       readdirp: 5.1.1
 
-  chrome-trace-event@1.0.4: {}
+  chrome-trace-event@1.0.4:
+    optional: true
 
   cjs-module-lexer@2.3.0: {}
 
@@ -9243,7 +9392,8 @@ snapshots:
 
   effect@4.1.2: {}
 
-  electron-to-chromium@1.5.403: {}
+  electron-to-chromium@1.5.403:
+    optional: true
 
   emery@1.4.4: {}
 
@@ -9263,6 +9413,7 @@ snapshots:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.3.3
+    optional: true
 
   entities@9.0.0: {}
 
@@ -9341,16 +9492,20 @@ snapshots:
     dependencies:
       esrecurse: 4.3.0
       estraverse: 4.3.0
+    optional: true
 
   esprima@4.0.1: {}
 
   esrecurse@4.3.0:
     dependencies:
       estraverse: 5.3.0
+    optional: true
 
-  estraverse@4.3.0: {}
+  estraverse@4.3.0:
+    optional: true
 
-  estraverse@5.3.0: {}
+  estraverse@5.3.0:
+    optional: true
 
   estree-util-attach-comments@3.0.0:
     dependencies:
@@ -9391,7 +9546,8 @@ snapshots:
 
   eventemitter3@5.0.4: {}
 
-  events@3.3.0: {}
+  events@3.3.0:
+    optional: true
 
   expect-type@1.4.0: {}
 
@@ -9417,7 +9573,8 @@ snapshots:
 
   fast-safe-stringify@2.1.1: {}
 
-  fast-uri@3.1.9: {}
+  fast-uri@3.1.9:
+    optional: true
 
   fastdom@1.0.12:
     dependencies:
@@ -9534,7 +9691,8 @@ snapshots:
       minipass: 7.1.3
       path-scurry: 2.0.2
 
-  graceful-fs@4.2.11: {}
+  graceful-fs@4.2.11:
+    optional: true
 
   gradient-parser@1.2.0: {}
 
@@ -9763,10 +9921,12 @@ snapshots:
       '@types/node': 26.6.6
       merge-stream: 2.0.0
       supports-color: 8.1.1
+    optional: true
 
   joycon@3.1.1: {}
 
-  js-tokens@10.0.0: {}
+  js-tokens@10.0.0:
+    optional: true
 
   js-tokens@4.0.0: {}
 
@@ -9810,7 +9970,8 @@ snapshots:
   json-parse-even-better-errors@2.3.1:
     optional: true
 
-  json-schema-traverse@1.0.0: {}
+  json-schema-traverse@1.0.0:
+    optional: true
 
   json5@2.2.3:
     optional: true
@@ -10136,7 +10297,8 @@ snapshots:
 
   memize@2.1.1: {}
 
-  merge-stream@2.0.0: {}
+  merge-stream@2.0.0:
+    optional: true
 
   merge2@1.4.1: {}
 
@@ -10455,7 +10617,8 @@ snapshots:
       braces: 3.0.3
       picomatch: 2.3.2
 
-  mime-db@1.54.0: {}
+  mime-db@1.54.0:
+    optional: true
 
   minimatch@10.2.6:
     dependencies:
@@ -10474,6 +10637,7 @@ snapshots:
       esbuild: 0.28.2
       lightningcss: 1.33.0
       postcss: 8.5.32
+    optional: true
 
   minipass@7.1.3: {}
 
@@ -10501,7 +10665,8 @@ snapshots:
 
   nanoid@5.1.16: {}
 
-  neo-async@2.6.2: {}
+  neo-async@2.6.2:
+    optional: true
 
   next-mdx-remote@6.0.0(@types/react@19.3.0)(react@19.3.1)(supports-color@8.1.1):
     dependencies:
@@ -10554,7 +10719,8 @@ snapshots:
   node-addon-api@7.1.1:
     optional: true
 
-  node-releases@2.0.53: {}
+  node-releases@2.0.53:
+    optional: true
 
   node@runtime:26.7.0: {}
 
@@ -10924,6 +11090,7 @@ snapshots:
       react-dom: 19.3.1(react@19.3.1)
       webpack: 5.109.2(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.32)
       webpack-sources: 3.5.1
+    optional: true
 
   react-stately@3.48.0(react@19.3.1):
     dependencies:
@@ -11252,6 +11419,7 @@ snapshots:
       ajv: 8.20.0
       ajv-formats: 2.1.1(ajv@8.20.0)
       ajv-keywords: 5.1.0(ajv@8.20.0)
+    optional: true
 
   scroll-into-view-if-needed@2.2.31:
     dependencies:
@@ -11374,8 +11542,10 @@ snapshots:
     dependencies:
       buffer-from: 1.1.2
       source-map: 0.6.1
+    optional: true
 
-  source-map@0.6.1: {}
+  source-map@0.6.1:
+    optional: true
 
   source-map@0.7.6: {}
 
@@ -11385,7 +11555,8 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  srvx@1.0.8: {}
+  srvx@1.0.8:
+    optional: true
 
   stacktrace-parser@0.1.11:
     dependencies:
@@ -11419,6 +11590,7 @@ snapshots:
   strip-literal@4.0.0:
     dependencies:
       js-tokens: 10.0.0
+    optional: true
 
   style-to-js@1.1.21:
     dependencies:
@@ -11459,7 +11631,8 @@ snapshots:
     dependencies:
       '@tannin/plural-forms': 1.1.0
 
-  tapable@2.3.3: {}
+  tapable@2.3.3:
+    optional: true
 
   terser@5.49.2:
     dependencies:
@@ -11467,6 +11640,7 @@ snapshots:
       acorn: 8.19.0
       commander: 2.20.3
       source-map-support: 0.5.21
+    optional: true
 
   third-party-capital@1.0.20: {}
 
@@ -11533,7 +11707,8 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  turbo-stream@3.2.1: {}
+  turbo-stream@3.2.1:
+    optional: true
 
   type-fest@0.7.1: {}
 
@@ -11623,6 +11798,7 @@ snapshots:
       browserslist: 4.28.8
       escalade: 3.2.0
       picocolors: 1.1.1
+    optional: true
 
   upper-case-first@2.0.2:
     dependencies:
@@ -11736,6 +11912,7 @@ snapshots:
   vitefu@1.1.3(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(sass@1.107.1)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.1)):
     optionalDependencies:
       vite: 8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(sass@1.107.1)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.1)
+    optional: true
 
   vitest@5.1.0(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(jsdom@30.1.3)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(sass@1.107.1)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.1)):
     dependencies:
@@ -11769,6 +11946,7 @@ snapshots:
   watchpack@2.5.2:
     dependencies:
       graceful-fs: 4.2.11
+    optional: true
 
   weasel-words@0.1.1: {}
 
@@ -11780,7 +11958,8 @@ snapshots:
 
   webidl-conversions@8.0.1: {}
 
-  webpack-sources@3.5.1: {}
+  webpack-sources@3.5.1:
+    optional: true
 
   webpack@5.109.2(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.32):
     dependencies:
@@ -11817,6 +11996,7 @@ snapshots:
       - lightningcss
       - postcss
       - uglify-js
+    optional: true
 
   websocket-driver@0.7.5:
     dependencies:
