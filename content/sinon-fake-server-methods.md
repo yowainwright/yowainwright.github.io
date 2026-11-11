@@ -194,4 +194,4 @@ it("provides null defaults with `user` request error", function () {
 
 This post has described how to use Sinon's Fake Server to fully test an interface for an XHR request. XHR Requests can be mocked by Sinon easily with a general understanding of Sinon. After setting up a Mock that works for a product, similar tests can be copied and reused elsewhere. This is why Sinon's Fake Server is a powerful tool.
 
-Please use Sinon and [Sinon's Fake Server](http://sinonjs.org/releases/v2.1.0/fake-xhr-and-server/). Let [me](/issue) know if this post can be improved or if it helped.
+Please use Sinon and [Sinon's Fake Server](http://sinonjs.org/releases/v2.1.0/fake-xhr-and-server/). Let [me](https://github.com/yowainwright/yowainwright.github.io/issues) know if this post can be improved or if it helped.

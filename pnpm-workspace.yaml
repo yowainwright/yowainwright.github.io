@@ -10,7 +10,9 @@ overrides:
   protobufjs: "7.6.5"
   undici: "7.30.1"
   "fast-uri": "3.1.9"
-  "vite": "8.2.4"
+  "vite": "8.3.5"
+  "vinext": "1.3.0"
+  "satori>fflate": "0.7.5"
   "zod": "4.6.7"
 
 onlyBuiltDependencies:
@@ -23,3 +25,6 @@ minimumReleaseAgeExclude:
 
 allowBuilds:
   '@firebase/util': false
+
+patchedDependencies:
+  vinext@1.3.0: patches/vinext@1.3.0.patch

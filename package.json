@@ -20,26 +20,30 @@
     "update-pricing": "tsx scripts/update-ai-pricing/index.ts",
     "build:search": "tsx scripts/generate-search-data.ts",
     "build:local": "tsx scripts/run-task.ts build-local",
+    "build:vinext": "vite build --mode native",
+    "build:redact": "vite build --mode redact",
     "build:rss": "tsx scripts/rss/index.ts",
     "build:css": "tsx scripts/run-task.ts build-css",
     "playwright:install": "playwright install chromium --with-deps",
     "dev": "mprocs",
     "dev:next": "next dev --port 34729",
+    "dev:vinext": "vinext dev --port 34730",
     "dev:css": "tsx scripts/run-task.ts dev-css",
     "generate:component-styles": "tsx scripts/generate-component-styles.ts",
     "typecheck:watch": "tsc --noEmit --watch --pretty",
     "watch:pricing": "tsx scripts/watch-ai-pricing.ts",
     "full-rebuild": "tsx scripts/run-task.ts full-rebuild",
-    "format": "oxfmt --write \"**/*.{js,jsx,ts,tsx}\" \"!node_modules/**\" \"!public/**\" \"!out/**\" \"!tmp/**\" \"!content/**\" --threads=1",
-    "format:check": "oxfmt --check \"**/*.{js,jsx,ts,tsx}\" \"!node_modules/**\" \"!public/**\" \"!out/**\" \"!tmp/**\" \"!content/**\" --threads=1",
+    "format": "oxfmt --write \"**/*.{js,jsx,ts,tsx}\" \"!node_modules/**\" \"!public/**\" \"!out/**\" \"!dist/**\" \"!tmp/**\" \"!content/**\" --threads=1",
+    "format:check": "oxfmt --check \"**/*.{js,jsx,ts,tsx}\" \"!node_modules/**\" \"!public/**\" \"!out/**\" \"!dist/**\" \"!tmp/**\" \"!content/**\" --threads=1",
     "lint": "oxlint -c .oxlintrc.json .",
     "lint:fix": "oxlint -c .oxlintrc.json . --fix",
     "test": "vitest run",
+    "test:runtime": "playwright test",
     "skills:install": "tsx scripts/install/index.ts skills",
     "review:content": "tsx scripts/review-content.ts",
     "review:prose": "tsx scripts/review-prose/index.ts",
     "prepare": "tsx scripts/install/index.ts all",
-    "start": "next start",
+    "start": "vinext start --port 34729",
     "update": "tsx scripts/run-task.ts update",
     "update:packages": "codependence --config package.json --update",
     "update:actions": "codependence --config .codependencerc --update",
@@ -71,9 +75,12 @@
     "unist-util-visit": "5.2.0"
   },
   "devDependencies": {
+    "@mdx-js/rollup": "3.1.1",
+    "@sentry/bundler-plugins": "11.10.0",
     "@shikijs/colorized-brackets": "4.6.0",
     "@shikijs/rehype": "4.6.0",
     "@shikijs/transformers": "4.6.0",
+    "@tanstack/redact": "0.3.1",
     "@types/hast": "3.0.5",
     "@types/jsdom": "30.0.0",
     "@types/mdast": "4.0.4",
@@ -83,6 +90,8 @@
     "@types/unist": "3.0.3",
     "@types/write-good": "1.0.3",
     "@vercel/og": "1.0.3",
+    "@vitejs/plugin-react": "6.1.2",
+    "@vitejs/plugin-rsc": "0.5.38",
     "codependence": "1.0.16",
     "gray-matter": "4.0.3",
     "harper.js": "3.0.0",
@@ -94,6 +103,7 @@
     "pino": "10.4.0",
     "pino-pretty": "13.2.0",
     "playwright": "1.64.1",
+    "react-server-dom-webpack": "19.3.1",
     "rehype-stringify": "10.0.1",
     "remark-frontmatter": "5.0.0",
     "remark-gfm": "4.0.1",
@@ -108,6 +118,8 @@
     "typescript": "7.0.2",
     "unified": "11.0.5",
     "vfile-location": "5.0.3",
+    "vinext": "1.3.0",
+    "vite": "8.3.5",
     "vitest": "5.1.0",
     "write-good": "1.0.8"
   },
@@ -148,6 +160,34 @@
   },
   "pastoralist": {
     "appendix": {
+      "vinext@1.3.0": {
+        "dependents": {
+          "Jeffry.in": "vinext (required by @tanstack/redact@0.3.1)"
+        },
+        "patches": [
+          "patches/vinext@1.3.0.patch"
+        ],
+        "ledger": {
+          "addedDate": "2026-11-11T04:47:05Z",
+          "source": "manual",
+          "reason": {
+            "type": "project",
+            "summary": "Redact 0.3.1 requires exactly Vinext 1.3.0; its static export also needs page-data JSON for client navigation on GitHub Pages.",
+            "pin": "1.3.0",
+            "patch": "patches/vinext@1.3.0.patch",
+            "constraints": [
+              "The Redact adapter rejects Vinext versions other than 1.3.0.",
+              "Keep the exporter patch until a supported release passes static client-navigation tests without it."
+            ],
+            "references": [
+              "https://tanstack.com/redact/latest/docs/vinext"
+            ]
+          },
+          "keep": {
+            "reason": "Retain this compatibility override until Redact supports a newer Vinext release and the static navigation checks pass."
+          }
+        }
+      },
       "@grpc/grpc-js@1.14.7": {
         "dependents": {
           "Jeffry.in": "@grpc/grpc-js (required by firebase)"
@@ -390,9 +430,8 @@
     "protobufjs": "7.6.5",
     "undici": "7.30.1",
     "fast-uri": "3.1.9",
-    "vite": "8.2.4",
+    "vite": "8.3.5",
+    "vinext": "1.3.0",
     "zod": "4.6.7"
-  },
-  "peerDependencies": {},
-  "optionalDependencies": {}
+  }
 }

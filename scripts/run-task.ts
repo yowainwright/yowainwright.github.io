@@ -24,14 +24,15 @@ const build = (): void => {
   runScript("update-pricing");
   runScript("build:css");
   runScript("build:search");
-  runBinary("next", ["build"]);
   runScript("build:rss");
+  runBinary("vite", ["build"]);
 };
 
 const buildLocal = (): void => {
   runScript("build:css");
-  runBinary("next", ["build"]);
+  runScript("build:search");
   runScript("build:rss");
+  runBinary("vite", ["build"]);
 };
 
 const buildCss = (): void => {
@@ -59,6 +60,8 @@ const update = (): void => {
 const fullRebuild = (): void => {
   rmSync(".next", { force: true, recursive: true });
   rmSync("out", { force: true, recursive: true });
+  rmSync("dist", { force: true, recursive: true });
+  rmSync(".vinext", { force: true, recursive: true });
   build();
 };
 
