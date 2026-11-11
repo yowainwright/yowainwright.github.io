@@ -1,0 +1,39 @@
+diff --git a/dist/build/prerender.js b/dist/build/prerender.js
+index 0e1a3d21988690c2c69603d03861bc57406c2eae..d421eb30f27255d93f92c4e3bfdf0cfea361258d 100644
+--- a/dist/build/prerender.js
++++ b/dist/build/prerender.js
+@@ -1,3 +1,4 @@
++import { buildPagesDataHref } from "../shims/internal/pages-data-url.js";
+ import path from "../deps/.pnpm/pathslash@0.1.0/deps/pathslash/dist/index.js";
+ import { createValidFileMatcher, findFileWithExtensions } from "../routing/file-matcher.js";
+ import { isUnknownRecord } from "../utils/record.js";
+@@ -347,6 +348,18 @@ function localizePagesPath(pathname, locale, i18n) {
+ 	}
+ 	return pathname === "/" ? `/${locale}` : `/${locale}${pathname}`;
+ }
++async function emitExportedPagesData(outDir, config, urlPath, baseUrl, headers) {
++	const dataHref = buildPagesDataHref(config.basePath, config.buildId, urlPath, "");
++	const response = await fetch(new URL(dataHref, baseUrl), { headers, redirect: "error" });
++	if (!response.ok) throw new Error(`Static page data request failed (${response.status}): ${dataHref}`);
++	const data = await response.json();
++	if (!isUnknownRecord(data) || !isUnknownRecord(data.pageProps)) throw new Error(`Invalid static page data: ${dataHref}`);
++	const outputPath = dataHref.replace(/^\//, "");
++	const fullPath = path.join(outDir, outputPath);
++	fs.mkdirSync(path.dirname(fullPath), { recursive: true });
++	fs.writeFileSync(fullPath, JSON.stringify(data), "utf-8");
++	return outputPath;
++}
+ /**
+ * Run the prerender phase for Pages Router.
+ *
+@@ -606,6 +619,10 @@ async function prerenderPages({ routes, apiRoutes, pagesDir, outDir, config, mod
+ 					fs.mkdirSync(path.dirname(htmlFullPath), { recursive: true });
+ 					fs.writeFileSync(htmlFullPath, html, "utf-8");
+ 					outputFiles.push(htmlOutputPath);
++					if (mode === "export" && hasStaticProps) {
++						const dataOutputPath = await emitExportedPagesData(outDir, config, urlPath, baseUrl, secretHeaders);
++						outputFiles.push(dataOutputPath);
++					}
+ 				}
+ 				result = {
+ 					route: route.pattern,

@@ -1,6 +1,6 @@
 procs:
-  next:
-    shell: "pnpm run dev:next"
+  vinext:
+    shell: "pnpm run dev:vinext"
     autostart: true
     autorestart: true
 
@@ -40,12 +40,12 @@ procs:
     autorestart: true
 
   clean-build:
-    shell: "rm -rf .next out && echo 'Build cache cleaned'"
+    shell: "rm -rf .next out dist .vinext && echo 'Build cache cleaned'"
     autostart: false
     autorestart: false
 
   clean-all:
-    shell: "rm -rf .next out node_modules && echo 'All dependencies and cache cleaned'"
+    shell: "rm -rf .next out dist .vinext node_modules && echo 'All dependencies and cache cleaned'"
     autostart: false
     autorestart: false
 

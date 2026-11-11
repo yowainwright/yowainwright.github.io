@@ -4,6 +4,10 @@ node_modules/
 .dccache
 .next
 out
+/dist/
+/.vinext/
+/test-results/
+/playwright-report/
 .pnpm-store
 tsconfig.tsbuildinfo
 drafts/

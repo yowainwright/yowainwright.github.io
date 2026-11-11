@@ -28,3 +28,50 @@ Formally, I've worked at/on:
 - **[The Hollywood Reporter](https://www.hollywoodreporter.com/):** Same as Billboard
 - **[California Psychics](https://www.californiapsychics.com/):** Built responsive UI using jQuery and CSS
 - **[Nasdaq](https://www.nasdaq.com/):** Built UI using jQuery and CSS
+
+## Runtime and static hosting
+
+The default build uses [Vinext](https://github.com/cloudflare/vinext) and
+[TanStack Redact](https://tanstack.com/redact/latest/docs/vinext). React remains
+the server renderer; Redact renders in the browser. Existing `next/*` imports stay.
+GitHub Pages deploys the static export from `dist/client/`.
+
+Development uses mprocs, pinned in `mise.toml`. Run `mise install` once before
+starting the development processes on a new machine.
+
+```sh
+pnpm run build:local
+pnpm run test:runtime
+pnpm run dev
+```
+
+`build:local` generates CSS, search data, feeds, and sitemap before exporting.
+`build` also refreshes AI pricing. For runtime comparisons, `build:vinext` uses
+native React in the browser and `build:redact` uses Redact. These two commands
+only bundle existing generated assets. `dev:next` remains available for comparison.
+
+Browser tests cover theme hydration, search, static and dynamic navigation,
+browser history, metadata, charts, and code-copy controls. Third-party requests
+are blocked; live Firebase, Sentry, and Giscus services require separate checks.
+CI runs these tests against the static export using its installed Chrome.
+
+To test an already running development server without starting another server:
+
+```sh
+RUNTIME_SITE_URL=http://localhost:34730 pnpm run test:runtime
+```
+
+Development SSR loads the CommonJS and Node-specific dependencies listed in
+`vite.config.ts` through Node. This avoids evaluating their `require`, `module`,
+and `exports` statements as ES modules. Production bundling remains unchanged.
+
+Sentry client initialization uses `instrumentation-client.ts`. The
+[Sentry Vite plugin](https://docs.sentry.io/platforms/javascript/guides/react/sourcemaps/uploading/vite/)
+uploads hidden source maps only in CI when `SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, and
+`SENTRY_PROJECT` are present, then deletes map files. Client reporting requires
+`NEXT_PUBLIC_SENTRY_DSN`. Next.js build-plugin auto-instrumentation is not used.
+
+An initial cold-browser homepage comparison requested approximately 132 KiB of
+gzipped JavaScript with Next and 116 KiB with Vinext + Redact. That comparison
+predates the Sentry client entry point; it is not a current performance score or
+a measurement of Core Web Vitals.
