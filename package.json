@@ -20,8 +20,7 @@
     "update-pricing": "tsx scripts/update-ai-pricing/index.ts",
     "build:search": "tsx scripts/generate-search-data.ts",
     "build:local": "tsx scripts/run-task.ts build-local",
-    "build:vinext": "vite build --mode native",
-    "build:redact": "vite build --mode redact",
+    "build:vinext": "vite build",
     "build:rss": "tsx scripts/rss/index.ts",
     "build:css": "tsx scripts/run-task.ts build-css",
     "playwright:install": "playwright install chromium --with-deps",
@@ -80,7 +79,6 @@
     "@shikijs/colorized-brackets": "4.6.0",
     "@shikijs/rehype": "4.6.0",
     "@shikijs/transformers": "4.6.0",
-    "@tanstack/redact": "0.3.1",
     "@types/hast": "3.0.5",
     "@types/jsdom": "30.0.0",
     "@types/mdast": "4.0.4",
@@ -91,7 +89,6 @@
     "@types/write-good": "1.0.3",
     "@vercel/og": "1.0.3",
     "@vitejs/plugin-react": "6.1.2",
-    "@vitejs/plugin-rsc": "0.5.38",
     "codependence": "1.0.16",
     "gray-matter": "4.0.3",
     "harper.js": "3.0.0",
@@ -103,7 +100,6 @@
     "pino": "10.4.0",
     "pino-pretty": "13.2.0",
     "playwright": "1.64.1",
-    "react-server-dom-webpack": "19.3.1",
     "rehype-stringify": "10.0.1",
     "remark-frontmatter": "5.0.0",
     "remark-gfm": "4.0.1",
@@ -132,9 +128,9 @@
   },
   "engines": {
     "node": ">=26.0.0",
-    "pnpm": ">=11.18.0 <12.0.0"
+    "pnpm": ">=12.0.0 <13.0.0"
   },
-  "packageManager": "pnpm@11.21.0",
+  "packageManager": "pnpm@12.18.0",
   "codependence": {
     "mode": "verbose",
     "codependencies": [
@@ -162,7 +158,7 @@
     "appendix": {
       "vinext@1.3.0": {
         "dependents": {
-          "Jeffry.in": "vinext (required by @tanstack/redact@0.3.1)"
+          "Jeffry.in": "vinext (static export)"
         },
         "patches": [
           "patches/vinext@1.3.0.patch"
@@ -172,19 +168,18 @@
           "source": "manual",
           "reason": {
             "type": "project",
-            "summary": "Redact 0.3.1 requires exactly Vinext 1.3.0; its static export also needs page-data JSON for client navigation on GitHub Pages.",
+            "summary": "Vinext 1.3.0 static export needs page-data JSON for client navigation on GitHub Pages.",
             "pin": "1.3.0",
             "patch": "patches/vinext@1.3.0.patch",
             "constraints": [
-              "The Redact adapter rejects Vinext versions other than 1.3.0.",
               "Keep the exporter patch until a supported release passes static client-navigation tests without it."
             ],
             "references": [
-              "https://tanstack.com/redact/latest/docs/vinext"
+              "https://github.com/cloudflare/vinext"
             ]
           },
           "keep": {
-            "reason": "Retain this compatibility override until Redact supports a newer Vinext release and the static navigation checks pass."
+            "reason": "Retain this exporter patch and version pin until a supported release passes static client-navigation tests without the patch."
           }
         }
       },
