@@ -26,6 +26,8 @@ jobs:
             ${{ runner.os }}-post-compile-v1-${{ hashFiles('pnpm-lock.yaml', '.node-version') }}-
       - run: pnpm run lint
       - run: pnpm run test
+        env:
+          MERMAID_BROWSER_PATH: /usr/bin/google-chrome
       - run: pnpm run build
         env:
           CI: true

@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import vinext from "vinext";
 import { redact } from "@tanstack/redact/vinext";
 import { sentryVitePlugin } from "@sentry/bundler-plugins/vite";
@@ -16,7 +16,10 @@ const devServerExternals = [
 
 export default defineConfig(({ mode, command }) => {
   const isTesting = Boolean(process.env.VITEST);
-  if (isTesting) return {};
+  if (isTesting) {
+    const testTimeout = process.env.CI ? 15_000 : 5_000;
+    return { test: { testTimeout } };
+  }
 
   const useRedact = mode !== "native";
   const runtimePlugins = useRedact ? [redact()] : [];
