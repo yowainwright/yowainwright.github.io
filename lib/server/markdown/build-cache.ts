@@ -31,7 +31,7 @@ export function getBuildCacheKey(kind: string, input: string) {
 }
 
 export function hasDiagramAssets(compiledSource: string) {
-  const assets = compiledSource.match(/\/assets\/mermaid\/[a-f0-9]+\.svg/g) || [];
+  const assets = compiledSource.match(/\/assets\/mermaid\/[a-z0-9-]+\.svg/g) || [];
   return assets.every((asset) => existsSync(path.join(process.cwd(), "public", asset)));
 }
 
